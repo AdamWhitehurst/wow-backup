@@ -7,10 +7,10 @@ AddOnSkinsDB = {
 		["Byanir - Moon Guard"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
 		["Ayanir - Moon Guard"] = "Default",
-		["Bramblebrow - Emerald Dream"] = "BenikUI",
-		["Lonalber - Emerald Dream"] = "Default",
-		["Whitmoore - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
+		["Whitmoore - Emerald Dream"] = "Default",
+		["Lonalber - Emerald Dream"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "BenikUI",
 	},
 	["profiles"] = {
 		["Default"] = {
