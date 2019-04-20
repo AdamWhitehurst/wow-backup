@@ -1,6 +1,6 @@
 
 ClassicQuestLogCollapsedHeaders = {
 	["Dire Maul"] = true,
-	["Battle Pets"] = true,
 	["Azshara"] = true,
+	["Battle Pets"] = true,
 }

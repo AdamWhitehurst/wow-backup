@@ -48,31 +48,7 @@ RematchSaved = {
 		}, -- [3]
 		["teamName"] = "Bordin Steadyfist",
 	},
-	[142054] = {
-		{
-			"BattlePet-0-000008FCA41F", -- [1]
-			492, -- [2]
-			347, -- [3]
-			352, -- [4]
-			411, -- [5]
-		}, -- [1]
-		{
-			"BattlePet-0-000008FD550C", -- [1]
-			110, -- [2]
-			611, -- [3]
-			802, -- [4]
-			1152, -- [5]
-		}, -- [2]
-		{
-			"BattlePet-0-0000081E0C3A", -- [1]
-			202, -- [2]
-			362, -- [3]
-			159, -- [4]
-			244, -- [5]
-		}, -- [3]
-		["teamName"] = "Kusa",
-	},
-	[66824] = {
+	[66675] = {
 		{
 			"BattlePet-0-0000090405EE", -- [1]
 			777, -- [2]
@@ -81,20 +57,20 @@ RematchSaved = {
 			339, -- [5]
 		}, -- [1]
 		{
-			"BattlePet-0-000008FD550C", -- [1]
-			299, -- [2]
-			611, -- [3]
-			593, -- [4]
-			1152, -- [5]
+			"BattlePet-0-00000923EAF8", -- [1]
+			118, -- [2]
+			230, -- [3]
+			233, -- [4]
+			569, -- [5]
 		}, -- [2]
 		{
-			"BattlePet-0-0000092AB4FF", -- [1]
-			535, -- [2]
-			746, -- [3]
-			486, -- [4]
-			2051, -- [5]
+			"BattlePet-0-0000081E0C3A", -- [1]
+			119, -- [2]
+			362, -- [3]
+			113, -- [4]
+			244, -- [5]
 		}, -- [3]
-		["teamName"] = "Obalis",
+		["teamName"] = "Major Payne",
 	},
 	[66635] = {
 		{
@@ -120,6 +96,30 @@ RematchSaved = {
 		}, -- [3]
 		["teamName"] = "Beegle Blastfuse",
 	},
+	[66824] = {
+		{
+			"BattlePet-0-0000090405EE", -- [1]
+			777, -- [2]
+			647, -- [3]
+			334, -- [4]
+			339, -- [5]
+		}, -- [1]
+		{
+			"BattlePet-0-000008FD550C", -- [1]
+			299, -- [2]
+			611, -- [3]
+			593, -- [4]
+			1152, -- [5]
+		}, -- [2]
+		{
+			"BattlePet-0-0000092AB4FF", -- [1]
+			535, -- [2]
+			746, -- [3]
+			486, -- [4]
+			2051, -- [5]
+		}, -- [3]
+		["teamName"] = "Obalis",
+	},
 	[66730] = {
 		{
 			"BattlePet-0-000008FD550C", -- [1]
@@ -144,29 +144,29 @@ RematchSaved = {
 		}, -- [3]
 		["teamName"] = "Hyuna of the Shrines",
 	},
-	[66675] = {
+	[142054] = {
 		{
-			"BattlePet-0-0000090405EE", -- [1]
-			777, -- [2]
-			647, -- [3]
-			334, -- [4]
-			339, -- [5]
+			"BattlePet-0-000008FCA41F", -- [1]
+			492, -- [2]
+			347, -- [3]
+			352, -- [4]
+			411, -- [5]
 		}, -- [1]
 		{
-			"BattlePet-0-00000923EAF8", -- [1]
-			118, -- [2]
-			230, -- [3]
-			233, -- [4]
-			569, -- [5]
+			"BattlePet-0-000008FD550C", -- [1]
+			110, -- [2]
+			611, -- [3]
+			802, -- [4]
+			1152, -- [5]
 		}, -- [2]
 		{
 			"BattlePet-0-0000081E0C3A", -- [1]
-			119, -- [2]
+			202, -- [2]
 			362, -- [3]
-			113, -- [4]
+			159, -- [4]
 			244, -- [5]
 		}, -- [3]
-		["teamName"] = "Major Payne",
+		["teamName"] = "Kusa",
 	},
 }
 RematchSettings = {
@@ -203,24 +203,24 @@ RematchSettings = {
 			244, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-00000923EAF8"] = {
-			2, -- [1]
-			true, -- [2]
-			569, -- [3]
-			25, -- [4]
-			1562, -- [5]
-			260, -- [6]
-			276, -- [7]
-			4, -- [8]
-		},
-		["BattlePet-0-000008FCA41F"] = {
+		["BattlePet-0-0000092D355E"] = {
 			1, -- [1]
 			true, -- [2]
-			411, -- [3]
+			1974, -- [3]
 			25, -- [4]
 			1400, -- [5]
-			325, -- [6]
-			260, -- [7]
+			260, -- [6]
+			325, -- [7]
+			4, -- [8]
+		},
+		["BattlePet-0-0000092AB4FF"] = {
+			1, -- [1]
+			true, -- [2]
+			2051, -- [3]
+			25, -- [4]
+			1424, -- [5]
+			277, -- [6]
+			293, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-000008FD550C"] = {
@@ -233,14 +233,14 @@ RematchSettings = {
 			260, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-0000092AB4FF"] = {
+		["BattlePet-0-000008FCA41F"] = {
 			1, -- [1]
 			true, -- [2]
-			2051, -- [3]
+			411, -- [3]
 			25, -- [4]
-			1424, -- [5]
-			277, -- [6]
-			293, -- [7]
+			1400, -- [5]
+			325, -- [6]
+			260, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-0000081E0C3A"] = {
@@ -273,14 +273,14 @@ RematchSettings = {
 			273, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-0000092D355E"] = {
-			1, -- [1]
+		["BattlePet-0-00000923EAF8"] = {
+			2, -- [1]
 			true, -- [2]
-			1974, -- [3]
+			569, -- [3]
 			25, -- [4]
-			1400, -- [5]
+			1562, -- [5]
 			260, -- [6]
-			325, -- [7]
+			276, -- [7]
 			4, -- [8]
 		},
 	},
@@ -326,13 +326,13 @@ RematchSettings = {
 		},
 		["Script"] = {
 		},
-		["Types"] = {
+		["Moveset"] = {
 		},
-		["Favorite"] = {
+		["Tough"] = {
 		},
-		["Collected"] = {
+		["Level"] = {
 		},
-		["Strong"] = {
+		["Similar"] = {
 		},
 		["Sources"] = {
 		},
@@ -340,17 +340,17 @@ RematchSettings = {
 		},
 		["Rarity"] = {
 		},
-		["Similar"] = {
+		["Strong"] = {
 		},
-		["Level"] = {
+		["Collected"] = {
 		},
-		["Tough"] = {
+		["Favorite"] = {
 		},
-		["Moveset"] = {
+		["Types"] = {
 		},
 	},
-	["QueueSortOrder"] = 1,
 	["ColorPetNames"] = true,
+	["QueueSortOrder"] = 1,
 	["CollapsedOptHeaders"] = {
 		true, -- [1]
 		nil, -- [2]
@@ -366,15 +366,15 @@ RematchSettings = {
 		true, -- [12]
 	},
 	["SlimListButtons"] = true,
-	["PanelTabsToRight"] = true,
-	["loadedTeam"] = 142054,
-	["PreferredMode"] = 3,
+	["UseTypeBar"] = true,
+	["SinglePanel"] = false,
+	["AllowHiddenPetsDefaulted"] = true,
 	["LevelingQueue"] = {
 	},
 	["CornerPos"] = "TOPRIGHT",
-	["AllowHiddenPetsDefaulted"] = true,
-	["SinglePanel"] = false,
-	["UseTypeBar"] = true,
+	["PreferredMode"] = 3,
+	["loadedTeam"] = 142054,
+	["PanelTabsToRight"] = true,
 	["CustomScaleValue"] = 100,
 	["PetNotes"] = {
 	},

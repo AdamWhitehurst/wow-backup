@@ -19,12 +19,12 @@ E.Media = {
 		AnimeAce = M..[[Fonts\AnimeAce_Regular.ttf]],
 		AnimeAceBold = M..[[Fonts\AnimeAce_Bold.ttf]],
 		AnimeAceItalic = M..[[Fonts\AnimeAce_Italic.ttf]],
-		OriginalWoody = M..[[Fonts\Original_Woody.ttf]],
-		CantedComic = M..[[Fonts\CantedComic_Regular.otf]],
-		CantedComicBold = M..[[Fonts\CantedComic_Bold.otf]],
 		ComickBook = M..[[Fonts\ComickBook.ttf]],
 		ComickBookCaps = M..[[Fonts\ComickBook_Caps.ttf]],
-		PlayingBumb = M..[[Fonts\Playing_Bumb.otf]]
+		HappyMonkey = M..[[Fonts\HappyMonkey.ttf]],
+		PatrickHand = M..[[Fonts\PatrickHand.ttf]],
+		PatrickHandSC = M..[[Fonts\PatrickHandSC.ttf]],
+		Sriracha = M..[[Fonts\Sriracha.ttf]]
 	},
 	Sounds = {
 		AwwCrap = M..[[Sounds\AwwCrap.ogg]],
@@ -145,15 +145,17 @@ LSM:Register('font','Expressway',E.Media.Fonts.Expressway,LSM.LOCALE_BIT_ruRU+LS
 LSM:Register('font','PT Sans Narrow',E.Media.Fonts.PTSansNarrow,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 LSM:Register('font','Homespun',E.Media.Fonts.Homespun,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 
+
 LSM:Register('font','Anime Ace',E.Media.Fonts.AnimeAce)
 LSM:Register('font','Anime Ace Bold',E.Media.Fonts.AnimeAceBold)
 LSM:Register('font','Anime Ace Italic',E.Media.Fonts.AnimeAceItalic)
-LSM:Register('font','Original Woody',E.Media.Fonts.OriginalWoody)
-LSM:Register('font','Canted Comic',E.Media.Fonts.CantedComic)
-LSM:Register('font','Canted Comic Bold',E.Media.Fonts.CantedComicBold)
 LSM:Register('font','Comick Book Caps',E.Media.Fonts.ComickBookCaps)
 LSM:Register('font','Comick Book',E.Media.Fonts.ComickBook)
-LSM:Register('font','Playing Bumb',E.Media.Fonts.PlayingBumb)
+LSM:Register('font','Happy Monkey',E.Media.Fonts.HappyMonkey)
+LSM:Register('font','Patrick Hand',E.Media.Fonts.PatrickHand)
+LSM:Register('font','Patrick Hand SC',E.Media.Fonts.PatrickHandSC)
+LSM:Register('font','Sriracha',E.Media.Fonts.Sriracha)
+
 
 LSM:Register('sound','Awww Crap',E.Media.Sounds.AwwCrap)
 LSM:Register('sound','BBQ Ass',E.Media.Sounds.BbqAss)

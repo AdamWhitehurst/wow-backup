@@ -16,22 +16,22 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["Equipment"] = {
-		},
-		["ItemSets"] = {
+		["MoneyFrame"] = {
 		},
 		["CurrencyFrame"] = {
 		},
 		["DataSource"] = {
 		},
+		["ItemSets"] = {
+		},
 		["Junk"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 	},
 	["profileKeys"] = {
-		["Wharapi - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -40,9 +40,9 @@ AdiBagsDB = {
 					nil, -- [1]
 					0.356862745098039, -- [2]
 				},
-				["borderWidth"] = 2,
-				["background"] = "Solid",
 				["border"] = "1 Pixel",
+				["background"] = "Solid",
+				["borderWidth"] = 2,
 				["insets"] = 0,
 			},
 			["positions"] = {
