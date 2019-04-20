@@ -1,0 +1,97 @@
+VER 3 000000000000001B "AAP_MACRO" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use Beryl Shield Detonator
+END
+VER 3 0000000000000014 "Avatar / Deadly " "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:6/2] Avatar; [talent:6/3] Deadly Calm;
+END
+VER 3 0000000000000010 "Bow" "134452"
+/cleartarget
+/bow
+END
+VER 3 0000000000000017 "Charge Victory" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Charge
+/cast Victory Rush
+END
+VER 3 0000000000000011 "cheer" "132334"
+/cleartarget
+/cheer
+END
+VER 3 0000000000000013 "Fervor/Slam" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:3/2] Whirlwind; Slam
+END
+VER 3 0000000000000001 "Guild Message" "133738"
+/4  
+/4 Looking for a chill raid group that cares about you? Want to raid, PvE, PvP, quest with awesome people? Tired of being just another raid body? Just wanna hang out on Discord and play some other games? Whisper me to talk about <Toxic> :) ;)
+END
+VER 3 0000000000000016 "Heoric leap" "INV_MISC_QUESTIONMARK"
+#showtooltip Heroic Leap
+/cast [@cursor] Heroic Leap
+END
+VER 3 0000000000000019 "Kneel" "134448"
+/cleartarget
+/kneel
+END
+VER 3 0000000000000003 "Land & Sky Mount" "413588"
+#showtooltip
+/cast [noflyable] Zandalari Direhorn
+/cast [flyable] golden Cloud Serpent
+END
+VER 3 000000000000000F "Next Server" "135833"
+/run ServerHop_HopForward()
+END
+VER 3 0000000000000018 "Offense CD" "INV_MISC_QUESTIONMARK"
+#showtooltip Colossus Smash
+/use Colossus Smash
+/use Blood Fury
+/use Berserking
+/use 13
+/use 14
+END
+VER 3 0000000000000015 "Pummel" "INV_MISC_QUESTIONMARK"
+#showtooltip Pummel
+/cast [@focus, harm, exists][@target] Pummel
+END
+VER 3 000000000000000A "Steal Taunt" "132353"
+#showtooltip Provoke
+/target Black Ox Statue
+/cast Provoke
+/targetlasttarget
+END
+VER 3 000000000000000E "Summon Big Boy" "136122"
+/summonpet Twilight
+/target [Twilight]
+END
+VER 3 000000000000001A "swiftclaw" "INV_MISC_QUESTIONMARK"
+/target Swiftclaw
+END
+VER 3 0000000000000005 "Target Aeonaxx" "134154"
+#showtooltip
+/target "Windward Alpha"
+/target blood
+/focus
+/run if UnitName("Target") == "Windward Alpha" then PlaySoundKitID(9378); print(date(), UnitName("Target"), "Found"); SetRaidTarget("target",8); end
+END
+VER 3 000000000000000D "Target Korvas" "INV_MISC_QUESTIONMARK"
+/tar
+END
+VER 3 0000000000000012 "Thank" "458227"
+/cleartarget
+/thank
+END
+VER 3 0000000000000002 "Trade Chat Auto" "134331"
+/2  
+/2 Looking for a chill raid group that cares about you? Want to raid, PvE, PvP, quest with awesome people? Tired of being just another raid body? Just wanna hang out on Discord and play some other games? Whisper me to talk about <The Boys> :) ;)
+END
+VER 3 000000000000000B "Turn In" "INV_MISC_QUESTIONMARK"
+/target "Kor'vas Bloodthorn"
+END
+VER 3 000000000000001C "Wave" "135823"
+/stopmacro [@mouseover,noexists]
+/target [@mouseover] mouseover
+/wave
+/targetlasttarget
+END

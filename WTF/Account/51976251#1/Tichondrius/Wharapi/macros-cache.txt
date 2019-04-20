@@ -1,0 +1,65 @@
+VER 3 0100000000000008 "Barkskin" "INV_MISC_QUESTIONMARK"
+#showtooltip barkskin
+/cast Barkskin;
+/cast [noform:1] Bear Form
+END
+VER 3 0100000000000012 "Ferocious Bite" "INV_MISC_QUESTIONMARK"
+#showtooltip Ferocious Bite
+/cast [nostance:2] Cat Form; [stance:2] Ferocious Bite
+END
+VER 3 010000000000000F "Innervate" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@player] Innervate
+END
+VER 3 010000000000000D "Lifebloomfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover, help, nodead] Lifebloom; [@mouseover, harm, nodead][@target, harm, nodead]Moonfire; [@target, help, nodead][@player] Lifebloom;
+END
+VER 3 010000000000000A "Mangle" "INV_MISC_QUESTIONMARK"
+#showtooltip swipe
+/cast [nostance:2] cat Form; [stance:2] swipe
+END
+VER 3 0100000000000006 "Moonfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,harm,nodead][]Moonfire
+END
+VER 3 0100000000000011 "Rake" "INV_MISC_QUESTIONMARK"
+#showtooltip rake
+/cast [nostance:2] Cat Form; [stance:2] Rake
+END
+VER 3 010000000000000E "Regrowth wrath" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover, help, nodead] Regrowth; [@mouseover, harm, nodead][@target, harm, nodead]Solar Wrath; [@target, help, nodead][@player] Regrowth;
+END
+VER 3 0100000000000003 "Rejuvenation" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help,nodead][@focus][] Rejuvenation
+END
+VER 3 010000000000000C "Rejuvfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover, help, nodead] Rejuvenation; [@mouseover, harm, nodead][@target, harm, nodead]sunfire; [@target, help, nodead][@player] Rejuvenation;
+END
+VER 3 0100000000000010 "Rip" "INV_MISC_QUESTIONMARK"
+#showtooltip Rip
+/cast [nostance:2] Cat Form; [stance:2] rip
+END
+VER 3 0100000000000015 "soothe" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help,nodead][@focus][] Soothe
+END
+VER 3 0100000000000005 "sunfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover, harm, nodead][] Sunfire
+END
+VER 3 0100000000000014 "Super bark" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/castsequence [@target, help] Ironbark; [@player] reset=60 Barkskin, Ironbark
+END
+VER 3 0100000000000013 "super shred" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nostance:2] Cat Form; [stealth] rake; [nostealth] shred
+END
+VER 3 0100000000000001 "Swiftmend" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover, help, nodead][]Swiftmend
+END

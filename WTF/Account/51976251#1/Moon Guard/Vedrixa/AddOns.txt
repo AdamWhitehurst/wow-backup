@@ -1,0 +1,8 @@
+AdvancedInterfaceOptions: enabled
+AddOnSkins: disabled
+ElvUI_BagFilter: disabled
+ElvUI_VisualAuraTimers: disabled
+ElvUI_BenikUI: disabled
+ElvUI_NutsAndBolts: disabled
+ElvUI_Config: enabled
+ElvUI: enabled
