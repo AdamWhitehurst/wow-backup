@@ -1,0 +1,19 @@
+
+NarcissusDB = {
+	["GlobalScale"] = 1,
+	["AuotoColorTheme"] = true,
+	["PhotoModeButton"] = {
+		["HideTexts"] = true,
+	},
+	["EnableDoubleTap"] = false,
+	["ColorChoice"] = 0,
+	["CameraOrbit"] = true,
+	["EnableGrainEffect"] = false,
+	["IsSortedByCategory"] = true,
+	["FontHeightItemName"] = 10,
+	["ShowMinimapButton"] = true,
+	["MinimapButton"] = {
+		["Position"] = -0.523505379928004,
+	},
+	["DetailedIlvlInfo"] = true,
+}

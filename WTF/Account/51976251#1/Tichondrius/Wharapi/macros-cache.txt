@@ -31,17 +31,26 @@ VER 3 010000000000000E "Regrowth wrath" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover, help, nodead] Regrowth; [@mouseover, harm, nodead][@target, harm, nodead]Solar Wrath; [@target, help, nodead][@player] Regrowth;
 END
-VER 3 0100000000000003 "Rejuvenation" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help,nodead][@focus][] Rejuvenation
-END
 VER 3 010000000000000C "Rejuvfire" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover, help, nodead] Rejuvenation; [@mouseover, harm, nodead][@target, harm, nodead]sunfire; [@target, help, nodead][@player] Rejuvenation;
 END
+VER 3 0100000000000016 "Remove snare" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [stance:1] !Cat Form
+/cast [stance:2][indoors] !Bear Form
+/cast !Travel Form
+END
 VER 3 0100000000000010 "Rip" "INV_MISC_QUESTIONMARK"
 #showtooltip Rip
 /cast [nostance:2] Cat Form; [stance:2] rip
+END
+VER 3 0100000000000017 "Smart Rez" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopmacro [nohelp,nodead]
+/run if UnitInRaid("player") then c="RAID" else c="PARTY" end
+/run s,u="Rebirth","target" if IsSpellInRange(s,u)==1 then SendChatMessage("Ressurecting "..UnitName(u),c)end
+/cast [combat]Rebirth;Revive
 END
 VER 3 0100000000000015 "soothe" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -57,7 +66,7 @@ VER 3 0100000000000014 "Super bark" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000013 "super shred" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [nostance:2] Cat Form; [stealth] rake; [nostealth] shred
+/cast [nostance:2] Cat Form; [stance:2,stealth] Rake; [stance:2] Shred
 END
 VER 3 0100000000000001 "Swiftmend" "INV_MISC_QUESTIONMARK"
 #showtooltip

@@ -1,10 +1,5 @@
 
 ElvCharacterDB = {
-	["ChatEditHistory"] = {
-		"/reloadui", -- [1]
-		"/wave", -- [2]
-		"/laugh", -- [3]
-	},
 	["ChatHistoryLog"] = {
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6977:Player-162-0962A55D:1:2:3:19:4294967295:4294967295:4294967295:4294967295|h[Explore Townlong Steppes]|h|r!", -- [1]
@@ -94,5 +89,15 @@ ElvCharacterDB = {
 			[51] = 1549253621,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [4]
+	},
+	["ChatEditHistory"] = {
+		"/adibags", -- [1]
+		"/reloadui", -- [2]
+		"/way 57.1, 90.0", -- [3]
+		"/reload", -- [4]
+		"/laugh", -- [5]
+		"/wave", -- [6]
+	},
+	["CliqueDatatext"] = {
 	},
 }

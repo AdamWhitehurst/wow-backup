@@ -1,5 +1,12 @@
 
 AdiBagsDB = {
+	["char"] = {
+		["Wharapi - Tichondrius"] = {
+			["collapsedSections"] = {
+				["Free space#Free space"] = true,
+			},
+		},
+	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -16,44 +23,55 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
+		},
+		["DataSource"] = {
 		},
 		["ItemSets"] = {
 		},
 		["CurrencyFrame"] = {
 		},
-		["DataSource"] = {
-		},
 		["Junk"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 	},
 	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
+		["Harwapa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
+			["columnWidth"] = {
+				["Backpack"] = 20,
+				["Bank"] = 20,
+			},
+			["maxHeight"] = 0.9,
 			["skin"] = {
 				["ReagentBankColor"] = {
 					nil, -- [1]
 					0.356862745098039, -- [2]
 				},
-				["borderWidth"] = 2,
+				["border"] = "ElvUI GlowBorder",
 				["background"] = "Solid",
-				["border"] = "1 Pixel",
+				["borderWidth"] = 1,
 				["insets"] = 0,
 			},
+			["dimJunk"] = false,
 			["positions"] = {
 				["anchor"] = {
-					["xOffset"] = -2.6068115234375,
-					["yOffset"] = 4.68104982376099,
+					["xOffset"] = -2.84326171875,
+					["point"] = "TOPRIGHT",
+					["yOffset"] = -15.8228149414063,
 				},
 			},
+			["rightClickConfig"] = false,
 			["sectionFont"] = {
-				["name"] = "Canted Comic",
+				["size"] = 8,
 			},
+			["scale"] = 1,
 		},
 	},
 }

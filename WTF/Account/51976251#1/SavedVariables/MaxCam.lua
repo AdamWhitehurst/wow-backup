@@ -1,0 +1,2 @@
+
+MaxCamDB = nil

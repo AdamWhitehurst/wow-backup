@@ -22,3 +22,4 @@ DynamicCam: enabled
 PetTracker: enabled
 PetTracker_Switcher: disabled
 PetTracker_Breeds: enabled
+MaxCam: disabled

@@ -17,9 +17,9 @@ WeakAurasSaved = {
 			[248622] = 1029718,
 		},
 	},
-	["editor_theme"] = "Monokai",
-	["login_squelch_time"] = 10,
-	["registered"] = {
+	["minimap"] = {
+		["minimapPos"] = 317.87436222242,
+		["hide"] = false,
 	},
 	["displays"] = {
 		["T90DeadlyCalmRDY"] = {
@@ -39,9 +39,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["fontFlags"] = "OUTLINE",
@@ -62,11 +62,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -76,12 +76,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -91,29 +110,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -152,16 +152,14 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showOnReady",
 						["unit"] = "player",
-						["names"] = {
-							"Icy Veins", -- [1]
-						},
+						["duration"] = "1",
 						["debuffType"] = "HELPFUL",
 						["ownOnly"] = true,
 						["type"] = "status",
-						["unevent"] = "auto",
+						["use_absorbMode"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 262228,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 262228,
@@ -170,10 +168,12 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["use_unit"] = true,
-						["spellName"] = 262228,
-						["use_absorbMode"] = true,
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["duration"] = "1",
+						["names"] = {
+							"Icy Veins", -- [1]
+						},
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnReady",
@@ -183,21 +183,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "SdKyFlA0A0f",
+			["borderOffset"] = 12,
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["customTextUpdate"] = "update",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -217,134 +217,104 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["timer"] = true,
 			["height"] = 13,
+			["timer"] = true,
 			["timerFlags"] = "OUTLINE",
-			["useAdjustededMax"] = false,
+			["config"] = {
+			},
 			["sparkBlendMode"] = "ADD",
 			["authorMode"] = true,
-			["spark"] = false,
-			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["width"] = 280,
 			["authorOptions"] = {
 			},
-			["sparkOffsetX"] = 0,
-			["sparkHidden"] = "NEVER",
-			["border"] = true,
-			["borderEdge"] = "None",
-			["displayTextRight"] = "RDY",
-			["borderInFront"] = true,
-			["timerSize"] = 13,
-			["icon_side"] = "RIGHT",
-			["icon"] = false,
-			["stacksFont"] = "Friz Quadrata TT",
-			["sparkHeight"] = 30,
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["semver"] = "1.0.1-4",
-			["borderSize"] = 2,
-			["id"] = "T90DeadlyCalmRDY",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 2,
-			["width"] = 280,
-			["zoom"] = 0,
-			["config"] = {
+			["id"] = "T90DeadlyCalmRDY",
+			["border"] = true,
+			["borderEdge"] = "None",
+			["borderInFront"] = true,
+			["borderSize"] = 2,
+			["semver"] = "1.0.1-4",
+			["icon_side"] = "RIGHT",
+			["icon"] = false,
+			["rotateText"] = "NONE",
+			["sparkHeight"] = 30,
+			["sparkRotation"] = 0,
+			["stacksFont"] = "Friz Quadrata TT",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["timerSize"] = 13,
+			["displayTextRight"] = "RDY",
+			["sparkHidden"] = "NEVER",
+			["sparkOffsetX"] = 0,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["spark"] = false,
+			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["customTextUpdate"] = "update",
-			["borderOffset"] = 12,
+			["sparkWidth"] = 10,
+			["uid"] = "SdKyFlA0A0f",
 		},
 		["FuryBT"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["text1Enabled"] = true,
 			["cooldownSwipe"] = true,
-			["xOffset"] = -70.7,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["parent"] = "Adriox Warrior",
-			["text1Enabled"] = true,
+			["text2Font"] = "Expressway",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2Font"] = "Expressway",
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["type"] = "status",
-						["debuffType"] = "HELPFUL",
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["use_unit"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["custom_hide"] = "timed",
-						["realSpellName"] = "Bloodthirst",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 23881,
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["use_track"] = true,
-						["use_charges"] = false,
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 23881,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
+			["glow"] = false,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -355,7 +325,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "urGYRQd2lEW",
+			["config"] = {
+			},
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -379,20 +350,18 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -401,21 +370,23 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Containment"] = "INSIDE",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -424,9 +395,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
-			},
+			["alpha"] = 1,
+			["cooldownEdge"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -435,24 +405,59 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["text1FontFlags"] = "OUTLINE",
-			["icon"] = true,
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["useTooltip"] = true,
-			["text2Enabled"] = false,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["internalVersion"] = 11,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text2Enabled"] = false,
+			["useTooltip"] = true,
+			["text2"] = "%p",
+			["auto"] = true,
+			["icon"] = true,
 			["id"] = "FuryBT",
-			["cooldownEdge"] = false,
-			["alpha"] = 1,
-			["width"] = 44,
-			["text1Containment"] = "INSIDE",
-			["config"] = {
+			["authorOptions"] = {
 			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "urGYRQd2lEW",
 			["inverse"] = true,
-			["glow"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["use_charges"] = false,
+						["charges"] = "2",
+						["debuffType"] = "HELPFUL",
+						["charges_operator"] = "==",
+						["type"] = "status",
+						["names"] = {
+						},
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["spellName"] = 23881,
+						["realSpellName"] = "Bloodthirst",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["custom_hide"] = "timed",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 23881,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -469,37 +474,65 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = -70.7,
 		},
 		["T45Massacre"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = 70.7,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = false,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "target",
-						["ownOnly"] = true,
+						["names"] = {
+							"Rend", -- [1]
+						},
 						["use_specific_unit"] = false,
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HARMFUL",
-						["custom_hide"] = "timed",
-						["buffShowOn"] = "showOnActive",
+						["use_genericShowOn"] = true,
+						["use_unit"] = true,
+						["duration"] = "1",
 						["spellName"] = 281001,
+						["buffShowOn"] = "showOnActive",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
 						["unevent"] = "auto",
+						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
 						["type"] = "status",
 						["event"] = "Cooldown Progress (Spell)",
@@ -509,13 +542,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							772, -- [1]
 						},
-						["duration"] = "1",
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
+						["custom_hide"] = "timed",
+						["debuffType"] = "HARMFUL",
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["names"] = {
-							"Rend", -- [1]
-						},
+						["ownOnly"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -525,45 +556,9 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["cooldownSwipe"] = true,
-			["glow"] = false,
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text1Enabled"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Containment"] = "INSIDE",
 			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -574,13 +569,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "A5AJeL6eXYG",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 7,
@@ -590,7 +586,7 @@ WeakAurasSaved = {
 						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -600,32 +596,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -634,9 +630,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -645,8 +641,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
+			["text2Enabled"] = false,
+			["internalVersion"] = 11,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text2Color"] = {
@@ -655,29 +651,33 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["alpha"] = 1,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "35%",
+			["icon"] = true,
+			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
 			["authorOptions"] = {
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "35%",
-			["text2Font"] = "Friz Quadrata TT",
-			["icon"] = true,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["alpha"] = 1,
 			["id"] = "T45Massacre",
-			["internalVersion"] = 11,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "A5AJeL6eXYG",
 			["inverse"] = true,
-			["stickyDuration"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
+			["glow"] = false,
 		},
 		["WarriorRageBar"] = {
 			["textFlags"] = "None",
@@ -729,11 +729,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
+						true, -- [1]
+						true, -- [2]
 					},
 				},
-				["race"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -745,21 +748,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = false,
 				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = false,
-				["spec"] = {
-					["single"] = 1,
+				["use_class"] = true,
+				["race"] = {
 					["multi"] = {
-						true, -- [1]
-						true, -- [2]
+					},
+				},
+				["affixes"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -798,20 +798,20 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "status",
-						["use_absorbMode"] = true,
-						["unevent"] = "auto",
-						["genericShowOn"] = "showOnActive",
 						["duration"] = "1",
+						["unevent"] = "auto",
 						["event"] = "Power",
+						["use_absorbMode"] = true,
+						["genericShowOn"] = "showOnActive",
 						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
 						["powertype"] = 1,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
 						["names"] = {
 						},
-						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -821,21 +821,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["sparkWidth"] = 10,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkRotation"] = 0,
+			["spark"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -853,65 +853,65 @@ WeakAurasSaved = {
 			["sparkRotationMode"] = "AUTO",
 			["timer"] = false,
 			["timerFlags"] = "None",
-			["authorMode"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["backgroundColor"] = {
-				0.13725490196078, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["anchorFrameType"] = "SCREEN",
+			["sparkOffsetX"] = 0,
+			["width"] = 280,
 			["config"] = {
 			},
-			["authorOptions"] = {
-			},
-			["sparkHidden"] = "NEVER",
+			["borderSize"] = 2,
+			["id"] = "WarriorRageBar",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["height"] = 13,
-			["borderSize"] = 2,
-			["semver"] = "1.0.1-4",
+			["displayTextRight"] = " ",
+			["borderInFront"] = true,
+			["timerSize"] = 12,
 			["icon_side"] = "RIGHT",
 			["rotateText"] = "NONE",
-			["stacksFont"] = "Friz Quadrata TT",
-			["sparkHeight"] = 30,
-			["uid"] = "7n)YybAF4Ur",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
+			["sparkHeight"] = 30,
+			["uid"] = "7n)YybAF4Ur",
+			["stacksFont"] = "Friz Quadrata TT",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = " ",
-			["timerSize"] = 12,
-			["id"] = "WarriorRageBar",
-			["borderInFront"] = true,
-			["frameStrata"] = 1,
-			["width"] = 280,
-			["sparkOffsetX"] = 0,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["semver"] = "1.0.1-4",
+			["height"] = 13,
+			["sparkHidden"] = "NEVER",
+			["authorOptions"] = {
 			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["backgroundColor"] = {
+				0.13725490196078, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkRotation"] = 0,
+			["sparkWidth"] = 10,
 		},
 		["Adriox Warrior"] = {
 			["backdropColor"] = {
@@ -995,33 +995,26 @@ WeakAurasSaved = {
 			},
 			["borderBackdrop"] = "None",
 			["xOffset"] = -0.7899169921875,
-			["selfPoint"] = "BOTTOMLEFT",
+			["borderOffset"] = 1,
 			["border"] = true,
-			["yOffset"] = -292.11979675293,
-			["regionType"] = "group",
+			["borderEdge"] = "None",
+			["anchorPoint"] = "CENTER",
 			["borderSize"] = 1,
-			["scale"] = 1,
+			["authorOptions"] = {
+			},
 			["borderColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-			},
+			["scale"] = 1,
 			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["expanded"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -1030,38 +1023,46 @@ WeakAurasSaved = {
 						},
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
 			},
-			["borderEdge"] = "None",
-			["borderOffset"] = 1,
+			["yOffset"] = -292.11979675293,
+			["internalVersion"] = 11,
 			["semver"] = "1.0.1",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["id"] = "Adriox Warrior",
-			["anchorPoint"] = "CENTER",
+			["regionType"] = "group",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["internalVersion"] = 11,
+			["selfPoint"] = "BOTTOMLEFT",
 			["borderInset"] = 1,
 			["version"] = 4,
-			["expanded"] = true,
-			["uid"] = "MUblz)eAsG4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["config"] = {
+			},
 			["conditions"] = {
 			},
 			["load"] = {
@@ -1080,8 +1081,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["config"] = {
-			},
+			["uid"] = "MUblz)eAsG4",
 		},
 		["T90AvatarRDY"] = {
 			["textFlags"] = "OUTLINE",
@@ -1117,11 +1117,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -1131,12 +1131,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -1146,29 +1165,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -1207,16 +1207,16 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showOnReady",
 						["unit"] = "player",
-						["ownOnly"] = true,
 						["spellName"] = 107574,
+						["debuffType"] = "HELPFUL",
 						["names"] = {
 							"Icy Veins", -- [1]
 						},
 						["type"] = "status",
-						["unevent"] = "auto",
+						["duration"] = "1",
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 107574,
@@ -1225,10 +1225,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["use_absorbMode"] = true,
-						["use_unit"] = true,
-						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["ownOnly"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnReady",
@@ -1238,21 +1238,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["borderBackdrop"] = "None",
+			["uid"] = "YUALrx1iPAa",
 			["internalVersion"] = 11,
-			["xOffset"] = 0,
+			["sparkWidth"] = 10,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -1260,42 +1260,36 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["stickyDuration"] = false,
 			["spark"] = false,
 			["sparkRotationMode"] = "AUTO",
 			["version"] = 4,
-			["timer"] = true,
 			["height"] = 13,
+			["timer"] = true,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
-			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["textSize"] = 13,
-			["anchorFrameType"] = "SCREEN",
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["zoom"] = 0,
+			["width"] = 280,
 			["rotateText"] = "NONE",
-			["config"] = {
-			},
-			["sparkHidden"] = "NEVER",
+			["borderSize"] = 2,
+			["id"] = "T90AvatarRDY",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["borderSize"] = 2,
-			["timerSize"] = 13,
+			["semver"] = "1.0.1-4",
+			["borderInFront"] = true,
+			["displayTextRight"] = "RDY",
 			["icon_side"] = "RIGHT",
 			["backgroundColor"] = {
 				0.21176470588235, -- [1]
@@ -1303,72 +1297,85 @@ WeakAurasSaved = {
 				0.11372549019608, -- [3]
 				1, -- [4]
 			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkRotation"] = 0,
 			["sparkHeight"] = 30,
 			["stacksFont"] = "Friz Quadrata TT",
-			["sparkRotation"] = 0,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["semver"] = "1.0.1-4",
-			["displayTextRight"] = "RDY",
-			["id"] = "T90AvatarRDY",
-			["borderInFront"] = true,
+			["timerSize"] = 13,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkHidden"] = "NEVER",
+			["config"] = {
+			},
 			["frameStrata"] = 2,
-			["width"] = 280,
-			["zoom"] = 0,
-			["useAdjustededMax"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["textSize"] = 13,
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkWidth"] = 10,
-			["uid"] = "YUALrx1iPAa",
+			["xOffset"] = 0,
+			["borderBackdrop"] = "None",
 		},
 		["FuryRB"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["xOffset"] = 23.7,
-			["zoom"] = 0.1,
+			["text2"] = "%s",
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
+			["icon"] = true,
 			["cooldownSwipe"] = true,
-			["cooldownTextEnabled"] = false,
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["duration"] = "1",
-						["custom_hide"] = "timed",
 						["spellName"] = 85288,
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["unevent"] = "auto",
+						["names"] = {
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["type"] = "status",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["realSpellName"] = "Raging Blow",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
+						["subeventPrefix"] = "SPELL",
+						["type"] = "status",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -1378,39 +1385,27 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["useglowColor"] = false,
 			["text2Font"] = "Anime Ace",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useglowColor"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stickyDuration"] = false,
+			["useTooltip"] = true,
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -1421,8 +1416,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["config"] = {
-			},
+			["uid"] = "hHFG(UL6E7e",
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -1443,22 +1437,16 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -1467,12 +1455,18 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["talent2"] = {
 					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
 					},
 				},
 				["size"] = {
@@ -1480,9 +1474,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Enabled"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -1491,34 +1485,40 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Containment"] = "INSIDE",
+			["text2Enabled"] = false,
+			["internalVersion"] = 11,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text1Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["text2FontSize"] = 13,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["glow"] = false,
+			["authorOptions"] = {
+			},
+			["zoom"] = 0.1,
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 13,
-			["auto"] = true,
-			["text1"] = "%p",
-			["authorOptions"] = {
-			},
-			["glow"] = false,
-			["text2"] = "%s",
-			["semver"] = "1.0.1-4",
-			["alpha"] = 1,
 			["id"] = "FuryRB",
-			["internalVersion"] = 11,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["uid"] = "hHFG(UL6E7e",
+			["text1Containment"] = "INSIDE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Enabled"] = true,
+			["config"] = {
+			},
 			["inverse"] = true,
-			["selfPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1535,26 +1535,19 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["cooldownTextEnabled"] = false,
 		},
 		["FuryEnrage"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["xOffset"] = -23.7,
-			["text1Color"] = {
+			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["useglowColor"] = false,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
 			["color"] = {
@@ -1564,28 +1557,33 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["cooldownSwipe"] = true,
-			["glow"] = false,
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["type"] = "aura",
+						["use_charges"] = false,
+						["ownOnly"] = true,
 						["spellName"] = 85288,
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["names"] = {
-							"Enrage", -- [1]
-						},
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
 						["buffShowOn"] = "showOnActive",
 						["realSpellName"] = "Raging Blow",
@@ -1593,11 +1591,13 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							184362, -- [1]
 						},
-						["unit"] = "player",
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["ownOnly"] = true,
-						["use_charges"] = false,
+						["names"] = {
+							"Enrage", -- [1]
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura",
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -1607,27 +1607,14 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["cooldownTextEnabled"] = false,
-			["text1Enabled"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text2Font"] = "Expressway",
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["text2Font"] = "Expressway",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["preset"] = "pulse",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
+			["text1Enabled"] = true,
+			["icon"] = true,
+			["config"] = {
 			},
-			["uid"] = "z7E78FOyFgI",
 			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
@@ -1639,7 +1626,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -1663,25 +1650,13 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_petbattle"] = false,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -1690,48 +1665,72 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["use_petbattle"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["authorMode"] = true,
-			["text2Enabled"] = false,
+			["alpha"] = 1,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Font"] = "Anime Ace",
-			["frameStrata"] = 1,
-			["text1Containment"] = "INSIDE",
-			["text2Color"] = {
+			["cooldownTextEnabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["internalVersion"] = 11,
+			["semver"] = "1.0.1-4",
+			["text2FontSize"] = 13,
+			["text2"] = "%s",
+			["text1"] = "%p",
+			["useGlowColor"] = false,
+			["text1Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["auto"] = true,
-			["text2FontSize"] = 13,
 			["zoom"] = 0.1,
-			["text1"] = "%p",
-			["useGlowColor"] = false,
-			["internalVersion"] = 11,
-			["text2"] = "%s",
-			["semver"] = "1.0.1-4",
-			["text1FontFlags"] = "OUTLINE",
+			["auto"] = true,
+			["desaturate"] = false,
 			["id"] = "FuryEnrage",
-			["useTooltip"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
+			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["width"] = 44,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "pulse",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
 			},
+			["uid"] = "z7E78FOyFgI",
 			["inverse"] = true,
-			["useglowColor"] = false,
+			["useTooltip"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1748,18 +1747,19 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 		},
 		["ArmsSBCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
+			["selfPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["xOffset"] = 79,
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["icon"] = true,
@@ -1767,64 +1767,31 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-						},
-						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
-						["type"] = "status",
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 107570,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 107570,
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107570,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["text1Containment"] = "INSIDE",
+			["text1Enabled"] = true,
 			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -1835,28 +1802,48 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = ")gXJ9xrzfo1",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
@@ -1866,26 +1853,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -1894,9 +1862,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -1905,40 +1878,67 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
-			},
+			["text2Enabled"] = false,
+			["text2Font"] = "Anime Ace",
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["cooldownEdge"] = false,
+			["internalVersion"] = 11,
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["glow"] = false,
+			["text2"] = "%s",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["glow"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
 			["id"] = "ArmsSBCD",
-			["text2Font"] = "Anime Ace",
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = ")gXJ9xrzfo1",
 			["inverse"] = true,
-			["desaturate"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["type"] = "status",
+						["unit"] = "player",
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 107570,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["spellName"] = 107570,
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 107570,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1955,49 +1955,56 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = 79,
+			["parent"] = "Adriox Warrior",
 		},
 		["FuryAM"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = 118,
-			["zoom"] = 0.1,
+			["text2"] = "%p",
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
+			["icon"] = true,
 			["cooldownSwipe"] = true,
-			["cooldownTextEnabled"] = false,
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["duration"] = "1",
+						["names"] = {
+						},
 						["use_unit"] = true,
-						["charges"] = "2",
 						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 152278,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 152278,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 152278,
-						["use_genericShowOn"] = true,
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["charges"] = "2",
 						["use_track"] = true,
-						["names"] = {
-						},
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -2007,39 +2014,27 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["useglowColor"] = false,
 			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useglowColor"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stickyDuration"] = false,
+			["useTooltip"] = true,
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2050,14 +2045,13 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["config"] = {
-			},
+			["uid"] = "dGeYIL9uZtr",
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 20,
@@ -2066,7 +2060,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -2074,6 +2068,25 @@ WeakAurasSaved = {
 					["single"] = "WARRIOR",
 					["multi"] = {
 						["MAGE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
 					},
 				},
 				["spec"] = {
@@ -2082,26 +2095,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -2110,9 +2104,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Enabled"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -2121,34 +2115,40 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Containment"] = "INSIDE",
+			["text2Enabled"] = false,
+			["internalVersion"] = 11,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text1Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["glow"] = false,
+			["authorOptions"] = {
+			},
+			["zoom"] = 0.1,
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["authorOptions"] = {
-			},
-			["glow"] = false,
-			["text2"] = "%p",
-			["semver"] = "1.0.1-4",
-			["alpha"] = 1,
 			["id"] = "FuryAM",
-			["internalVersion"] = 11,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["uid"] = "dGeYIL9uZtr",
+			["text1Containment"] = "INSIDE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Enabled"] = true,
+			["config"] = {
+			},
 			["inverse"] = true,
-			["selfPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -2165,51 +2165,86 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["cooldownTextEnabled"] = false,
 		},
 		["ArmsSSCD"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["internalVersion"] = 11,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["useTooltip"] = true,
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["cooldownEdge"] = false,
-			["internalVersion"] = 11,
+			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2Font"] = "Friz Quadrata TT",
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["spellName"] = 260708,
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["duration"] = "1",
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_unit"] = true,
+						["realSpellName"] = "Sweeping Strikes",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["type"] = "status",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["use_track"] = true,
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 260708,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2220,8 +2255,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["config"] = {
-			},
+			["uid"] = "NUOR1yERbxX",
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -2243,22 +2277,16 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -2267,12 +2295,18 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["talent2"] = {
 					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
 					},
 				},
 				["size"] = {
@@ -2280,9 +2314,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -2291,8 +2330,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["cooldownTextEnabled"] = false,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2301,63 +2340,24 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["icon"] = true,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["xOffset"] = -118,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["text1Containment"] = "INSIDE",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["xOffset"] = -118,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
 			["id"] = "ArmsSSCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["cooldownTextEnabled"] = false,
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Font"] = "Anime Ace",
+			["config"] = {
 			},
-			["uid"] = "NUOR1yERbxX",
 			["inverse"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_charges"] = false,
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-						},
-						["unit"] = "player",
-						["custom_hide"] = "timed",
-						["spellName"] = 260708,
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Cooldown Progress (Spell)",
-						["type"] = "status",
-						["realSpellName"] = "Sweeping Strikes",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
-						["duration"] = "1",
-						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 260708,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
+			["text1Enabled"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -2374,27 +2374,27 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["useTooltip"] = true,
+			["parent"] = "Adriox Warrior",
 		},
 		["ArmsOverpowerCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -2403,27 +2403,27 @@ WeakAurasSaved = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
-						["duration"] = "1",
-						["custom_hide"] = "timed",
 						["spellName"] = 7384,
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["names"] = {
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["charges"] = "2",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 						["realSpellName"] = "Overpower",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unit"] = "player",
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
+						["subeventPrefix"] = "SPELL",
+						["charges"] = "2",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -2434,31 +2434,26 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["internalVersion"] = 11,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["internalVersion"] = 11,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
+			["text1Enabled"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2469,7 +2464,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "(5P)hwS7b2p",
+			["config"] = {
+			},
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -2491,23 +2487,18 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["ingroup"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -2516,11 +2507,16 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -2528,9 +2524,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Containment"] = "INSIDE",
+			["xOffset"] = -23.7,
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -2539,34 +2535,38 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text1Font"] = "Anime Ace",
+			["cooldownTextEnabled"] = false,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["icon"] = true,
+			["text2"] = "%s",
+			["auto"] = true,
+			["text2Font"] = "Anime Ace",
+			["id"] = "ArmsOverpowerCD",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["text1Font"] = "Anime Ace",
-			["text2Font"] = "Anime Ace",
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["icon"] = true,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["cooldownTextEnabled"] = false,
-			["id"] = "ArmsOverpowerCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = -23.7,
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Containment"] = "INSIDE",
+			["uid"] = "(5P)hwS7b2p",
 			["inverse"] = true,
-			["text1Enabled"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -2583,45 +2583,34 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownEdge"] = false,
+			["parent"] = "Adriox Warrior",
 		},
 		["ArmsSSUptime"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["zoom"] = 0.1,
+			["text2"] = "%p",
 			["yOffset"] = 140,
 			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["charges"] = "2",
+						["use_charges"] = false,
+						["use_unit"] = true,
 						["spellName"] = 260708,
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["type"] = "aura",
-						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["duration"] = "1",
+						["names"] = {
+							"Sweeping Strikes", -- [1]
+						},
 						["event"] = "Cooldown Progress (Spell)",
 						["buffShowOn"] = "showOnActive",
 						["realSpellName"] = "Sweeping Strikes",
@@ -2629,13 +2618,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							260708, -- [1]
 						},
-						["names"] = {
-							"Sweeping Strikes", -- [1]
-						},
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
-						["use_charges"] = false,
+						["duration"] = "1",
+						["unevent"] = "auto",
+						["charges"] = "2",
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -2645,27 +2632,45 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["cooldownSwipe"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["useglowColor"] = false,
+			["cooldownEdge"] = false,
 			["internalVersion"] = 11,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["cooldownEdge"] = false,
-			["text1Containment"] = "INSIDE",
-			["stickyDuration"] = false,
+			["useTooltip"] = true,
+			["icon"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2676,7 +2681,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["uid"] = "PZG2DpfCb5U",
+			["config"] = {
+			},
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -2701,20 +2707,18 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -2723,21 +2727,23 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["cooldownTextEnabled"] = false,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 40,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -2746,34 +2752,33 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Enabled"] = true,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["xOffset"] = -120,
+			["selfPoint"] = "CENTER",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text2Font"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["zoom"] = 0.1,
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text2Font"] = "Friz Quadrata TT",
-			["text2"] = "%p",
-			["semver"] = "1.0.1-4",
-			["selfPoint"] = "CENTER",
 			["id"] = "ArmsSSUptime",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 40,
-			["cooldownTextEnabled"] = false,
-			["config"] = {
-			},
+			["text1Enabled"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "PZG2DpfCb5U",
 			["inverse"] = true,
-			["icon"] = true,
+			["text1Containment"] = "INSIDE",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -2790,55 +2795,33 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["parent"] = "Adriox Warrior",
 		},
 		["T15SuddenDeathUptime"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["preset"] = "shrink",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["preset"] = "shrink",
-					["duration_type"] = "seconds",
-				},
-			},
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura",
+						["use_charges"] = false,
+						["duration"] = "1",
+						["names"] = {
+							"Sudden Death", -- [1]
+						},
+						["use_genericShowOn"] = true,
 						["spellName"] = 29725,
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["unevent"] = "auto",
+						["custom_hide"] = "timed",
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
 						["buffShowOn"] = "showOnActive",
@@ -2849,13 +2832,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							52437, -- [1]
 						},
-						["custom_hide"] = "timed",
-						["use_genericShowOn"] = true,
-						["names"] = {
-							"Sudden Death", -- [1]
-						},
-						["duration"] = "1",
-						["use_charges"] = false,
+						["unevent"] = "auto",
+						["type"] = "aura",
+						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -2865,14 +2846,33 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = true,
+			["useglowColor"] = false,
 			["cooldownEdge"] = false,
-			["useTooltip"] = true,
+			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["text2Font"] = "Friz Quadrata TT",
-			["internalVersion"] = 11,
-			["stickyDuration"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+			},
+			["text1Enabled"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -2883,13 +2883,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "kS(I22Yf6Mc",
+			["config"] = {
+			},
 			["load"] = {
-				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
+				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 2,
@@ -2899,7 +2900,7 @@ WeakAurasSaved = {
 						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -2909,32 +2910,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -2943,9 +2944,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["xOffset"] = 118,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -2954,51 +2955,50 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 4,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["authorOptions"] = {
 			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text1Containment"] = "INSIDE",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["id"] = "T15SuddenDeathUptime",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["xOffset"] = 118,
-			["config"] = {
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Containment"] = "INSIDE",
+			["alpha"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["id"] = "T15SuddenDeathUptime",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 4,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "kS(I22Yf6Mc",
 			["inverse"] = true,
-			["text1Enabled"] = true,
+			["internalVersion"] = 11,
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
 		},
 		["T90IFTKRDY"] = {
 			["textFlags"] = "OUTLINE",
@@ -3033,11 +3033,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -3047,12 +3047,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -3062,29 +3081,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -3123,16 +3123,16 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showOnReady",
 						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellName"] = 262161,
 						["names"] = {
 							"Icy Veins", -- [1]
 						},
 						["type"] = "status",
-						["unevent"] = "auto",
+						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["unit"] = "player",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 262161,
@@ -3141,10 +3141,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["duration"] = "1",
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
+						["unit"] = "player",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["use_absorbMode"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnReady",
@@ -3154,21 +3154,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "JLesC)tdopi",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["sparkRotation"] = 0,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -3183,32 +3183,37 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["useAdjustededMax"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["sparkBlendMode"] = "ADD",
 			["authorMode"] = true,
-			["config"] = {
-			},
-			["anchorFrameType"] = "SCREEN",
+			["sparkOffsetX"] = 0,
+			["width"] = 280,
 			["backgroundColor"] = {
 				0.21176470588235, -- [1]
 				0.16470588235294, -- [2]
 				0.11372549019608, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-			},
-			["sparkHidden"] = "NEVER",
+			["borderSize"] = 2,
+			["id"] = "T90IFTKRDY",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["stacksFont"] = "Friz Quadrata TT",
-			["borderSize"] = 2,
-			["semver"] = "1.0.1-4",
+			["displayTextRight"] = "RDY",
+			["borderInFront"] = true,
+			["timerSize"] = 13,
 			["icon_side"] = "RIGHT",
 			["sparkRotationMode"] = "AUTO",
-			["rotateText"] = "NONE",
+			["zoom"] = 0,
 			["sparkHeight"] = 30,
 			["backdropColor"] = {
 				1, -- [1]
@@ -3216,35 +3221,30 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["zoom"] = 0,
+			["rotateText"] = "NONE",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = "RDY",
-			["timerSize"] = 13,
-			["id"] = "T90IFTKRDY",
-			["borderInFront"] = true,
-			["frameStrata"] = 2,
-			["width"] = 280,
-			["sparkOffsetX"] = 0,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["semver"] = "1.0.1-4",
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkHidden"] = "NEVER",
+			["authorOptions"] = {
 			},
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkRotation"] = 0,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkWidth"] = 10,
+			["uid"] = "JLesC)tdopi",
 		},
 		["T90AvatarCD"] = {
 			["textFlags"] = "OUTLINE",
@@ -3279,11 +3279,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 1,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -3293,12 +3293,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -3308,29 +3327,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -3368,14 +3368,16 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showOnCooldown",
 						["use_unit"] = true,
-						["duration"] = "1",
+						["ownOnly"] = true,
 						["debuffType"] = "HELPFUL",
 						["unit"] = "player",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["names"] = {
+							"Icy Veins", -- [1]
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 107574,
@@ -3384,12 +3386,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["spellName"] = 107574,
-						["use_absorbMode"] = true,
-						["names"] = {
-							"Icy Veins", -- [1]
-						},
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["ownOnly"] = true,
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnCooldown",
@@ -3399,21 +3399,26 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["sparkRotation"] = 0,
+			["backgroundColor"] = {
+				0.78039215686274, -- [1]
+				0.61176470588235, -- [2]
+				0.43137254901961, -- [3]
+				1, -- [4]
+			},
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["textSize"] = 13,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -3429,100 +3434,82 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
+			["zoom"] = 0,
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["rotateText"] = "NONE",
-			["width"] = 280,
+			["spark"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["authorOptions"] = {
-			},
-			["id"] = "T90AvatarCD",
+			["borderSize"] = 2,
+			["sparkHidden"] = "NEVER",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["sparkOffsetX"] = 0,
-			["borderSize"] = 2,
-			["displayTextRight"] = " %p",
+			["semver"] = "1.0.1-4",
+			["borderInFront"] = true,
+			["timerSize"] = 13,
 			["icon_side"] = "RIGHT",
 			["stacksFont"] = "Friz Quadrata TT",
-			["sparkRotationMode"] = "AUTO",
-			["sparkHeight"] = 30,
-			["uid"] = "b104jqsYYq)",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["sparkHeight"] = 30,
+			["uid"] = "b104jqsYYq)",
+			["sparkRotationMode"] = "AUTO",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["semver"] = "1.0.1-4",
-			["timerSize"] = 13,
-			["sparkHidden"] = "NEVER",
-			["borderInFront"] = true,
+			["displayTextRight"] = " %p",
+			["sparkOffsetX"] = 0,
+			["id"] = "T90AvatarCD",
+			["authorOptions"] = {
+			},
 			["frameStrata"] = 2,
-			["anchorFrameType"] = "SCREEN",
-			["spark"] = false,
-			["zoom"] = 0,
+			["width"] = 280,
+			["rotateText"] = "NONE",
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["textSize"] = 13,
-			["backgroundColor"] = {
-				0.78039215686274, -- [1]
-				0.61176470588235, -- [2]
-				0.43137254901961, -- [3]
-				1, -- [4]
-			},
+			["sparkWidth"] = 10,
+			["sparkRotation"] = 0,
 		},
 		["FuryDR"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["internalVersion"] = 11,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
@@ -3532,27 +3519,27 @@ WeakAurasSaved = {
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["use_charges"] = false,
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 						["spellName"] = 118000,
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["unevent"] = "auto",
+						["custom_hide"] = "timed",
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["type"] = "status",
+						["names"] = {
+						},
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
+						["use_genericShowOn"] = true,
 						["realSpellName"] = "Dragon Roar",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["type"] = "status",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["use_unit"] = true,
+						["use_charges"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -3562,13 +3549,26 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["internalVersion"] = 11,
+			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["useTooltip"] = true,
-			["icon"] = true,
-			["stickyDuration"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -3579,13 +3579,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "faETweuLGMR",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 17,
@@ -3594,7 +3595,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -3604,32 +3605,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -3638,9 +3639,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -3649,39 +3655,33 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Enabled"] = true,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["cooldownTextEnabled"] = false,
+			["text2Font"] = "Friz Quadrata TT",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["xOffset"] = -118,
+			["text2"] = "%p",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["xOffset"] = -118,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Friz Quadrata TT",
 			["id"] = "FuryDR",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
+			["text1Enabled"] = true,
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "faETweuLGMR",
 			["inverse"] = true,
-			["text1Containment"] = "INSIDE",
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3698,185 +3698,75 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["parent"] = "Adriox Warrior",
 		},
 		["T45FervorOfBattle"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["icon"] = true,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["useglowColor"] = false,
 			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["useTooltip"] = true,
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
-			["text1Containment"] = "INSIDE",
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["config"] = {
-			},
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 8,
-					["multi"] = {
-						[3] = true,
-						[4] = true,
-						[17] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
-			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["text2Font"] = "Friz Quadrata TT",
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text1Font"] = "Anime Ace",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "T45FervorOfBattle",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["xOffset"] = 70.7,
-			["uid"] = "0ky)3R(mKuz",
-			["inverse"] = true,
+			["selfPoint"] = "CENTER",
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["use_charges"] = false,
+						["use_unit"] = true,
 						["names"] = {
 						},
-						["type"] = "status",
 						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["spellName"] = 202316,
+						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 202316,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 202316,
+						["subeventSuffix"] = "_CAST_START",
+						["type"] = "status",
 						["use_track"] = true,
-						["use_unit"] = true,
+						["use_charges"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -3886,6 +3776,123 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["uid"] = "0ky)3R(mKuz",
+			["load"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 8,
+					["multi"] = {
+						[3] = true,
+						[4] = true,
+						[17] = true,
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["xOffset"] = 70.7,
+			["authorMode"] = true,
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["text2Font"] = "Friz Quadrata TT",
+			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "T45FervorOfBattle",
+			["authorOptions"] = {
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["config"] = {
+			},
+			["inverse"] = true,
+			["stickyDuration"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3902,14 +3909,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["parent"] = "Adriox Warrior",
 		},
 		["FuryRecklessnessUptime"] = {
 			["textFlags"] = "OUTLINE",
@@ -3963,9 +3963,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["race"] = {
+				["ingroup"] = {
 					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
 					},
 				},
 				["difficulty"] = {
@@ -3976,25 +3981,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						[2] = true,
-					},
-				},
-				["ingroup"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -4035,18 +4035,18 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["event"] = "Health",
 						["unit"] = "player",
-						["buffShowOn"] = "showOnActive",
-						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellIds"] = {
 							1719, -- [1]
 						},
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["names"] = {
 							"Recklessness", -- [1]
 						},
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["use_absorbMode"] = true,
-						["debuffType"] = "HELPFUL",
+						["subeventSuffix"] = "_CAST_START",
+						["buffShowOn"] = "showOnActive",
 					},
 					["untrigger"] = {
 					},
@@ -4054,21 +4054,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["sparkWidth"] = 10,
+			["borderOffset"] = 12,
 			["internalVersion"] = 11,
-			["uid"] = "wuJWk5b)XRM",
+			["spark"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -4078,9 +4078,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["sparkColor"] = {
@@ -4090,105 +4090,104 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["timer"] = true,
 			["height"] = 13,
+			["timer"] = true,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
+			["customTextUpdate"] = "update",
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["config"] = {
-			},
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["sparkOffsetX"] = 0,
-			["sparkHidden"] = "NEVER",
-			["border"] = true,
-			["borderEdge"] = "None",
-			["borderInFront"] = true,
-			["borderSize"] = 2,
-			["timerSize"] = 13,
-			["icon_side"] = "RIGHT",
-			["authorOptions"] = {
-			},
-			["sparkRotation"] = 0,
-			["sparkHeight"] = 30,
-			["rotateText"] = "NONE",
-			["stacksFont"] = "Friz Quadrata TT",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["semver"] = "1.0.1-4",
-			["displayTextRight"] = "%p",
-			["id"] = "FuryRecklessnessUptime",
-			["backgroundColor"] = {
-				0.21176470588235, -- [1]
-				0.16470588235294, -- [2]
-				0.11372549019608, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 2,
-			["width"] = 280,
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["customTextUpdate"] = "update",
+			["width"] = 280,
+			["zoom"] = 0,
+			["backgroundColor"] = {
+				0.21176470588235, -- [1]
+				0.16470588235294, -- [2]
+				0.11372549019608, -- [3]
+				1, -- [4]
+			},
+			["id"] = "FuryRecklessnessUptime",
+			["border"] = true,
+			["borderEdge"] = "None",
+			["semver"] = "1.0.1-4",
+			["borderSize"] = 2,
+			["displayTextRight"] = "%p",
+			["icon_side"] = "RIGHT",
+			["authorOptions"] = {
+			},
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkHeight"] = 30,
+			["rotateText"] = "NONE",
+			["sparkRotation"] = 0,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 13,
+			["borderInFront"] = true,
+			["sparkHidden"] = "NEVER",
+			["sparkOffsetX"] = 0,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["spark"] = false,
-			["borderOffset"] = 12,
+			["uid"] = "wuJWk5b)XRM",
+			["sparkWidth"] = 10,
 		},
 		["FuryFSUptime"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = 70.7,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
+			["internalVersion"] = 11,
 			["cooldownSwipe"] = true,
-			["authorOptions"] = {
-			},
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["internalVersion"] = 11,
+			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useTooltip"] = true,
-			["icon"] = true,
-			["text1Containment"] = "INSIDE",
+			["text1Enabled"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -4199,7 +4198,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "Rq9zKfBrDVS",
+			["config"] = {
+			},
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -4224,14 +4224,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["cooldownTextEnabled"] = false,
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -4240,8 +4235,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["text2Font"] = "Expressway",
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -4250,11 +4245,10 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["selfPoint"] = "CENTER",
-			["text1Font"] = "Anime Ace",
+			["frameStrata"] = 1,
 			["text2FontSize"] = 17,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
-			["text1FontFlags"] = "OUTLINE",
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -4266,37 +4260,42 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							202539, -- [1]
 						},
-						["buffShowOn"] = "showOnActive",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["names"] = {
 							"Furious Slash", -- [1]
 						},
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
+						["buffShowOn"] = "showOnActive",
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
 				["activeTriggerMode"] = -10,
 			},
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["frameStrata"] = 1,
+			["text1FontFlags"] = "OUTLINE",
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1Font"] = "Anime Ace",
 			["id"] = "FuryFSUptime",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextEnabled"] = false,
-			["config"] = {
+			["text2Font"] = "Expressway",
+			["alpha"] = 1,
+			["width"] = 44,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["uid"] = "Rq9zKfBrDVS",
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "<=",
-						["value"] = "3.5",
 						["variable"] = "expirationTime",
+						["value"] = "3.5",
 					},
 					["changes"] = {
 						{
@@ -4312,7 +4311,8 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 		},
 		["FuryRecklessnessCD"] = {
 			["textFlags"] = "OUTLINE",
@@ -4367,23 +4367,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
+						[2] = true,
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -4392,11 +4387,16 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["faction"] = {
 					["multi"] = {
-						[2] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["affixes"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -4436,14 +4436,16 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showOnCooldown",
 						["use_unit"] = true,
-						["ownOnly"] = true,
+						["duration"] = "1",
 						["debuffType"] = "HELPFUL",
 						["unit"] = "player",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["names"] = {
+							"Icy Veins", -- [1]
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 1719,
@@ -4452,12 +4454,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["spellName"] = 1719,
-						["use_absorbMode"] = true,
-						["names"] = {
-							"Icy Veins", -- [1]
-						},
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["duration"] = "1",
+						["ownOnly"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnCooldown",
@@ -4467,21 +4467,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "RjMNrRRATx8",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["sparkRotation"] = 0,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -4501,27 +4501,32 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
+			["rotateText"] = "NONE",
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["config"] = {
-			},
-			["width"] = 280,
+			["sparkOffsetX"] = 0,
+			["anchorFrameType"] = "SCREEN",
 			["zoom"] = 0,
-			["authorOptions"] = {
-			},
-			["id"] = "FuryRecklessnessCD",
+			["borderInFront"] = true,
+			["sparkHidden"] = "NEVER",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["customTextUpdate"] = "update",
-			["borderInFront"] = true,
-			["semver"] = "1.0.1-4",
+			["displayTextRight"] = " %p",
+			["borderSize"] = 2,
+			["timerSize"] = 13,
 			["icon_side"] = "RIGHT",
 			["spark"] = false,
-			["stacksFont"] = "Friz Quadrata TT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["sparkHeight"] = 30,
 			["backdropColor"] = {
 				1, -- [1]
@@ -4529,35 +4534,30 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["stacksFont"] = "Friz Quadrata TT",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = " %p",
-			["timerSize"] = 13,
-			["sparkHidden"] = "NEVER",
-			["borderSize"] = 2,
+			["semver"] = "1.0.1-4",
+			["customTextUpdate"] = "update",
+			["id"] = "FuryRecklessnessCD",
+			["authorOptions"] = {
+			},
 			["frameStrata"] = 2,
-			["anchorFrameType"] = "SCREEN",
-			["sparkOffsetX"] = 0,
-			["rotateText"] = "NONE",
+			["width"] = 280,
+			["config"] = {
+			},
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkRotation"] = 0,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkWidth"] = 10,
+			["uid"] = "RjMNrRRATx8",
 		},
 		["T90DeadlyCalmCD"] = {
 			["textFlags"] = "OUTLINE",
@@ -4592,11 +4592,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 1,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -4606,12 +4606,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -4621,29 +4640,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -4683,14 +4683,14 @@ WeakAurasSaved = {
 						["names"] = {
 							"Icy Veins", -- [1]
 						},
-						["debuffType"] = "HELPFUL",
+						["duration"] = "1",
 						["spellName"] = 262228,
 						["unit"] = "player",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["ownOnly"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 262228,
@@ -4699,10 +4699,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["use_absorbMode"] = true,
-						["use_unit"] = true,
-						["ownOnly"] = true,
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["duration"] = "1",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnCooldown",
@@ -4712,28 +4712,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["sparkWidth"] = 10,
+			["spark"] = false,
 			["internalVersion"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["textSize"] = 13,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -4752,76 +4745,84 @@ WeakAurasSaved = {
 			},
 			["timer"] = true,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
+			["sparkRotation"] = 0,
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["anchorFrameType"] = "SCREEN",
-			["height"] = 13,
-			["sparkOffsetX"] = 0,
-			["sparkHidden"] = "NEVER",
-			["border"] = true,
-			["borderEdge"] = "None",
-			["borderInFront"] = true,
-			["borderSize"] = 2,
-			["displayTextRight"] = " %p",
-			["icon_side"] = "RIGHT",
-			["stacksFont"] = "Friz Quadrata TT",
-			["backgroundColor"] = {
-				0.78039215686274, -- [1]
-				0.61176470588235, -- [2]
-				0.43137254901961, -- [3]
-				1, -- [4]
-			},
-			["sparkHeight"] = 30,
-			["sparkRotationMode"] = "AUTO",
-			["rotateText"] = "NONE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 13,
-			["semver"] = "1.0.1-4",
-			["id"] = "T90DeadlyCalmCD",
-			["authorOptions"] = {
-			},
-			["frameStrata"] = 2,
-			["width"] = 280,
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["sparkRotation"] = 0,
+			["width"] = 280,
+			["height"] = 13,
+			["authorOptions"] = {
+			},
+			["id"] = "T90DeadlyCalmCD",
+			["border"] = true,
+			["borderEdge"] = "None",
+			["timerSize"] = 13,
+			["borderSize"] = 2,
+			["semver"] = "1.0.1-4",
+			["icon_side"] = "RIGHT",
+			["stacksFont"] = "Friz Quadrata TT",
+			["rotateText"] = "NONE",
+			["sparkHeight"] = 30,
+			["sparkRotationMode"] = "AUTO",
+			["backgroundColor"] = {
+				0.78039215686274, -- [1]
+				0.61176470588235, -- [2]
+				0.43137254901961, -- [3]
+				1, -- [4]
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " %p",
+			["borderInFront"] = true,
+			["sparkHidden"] = "NEVER",
+			["sparkOffsetX"] = 0,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["textSize"] = 13,
-			["spark"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkWidth"] = 10,
 		},
 		["ArmsCleaveCD"] = {
 			["text2Point"] = "LEFT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 140,
 			["anchorPoint"] = "CENTER",
-			["internalVersion"] = 11,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["cooldownSwipe"] = true,
+			["authorOptions"] = {
+			},
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -4831,17 +4832,17 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
-						["unit"] = "target",
+						["duration"] = "1",
 						["use_charges"] = false,
-						["use_specific_unit"] = false,
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HARMFUL",
-						["type"] = "status",
+						["use_genericShowOn"] = true,
 						["spellName"] = 845,
-						["charges_operator"] = "==",
+						["custom_hide"] = "timed",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
+						["buffShowOn"] = "showOnActive",
+						["charges_operator"] = "==",
+						["type"] = "status",
 						["unevent"] = "auto",
+						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
 						["names"] = {
 							"Colossus Smash", -- [1]
@@ -4853,11 +4854,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							208086, -- [1]
 						},
-						["buffShowOn"] = "showOnActive",
-						["custom_hide"] = "timed",
-						["use_genericShowOn"] = true,
+						["debuffType"] = "HARMFUL",
+						["subeventPrefix"] = "SPELL",
+						["use_specific_unit"] = false,
 						["use_track"] = true,
-						["duration"] = "1",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -4867,30 +4868,25 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["cooldownEdge"] = false,
+			["useglowColor"] = false,
 			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useglowColor"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["internalVersion"] = 11,
+			["selfPoint"] = "CENTER",
 			["text2Font"] = "Expressway",
 			["desaturate"] = false,
 			["glowColor"] = {
@@ -4903,14 +4899,13 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["config"] = {
-			},
+			["uid"] = "HjZ2y3qNYxw",
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 15,
@@ -4920,7 +4915,7 @@ WeakAurasSaved = {
 						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -4930,32 +4925,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -4964,9 +4959,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = 120,
+			["text1Enabled"] = true,
 			["authorMode"] = true,
-			["width"] = 40,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "OUTSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -4975,33 +4970,39 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["stickyDuration"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text1Containment"] = "INSIDE",
+			["glow"] = false,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["icon"] = true,
+			["text2"] = "%s",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["icon"] = true,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["glow"] = false,
 			["id"] = "ArmsCleaveCD",
-			["stickyDuration"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Enabled"] = true,
-			["uid"] = "HjZ2y3qNYxw",
+			["text1Font"] = "Anime Ace",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["xOffset"] = 120,
+			["config"] = {
+			},
 			["inverse"] = true,
-			["selfPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -5018,8 +5019,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["authorOptions"] = {
-			},
+			["parent"] = "Adriox Warrior",
 		},
 		["FurySBCD"] = {
 			["text2Point"] = "CENTER",
@@ -5030,33 +5030,20 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["xOffset"] = -100,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -5067,22 +5054,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["names"] = {
-						},
+						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["spellName"] = 107570,
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
 						["realSpellName"] = "Storm Bolt",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["use_genericShowOn"] = true,
-						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -5093,13 +5080,26 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["text2Font"] = "Friz Quadrata TT",
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["internalVersion"] = 11,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5110,13 +5110,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "BxrAUsWua2L",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 6,
@@ -5125,12 +5126,31 @@ WeakAurasSaved = {
 						[19] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
@@ -5140,26 +5160,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -5168,9 +5169,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Containment"] = "INSIDE",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -5179,8 +5180,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["icon"] = true,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text2Color"] = {
@@ -5189,25 +5190,24 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["cooldownTextEnabled"] = false,
+			["text2"] = "%p",
+			["auto"] = true,
 			["authorOptions"] = {
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["cooldownTextEnabled"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["id"] = "FurySBCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
+			["icon"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "BxrAUsWua2L",
 			["inverse"] = true,
-			["internalVersion"] = 11,
+			["text1Enabled"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -5224,51 +5224,50 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = -100,
+			["parent"] = "Adriox Warrior",
 		},
 		["FuryChargeCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["xOffset"] = -60,
-			["zoom"] = 0.1,
+			["text2"] = "%s",
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["text1Enabled"] = true,
 			["cooldownSwipe"] = true,
-			["authorOptions"] = {
-			},
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["internalVersion"] = 11,
-			["text1Enabled"] = true,
+			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useTooltip"] = true,
-			["icon"] = true,
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
+			["cooldownEdge"] = false,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5279,7 +5278,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "CN4AVmagMgA",
+			["config"] = {
+			},
 			["load"] = {
 				["use_class"] = true,
 				["use_never"] = true,
@@ -5299,39 +5299,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["use_absorbMode"] = true,
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 100,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["spellName"] = 100,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
+			["cooldownTextEnabled"] = false,
 			["authorMode"] = true,
-			["width"] = 35,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -5340,8 +5310,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["text1Containment"] = "INSIDE",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5350,76 +5320,141 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["frameStrata"] = 1,
-			["text2Font"] = "Anime Ace",
+			["glow"] = false,
 			["text2FontSize"] = 12,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
-			["text1FontFlags"] = "OUTLINE",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2"] = "%s",
-			["semver"] = "1.0.1-4",
-			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["text2Font"] = "Anime Ace",
 			["id"] = "FuryChargeCD",
-			["text1Containment"] = "INSIDE",
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextEnabled"] = false,
-			["config"] = {
+			["text1Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["width"] = 35,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
+						["spellName"] = 100,
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 100,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["use_absorbMode"] = true,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
 			},
+			["uid"] = "CN4AVmagMgA",
 			["inverse"] = false,
-			["cooldownEdge"] = false,
+			["icon"] = true,
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 		},
 		["ArmsMSCD"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["glow"] = false,
+			["xOffset"] = -70.7,
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["parent"] = "Adriox Warrior",
-			["useTooltip"] = true,
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Enabled"] = true,
-			["icon"] = true,
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["spellName"] = 12294,
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["charges_operator"] = "==",
+						["type"] = "status",
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["unit"] = "player",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_unit"] = true,
+						["realSpellName"] = "Mortal Strike",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["charges"] = "2",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["use_track"] = true,
+						["duration"] = "1",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 12294,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5430,7 +5465,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "gUEMdrYW(UK",
+			["config"] = {
+			},
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -5455,20 +5491,18 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -5477,21 +5511,28 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["cooldownEdge"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -5500,8 +5541,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Containment"] = "INSIDE",
+			["text2Enabled"] = false,
+			["text1Font"] = "Anime Ace",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5511,64 +5552,23 @@ WeakAurasSaved = {
 			["regionType"] = "icon",
 			["authorOptions"] = {
 			},
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text2Font"] = "Friz Quadrata TT",
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
 			["id"] = "ArmsMSCD",
-			["text1Font"] = "Anime Ace",
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
+			["text1Containment"] = "INSIDE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownEdge"] = false,
+			["uid"] = "gUEMdrYW(UK",
 			["inverse"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_charges"] = false,
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-						},
-						["duration"] = "1",
-						["custom_hide"] = "timed",
-						["spellName"] = 12294,
-						["charges_operator"] = "==",
-						["type"] = "status",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Cooldown Progress (Spell)",
-						["charges"] = "2",
-						["realSpellName"] = "Mortal Strike",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_unit"] = true,
-						["unit"] = "player",
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 12294,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -5585,41 +5585,17 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = -70.7,
+			["glow"] = false,
 		},
 		["ArmsInterruptCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["text2Font"] = "Anime Ace",
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -5628,22 +5604,22 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["spellName"] = 6552,
+						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
+						["names"] = {
+						},
 						["realSpellName"] = "Pummel",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unit"] = "player",
 						["use_genericShowOn"] = true,
-						["names"] = {
-						},
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["spellName"] = 6552,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -5653,19 +5629,38 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
 			["useTooltip"] = true,
-			["text2Font"] = "Anime Ace",
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
 			},
-			["text1Containment"] = "INSIDE",
 			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5676,7 +5671,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "b(5v)m7eNfP",
+			["config"] = {
+			},
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -5700,24 +5696,13 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_petbattle"] = false,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -5726,21 +5711,37 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["use_petbattle"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text1Font"] = "Anime Ace",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
-			["text1Font"] = "Anime Ace",
-			["alpha"] = 1,
-			["text1FontFlags"] = "OUTLINE",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["xOffset"] = 0,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5750,29 +5751,28 @@ WeakAurasSaved = {
 			["regionType"] = "icon",
 			["authorOptions"] = {
 			},
-			["frameStrata"] = 1,
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["icon"] = true,
-			["glow"] = false,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["internalVersion"] = 11,
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["glow"] = false,
+			["icon"] = true,
+			["text2"] = "%s",
+			["auto"] = true,
+			["frameStrata"] = 1,
 			["id"] = "ArmsInterruptCD",
-			["xOffset"] = 0,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["text1Color"] = {
+			["text1FontFlags"] = "OUTLINE",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["uid"] = "b(5v)m7eNfP",
+			["inverse"] = true,
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["config"] = {
-			},
-			["inverse"] = true,
-			["stickyDuration"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -5789,7 +5789,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
 		},
 		["T90IFTKCD"] = {
 			["textFlags"] = "OUTLINE",
@@ -5824,11 +5824,11 @@ WeakAurasSaved = {
 			["progressPrecision"] = 1,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -5838,12 +5838,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -5853,29 +5872,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -5913,14 +5913,16 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showOnCooldown",
 						["use_unit"] = true,
-						["ownOnly"] = true,
+						["duration"] = "1",
 						["debuffType"] = "HELPFUL",
 						["unit"] = "player",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["names"] = {
+							"Icy Veins", -- [1]
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 262161,
@@ -5929,12 +5931,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["spellName"] = 262161,
-						["use_absorbMode"] = true,
-						["names"] = {
-							"Icy Veins", -- [1]
-						},
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["duration"] = "1",
+						["ownOnly"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnCooldown",
@@ -5944,21 +5944,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "phjYjzwjTul",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["sparkRotation"] = 0,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -5978,27 +5978,32 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
+			["rotateText"] = "NONE",
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
-			["config"] = {
-			},
-			["width"] = 280,
+			["sparkOffsetX"] = 0,
+			["anchorFrameType"] = "SCREEN",
 			["zoom"] = 0,
-			["authorOptions"] = {
-			},
-			["id"] = "T90IFTKCD",
+			["borderInFront"] = true,
+			["sparkHidden"] = "NEVER",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["customTextUpdate"] = "update",
-			["borderInFront"] = true,
-			["semver"] = "1.0.1-4",
+			["displayTextRight"] = " %p",
+			["borderSize"] = 2,
+			["timerSize"] = 13,
 			["icon_side"] = "RIGHT",
 			["spark"] = false,
-			["stacksFont"] = "Friz Quadrata TT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["sparkHeight"] = 30,
 			["backdropColor"] = {
 				1, -- [1]
@@ -6006,35 +6011,30 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["stacksFont"] = "Friz Quadrata TT",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = " %p",
-			["timerSize"] = 13,
-			["sparkHidden"] = "NEVER",
-			["borderSize"] = 2,
+			["semver"] = "1.0.1-4",
+			["customTextUpdate"] = "update",
+			["id"] = "T90IFTKCD",
+			["authorOptions"] = {
+			},
 			["frameStrata"] = 2,
-			["anchorFrameType"] = "SCREEN",
-			["sparkOffsetX"] = 0,
-			["rotateText"] = "NONE",
+			["width"] = 280,
+			["config"] = {
+			},
+			["authorMode"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkRotation"] = 0,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkWidth"] = 10,
+			["uid"] = "phjYjzwjTul",
 		},
 		["T90DeadlyCalmUptime"] = {
 			["textFlags"] = "OUTLINE",
@@ -6069,11 +6069,11 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -6083,12 +6083,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -6098,29 +6117,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -6161,18 +6161,18 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["event"] = "Health",
 						["unit"] = "player",
-						["buffShowOn"] = "showOnActive",
-						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellIds"] = {
 							262228, -- [1]
 						},
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
 						["names"] = {
 							"Deadly Calm", -- [1]
 						},
-						["use_absorbMode"] = true,
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["buffShowOn"] = "showOnActive",
 					},
 					["untrigger"] = {
 					},
@@ -6180,28 +6180,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["xOffset"] = 0,
+			["sparkWidth"] = 10,
 			["internalVersion"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["sparkRotationMode"] = "AUTO",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -6224,22 +6217,23 @@ WeakAurasSaved = {
 			},
 			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["useAdjustededMax"] = false,
+			["config"] = {
+			},
 			["sparkBlendMode"] = "ADD",
 			["authorMode"] = true,
-			["uid"] = "UsbPCc1wgXV",
-			["anchorFrameType"] = "SCREEN",
+			["stacksFont"] = "Friz Quadrata TT",
+			["width"] = 280,
 			["timer"] = true,
-			["sparkOffsetX"] = 0,
-			["id"] = "T90DeadlyCalmUptime",
+			["zoom"] = 0,
+			["sparkHidden"] = "NEVER",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["borderSize"] = 2,
-			["timerSize"] = 13,
+			["displayTextRight"] = "%p",
 			["icon_side"] = "RIGHT",
 			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
+			["borderInFront"] = true,
 			["sparkHeight"] = 30,
 			["backdropColor"] = {
 				1, -- [1]
@@ -6247,29 +6241,35 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["borderInFront"] = true,
+			["rotateText"] = "NONE",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["semver"] = "1.0.1-4",
-			["displayTextRight"] = "%p",
-			["sparkHidden"] = "NEVER",
-			["zoom"] = 0,
+			["timerSize"] = 13,
+			["auto"] = true,
+			["id"] = "T90DeadlyCalmUptime",
+			["sparkOffsetX"] = 0,
 			["frameStrata"] = 2,
-			["width"] = 280,
-			["stacksFont"] = "Friz Quadrata TT",
-			["config"] = {
-			},
+			["anchorFrameType"] = "SCREEN",
+			["uid"] = "UsbPCc1wgXV",
+			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkRotationMode"] = "AUTO",
-			["sparkWidth"] = 10,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["xOffset"] = 0,
 		},
 		["ArmsDBTSCD"] = {
 			["glow"] = false,
@@ -6280,12 +6280,12 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["zoom"] = 0.1,
+			["text2"] = "%s",
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["cooldownTextEnabled"] = false,
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["xOffset"] = -118,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["icon"] = true,
@@ -6297,22 +6297,22 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["custom_hide"] = "timed",
+						["unit"] = "player",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 118038,
 						["realSpellName"] = "Die by the Sword",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_genericShowOn"] = true,
 						["names"] = {
 						},
-						["spellName"] = 118038,
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["unit"] = "player",
+						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -6323,26 +6323,26 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["internalVersion"] = 11,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["internalVersion"] = 11,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["stickyDuration"] = false,
+			["cooldownTextEnabled"] = false,
+			["text1Enabled"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -6353,7 +6353,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "bPhEy8NGnuK",
+			["config"] = {
+			},
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -6364,8 +6365,8 @@ WeakAurasSaved = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
 				["ingroup"] = {
@@ -6378,24 +6379,13 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_petbattle"] = false,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -6404,16 +6394,27 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["use_petbattle"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Containment"] = "INSIDE",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -6422,42 +6423,41 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["text2Point"] = "BOTTOMRIGHT",
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text2Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["id"] = "ArmsDBTSCD",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text2Font"] = "Anime Ace",
-			["text2"] = "%s",
-			["semver"] = "1.0.1-4",
-			["selfPoint"] = "CENTER",
-			["id"] = "ArmsDBTSCD",
-			["text2Point"] = "BOTTOMRIGHT",
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "bPhEy8NGnuK",
 			["inverse"] = true,
-			["text1Enabled"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -6474,18 +6474,18 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = -118,
+			["parent"] = "Adriox Warrior",
 		},
 		["ArmsISCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["xOffset"] = 79,
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["icon"] = true,
@@ -6497,23 +6497,23 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
+						["custom_hide"] = "timed",
 						["type"] = "status",
 						["unit"] = "player",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 5246,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["spellName"] = 5246,
-						["use_genericShowOn"] = true,
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -6524,26 +6524,26 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["text2Font"] = "Anime Ace",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2Font"] = "Anime Ace",
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -6554,28 +6554,48 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "j3kb3sfuVgs",
+			["config"] = {
+			},
 			["load"] = {
-				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
+				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 4,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
@@ -6585,26 +6605,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -6613,9 +6614,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -6624,47 +6630,41 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["internalVersion"] = 11,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["glow"] = false,
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["cooldownEdge"] = false,
+			["text2"] = "%s",
+			["auto"] = true,
+			["authorOptions"] = {
+			},
+			["id"] = "ArmsISCD",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["authorOptions"] = {
-			},
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["cooldownEdge"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["glow"] = false,
-			["id"] = "ArmsISCD",
-			["internalVersion"] = 11,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "j3kb3sfuVgs",
 			["inverse"] = true,
-			["text1Containment"] = "INSIDE",
+			["text1Enabled"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -6681,18 +6681,180 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = 79,
+			["parent"] = "Adriox Warrior",
 		},
 		["ArmsIVCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
+			["text2Font"] = "Anime Ace",
 			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = false,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 5,
+					["multi"] = {
+						[10] = true,
+						[19] = true,
+						[6] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Font"] = "Anime Ace",
+			["authorMode"] = true,
+			["width"] = 35,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["xOffset"] = 79,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text1Containment"] = "INSIDE",
+			["internalVersion"] = 11,
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["text2"] = "%s",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "ArmsIVCD",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["uid"] = "wYeRcObAjVU",
+			["inverse"] = true,
+			["glow"] = false,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -6700,24 +6862,24 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
-						["spellName"] = 202168,
+						["unit"] = "player",
 						["type"] = "status",
 						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
+						["names"] = {
+						},
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 202168,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["use_genericShowOn"] = true,
-						["names"] = {
-						},
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["unit"] = "player",
+						["spellName"] = 202168,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -6727,168 +6889,6 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["text2Font"] = "Anime Ace",
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["glow"] = false,
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "wYeRcObAjVU",
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 5,
-					["multi"] = {
-						[10] = true,
-						[6] = true,
-						[19] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Font"] = "Anime Ace",
-			["alpha"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["text1Containment"] = "INSIDE",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["frameStrata"] = 1,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "ArmsIVCD",
-			["xOffset"] = 79,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
 		},
 		["WarriorRageBarText"] = {
 			["textFlags"] = "OUTLINE",
@@ -6962,17 +6962,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_name"] = false,
-				["use_vehicleUi"] = false,
 				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -6980,6 +6970,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 			},
 			["timerColor"] = {
 				1, -- [1]
@@ -7012,8 +7012,15 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["barInFront"] = true,
-			["parent"] = "Adriox Warrior",
-			["uid"] = "qyrJiqJnUau",
+			["sparkWidth"] = 10,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["customTextUpdate"] = "update",
 			["automaticWidth"] = "Auto",
 			["displayTextLeft"] = "%p                    ",
@@ -7030,19 +7037,19 @@ WeakAurasSaved = {
 						["type"] = "status",
 						["unevent"] = "auto",
 						["event"] = "Power",
-						["use_requirePowerType"] = false,
-						["use_unit"] = true,
+						["custom_hide"] = "timed",
+						["unit"] = "player",
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
-						["subeventPrefix"] = "SPELL",
 						["use_power"] = false,
-						["unit"] = "player",
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["use_requirePowerType"] = false,
 					},
 					["untrigger"] = {
-						["use_unit"] = true,
 						["unit"] = "player",
+						["use_unit"] = true,
 					},
 				}, -- [1]
 				["disjunctive"] = "any",
@@ -7054,17 +7061,17 @@ WeakAurasSaved = {
 			["animation"] = {
 				["start"] = {
 					["type"] = "preset",
-					["duration_type"] = "seconds",
 					["preset"] = "fade",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "preset",
-					["duration_type"] = "seconds",
 					["preset"] = "fade",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backgroundColor"] = {
@@ -7077,97 +7084,86 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["stickyDuration"] = false,
-			["authorOptions"] = {
-			},
-			["sparkRotationMode"] = "MANUAL",
-			["version"] = 4,
-			["anchorFrameType"] = "SCREEN",
-			["timer"] = false,
-			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
-			},
-			["fontSize"] = 13,
-			["displayText"] = "%p",
-			["id"] = "WarriorRageBarText",
-			["rotateText"] = "NONE",
-			["justify"] = "CENTER",
-			["border"] = true,
-			["borderEdge"] = "1 Pixel",
-			["zoom"] = 0,
-			["borderSize"] = 1,
-			["stacksFont"] = "Friz Quadrata TT",
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["wordWrap"] = "WordWrap",
-			["sparkHeight"] = 60,
-			["height"] = 13.206315994263,
-			["borderOffset"] = 1,
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 14,
-			["semver"] = "1.0.1-4",
-			["sparkHidden"] = "BOTH",
-			["displayTextRight"] = "                 ",
-			["frameStrata"] = 5,
-			["width"] = 28.206424713135,
-			["sparkRotation"] = 0,
 			["sparkColor"] = {
 				1, -- [1]
 				0.94117647058823, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
+			["sparkRotation"] = 0,
+			["version"] = 4,
+			["width"] = 28.206424713135,
+			["timer"] = false,
+			["timerFlags"] = "OUTLINE",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["sparkBlendMode"] = "ADD",
+			["authorMode"] = true,
+			["fontSize"] = 13,
+			["timerSize"] = 14,
+			["sparkHidden"] = "BOTH",
+			["displayTextRight"] = "                 ",
+			["semver"] = "1.0.1-4",
+			["border"] = true,
+			["borderEdge"] = "1 Pixel",
+			["zoom"] = 0,
+			["borderSize"] = 1,
+			["borderOffset"] = 1,
+			["icon_side"] = "LEFT",
+			["height"] = 13.206315994263,
+			["wordWrap"] = "WordWrap",
+			["sparkHeight"] = 60,
+			["sparkOffsetX"] = 0,
+			["stacksFont"] = "Friz Quadrata TT",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["justify"] = "CENTER",
+			["rotateText"] = "NONE",
+			["id"] = "WarriorRageBarText",
+			["displayText"] = "%p",
+			["frameStrata"] = 5,
+			["anchorFrameType"] = "SCREEN",
+			["sparkRotationMode"] = "MANUAL",
+			["authorOptions"] = {
+			},
 			["inverse"] = true,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL_INVERSE",
 			["conditions"] = {
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["sparkWidth"] = 10,
+			["uid"] = "qyrJiqJnUau",
+			["parent"] = "Adriox Warrior",
 		},
 		["FuryRA"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["internalVersion"] = 11,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["useglowColor"] = false,
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["icon"] = true,
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
+			["useglowColor"] = false,
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -7175,27 +7171,27 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 202751,
-						["type"] = "status",
+						["use_charges"] = false,
 						["debuffType"] = "HELPFUL",
+						["spellName"] = 202751,
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["unit"] = "player",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 202751,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["custom_hide"] = "timed",
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["type"] = "status",
 						["use_track"] = true,
-						["use_charges"] = false,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -7205,9 +7201,13 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["useTooltip"] = true,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["internalVersion"] = 11,
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7218,13 +7218,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "VGShnMsSGwx",
+			["config"] = {
+			},
 			["load"] = {
-				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
+				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 19,
@@ -7233,7 +7234,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -7243,32 +7244,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -7277,14 +7278,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["cooldownTextEnabled"] = false,
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -7293,8 +7289,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7303,37 +7299,41 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["text1FontFlags"] = "OUTLINE",
+			["text2Font"] = "Friz Quadrata TT",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["xOffset"] = 118,
+			["text2"] = "%p",
+			["auto"] = true,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["xOffset"] = 118,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Friz Quadrata TT",
 			["id"] = "FuryRA",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextEnabled"] = false,
-			["config"] = {
+			["text1Font"] = "Anime Ace",
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["uid"] = "VGShnMsSGwx",
 			["inverse"] = true,
-			["text1Containment"] = "INSIDE",
+			["text1Enabled"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -7350,83 +7350,56 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["parent"] = "Adriox Warrior",
 		},
 		["FuryERCD"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
-			["authorOptions"] = {
-			},
+			["cooldownEdge"] = false,
 			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["cooldownEdge"] = false,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["spellName"] = 184364,
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["realSpellName"] = "Enraged Regeneration",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["duration"] = "1",
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_track"] = true,
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 184364,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["text1Containment"] = "INSIDE",
+			["text1Enabled"] = true,
+			["glow"] = false,
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7437,8 +7410,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["config"] = {
-			},
+			["uid"] = "fEqZ6NEDR4(",
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -7449,8 +7421,8 @@ WeakAurasSaved = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
 				["use_petbattle"] = false,
@@ -7460,21 +7432,16 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -7483,11 +7450,16 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -7496,9 +7468,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["stickyDuration"] = false,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -7507,8 +7479,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1FontFlags"] = "OUTLINE",
+			["text2Enabled"] = false,
+			["xOffset"] = -20,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7517,23 +7489,56 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["alpha"] = 1,
-			["icon"] = true,
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text2Font"] = "Friz Quadrata TT",
-			["selfPoint"] = "CENTER",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["selfPoint"] = "CENTER",
+			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
+			["icon"] = true,
 			["id"] = "FuryERCD",
-			["xOffset"] = -20,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["stickyDuration"] = false,
-			["uid"] = "fEqZ6NEDR4(",
+			["text1FontFlags"] = "OUTLINE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["config"] = {
+			},
 			["inverse"] = true,
-			["glow"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
+						["use_unit"] = true,
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Cooldown Progress (Spell)",
+						["custom_hide"] = "timed",
+						["realSpellName"] = "Enraged Regeneration",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+						},
+						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["use_track"] = true,
+						["spellName"] = 184364,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 184364,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -7550,12 +7555,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["parent"] = "Adriox Warrior",
 		},
 		["FurySD"] = {
 			["text2Point"] = "CENTER",
@@ -7563,42 +7563,42 @@ WeakAurasSaved = {
 			["xOffset"] = 70.7,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["cooldownSwipe"] = true,
-			["text1Enabled"] = true,
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = true,
 			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
+			["cooldownEdge"] = false,
 			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useTooltip"] = true,
 			["authorOptions"] = {
 			},
-			["desaturate"] = false,
+			["text1Enabled"] = true,
 			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7620,12 +7620,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							280721, -- [1]
 						},
-						["buffShowOn"] = "showOnMissing",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["names"] = {
 							"Sudden Death", -- [1]
 						},
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
+						["buffShowOn"] = "showOnMissing",
 					},
 					["untrigger"] = {
 					},
@@ -7656,9 +7656,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["uid"] = "N7sxehr7LHx",
+			["config"] = {
+			},
 			["authorMode"] = true,
-			["text1Font"] = "Anime Ace",
+			["selfPoint"] = "CENTER",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -7667,8 +7668,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
+			["width"] = 44,
+			["text2Enabled"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7676,58 +7677,90 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["regionType"] = "icon",
+			["glow"] = false,
+			["alpha"] = 1,
+			["text2FontSize"] = 24,
+			["internalVersion"] = 11,
+			["text1"] = "%s",
+			["zoom"] = 0.1,
+			["text1FontFlags"] = "OUTLINE",
+			["text2"] = "%p",
+			["auto"] = true,
+			["cooldownTextEnabled"] = true,
+			["id"] = "FurySD",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["text2FontSize"] = 24,
-			["cooldownTextEnabled"] = true,
-			["text1"] = "%s",
-			["text2"] = "%p",
-			["text1FontFlags"] = "OUTLINE",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FurySD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["selfPoint"] = "CENTER",
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "N7sxehr7LHx",
 			["inverse"] = false,
-			["text1Containment"] = "INSIDE",
+			["desaturate"] = false,
 			["conditions"] = {
 			},
-			["cooldownEdge"] = false,
-			["icon"] = true,
+			["useTooltip"] = true,
+			["parent"] = "Adriox Warrior",
 		},
 		["T45RendMissing"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = 70.7,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = true,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "target",
-						["ownOnly"] = true,
-						["use_specific_unit"] = false,
-						["subeventPrefix"] = "SPELL",
-						["duration"] = "1",
-						["debuffType"] = "HARMFUL",
+						["names"] = {
+							"Rend", -- [1]
+						},
+						["use_genericShowOn"] = true,
+						["use_unit"] = true,
 						["custom_hide"] = "timed",
+						["spellName"] = 202316,
+						["buffShowOn"] = "showOnMissing",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
 						["unevent"] = "auto",
+						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
 						["type"] = "aura",
 						["event"] = "Cooldown Progress (Spell)",
@@ -7737,13 +7770,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							772, -- [1]
 						},
-						["buffShowOn"] = "showOnMissing",
-						["spellName"] = 202316,
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
-						["names"] = {
-							"Rend", -- [1]
-						},
+						["debuffType"] = "HARMFUL",
+						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["use_specific_unit"] = false,
+						["ownOnly"] = true,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -7753,45 +7784,9 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["cooldownSwipe"] = true,
-			["glow"] = false,
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text1Enabled"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Containment"] = "INSIDE",
 			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -7802,13 +7797,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "szs4oKWcp1(",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 9,
@@ -7818,7 +7814,7 @@ WeakAurasSaved = {
 						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -7828,32 +7824,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -7862,9 +7858,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -7873,8 +7869,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
+			["text2Enabled"] = false,
+			["internalVersion"] = 11,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text2Color"] = {
@@ -7883,49 +7879,53 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["alpha"] = 1,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["icon"] = true,
+			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
 			["authorOptions"] = {
 			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text2Font"] = "Friz Quadrata TT",
-			["icon"] = true,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["alpha"] = 1,
 			["id"] = "T45RendMissing",
-			["internalVersion"] = 11,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "szs4oKWcp1(",
 			["inverse"] = true,
-			["stickyDuration"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 			},
 			["cooldown"] = false,
-			["cooldownTextEnabled"] = true,
+			["glow"] = false,
 		},
 		["ArmsOverpowerStacks"] = {
 			["text2Point"] = "LEFT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 140,
 			["anchorPoint"] = "CENTER",
-			["internalVersion"] = 11,
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["icon"] = true,
+			["cooldownTextEnabled"] = false,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -7935,18 +7935,16 @@ WeakAurasSaved = {
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["names"] = {
-							"Overpower", -- [1]
-						},
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 260708,
+						["ownOnly"] = true,
+						["use_charges"] = false,
 						["buffShowOn"] = "showOnActive",
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["unevent"] = "auto",
+						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["custom_hide"] = "timed",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["type"] = "aura",
 						["realSpellName"] = "Sweeping Strikes",
@@ -7954,11 +7952,13 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							7384, -- [1]
 						},
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["use_charges"] = false,
-						["ownOnly"] = true,
+						["custom_hide"] = "timed",
+						["unevent"] = "auto",
+						["spellName"] = 260708,
+						["subeventPrefix"] = "SPELL",
+						["names"] = {
+							"Overpower", -- [1]
+						},
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -7969,24 +7969,24 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["parent"] = "Adriox Warrior",
-			["useTooltip"] = true,
+			["text2Font"] = "Anime Ace",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2Font"] = "Anime Ace",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["internalVersion"] = 11,
+			["selfPoint"] = "CENTER",
 			["useglowColor"] = false,
 			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
@@ -7999,8 +7999,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["config"] = {
-			},
+			["uid"] = "gFi)hPxYsAj",
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -8022,23 +8021,18 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["ingroup"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -8047,11 +8041,16 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -8059,9 +8058,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Enabled"] = true,
+			["xOffset"] = -22,
 			["authorMode"] = true,
-			["width"] = 40,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "OUTSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -8070,38 +8069,39 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["stickyDuration"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["desaturate"] = false,
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["glow"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["glow"] = false,
+			["text2"] = "%s",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["id"] = "ArmsOverpowerStacks",
-			["stickyDuration"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = -22,
-			["uid"] = "gFi)hPxYsAj",
+			["text1Font"] = "Anime Ace",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["text1Enabled"] = true,
+			["config"] = {
+			},
 			["inverse"] = true,
-			["selfPoint"] = "CENTER",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8118,88 +8118,31 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
+			["icon"] = true,
 		},
-		["FuryFBUptime"] = {
+		["ArmsWBCD"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
-			["yOffset"] = 140,
-			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
-			["cooldownSwipe"] = true,
 			["authorOptions"] = {
 			},
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["text2Font"] = "Friz Quadrata TT",
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = false,
 			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["cooldownEdge"] = false,
+			["icon"] = true,
 			["useglowColor"] = false,
 			["parent"] = "Adriox Warrior",
-			["text2Font"] = "Friz Quadrata TT",
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["preset"] = "slideright",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
 			["text1Enabled"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["ownOnly"] = true,
-						["unit"] = "player",
-						["type"] = "aura",
-						["spellName"] = 280721,
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Cooldown Progress (Spell)",
-						["buffShowOn"] = "showOnActive",
-						["realSpellName"] = "Sudden Death",
-						["use_spellName"] = true,
-						["spellIds"] = {
-							215571, -- [1]
-						},
-						["names"] = {
-							"Frothing Berserker", -- [1]
-						},
-						["use_charges"] = false,
-						["use_unit"] = true,
-						["custom_hide"] = "timed",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 280721,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["text1Containment"] = "INSIDE",
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -8209,27 +8152,26 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
-			["height"] = 40,
-			["uid"] = "OulJb0yiBZe",
+			["height"] = 44,
+			["config"] = {
+			},
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
+				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 8,
+					["single"] = 14,
 					["multi"] = {
 						[3] = true,
 						[4] = true,
-						[8] = true,
+						[17] = true,
 					},
 				},
-				["use_petbattle"] = false,
-				["spec"] = {
-					["single"] = 2,
+				["role"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
 				["class"] = {
@@ -8238,16 +8180,13 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["talent2"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
 				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -8256,11 +8195,17 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -8271,7 +8216,7 @@ WeakAurasSaved = {
 			},
 			["text1Font"] = "Anime Ace",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -8280,8 +8225,43 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1FontFlags"] = "OUTLINE",
+			["text2Enabled"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["spellName"] = 262161,
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["charges_operator"] = "==",
+						["type"] = "status",
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_unit"] = true,
+						["realSpellName"] = "Warbreaker",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["charges"] = "2",
+						["unevent"] = "auto",
+						["use_track"] = true,
+						["duration"] = "1",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 262161,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -8289,30 +8269,49 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["xOffset"] = 23.7,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "ArmsWBCD",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["uid"] = "70qtAyIf78y",
+			["inverse"] = true,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["icon"] = true,
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = " %p",
-			["alpha"] = 1,
-			["xOffset"] = 67,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FuryFBUptime",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 40,
-			["selfPoint"] = "CENTER",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["desaturate"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8329,22 +8328,29 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownEdge"] = false,
+			["glow"] = false,
 		},
 		["ArmsRCCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["icon"] = true,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -8353,22 +8359,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["subeventPrefix"] = "SPELL",
+						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["names"] = {
 						},
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 97462,
 						["realSpellName"] = "Rallying Cry",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_genericShowOn"] = true,
 						["use_unit"] = true,
-						["spellName"] = 97462,
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -8379,26 +8385,26 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Enabled"] = true,
-			["internalVersion"] = 11,
-			["desaturate"] = false,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
+			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -8409,7 +8415,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "j3(bTd7m3N8",
+			["config"] = {
+			},
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -8420,8 +8427,8 @@ WeakAurasSaved = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
 				["talent2"] = {
@@ -8433,20 +8440,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -8455,21 +8460,23 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["xOffset"] = 39,
 			["authorMode"] = true,
-			["width"] = 35,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -8478,39 +8485,38 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["cooldownTextEnabled"] = false,
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text2Font"] = "Anime Ace",
 			["text2FontSize"] = 12,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
+			["alpha"] = 1,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Anime Ace",
-			["id"] = "ArmsRCCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = 39,
-			["config"] = {
+			["text2"] = "%s",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["id"] = "ArmsRCCD",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 35,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "j3(bTd7m3N8",
 			["inverse"] = true,
-			["text1Containment"] = "INSIDE",
+			["internalVersion"] = 11,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8527,14 +8533,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["parent"] = "Adriox Warrior",
 		},
 		["T90IFTKUptime"] = {
 			["textFlags"] = "OUTLINE",
@@ -8568,11 +8567,11 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -8582,12 +8581,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -8597,29 +8615,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -8660,18 +8659,18 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["event"] = "Health",
 						["unit"] = "player",
-						["buffShowOn"] = "showOnActive",
-						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellIds"] = {
 							248622, -- [1]
 						},
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["names"] = {
 							"In For The Kill", -- [1]
 						},
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["use_absorbMode"] = true,
-						["debuffType"] = "HELPFUL",
+						["subeventSuffix"] = "_CAST_START",
+						["buffShowOn"] = "showOnActive",
 					},
 					["untrigger"] = {
 					},
@@ -8679,21 +8678,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "IBSe7Sc1KSu",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["spark"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -8704,27 +8703,35 @@ WeakAurasSaved = {
 			},
 			["borderBackdrop"] = "None",
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["sparkColor"] = {
+			["authorMode"] = true,
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.5, -- [4]
 			},
-			["sparkBlendMode"] = "ADD",
-			["authorMode"] = true,
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 280,
 			["stacksFont"] = "Friz Quadrata TT",
-			["rotateText"] = "NONE",
-			["sparkHidden"] = "NEVER",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["id"] = "T90IFTKUptime",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["timerSize"] = 13,
+			["authorOptions"] = {
+			},
 			["borderSize"] = 2,
-			["displayTextRight"] = "%p",
+			["semver"] = "1.0.1-4",
 			["icon_side"] = "RIGHT",
 			["backgroundColor"] = {
 				0.21176470588235, -- [1]
@@ -8732,64 +8739,56 @@ WeakAurasSaved = {
 				0.11372549019608, -- [3]
 				1, -- [4]
 			},
-			["borderInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
 			["sparkHeight"] = 30,
 			["sparkRotation"] = 0,
-			["sparkRotationMode"] = "AUTO",
+			["borderInFront"] = true,
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["semver"] = "1.0.1-4",
-			["authorOptions"] = {
-			},
-			["id"] = "T90IFTKUptime",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["displayTextRight"] = "%p",
+			["timerSize"] = 13,
+			["sparkHidden"] = "NEVER",
+			["rotateText"] = "NONE",
 			["frameStrata"] = 2,
-			["width"] = 280,
-			["backdropColor"] = {
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkWidth"] = 10,
+			["uid"] = "IBSe7Sc1KSu",
 		},
 		["ArmsCDDebuff"] = {
 			["text2Point"] = "LEFT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 140,
 			["anchorPoint"] = "CENTER",
-			["glow"] = false,
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["cooldownTextEnabled"] = false,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -8799,14 +8798,14 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
-						["use_specific_unit"] = false,
-						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["type"] = "aura",
+						["use_charges"] = false,
+						["duration"] = "1",
+						["unit"] = "target",
 						["debuffType"] = "HARMFUL",
+						["buffShowOn"] = "showOnActive",
 						["charges_operator"] = "==",
 						["charges"] = "2",
-						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
 						["names"] = {
@@ -8819,11 +8818,11 @@ WeakAurasSaved = {
 						["spellIds"] = {
 							208086, -- [1]
 						},
-						["use_genericShowOn"] = true,
-						["buffShowOn"] = "showOnActive",
-						["unit"] = "target",
-						["duration"] = "1",
-						["use_charges"] = false,
+						["unevent"] = "auto",
+						["type"] = "aura",
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["use_specific_unit"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -8834,13 +8833,18 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["text2Font"] = "Expressway",
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["text2Font"] = "Expressway",
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["glow"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -8851,7 +8855,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["uid"] = "4YPYupld1TK",
+			["config"] = {
+			},
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -8873,22 +8878,16 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -8897,12 +8896,18 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["talent2"] = {
 					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
 					},
 				},
 				["size"] = {
@@ -8910,9 +8915,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 40,
 			["text2Containment"] = "OUTSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -8921,52 +8926,46 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["icon"] = true,
+			["text2Enabled"] = false,
+			["xOffset"] = 22,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
+			["internalVersion"] = 11,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Containment"] = "INSIDE",
+			["frameStrata"] = 1,
+			["text2"] = "%s",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["frameStrata"] = 1,
-			["text1Containment"] = "INSIDE",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
 			["id"] = "ArmsCDDebuff",
-			["xOffset"] = 22,
-			["text2Enabled"] = false,
-			["width"] = 40,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
+			["icon"] = true,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "4YPYupld1TK",
 			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text1Enabled"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8983,7 +8982,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
+			["parent"] = "Adriox Warrior",
 		},
 		["T90AvatarUptime"] = {
 			["textFlags"] = "OUTLINE",
@@ -9018,11 +9017,11 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["ingroup"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -9032,12 +9031,31 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -9047,29 +9065,10 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_talent"] = true,
-				["difficulty"] = {
+				["affixes"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -9110,18 +9109,18 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["event"] = "Health",
 						["unit"] = "player",
-						["buffShowOn"] = "showOnActive",
-						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellIds"] = {
 							107574, -- [1]
 						},
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["names"] = {
 							"Avatar", -- [1]
 						},
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["use_absorbMode"] = true,
-						["debuffType"] = "HELPFUL",
+						["subeventSuffix"] = "_CAST_START",
+						["buffShowOn"] = "showOnActive",
 					},
 					["untrigger"] = {
 					},
@@ -9129,21 +9128,28 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["sparkWidth"] = 10,
+			["textSize"] = 13,
 			["internalVersion"] = 11,
-			["spark"] = false,
-			["animation"] = {
+			["actions"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
+				["init"] = {
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
+				},
+			},
+			["animation"] = {
+				["start"] = {
 					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -9159,77 +9165,70 @@ WeakAurasSaved = {
 			},
 			["sparkRotationMode"] = "AUTO",
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["useAdjustededMax"] = false,
-			["sparkBlendMode"] = "ADD",
 			["authorMode"] = true,
-			["uid"] = "nUZHt0o4wt4",
-			["anchorFrameType"] = "SCREEN",
-			["backgroundColor"] = {
-				0.21176470588235, -- [1]
-				0.16470588235294, -- [2]
-				0.11372549019608, -- [3]
-				1, -- [4]
-			},
-			["zoom"] = 0,
-			["sparkHidden"] = "NEVER",
-			["border"] = true,
-			["borderEdge"] = "None",
-			["borderOffset"] = 12,
-			["borderSize"] = 2,
-			["displayTextRight"] = "%p",
-			["icon_side"] = "RIGHT",
-			["borderInFront"] = true,
-			["sparkRotation"] = 0,
-			["sparkHeight"] = 30,
-			["rotateText"] = "NONE",
-			["stacksFont"] = "Friz Quadrata TT",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 13,
-			["semver"] = "1.0.1-4",
-			["id"] = "T90AvatarUptime",
-			["xOffset"] = 0,
-			["frameStrata"] = 2,
-			["width"] = 280,
-			["sparkOffsetX"] = 0,
+			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
+			["sparkOffsetX"] = 0,
+			["width"] = 280,
+			["backgroundColor"] = {
+				0.21176470588235, -- [1]
+				0.16470588235294, -- [2]
+				0.11372549019608, -- [3]
+				1, -- [4]
+			},
+			["xOffset"] = 0,
+			["id"] = "T90AvatarUptime",
+			["border"] = true,
+			["borderEdge"] = "None",
+			["timerSize"] = 13,
+			["borderSize"] = 2,
+			["semver"] = "1.0.1-4",
+			["icon_side"] = "RIGHT",
+			["borderInFront"] = true,
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkHeight"] = 30,
+			["rotateText"] = "NONE",
+			["sparkRotation"] = 0,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["borderOffset"] = 12,
+			["sparkHidden"] = "NEVER",
+			["zoom"] = 0,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["uid"] = "nUZHt0o4wt4",
+			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["textSize"] = 13,
+			["spark"] = false,
+			["sparkWidth"] = 10,
 		},
 		["T15Skullsplitter"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = 118,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["glow"] = false,
+			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["icon"] = true,
@@ -9237,31 +9236,31 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
 				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
 			},
 			["text2Font"] = "Friz Quadrata TT",
-			["cooldownTextEnabled"] = false,
-			["stickyDuration"] = false,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9272,13 +9271,14 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "rrjp(XcDkeF",
+			["config"] = {
+			},
 			["load"] = {
-				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
+				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
 					["single"] = 3,
@@ -9288,7 +9288,7 @@ WeakAurasSaved = {
 						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -9298,32 +9298,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -9332,45 +9332,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["use_unit"] = true,
-						["use_charges"] = false,
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 260643,
-						["debuffType"] = "HELPFUL",
-						["charges_operator"] = "==",
-						["type"] = "status",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["charges"] = "2",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 260643,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["custom_hide"] = "timed",
-						["use_track"] = true,
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107574,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -9379,8 +9343,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text1FontFlags"] = "OUTLINE",
+			["text2Enabled"] = false,
+			["text1Enabled"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9390,29 +9354,64 @@ WeakAurasSaved = {
 			["regionType"] = "icon",
 			["authorOptions"] = {
 			},
-			["text1Font"] = "Anime Ace",
+			["internalVersion"] = 11,
 			["text2FontSize"] = 24,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
+			["alpha"] = 1,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1Font"] = "Anime Ace",
 			["id"] = "T15Skullsplitter",
-			["text1Enabled"] = true,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
+			["text1FontFlags"] = "OUTLINE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["use_unit"] = true,
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["charges_operator"] = "==",
+						["type"] = "status",
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["names"] = {
+						},
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 260643,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["charges"] = "2",
+						["unevent"] = "auto",
+						["spellName"] = 260643,
+						["use_track"] = true,
+						["use_charges"] = false,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 107574,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
 			},
+			["uid"] = "rrjp(XcDkeF",
 			["inverse"] = true,
-			["text1Containment"] = "INSIDE",
+			["cooldownTextEnabled"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -9429,26 +9428,27 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
+			["glow"] = false,
 		},
 		["ArmsChargeCD"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["glow"] = false,
+			["text1Enabled"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
@@ -9460,22 +9460,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["subeventPrefix"] = "SPELL",
+						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["duration"] = "1",
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
 						["realSpellName"] = "Charge",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 100,
 						["names"] = {
 						},
-						["use_unit"] = true,
+						["spellName"] = 100,
+						["subeventSuffix"] = "_CAST_START",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -9485,18 +9485,13 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["text1Enabled"] = true,
+			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["useTooltip"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
+			["glow"] = false,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["text1Containment"] = "INSIDE",
+			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9507,7 +9502,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["uid"] = "FPd1YPv9rvD",
+			["config"] = {
+			},
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -9515,8 +9511,8 @@ WeakAurasSaved = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
 				["talent2"] = {
@@ -9528,23 +9524,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["ingroup"] = {
+				["spec"] = {
+					["single"] = 1,
 					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -9553,11 +9544,16 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -9565,9 +9561,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["stickyDuration"] = false,
 			["authorMode"] = true,
-			["width"] = 35,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -9576,21 +9572,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["text2Enabled"] = false,
+			["text2Font"] = "Anime Ace",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9599,24 +9582,41 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["text1FontFlags"] = "OUTLINE",
-			["icon"] = true,
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["xOffset"] = -39,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["internalVersion"] = 11,
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["xOffset"] = -39,
+			["alpha"] = 1,
+			["text2"] = "%s",
+			["auto"] = true,
+			["icon"] = true,
 			["id"] = "ArmsChargeCD",
-			["text2Font"] = "Anime Ace",
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["stickyDuration"] = false,
-			["config"] = {
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
 			},
+			["frameStrata"] = 1,
+			["width"] = 35,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "FPd1YPv9rvD",
 			["inverse"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -9633,311 +9633,83 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["authorOptions"] = {
-			},
-		},
-		["FuryExecute"] = {
-			["text2Point"] = "BOTTOMRIGHT",
-			["text1FontSize"] = 12,
-			["xOffset"] = 22,
-			["text2"] = "%s",
-			["yOffset"] = 140,
-			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["cooldownSwipe"] = true,
-			["internalVersion"] = 11,
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = true,
-			["useglowColor"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["preset"] = "slidebottom",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
 			["parent"] = "Adriox Warrior",
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_charges"] = false,
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 5308,
-						["custom_hide"] = "timed",
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["use_targetRequired"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["type"] = "status",
-						["event"] = "Action Usable",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 5308,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["use_genericShowOn"] = true,
-						["duration"] = "1",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 85288,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["desaturate"] = false,
-			["stickyDuration"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 40,
-			["uid"] = "SV9uJOBDjqH",
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 3,
-					["multi"] = {
-						[4] = true,
-						[3] = true,
-					},
-				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["width"] = 40,
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Expressway",
-			["id"] = "FuryExecute",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["cooldownEdge"] = false,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "spellUsable",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["cooldown"] = false,
-			["cooldownTextEnabled"] = true,
 		},
-		["ArmsCSCD"] = {
+		["T45Rend"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
 			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["duration"] = "1",
+						["ownOnly"] = true,
 						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
+						["use_unit"] = true,
+						["names"] = {
+							"Rend", -- [1]
+						},
 						["use_charges"] = false,
+						["duration"] = "1",
+						["use_genericShowOn"] = true,
 						["custom_hide"] = "timed",
-						["type"] = "status",
-						["debuffType"] = "HELPFUL",
+						["buffShowOn"] = "showOnActive",
 						["charges_operator"] = "==",
 						["charges"] = "2",
 						["unevent"] = "auto",
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["use_unit"] = true,
+						["type"] = "aura",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
-						["realSpellName"] = 167105,
+						["realSpellName"] = "Fervor of Battle",
 						["use_spellName"] = true,
 						["spellIds"] = {
+							772, -- [1]
 						},
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["spellName"] = 167105,
-						["use_track"] = true,
+						["debuffType"] = "HARMFUL",
+						["spellName"] = 202316,
+						["unit"] = "target",
 						["subeventPrefix"] = "SPELL",
+						["use_specific_unit"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 262161,
+						["spellName"] = 107574,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = true,
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["cooldownEdge"] = false,
+			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text2Font"] = "Friz Quadrata TT",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["stickyDuration"] = false,
+			["text1Enabled"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9948,7 +9720,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "zRliCBZQ5xg",
+			["config"] = {
+			},
 			["load"] = {
 				["use_petbattle"] = false,
 				["ingroup"] = {
@@ -9957,13 +9730,14 @@ WeakAurasSaved = {
 				},
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 14,
+					["single"] = 9,
 					["multi"] = {
-						[15] = true,
-						[13] = true,
+						[3] = true,
+						[4] = true,
+						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -9973,32 +9747,32 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = false,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -10007,9 +9781,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["xOffset"] = 70.7,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 44,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -10018,8 +9792,229 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Containment"] = "INSIDE",
+			["alpha"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "T45Rend",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["frameStrata"] = 1,
-			["cooldownEdge"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "IyvGqzmqE3r",
+			["inverse"] = true,
+			["internalVersion"] = 11,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["op"] = "<",
+						["variable"] = "expirationTime",
+						["value"] = "3",
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								0, -- [1]
+								1, -- [2]
+								0.10196078431373, -- [3]
+								1, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["ArmsCSCD"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["text2"] = "%p",
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["xOffset"] = 23.7,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["spellName"] = 167105,
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 167105,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["use_unit"] = true,
+						["unevent"] = "auto",
+						["type"] = "status",
+						["use_track"] = true,
+						["use_charges"] = false,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 262161,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["useglowColor"] = false,
+			["text2Font"] = "Friz Quadrata TT",
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["selfPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["config"] = {
+			},
+			["load"] = {
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+						[15] = true,
+						[13] = true,
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = false,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Containment"] = "INSIDE",
+			["authorMode"] = true,
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["text2Color"] = {
@@ -10028,29 +10023,30 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
+			["text1Enabled"] = true,
 			["text2FontSize"] = 24,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
+			["internalVersion"] = 11,
 			["authorOptions"] = {
 			},
-			["internalVersion"] = 11,
-			["text2"] = "%p",
-			["semver"] = "1.0.1-4",
-			["text1Enabled"] = true,
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["alpha"] = 1,
 			["id"] = "ArmsCSCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
+			["cooldownEdge"] = false,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "zRliCBZQ5xg",
 			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
 			["conditions"] = {
 				{
@@ -10068,93 +10064,85 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = 23.7,
+			["parent"] = "Adriox Warrior",
 		},
-		["FuryWWBuff"] = {
-			["text2Point"] = "LEFT",
+		["FuryBS"] = {
+			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
-			["xOffset"] = -67,
-			["text2"] = "%s",
-			["yOffset"] = 140,
-			["anchorPoint"] = "CENTER",
-			["cooldownEdge"] = false,
-			["cooldownSwipe"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = true,
-			["useglowColor"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["text1Enabled"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["preset"] = "slideleft",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
 			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["use_charges"] = false,
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
-						["use_specific_unit"] = false,
-						["custom_hide"] = "timed",
-						["spellName"] = 280721,
+						["use_charges"] = false,
+						["type"] = "status",
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
+						["names"] = {
+						},
 						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["type"] = "aura",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["unit"] = "player",
-						["realSpellName"] = "Sudden Death",
+						["spellName"] = 46924,
+						["realSpellName"] = "Bladestorm",
 						["use_spellName"] = true,
 						["spellIds"] = {
-							85739, -- [1]
 						},
-						["ownOnly"] = true,
-						["buffShowOn"] = "showOnActive",
+						["custom_hide"] = "timed",
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
 						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["names"] = {
-							"Whirlwind", -- [1]
-						},
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 280721,
+						["spellName"] = 46924,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["stickyDuration"] = false,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["useglowColor"] = false,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["internalVersion"] = 11,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -10164,24 +10152,24 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
-			["height"] = 40,
-			["uid"] = "5nJEMHR02T3",
+			["height"] = 44,
+			["config"] = {
+			},
 			["load"] = {
-				["talent2"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 21,
+					["single"] = 18,
 					["multi"] = {
-						[3] = true,
-						[21] = true,
 						[4] = true,
-						[8] = true,
+						[3] = true,
 					},
 				},
-				["ingroup"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -10191,20 +10179,13 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -10213,11 +10194,18 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -10225,10 +10213,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["xOffset"] = -118,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "OUTSIDE",
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
 				1, -- [1]
@@ -10236,35 +10224,39 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
-			},
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["text2Font"] = "Friz Quadrata TT",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
 			["text1Containment"] = "INSIDE",
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1Enabled"] = true,
+			["id"] = "FuryBS",
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = " %p",
-			["alpha"] = 1,
-			["text2Font"] = "Anime Ace",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FuryWWBuff",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 40,
-			["selfPoint"] = "CENTER",
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "g1JZ2RxM7PC",
 			["inverse"] = true,
-			["useTooltip"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -10336,9 +10328,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["race"] = {
+				["ingroup"] = {
 					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
 					},
 				},
 				["difficulty"] = {
@@ -10349,25 +10346,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						[2] = true,
-					},
-				},
-				["ingroup"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -10406,16 +10398,16 @@ WeakAurasSaved = {
 						["ownOnly"] = true,
 						["genericShowOn"] = "showOnReady",
 						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
+						["use_absorbMode"] = true,
 						["spellName"] = 1719,
 						["names"] = {
 							"Icy Veins", -- [1]
 						},
 						["type"] = "status",
-						["unevent"] = "auto",
+						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["unit"] = "player",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 1719,
@@ -10424,10 +10416,10 @@ WeakAurasSaved = {
 							12472, -- [1]
 						},
 						["duration"] = "1",
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
+						["unit"] = "player",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["use_absorbMode"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showOnReady",
@@ -10437,21 +10429,21 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["uid"] = "TyPA9m1(0)T",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
+			["sparkRotation"] = 0,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["backdropInFront"] = false,
@@ -10466,32 +10458,37 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["version"] = 4,
-			["height"] = 13,
 			["timer"] = true,
+			["height"] = 13,
 			["timerFlags"] = "OUTLINE",
-			["useAdjustededMax"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["sparkBlendMode"] = "ADD",
 			["authorMode"] = true,
-			["config"] = {
-			},
-			["anchorFrameType"] = "SCREEN",
+			["sparkOffsetX"] = 0,
+			["width"] = 280,
 			["backgroundColor"] = {
 				0.21176470588235, -- [1]
 				0.16470588235294, -- [2]
 				0.11372549019608, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-			},
-			["sparkHidden"] = "NEVER",
+			["borderSize"] = 2,
+			["id"] = "FuryRecklessnessRDY",
 			["border"] = true,
 			["borderEdge"] = "None",
-			["stacksFont"] = "Friz Quadrata TT",
-			["borderSize"] = 2,
-			["semver"] = "1.0.1-4",
+			["displayTextRight"] = "RDY",
+			["borderInFront"] = true,
+			["timerSize"] = 13,
 			["icon_side"] = "RIGHT",
 			["sparkRotationMode"] = "AUTO",
-			["rotateText"] = "NONE",
+			["zoom"] = 0,
 			["sparkHeight"] = 30,
 			["backdropColor"] = {
 				1, -- [1]
@@ -10499,74 +10496,57 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["zoom"] = 0,
+			["rotateText"] = "NONE",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = "RDY",
-			["timerSize"] = 13,
-			["id"] = "FuryRecklessnessRDY",
-			["borderInFront"] = true,
-			["frameStrata"] = 2,
-			["width"] = 280,
-			["sparkOffsetX"] = 0,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["semver"] = "1.0.1-4",
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkHidden"] = "NEVER",
+			["authorOptions"] = {
 			},
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["useAdjustededMax"] = false,
 			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
-			["sparkRotation"] = 0,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkWidth"] = 10,
+			["uid"] = "TyPA9m1(0)T",
 		},
-		["ArmsBSCD"] = {
-			["text2Point"] = "BOTTOMRIGHT",
+		["T15WarMachine"] = {
+			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%s",
-			["yOffset"] = 18,
+			["authorOptions"] = {
+			},
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["internalVersion"] = 11,
+			["text2Font"] = "Friz Quadrata TT",
 			["cooldownSwipe"] = true,
 			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
-			["cooldownEdge"] = false,
 			["useTooltip"] = true,
+			["internalVersion"] = 11,
 			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["selfPoint"] = "CENTER",
 			["text1Enabled"] = true,
 			["color"] = {
 				1, -- [1]
@@ -10574,7 +10554,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1Containment"] = "INSIDE",
+			["stickyDuration"] = false,
 			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
@@ -10585,45 +10565,41 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
+			["height"] = 44,
 			["config"] = {
 			},
 			["load"] = {
+				["use_petbattle"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 6,
-					["multi"] = {
-						[10] = true,
-						[6] = true,
-						[19] = true,
-					},
-				},
-				["use_petbattle"] = false,
-				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
-						true, -- [1]
+						[3] = true,
+						[4] = true,
+						[17] = true,
+					},
+				},
+				["race"] = {
+					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
 					["multi"] = {
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
+						["MAGE"] = true,
 					},
 				},
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -10632,11 +10608,17 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -10645,9 +10627,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["stickyDuration"] = false,
+			["xOffset"] = 118,
 			["authorMode"] = true,
-			["width"] = 35,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -10656,71 +10638,91 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["text2Font"] = "Anime Ace",
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
+			["regionType"] = "icon",
 			["icon"] = true,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
+			["text1Containment"] = "INSIDE",
+			["text2FontSize"] = 24,
 			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["cooldownTextEnabled"] = false,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "T15WarMachine",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "l9MkSqGdNjz",
+			["inverse"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
 						["duration"] = "1",
-						["event"] = "Cooldown Progress (Spell)",
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+							"War Machine", -- [1]
+						},
+						["unit"] = "player",
+						["use_charges"] = false,
+						["ownOnly"] = true,
+						["use_unit"] = true,
+						["buffShowOn"] = "showAlways",
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
-						["realSpellName"] = "Bladestorm",
+						["use_showOn"] = true,
+						["custom_hide"] = "timed",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = "Skullsplitter",
 						["use_spellName"] = true,
 						["spellIds"] = {
+							262231, -- [1]
 						},
-						["spellName"] = 227847,
-						["names"] = {
-						},
-						["use_unit"] = true,
-						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["unevent"] = "auto",
+						["type"] = "aura",
+						["spellName"] = 260643,
+						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 107570,
+						["spellName"] = 107574,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["id"] = "ArmsBSCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = 118,
-			["uid"] = "YLMdTisZP7L",
-			["inverse"] = true,
-			["selfPoint"] = "CENTER",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
+						["variable"] = "buffed",
+						["value"] = 0,
 					},
 					["changes"] = {
 						{
@@ -10731,20 +10733,24 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["authorOptions"] = {
-			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 		},
 		["FuryRampage"] = {
 			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%s",
+			["zoom"] = 0.1,
 			["yOffset"] = 140,
 			["anchorPoint"] = "CENTER",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["icon"] = true,
@@ -10754,14 +10760,15 @@ WeakAurasSaved = {
 						["use_inverse"] = false,
 						["genericShowOn"] = "showAlways",
 						["use_unit"] = true,
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["charges"] = "2",
-						["use_targetRequired"] = true,
+						["duration"] = "1",
+						["use_charges"] = false,
+						["use_genericShowOn"] = true,
 						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
+						["names"] = {
+						},
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["spellName"] = 184367,
@@ -10771,12 +10778,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["names"] = {
-						},
-						["debuffType"] = "HELPFUL",
-						["use_genericShowOn"] = true,
-						["use_charges"] = false,
-						["duration"] = "1",
+						["subeventSuffix"] = "_CAST_START",
+						["use_targetRequired"] = true,
+						["charges"] = "2",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -10787,28 +10793,28 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
-			["useTooltip"] = true,
+			["text2Font"] = "Expressway",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "preset",
-					["preset"] = "slidebottom",
 					["duration_type"] = "seconds",
+					["preset"] = "slidebottom",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "preset",
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 			},
-			["text2Font"] = "Expressway",
-			["stickyDuration"] = false,
-			["text1Containment"] = "INSIDE",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -10819,7 +10825,8 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["uid"] = "WyZVSROEQ3l",
+			["config"] = {
+			},
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -10840,46 +10847,46 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "WARRIOR",
 					["multi"] = {
 						["MAGE"] = true,
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Enabled"] = true,
 			["authorMode"] = true,
-			["width"] = 40,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -10888,120 +10895,79 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
 			["cooldownTextEnabled"] = true,
+			["xOffset"] = -22,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["internalVersion"] = 11,
+			["alpha"] = 1,
+			["text2"] = "%s",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2FontSize"] = 15,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["internalVersion"] = 11,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["xOffset"] = -22,
 			["id"] = "FuryRampage",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Enabled"] = true,
-			["config"] = {
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "WyZVSROEQ3l",
 			["inverse"] = true,
-			["selfPoint"] = "CENTER",
+			["stickyDuration"] = false,
 			["conditions"] = {
 			},
 			["cooldown"] = false,
+			["parent"] = "Adriox Warrior",
+		},
+		["ArmsDSUP"] = {
+			["text2Point"] = "TOP",
+			["text1FontSize"] = 12,
+			["xOffset"] = -120,
+			["zoom"] = 0.1,
+			["yOffset"] = 183,
+			["anchorPoint"] = "CENTER",
+			["icon"] = true,
+			["cooldownSwipe"] = true,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-		},
-		["FuryPummelCD"] = {
-			["glow"] = false,
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
-			["yOffset"] = 18,
-			["anchorPoint"] = "CENTER",
-			["authorOptions"] = {
-			},
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
 			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
-						["type"] = "status",
-						["custom_hide"] = "timed",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 6552,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 6552,
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 280772,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["useglowColor"] = false,
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
+			["cooldownEdge"] = false,
+			["actions"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
+				["init"] = {
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
 			},
-			["internalVersion"] = 11,
-			["text1Enabled"] = true,
-			["stickyDuration"] = false,
+			["useglowColor"] = false,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text2Font"] = "Expressway",
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["cooldownTextEnabled"] = false,
+			["useTooltip"] = true,
 			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -11011,8 +10977,9 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "0iudhtdb006",
+			["height"] = 40,
+			["config"] = {
+			},
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -11020,30 +10987,22 @@ WeakAurasSaved = {
 				},
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 21,
+					["single"] = 8,
 					["multi"] = {
-						[21] = true,
-						[19] = true,
-						[6] = true,
-						[10] = true,
+						[3] = true,
+						[4] = true,
+						[8] = true,
 					},
 				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
+				["use_petbattle"] = false,
 				["spec"] = {
-					["single"] = 2,
+					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["use_class"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -11051,11 +11010,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -11064,17 +11019,29 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["use_petbattle"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Enabled"] = true,
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
+			["width"] = 40,
+			["text2Containment"] = "OUTSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
 				1, -- [1]
@@ -11082,45 +11049,81 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
-			["text2Font"] = "Friz Quadrata TT",
-			["selfPoint"] = "CENTER",
-			["text2FontSize"] = 24,
+			["frameStrata"] = 1,
+			["authorOptions"] = {
+			},
+			["text2FontSize"] = 20,
+			["semver"] = "1.0.1-4",
+			["text1"] = " %p",
+			["internalVersion"] = 11,
+			["text1Containment"] = "INSIDE",
+			["text2"] = "%s",
 			["auto"] = true,
-			["text1"] = "%p",
-			["actions"] = {
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "ArmsDSUP",
+			["animation"] = {
 				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-				},
-				["init"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Containment"] = "INSIDE",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Enabled"] = false,
-			["id"] = "FuryPummelCD",
-			["text2Point"] = "CENTER",
 			["alpha"] = 1,
-			["width"] = 35,
-			["xOffset"] = 100,
-			["config"] = {
-			},
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "1mSx8CC2zCZ",
 			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["ownOnly"] = true,
+						["unit"] = "player",
+						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
+						["charges_operator"] = "==",
+						["type"] = "aura",
+						["spellName"] = 280721,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["names"] = {
+							"Defensive Stance", -- [1]
+						},
+						["event"] = "Cooldown Progress (Spell)",
+						["use_charges"] = false,
+						["realSpellName"] = "Sudden Death",
+						["use_spellName"] = true,
+						["spellIds"] = {
+							197690, -- [1]
+						},
+						["use_unit"] = true,
+						["buffShowOn"] = "showOnActive",
+						["charges"] = "2",
+						["unevent"] = "auto",
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 280721,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
 			},
 			["conditions"] = {
 				{
@@ -11138,262 +11141,59 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownEdge"] = false,
+			["parent"] = "Adriox Warrior",
 		},
-		["FuryHLCD"] = {
+		["T15SuddenDeath"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
-			["yOffset"] = 18,
-			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["spellName"] = 6544,
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
-						["realSpellName"] = "Heroic Leap",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_track"] = true,
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 6544,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "vFvqr2z3YH5",
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 6,
-					["multi"] = {
-						[10] = true,
-						[6] = true,
-						[19] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["text1Containment"] = "INSIDE",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["internalVersion"] = 11,
 			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Friz Quadrata TT",
-			["id"] = "FuryHLCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["icon"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["xOffset"] = 20,
-		},
-		["FurySB"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["xOffset"] = 118,
-			["text2"] = "%p",
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["internalVersion"] = 11,
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["icon"] = true,
-			["useglowColor"] = false,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["useTooltip"] = true,
+			["useglowColor"] = false,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["parent"] = "Adriox Warrior",
+			["selfPoint"] = "CENTER",
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["use_charges"] = false,
+						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
 						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["spellName"] = 280772,
+						["unit"] = "player",
+						["ownOnly"] = true,
+						["use_genericShowOn"] = true,
+						["spellName"] = 29725,
+						["buffShowOn"] = "showAlways",
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["charges"] = "2",
 						["unevent"] = "auto",
@@ -11402,27 +11202,31 @@ WeakAurasSaved = {
 						["type"] = "status",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
-						["realSpellName"] = 280772,
+						["realSpellName"] = 29725,
 						["use_spellName"] = true,
 						["spellIds"] = {
+							29725, -- [1]
+							52437, -- [2]
 						},
-						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
 						["names"] = {
+							"Sudden Death", -- [1]
+							"Sudden Death", -- [2]
 						},
-						["use_genericShowOn"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["duration"] = "1",
+						["use_charges"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 1719,
+						["spellName"] = 107574,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
 			["desaturate"] = false,
-			["stickyDuration"] = false,
+			["text1Containment"] = "INSIDE",
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -11433,7 +11237,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "Kz6aT0s5b66",
+			["uid"] = "7tzgKlBxIZ3",
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -11442,13 +11246,14 @@ WeakAurasSaved = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 21,
+					["single"] = 2,
 					["multi"] = {
-						[4] = true,
 						[3] = true,
+						[4] = true,
+						[17] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -11458,10 +11263,8 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["spec"] = {
-					["single"] = 2,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
 				["use_talent"] = true,
@@ -11470,20 +11273,22 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
@@ -11492,7 +11297,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["xOffset"] = 118,
 			["authorMode"] = true,
 			["width"] = 44,
 			["text2Containment"] = "INSIDE",
@@ -11503,8 +11308,170 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["text2Font"] = "Friz Quadrata TT",
+			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "T15SuddenDeath",
+			["authorOptions"] = {
+			},
 			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
+			["anchorFrameType"] = "SCREEN",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["config"] = {
+			},
+			["inverse"] = true,
+			["stickyDuration"] = false,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FurySB"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["xOffset"] = 118,
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["icon"] = true,
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = false,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["useTooltip"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["text1Enabled"] = true,
+			["cooldownEdge"] = false,
+			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 21,
+					["multi"] = {
+						[4] = true,
+						[3] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Containment"] = "INSIDE",
+			["authorMode"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -11514,29 +11481,64 @@ WeakAurasSaved = {
 			["regionType"] = "icon",
 			["authorOptions"] = {
 			},
-			["text1FontFlags"] = "OUTLINE",
+			["text2Font"] = "Friz Quadrata TT",
 			["text2FontSize"] = 24,
-			["auto"] = true,
+			["semver"] = "1.0.1-4",
 			["text1"] = "%p",
+			["alpha"] = 1,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
 			["id"] = "FurySB",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "Kz6aT0s5b66",
 			["inverse"] = true,
-			["cooldownEdge"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["use_genericShowOn"] = true,
+						["spellName"] = 280772,
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["custom_hide"] = "timed",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 280772,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["type"] = "status",
+						["unevent"] = "auto",
+						["debuffType"] = "HELPFUL",
+						["use_track"] = true,
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 1719,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -11553,25 +11555,18 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
+			["internalVersion"] = 11,
 		},
 		["FuryMC"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["xOffset"] = -118,
-			["zoom"] = 0.1,
+			["text2"] = "%p",
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["cooldownTextEnabled"] = false,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["icon"] = true,
@@ -11581,28 +11576,28 @@ WeakAurasSaved = {
 						["use_charges"] = false,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["duration"] = "1",
+						["names"] = {
+						},
 						["use_unit"] = true,
-						["charges"] = "2",
 						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
 						["charges_operator"] = "==",
 						["type"] = "status",
-						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_showOn"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 280392,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 280392,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 280392,
-						["use_genericShowOn"] = true,
-						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["charges"] = "2",
 						["use_track"] = true,
-						["names"] = {
-						},
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -11613,24 +11608,205 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["useglowColor"] = false,
+			["text2Font"] = "Friz Quadrata TT",
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+						[4] = true,
+						[3] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["authorMode"] = true,
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["text1Containment"] = "INSIDE",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["internalVersion"] = 11,
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["text1Enabled"] = true,
+			["id"] = "FuryMC",
+			["text1FontFlags"] = "OUTLINE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "EKvTofl86M7",
+			["inverse"] = true,
+			["selfPoint"] = "CENTER",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FuryFSMissing"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = true,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["semver"] = "1.0.1-4",
+			["cooldownSwipe"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["authorOptions"] = {
+			},
 			["useTooltip"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
 			["text2Font"] = "Friz Quadrata TT",
-			["selfPoint"] = "CENTER",
+			["parent"] = "Adriox Warrior",
 			["desaturate"] = false,
 			["stickyDuration"] = false,
 			["glowColor"] = {
@@ -11643,57 +11819,23 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "EKvTofl86M7",
+			["icon"] = true,
 			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 16,
-					["multi"] = {
-						[4] = true,
-						[3] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
+					["single"] = 9,
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
 					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
 					},
 				},
 				["use_talent"] = true,
 				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_realm"] = false,
 				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
 					},
 				},
@@ -11702,9 +11844,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["config"] = {
+			},
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["text1Enabled"] = true,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -11713,336 +11856,106 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text2Enabled"] = false,
 			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["xOffset"] = 70.7,
+			["text1Containment"] = "INSIDE",
+			["text2FontSize"] = 24,
+			["internalVersion"] = 11,
+			["text1"] = "%s",
+			["zoom"] = 0.1,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["text1Enabled"] = true,
-			["text2FontSize"] = 24,
+			["text2"] = "%p",
 			["auto"] = true,
-			["text1"] = "%p",
-			["internalVersion"] = 11,
+			["frameStrata"] = 1,
+			["id"] = "FuryFSMissing",
+			["selfPoint"] = "CENTER",
 			["alpha"] = 1,
-			["text2"] = "%p",
-			["semver"] = "1.0.1-4",
-			["text1Containment"] = "INSIDE",
-			["id"] = "FuryMC",
-			["glow"] = false,
-			["text2Enabled"] = false,
 			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text1Font"] = "Anime Ace",
+			["uid"] = "9MuNOAe0bDB",
+			["inverse"] = false,
+			["glow"] = false,
 			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
-		},
-		["FuryISCCD"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
-			["yOffset"] = 18,
-			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
 						["names"] = {
+							"Furious Slash", -- [1]
+						},
+						["spellIds"] = {
+							202539, -- [1]
 						},
 						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
-						["type"] = "status",
 						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 5246,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
 						["subeventPrefix"] = "SPELL",
-						["spellName"] = 5246,
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["buffShowOn"] = "showOnMissing",
 					},
 					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107570,
 					},
 				}, -- [1]
-				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["authorOptions"] = {
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["useglowColor"] = false,
-			["selfPoint"] = "CENTER",
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "zE9vgk7CLkz",
-			["load"] = {
-				["use_petbattle"] = false,
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-						[10] = true,
-						[19] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["frameStrata"] = 1,
-			["authorMode"] = true,
-			["width"] = 35,
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Font"] = "Anime Ace",
-			["alpha"] = 1,
-			["text1Containment"] = "INSIDE",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["icon"] = true,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text2Font"] = "Friz Quadrata TT",
-			["xOffset"] = -100,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FuryISCCD",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
-			["inverse"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["glow"] = false,
 		},
 		["FuryRCCD"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["zoom"] = 0.1,
 			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
-			["text2Font"] = "Friz Quadrata TT",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["authorOptions"] = {
+			},
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
 			["text1Enabled"] = true,
-			["useTooltip"] = true,
+			["internalVersion"] = 11,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["internalVersion"] = 11,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["spellName"] = 97462,
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["realSpellName"] = "Rallying Cry",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["use_track"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 97462,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
+			["text2Font"] = "Friz Quadrata TT",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -12060,8 +11973,7 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 35,
-			["config"] = {
-			},
+			["uid"] = "Dx60H043Aay",
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -12072,8 +11984,8 @@ WeakAurasSaved = {
 					["single"] = 6,
 					["multi"] = {
 						[10] = true,
-						[6] = true,
 						[19] = true,
+						[6] = true,
 					},
 				},
 				["ingroup"] = {
@@ -12085,20 +11997,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_petbattle"] = false,
-				["role"] = {
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -12107,21 +12017,23 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["faction"] = {
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["selfPoint"] = "CENTER",
 			["authorMode"] = true,
-			["width"] = 35,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -12130,8 +12042,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["stickyDuration"] = false,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -12140,81 +12052,23 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "icon",
 			["text1Containment"] = "INSIDE",
-			["icon"] = true,
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text1FontFlags"] = "OUTLINE",
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
 			["xOffset"] = 60,
-			["id"] = "FuryRCCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["selfPoint"] = "CENTER",
-			["uid"] = "Dx60H043Aay",
-			["inverse"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["authorOptions"] = {
-			},
-		},
-		["FuryIVCD"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["text1FontFlags"] = "OUTLINE",
 			["text2"] = "%p",
-			["yOffset"] = 18,
-			["anchorPoint"] = "CENTER",
-			["internalVersion"] = 11,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["auto"] = true,
 			["icon"] = true,
-			["useglowColor"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["id"] = "FuryRCCD",
+			["stickyDuration"] = false,
+			["frameStrata"] = 1,
+			["width"] = 35,
+			["text1Font"] = "Anime Ace",
+			["config"] = {
 			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text2Font"] = "Friz Quadrata TT",
+			["inverse"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -12223,145 +12077,31 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "status",
-						["spellName"] = 202168,
+						["custom_hide"] = "timed",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["realSpellName"] = "Impending Victory",
+						["names"] = {
+						},
+						["realSpellName"] = "Rallying Cry",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
 						["use_genericShowOn"] = true,
-						["names"] = {
-						},
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["custom_hide"] = "timed",
+						["spellName"] = 97462,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 202168,
+						["spellName"] = 97462,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["desaturate"] = false,
-			["text1Containment"] = "INSIDE",
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "UbwKZGUJY89",
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 5,
-					["multi"] = {
-						[10] = true,
-						[19] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["width"] = 35,
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["text1Enabled"] = true,
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["xOffset"] = -100,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["id"] = "FuryIVCD",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["selfPoint"] = "CENTER",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["cooldownEdge"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -12378,90 +12118,72 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["authorOptions"] = {
-			},
+			["parent"] = "Adriox Warrior",
 		},
-		["FuryIR"] = {
+		["FurySDUptime"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
+			["authorOptions"] = {
+			},
+			["zoom"] = 0.1,
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
+			["selfPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["cooldownTextEnabled"] = false,
 			["customTextUpdate"] = "update",
 			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["buffShowOn"] = "showOnMissing",
-						["ownOnly"] = true,
-						["type"] = "status",
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-							"Sudden Death", -- [1]
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 215573,
-						["use_spellName"] = true,
-						["spellIds"] = {
-							280721, -- [1]
-						},
-						["spellName"] = 215573,
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["use_track"] = true,
-						["use_absorbMode"] = true,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["authorOptions"] = {
-			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
 			["text2Font"] = "Friz Quadrata TT",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["useglowColor"] = false,
-			["cooldownEdge"] = false,
-			["stickyDuration"] = false,
+			["useTooltip"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
+						["names"] = {
+							"Sudden Death", -- [1]
+						},
+						["spellIds"] = {
+							280721, -- [1]
+						},
+						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["buffShowOn"] = "showOnActive",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
+			},
+			["text1Containment"] = "INSIDE",
 			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
@@ -12473,7 +12195,169 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 44,
-			["uid"] = "CJlaKYFh90a",
+			["uid"] = "yBNCSjcTz1J",
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 8,
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["use_realm"] = false,
+				["use_spec"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["alpha"] = 1,
+			["authorMode"] = true,
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Font"] = "Anime Ace",
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["text1Enabled"] = true,
+			["xOffset"] = 70.7,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["icon"] = true,
+			["cooldownEdge"] = false,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "FurySDUptime",
+			["internalVersion"] = 11,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["config"] = {
+			},
+			["inverse"] = false,
+			["stickyDuration"] = false,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["FuryIR"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["parent"] = "Adriox Warrior",
+			["cooldownSwipe"] = true,
+			["authorOptions"] = {
+			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
+						["buffShowOn"] = "showOnMissing",
+						["ownOnly"] = true,
+						["type"] = "status",
+						["use_unit"] = true,
+						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
+						["spellName"] = 215573,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 215573,
+						["use_spellName"] = true,
+						["spellIds"] = {
+							280721, -- [1]
+						},
+						["names"] = {
+							"Sudden Death", -- [1]
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["use_track"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
+			},
+			["useglowColor"] = false,
+			["text2Font"] = "Friz Quadrata TT",
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["useTooltip"] = true,
+			["glow"] = false,
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["config"] = {
+			},
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -12498,9 +12382,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Enabled"] = true,
 			["authorMode"] = true,
-			["width"] = 44,
+			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -12509,682 +12393,42 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["text1Containment"] = "INSIDE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%s",
-			["frameStrata"] = 1,
-			["icon"] = true,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FuryIR",
+			["text2Enabled"] = false,
 			["xOffset"] = 70.7,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Enabled"] = true,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["glow"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
-		},
-		["ArmsSwingTimer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["authorOptions"] = {
-			},
-			["stacksFlags"] = "None",
-			["yOffset"] = -9,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["icon_color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
 			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.78039215686274, -- [1]
-				0.61176470588235, -- [2]
-				0.43137254901961, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["smoothProgress"] = true,
-			["useAdjustededMin"] = false,
-			["regionType"] = "aurabar",
-			["stacks"] = true,
-			["texture"] = "Minimalist",
-			["textFont"] = "Anime Ace",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["auto"] = true,
-			["timerFont"] = "Anime Ace",
-			["alpha"] = 1,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Adriox Warrior",
-			["sparkRotationMode"] = "AUTO",
-			["displayTextLeft"] = "%n",
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["event"] = "Swing Timer",
-						["unevent"] = "auto",
-						["subeventPrefix"] = "SPELL",
-						["use_absorbMode"] = true,
-						["genericShowOn"] = "showOnActive",
-						["names"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["spellIds"] = {
-						},
-						["use_hand"] = true,
-						["unit"] = "player",
-						["duration"] = "1",
-						["hand"] = "main",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["xOffset"] = 0,
 			["internalVersion"] = 11,
-			["sparkWidth"] = 10,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["backdropInFront"] = false,
-			["text"] = true,
-			["spark"] = false,
-			["stickyDuration"] = false,
-			["textSize"] = 12,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["version"] = 4,
-			["borderBackdrop"] = "None",
-			["timer"] = true,
-			["timerFlags"] = "None",
-			["authorMode"] = true,
-			["sparkBlendMode"] = "ADD",
-			["useAdjustededMax"] = false,
-			["uid"] = "hwQasX7eyHm",
-			["anchorFrameType"] = "SCREEN",
-			["height"] = 10,
-			["zoom"] = 0,
-			["sparkHidden"] = "NEVER",
-			["border"] = true,
-			["borderEdge"] = "None",
-			["backgroundColor"] = {
-				0.21176470588235, -- [1]
-				0.16470588235294, -- [2]
-				0.11372549019608, -- [3]
-				1, -- [4]
-			},
-			["borderInFront"] = true,
-			["timerSize"] = 12,
-			["icon_side"] = "RIGHT",
-			["customTextUpdate"] = "update",
-			["stacksFont"] = "Anime Ace",
-			["sparkHeight"] = 30,
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["config"] = {
-			},
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text2FontSize"] = 24,
 			["semver"] = "1.0.1-4",
-			["displayTextRight"] = " ",
-			["id"] = "ArmsSwingTimer",
-			["borderSize"] = 2,
-			["frameStrata"] = 1,
-			["width"] = 272,
-			["rotateText"] = "NONE",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["conditions"] = {
-			},
-			["sparkRotation"] = 0,
-			["borderOffset"] = 12,
-		},
-		["FuryEnrageMissing"] = {
-			["text2Point"] = "BOTTOMRIGHT",
-			["text1FontSize"] = 12,
-			["xOffset"] = -23.7,
-			["text2"] = "%s",
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["cooldownSwipe"] = true,
-			["internalVersion"] = 11,
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["text1"] = "%s",
 			["icon"] = true,
-			["useglowColor"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["parent"] = "Adriox Warrior",
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_charges"] = false,
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["charges"] = "2",
-						["spellName"] = 85288,
-						["charges_operator"] = "==",
-						["type"] = "aura",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["names"] = {
-							"Enrage", -- [1]
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["buffShowOn"] = "showOnMissing",
-						["realSpellName"] = "Raging Blow",
-						["use_spellName"] = true,
-						["spellIds"] = {
-							184362, -- [1]
-						},
-						["custom_hide"] = "timed",
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["ownOnly"] = true,
-						["duration"] = "1",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 85288,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["desaturate"] = false,
-			["stickyDuration"] = false,
-			["glowColor"] = {
+			["frameStrata"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1Containment"] = "INSIDE",
+			["id"] = "FuryIR",
+			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "A7UFdIBiQ5X",
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 3,
-					["multi"] = {
-						[4] = true,
-						[3] = true,
-					},
-				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_class"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
+			["alpha"] = 1,
 			["width"] = 44,
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 13,
-			["auto"] = true,
-			["text1"] = "%p",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text2Font"] = "Anime Ace",
-			["id"] = "FuryEnrageMissing",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["cooldownEdge"] = false,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = false,
-			["cooldownTextEnabled"] = true,
-		},
-		["ArmsHLCD"] = {
-			["text2Point"] = "BOTTOMRIGHT",
-			["text1FontSize"] = 12,
-			["authorOptions"] = {
-			},
-			["zoom"] = 0.1,
-			["yOffset"] = 18,
-			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "status",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["names"] = {
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
-						["realSpellName"] = "Heroic Leap",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["spellName"] = 6544,
-						["use_track"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 6544,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["icon"] = true,
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text2Font"] = "Anime Ace",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
-			["stickyDuration"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 35,
-			["uid"] = "nXn8HuuFB3e",
-			["load"] = {
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 6,
-					["multi"] = {
-						[10] = true,
-						[6] = true,
-						[19] = true,
-					},
-				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_class"] = true,
-				["use_petbattle"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
 			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["text1FontFlags"] = "OUTLINE",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["xOffset"] = -79,
-			["cooldownTextEnabled"] = false,
-			["text2FontSize"] = 12,
-			["auto"] = true,
-			["text1"] = "%p",
-			["glow"] = false,
-			["alpha"] = 1,
-			["text2"] = "%s",
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "ArmsHLCD",
-			["text1Enabled"] = true,
-			["text2Enabled"] = false,
-			["width"] = 35,
-			["text1Containment"] = "INSIDE",
-			["config"] = {
-			},
-			["inverse"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["uid"] = "CJlaKYFh90a",
+			["inverse"] = false,
+			["cooldownEdge"] = false,
 			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
 			},
 			["cooldown"] = true,
-			["useglowColor"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["FuryFSStacks"] = {
 			["textFlags"] = "OUTLINE",
@@ -13199,9 +12443,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["fontFlags"] = "OUTLINE",
@@ -13261,7 +12505,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_name"] = false,
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -13269,16 +12513,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_vehicleUi"] = false,
 				["ingroup"] = {
 					["multi"] = {
 					},
 				},
-				["use_vehicleUi"] = false,
-				["role"] = {
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -13314,8 +12558,8 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["barInFront"] = true,
-			["parent"] = "Adriox Warrior",
-			["uid"] = "sFh5abmv6Ru",
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkWidth"] = 10,
 			["sparkRotationMode"] = "MANUAL",
 			["automaticWidth"] = "Auto",
 			["displayTextLeft"] = "%p                    ",
@@ -13329,25 +12573,25 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "aura",
 						["unevent"] = "auto",
-						["event"] = "Power",
+						["buffShowOn"] = "showOnActive",
 						["use_requirePowerType"] = false,
-						["use_specific_unit"] = false,
-						["subeventSuffix"] = "_CAST_START",
-						["subeventPrefix"] = "SPELL",
+						["custom_hide"] = "timed",
+						["unit"] = "player",
+						["use_power"] = false,
 						["spellIds"] = {
 							202539, -- [1]
 						},
 						["names"] = {
 							"Furious Slash", -- [1]
 						},
-						["use_power"] = false,
-						["unit"] = "player",
-						["custom_hide"] = "timed",
-						["buffShowOn"] = "showOnActive",
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_specific_unit"] = false,
+						["event"] = "Power",
 					},
 					["untrigger"] = {
-						["use_unit"] = true,
 						["unit"] = "player",
+						["use_unit"] = true,
 					},
 				}, -- [1]
 				["disjunctive"] = "any",
@@ -13359,475 +12603,166 @@ WeakAurasSaved = {
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
-					["duration_type"] = "seconds",
 					["preset"] = "fade",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "none",
-					["duration_type"] = "seconds",
 					["preset"] = "fade",
+					["duration_type"] = "seconds",
 				},
 			},
 			["borderBackdrop"] = "None",
 			["text"] = true,
 			["spark"] = true,
 			["stickyDuration"] = false,
-			["icon"] = false,
-			["sparkColor"] = {
-				1, -- [1]
-				0.94117647058823, -- [2]
-				0, -- [3]
-				1, -- [4]
+			["borderOffset"] = 1,
+			["config"] = {
 			},
 			["version"] = 4,
-			["width"] = 24.142906188965,
+			["anchorFrameType"] = "SCREEN",
 			["timer"] = false,
 			["timerFlags"] = "OUTLINE",
-			["authorMode"] = true,
-			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				0, -- [4]
 			},
+			["sparkBlendMode"] = "ADD",
+			["authorMode"] = true,
 			["fontSize"] = 17,
-			["displayText"] = "%s",
-			["sparkHidden"] = "BOTH",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
-			},
-			["justify"] = "CENTER",
+			["timerSize"] = 14,
+			["id"] = "FuryFSStacks",
+			["displayTextRight"] = "                 ",
+			["semver"] = "1.0.1-4",
 			["border"] = true,
 			["borderEdge"] = "1 Pixel",
 			["zoom"] = 0,
 			["borderSize"] = 1,
+			["wordWrap"] = "WordWrap",
+			["icon_side"] = "LEFT",
+			["rotateText"] = "NONE",
+			["height"] = 14.222261428833,
+			["sparkHeight"] = 60,
+			["xOffset"] = 70.7,
 			["borderColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["icon_side"] = "LEFT",
-			["xOffset"] = 70.7,
-			["height"] = 14.222261428833,
-			["sparkHeight"] = 60,
-			["rotateText"] = "NONE",
-			["wordWrap"] = "WordWrap",
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["timerSize"] = 14,
-			["semver"] = "1.0.1-4",
-			["id"] = "FuryFSStacks",
-			["displayTextRight"] = "                 ",
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
+			["justify"] = "CENTER",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
 			},
-			["borderOffset"] = 1,
+			["sparkHidden"] = "BOTH",
+			["displayText"] = "%s",
+			["frameStrata"] = 1,
+			["width"] = 24.142906188965,
+			["sparkColor"] = {
+				1, -- [1]
+				0.94117647058823, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["icon"] = false,
 			["inverse"] = true,
 			["sparkDesature"] = false,
 			["orientation"] = "HORIZONTAL_INVERSE",
 			["conditions"] = {
 			},
-			["sparkWidth"] = 10,
-			["stacksFont"] = "Friz Quadrata TT",
+			["uid"] = "sFh5abmv6Ru",
+			["parent"] = "Adriox Warrior",
 		},
-		["FurySDUptime"] = {
-			["text2Point"] = "CENTER",
+		["ArmsHLCD"] = {
+			["text2Point"] = "BOTTOMRIGHT",
 			["text1FontSize"] = 12,
 			["authorOptions"] = {
 			},
-			["text2"] = "%p",
-			["yOffset"] = 62,
+			["text2"] = "%s",
+			["yOffset"] = 18,
 			["anchorPoint"] = "CENTER",
 			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["text2Font"] = "Friz Quadrata TT",
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["text1Containment"] = "INSIDE",
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["config"] = {
-			},
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 8,
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["use_realm"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Font"] = "Anime Ace",
-			["frameStrata"] = 1,
-			["internalVersion"] = 11,
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["text1Enabled"] = true,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["xOffset"] = 70.7,
-			["id"] = "FurySDUptime",
-			["glow"] = false,
-			["alpha"] = 1,
-			["width"] = 44,
-			["text2Enabled"] = false,
-			["uid"] = "yBNCSjcTz1J",
-			["inverse"] = false,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["names"] = {
-							"Sudden Death", -- [1]
-						},
-						["spellIds"] = {
-							280721, -- [1]
-						},
-						["buffShowOn"] = "showOnActive",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["conditions"] = {
-			},
-			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
-		},
-		["FuryFSMissing"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = true,
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["auto"] = true,
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["names"] = {
-							"Furious Slash", -- [1]
-						},
-						["spellIds"] = {
-							202539, -- [1]
-						},
-						["buffShowOn"] = "showOnMissing",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["text2Font"] = "Friz Quadrata TT",
-			["glow"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["icon"] = true,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 9,
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["use_realm"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["uid"] = "9MuNOAe0bDB",
-			["authorMode"] = true,
-			["text1Font"] = "Anime Ace",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["width"] = 44,
-			["alpha"] = 1,
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["text1Containment"] = "INSIDE",
-			["text2FontSize"] = 24,
-			["frameStrata"] = 1,
-			["text1"] = "%s",
-			["text2"] = "%p",
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "FuryFSMissing",
-			["xOffset"] = 70.7,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["text1Enabled"] = true,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["authorOptions"] = {
-			},
-			["cooldownEdge"] = false,
-		},
-		["FurySBBuff"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["zoom"] = 0.1,
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "target",
-						["use_specific_unit"] = false,
-						["ownOnly"] = true,
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
 						["custom_hide"] = "timed",
-						["charges"] = "2",
-						["spellName"] = 280772,
-						["charges_operator"] = "==",
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
 						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["buffShowOn"] = "showOnActive",
+						["names"] = {
+						},
 						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = "Siegebreaker",
+						["spellName"] = 6544,
+						["realSpellName"] = "Heroic Leap",
 						["use_spellName"] = true,
 						["spellIds"] = {
-							280772, -- [1]
 						},
-						["debuffType"] = "HARMFUL",
 						["use_unit"] = true,
 						["use_genericShowOn"] = true,
-						["use_charges"] = false,
-						["names"] = {
-							"Siegebreaker", -- [1]
-						},
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 1719,
+						["spellName"] = 6544,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["cooldownSwipe"] = true,
-			["glow"] = false,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["useTooltip"] = true,
+			["icon"] = true,
+			["text2Font"] = "Anime Ace",
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Enabled"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["stickyDuration"] = false,
+			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -13837,54 +12772,49 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "cWARLID7HZz",
+			["height"] = 35,
+			["config"] = {
+			},
 			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 21,
-					["multi"] = {
-						[4] = true,
-						[3] = true,
-					},
-				},
 				["talent2"] = {
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 6,
 					["multi"] = {
-						["MAGE"] = true,
+						[10] = true,
+						[19] = true,
+						[6] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
 					},
 				},
 				["spec"] = {
-					["single"] = 2,
+					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
+				["use_petbattle"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -13892,14 +12822,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["text1Containment"] = "INSIDE",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 35,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -13908,35 +12843,38 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
+			["text2Enabled"] = false,
+			["text1Enabled"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["frameStrata"] = 1,
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text2Font"] = "Friz Quadrata TT",
-			["text1Containment"] = "INSIDE",
-			["text2"] = "%p",
-			["semver"] = "1.0.1-4",
+			["xOffset"] = -79,
 			["internalVersion"] = 11,
-			["id"] = "FurySBBuff",
-			["selfPoint"] = "CENTER",
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["config"] = {
-			},
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["glow"] = false,
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["cooldownTextEnabled"] = false,
+			["id"] = "ArmsHLCD",
+			["text1FontFlags"] = "OUTLINE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "nXn8HuuFB3e",
 			["inverse"] = true,
-			["icon"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -13953,42 +12891,939 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["xOffset"] = 118,
+			["parent"] = "Adriox Warrior",
 		},
-		["T15SuddenDeath"] = {
+		["FuryEnrageMissing"] = {
+			["text2Point"] = "BOTTOMRIGHT",
+			["text1FontSize"] = 12,
+			["xOffset"] = -23.7,
+			["zoom"] = 0.1,
+			["yOffset"] = 62,
+			["anchorPoint"] = "CENTER",
+			["icon"] = true,
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = true,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["useTooltip"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["text1Enabled"] = true,
+			["cooldownEdge"] = false,
+			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 44,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 3,
+					["multi"] = {
+						[4] = true,
+						[3] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Containment"] = "INSIDE",
+			["authorMode"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["text2Font"] = "Anime Ace",
+			["text2FontSize"] = 13,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2"] = "%s",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "FuryEnrageMissing",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 44,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "A7UFdIBiQ5X",
+			["inverse"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["duration"] = "1",
+						["ownOnly"] = true,
+						["use_unit"] = true,
+						["spellName"] = 85288,
+						["charges_operator"] = "==",
+						["type"] = "aura",
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["custom_hide"] = "timed",
+						["event"] = "Cooldown Progress (Spell)",
+						["buffShowOn"] = "showOnMissing",
+						["realSpellName"] = "Raging Blow",
+						["use_spellName"] = true,
+						["spellIds"] = {
+							184362, -- [1]
+						},
+						["names"] = {
+							"Enrage", -- [1]
+						},
+						["unevent"] = "auto",
+						["charges"] = "2",
+						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 85288,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = false,
+			["internalVersion"] = 11,
+		},
+		["ArmsSwingTimer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["authorOptions"] = {
+			},
+			["stacksFlags"] = "None",
+			["yOffset"] = -9,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.78039215686274, -- [1]
+				0.61176470588235, -- [2]
+				0.43137254901961, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["use_class"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["smoothProgress"] = true,
+			["useAdjustededMin"] = false,
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["texture"] = "Minimalist",
+			["textFont"] = "Anime Ace",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["auto"] = true,
+			["timerFont"] = "Anime Ace",
+			["alpha"] = 1,
+			["borderInset"] = 11,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = 0,
+			["parent"] = "Adriox Warrior",
+			["sparkRotationMode"] = "AUTO",
+			["displayTextLeft"] = "%n",
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["genericShowOn"] = "showOnActive",
+						["unevent"] = "auto",
+						["names"] = {
+						},
+						["use_absorbMode"] = true,
+						["event"] = "Swing Timer",
+						["subeventPrefix"] = "SPELL",
+						["duration"] = "1",
+						["unit"] = "player",
+						["spellIds"] = {
+						},
+						["use_hand"] = true,
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["hand"] = "main",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["borderOffset"] = 12,
+			["internalVersion"] = 11,
+			["sparkRotation"] = 0,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["backdropInFront"] = false,
+			["text"] = true,
+			["spark"] = false,
+			["stickyDuration"] = false,
+			["textSize"] = 12,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["version"] = 4,
+			["borderBackdrop"] = "None",
+			["timer"] = true,
+			["timerFlags"] = "None",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["rotateText"] = "NONE",
+			["width"] = 272,
+			["height"] = 10,
+			["borderInFront"] = true,
+			["id"] = "ArmsSwingTimer",
+			["border"] = true,
+			["borderEdge"] = "None",
+			["semver"] = "1.0.1-4",
+			["borderSize"] = 2,
+			["displayTextRight"] = " ",
+			["icon_side"] = "RIGHT",
+			["customTextUpdate"] = "update",
+			["config"] = {
+			},
+			["sparkHeight"] = 30,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stacksFont"] = "Anime Ace",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["backgroundColor"] = {
+				0.21176470588235, -- [1]
+				0.16470588235294, -- [2]
+				0.11372549019608, -- [3]
+				1, -- [4]
+			},
+			["sparkHidden"] = "NEVER",
+			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["uid"] = "hwQasX7eyHm",
+			["authorMode"] = true,
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["conditions"] = {
+			},
+			["sparkWidth"] = 10,
+			["xOffset"] = 0,
+		},
+		["FuryIVCD"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 18,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["authorOptions"] = {
+			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["icon"] = true,
+			["useglowColor"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["text2Font"] = "Friz Quadrata TT",
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["internalVersion"] = 11,
+			["cooldownEdge"] = false,
+			["text1Containment"] = "INSIDE",
+			["desaturate"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 5,
+					["multi"] = {
+						[10] = true,
+						[19] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["selfPoint"] = "CENTER",
+			["authorMode"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["xOffset"] = -100,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "FuryIVCD",
+			["text1Enabled"] = true,
+			["frameStrata"] = 1,
+			["width"] = 35,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "UbwKZGUJY89",
+			["inverse"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
+						["custom_hide"] = "timed",
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Cooldown Progress (Spell)",
+						["names"] = {
+						},
+						["realSpellName"] = "Impending Victory",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["use_genericShowOn"] = true,
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
+						["use_track"] = true,
+						["spellName"] = 202168,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 202168,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FuryISCCD"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 18,
+			["anchorPoint"] = "CENTER",
+			["glow"] = false,
+			["cooldownSwipe"] = true,
+			["authorOptions"] = {
+			},
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
+						["type"] = "status",
+						["unit"] = "player",
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 5246,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["spellName"] = 5246,
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 107570,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["useglowColor"] = false,
+			["useTooltip"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["text1Enabled"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["config"] = {
+			},
+			["load"] = {
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+						[10] = true,
+						[19] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Font"] = "Anime Ace",
+			["authorMode"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["icon"] = true,
+			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["xOffset"] = -100,
+			["text2Font"] = "Friz Quadrata TT",
+			["text2"] = "%p",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "FuryISCCD",
+			["text1Containment"] = "INSIDE",
+			["alpha"] = 1,
+			["width"] = 35,
+			["frameStrata"] = 1,
+			["uid"] = "zE9vgk7CLkz",
+			["inverse"] = true,
+			["selfPoint"] = "CENTER",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FurySBBuff"] = {
 			["text2Point"] = "CENTER",
 			["text1FontSize"] = 12,
 			["cooldownTextEnabled"] = false,
 			["text2"] = "%p",
 			["yOffset"] = 62,
 			["anchorPoint"] = "CENTER",
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = true,
 			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
+			["xOffset"] = 118,
 			["customTextUpdate"] = "update",
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["useglowColor"] = false,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["useTooltip"] = true,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 			},
-			["text1Enabled"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["names"] = {
+							"Siegebreaker", -- [1]
+						},
+						["use_charges"] = false,
+						["use_genericShowOn"] = true,
+						["use_unit"] = true,
+						["spellName"] = 280772,
+						["debuffType"] = "HARMFUL",
+						["charges_operator"] = "==",
+						["type"] = "aura",
+						["unevent"] = "auto",
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["buffShowOn"] = "showOnActive",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = "Siegebreaker",
+						["use_spellName"] = true,
+						["spellIds"] = {
+							280772, -- [1]
+						},
+						["charges"] = "2",
+						["custom_hide"] = "timed",
+						["ownOnly"] = true,
+						["use_specific_unit"] = false,
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 1719,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["icon"] = true,
 			["stickyDuration"] = false,
-			["text1Containment"] = "INSIDE",
 			["desaturate"] = false,
 			["glowColor"] = {
 				1, -- [1]
@@ -14010,14 +13845,13 @@ WeakAurasSaved = {
 				},
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 2,
+					["single"] = 21,
 					["multi"] = {
-						[3] = true,
 						[4] = true,
-						[17] = true,
+						[3] = true,
 					},
 				},
-				["talent2"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -14027,13 +13861,589 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["authorMode"] = true,
+			["width"] = 44,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["selfPoint"] = "CENTER",
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["internalVersion"] = 11,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Containment"] = "INSIDE",
+			["text2Font"] = "Friz Quadrata TT",
+			["zoom"] = 0.1,
+			["auto"] = true,
+			["frameStrata"] = 1,
+			["id"] = "FurySBBuff",
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "cWARLID7HZz",
+			["inverse"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["glow"] = false,
+		},
+		["FuryHLCD"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 18,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["xOffset"] = 20,
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["icon"] = true,
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["config"] = {
+			},
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 6,
+					["multi"] = {
+						[10] = true,
+						[19] = true,
+						[6] = true,
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["authorMode"] = true,
+			["width"] = 35,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text1Containment"] = "INSIDE",
+			["text2Font"] = "Friz Quadrata TT",
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["internalVersion"] = 11,
+			["alpha"] = 1,
+			["text2"] = "%p",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "FuryHLCD",
+			["authorOptions"] = {
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "vFvqr2z3YH5",
+			["inverse"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
+						["use_unit"] = true,
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Cooldown Progress (Spell)",
+						["custom_hide"] = "timed",
+						["realSpellName"] = "Heroic Leap",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+						},
+						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["spellName"] = 6544,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 6544,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FuryPummelCD"] = {
+			["glow"] = false,
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 18,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
+						["type"] = "status",
+						["custom_hide"] = "timed",
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 6552,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+						},
+						["spellName"] = 6552,
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 280772,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["useglowColor"] = false,
+			["internalVersion"] = 11,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["authorOptions"] = {
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["config"] = {
+			},
+			["load"] = {
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 21,
+					["multi"] = {
+						[21] = true,
+						[19] = true,
+						[10] = true,
+						[6] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_petbattle"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["xOffset"] = 100,
+			["authorMode"] = true,
+			["width"] = 35,
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["text2Point"] = "CENTER",
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text2Font"] = "Friz Quadrata TT",
+			["text2Enabled"] = false,
+			["text2FontSize"] = 24,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["text1Containment"] = "INSIDE",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["text2"] = "%p",
+			["auto"] = true,
+			["selfPoint"] = "CENTER",
+			["id"] = "FuryPummelCD",
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "0iudhtdb006",
+			["inverse"] = true,
+			["text1Enabled"] = true,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["ArmsBSCD"] = {
+			["text2Point"] = "BOTTOMRIGHT",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 18,
+			["anchorPoint"] = "CENTER",
+			["useTooltip"] = true,
+			["cooldownSwipe"] = true,
+			["authorOptions"] = {
+			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["cooldownEdge"] = false,
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["internalVersion"] = 11,
+			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 35,
+			["uid"] = "YLMdTisZP7L",
+			["load"] = {
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 6,
+					["multi"] = {
+						[10] = true,
+						[19] = true,
+						[6] = true,
+					},
+				},
+				["use_petbattle"] = false,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
@@ -14043,16 +14453,25 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -14061,12 +14480,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 118,
 			["authorMode"] = true,
 			["anchorFrameType"] = "SCREEN",
 			["text2Containment"] = "INSIDE",
@@ -14077,146 +14491,275 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["authorOptions"] = {
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text1Font"] = "Anime Ace",
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "status",
+						["custom_hide"] = "timed",
+						["unevent"] = "auto",
+						["use_showOn"] = true,
+						["duration"] = "1",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_unit"] = true,
+						["realSpellName"] = "Bladestorm",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+						},
+						["spellName"] = 227847,
+						["subeventSuffix"] = "_CAST_START",
+						["use_track"] = true,
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 107570,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
 			},
+			["text2FontSize"] = 12,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["icon"] = true,
+			["text2"] = "%s",
+			["auto"] = true,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["text2Font"] = "Friz Quadrata TT",
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text1Font"] = "Anime Ace",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "T15SuddenDeath",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["xOffset"] = 118,
-			["uid"] = "7tzgKlBxIZ3",
+			["id"] = "ArmsBSCD",
+			["text2Font"] = "Anime Ace",
+			["frameStrata"] = 1,
+			["width"] = 35,
+			["stickyDuration"] = false,
+			["config"] = {
+			},
 			["inverse"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["use_unit"] = true,
-						["use_charges"] = false,
-						["ownOnly"] = true,
-						["subeventPrefix"] = "SPELL",
-						["names"] = {
-							"Sudden Death", -- [1]
-							"Sudden Death", -- [2]
-						},
-						["debuffType"] = "HELPFUL",
-						["spellName"] = 29725,
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["subeventSuffix"] = "_CAST_START",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["type"] = "status",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 29725,
-						["use_spellName"] = true,
-						["spellIds"] = {
-							29725, -- [1]
-							52437, -- [2]
-						},
-						["custom_hide"] = "timed",
-						["buffShowOn"] = "showAlways",
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107574,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["conditions"] = {
-			},
-			["cooldown"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-		},
-		["ArmsDSUP"] = {
-			["text2Point"] = "TOP",
-			["text1FontSize"] = 12,
-			["xOffset"] = -120,
-			["text2"] = "%s",
-			["yOffset"] = 183,
-			["anchorPoint"] = "CENTER",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["cooldownSwipe"] = true,
-			["cooldownTextEnabled"] = false,
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["parent"] = "Adriox Warrior",
+		},
+		["FuryWWBuff"] = {
+			["text2Point"] = "LEFT",
+			["text1FontSize"] = 12,
+			["xOffset"] = -67,
+			["zoom"] = 0.1,
+			["yOffset"] = 140,
+			["anchorPoint"] = "CENTER",
 			["icon"] = true,
-			["useglowColor"] = false,
+			["cooldownSwipe"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["text2Font"] = "Expressway",
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
 			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["cooldownEdge"] = false,
+			["useTooltip"] = true,
+			["desaturate"] = false,
+			["stickyDuration"] = false,
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 40,
+			["config"] = {
+			},
+			["load"] = {
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 21,
+					["multi"] = {
+						[3] = true,
+						[8] = true,
+						[4] = true,
+						[21] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_petbattle"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
 			["selfPoint"] = "CENTER",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["authorMode"] = true,
+			["width"] = 40,
+			["text2Containment"] = "OUTSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text1FontFlags"] = "OUTLINE",
+			["regionType"] = "icon",
+			["text1Containment"] = "INSIDE",
+			["internalVersion"] = 11,
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = " %p",
+			["text2Font"] = "Anime Ace",
+			["alpha"] = 1,
+			["text2"] = "%s",
+			["auto"] = true,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "FuryWWBuff",
+			["authorOptions"] = {
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "5nJEMHR02T3",
+			["inverse"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["ownOnly"] = true,
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["charges_operator"] = "==",
-						["type"] = "aura",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["charges"] = "2",
-						["event"] = "Cooldown Progress (Spell)",
-						["buffShowOn"] = "showOnActive",
-						["realSpellName"] = "Sudden Death",
-						["use_spellName"] = true,
-						["spellIds"] = {
-							197690, -- [1]
-						},
-						["use_unit"] = true,
 						["use_charges"] = false,
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
-							"Defensive Stance", -- [1]
+							"Whirlwind", -- [1]
 						},
 						["spellName"] = 280721,
 						["debuffType"] = "HELPFUL",
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["buffShowOn"] = "showOnActive",
+						["event"] = "Cooldown Progress (Spell)",
+						["ownOnly"] = true,
+						["realSpellName"] = "Sudden Death",
+						["use_spellName"] = true,
+						["spellIds"] = {
+							85739, -- [1]
+						},
+						["unit"] = "player",
+						["type"] = "aura",
+						["unevent"] = "auto",
+						["custom_hide"] = "timed",
+						["use_specific_unit"] = false,
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
@@ -14226,6 +14769,66 @@ WeakAurasSaved = {
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["cooldownTextEnabled"] = false,
+		},
+		["FuryExecute"] = {
+			["text2Point"] = "BOTTOMRIGHT",
+			["text1FontSize"] = 12,
+			["xOffset"] = 22,
+			["zoom"] = 0.1,
+			["yOffset"] = 140,
+			["anchorPoint"] = "CENTER",
+			["icon"] = true,
+			["cooldownSwipe"] = true,
+			["cooldownTextEnabled"] = true,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["useTooltip"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slidebottom",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["text1Enabled"] = true,
+			["cooldownEdge"] = false,
 			["stickyDuration"] = false,
 			["desaturate"] = false,
 			["glowColor"] = {
@@ -14238,9 +14841,234 @@ WeakAurasSaved = {
 			["version"] = 4,
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
-			["uid"] = "1mSx8CC2zCZ",
+			["config"] = {
+			},
 			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 3,
+					["multi"] = {
+						[4] = true,
+						[3] = true,
+					},
+				},
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["text1Containment"] = "INSIDE",
+			["authorMode"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["text2Containment"] = "INSIDE",
+			["glowType"] = "buttonOverlay",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Enabled"] = false,
+			["glow"] = false,
+			["text2Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["text2Font"] = "Expressway",
+			["text2FontSize"] = 15,
+			["semver"] = "1.0.1-4",
+			["text1"] = "%p",
+			["alpha"] = 1,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2"] = "%s",
+			["auto"] = true,
+			["text1FontFlags"] = "OUTLINE",
+			["id"] = "FuryExecute",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["text1Font"] = "Anime Ace",
+			["uid"] = "SV9uJOBDjqH",
+			["inverse"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["use_charges"] = false,
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["duration"] = "1",
+						["use_genericShowOn"] = true,
+						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
+						["charges_operator"] = "==",
+						["charges"] = "2",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_showOn"] = true,
+						["unevent"] = "auto",
+						["event"] = "Action Usable",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 5308,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["type"] = "status",
+						["use_targetRequired"] = true,
+						["spellName"] = 5308,
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+						["showOn"] = "showAlways",
+						["spellName"] = 85288,
+					},
+				}, -- [1]
+				["disjunctive"] = "all",
+				["activeTriggerMode"] = -10,
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "spellUsable",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["cooldown"] = false,
+			["internalVersion"] = 11,
+		},
+		["FuryFBUptime"] = {
+			["text2Point"] = "CENTER",
+			["text1FontSize"] = 12,
+			["cooldownTextEnabled"] = false,
+			["zoom"] = 0.1,
+			["yOffset"] = 140,
+			["anchorPoint"] = "CENTER",
+			["text2Font"] = "Friz Quadrata TT",
+			["cooldownSwipe"] = true,
+			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["customTextUpdate"] = "update",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["useglowColor"] = false,
+			["parent"] = "Adriox Warrior",
+			["text1Enabled"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["useTooltip"] = true,
+			["stickyDuration"] = false,
+			["desaturate"] = false,
+			["text1Containment"] = "INSIDE",
+			["glowColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text1Point"] = "BOTTOMRIGHT",
+			["version"] = 4,
+			["text2FontFlags"] = "OUTLINE",
+			["height"] = 40,
+			["config"] = {
+			},
+			["load"] = {
+				["ingroup"] = {
 					["multi"] = {
 					},
 				},
@@ -14255,450 +15083,11 @@ WeakAurasSaved = {
 				},
 				["use_petbattle"] = false,
 				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "OUTSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["alpha"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["frameStrata"] = 1,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 20,
-			["auto"] = true,
-			["text1"] = " %p",
-			["text1Containment"] = "INSIDE",
-			["internalVersion"] = 11,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["authorOptions"] = {
-			},
-			["id"] = "ArmsDSUP",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 40,
-			["text1Enabled"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["useTooltip"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
-		},
-		["T15WarMachine"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["authorOptions"] = {
-			},
-			["text2"] = "%p",
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["cooldownSwipe"] = true,
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["useglowColor"] = false,
-			["useTooltip"] = true,
-			["text2Font"] = "Friz Quadrata TT",
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["internalVersion"] = 11,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-							"War Machine", -- [1]
-						},
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["spellName"] = 260643,
-						["type"] = "aura",
-						["buffShowOn"] = "showAlways",
-						["charges_operator"] = "==",
-						["charges"] = "2",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["custom_hide"] = "timed",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = "Skullsplitter",
-						["use_spellName"] = true,
-						["spellIds"] = {
-							262231, -- [1]
-						},
-						["use_genericShowOn"] = true,
-						["use_unit"] = true,
-						["ownOnly"] = true,
-						["use_charges"] = false,
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107574,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["desaturate"] = false,
-			["stickyDuration"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "l9MkSqGdNjz",
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 1,
-					["multi"] = {
-						[3] = true,
-						[4] = true,
-						[17] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["width"] = 44,
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["icon"] = true,
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["cooldownTextEnabled"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["text1Containment"] = "INSIDE",
-			["id"] = "T15WarMachine",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = 118,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "buffed",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["parent"] = "Adriox Warrior",
-		},
-		["FuryBS"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
-			["text2"] = "%p",
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
-						["charges"] = "2",
-						["debuffType"] = "HELPFUL",
-						["charges_operator"] = "==",
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["unevent"] = "auto",
-						["use_showOn"] = true,
-						["unit"] = "player",
-						["event"] = "Cooldown Progress (Spell)",
-						["custom_hide"] = "timed",
-						["realSpellName"] = "Bladestorm",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 46924,
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["use_track"] = true,
-						["use_charges"] = false,
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 46924,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["internalVersion"] = 11,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "g1JZ2RxM7PC",
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 18,
-					["multi"] = {
-						[4] = true,
-						[3] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
@@ -14708,17 +15097,27 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["use_spec"] = true,
+				["faction"] = {
 					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+						["MAGE"] = true,
 					},
 				},
 				["size"] = {
@@ -14726,9 +15125,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Font"] = "Anime Ace",
+			["selfPoint"] = "CENTER",
 			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 40,
 			["text2Containment"] = "INSIDE",
 			["glowType"] = "buttonOverlay",
 			["text1Color"] = {
@@ -14737,473 +15136,73 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
+			["text2Enabled"] = false,
+			["glow"] = false,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text1FontFlags"] = "OUTLINE",
 			["regionType"] = "icon",
-			["authorOptions"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["text1Enabled"] = true,
+			["internalVersion"] = 11,
 			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["text1Containment"] = "INSIDE",
-			["alpha"] = 1,
-			["zoom"] = 0.1,
 			["semver"] = "1.0.1-4",
-			["text2Font"] = "Friz Quadrata TT",
-			["id"] = "FuryBS",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["xOffset"] = -118,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["useglowColor"] = false,
-		},
-		["T45Rend"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["cooldownTextEnabled"] = false,
+			["text1"] = " %p",
+			["xOffset"] = 67,
+			["alpha"] = 1,
 			["text2"] = "%p",
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["cooldownSwipe"] = true,
-			["parent"] = "Adriox Warrior",
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/BJbMh7f4m/4",
+			["auto"] = true,
 			["icon"] = true,
+			["id"] = "FuryFBUptime",
+			["text1FontFlags"] = "OUTLINE",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["text1Font"] = "Anime Ace",
+			["uid"] = "OulJb0yiBZe",
+			["inverse"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["ownOnly"] = true,
-						["genericShowOn"] = "showAlways",
-						["use_unit"] = true,
-						["use_specific_unit"] = false,
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "target",
-						["spellName"] = 202316,
-						["debuffType"] = "HARMFUL",
-						["custom_hide"] = "timed",
+						["unit"] = "player",
+						["spellName"] = 280721,
+						["debuffType"] = "HELPFUL",
 						["charges_operator"] = "==",
 						["charges"] = "2",
+						["custom_hide"] = "timed",
 						["subeventSuffix"] = "_CAST_START",
-						["unevent"] = "auto",
 						["use_showOn"] = true,
-						["type"] = "aura",
+						["use_unit"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = "Fervor of Battle",
+						["use_charges"] = false,
+						["realSpellName"] = "Sudden Death",
 						["use_spellName"] = true,
 						["spellIds"] = {
-							772, -- [1]
+							215571, -- [1]
+						},
+						["names"] = {
+							"Frothing Berserker", -- [1]
 						},
 						["buffShowOn"] = "showOnActive",
-						["use_genericShowOn"] = true,
-						["duration"] = "1",
-						["use_charges"] = false,
-						["names"] = {
-							"Rend", -- [1]
-						},
-					},
-					["untrigger"] = {
-						["showOn"] = "showAlways",
-						["spellName"] = 107574,
-					},
-				}, -- [1]
-				["disjunctive"] = "all",
-				["activeTriggerMode"] = -10,
-			},
-			["cooldownEdge"] = false,
-			["useTooltip"] = true,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["text2Font"] = "Friz Quadrata TT",
-			["internalVersion"] = 11,
-			["stickyDuration"] = false,
-			["desaturate"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "IyvGqzmqE3r",
-			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 9,
-					["multi"] = {
-						[3] = true,
-						[4] = true,
-						[17] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["text1Font"] = "Anime Ace",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["alpha"] = 1,
-			["text1Containment"] = "INSIDE",
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["id"] = "T45Rend",
-			["glow"] = false,
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["xOffset"] = 70.7,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["text1Enabled"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["op"] = "<",
-						["value"] = "3",
-						["variable"] = "expirationTime",
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								0, -- [1]
-								1, -- [2]
-								0.10196078431373, -- [3]
-								1, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["cooldown"] = true,
-			["useglowColor"] = false,
-		},
-		["ArmsWBCD"] = {
-			["text2Point"] = "CENTER",
-			["text1FontSize"] = 12,
-			["authorOptions"] = {
-			},
-			["text2"] = "%p",
-			["yOffset"] = 62,
-			["anchorPoint"] = "CENTER",
-			["useTooltip"] = true,
-			["cooldownSwipe"] = true,
-			["glow"] = false,
-			["customTextUpdate"] = "update",
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["useglowColor"] = false,
-			["parent"] = "Adriox Warrior",
-			["text2Font"] = "Friz Quadrata TT",
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["text1Enabled"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Containment"] = "INSIDE",
-			["stickyDuration"] = false,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Point"] = "BOTTOMRIGHT",
-			["version"] = 4,
-			["text2FontFlags"] = "OUTLINE",
-			["height"] = 44,
-			["uid"] = "70qtAyIf78y",
-			["load"] = {
-				["use_petbattle"] = false,
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 14,
-					["multi"] = {
-						[3] = true,
-						[4] = true,
-						[17] = true,
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-						["MAGE"] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["url"] = "https://wago.io/BJbMh7f4m/4",
-			["authorMode"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["text2Containment"] = "INSIDE",
-			["glowType"] = "buttonOverlay",
-			["text1Font"] = "Anime Ace",
-			["frameStrata"] = 1,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["text2Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["text1FontFlags"] = "OUTLINE",
-			["text2FontSize"] = 24,
-			["auto"] = true,
-			["text1"] = "%p",
-			["xOffset"] = 23.7,
-			["alpha"] = 1,
-			["zoom"] = 0.1,
-			["semver"] = "1.0.1-4",
-			["internalVersion"] = 11,
-			["id"] = "ArmsWBCD",
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_charges"] = false,
-						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
-						["duration"] = "1",
-						["custom_hide"] = "timed",
-						["spellName"] = 262161,
-						["charges_operator"] = "==",
-						["type"] = "status",
 						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["use_showOn"] = true,
-						["charges"] = "2",
-						["event"] = "Cooldown Progress (Spell)",
-						["unit"] = "player",
-						["realSpellName"] = "Warbreaker",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_unit"] = true,
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["type"] = "aura",
 					},
 					["untrigger"] = {
 						["showOn"] = "showAlways",
-						["spellName"] = 262161,
+						["spellName"] = 280721,
 					},
 				}, -- [1]
 				["disjunctive"] = "all",
 				["activeTriggerMode"] = -10,
 			},
-			["text2Enabled"] = false,
-			["width"] = 44,
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
-			["inverse"] = true,
-			["desaturate"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -15220,17 +15219,18 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["cooldown"] = true,
-			["cooldownTextEnabled"] = false,
+			["authorOptions"] = {
+			},
 		},
 	},
+	["registered"] = {
+	},
+	["login_squelch_time"] = 10,
 	["frame"] = {
 		["xOffset"] = -357.740356445313,
-		["width"] = 830,
-		["height"] = 500.000030517578,
 		["yOffset"] = -55.4507446289063,
+		["height"] = 500.000030517578,
+		["width"] = 830,
 	},
-	["minimap"] = {
-		["minimapPos"] = 317.87436222242,
-		["hide"] = false,
-	},
+	["editor_theme"] = "Monokai",
 }

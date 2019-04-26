@@ -41,3 +41,4 @@ Details_RaidCheck: enabled
 Details_DataStorage: enabled
 Details_TinyThreat: enabled
 Details_Vanguard: enabled
+MaxCam: disabled

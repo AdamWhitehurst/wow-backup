@@ -1,6 +1,6 @@
 VER 3 000000000000001B "AAP_MACRO" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use Beryl Shield Detonator
+/use Unholy Gem
 END
 VER 3 0000000000000014 "Avatar / Deadly " "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -39,6 +39,9 @@ VER 3 0000000000000003 "Land & Sky Mount" "413588"
 #showtooltip
 /cast [noflyable] Zandalari Direhorn
 /cast [flyable] golden Cloud Serpent
+END
+VER 3 000000000000001D "Narcissus" "132299"
+/narcissus
 END
 VER 3 000000000000000F "Next Server" "135833"
 /run ServerHop_HopForward()

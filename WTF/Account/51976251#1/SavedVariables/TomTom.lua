@@ -6,11 +6,12 @@ TomTomDB = {
 		["Umbrick - Emerald Dream"] = "Default",
 		["Byanir - Moon Guard"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
-		["Ayanir - Moon Guard"] = "Default",
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Lonalber - Emerald Dream"] = "Default",
-		["Whitmoore - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
+		["Ayanir - Moon Guard"] = "Default",
+		["Whitmoore - Emerald Dream"] = "Default",
+		["Lonalber - Emerald Dream"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Harwapa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -28,11 +29,12 @@ TomTomWaypointsM = {
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
-		["Ayanir - Moon Guard"] = "Ayanir - Moon Guard",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
-		["Whitmoore - Emerald Dream"] = "Whitmoore - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Ayanir - Moon Guard"] = "Ayanir - Moon Guard",
+		["Whitmoore - Emerald Dream"] = "Whitmoore - Emerald Dream",
+		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
 	},
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
@@ -45,15 +47,17 @@ TomTomWaypointsM = {
 		},
 		["Mininimi - Moon Guard"] = {
 		},
+		["Wharapi - Tichondrius"] = {
+		},
 		["Ayanir - Moon Guard"] = {
-		},
-		["Bramblebrow - Emerald Dream"] = {
-		},
-		["Lonalber - Emerald Dream"] = {
 		},
 		["Whitmoore - Emerald Dream"] = {
 		},
-		["Wharapi - Tichondrius"] = {
+		["Lonalber - Emerald Dream"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Harwapa - Tichondrius"] = {
 		},
 	},
 }

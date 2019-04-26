@@ -6,11 +6,12 @@ AddOnSkinsDB = {
 		["Umbrick - Emerald Dream"] = "Default",
 		["Byanir - Moon Guard"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
-		["Ayanir - Moon Guard"] = "Default",
-		["Wharapi - Tichondrius"] = "Default",
-		["Whitmoore - Emerald Dream"] = "Default",
-		["Lonalber - Emerald Dream"] = "Default",
 		["Bramblebrow - Emerald Dream"] = "BenikUI",
+		["Ayanir - Moon Guard"] = "Default",
+		["Lonalber - Emerald Dream"] = "Default",
+		["Whitmoore - Emerald Dream"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Harwapa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -29,6 +30,7 @@ AddOnSkinsDB = {
 				0.80527076125145, -- [4]
 			},
 			["ElvUIStyle"] = false,
+			["Azeroth Auto Pilot"] = false,
 			["EmbedMain"] = "",
 			["WeakAuraIconCooldown"] = true,
 		},
@@ -38,8 +40,11 @@ AddOnSkinsDB = {
 			["DetailsBackdrop"] = false,
 			["EmbedFrameStrata"] = "1-BACKGROUND",
 			["Storyline"] = false,
+			["ChangeLogVersion"] = 4.15,
 		},
 	},
 }
 AddOnSkinsDS = {
+	[4.15] = {
+	},
 }

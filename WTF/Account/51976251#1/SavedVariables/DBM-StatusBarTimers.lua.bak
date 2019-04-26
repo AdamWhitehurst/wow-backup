@@ -14,11 +14,13 @@ DBT_AllPersistentOptions = {
 	["Default"] = {
 		["DBM"] = {
 			["HugeTimerPoint"] = "CENTER",
+			["HugeBarYOffset"] = 13,
 			["TimerPoint"] = "TOPRIGHT",
 			["TimerX"] = -223.000030517578,
 			["HugeTimerX"] = 0,
-			["TimerY"] = -260,
+			["BarYOffset"] = 13,
 			["HugeTimerY"] = -120,
+			["TimerY"] = -260,
 		},
 	},
 	["BenikUIBramblebrow-EmeraldDream"] = {
