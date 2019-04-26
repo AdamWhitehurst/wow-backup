@@ -24,23 +24,22 @@ local function LoadSkin()
 
 	-- Skin Blizzard Tooltips
 	local GameTooltip = _G.GameTooltip
-	local EmbeddedItemTooltip = _G.EmbeddedItemTooltip
 	local StoryTooltip = _G.QuestScrollFrame.StoryTooltip
 	StoryTooltip:SetFrameLevel(4)
 
-	--GameTooltip.ItemTooltip.Icon:SetTexCoord(unpack(E.TexCoords))
-	--GameTooltip.ItemTooltip.IconBorder:SetAlpha(0)
-	--GameTooltip.ItemTooltip:CreateBackdrop("Default")
-	--GameTooltip.ItemTooltip.backdrop:SetOutside(GameTooltip.ItemTooltip.Icon)
-	--GameTooltip.ItemTooltip.Count:ClearAllPoints()
-	--GameTooltip.ItemTooltip.Count:SetPoint('BOTTOMRIGHT', GameTooltip.ItemTooltip.Icon, 'BOTTOMRIGHT', 1, 0)
-	--hooksecurefunc(GameTooltip.ItemTooltip.IconBorder, 'SetVertexColor', function(self, r, g, b)
-	--	self:GetParent().backdrop:SetBackdropBorderColor(r, g, b)
-	--	self:SetTexture()
-	--end)
-	--hooksecurefunc(GameTooltip.ItemTooltip.IconBorder, 'Hide', function(self)
-	--	self:GetParent().backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
-	--end)
+	GameTooltip.ItemTooltip.Icon:SetTexCoord(unpack(E.TexCoords))
+	GameTooltip.ItemTooltip.IconBorder:SetAlpha(0)
+	GameTooltip.ItemTooltip:CreateBackdrop("Default")
+	GameTooltip.ItemTooltip.backdrop:SetOutside(GameTooltip.ItemTooltip.Icon)
+	GameTooltip.ItemTooltip.Count:ClearAllPoints()
+	GameTooltip.ItemTooltip.Count:SetPoint('BOTTOMRIGHT', GameTooltip.ItemTooltip.Icon, 'BOTTOMRIGHT', 1, 0)
+	hooksecurefunc(GameTooltip.ItemTooltip.IconBorder, 'SetVertexColor', function(self, r, g, b)
+		self:GetParent().backdrop:SetBackdropBorderColor(r, g, b)
+		self:SetTexture()
+	end)
+	hooksecurefunc(GameTooltip.ItemTooltip.IconBorder, 'Hide', function(self)
+		self:GetParent().backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
+	end)
 
 	local WarCampaignTooltip = _G.QuestScrollFrame.WarCampaignTooltip
 	local tooltips = {
@@ -74,12 +73,12 @@ local function LoadSkin()
 	end
 
 	-- Skin GameTooltip Status Bar
-	GameTooltipStatusBar:SetStatusBarTexture(E.media.normTex)
-	E:RegisterStatusBar(GameTooltipStatusBar)
-	GameTooltipStatusBar:CreateBackdrop('Transparent')
-	GameTooltipStatusBar:ClearAllPoints()
-	GameTooltipStatusBar:Point("TOPLEFT", GameTooltip, "BOTTOMLEFT", E.Border, -(E.Spacing * 3))
-	GameTooltipStatusBar:Point("TOPRIGHT", GameTooltip, "BOTTOMRIGHT", -E.Border, -(E.Spacing * 3))
+	_G.GameTooltipStatusBar:SetStatusBarTexture(E.media.normTex)
+	E:RegisterStatusBar(_G.GameTooltipStatusBar)
+	_G.GameTooltipStatusBar:CreateBackdrop('Transparent')
+	_G.GameTooltipStatusBar:ClearAllPoints()
+	_G.GameTooltipStatusBar:Point("TOPLEFT", GameTooltip, "BOTTOMLEFT", E.Border, -(E.Spacing * 3))
+	_G.GameTooltipStatusBar:Point("TOPRIGHT", GameTooltip, "BOTTOMRIGHT", -E.Border, -(E.Spacing * 3))
 
 	TT:SecureHook('GameTooltip_ShowStatusBar') -- Skin Status Bars
 	TT:SecureHook('GameTooltip_ShowProgressBar') -- Skin Progress Bars

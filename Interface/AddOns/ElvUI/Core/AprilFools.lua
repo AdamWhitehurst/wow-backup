@@ -6,6 +6,8 @@
 ]]
 
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local UF = E:GetModule('UnitFrames')
+local AB = E:GetModule('ActionBars')
 
 --Lua functions
 local _G = _G
@@ -23,7 +25,6 @@ local SendChatMessage = SendChatMessage
 --Harlem Shake (Activate with command: /harlemshake)
 --People really seemed to like this one. We got a lot of positive responses.
 do
-	E.yep = tonumber(E.version) == 10.92
 	function E:StopHarlemShake()
 		E.isMassiveShaking = nil
 		StopMusic()
@@ -73,8 +74,6 @@ do
 		PlayMusic(E.Media.Sounds.HarlemShake)
 		E:ScheduleTimer("DoTheHarlemShake", 15.5)
 
-		local UF = E:GetModule("UnitFrames")
-		local AB = E:GetModule("ActionBars")
 		self.massiveShakeObjects = {}
 		tinsert(self.massiveShakeObjects, _G.GameTooltip)
 		tinsert(self.massiveShakeObjects, _G.Minimap)
@@ -85,7 +84,6 @@ do
 		for unit in pairs(UF.units) do
 			tinsert(self.massiveShakeObjects, UF[unit])
 		end
-
 		for _, header in pairs(UF.headers) do
 			tinsert(self.massiveShakeObjects, header)
 		end

@@ -14,17 +14,7 @@ E.Media = {
 		Expressway = M..[[Fonts\Expressway.ttf]],
 		Homespun = M..[[Fonts\Homespun.ttf]],
 		Invisible = M..[[Fonts\Invisible.ttf]],
-		PTSansNarrow = M..[[Fonts\PTSansNarrow.ttf]],
-
-		AnimeAce = M..[[Fonts\AnimeAce_Regular.ttf]],
-		AnimeAceBold = M..[[Fonts\AnimeAce_Bold.ttf]],
-		AnimeAceItalic = M..[[Fonts\AnimeAce_Italic.ttf]],
-		ComickBook = M..[[Fonts\ComickBook.ttf]],
-		ComickBookCaps = M..[[Fonts\ComickBook_Caps.ttf]],
-		HappyMonkey = M..[[Fonts\HappyMonkey.ttf]],
-		PatrickHand = M..[[Fonts\PatrickHand.ttf]],
-		PatrickHandSC = M..[[Fonts\PatrickHandSC.ttf]],
-		Sriracha = M..[[Fonts\Sriracha.ttf]]
+		PTSansNarrow = M..[[Fonts\PTSansNarrow.ttf]]
 	},
 	Sounds = {
 		AwwCrap = M..[[Sounds\AwwCrap.ogg]],
@@ -75,17 +65,20 @@ E.Media = {
 		ZZZ = M..[[ChatEmojis\ZZZ.tga]]
 	},
 	ChatLogos = {
-		Bathrobe = M..[[ChatLogos\Bathrobe.tga]],
+		ElvRainbow = M..[[ChatLogos\ElvRainbow.tga]],
+		ElvMelon = M..[[ChatLogos\ElvMelon.tga]],
 		ElvBlue = M..[[ChatLogos\ElvBlue.tga]],
 		ElvGreen = M..[[ChatLogos\ElvGreen.tga]],
 		ElvOrange = M..[[ChatLogos\ElvOrange.tga]],
 		ElvPink = M..[[ChatLogos\ElvPink.tga]],
 		ElvPurple = M..[[ChatLogos\ElvPurple.tga]],
-		ElvRainbow = M..[[ChatLogos\ElvRainbow.tga]],
+		ElvYellow = M..[[ChatLogos\ElvYellow.tga]],
 		ElvRed = M..[[ChatLogos\ElvRed.tga]],
+		Bathrobe = M..[[ChatLogos\Bathrobe.tga]],
 		HelloKitty = M..[[ChatLogos\HelloKitty.tga]],
 		Illuminati = M..[[ChatLogos\Illuminati.tga]],
 		MrHankey = M..[[ChatLogos\MrHankey.tga]],
+		Rainbow = M..[[ChatLogos\Rainbow.tga]],
 		TyroneBiggums = M..[[ChatLogos\TyroneBiggums.tga]]
 	},
 	Textures = {
@@ -144,19 +137,6 @@ LSM:Register('font','Action Man',E.Media.Fonts.ActionMan)
 LSM:Register('font','Expressway',E.Media.Fonts.Expressway,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 LSM:Register('font','PT Sans Narrow',E.Media.Fonts.PTSansNarrow,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 LSM:Register('font','Homespun',E.Media.Fonts.Homespun,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
-
-
-LSM:Register('font','Anime Ace',E.Media.Fonts.AnimeAce)
-LSM:Register('font','Anime Ace Bold',E.Media.Fonts.AnimeAceBold)
-LSM:Register('font','Anime Ace Italic',E.Media.Fonts.AnimeAceItalic)
-LSM:Register('font','Comick Book Caps',E.Media.Fonts.ComickBookCaps)
-LSM:Register('font','Comick Book',E.Media.Fonts.ComickBook)
-LSM:Register('font','Happy Monkey',E.Media.Fonts.HappyMonkey)
-LSM:Register('font','Patrick Hand',E.Media.Fonts.PatrickHand)
-LSM:Register('font','Patrick Hand SC',E.Media.Fonts.PatrickHandSC)
-LSM:Register('font','Sriracha',E.Media.Fonts.Sriracha)
-
-
 LSM:Register('sound','Awww Crap',E.Media.Sounds.AwwCrap)
 LSM:Register('sound','BBQ Ass',E.Media.Sounds.BbqAss)
 LSM:Register('sound','Big Yankie Devil',E.Media.Sounds.YankieBangBang)

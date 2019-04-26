@@ -1,6 +1,6 @@
 ## Interface: 80100
 ## Author: Elv
-## Version: 11.00
+## Version: 11.10
 ## Title: |cfffe7b2cElvUI|r
 ## Notes: User Interface replacement AddOn for World of Warcraft.
 ## SavedVariables: ElvDB, ElvPrivateDB
@@ -19,3 +19,4 @@ Settings\Load_Config.xml
 Core\Load_Core.xml
 Layout\Load_Layout.xml
 Modules\Load_Modules.xml
+

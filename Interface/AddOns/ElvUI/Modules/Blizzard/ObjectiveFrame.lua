@@ -1,5 +1,5 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
-local B = E:GetModule('Blizzard');
+local B = E:GetModule('Blizzard')
 
 local _G = _G
 --Lua functions
@@ -98,14 +98,6 @@ function B:MoveObjectiveFrame()
 	end)
 
 	ObjectiveTrackerFrame.AutoHider:SetScript("OnShow", _G.ObjectiveTracker_Expand)
-
-	ObjectiveTrackerFrame.AutoHider:SetScript("OnHide", function() 
-		local _, _, difficulty = GetInstanceInfo(); 
-		if difficulty ~= 8 then
-			ObjectiveTracker_Collapse()
-		end
-	end)
-	ObjectiveTrackerFrame.AutoHider:SetScript("OnShow", ObjectiveTracker_Expand)
 
 	self:SetObjectiveFrameAutoHide()
 end
