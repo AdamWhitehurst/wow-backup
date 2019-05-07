@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(2337, "DBM-ZuldazarRaid", 3, 1176)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision("20190416205700")
+mod:SetRevision("2019042654332")
 mod:SetCreatureID(146251, 146253, 146256)--Sister Katherine 146251, Brother Joseph 146253, Laminaria 146256
 mod:SetEncounterID(2280)
 --mod:DisableESCombatDetection()
@@ -71,7 +71,6 @@ local specWarnTemptingSong				= mod:NewSpecialWarningRun(284405, nil, nil, nil, 
 local yellTemptingSong					= mod:NewYell(284405)
 --Stage Two: Laminaria
 local specWarnEnergizedStorm			= mod:NewSpecialWarningSwitch("ej19312", "RangedDps", nil, nil, 1, 2)
---local yellKepWrapped					= mod:NewFadesYell(285000)
 local specWarnSeaSwell					= mod:NewSpecialWarningDodge(285118, nil, nil, 2, 3, 2)
 local specWarnIreoftheDeep				= mod:NewSpecialWarningSoak(285017, "-Tank", nil, nil, 1, 2)
 local specWarnStormsWail				= mod:NewSpecialWarningMoveTo(285350, nil, nil, 2, 3, 2)
@@ -97,7 +96,6 @@ local timerCataTides					= mod:NewCastTimer(15, 288696, nil, nil, nil, 4, nil, D
 local timerSeaSwellCD					= mod:NewCDTimer(20.6, 285118, nil, nil, nil, 3, nil, DBM_CORE_DEADLY_ICON)
 local timerIreoftheDeepCD				= mod:NewCDTimer(32.8, 285017, nil, nil, nil, 5)
 local timerStormsWailCD					= mod:NewCDTimer(120.2, 285350, nil, nil, nil, 3)
-local timerStormsWail					= mod:NewTargetTimer(12, 285350, nil, nil, nil, 5)
 local timerJoltingVolleyCD				= mod:NewCDCountTimer(43.6, 287169, nil, nil, nil, 2, nil, DBM_CORE_HEALER_ICON)
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
@@ -107,7 +105,7 @@ local countdownSeaSwell					= mod:NewCountdown(20.6, 285118, true, 3, 3)
 --local countdownFelstormBarrage			= mod:NewCountdown("AltTwo32", 244000, nil, nil, 3)
 
 mod:AddNamePlateOption("NPAuraOnKepWrapping", 285382)
-mod:AddSetIconOption("SetIconWail", 285350, true)
+mod:AddSetIconOption("SetIconWail", 285350, true, false, {1, 2, 3})
 mod:AddRangeFrameOption(5, 285118)
 mod:AddInfoFrameOption(284760, true)
 
@@ -229,8 +227,8 @@ function mod:OnCombatStart(delay)
 		DBM.InfoFrame:SetHeader(OVERVIEW)
 		DBM.InfoFrame:Show(8, "function", updateInfoFrame, false, false)
 	end
-	self:Schedule(0.5, delayedSisterUpdate, self, true)--Update timers couple seconds into pull
-	self:Schedule(0.5, delayedBrotherUpdate, self, true)--Update timers couple seconds into pull
+	self:Schedule(0.5, delayedSisterUpdate, self, 1)--Update timers couple seconds into pull
+	self:Schedule(0.5, delayedBrotherUpdate, self, 1)--Update timers couple seconds into pull
 end
 
 function mod:OnCombatEnd()
@@ -398,10 +396,6 @@ function mod:SPELL_AURA_APPLIED(args)
 	local spellId = args.spellId
 	if spellId == 285000 then
 		local amount = args.amount or 1
-		--if args:IsPlayer() then
-		--	yellKepWrapped:Cancel()
-			--yellKepWrapped:Countdown(18)
-		--end
 		warnKelpWrapped:Show(args.destName, amount)
 	elseif spellId == 286558 then
 		if self:CheckBossDistance(args.destGUID, true) then
@@ -434,15 +428,17 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif spellId == 285350 or spellId == 285426 then
 		if args:IsPlayer() then
 			specWarnStormsWail:Show(freezingTidePod)
-			local timer = self:IsEasy() and 13 or 10
-			specWarnStormsWail:Schedule(timer-4.5, DBM_CORE_BACK)
 			specWarnStormsWail:Play("targetyou")
 			yellStormsWail:Yell()
-			yellStormsWailFades:Countdown(timer)
+			local spellName, _, _, _, _, expireTime = DBM:UnitDebuff("player", 285350, 285426)
+			if expireTime then
+				local remaining = expireTime-GetTime()
+				specWarnStormsWail:Schedule(remaining-4.5, DBM_CORE_BACK)
+				yellStormsWailFades:Countdown(remaining)
+			end
 		else
 			warnStormsWail:Show(args.destName)
 		end
-		timerStormsWail:Start(12, args.destName)
 		if not tContains(stormTargets, args.destName) then
 			table.insert(stormTargets, args.destName)
 		end
@@ -510,7 +506,6 @@ function mod:SPELL_AURA_REMOVED(args)
 			yellStormsWailFades:Cancel()
 			specWarnStormsWail:Cancel()
 		end
-		timerStormsWail:Stop(12, args.destName)
 		tDeleteItem(stormTargets, args.destName)
 		if self.Options.SetIconWail then
 			self:SetIcon(args.destName, 0)

@@ -554,6 +554,13 @@ local function AAP_UseTaxiFunc()
 	if (steps["ETA"]) then
 		AAP.AFK_Timer(steps["ETA"])
 	end
+	local AllyBoatOrNot = "Flight"
+	if (AAP.Faction == "Alliance") then
+		local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+		if (npc_id and AAP.AllyBoatNpcs[tonumber(npc_id)]) then
+			AllyBoatOrNot = "Boat"
+		end
+	end
 	if (GetLocale() == "enUS") then
 		local CLi
 		for CLi = 1, NumTaxiNodes() do
@@ -564,28 +571,50 @@ local function AAP_UseTaxiFunc()
 				if (not AAP.FPs) then
 					AAP.FPs = {}
 				end
-				if (not AAP.FPs[AAPH_Faction]) then
-					AAP.FPs[AAPH_Faction] = {}
+				if (not AAP.FPs[AAP.Faction]) then
+					AAP.FPs[AAP.Faction] = {}
 				end
-				if (not AAP.FPs[AAPH_Faction][AAPH.getContinent()]) then
-					AAP.FPs[AAPH_Faction][AAPH.getContinent()] = {}
+				if (not AAP.FPs[AAP.Faction][AAP.getContinent()]) then
+					AAP.FPs[AAP.Faction][AAP.getContinent()] = {}
 				end
-				if (not AAP.FPs[AAPH_Faction][AAPH.getContinent()][TaxiNodeName(CLi)]) then
-					AAP.FPs[AAPH_Faction][AAPH.getContinent()][TaxiNodeName(CLi)] = {}
+				if (AAP.Faction == "Alliance" and 876 == AAP.getContinent()) then
+					if (not AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot]) then
+						AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot] = {}
+					end
+					if (not AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot][TaxiNodeName(CLi)]) then
+						AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot][TaxiNodeName(CLi)] = {}
+					end
+					AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot][TaxiNodeName(CLi)]["x"] = aapx
+					AAP.FPs[AAP.Faction][AAP.getContinent()][AllyBoatOrNot][TaxiNodeName(CLi)]["y"] = aapy
+				else
+					if (not AAP.FPs[AAP.Faction][AAP.getContinent()][TaxiNodeName(CLi)]) then
+						AAP.FPs[AAP.Faction][AAP.getContinent()][TaxiNodeName(CLi)] = {}
+					end
+					AAP.FPs[AAP.Faction][AAP.getContinent()][TaxiNodeName(CLi)]["x"] = aapx
+					AAP.FPs[AAP.Faction][AAP.getContinent()][TaxiNodeName(CLi)]["y"] = aapy
 				end
-				AAP.FPs[AAPH_Faction][AAPH.getContinent()][TaxiNodeName(CLi)]["x"] = aapx
-				AAP.FPs[AAPH_Faction][AAPH.getContinent()][TaxiNodeName(CLi)]["y"] = aapy
 			end
 		end
 	end
-	local TName = steps["Name"]
-	local TContonent = AAP.getContinent()
-	local TX = AAP.FPs[AAP.Faction][TContonent][TName]["x"]
-	local TY = AAP.FPs[AAP.Faction][TContonent][TName]["y"]
-	local Nodetotake = AAP_TaxiSearchFunc(TX, TY)
+	if (AAP.Faction == "Alliance" and 876 == AAP.getContinent()) then
+		local TName = steps["Name"]
+		local TContonent = AAP.getContinent()
+		local TX = AAP.FPs[AAP.Faction][TContonent][AllyBoatOrNot][TName]["x"]
+		local TY = AAP.FPs[AAP.Faction][TContonent][AllyBoatOrNot][TName]["y"]
+		local Nodetotake = AAP_TaxiSearchFunc(TX, TY)
 --	TaxiNodeOnButtonEnter(getglobal("TaxiButton"..Nodetotake))
-	TakeTaxiNode(Nodetotake)
-	AAP.BookingList["TestTaxiFunc"] = Nodetotake
+		TakeTaxiNode(Nodetotake)
+		AAP.BookingList["TestTaxiFunc"] = Nodetotake
+	else
+		local TName = steps["Name"]
+		local TContonent = AAP.getContinent()
+		local TX = AAP.FPs[AAP.Faction][TContonent][TName]["x"]
+		local TY = AAP.FPs[AAP.Faction][TContonent][TName]["y"]
+		local Nodetotake = AAP_TaxiSearchFunc(TX, TY)
+--	TaxiNodeOnButtonEnter(getglobal("TaxiButton"..Nodetotake))
+		TakeTaxiNode(Nodetotake)
+		AAP.BookingList["TestTaxiFunc"] = Nodetotake
+	end
 end
 local function AAP_QAskPopWanted()
 	local CurStep = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
@@ -950,9 +979,12 @@ local function AAP_PrintQStep()
 				end
 			end
 		end
-		if (steps["ExtraLine"] and AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 1) then
+		if ((steps["ExtraLine"] or steps["ExtraLineText"]) and AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 1) then
 			LineNr = LineNr + 1
 			local AAPExtralk = steps["ExtraLine"]
+			if (steps["ExtraLineText"]) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** "..steps["ExtraLineText"])
+			end
 			if (AAPExtralk == 1) then
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** "..AAP_Locals["HeFlying"].." **")
 			end
@@ -1225,7 +1257,7 @@ local function AAP_PrintQStep()
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Drakuru mobs drop Lock Openers")
 			end
 			if (AAPExtralk == 84) then
-				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Use Portal to Hellfire Peninsula")
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Talk to Thrallmar Mage to go to Dark Portal")
 			end
 			if (AAPExtralk == 85) then
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Use Portal to Hyjal")
@@ -1373,6 +1405,7 @@ local function AAP_PrintQStep()
 			else
 				AAP.QuestList.QuestFrames[LineNr]:SetWidth(410)
 			end
+
 		end
 		if (StepP == "Qpart") then
 			IdList = steps["Qpart"]
@@ -3030,6 +3063,14 @@ local function AAP_UpdateMapId()
 			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "18-60-80"
 		end
+		if (AAP.ActiveMap == 17) then
+			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
+				LoadAddOn("AAP-TBC-WotLK")
+			end
+			AAPZoneActiveCheck = 1
+			AAP.ActiveMap = "17-60-80"
+		end
+		
 	end
 	if (AAP.Faction == "Horde" and AAP.Level > 59 and AAP.Level < 83) then
 		if (AAP.ActiveMap == 114) then
@@ -3173,6 +3214,13 @@ local function AAP_UpdateMapId()
 			end
 			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A84-Flight-Northrend"
+		end
+		if (AAP.ActiveMap == "A17") then
+			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
+				LoadAddOn("AAP-TBC-WotLK")
+			end
+			AAPZoneActiveCheck = 1
+			AAP.ActiveMap = "A17-60-80"
 		end
 	end
 	if (AAP.Faction == "Alliance" and AAP.Level > 59 and AAP.Level < 83) then

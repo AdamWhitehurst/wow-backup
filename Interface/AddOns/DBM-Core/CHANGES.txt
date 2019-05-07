@@ -1,57 +1,53 @@
-lightweight tag 160d4a733a6d669344697405b379310ab0412208 8.1.18
+lightweight tag eb1f5b6192ac09b44819a7c29701a7fc302b7f80 8.1.23
 Author:	MysticalOS <mysticalosx@gmail.com>
-Date:	Tue Apr 16 20:43:02 2019 -0400
+Date:	Thu May 2 16:31:23 2019 -0400
 
-commit 160d4a733a6d669344697405b379310ab0412208
+commit eb1f5b6192ac09b44819a7c29701a7fc302b7f80
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 20:43:02 2019 -0400
+Date:   Thu May 2 16:31:23 2019 -0400
 
-    fix last
+    Prep minor tag for the uunat fixes, no revision increase, so it won't prompt users to update. it'll just make sure people progressing mythic uunat have latest fixes available immediately even if not using alpha versions.
 
-commit 10e8ba26390231f9b28f013d536064b82bf9cb6b
+commit 919df25c2afa077965f0efa970f06f5c6911f487
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 20:33:56 2019 -0400
+Date:   Thu May 2 16:11:20 2019 -0400
 
-    Prepare 8.1.18 (promise this should be last one today, new raids on top of entire project migrations the same time will do that)
+    Forgot this part, now it's complete
 
-commit 0f90982ea439c1fceafb1752530d2f76da148ce4
+commit 5cff14f407e25f1c03d2bce2ce9737f1823f9a2f
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 20:01:38 2019 -0400
+Date:   Thu May 2 16:07:19 2019 -0400
 
-    Improved tracking and annoucning of custody of deep on Restless Cabal
-    Changed icons on Restless Cabal to match icons used for adds on uunat, skull Cross and Square
-    Changed icon used by herald from cross to whatever icon 4 is
-    Added relic tracking to infoframe on uunat to make it easy to see who's got each relic at a glance
-    Removed boss power from infoframe since it's redundant to already having timer for ability he uses at 100 energy.
-    Changed how eyes of nzoth work to show spell name of next eye that'll be used instead of base spellId
-    Also improved warnings for piercing eyes and made maddening eyes cast warning faster.
+    Yell relic name instead of player name, and fix bug where yell was scheduled too many times
 
-commit 4ca195e356146b2bd72be096ce4205a34270c22a
+commit efea4e312320f1d792e8ff02860d4a879a0e24c5
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 16:57:00 2019 -0400
+Date:   Wed May 1 13:09:28 2019 -0400
 
-    More version fixups, to handle curse numbers properly from sub mods
+    Add this berserk too
 
-commit 77ddc73af7a953636d58fb0245b23b7cafcc64e0
+commit a06d719f35fe801df9d269eced92c83dfe94f268
+Author: TOM_RUS <tomrus88@users.noreply.github.com>
+Date:   Wed May 1 19:53:33 2019 +0300
+
+    ruRU update (#6)
+
+commit d5572299a490abeb37b68310bca74dbe9d9d6d3a
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 14:48:49 2019 -0400
+Date:   Wed May 1 11:55:14 2019 -0400
 
-    Push what I have so far for uunat, still working on it but also sidetracked by 8.2 stuff.
+    Updated Cabal berserk, would have made it in yesterdays release, but blizzard decided it wasn't worth mensioning that nerf.
+    Also fixed Yazma soulrend timer
 
-commit 3d45dcf1edcf64411e60f97f1d280152f16cd8f9
-Author: Paul Emmerich <emmericp@net.in.tum.de>
-Date:   Tue Apr 16 19:26:22 2019 +0200
-
-    core: use curse timestamps as revisions (#3)
-    
-    changed all formatting of DBM.Revision to use %s because
-    %d is 32 bit in WoW-lua
-    
-    fixes #2
-
-commit 82a377702dc1e1e4a6f91f70b21c61717fa43c19
+commit e0ce5eb378f4c9dbeed26994b82a7e195f26938f
 Author: MysticalOS <mysticalosx@gmail.com>
-Date:   Tue Apr 16 10:08:18 2019 -0400
+Date:   Wed May 1 00:27:57 2019 -0400
 
-    increment alpha
+    Clean unused
+
+commit 49114f48beb1bcfb58f9df186555e8b04bb35940
+Author: MysticalOS <mysticalosx@gmail.com>
+Date:   Tue Apr 30 20:24:05 2019 -0400
+
+    Fix trash warning in crucible
 

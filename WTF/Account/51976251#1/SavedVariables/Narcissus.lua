@@ -8,9 +8,9 @@ NarcissusDB = {
 	["MinimapButton"] = {
 		["Position"] = -0.523505379928004,
 	},
-	["ShowMinimapButton"] = true,
-	["CameraOrbit"] = true,
 	["EnableGrainEffect"] = false,
+	["CameraOrbit"] = true,
+	["ShowMinimapButton"] = false,
 	["IsSortedByCategory"] = true,
 	["FontHeightItemName"] = 10,
 	["ColorChoice"] = 0,

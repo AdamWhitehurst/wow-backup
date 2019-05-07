@@ -307,7 +307,7 @@ local function AAP_CreateQuestList()
 	AAP.QuestList.Greetings2EB2:SetSize(200, 20)
 	AAP.QuestList.Greetings2EB2:SetPoint("TOP",AAP.QuestList.Greetings,"TOP",0,-148)
 	AAP.QuestList.Greetings2EB2:SetAutoFocus(false)
-	AAP.QuestList.Greetings2EB2:SetText("bit.ly/2QpXN3O")
+	AAP.QuestList.Greetings2EB2:SetText("www.twitch.tv/desmephisto")
 
 	AAP.QuestList.GreetingsHideB = CreateFrame("Button", "AAP_GreetingsHideB", AAP.QuestList.Greetings, "SecureActionButtonTemplate")
 	AAP.QuestList.GreetingsHideB:SetPoint("BOTTOMRIGHT",AAP.QuestList.Greetings,"BOTTOMRIGHT",-15,5)

@@ -1,0 +1,15727 @@
+
+CensusPlus_Database = {
+	["TimesPlus"] = {
+	},
+	["Guilds"] = {
+	},
+	["Info"] = {
+		["Stealth"] = false,
+		["LogVer"] = "8.0.1. >=WoW.8.0.1",
+		["UseLogBars"] = true,
+		["AutoCensus"] = false,
+		["ChattyOptions"] = false,
+		["PlayFinishSound"] = false,
+		["Verbose"] = false,
+		["ClientLocale"] = "enUS",
+		["Locale"] = "US",
+		["SoundFile"] = 1,
+		["Version"] = "8.0.1",
+		["LoginServer"] = "US",
+		["CensusButtonShown"] = true,
+		["CPWindow_Transparency"] = 0.5,
+		["CensusButtonAnimi"] = true,
+		["AutoCensusTimer"] = 1800,
+	},
+	["Servers"] = {
+		["Tichondrius"] = {
+			["Horde"] = {
+				["Blood Elf"] = {
+					["Warrior"] = {
+						["Orcsdontpwn"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nichin"] = {
+							120, -- [1]
+							"Malevolency", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kogul"] = {
+							120, -- [1]
+							"Hydroponics", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Metroboomw"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Supnerdzz"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ddlpe"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ragestårved"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Warboyzz"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Glickwar"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Célés"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thial"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chowwar"] = {
+							120, -- [1]
+							"Nevermind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Salclap"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vandlisa"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mansukim"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zontle"] = {
+							120, -- [1]
+							"Buddies", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tinashe"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nautiiwar"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Puffup"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dawnfury"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lightningcx"] = {
+							120, -- [1]
+							"Poetry Club", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sapxfirefox"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jungoral"] = {
+							120, -- [1]
+							"Synergy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Càllisto"] = {
+							120, -- [1]
+							"Pious", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bladefüry"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kroxigor"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Srtankzalot"] = {
+							120, -- [1]
+							"Raids and Stuff", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Molkang"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Akichanz"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Darraen"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tynaa"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Paladin"] = {
+						["Dylaeon"] = {
+							120, -- [1]
+							"Rods from God", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Benbanks"] = {
+							120, -- [1]
+							"BenbanksTV on Twitch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Telluriel"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Çlassic"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aemeh"] = {
+							120, -- [1]
+							"Audacity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Arizonatèa"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Davisito"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ängeal"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wickedmann"] = {
+							120, -- [1]
+							"Seven Kingdoms", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Emmyx"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Priandise"] = {
+							120, -- [1]
+							"Iron Knights", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Céllash"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dawnslave"] = {
+							120, -- [1]
+							"Monarch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Neuer"] = {
+							120, -- [1]
+							"cuties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Arconchilon"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Supazeyo"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Murdertreez"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Angkera"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Solendyr"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tinzill"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Berreck"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blackhwk"] = {
+							120, -- [1]
+							"Gold and Gear", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lucassi"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Scarletpally"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Guahansojah"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vladufkr"] = {
+							120, -- [1]
+							"Relentless Ascension", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shweèt"] = {
+							120, -- [1]
+							"Shweet Booty Poppers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Irené"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sadnmad"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kerge"] = {
+							120, -- [1]
+							"The Dirty Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tokipally"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seinee"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Powrfulwizrd"] = {
+							120, -- [1]
+							"Nine Lives", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Luciferss"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rustysak"] = {
+							120, -- [1]
+							"We Are Legion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Biofreezé"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gåheris"] = {
+							120, -- [1]
+							"Mythodical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seeyy"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jcexe"] = {
+							120, -- [1]
+							"Return To Honor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigglezworth"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Converse"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meleesucks"] = {
+							120, -- [1]
+							"No Thx", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nirryen"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Holykief"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Unholysmiter"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sîrbubble"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kanyejoke"] = {
+							120, -- [1]
+							"Imagine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Unholybelly"] = {
+							120, -- [1]
+							"Massacre for Greed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twicetzuyu"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Popthatcyst"] = {
+							120, -- [1]
+							"Keepers of the Forsaken", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kasang"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Strakka"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Timbît"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Geralein"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Knatalap"] = {
+							120, -- [1]
+							"Guardians of Tahiti", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dirtytequìla"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Heyitschad"] = {
+							120, -- [1]
+							"Atypical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ishta"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pinktwiz"] = {
+							120, -- [1]
+							"ZBS", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Durinsbane"] = {
+							120, -- [1]
+							"Legions Of Death", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Selinitha"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eroloson"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jessrond"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sabinn"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Theepaladîn"] = {
+							120, -- [1]
+							"Far Superior", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thotadin"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alphanie"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valatrice"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hôlýy"] = {
+							120, -- [1]
+							"best friend association", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bùbbleosevën"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gwyndolyn"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Repentia"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baneran"] = {
+							120, -- [1]
+							"Blood Seekers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zutaa"] = {
+							120, -- [1]
+							"Gimmick", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pallycubed"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zoõke"] = {
+							120, -- [1]
+							"Severed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nohotkeyz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kluya"] = {
+							120, -- [1]
+							"Free Poote", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whanguin"] = {
+							120, -- [1]
+							"Achilles Heal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vègito"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eldom"] = {
+							120, -- [1]
+							"Pursuit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alexpalad"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jayzus"] = {
+							120, -- [1]
+							"The juice", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tvixx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Flashaid"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zalarian"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sunfeather"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Melinas"] = {
+							120, -- [1]
+							"Stormpike", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Havocslight"] = {
+							120, -- [1]
+							"Lone Wolf Society", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Holydiverxx"] = {
+							120, -- [1]
+							"Division Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aramithx"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Misstakes"] = {
+							120, -- [1]
+							"Regard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nevercritz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hipnos"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Asbethe"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Raell"] = {
+							120, -- [1]
+							"Kindergarten Magic Show", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pyronors"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Olethil"] = {
+							120, -- [1]
+							"Los Muertos", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Holysixx"] = {
+							120, -- [1]
+							"tuggin it", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bunè"] = {
+							120, -- [1]
+							"Naga Plz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rethumtv"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Malkuric"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["ßorïs"] = {
+							120, -- [1]
+							"Boosted Baboons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kraytós"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Foxlord"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lzid"] = {
+							120, -- [1]
+							"Tsu", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Scottini"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yahiko"] = {
+							120, -- [1]
+							"Same Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bloodhongd"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Neech"] = {
+							120, -- [1]
+							"JUICED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Noradra"] = {
+							120, -- [1]
+							"Casual Zone", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nîer"] = {
+							120, -- [1]
+							"Apeks", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Liquid"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kkalthaz"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sorellian"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cashorcard"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rägnâr"] = {
+							120, -- [1]
+							"Midnight Brew Crew", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Prototypetwo"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Neztah"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Notsame"] = {
+							120, -- [1]
+							"Accelerate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Narrikko"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ochukio"] = {
+							120, -- [1]
+							"Hydroponics", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crownoflife"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mugetsuu"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bestever"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Iilbee"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Adderath"] = {
+							120, -- [1]
+							"CULT", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jooneyy"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Galidrela"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ashengarde"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Civpz"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aræs"] = {
+							120, -- [1]
+							"Severed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acolus"] = {
+							120, -- [1]
+							"HordeHub", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Elfpaladin"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Inëtris"] = {
+							120, -- [1]
+							"Mad House", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Powerpufgìrl"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thelilpinky"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ithiostus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Leda"] = {
+							120, -- [1]
+							"Reckless Ambition", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Poundadin"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Pickahole"] = {
+							120, -- [1]
+							"L E G E N D A R Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dukko"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Avignon"] = {
+							120, -- [1]
+							"Audacity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Solobrew"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Paonie"] = {
+							120, -- [1]
+							"Pepe Is Cute", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chiatealeaf"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lìtá"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eunuco"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Celiendra"] = {
+							120, -- [1]
+							"Dragon Reborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cyrain"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Toîx"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mønka"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hasudo"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cnorris"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nahrune"] = {
+							120, -- [1]
+							"one lesson per day", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moistyfist"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tïttyheals"] = {
+							120, -- [1]
+							"We Are All Friends Here", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Panîc"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mistie"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Katastrofí"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Srstoic"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Feìtan"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lîfëe"] = {
+							120, -- [1]
+							"Oasis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Astrel"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baelmisx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Benmistinem"] = {
+							120, -- [1]
+							"Trust Issues", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Betaboys"] = {
+							120, -- [1]
+							"Gravitate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jukku"] = {
+							120, -- [1]
+							"Salt Factory", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baemonk"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cleverhed"] = {
+							120, -- [1]
+							"doo doo doo doo doo doo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Koana"] = {
+							120, -- [1]
+							"Demogorgon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pinkßlush"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chicochi"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kungfuhress"] = {
+							120, -- [1]
+							"The Autobots", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Röller"] = {
+							120, -- [1]
+							"Friends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lôse"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Oraoraoraa"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hàcker"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilxsnoop"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Platao"] = {
+							120, -- [1]
+							"Devil Dog Legacy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stungawwdx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brelaine"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twixer"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phequa"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Abacaba"] = {
+							120, -- [1]
+							"cuties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ramalam"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dependence"] = {
+							120, -- [1]
+							"likes boys", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tideroller"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bürns"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Asylus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lapip"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alandrian"] = {
+							120, -- [1]
+							"Definitely not a Mermaid", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hesmay"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Effo"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lønzoßall"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hallamander"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Joondosa"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Legithcrown"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ultyr"] = {
+							120, -- [1]
+							"Dusk", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Parsetko"] = {
+							120, -- [1]
+							"Magic Short Bus", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Devmist"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beell"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snugglelish"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tikklemepink"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Niessa"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skarrt"] = {
+							120, -- [1]
+							"PLA KET KET KET", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Danïel"] = {
+							120, -- [1]
+							"ThatOneGuild", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jensÿn"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kawaiisu"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ixupi"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xarî"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sassybogs"] = {
+							120, -- [1]
+							"Nine Lives", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bransen"] = {
+							120, -- [1]
+							"BROTHER", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Forbiddenx"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Peppernello"] = {
+							120, -- [1]
+							"Ask Me About My Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cnp"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crukshanks"] = {
+							120, -- [1]
+							"EndOftheLine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tontsuoo"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chickenlil"] = {
+							120, -- [1]
+							"Nice Ditch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lustfulxd"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Teshlorx"] = {
+							120, -- [1]
+							"Jamaican Me Crazy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Miyävi"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sinepegral"] = {
+							120, -- [1]
+							"We Need More DPS", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Highfat"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maxxims"] = {
+							120, -- [1]
+							"cendres", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mcleach"] = {
+							120, -- [1]
+							"Theoretical Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wildturkyhef"] = {
+							120, -- [1]
+							"RUIN Raiders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rustyrazors"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lofti"] = {
+							120, -- [1]
+							"Sunwell Hotel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Staystrongr"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zughugs"] = {
+							120, -- [1]
+							"RSPD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Erebuss"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Assassn"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ninethirty"] = {
+							120, -- [1]
+							"The Blitz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kelth"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Minï"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stixs"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Froyoink"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seshtime"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mayaberovic"] = {
+							120, -- [1]
+							"We Are All Friends Here", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Omgyoudied"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigshmokedog"] = {
+							120, -- [1]
+							"Blackwater", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zerodays"] = {
+							120, -- [1]
+							"fire fountain", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Selyveera"] = {
+							120, -- [1]
+							"Selmates REEborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Firka"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wutchup"] = {
+							120, -- [1]
+							"HordeHub", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maxed"] = {
+							120, -- [1]
+							"Mopar Or No Car", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Saberx"] = {
+							120, -- [1]
+							"FÅLLEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shiverwind"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Globalist"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Korvynä"] = {
+							120, -- [1]
+							"TheWolfpack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Casuallambo"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Roguepirate"] = {
+							120, -- [1]
+							"Pirate Crew", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fungassassin"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ballade"] = {
+							120, -- [1]
+							"The Patriarchy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kurami"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dirkee"] = {
+							120, -- [1]
+							"Nurfed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sphilpokey"] = {
+							120, -- [1]
+							"Dismay", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Azerea"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sìêrra"] = {
+							120, -- [1]
+							"We Prepot on Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bobotoh"] = {
+							120, -- [1]
+							"Scarlet Underground", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skidrøw"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Numerals"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xdragon"] = {
+							120, -- [1]
+							"Warsong Cartel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sneakachoo"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sebö"] = {
+							120, -- [1]
+							"The Defiant Ones", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trunco"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Polairesx"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shadedace"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nikeswagxz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Caèn"] = {
+							120, -- [1]
+							"The Mythic Plus Team", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whîtê"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sylentfall"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cobc"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dragonslave"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frânklit"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moirai"] = {
+							120, -- [1]
+							"THE DIRTY HÔRDE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sanqqtum"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dwane"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trails"] = {
+							120, -- [1]
+							"Frontier", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bellval"] = {
+							120, -- [1]
+							"KushKingdom", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kalthain"] = {
+							120, -- [1]
+							"Guardians of Tahiti", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sÿnecdoche"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Ylliris"] = {
+							120, -- [1]
+							"Onslaught", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cleaiic"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mohavi"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shindorei"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rammileignus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Quizcicle"] = {
+							120, -- [1]
+							"Versatile", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seefour"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ithalian"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chappoz"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fróstbité"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boommagiic"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gelile"] = {
+							120, -- [1]
+							"Unsung Heroes Reborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lixxyy"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kaelthaws"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Haeresy"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Samandrial"] = {
+							120, -- [1]
+							"The Spooky Shadow", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wizurd"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Budyzer"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zerakyl"] = {
+							120, -- [1]
+							"Forged in Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fireboomer"] = {
+							120, -- [1]
+							"Schrute Farms", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Comesayeaha"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vocaliized"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Redmoonn"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frostyspells"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Degirro"] = {
+							120, -- [1]
+							"CULT", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Karuneria"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meidg"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frozendabzz"] = {
+							120, -- [1]
+							"Graveyard Gang", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aoetoki"] = {
+							120, -- [1]
+							"i know where you live", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nåberios"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Musaji"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Darres"] = {
+							120, -- [1]
+							"Faithfle Christhins", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hoelovin"] = {
+							120, -- [1]
+							"Old Guard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kasm"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Imo"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zepplin"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sekusmage"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aeondisk"] = {
+							120, -- [1]
+							"CrazyWife", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nécrö"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Androlina"] = {
+							120, -- [1]
+							"The Brothel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aelearai"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zemeria"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acindriel"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alleus"] = {
+							120, -- [1]
+							"Mythodical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nymuehk"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blakmagicks"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skyrael"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Minitte"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dämashi"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Astromancia"] = {
+							120, -- [1]
+							"Theoretical Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Satrapayn"] = {
+							120, -- [1]
+							"The Crimson Knights", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Adunaphel"] = {
+							120, -- [1]
+							"Winged Shadows", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jandalina"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Demon Hunter"] = {
+						["Robbe"] = {
+							120, -- [1]
+							"slash spit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blackrune"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zbubs"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yangmanchun"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yongarii"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Essoh"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nicklouse"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Díscordíá"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Theunzelmain"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Justbob"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonicscum"] = {
+							120, -- [1]
+							"Heavily Medicated", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Speedh"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deminhuntard"] = {
+							120, -- [1]
+							"Relief", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Glämdrïng"] = {
+							120, -- [1]
+							"Guardians of Tahiti", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonskulls"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lyruh"] = {
+							120, -- [1]
+							"Nurfed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Momoyi"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grïzzy"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nymeríá"] = {
+							120, -- [1]
+							"Imagine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crychan"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ellwynth"] = {
+							120, -- [1]
+							"Gimmick", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bloomety"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kattkiss"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vandalina"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ilovesushi"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kasella"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hornstarlol"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hòrnstár"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lunamar"] = {
+							120, -- [1]
+							"Ganksta Disciples", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nitekk"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Khaortas"] = {
+							120, -- [1]
+							"Madness Returns", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moonpang"] = {
+							120, -- [1]
+							"No Named", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pinkwhip"] = {
+							120, -- [1]
+							"Pretty n Pink", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phoenixrose"] = {
+							120, -- [1]
+							"Dont Stand In It", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Collete"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dominopete"] = {
+							120, -- [1]
+							"World of Warcrap", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ferrousoxide"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tilldie"] = {
+							120, -- [1]
+							"SAPPED MEANS YES", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Byseven"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Farzi"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alphatoo"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Caladrial"] = {
+							120, -- [1]
+							"Mad House", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Notoriðus"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twiztèd"] = {
+							120, -- [1]
+							"Subpar At Best", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dexran"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crasiedon"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Soulhacker"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Padtai"] = {
+							120, -- [1]
+							"Oasis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sabbát"] = {
+							120, -- [1]
+							"Lunar Landing", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gvetted"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fuctrump"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hávðc"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blurnomnom"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ssuriel"] = {
+							120, -- [1]
+							"Devil Dog Legacy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Craftdemon"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Susandresden"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Doombrînger"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alexdh"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nyssathelae"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Goldsplatt"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ceriyas"] = {
+							120, -- [1]
+							"L E G E N D A R Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pìn"] = {
+							120, -- [1]
+							"Old Guard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Showstopperr"] = {
+							120, -- [1]
+							"HANDICAPPED PPL", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Badmeta"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Missjotab"] = {
+							120, -- [1]
+							"Barracuda Deathsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Madwings"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stmdashz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Uppercutbutt"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jeager"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jaehaeyrs"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ihavenoshirt"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deadlydemonz"] = {
+							120, -- [1]
+							"The Storm", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kaleri"] = {
+							120, -- [1]
+							"Lone Wolf Society", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilßecky"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Malikdafreak"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vynni"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Danqbudz"] = {
+							120, -- [1]
+							"MinimalEffort", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Captainmami"] = {
+							120, -- [1]
+							"halpals", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Clappd"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gamblotron"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thranrodir"] = {
+							120, -- [1]
+							"Warriors of Orgrim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cleavekid"] = {
+							120, -- [1]
+							"slash spit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Biinah"] = {
+							120, -- [1]
+							"Samadhi", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dyran"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Clinicalclap"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Abezyzz"] = {
+							120, -- [1]
+							"CULT", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cthi"] = {
+							120, -- [1]
+							"Synergy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Richrussell"] = {
+							120, -- [1]
+							"We Prepot on Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jermayan"] = {
+							120, -- [1]
+							"Devil Dog Legacy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tigalicious"] = {
+							120, -- [1]
+							"Coat Checked", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Morphyblind"] = {
+							120, -- [1]
+							"Pleb Hoist", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Khyku"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jamaldh"] = {
+							120, -- [1]
+							"Nevermind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fomor"] = {
+							120, -- [1]
+							"BOOTYCHATTA", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Geene"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kiela"] = {
+							120, -- [1]
+							"No Thx", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Babyfeeg"] = {
+							120, -- [1]
+							"Trade Crypto Live", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jozmahn"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tenderoni"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slayerdemond"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðib"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Razorfever"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jehzt"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dahootch"] = {
+							120, -- [1]
+							"Endorsed by Arathi Basin", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Daemed"] = {
+							120, -- [1]
+							"HordeOfRevenge", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sassytrap"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ép"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Narinini"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vinthrop"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Outsec"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonlaw"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Microspider"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slápchop"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pilseni"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rahkshasa"] = {
+							120, -- [1]
+							"EndOftheLine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reapspoo"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Agrobeam"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hospitalfood"] = {
+							120, -- [1]
+							"Definitely not a Mermaid", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Soina"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonpudge"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trendemic"] = {
+							120, -- [1]
+							"Onslaught", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonjun"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ziddim"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Northyorkmon"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Poonlidan"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dumbgirl"] = {
+							120, -- [1]
+							"TwitchThoughts", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zeroxd"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jahcks"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Faythunter"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Carmenem"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cheeseburg"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vandile"] = {
+							120, -- [1]
+							"Raids and Stuff", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sappydh"] = {
+							120, -- [1]
+							"Hardgrils", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acrophobian"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kinaari"] = {
+							120, -- [1]
+							"Fallen Chapter", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Atreyuxx"] = {
+							120, -- [1]
+							"Tsu", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Glaiverunner"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yfnmurda"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Divîde"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demondanse"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Triofaket"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Soupstoohot"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilitú"] = {
+							120, -- [1]
+							"Lunar Landing", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Capzielit"] = {
+							120, -- [1]
+							"doo doo doo doo doo doo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blankettz"] = {
+							120, -- [1]
+							"Not Interested", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cüpqüakes"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demoxy"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Erekasa"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pajamatwo"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ruthvik"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lamist"] = {
+							120, -- [1]
+							"The Chubby Emus", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Korkez"] = {
+							120, -- [1]
+							"The Blitz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Buttoutt"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Batgril"] = {
+							120, -- [1]
+							"InTime", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twinnblade"] = {
+							120, -- [1]
+							"The Murloc Saints", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snipernite"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Korhum"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Burrhaus"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aleiha"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kiande"] = {
+							120, -- [1]
+							"Sublimity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snoriand"] = {
+							120, -- [1]
+							"Deaths Great Adventure", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Warlock"] = {
+						["Akitsü"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sinneth"] = {
+							120, -- [1]
+							"Thralls Wall", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Isamumikosai"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Roseberry"] = {
+							120, -- [1]
+							"Mad House", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Caladra"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Darkcurser"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Atheism"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Malfarious"] = {
+							120, -- [1]
+							"Digital Playground", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Loremi"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sikyeom"] = {
+							120, -- [1]
+							"YEOMTWINS", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Elffire"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Natsuki"] = {
+							120, -- [1]
+							"Synergy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frozenesslox"] = {
+							120, -- [1]
+							"Hög Wild", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boarlock"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Miffmeister"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tanariena"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thlivia"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bubblegutts"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Death Knight"] = {
+						["Milleuda"] = {
+							120, -- [1]
+							"Blood Seekers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deathhugg"] = {
+							120, -- [1]
+							"The Perfect Brew", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Daykay"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pootytanglol"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vo"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yakica"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xinkz"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tocoes"] = {
+							120, -- [1]
+							"Yikers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kushkníght"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lichnyx"] = {
+							120, -- [1]
+							"Infinite Sadness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lyenle"] = {
+							120, -- [1]
+							"RUIN Raiders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dawgsdk"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nïkita"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dèpressed"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Heartbreáker"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ziará"] = {
+							120, -- [1]
+							"After School Tea Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whâtupdays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Purekilla"] = {
+							120, -- [1]
+							"FA", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whàtupdàys"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Paxuun"] = {
+							120, -- [1]
+							"Atypical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Azre"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shathe"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Queldora"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Helchaer"] = {
+							120, -- [1]
+							"Soulless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Helpmeup"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gillgapilot"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whatupdaays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bullgrip"] = {
+							120, -- [1]
+							"Legions Of Death", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dhnym"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vyyvanze"] = {
+							120, -- [1]
+							"Selmates REEborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Felidora"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Akomans"] = {
+							120, -- [1]
+							"Horder Patrol", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sevaron"] = {
+							120, -- [1]
+							"Stand In The Fire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Girlbabe"] = {
+							120, -- [1]
+							"Cool Cobras", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tastemytoes"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lichyx"] = {
+							120, -- [1]
+							"Fluorescence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mervick"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whåtupdays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rojak"] = {
+							120, -- [1]
+							"Aeonia", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drathe"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Malykie"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chatterr"] = {
+							120, -- [1]
+							"MemeTeamSix", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velladorii"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frozenpeach"] = {
+							120, -- [1]
+							"Dark Mulisha", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lôckout"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Erosinessa"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vicexo"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Iceddk"] = {
+							120, -- [1]
+							"Mercy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Banmyclass"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velladorri"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Soupbowl"] = {
+							120, -- [1]
+							"D O P E", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gcova"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sorrowvane"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðönaldtrümp"] = {
+							120, -- [1]
+							"The Oval Office", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whatupdays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velladoori"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rigrmorticia"] = {
+							120, -- [1]
+							"Lucky Sigma", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Unouwantmé"] = {
+							120, -- [1]
+							"Subpar At Best", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Larrisse"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Submerged"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wickdkills"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Khaladdriel"] = {
+							120, -- [1]
+							"The Misfit Clan", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Busdawg"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Antiherô"] = {
+							120, -- [1]
+							"Íllúmínâtï", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whàtupdays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slootmcgee"] = {
+							120, -- [1]
+							"Different", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Draxomancer"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kagekoori"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Takawo"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drewgo"] = {
+							120, -- [1]
+							"ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maryhe"] = {
+							120, -- [1]
+							"Vegan Buyers Club", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Liyare"] = {
+							120, -- [1]
+							"Headass", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Siñbad"] = {
+							120, -- [1]
+							"Legions Of Death", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Synecdobleed"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Leelan"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zexet"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Safire"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dwinter"] = {
+							120, -- [1]
+							"Relief", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Evialieda"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Agglo"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Savagemercy"] = {
+							120, -- [1]
+							"Relentless Ascension", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whåtupdåys"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stõnx"] = {
+							120, -- [1]
+							"Salt Factory", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tequilaley"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sabbias"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Offload"] = {
+							120, -- [1]
+							"hey im mvp", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valkyriel"] = {
+							120, -- [1]
+							"Mythical Cultists", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hããdes"] = {
+							120, -- [1]
+							"doo doo doo doo doo doo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whatuppdays"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velladori"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whatupdayys"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Relarana"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Evenessence"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tealversace"] = {
+							120, -- [1]
+							"Definitely not a Mermaid", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Utaki"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sheeptickler"] = {
+							120, -- [1]
+							"AutoThots", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jyun"] = {
+							120, -- [1]
+							"Relentless Ascension", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Staecii"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hycip"] = {
+							120, -- [1]
+							"Synæsthesia", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ehae"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beastarrow"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ilikebovines"] = {
+							120, -- [1]
+							"Old Guard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rheni"] = {
+							120, -- [1]
+							"Dissent", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jenavyve"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shlurp"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zizu"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aryelia"] = {
+							120, -- [1]
+							"The Bros Nest", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Abigredkitty"] = {
+							120, -- [1]
+							"Friends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tuesdayz"] = {
+							120, -- [1]
+							"Love Story", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Powerfuel"] = {
+							120, -- [1]
+							"Fat Pandas", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Goldilocks"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jhost"] = {
+							120, -- [1]
+							"Team Small Fries", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lamentari"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Haruhunter"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dwáde"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dragontearz"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cruneac"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jaegerin"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Atreidesqt"] = {
+							120, -- [1]
+							"L E G E N D A R Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hinkie"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Myliina"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Replikea"] = {
+							120, -- [1]
+							"The Embermaw Clan", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Notforsale"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Clampoker"] = {
+							120, -- [1]
+							"Apocalyptic Intentions", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Neocamp"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mozambiq"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sasorî"] = {
+							120, -- [1]
+							"Coat Checked", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Niitrax"] = {
+							120, -- [1]
+							"Blackwater", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Supaki"] = {
+							120, -- [1]
+							"Cold Day Memory", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shankenarrow"] = {
+							120, -- [1]
+							"SpeedBump", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Saraspank"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cindyrella"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aprilice"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gbunnz"] = {
+							120, -- [1]
+							"RedEye", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Nottheplay"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Penitence"] = {
+							120, -- [1]
+							"Sublimity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Irogasmic"] = {
+							120, -- [1]
+							"Nine Lives", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ambberr"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Adagaki"] = {
+							120, -- [1]
+							"Pious", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lucidbubbler"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lifegrip"] = {
+							120, -- [1]
+							"Lucky Sigma", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lìghteyes"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boondingo"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hydrofoil"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velizziel"] = {
+							120, -- [1]
+							"Relief", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Freehate"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Glasia"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Âurelia"] = {
+							120, -- [1]
+							"Ârisen From The Ashes", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Loadslikeme"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Andiaisnasty"] = {
+							120, -- [1]
+							"ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ashliell"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Oceanriceduk"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Telraniel"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kandalf"] = {
+							120, -- [1]
+							"Imagine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ogokdyong"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Happybunny"] = {
+							120, -- [1]
+							"True Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nessenia"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Repsi"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vyxene"] = {
+							120, -- [1]
+							"Barracuda Deathsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sakurafall"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aporetic"] = {
+							120, -- [1]
+							"Exhumed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Döç"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eternalkami"] = {
+							120, -- [1]
+							"Kamis Pantheon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Koronaz"] = {
+							120, -- [1]
+							"Pinnacle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ettata"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Silderia"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sinndrynn"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Anlia"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sigmatix"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Keiszou"] = {
+							120, -- [1]
+							"Phamous", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Míschíef"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Esmeraye"] = {
+							120, -- [1]
+							"Cuties With Booties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Prîestìtute"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fatherfondal"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ashtato"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Íkr"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lucid"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ambriël"] = {
+							120, -- [1]
+							"Mythodical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ilarayle"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Retsoft"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Timespriest"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Starshield"] = {
+							120, -- [1]
+							"InCoherence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aldræ"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nefrett"] = {
+							120, -- [1]
+							"Papercutters", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rinarae"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Darkpenance"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Walakpr"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zerovoidform"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ateez"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yurinim"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Flayezz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stormn"] = {
+							120, -- [1]
+							"Audacity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Karapriest"] = {
+							120, -- [1]
+							"Poetry Club", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Steela"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sunlest"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sourapplee"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Epoplar"] = {
+							120, -- [1]
+							"Soulless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snufalufaguz"] = {
+							120, -- [1]
+							"The Chubby Emus", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gifferd"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Paris"] = {
+							120, -- [1]
+							"five am in toronto", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sharialyn"] = {
+							120, -- [1]
+							"Make Arena Great Again", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drjalara"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Natrii"] = {
+							120, -- [1]
+							"Disciples of Xalatath", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seraphis"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alfylicious"] = {
+							120, -- [1]
+							"Pointlessly Bureaucratic", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lolaâ"] = {
+							120, -- [1]
+							"Massacre for Greed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moonfeather"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Orc"] = {
+					["Warrior"] = {
+						["Doritoe"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bendthekneè"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ceroberts"] = {
+							120, -- [1]
+							"Adore", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Nagiskkaya"] = {
+							120, -- [1]
+							"TinkoffSquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grohkka"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kortargasa"] = {
+							120, -- [1]
+							"TinkoffSquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dokagi"] = {
+							120, -- [1]
+							"TinkoffSquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Krainka"] = {
+							120, -- [1]
+							"TinkoffSquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Hamsterr"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Touchofrich"] = {
+							120, -- [1]
+							"slash spit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Highmountain Tauren"] = {
+					["Druid"] = {
+						["Darkrooty"] = {
+							120, -- [1]
+							"Beautiful", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bullresh"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grootrox"] = {
+							120, -- [1]
+							"Huevos Rancheros", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mystrah"] = {
+							120, -- [1]
+							"Annuit Coeptis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mammalogy"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moonblaise"] = {
+							120, -- [1]
+							"Hydroponics", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nihillo"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nitekd"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vailo"] = {
+							120, -- [1]
+							"The Blitz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vorrix"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Orejitas"] = {
+							120, -- [1]
+							"Pain Dealers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Animangus"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thedafox"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rumcraft"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sïsløvësmë"] = {
+							120, -- [1]
+							"so icy with no jewelry", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mebe"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zeekez"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ranktwoferal"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Creamcow"] = {
+							120, -- [1]
+							"Goonerz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boarlis"] = {
+							120, -- [1]
+							"Synergy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Taerawr"] = {
+							120, -- [1]
+							"Concept", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Umdt"] = {
+							120, -- [1]
+							"Second Chances", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mizzypoo"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wildhorns"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Astrosparkle"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Talakitty"] = {
+							120, -- [1]
+							"Tsu", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zlantz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Strace"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tõtém"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pheedy"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Heferwizen"] = {
+							120, -- [1]
+							"Aeons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Macktherippr"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twoaitch"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Telska"] = {
+							120, -- [1]
+							"Pain Dealers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bòvine"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Troll"] = {
+					["Warrior"] = {
+						["Reckot"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phignious"] = {
+							120, -- [1]
+							"The Shark Puncher", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thìccbiscuit"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Altars"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rofltusks"] = {
+							120, -- [1]
+							"The Murloc Saints", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tatertottss"] = {
+							120, -- [1]
+							"Snowblind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nectarinez"] = {
+							120, -- [1]
+							"Vulcan", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Threeoone"] = {
+							120, -- [1]
+							"happy time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cärlos"] = {
+							120, -- [1]
+							"Synergy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bloong"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Budsprout"] = {
+							120, -- [1]
+							"Puff Puff Play", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðomzy"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zultizug"] = {
+							120, -- [1]
+							"One For All", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Totempimp"] = {
+							120, -- [1]
+							"Free Poote", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Solavace"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skatjay"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jozbirtok"] = {
+							120, -- [1]
+							"Legions Of Death", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tërah"] = {
+							120, -- [1]
+							"Monarch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bòògers"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ninazzu"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thunderdome"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eternalearth"] = {
+							120, -- [1]
+							"PvPnes", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bottomsham"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pogelesham"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jabuta"] = {
+							120, -- [1]
+							"Target Is Unfriendly", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Altthea"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hidayaz"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grandsavage"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moisting"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zkamienia"] = {
+							120, -- [1]
+							"Haiti Got Cata First", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mailmasterz"] = {
+							120, -- [1]
+							"Criminal Mindz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nadrierith"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dontzugmebro"] = {
+							120, -- [1]
+							"Subpar At Best", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jarakthrall"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Liquefaction"] = {
+							120, -- [1]
+							"Return To Honor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xarlluz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phasewhatup"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ninurtta"] = {
+							120, -- [1]
+							"Center for Disease Ctrl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tuckorious"] = {
+							120, -- [1]
+							"Spiked Blood", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Raxotaur"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ore"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["ßillÿ"] = {
+							120, -- [1]
+							"Magic Short Bus", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cherilynn"] = {
+							120, -- [1]
+							"Neurotic", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Megtheveg"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vaporgang"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Uglyatroll"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Toefurr"] = {
+							120, -- [1]
+							"BROTHER", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Corbec"] = {
+							120, -- [1]
+							"Reckless Ambition", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kumadon"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Goldfreys"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Artherro"] = {
+							120, -- [1]
+							"KFC Crew", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whîspêrs"] = {
+							120, -- [1]
+							"Iron Knights", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kazjaz"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shankweaver"] = {
+							120, -- [1]
+							"Critical Fail", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Kushberries"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Quîck"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Faminecay"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Signy"] = {
+							120, -- [1]
+							"Fluorescence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Oudisious"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hydrolance"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eternalsunny"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rinnir"] = {
+							120, -- [1]
+							"Nice Ditch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hyrdoo"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slacko"] = {
+							120, -- [1]
+							"PvPnes", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nifera"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hypothermiã"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phorieu"] = {
+							120, -- [1]
+							"Nevermind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beezly"] = {
+							120, -- [1]
+							"The Schrutes", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Littygang"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rockhounder"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xaiser"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dylantroll"] = {
+							120, -- [1]
+							"Reckless Ambition", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kemosuhbreh"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ksmp"] = {
+							120, -- [1]
+							"busy with ur girl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zoely"] = {
+							120, -- [1]
+							"Lucky Sigma", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Howbowdaa"] = {
+							120, -- [1]
+							"Mana", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Goriznook"] = {
+							120, -- [1]
+							"RainbowPain", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Röbots"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brutebacon"] = {
+							120, -- [1]
+							"Atypical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Clermeil"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Urulóki"] = {
+							120, -- [1]
+							"Violent by Design", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Magisean"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Warlock"] = {
+						["Imperorr"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rhurilock"] = {
+							120, -- [1]
+							"Dismay", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Doitforwoosh"] = {
+							120, -- [1]
+							"Main Team RBG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stoxinlox"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nutspecan"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ninegenerals"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Durplard"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Terina"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Verotha"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wäfflë"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xinge"] = {
+							120, -- [1]
+							"Annuit Coeptis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lockedupsten"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Voodoodot"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slîme"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spîkê"] = {
+							120, -- [1]
+							"Free Poote", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trisscho"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mìkehoncho"] = {
+							120, -- [1]
+							"BurnsWhenIPvP", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ellissi"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Feldeezy"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Purpx"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Patrikswaze"] = {
+							120, -- [1]
+							"Tanaka Clan", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Johnsamdi"] = {
+							120, -- [1]
+							"Mercy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Noahqt"] = {
+							120, -- [1]
+							"The Kappacino Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mugibasu"] = {
+							120, -- [1]
+							"Cool Cobras", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Healulater"] = {
+							120, -- [1]
+							"Aeons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phranchyze"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Døndøtta"] = {
+							120, -- [1]
+							"Imagine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Katallyst"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cantrelate"] = {
+							120, -- [1]
+							"Blue Brawls", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sumdayy"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ashleybabyyx"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Rawjin"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mokhan"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tzanen"] = {
+							120, -- [1]
+							"Aeons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skyriver"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cupatkay"] = {
+							120, -- [1]
+							"Íllúmínâtï", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tonkita"] = {
+							120, -- [1]
+							"S O S Brigade", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shotzeil"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gazanik"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Möjoe"] = {
+							120, -- [1]
+							"HiImKierstenIgotAnxiety", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deathârrow"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dievona"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reaagtharn"] = {
+							120, -- [1]
+							"The Risen Reforged", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Redrocky"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crymearlver"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Genjen"] = {
+							120, -- [1]
+							"Division Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zinmazra"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rezzik"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Death Knight"] = {
+						["Icytusks"] = {
+							120, -- [1]
+							"Forged in Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brijit"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chillygab"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Druid"] = {
+						["Limbeaux"] = {
+							120, -- [1]
+							"RUIN GUARD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kaplöx"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Saweetie"] = {
+							120, -- [1]
+							"Aeons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thayros"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thickyd"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yeruid"] = {
+							120, -- [1]
+							"No Named", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jabtratluz"] = {
+							120, -- [1]
+							"Stunning", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demonpoof"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hötts"] = {
+							120, -- [1]
+							"Ephemeral", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maroden"] = {
+							120, -- [1]
+							"Oasis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Woodchunks"] = {
+							120, -- [1]
+							"Critical Fail", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Choonhyang"] = {
+							120, -- [1]
+							"Scarlet Underground", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Richterps"] = {
+							120, -- [1]
+							"Coat Checked", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Loblib"] = {
+							120, -- [1]
+							"JUICED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ediblefood"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hotboykisser"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lazyhots"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ñïghtìngdälè"] = {
+							120, -- [1]
+							"COMMrades", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kfladyross"] = {
+							120, -- [1]
+							"korean farming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Braxdru"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Solardrift"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fetreezus"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Furrynwet"] = {
+							120, -- [1]
+							"The Farmers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Annoying"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rexs"] = {
+							120, -- [1]
+							"SOMS", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shellan"] = {
+							120, -- [1]
+							"Soulless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nýenna"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rittikel"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xsuns"] = {
+							120, -- [1]
+							"Relentless Ascension", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zígzag"] = {
+							120, -- [1]
+							"Green Acres", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mensonm"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Murkdort"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Flowx"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pamchop"] = {
+							120, -- [1]
+							"The Schrutes", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wanato"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blossomboy"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lazorchickn"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shaedrix"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Riicchh"] = {
+							120, -- [1]
+							"Woof Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tonnie"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Swerp"] = {
+							120, -- [1]
+							"RUIN GUARD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jeffww"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lacc"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aynia"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ameizingg"] = {
+							120, -- [1]
+							"Lunar Landing", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chihack"] = {
+							120, -- [1]
+							"No Named", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druely"] = {
+							120, -- [1]
+							"Atypical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chilloutbràh"] = {
+							120, -- [1]
+							"One For All", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dorkforhire"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Räylinä"] = {
+							120, -- [1]
+							"HordeHub", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mossybeaver"] = {
+							120, -- [1]
+							"Pleb Hoist", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ultramagntic"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shadjr"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Elwick"] = {
+							120, -- [1]
+							"The Brothel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sylvvie"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mintnim"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aeilene"] = {
+							120, -- [1]
+							"Tazdingo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mohawkonme"] = {
+							120, -- [1]
+							"Boosted Baboons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Multituskin"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Biomes"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Amberdoge"] = {
+							120, -- [1]
+							"Dismay", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ceofribb"] = {
+							120, -- [1]
+							"jalaal abdul fribb", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druusie"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bïgpaws"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snozzwangers"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yastela"] = {
+							120, -- [1]
+							"Bullet Club", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nickthetrain"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brueshedrage"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rhægarr"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Francessca"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acten"] = {
+							120, -- [1]
+							"cuties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Karimae"] = {
+							120, -- [1]
+							"Poetry Club", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Samsqüanche"] = {
+							120, -- [1]
+							"Sensual Harrassment", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chickéñ"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Manadruid"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kawanni"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Itna"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fênrìr"] = {
+							120, -- [1]
+							"Mercy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cyanwolfy"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shiftyboom"] = {
+							120, -- [1]
+							"Frontier", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ropeshoes"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Soklern"] = {
+							120, -- [1]
+							"LazyBone", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ztd"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Voodoohawts"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spirex"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cônflicted"] = {
+							120, -- [1]
+							"Decoded", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Twignberrys"] = {
+							120, -- [1]
+							"Unappeasable", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Foreverdruid"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Psnarf"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Zandalari Troll"] = {
+					["Warrior"] = {
+						["Shawshanx"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vanirshala"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thorgil"] = {
+							120, -- [1]
+							"Nevermind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Airwavê"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hugetrollman"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ganchup"] = {
+							120, -- [1]
+							"The Blitz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Victario"] = {
+							120, -- [1]
+							"Criterion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aqan"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Groudon"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mattycakez"] = {
+							120, -- [1]
+							"Blackwater", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dantejr"] = {
+							120, -- [1]
+							"Excessive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Almace"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kelade"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Parablocks"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Doomwulf"] = {
+							120, -- [1]
+							"Snowblind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Plebtime"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vosgi"] = {
+							120, -- [1]
+							"Friends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Víx"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vanstaal"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Simex"] = {
+							120, -- [1]
+							"Imagine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dårkspeår"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Elchapò"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jabahnho"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jrozi"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whatsatank"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðrámá"] = {
+							120, -- [1]
+							"Ephemeral", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Paladin"] = {
+						["Jynnxqt"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Benevolance"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vulcaryu"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Timmybob"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trolloadin"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Tazuu"] = {
+							120, -- [1]
+							"Widow", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Anikan"] = {
+							120, -- [1]
+							"Deified", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bwonshiprall"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Damuzî"] = {
+							120, -- [1]
+							"Monarch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kalidmor"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigshowz"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trolldembows"] = {
+							120, -- [1]
+							"Barracuda Deathsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Onen"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chocolated"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sonsham"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bllurredd"] = {
+							120, -- [1]
+							"Salt Factory", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Milkmytusk"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crisiis"] = {
+							120, -- [1]
+							"Horde Heathens", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Laxxi"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tribunal"] = {
+							120, -- [1]
+							"Nevermind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Explodium"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zeklè"] = {
+							120, -- [1]
+							"The Defiant Ones", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zugglife"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kwakwakawak"] = {
+							120, -- [1]
+							"SIMC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zakunga"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mentalizt"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meloma"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drazirach"] = {
+							120, -- [1]
+							"Onslaught", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lighthunder"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Niceboat"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bob"] = {
+							120, -- [1]
+							"The Blitz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Treasures"] = {
+							120, -- [1]
+							"Incoherent", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Voxxlee"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Papaloy"] = {
+							120, -- [1]
+							"Aztec Legacy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snaletrale"] = {
+							120, -- [1]
+							"Pious", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spexxy"] = {
+							120, -- [1]
+							"MinimalEffort", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hermionii"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigmoneycrab"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moystweaver"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bwom"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ysô"] = {
+							120, -- [1]
+							"Norsemans", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sakumara"] = {
+							120, -- [1]
+							"Fat Pandas", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jjmonk"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jysk"] = {
+							120, -- [1]
+							"Main Team RBG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blergh"] = {
+							120, -- [1]
+							"Foundation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pigglèz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chísús"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jangleleg"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zenchew"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Adhdqq"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Koboh"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Køiy"] = {
+							120, -- [1]
+							"We Prepot on Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Otteray"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Willowumbraa"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chadman"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vexate"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Roguenar"] = {
+							120, -- [1]
+							"We Happy Few", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Critmas"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Erozhen"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Katehudson"] = {
+							120, -- [1]
+							"Iron Knights", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skitsöu"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lankygob"] = {
+							120, -- [1]
+							"Snowblind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Schroedaddy"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Echorng"] = {
+							120, -- [1]
+							"Blackwater", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Likealight"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cruixx"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Merkb"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Vll"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stãy"] = {
+							120, -- [1]
+							"F A N T A S Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shambels"] = {
+							120, -- [1]
+							"plop", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tolaji"] = {
+							120, -- [1]
+							"Deaths Great Adventure", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skuubasteve"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ripit"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Touchofhades"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skinnykween"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Trollnado"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mojavie"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drekthan"] = {
+							120, -- [1]
+							"The Defiant Ones", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Druid"] = {
+						["Ibloodraven"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Njd"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rymjobe"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Treesum"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Starlordxx"] = {
+							120, -- [1]
+							"In Korean we trust", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Seolbin"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dbzilla"] = {
+							120, -- [1]
+							"ÐESTROY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ooshift"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druidrager"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fahj"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nobrezz"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dabroski"] = {
+							120, -- [1]
+							"Demogorgon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bìrchtree"] = {
+							120, -- [1]
+							"Titans of Industry", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Squantoe"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kèety"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wafflesauce"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lorïcorn"] = {
+							120, -- [1]
+							"Blackwater", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Izanu"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Arsarrius"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tenguboom"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thrashpls"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Daddydino"] = {
+							120, -- [1]
+							"Cake Walk", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Synfuldruid"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snickerdome"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kimmihyun"] = {
+							120, -- [1]
+							"The Dark Phantoms", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hiphoff"] = {
+							120, -- [1]
+							"RUIN Raiders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Camobear"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mkvennèr"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Howmyasslook"] = {
+							120, -- [1]
+							"Critical Fail", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Niharu"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dinotree"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mooncatbru"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Toxictree"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Starlordzz"] = {
+							120, -- [1]
+							"In Korean we trust", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druuddood"] = {
+							120, -- [1]
+							"Good not Great", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jabak"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kroneckr"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zipsdru"] = {
+							120, -- [1]
+							"Salt Factory", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dinomojo"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nayy"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bahaghari"] = {
+							120, -- [1]
+							"That Song From Top Gun", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reggis"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Iusosang"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ëñïgmätïç"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Feníx"] = {
+							120, -- [1]
+							"Ouroboros", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Loudpacks"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lepewp"] = {
+							120, -- [1]
+							"RSPD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ubaskills"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lunacka"] = {
+							120, -- [1]
+							"GoA", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Emjey"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nessá"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Savingface"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aglomy"] = {
+							120, -- [1]
+							"Onslaught", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shdruid"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Joraah"] = {
+							120, -- [1]
+							"Snowblind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mooruid"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jezdruid"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sinifanboi"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tøxîn"] = {
+							120, -- [1]
+							"Division Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tôidi"] = {
+							120, -- [1]
+							"Mythical Cultists", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Introspexion"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grymmclaw"] = {
+							120, -- [1]
+							"In Blood We Trust", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ticklefickle"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Furriehentai"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pakunon"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bahnak"] = {
+							120, -- [1]
+							"Antidote", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilerickk"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valeya"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zannock"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Newdru"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nakkota"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Voa"] = {
+							120, -- [1]
+							"Ephemeral", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Melcheor"] = {
+							120, -- [1]
+							"Mercy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mixsi"] = {
+							120, -- [1]
+							"The Tribe Elder", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Çatholic"] = {
+							120, -- [1]
+							"We Happy Few", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sonofamitch"] = {
+							120, -- [1]
+							"Fat Pandas", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Killuminatix"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dahuun"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sambwondi"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nicholasblu"] = {
+							120, -- [1]
+							"Audacity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boxxer"] = {
+							120, -- [1]
+							"IS A TRUE KUL TIRAN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jiku"] = {
+							120, -- [1]
+							"Hold My Flask", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Amalizzy"] = {
+							120, -- [1]
+							"This Guild is a Prison", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Etsuxd"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stuzzii"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Raalisa"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Tankloads"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["ßullwôrm"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bòósh"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nmhx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Daamndanniel"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hobophobiq"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Défend"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Krulman"] = {
+							120, -- [1]
+							"Audacity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zîgzag"] = {
+							120, -- [1]
+							"The Defenders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Capchica"] = {
+							120, -- [1]
+							"The Defiant Ones", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dellort"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Atomsmasher"] = {
+							120, -- [1]
+							"L E G E N D A R Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Nightborne"] = {
+					["Warrior"] = {
+						["Quakin"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tachyanon"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Warlock"] = {
+						["Vishóus"] = {
+							120, -- [1]
+							"Relentless Ascension", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðireßane"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kamiczår"] = {
+							120, -- [1]
+							"Chew Town", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Prequel"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilandrà"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valudrus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Myabelle"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Raylun"] = {
+							120, -- [1]
+							"Cake Walk", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mistyzen"] = {
+							120, -- [1]
+							"Malevolency", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fightborne"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wushuelf"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lemonboy"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Moeghun"] = {
+							120, -- [1]
+							"That Song From Top Gun", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vankryne"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Divìnìty"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Darkchéstér"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Effinpope"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dragonorsted"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Isolette"] = {
+							120, -- [1]
+							"No Named", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Scopareborn"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hentaiitup"] = {
+							120, -- [1]
+							"Endorsed by Arathi Basin", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jupítér"] = {
+							120, -- [1]
+							"Gimmick", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tråê"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kabel"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sigwood"] = {
+							120, -- [1]
+							"Vigil", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aurigail"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Westfold"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Zanto"] = {
+							120, -- [1]
+							"Seal Team Noobs", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Killphil"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dazanor"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ess"] = {
+							120, -- [1]
+							"and the gaming lords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ashrel"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pollymorphin"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Giambijuice"] = {
+							120, -- [1]
+							"The juice", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Alarish"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brigg"] = {
+							120, -- [1]
+							"JUICED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Birtchlol"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jrblaze"] = {
+							120, -- [1]
+							"MinimalEffort", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Luuzil"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Axlash"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Rakyu"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fenrigz"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Benddover"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Adriops"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Arrowflash"] = {
+							120, -- [1]
+							"JUICED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Mag'har Orc"] = {
+					["Rogue"] = {
+						["Troxs"] = {
+							120, -- [1]
+							"Lower Echelon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Fuby"] = {
+							120, -- [1]
+							"Lackluster", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Undead"] = {
+					["Warrior"] = {
+						["Kyllyx"] = {
+							120, -- [1]
+							"The Reckless", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Theshark"] = {
+							120, -- [1]
+							"BurnsWhenIPvP", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rayelin"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Calphuzad"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nikgroff"] = {
+							120, -- [1]
+							"Ghost Adventures Crew", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Goregutz"] = {
+							120, -- [1]
+							"Endzeit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Furyy"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Basemus"] = {
+							120, -- [1]
+							"KEA Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nalgada"] = {
+							120, -- [1]
+							"MinimalEffort", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Centimoz"] = {
+							120, -- [1]
+							"Essence", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reecewarrior"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Warlock"] = {
+						["Gawdraiztlan"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Verybusy"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pändemíc"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gyeop"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rahviin"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Psychosixx"] = {
+							120, -- [1]
+							"The Murloc Saints", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Livelocklove"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lotodot"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Steagle"] = {
+							120, -- [1]
+							"NightRider", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Warnuts"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vvoldemortt"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dottasaurus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rudyguiliani"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pahjhaij"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rouen"] = {
+							120, -- [1]
+							"C H A O S", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acsriot"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Onikagae"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Austinsimpso"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Neckro"] = {
+							120, -- [1]
+							"Queue Pöpped", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ondeadlock"] = {
+							120, -- [1]
+							"L u x u r y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Psychótic"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Perilneum"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xaldren"] = {
+							120, -- [1]
+							"TwitchThoughts", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Justabox"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Metlakle"] = {
+							120, -- [1]
+							"How Fluffy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Æpic"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fleshrendér"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Coolwala"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ksemonster"] = {
+							120, -- [1]
+							"The DirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Death Knight"] = {
+						["Atrophicus"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blindymcgee"] = {
+							120, -- [1]
+							"Clouded Skies", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dedgunny"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Angrypuppy"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mâyhèm"] = {
+							120, -- [1]
+							"Main Team RBG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grimortality"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Gunsup"] = {
+							120, -- [1]
+							"Ripndip", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Êçtö"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Marmü"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Syunce"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mistrfisther"] = {
+							120, -- [1]
+							"SAPPED MEANS YES", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tazal"] = {
+							120, -- [1]
+							"Nüllify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Ezêkiel"] = {
+							120, -- [1]
+							"TheDirtyHorde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Voidstacks"] = {
+							120, -- [1]
+							"We Prepot on Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gâinsborough"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jenobii"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Khanzu"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sheltleth"] = {
+							120, -- [1]
+							"ThatOneGuild", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Imilfhunterl"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Johanold"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Plaguespree"] = {
+							120, -- [1]
+							"Below My Deck", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mezothelioma"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spikyten"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gásoline"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nawtyforever"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Toastlaw"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nst"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xekania"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deallo"] = {
+							120, -- [1]
+							"yeetsquad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fukwhatuthot"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Superspoopy"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Konvic"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dowwjones"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Taynard"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Festicle"] = {
+							120, -- [1]
+							"The Poncho Brothers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Celciorjr"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meanhoez"] = {
+							120, -- [1]
+							"tuggin it", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mavianjr"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yourstupid"] = {
+							120, -- [1]
+							"World of Warcrap", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Selkiez"] = {
+							120, -- [1]
+							"Spit Lubed Guildo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Terellz"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Runkids"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fatherfrisky"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fingon"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thighgapx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fainpriest"] = {
+							120, -- [1]
+							"yeah right", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spazie"] = {
+							120, -- [1]
+							"Mana", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Czarnick"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigfade"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Geisthymn"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Orékin"] = {
+							120, -- [1]
+							"Slap and Tickle", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hobobible"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ohvampirez"] = {
+							120, -- [1]
+							"Sunwell Hotel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nodispellplz"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Haêlia"] = {
+							120, -- [1]
+							"The Brothel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blasphème"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Akinky"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Feddsuh"] = {
+							120, -- [1]
+							"Bolting Incorporated", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deadheadfred"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Oakay"] = {
+							120, -- [1]
+							"Demogorgon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Minimynx"] = {
+							120, -- [1]
+							"Blacklisted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kelseybear"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mokes"] = {
+							120, -- [1]
+							"Flex Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nalta"] = {
+							120, -- [1]
+							"Friends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Emund"] = {
+							120, -- [1]
+							"Infamy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rëmëdÿz"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mepo"] = {
+							120, -- [1]
+							"Vertex", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Muridius"] = {
+							120, -- [1]
+							"Annuit Coeptis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Vivyn"] = {
+							120, -- [1]
+							"The Crimson Shadow", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sachpowers"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tÿriøn"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tòmbs"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Taranthos"] = {
+							120, -- [1]
+							"Blood Seekers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["ßaelyn"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Piryeon"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gregorr"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Rancør"] = {
+							120, -- [1]
+							"Ministry of Shadows", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fatdamon"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Crimsonsea"] = {
+							120, -- [1]
+							"Soldier of Sin", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Scoobysnackz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Versteckte"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Destric"] = {
+							120, -- [1]
+							"The Sticky Bandits", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Otc"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kohzies"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zarithol"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Laugh"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maliketh"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blvckceiling"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aydemin"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Elkapwn"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Igutyourback"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kzó"] = {
+							120, -- [1]
+							"Monarch", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ghosting"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Curasao"] = {
+							120, -- [1]
+							"THEDIRTY HORDE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Røzay"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sandottie"] = {
+							120, -- [1]
+							"Old Guard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gosumang"] = {
+							120, -- [1]
+							"GoA", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dibberdabber"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spookyspud"] = {
+							120, -- [1]
+							"Demogorgon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zeeker"] = {
+							120, -- [1]
+							"No Thx", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Stabbingtonz"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Issaboppin"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Discuse"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valtanis"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blightwalker"] = {
+							120, -- [1]
+							"True Trash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kïngcrimson"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Callidus"] = {
+							120, -- [1]
+							"Reckless Ambition", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sellick"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rebaulten"] = {
+							120, -- [1]
+							"Ymidion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gìrthims"] = {
+							120, -- [1]
+							"Not Interested", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kibberzz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thrashk"] = {
+							120, -- [1]
+							"Peel Team Six", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deadforeal"] = {
+							120, -- [1]
+							"likes boys", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skillitt"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Irtehpoke"] = {
+							120, -- [1]
+							"i dont care about you", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Llpikaboo"] = {
+							120, -- [1]
+							"Vipers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Merkkinz"] = {
+							120, -- [1]
+							"jk im jackie chan", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Decoyqt"] = {
+							120, -- [1]
+							"KEA Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Treenir"] = {
+							120, -- [1]
+							"Fat Pandas", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Myrrkull"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sepulcherlis"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Igast"] = {
+							120, -- [1]
+							"Something Edgy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beerbaron"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phenik"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jessar"] = {
+							120, -- [1]
+							"Lemme Smash", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Freshpjs"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Volkr"] = {
+							120, -- [1]
+							"Main Team RBG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Outoforderr"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Markotic"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Polyestr"] = {
+							120, -- [1]
+							"Frisky Business", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shmuu"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Negativefive"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mucadimu"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Majéré"] = {
+							120, -- [1]
+							"Apocalyptic Intentions", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Burdi"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Weiler"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Apocalipsys"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vfm"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Steezeyj"] = {
+							120, -- [1]
+							"one punch in ur nutz", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pomalisk"] = {
+							120, -- [1]
+							"The Kappacino Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zyleen"] = {
+							120, -- [1]
+							"Born Again", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baylorbear"] = {
+							120, -- [1]
+							"Overly Offensive", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mexxipotter"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Purpwizrd"] = {
+							120, -- [1]
+							"Theoretical Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Catwiz"] = {
+							120, -- [1]
+							"Bank Storage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Èßüßéßõkßé"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yësjulz"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Velzeda"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tuggx"] = {
+							120, -- [1]
+							"Relief", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kheyn"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slushee"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Justfog"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zauberin"] = {
+							120, -- [1]
+							"Mythodical", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vultz"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Undedkev"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Purpleeganja"] = {
+							120, -- [1]
+							"Theoretical Progression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maasy"] = {
+							120, -- [1]
+							"Lost Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bunnypig"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Loservirgin"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Minishaft"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zackiavelli"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nesmuesticus"] = {
+							120, -- [1]
+							"The juice", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tsookalos"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Tauren"] = {
+					["Warrior"] = {
+						["Garrykeillor"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skullsteppe"] = {
+							120, -- [1]
+							"Dusk", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spicyramyun"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Paladin"] = {
+						["Soulvanisher"] = {
+							120, -- [1]
+							"Anubis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Utoc"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mukamu"] = {
+							120, -- [1]
+							"CULT", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pretofoe"] = {
+							120, -- [1]
+							"BROTHER", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reklama"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Draxpala"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mutatta"] = {
+							120, -- [1]
+							"Vipers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Nassedsa"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nyquilnunez"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skinnikow"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nimbonya"] = {
+							120, -- [1]
+							"Mistaks Were Made", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Strongkp"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Haüe"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mindsnap"] = {
+							120, -- [1]
+							"The Eternal Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Binggles"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Lohurs"] = {
+							120, -- [1]
+							"WeAllKnowEachOther", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Healspaztic"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shadowfluff"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Anuuirruuk"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Death Knight"] = {
+						["Raldimus"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Burritodk"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fluffër"] = {
+							120, -- [1]
+							"Endorsed by Arathi Basin", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vzbuchka"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nánk"] = {
+							120, -- [1]
+							"GoA", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gryliz"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Geniixx"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kerbawo"] = {
+							120, -- [1]
+							"Íllúmínâtï", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Maliinky"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Herdattack"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kamaranda"] = {
+							120, -- [1]
+							"The Chubby Emus", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Exeler"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mulohlen"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Druid"] = {
+						["Decomplished"] = {
+							120, -- [1]
+							"Decomplished", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Securïty"] = {
+							120, -- [1]
+							"Horror", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sonofabirch"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Frescavena"] = {
+							120, -- [1]
+							"smh my head", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Langbang"] = {
+							120, -- [1]
+							"slash spit", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druidstin"] = {
+							120, -- [1]
+							"Quixotic", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Demibaby"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boondoggle"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Calderkaderk"] = {
+							120, -- [1]
+							"Tsu", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sarkons"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Starstrike"] = {
+							120, -- [1]
+							"Darkness Reborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Forwhat"] = {
+							120, -- [1]
+							"Ephemeral", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Egotestical"] = {
+							120, -- [1]
+							"Bad Idea", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Whiskyky"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Identityx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Proheal"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grizlybear"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nogàrd"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Groót"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hornstriker"] = {
+							120, -- [1]
+							"Darkness Reborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skoffinz"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wrigy"] = {
+							120, -- [1]
+							"Silent Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Terrabul"] = {
+							120, -- [1]
+							"We Are Legion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gúùnchi"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jtqt"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Royalheal"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wazalskie"] = {
+							120, -- [1]
+							"Pious", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tushonka"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Quadrivium"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Katbear"] = {
+							120, -- [1]
+							"Window Liquors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Huqz"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ganjibai"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eclipsexx"] = {
+							120, -- [1]
+							"Anubis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Joxeluov"] = {
+							120, -- [1]
+							"SOMS", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xerrul"] = {
+							120, -- [1]
+							"Extreme", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Projektb"] = {
+							120, -- [1]
+							"The Magma", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Dracjo"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Celem"] = {
+							120, -- [1]
+							"Sublimity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ðankleaf"] = {
+							120, -- [1]
+							"Signs of Insanity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Aklar"] = {
+							120, -- [1]
+							"WRONG", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grattokk"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Boombrox"] = {
+							120, -- [1]
+							"Dragon Reborn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deanno"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Coala"] = {
+							120, -- [1]
+							"Synæsthesia", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Richmondhill"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Phatkow"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ohsees"] = {
+							120, -- [1]
+							"Cool Cobras", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thaswild"] = {
+							120, -- [1]
+							"TwitchThoughts", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baroman"] = {
+							120, -- [1]
+							"EndOftheLine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Horseman"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rmpg"] = {
+							120, -- [1]
+							"PvEasy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Papashift"] = {
+							120, -- [1]
+							"Garrosh Did Nothin Wrong", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chronié"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Druidub"] = {
+							120, -- [1]
+							"The Kappacino Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eeyöre"] = {
+							120, -- [1]
+							"Antidote", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yingasx"] = {
+							120, -- [1]
+							"Nurfed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Timoothy"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Durando"] = {
+							120, -- [1]
+							"Esteemed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pumpdaddyy"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Oaktrèe"] = {
+							120, -- [1]
+							"Dinner Time", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Celzerias"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Valiantvader"] = {
+							120, -- [1]
+							"Ephemeral", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nuuraiga"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sinsombra"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Blkfacegød"] = {
+							120, -- [1]
+							"one lesson per day", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Anthwracks"] = {
+							120, -- [1]
+							"Vipers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ytholol"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Miloc"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hotshere"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wythrin"] = {
+							120, -- [1]
+							"La Horda", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Doublediesel"] = {
+							120, -- [1]
+							"THE MOVE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jetwarg"] = {
+							120, -- [1]
+							"Animal", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Inthehouse"] = {
+							120, -- [1]
+							"The Nørth", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ferguso"] = {
+							120, -- [1]
+							"CrazyWife", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ttr"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tokarr"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shersha"] = {
+							120, -- [1]
+							"Lemon Stealing Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Thoowky"] = {
+							120, -- [1]
+							"Stunning", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Grówl"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kittenhuffer"] = {
+							120, -- [1]
+							"Hostile Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kangru"] = {
+							120, -- [1]
+							"Under the Sea", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Toadeyx"] = {
+							120, -- [1]
+							"cuties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Squarter"] = {
+							120, -- [1]
+							"Woof Squad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beamcream"] = {
+							120, -- [1]
+							"Sweet Baby Raids", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bells"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Silvur"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Barbatos"] = {
+							120, -- [1]
+							"Divine", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kluugar"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hawtboi"] = {
+							120, -- [1]
+							"HIGH Tauren", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pumpkinspìce"] = {
+							120, -- [1]
+							"Bought Glad", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Broado"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moonknìght"] = {
+							120, -- [1]
+							"Anubis", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigbuffguy"] = {
+							120, -- [1]
+							"The Brothel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vintunemusic"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vinnylee"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wryb"] = {
+							120, -- [1]
+							"Silent Nation", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Moordred"] = {
+							120, -- [1]
+							"Sublimity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ursall"] = {
+							120, -- [1]
+							"Clouded Skies", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Playonwordz"] = {
+							120, -- [1]
+							"Hydroponics", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Amrin"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cårriez"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bearordeer"] = {
+							120, -- [1]
+							"See Again Solitary", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Reflexus"] = {
+							120, -- [1]
+							"Guild NLLBY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Pandaren"] = {
+					["Warrior"] = {
+						["Bersark"] = {
+							120, -- [1]
+							"Iron Knights", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Tongru"] = {
+							120, -- [1]
+							"Under the Sea", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Drynoxia"] = {
+							120, -- [1]
+							"Apeks", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Deathstartwo"] = {
+							120, -- [1]
+							"Mystify", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shambhalâ"] = {
+							120, -- [1]
+							"MinimalEffort", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Billins"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Enhancerz"] = {
+							120, -- [1]
+							"BANNED FROM MOONGUARD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nytria"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Notxerx"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pìnx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Monk"] = {
+						["Grundz"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Cctank"] = {
+							120, -- [1]
+							"Winterland", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ipuna"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Viperfu"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gotcaffeinex"] = {
+							120, -- [1]
+							"No Named", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Forevery"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pêst"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Solciel"] = {
+							120, -- [1]
+							"Shrimp Tempura", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bokbokt"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Æoníc"] = {
+							120, -- [1]
+							"Something Chill", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Omileesen"] = {
+							120, -- [1]
+							"RUIN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lokuen"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Skarirang"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Curre"] = {
+							120, -- [1]
+							"The Rabid BBQ Warlords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Chata"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meredithmonk"] = {
+							120, -- [1]
+							"No Answers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Swîftcast"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Xaneera"] = {
+							120, -- [1]
+							"Regard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wongtongsoup"] = {
+							120, -- [1]
+							"Defenders of the Realm", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pînký"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hellmoons"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wunka"] = {
+							120, -- [1]
+							"Corrupt Darkness", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Teriyakichkn"] = {
+							120, -- [1]
+							"Show Me Your Taco", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Longshangsu"] = {
+							120, -- [1]
+							"Critical Fail", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zaim"] = {
+							120, -- [1]
+							"Toxic Salt", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Anadarius"] = {
+							120, -- [1]
+							"Sunwell Hotel", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Acqua"] = {
+							120, -- [1]
+							"Chaos Factors", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brèwmastèr"] = {
+							120, -- [1]
+							"BANNED FROM MOONGUARD", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Heibaí"] = {
+							120, -- [1]
+							"Mercy", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jenjen"] = {
+							120, -- [1]
+							"cuties", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Radekku"] = {
+							120, -- [1]
+							"Under the Sea", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Sapdaddi"] = {
+							120, -- [1]
+							"Set it to Wumbo", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ghostthief"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hirosee"] = {
+							120, -- [1]
+							"RËFORGED", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Forøtheøpunx"] = {
+							120, -- [1]
+							"Nothing But Regression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lunavian"] = {
+							120, -- [1]
+							"TheoryCraft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tomatochan"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Gangshyt"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Powderpaws"] = {
+							120, -- [1]
+							"Chew Town", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Ghandelf"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Daddyscript"] = {
+							120, -- [1]
+							"RBG Hero", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Muranoth"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zahrahmiik"] = {
+							120, -- [1]
+							"Fat Pandas", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+				["Goblin"] = {
+					["Warrior"] = {
+						["Gordanol"] = {
+							120, -- [1]
+							"Late Night Lotion", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hyp"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ampiere"] = {
+							120, -- [1]
+							"Kombat Kitten", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bernarnold"] = {
+							120, -- [1]
+							"Blur", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Warlock"] = {
+						["Ohbb"] = {
+							120, -- [1]
+							"Seeds of Craft", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ascrod"] = {
+							120, -- [1]
+							"Sublimity", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Rumpel"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snelaxx"] = {
+							120, -- [1]
+							"Warsong Vanguard", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beefshades"] = {
+							120, -- [1]
+							"Unbalanced", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Swannsong"] = {
+							120, -- [1]
+							"KEA Gaming", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Jylok"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nilboggen"] = {
+							120, -- [1]
+							"PoundTown", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Shaman"] = {
+						["Mozo"] = {
+							120, -- [1]
+							"Saviors of Sarvok", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Restao"] = {
+							120, -- [1]
+							"Grim", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Already"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Nageshammy"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Spiritstuff"] = {
+							120, -- [1]
+							"Menace", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shammyßehkin"] = {
+							120, -- [1]
+							"HordeHub", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Enkazil"] = {
+							120, -- [1]
+							"Arise", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Polite"] = {
+							120, -- [1]
+							"TIQQLE PARTY", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kôba"] = {
+							120, -- [1]
+							"VAPE and PILLAGE", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lilfnx"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sigmatic"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shamwowzie"] = {
+							120, -- [1]
+							"Definitely not a Mermaid", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mojojojo"] = {
+							120, -- [1]
+							"Cult of Kragwa", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Perryair"] = {
+							120, -- [1]
+							"Whiskay Wonders", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Priest"] = {
+						["Pibax"] = {
+							120, -- [1]
+							"World Star Horde", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Invas"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Npdisapriest"] = {
+							120, -- [1]
+							"Myrmidons", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Flowdezzy"] = {
+							120, -- [1]
+							"Dazed and Dismounted", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Yotterella"] = {
+							120, -- [1]
+							"Thot Process", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bagelbitess"] = {
+							120, -- [1]
+							"Dark Throne", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sóulreàver"] = {
+							120, -- [1]
+							"fight me irl", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fizzwizzle"] = {
+							120, -- [1]
+							"Ôutlaw", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pontifexous"] = {
+							120, -- [1]
+							"Warmongers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Devshadow"] = {
+							120, -- [1]
+							"Nine Lives", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Babyoil"] = {
+							120, -- [1]
+							"Legions Of Death", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Beefyshekels"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ericxd"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Ropedaniels"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lackthecutie"] = {
+							120, -- [1]
+							"L E G E N D A R Y", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Powerwrdfeet"] = {
+							120, -- [1]
+							"Incarnate", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Baelgrin"] = {
+							120, -- [1]
+							"Red Light District", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Songnim"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Steezynun"] = {
+							120, -- [1]
+							"Nerd Rage", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Onfuryzx"] = {
+							120, -- [1]
+							"SSEN", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sleshambolic"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Sixma"] = {
+							120, -- [1]
+							"hey im mvp", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Pillówfight"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Touchtown"] = {
+							120, -- [1]
+							"Hive Mind", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Gomg"] = {
+							120, -- [1]
+							"LFR", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Knockwurst"] = {
+							120, -- [1]
+							"Trust Issues", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Brockholy"] = {
+							120, -- [1]
+							"BibleBlack", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Rogue"] = {
+						["Gnôblin"] = {
+							120, -- [1]
+							"Decoded", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Imdrunk"] = {
+							120, -- [1]
+							"TGC", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Juliakip"] = {
+							120, -- [1]
+							"Ministry of Shadows", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Belá"] = {
+							120, -- [1]
+							"Jello Cup", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Meetkevin"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Shinbane"] = {
+							120, -- [1]
+							"Mad House", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hiensi"] = {
+							120, -- [1]
+							"Garrosh Did Nothin Wrong", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Honeybâdger"] = {
+							120, -- [1]
+							"Smøkey and the Bandits", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bigbojangles"] = {
+							120, -- [1]
+							"Sensual Harrassment", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Slyshade"] = {
+							120, -- [1]
+							"Forever Legends", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Hunter"] = {
+						["Paulyp"] = {
+							120, -- [1]
+							"Outliers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Externalgate"] = {
+							120, -- [1]
+							"Terran Empire", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Zephire"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Bunsbunsbuns"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Lesshair"] = {
+							120, -- [1]
+							"Impression", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Tunguskaa"] = {
+							120, -- [1]
+							"The Murloc Saints", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Snarn"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Eîghtball"] = {
+							120, -- [1]
+							"High Life", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Death Knight"] = {
+						["Icesinger"] = {
+							120, -- [1]
+							"Deaths Great Adventure", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Vethys"] = {
+							120, -- [1]
+							"That Song From Top Gun", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Fizzlerot"] = {
+							120, -- [1]
+							"and the gaming lords", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Iamforbaconz"] = {
+							120, -- [1]
+							"Demogorgon", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Therodk"] = {
+							120, -- [1]
+							"Pot On Two", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Hoffaluyah"] = {
+							120, -- [1]
+							"Forgot To Wipe", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kelodied"] = {
+							120, -- [1]
+							"Malevolency", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Candycane"] = {
+							120, -- [1]
+							"The ßlack Lantern Inn", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+					["Mage"] = {
+						["Blackiyc"] = {
+							120, -- [1]
+							"The Bakers", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Mortyevile"] = {
+							120, -- [1]
+							"", -- [2]
+							"", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Wolfswood"] = {
+							120, -- [1]
+							"Legion of the Damned", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Kokipa"] = {
+							120, -- [1]
+							"Interdictor", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+						["Coronth"] = {
+							120, -- [1]
+							"Nurfed", -- [2]
+							"Tichondrius", -- [3]
+							"2019-04-26", -- [4]
+						},
+					},
+				},
+			},
+		},
+	},
+}
+CensusPlus_CRealms = {
+	["UTCDateStamp"] = "2019-04-27",
+}
+CensusPlus_Guilds = {
+}
+CensusPlus_JobQueue = {
+	{
+		["m_MinLevel"] = 20,
+		["m_MaxLevel"] = 20,
+	}, -- [1]
+	{
+		["m_MinLevel"] = 21,
+		["m_MaxLevel"] = 30,
+	}, -- [2]
+	{
+		["m_MinLevel"] = 31,
+		["m_MaxLevel"] = 40,
+	}, -- [3]
+	{
+		["m_MinLevel"] = 41,
+		["m_MaxLevel"] = 50,
+	}, -- [4]
+	{
+		["m_MinLevel"] = 51,
+		["m_MaxLevel"] = 60,
+	}, -- [5]
+	{
+		["m_MinLevel"] = 61,
+		["m_MaxLevel"] = 70,
+	}, -- [6]
+	{
+		["m_MinLevel"] = 71,
+		["m_MaxLevel"] = 80,
+	}, -- [7]
+	{
+		["m_MinLevel"] = 81,
+		["m_MaxLevel"] = 90,
+	}, -- [8]
+	{
+		["m_MinLevel"] = 91,
+		["m_MaxLevel"] = 100,
+	}, -- [9]
+	{
+		["m_MinLevel"] = 101,
+		["m_MaxLevel"] = 110,
+	}, -- [10]
+	{
+		["m_MinLevel"] = 111,
+		["m_MaxLevel"] = 119,
+	}, -- [11]
+	{
+		["m_Race"] = "Orc",
+		["m_MinLevel"] = 120,
+		["m_MaxLevel"] = 120,
+	}, -- [12]
+	{
+		["m_MinLevel"] = 120,
+		["m_Race"] = "Tauren",
+		["m_MaxLevel"] = 120,
+		["m_Class"] = "Paladin",
+	}, -- [13]
+	{
+		["m_MinLevel"] = 120,
+		["m_Race"] = "Tauren",
+		["m_MaxLevel"] = 120,
+		["m_Class"] = "Warrior",
+	}, -- [14]
+	{
+		["m_MinLevel"] = 120,
+		["m_Race"] = "Tauren",
+		["m_MaxLevel"] = 120,
+		["m_Class"] = "Hunter",
+	}, -- [15]
+	["CensusPlus_LoginFaction"] = "Horde",
+	["CensusPlus_LoginRealm"] = "Tichondrius",
+	["CensusPlus_last_time"] = 1556338796,
+	["g_TempCount"] = {
+		["Tichondrius"] = {
+			["Horde"] = {
+				["Warrior"] = {
+					["Nichin"] = {
+						"Warrior", -- [1]
+					},
+					["Theshark"] = {
+						"Warrior", -- [1]
+					},
+					["Airwavê"] = {
+						"Warrior", -- [1]
+					},
+					["Kogul"] = {
+						"Warrior", -- [1]
+					},
+					["Hugetrollman"] = {
+						"Warrior", -- [1]
+					},
+					["Célés"] = {
+						"Warrior", -- [1]
+					},
+					["Quakin"] = {
+						"Warrior", -- [1]
+					},
+					["Vandlisa"] = {
+						"Warrior", -- [1]
+					},
+					["Mattycakez"] = {
+						"Warrior", -- [1]
+					},
+					["Dantejr"] = {
+						"Warrior", -- [1]
+					},
+					["Bladefüry"] = {
+						"Warrior", -- [1]
+					},
+					["Basemus"] = {
+						"Warrior", -- [1]
+					},
+					["Rayelin"] = {
+						"Warrior", -- [1]
+					},
+					["Nautiiwar"] = {
+						"Warrior", -- [1]
+					},
+					["Sapxfirefox"] = {
+						"Warrior", -- [1]
+					},
+					["Spicyramyun"] = {
+						"Warrior", -- [1]
+					},
+					["Simex"] = {
+						"Warrior", -- [1]
+					},
+					["Kroxigor"] = {
+						"Warrior", -- [1]
+					},
+					["Ampiere"] = {
+						"Warrior", -- [1]
+					},
+					["Jabahnho"] = {
+						"Warrior", -- [1]
+					},
+					["Hyp"] = {
+						"Warrior", -- [1]
+					},
+					["Vanirshala"] = {
+						"Warrior", -- [1]
+					},
+					["Thorgil"] = {
+						"Warrior", -- [1]
+					},
+					["Orcsdontpwn"] = {
+						"Warrior", -- [1]
+					},
+					["Supnerdzz"] = {
+						"Warrior", -- [1]
+					},
+					["Ddlpe"] = {
+						"Warrior", -- [1]
+					},
+					["Ganchup"] = {
+						"Warrior", -- [1]
+					},
+					["Càllisto"] = {
+						"Warrior", -- [1]
+					},
+					["Chowwar"] = {
+						"Warrior", -- [1]
+					},
+					["Mansukim"] = {
+						"Warrior", -- [1]
+					},
+					["Kelade"] = {
+						"Warrior", -- [1]
+					},
+					["Centimoz"] = {
+						"Warrior", -- [1]
+					},
+					["Vosgi"] = {
+						"Warrior", -- [1]
+					},
+					["Víx"] = {
+						"Warrior", -- [1]
+					},
+					["Doritoe"] = {
+						"Warrior", -- [1]
+					},
+					["Srtankzalot"] = {
+						"Warrior", -- [1]
+					},
+					["Victario"] = {
+						"Warrior", -- [1]
+					},
+					["Whatsatank"] = {
+						"Warrior", -- [1]
+					},
+					["Tachyanon"] = {
+						"Warrior", -- [1]
+					},
+					["Goregutz"] = {
+						"Warrior", -- [1]
+					},
+					["Kyllyx"] = {
+						"Warrior", -- [1]
+					},
+					["Tinashe"] = {
+						"Warrior", -- [1]
+					},
+					["Zontle"] = {
+						"Warrior", -- [1]
+					},
+					["Lightningcx"] = {
+						"Warrior", -- [1]
+					},
+					["Skullsteppe"] = {
+						"Warrior", -- [1]
+					},
+					["Bersark"] = {
+						"Warrior", -- [1]
+					},
+					["Tatertottss"] = {
+						"Warrior", -- [1]
+					},
+					["Vanstaal"] = {
+						"Warrior", -- [1]
+					},
+					["Bernarnold"] = {
+						"Warrior", -- [1]
+					},
+					["Altars"] = {
+						"Warrior", -- [1]
+					},
+					["Nalgada"] = {
+						"Warrior", -- [1]
+					},
+					["Akichanz"] = {
+						"Warrior", -- [1]
+					},
+					["Ceroberts"] = {
+						"Warrior", -- [1]
+					},
+					["Tynaa"] = {
+						"Warrior", -- [1]
+					},
+					["Shawshanx"] = {
+						"Warrior", -- [1]
+					},
+					["Reckot"] = {
+						"Warrior", -- [1]
+					},
+					["Phignious"] = {
+						"Warrior", -- [1]
+					},
+					["Glickwar"] = {
+						"Warrior", -- [1]
+					},
+					["Dårkspeår"] = {
+						"Warrior", -- [1]
+					},
+					["Parablocks"] = {
+						"Warrior", -- [1]
+					},
+					["Almace"] = {
+						"Warrior", -- [1]
+					},
+					["Rofltusks"] = {
+						"Warrior", -- [1]
+					},
+					["Nikgroff"] = {
+						"Warrior", -- [1]
+					},
+					["Puffup"] = {
+						"Warrior", -- [1]
+					},
+					["Darraen"] = {
+						"Warrior", -- [1]
+					},
+					["Thìccbiscuit"] = {
+						"Warrior", -- [1]
+					},
+					["Ragestårved"] = {
+						"Warrior", -- [1]
+					},
+					["Garrykeillor"] = {
+						"Warrior", -- [1]
+					},
+					["Warboyzz"] = {
+						"Warrior", -- [1]
+					},
+					["Nectarinez"] = {
+						"Warrior", -- [1]
+					},
+					["Groudon"] = {
+						"Warrior", -- [1]
+					},
+					["Metroboomw"] = {
+						"Warrior", -- [1]
+					},
+					["Elchapò"] = {
+						"Warrior", -- [1]
+					},
+					["Salclap"] = {
+						"Warrior", -- [1]
+					},
+					["Dawnfury"] = {
+						"Warrior", -- [1]
+					},
+					["Plebtime"] = {
+						"Warrior", -- [1]
+					},
+					["Thial"] = {
+						"Warrior", -- [1]
+					},
+					["Ðrámá"] = {
+						"Warrior", -- [1]
+					},
+					["Jrozi"] = {
+						"Warrior", -- [1]
+					},
+					["Reecewarrior"] = {
+						"Warrior", -- [1]
+					},
+					["Furyy"] = {
+						"Warrior", -- [1]
+					},
+					["Doomwulf"] = {
+						"Warrior", -- [1]
+					},
+					["Molkang"] = {
+						"Warrior", -- [1]
+					},
+					["Aqan"] = {
+						"Warrior", -- [1]
+					},
+					["Calphuzad"] = {
+						"Warrior", -- [1]
+					},
+					["Jungoral"] = {
+						"Warrior", -- [1]
+					},
+				},
+				["Paladin"] = {
+					["Dylaeon"] = {
+						"Paladin", -- [1]
+					},
+					["Benevolance"] = {
+						"Paladin", -- [1]
+					},
+					["Benbanks"] = {
+						"Paladin", -- [1]
+					},
+					["Telluriel"] = {
+						"Paladin", -- [1]
+					},
+					["Çlassic"] = {
+						"Paladin", -- [1]
+					},
+					["Aemeh"] = {
+						"Paladin", -- [1]
+					},
+					["Arizonatèa"] = {
+						"Paladin", -- [1]
+					},
+					["Aræs"] = {
+						"Paladin", -- [1]
+					},
+					["Ängeal"] = {
+						"Paladin", -- [1]
+					},
+					["Wickedmann"] = {
+						"Paladin", -- [1]
+					},
+					["Emmyx"] = {
+						"Paladin", -- [1]
+					},
+					["Mukamu"] = {
+						"Paladin", -- [1]
+					},
+					["Priandise"] = {
+						"Paladin", -- [1]
+					},
+					["Céllash"] = {
+						"Paladin", -- [1]
+					},
+					["Foxlord"] = {
+						"Paladin", -- [1]
+					},
+					["Neuer"] = {
+						"Paladin", -- [1]
+					},
+					["Arconchilon"] = {
+						"Paladin", -- [1]
+					},
+					["Supazeyo"] = {
+						"Paladin", -- [1]
+					},
+					["Angkera"] = {
+						"Paladin", -- [1]
+					},
+					["Solendyr"] = {
+						"Paladin", -- [1]
+					},
+					["Tinzill"] = {
+						"Paladin", -- [1]
+					},
+					["Berreck"] = {
+						"Paladin", -- [1]
+					},
+					["Lucassi"] = {
+						"Paladin", -- [1]
+					},
+					["Scarletpally"] = {
+						"Paladin", -- [1]
+					},
+					["Guahansojah"] = {
+						"Paladin", -- [1]
+					},
+					["Vladufkr"] = {
+						"Paladin", -- [1]
+					},
+					["Shweèt"] = {
+						"Paladin", -- [1]
+					},
+					["Irené"] = {
+						"Paladin", -- [1]
+					},
+					["Kerge"] = {
+						"Paladin", -- [1]
+					},
+					["Tokipally"] = {
+						"Paladin", -- [1]
+					},
+					["Seinee"] = {
+						"Paladin", -- [1]
+					},
+					["Inëtris"] = {
+						"Paladin", -- [1]
+					},
+					["Luciferss"] = {
+						"Paladin", -- [1]
+					},
+					["Rustysak"] = {
+						"Paladin", -- [1]
+					},
+					["Biofreezé"] = {
+						"Paladin", -- [1]
+					},
+					["Powerpufgìrl"] = {
+						"Paladin", -- [1]
+					},
+					["Seeyy"] = {
+						"Paladin", -- [1]
+					},
+					["Timmybob"] = {
+						"Paladin", -- [1]
+					},
+					["Jcexe"] = {
+						"Paladin", -- [1]
+					},
+					["Bigglezworth"] = {
+						"Paladin", -- [1]
+					},
+					["Converse"] = {
+						"Paladin", -- [1]
+					},
+					["Soulvanisher"] = {
+						"Paladin", -- [1]
+					},
+					["Meleesucks"] = {
+						"Paladin", -- [1]
+					},
+					["Nirryen"] = {
+						"Paladin", -- [1]
+					},
+					["Holykief"] = {
+						"Paladin", -- [1]
+					},
+					["Unholysmiter"] = {
+						"Paladin", -- [1]
+					},
+					["Sîrbubble"] = {
+						"Paladin", -- [1]
+					},
+					["Kanyejoke"] = {
+						"Paladin", -- [1]
+					},
+					["Unholybelly"] = {
+						"Paladin", -- [1]
+					},
+					["Twicetzuyu"] = {
+						"Paladin", -- [1]
+					},
+					["Popthatcyst"] = {
+						"Paladin", -- [1]
+					},
+					["Kasang"] = {
+						"Paladin", -- [1]
+					},
+					["Strakka"] = {
+						"Paladin", -- [1]
+					},
+					["Timbît"] = {
+						"Paladin", -- [1]
+					},
+					["Geralein"] = {
+						"Paladin", -- [1]
+					},
+					["Knatalap"] = {
+						"Paladin", -- [1]
+					},
+					["Dirtytequìla"] = {
+						"Paladin", -- [1]
+					},
+					["Heyitschad"] = {
+						"Paladin", -- [1]
+					},
+					["Ishta"] = {
+						"Paladin", -- [1]
+					},
+					["Pinktwiz"] = {
+						"Paladin", -- [1]
+					},
+					["Durinsbane"] = {
+						"Paladin", -- [1]
+					},
+					["Selinitha"] = {
+						"Paladin", -- [1]
+					},
+					["Eroloson"] = {
+						"Paladin", -- [1]
+					},
+					["Jessrond"] = {
+						"Paladin", -- [1]
+					},
+					["Sabinn"] = {
+						"Paladin", -- [1]
+					},
+					["Theepaladîn"] = {
+						"Paladin", -- [1]
+					},
+					["Thotadin"] = {
+						"Paladin", -- [1]
+					},
+					["Neztah"] = {
+						"Paladin", -- [1]
+					},
+					["Valatrice"] = {
+						"Paladin", -- [1]
+					},
+					["Hôlýy"] = {
+						"Paladin", -- [1]
+					},
+					["Mutatta"] = {
+						"Paladin", -- [1]
+					},
+					["Bùbbleosevën"] = {
+						"Paladin", -- [1]
+					},
+					["Gwyndolyn"] = {
+						"Paladin", -- [1]
+					},
+					["Ashengarde"] = {
+						"Paladin", -- [1]
+					},
+					["Baneran"] = {
+						"Paladin", -- [1]
+					},
+					["Zutaa"] = {
+						"Paladin", -- [1]
+					},
+					["Pallycubed"] = {
+						"Paladin", -- [1]
+					},
+					["Zoõke"] = {
+						"Paladin", -- [1]
+					},
+					["Nohotkeyz"] = {
+						"Paladin", -- [1]
+					},
+					["Kluya"] = {
+						"Paladin", -- [1]
+					},
+					["Whanguin"] = {
+						"Paladin", -- [1]
+					},
+					["Vègito"] = {
+						"Paladin", -- [1]
+					},
+					["Eldom"] = {
+						"Paladin", -- [1]
+					},
+					["Alexpalad"] = {
+						"Paladin", -- [1]
+					},
+					["Jayzus"] = {
+						"Paladin", -- [1]
+					},
+					["Tvixx"] = {
+						"Paladin", -- [1]
+					},
+					["Flashaid"] = {
+						"Paladin", -- [1]
+					},
+					["Zalarian"] = {
+						"Paladin", -- [1]
+					},
+					["Sunfeather"] = {
+						"Paladin", -- [1]
+					},
+					["Melinas"] = {
+						"Paladin", -- [1]
+					},
+					["Holydiverxx"] = {
+						"Paladin", -- [1]
+					},
+					["Utoc"] = {
+						"Paladin", -- [1]
+					},
+					["Aramithx"] = {
+						"Paladin", -- [1]
+					},
+					["Misstakes"] = {
+						"Paladin", -- [1]
+					},
+					["Nevercritz"] = {
+						"Paladin", -- [1]
+					},
+					["Prototypetwo"] = {
+						"Paladin", -- [1]
+					},
+					["Kkalthaz"] = {
+						"Paladin", -- [1]
+					},
+					["Raell"] = {
+						"Paladin", -- [1]
+					},
+					["Pyronors"] = {
+						"Paladin", -- [1]
+					},
+					["Jynnxqt"] = {
+						"Paladin", -- [1]
+					},
+					["Draxpala"] = {
+						"Paladin", -- [1]
+					},
+					["Pretofoe"] = {
+						"Paladin", -- [1]
+					},
+					["Olethil"] = {
+						"Paladin", -- [1]
+					},
+					["Holysixx"] = {
+						"Paladin", -- [1]
+					},
+					["Bunè"] = {
+						"Paladin", -- [1]
+					},
+					["Rethumtv"] = {
+						"Paladin", -- [1]
+					},
+					["Trolloadin"] = {
+						"Paladin", -- [1]
+					},
+					["Vulcaryu"] = {
+						"Paladin", -- [1]
+					},
+					["Malkuric"] = {
+						"Paladin", -- [1]
+					},
+					["Kraytós"] = {
+						"Paladin", -- [1]
+					},
+					["Bloodhongd"] = {
+						"Paladin", -- [1]
+					},
+					["Reklama"] = {
+						"Paladin", -- [1]
+					},
+					["Scottini"] = {
+						"Paladin", -- [1]
+					},
+					["Leda"] = {
+						"Paladin", -- [1]
+					},
+					["Lzid"] = {
+						"Paladin", -- [1]
+					},
+					["Neech"] = {
+						"Paladin", -- [1]
+					},
+					["Noradra"] = {
+						"Paladin", -- [1]
+					},
+					["Nîer"] = {
+						"Paladin", -- [1]
+					},
+					["ßorïs"] = {
+						"Paladin", -- [1]
+					},
+					["Yahiko"] = {
+						"Paladin", -- [1]
+					},
+					["Sorellian"] = {
+						"Paladin", -- [1]
+					},
+					["Cashorcard"] = {
+						"Paladin", -- [1]
+					},
+					["Adderath"] = {
+						"Paladin", -- [1]
+					},
+					["Elfpaladin"] = {
+						"Paladin", -- [1]
+					},
+					["Rägnâr"] = {
+						"Paladin", -- [1]
+					},
+					["Repentia"] = {
+						"Paladin", -- [1]
+					},
+					["Powrfulwizrd"] = {
+						"Paladin", -- [1]
+					},
+					["Narrikko"] = {
+						"Paladin", -- [1]
+					},
+					["Davisito"] = {
+						"Paladin", -- [1]
+					},
+					["Iilbee"] = {
+						"Paladin", -- [1]
+					},
+					["Alphanie"] = {
+						"Paladin", -- [1]
+					},
+					["Bestever"] = {
+						"Paladin", -- [1]
+					},
+					["Crownoflife"] = {
+						"Paladin", -- [1]
+					},
+					["Jooneyy"] = {
+						"Paladin", -- [1]
+					},
+					["Galidrela"] = {
+						"Paladin", -- [1]
+					},
+					["Dawnslave"] = {
+						"Paladin", -- [1]
+					},
+					["Civpz"] = {
+						"Paladin", -- [1]
+					},
+					["Liquid"] = {
+						"Paladin", -- [1]
+					},
+					["Acolus"] = {
+						"Paladin", -- [1]
+					},
+					["Notsame"] = {
+						"Paladin", -- [1]
+					},
+					["Gåheris"] = {
+						"Paladin", -- [1]
+					},
+					["Thelilpinky"] = {
+						"Paladin", -- [1]
+					},
+					["Poundadin"] = {
+						"Paladin", -- [1]
+					},
+					["Ithiostus"] = {
+						"Paladin", -- [1]
+					},
+					["Ochukio"] = {
+						"Paladin", -- [1]
+					},
+					["Asbethe"] = {
+						"Paladin", -- [1]
+					},
+				},
+				["Shaman"] = {
+					["Threeoone"] = {
+						"Shaman", -- [1]
+					},
+					["Tazuu"] = {
+						"Shaman", -- [1]
+					},
+					["Bloong"] = {
+						"Shaman", -- [1]
+					},
+					["Budsprout"] = {
+						"Shaman", -- [1]
+					},
+					["Trolldembows"] = {
+						"Shaman", -- [1]
+					},
+					["Ðomzy"] = {
+						"Shaman", -- [1]
+					},
+					["Zakunga"] = {
+						"Shaman", -- [1]
+					},
+					["Zultizug"] = {
+						"Shaman", -- [1]
+					},
+					["Polite"] = {
+						"Shaman", -- [1]
+					},
+					["Explodium"] = {
+						"Shaman", -- [1]
+					},
+					["Zugglife"] = {
+						"Shaman", -- [1]
+					},
+					["Skatjay"] = {
+						"Shaman", -- [1]
+					},
+					["Mojojojo"] = {
+						"Shaman", -- [1]
+					},
+					["Bòògers"] = {
+						"Shaman", -- [1]
+					},
+					["Ninazzu"] = {
+						"Shaman", -- [1]
+					},
+					["Thunderdome"] = {
+						"Shaman", -- [1]
+					},
+					["Bottomsham"] = {
+						"Shaman", -- [1]
+					},
+					["Bwonshiprall"] = {
+						"Shaman", -- [1]
+					},
+					["Pogelesham"] = {
+						"Shaman", -- [1]
+					},
+					["Jabuta"] = {
+						"Shaman", -- [1]
+					},
+					["Enkazil"] = {
+						"Shaman", -- [1]
+					},
+					["Altthea"] = {
+						"Shaman", -- [1]
+					},
+					["Hidayaz"] = {
+						"Shaman", -- [1]
+					},
+					["Enhancerz"] = {
+						"Shaman", -- [1]
+					},
+					["Moisting"] = {
+						"Shaman", -- [1]
+					},
+					["Zkamienia"] = {
+						"Shaman", -- [1]
+					},
+					["Nyquilnunez"] = {
+						"Shaman", -- [1]
+					},
+					["Mailmasterz"] = {
+						"Shaman", -- [1]
+					},
+					["Tribunal"] = {
+						"Shaman", -- [1]
+					},
+					["Jarakthrall"] = {
+						"Shaman", -- [1]
+					},
+					["Crisiis"] = {
+						"Shaman", -- [1]
+					},
+					["Perryair"] = {
+						"Shaman", -- [1]
+					},
+					["Sigmatic"] = {
+						"Shaman", -- [1]
+					},
+					["Lighthunder"] = {
+						"Shaman", -- [1]
+					},
+					["Nytria"] = {
+						"Shaman", -- [1]
+					},
+					["Nageshammy"] = {
+						"Shaman", -- [1]
+					},
+					["Cärlos"] = {
+						"Shaman", -- [1]
+					},
+					["Kalidmor"] = {
+						"Shaman", -- [1]
+					},
+					["Bigshowz"] = {
+						"Shaman", -- [1]
+					},
+					["Ninurtta"] = {
+						"Shaman", -- [1]
+					},
+					["Chocolated"] = {
+						"Shaman", -- [1]
+					},
+					["Mozo"] = {
+						"Shaman", -- [1]
+					},
+					["Nimbonya"] = {
+						"Shaman", -- [1]
+					},
+					["Totempimp"] = {
+						"Shaman", -- [1]
+					},
+					["Pheedy"] = {
+						"Shaman", -- [1]
+					},
+					["Liquefaction"] = {
+						"Shaman", -- [1]
+					},
+					["Dontzugmebro"] = {
+						"Shaman", -- [1]
+					},
+					["Meloma"] = {
+						"Shaman", -- [1]
+					},
+					["Kwakwakawak"] = {
+						"Shaman", -- [1]
+					},
+					["Tõtém"] = {
+						"Shaman", -- [1]
+					},
+					["Mentalizt"] = {
+						"Shaman", -- [1]
+					},
+					["Strace"] = {
+						"Shaman", -- [1]
+					},
+					["Drazirach"] = {
+						"Shaman", -- [1]
+					},
+					["Milkmytusk"] = {
+						"Shaman", -- [1]
+					},
+					["Skinnikow"] = {
+						"Shaman", -- [1]
+					},
+					["Onen"] = {
+						"Shaman", -- [1]
+					},
+					["Eternalearth"] = {
+						"Shaman", -- [1]
+					},
+					["Nadrierith"] = {
+						"Shaman", -- [1]
+					},
+					["Jozbirtok"] = {
+						"Shaman", -- [1]
+					},
+					["Anikan"] = {
+						"Shaman", -- [1]
+					},
+					["Nassedsa"] = {
+						"Shaman", -- [1]
+					},
+					["Damuzî"] = {
+						"Shaman", -- [1]
+					},
+					["Drynoxia"] = {
+						"Shaman", -- [1]
+					},
+					["Xarlluz"] = {
+						"Shaman", -- [1]
+					},
+					["Phasewhatup"] = {
+						"Shaman", -- [1]
+					},
+					["Notxerx"] = {
+						"Shaman", -- [1]
+					},
+					["Tërah"] = {
+						"Shaman", -- [1]
+					},
+					["Restao"] = {
+						"Shaman", -- [1]
+					},
+					["Raxotaur"] = {
+						"Shaman", -- [1]
+					},
+					["Laxxi"] = {
+						"Shaman", -- [1]
+					},
+					["Shammyßehkin"] = {
+						"Shaman", -- [1]
+					},
+					["Sonsham"] = {
+						"Shaman", -- [1]
+					},
+					["Bob"] = {
+						"Shaman", -- [1]
+					},
+					["Grandsavage"] = {
+						"Shaman", -- [1]
+					},
+					["Tuckorious"] = {
+						"Shaman", -- [1]
+					},
+					["Cherilynn"] = {
+						"Shaman", -- [1]
+					},
+					["Bllurredd"] = {
+						"Shaman", -- [1]
+					},
+					["Spiritstuff"] = {
+						"Shaman", -- [1]
+					},
+					["Zeklè"] = {
+						"Shaman", -- [1]
+					},
+					["Deathstartwo"] = {
+						"Shaman", -- [1]
+					},
+					["Solavace"] = {
+						"Shaman", -- [1]
+					},
+					["Shambhalâ"] = {
+						"Shaman", -- [1]
+					},
+					["ßillÿ"] = {
+						"Shaman", -- [1]
+					},
+					["Already"] = {
+						"Shaman", -- [1]
+					},
+					["Shamwowzie"] = {
+						"Shaman", -- [1]
+					},
+					["Ore"] = {
+						"Shaman", -- [1]
+					},
+					["Niceboat"] = {
+						"Shaman", -- [1]
+					},
+					["Pìnx"] = {
+						"Shaman", -- [1]
+					},
+				},
+				["Monk"] = {
+					["Haüe"] = {
+						"Monk", -- [1]
+					},
+					["Heferwizen"] = {
+						"Monk", -- [1]
+					},
+					["Ixupi"] = {
+						"Monk", -- [1]
+					},
+					["Zenchew"] = {
+						"Monk", -- [1]
+					},
+					["Papaloy"] = {
+						"Monk", -- [1]
+					},
+					["Solciel"] = {
+						"Monk", -- [1]
+					},
+					["Dukko"] = {
+						"Monk", -- [1]
+					},
+					["Avignon"] = {
+						"Monk", -- [1]
+					},
+					["Syunce"] = {
+						"Monk", -- [1]
+					},
+					["Solobrew"] = {
+						"Monk", -- [1]
+					},
+					["Paonie"] = {
+						"Monk", -- [1]
+					},
+					["Lìtá"] = {
+						"Monk", -- [1]
+					},
+					["Xaneera"] = {
+						"Monk", -- [1]
+					},
+					["Bwom"] = {
+						"Monk", -- [1]
+					},
+					["Eunuco"] = {
+						"Monk", -- [1]
+					},
+					["Tideroller"] = {
+						"Monk", -- [1]
+					},
+					["Cyrain"] = {
+						"Monk", -- [1]
+					},
+					["Toîx"] = {
+						"Monk", -- [1]
+					},
+					["Mønka"] = {
+						"Monk", -- [1]
+					},
+					["Gunsup"] = {
+						"Monk", -- [1]
+					},
+					["Pigglèz"] = {
+						"Monk", -- [1]
+					},
+					["Brèwmastèr"] = {
+						"Monk", -- [1]
+					},
+					["Sassybogs"] = {
+						"Monk", -- [1]
+					},
+					["Raylun"] = {
+						"Monk", -- [1]
+					},
+					["Forevery"] = {
+						"Monk", -- [1]
+					},
+					["Ipuna"] = {
+						"Monk", -- [1]
+					},
+					["Tikklemepink"] = {
+						"Monk", -- [1]
+					},
+					["Gotcaffeinex"] = {
+						"Monk", -- [1]
+					},
+					["Telska"] = {
+						"Monk", -- [1]
+					},
+					["Voxxlee"] = {
+						"Monk", -- [1]
+					},
+					["Celiendra"] = {
+						"Monk", -- [1]
+					},
+					["Moistyfist"] = {
+						"Monk", -- [1]
+					},
+					["Hellmoons"] = {
+						"Monk", -- [1]
+					},
+					["Spexxy"] = {
+						"Monk", -- [1]
+					},
+					["Mindsnap"] = {
+						"Monk", -- [1]
+					},
+					["Vaporgang"] = {
+						"Monk", -- [1]
+					},
+					["Bòvine"] = {
+						"Monk", -- [1]
+					},
+					["Æoníc"] = {
+						"Monk", -- [1]
+					},
+					["Megtheveg"] = {
+						"Monk", -- [1]
+					},
+					["Brelaine"] = {
+						"Monk", -- [1]
+					},
+					["Mistie"] = {
+						"Monk", -- [1]
+					},
+					["Phequa"] = {
+						"Monk", -- [1]
+					},
+					["Katastrofí"] = {
+						"Monk", -- [1]
+					},
+					["Tïttyheals"] = {
+						"Monk", -- [1]
+					},
+					["Sakumara"] = {
+						"Monk", -- [1]
+					},
+					["Srstoic"] = {
+						"Monk", -- [1]
+					},
+					["Feìtan"] = {
+						"Monk", -- [1]
+					},
+					["Chísús"] = {
+						"Monk", -- [1]
+					},
+					["Lîfëe"] = {
+						"Monk", -- [1]
+					},
+					["Moystweaver"] = {
+						"Monk", -- [1]
+					},
+					["Strongkp"] = {
+						"Monk", -- [1]
+					},
+					["Chata"] = {
+						"Monk", -- [1]
+					},
+					["Betaboys"] = {
+						"Monk", -- [1]
+					},
+					["Binggles"] = {
+						"Monk", -- [1]
+					},
+					["Baelmisx"] = {
+						"Monk", -- [1]
+					},
+					["Joondosa"] = {
+						"Monk", -- [1]
+					},
+					["Treasures"] = {
+						"Monk", -- [1]
+					},
+					["Alandrian"] = {
+						"Monk", -- [1]
+					},
+					["Marmü"] = {
+						"Monk", -- [1]
+					},
+					["Danïel"] = {
+						"Monk", -- [1]
+					},
+					["Jukku"] = {
+						"Monk", -- [1]
+					},
+					["Tazal"] = {
+						"Monk", -- [1]
+					},
+					["Anadarius"] = {
+						"Monk", -- [1]
+					},
+					["Snaletrale"] = {
+						"Monk", -- [1]
+					},
+					["Cleverhed"] = {
+						"Monk", -- [1]
+					},
+					["Omileesen"] = {
+						"Monk", -- [1]
+					},
+					["Pinkßlush"] = {
+						"Monk", -- [1]
+					},
+					["Fightborne"] = {
+						"Monk", -- [1]
+					},
+					["Curre"] = {
+						"Monk", -- [1]
+					},
+					["Radekku"] = {
+						"Monk", -- [1]
+					},
+					["Touchofrich"] = {
+						"Monk", -- [1]
+					},
+					["Chicochi"] = {
+						"Monk", -- [1]
+					},
+					["Kungfuhress"] = {
+						"Monk", -- [1]
+					},
+					["Heibaí"] = {
+						"Monk", -- [1]
+					},
+					["Pînký"] = {
+						"Monk", -- [1]
+					},
+					["Röller"] = {
+						"Monk", -- [1]
+					},
+					["Dependence"] = {
+						"Monk", -- [1]
+					},
+					["Lemonboy"] = {
+						"Monk", -- [1]
+					},
+					["Beell"] = {
+						"Monk", -- [1]
+					},
+					["Oraoraoraa"] = {
+						"Monk", -- [1]
+					},
+					["Jysk"] = {
+						"Monk", -- [1]
+					},
+					["Blergh"] = {
+						"Monk", -- [1]
+					},
+					["Macktherippr"] = {
+						"Monk", -- [1]
+					},
+					["Skarirang"] = {
+						"Monk", -- [1]
+					},
+					["Wushuelf"] = {
+						"Monk", -- [1]
+					},
+					["Stungawwdx"] = {
+						"Monk", -- [1]
+					},
+					["Snugglelish"] = {
+						"Monk", -- [1]
+					},
+					["Grundz"] = {
+						"Monk", -- [1]
+					},
+					["Wunka"] = {
+						"Monk", -- [1]
+					},
+					["Abacaba"] = {
+						"Monk", -- [1]
+					},
+					["Ramalam"] = {
+						"Monk", -- [1]
+					},
+					["Cctank"] = {
+						"Monk", -- [1]
+					},
+					["Ysô"] = {
+						"Monk", -- [1]
+					},
+					["Lôse"] = {
+						"Monk", -- [1]
+					},
+					["Lilxsnoop"] = {
+						"Monk", -- [1]
+					},
+					["Bokbokt"] = {
+						"Monk", -- [1]
+					},
+					["Longshangsu"] = {
+						"Monk", -- [1]
+					},
+					["Hermionii"] = {
+						"Monk", -- [1]
+					},
+					["Effo"] = {
+						"Monk", -- [1]
+					},
+					["Xarî"] = {
+						"Monk", -- [1]
+					},
+					["Mistrfisther"] = {
+						"Monk", -- [1]
+					},
+					["Skarrt"] = {
+						"Monk", -- [1]
+					},
+					["Bigmoneycrab"] = {
+						"Monk", -- [1]
+					},
+					["Lønzoßall"] = {
+						"Monk", -- [1]
+					},
+					["Parsetko"] = {
+						"Monk", -- [1]
+					},
+					["Devmist"] = {
+						"Monk", -- [1]
+					},
+					["Twoaitch"] = {
+						"Monk", -- [1]
+					},
+					["Lapip"] = {
+						"Monk", -- [1]
+					},
+					["Twixer"] = {
+						"Monk", -- [1]
+					},
+					["Niessa"] = {
+						"Monk", -- [1]
+					},
+					["Pickahole"] = {
+						"Monk", -- [1]
+					},
+					["Jjmonk"] = {
+						"Monk", -- [1]
+					},
+					["Jensÿn"] = {
+						"Monk", -- [1]
+					},
+					["Viperfu"] = {
+						"Monk", -- [1]
+					},
+					["Êçtö"] = {
+						"Monk", -- [1]
+					},
+					["Teriyakichkn"] = {
+						"Monk", -- [1]
+					},
+					["Jangleleg"] = {
+						"Monk", -- [1]
+					},
+					["Bransen"] = {
+						"Monk", -- [1]
+					},
+				},
+				["Rogue"] = {
+					["Forbiddenx"] = {
+						"Rogue", -- [1]
+					},
+					["Kazjaz"] = {
+						"Rogue", -- [1]
+					},
+					["Peppernello"] = {
+						"Rogue", -- [1]
+					},
+					["Crimsonsea"] = {
+						"Rogue", -- [1]
+					},
+					["Versteckte"] = {
+						"Rogue", -- [1]
+					},
+					["Xdragon"] = {
+						"Rogue", -- [1]
+					},
+					["Merkkinz"] = {
+						"Rogue", -- [1]
+					},
+					["Bigbojangles"] = {
+						"Rogue", -- [1]
+					},
+					["Slyshade"] = {
+						"Rogue", -- [1]
+					},
+					["Ghostthief"] = {
+						"Rogue", -- [1]
+					},
+					["Igutyourback"] = {
+						"Rogue", -- [1]
+					},
+					["Cruixx"] = {
+						"Rogue", -- [1]
+					},
+					["Meetkevin"] = {
+						"Rogue", -- [1]
+					},
+					["Sandottie"] = {
+						"Rogue", -- [1]
+					},
+					["Sinepegral"] = {
+						"Rogue", -- [1]
+					},
+					["Highfat"] = {
+						"Rogue", -- [1]
+					},
+					["Dibberdabber"] = {
+						"Rogue", -- [1]
+					},
+					["Mcleach"] = {
+						"Rogue", -- [1]
+					},
+					["Rustyrazors"] = {
+						"Rogue", -- [1]
+					},
+					["Zeeker"] = {
+						"Rogue", -- [1]
+					},
+					["Stabbingtonz"] = {
+						"Rogue", -- [1]
+					},
+					["Sylentfall"] = {
+						"Rogue", -- [1]
+					},
+					["Erebuss"] = {
+						"Rogue", -- [1]
+					},
+					["Gìrthims"] = {
+						"Rogue", -- [1]
+					},
+					["Lunavian"] = {
+						"Rogue", -- [1]
+					},
+					["Irtehpoke"] = {
+						"Rogue", -- [1]
+					},
+					["Seshtime"] = {
+						"Rogue", -- [1]
+					},
+					["Treenir"] = {
+						"Rogue", -- [1]
+					},
+					["Sepulcherlis"] = {
+						"Rogue", -- [1]
+					},
+					["Mayaberovic"] = {
+						"Rogue", -- [1]
+					},
+					["Fatdamon"] = {
+						"Rogue", -- [1]
+					},
+					["Scoobysnackz"] = {
+						"Rogue", -- [1]
+					},
+					["Dragonslave"] = {
+						"Rogue", -- [1]
+					},
+					["Zerodays"] = {
+						"Rogue", -- [1]
+					},
+					["Hirosee"] = {
+						"Rogue", -- [1]
+					},
+					["Wutchup"] = {
+						"Rogue", -- [1]
+					},
+					["Laugh"] = {
+						"Rogue", -- [1]
+					},
+					["Discuse"] = {
+						"Rogue", -- [1]
+					},
+					["Sebö"] = {
+						"Rogue", -- [1]
+					},
+					["Erozhen"] = {
+						"Rogue", -- [1]
+					},
+					["Casuallambo"] = {
+						"Rogue", -- [1]
+					},
+					["Roguepirate"] = {
+						"Rogue", -- [1]
+					},
+					["Fungassassin"] = {
+						"Rogue", -- [1]
+					},
+					["Ballade"] = {
+						"Rogue", -- [1]
+					},
+					["Kurami"] = {
+						"Rogue", -- [1]
+					},
+					["Dirkee"] = {
+						"Rogue", -- [1]
+					},
+					["Sphilpokey"] = {
+						"Rogue", -- [1]
+					},
+					["Azerea"] = {
+						"Rogue", -- [1]
+					},
+					["Sìêrra"] = {
+						"Rogue", -- [1]
+					},
+					["Spookyspud"] = {
+						"Rogue", -- [1]
+					},
+					["Skidrøw"] = {
+						"Rogue", -- [1]
+					},
+					["Cobc"] = {
+						"Rogue", -- [1]
+					},
+					["Kumadon"] = {
+						"Rogue", -- [1]
+					},
+					["Troxs"] = {
+						"Rogue", -- [1]
+					},
+					["Sneakachoo"] = {
+						"Rogue", -- [1]
+					},
+					["Valtanis"] = {
+						"Rogue", -- [1]
+					},
+					["Trunco"] = {
+						"Rogue", -- [1]
+					},
+					["Whîtê"] = {
+						"Rogue", -- [1]
+					},
+					["Lankygob"] = {
+						"Rogue", -- [1]
+					},
+					["Llpikaboo"] = {
+						"Rogue", -- [1]
+					},
+					["Schroedaddy"] = {
+						"Rogue", -- [1]
+					},
+					["Koboh"] = {
+						"Rogue", -- [1]
+					},
+					["Cnp"] = {
+						"Rogue", -- [1]
+					},
+					["Fenrigz"] = {
+						"Rogue", -- [1]
+					},
+					["Crukshanks"] = {
+						"Rogue", -- [1]
+					},
+					["Tontsuoo"] = {
+						"Rogue", -- [1]
+					},
+					["Otc"] = {
+						"Rogue", -- [1]
+					},
+					["Honeybâdger"] = {
+						"Rogue", -- [1]
+					},
+					["Chickenlil"] = {
+						"Rogue", -- [1]
+					},
+					["Decoyqt"] = {
+						"Rogue", -- [1]
+					},
+					["Lustfulxd"] = {
+						"Rogue", -- [1]
+					},
+					["Maliketh"] = {
+						"Rogue", -- [1]
+					},
+					["Blvckceiling"] = {
+						"Rogue", -- [1]
+					},
+					["Aydemin"] = {
+						"Rogue", -- [1]
+					},
+					["Teshlorx"] = {
+						"Rogue", -- [1]
+					},
+					["Curasao"] = {
+						"Rogue", -- [1]
+					},
+					["Shadedace"] = {
+						"Rogue", -- [1]
+					},
+					["Wildturkyhef"] = {
+						"Rogue", -- [1]
+					},
+					["Lofti"] = {
+						"Rogue", -- [1]
+					},
+					["Staystrongr"] = {
+						"Rogue", -- [1]
+					},
+					["Zughugs"] = {
+						"Rogue", -- [1]
+					},
+					["Assassn"] = {
+						"Rogue", -- [1]
+					},
+					["Bellval"] = {
+						"Rogue", -- [1]
+					},
+					["Kelth"] = {
+						"Rogue", -- [1]
+					},
+					["Rebaulten"] = {
+						"Rogue", -- [1]
+					},
+					["Minï"] = {
+						"Rogue", -- [1]
+					},
+					["Stixs"] = {
+						"Rogue", -- [1]
+					},
+					["Froyoink"] = {
+						"Rogue", -- [1]
+					},
+					["Juliakip"] = {
+						"Rogue", -- [1]
+					},
+					["Vexate"] = {
+						"Rogue", -- [1]
+					},
+					["Uglyatroll"] = {
+						"Rogue", -- [1]
+					},
+					["Miyävi"] = {
+						"Rogue", -- [1]
+					},
+					["Issaboppin"] = {
+						"Rogue", -- [1]
+					},
+					["Ninethirty"] = {
+						"Rogue", -- [1]
+					},
+					["Zarithol"] = {
+						"Rogue", -- [1]
+					},
+					["Adhdqq"] = {
+						"Rogue", -- [1]
+					},
+					["Katehudson"] = {
+						"Rogue", -- [1]
+					},
+					["Blightwalker"] = {
+						"Rogue", -- [1]
+					},
+					["Omgyoudied"] = {
+						"Rogue", -- [1]
+					},
+					["Otteray"] = {
+						"Rogue", -- [1]
+					},
+					["Nikeswagxz"] = {
+						"Rogue", -- [1]
+					},
+					["Shiverwind"] = {
+						"Rogue", -- [1]
+					},
+					["Bigshmokedog"] = {
+						"Rogue", -- [1]
+					},
+					["Chadman"] = {
+						"Rogue", -- [1]
+					},
+					["Selyveera"] = {
+						"Rogue", -- [1]
+					},
+					["Forøtheøpunx"] = {
+						"Rogue", -- [1]
+					},
+					["Globalist"] = {
+						"Rogue", -- [1]
+					},
+					["Maxed"] = {
+						"Rogue", -- [1]
+					},
+					["Saberx"] = {
+						"Rogue", -- [1]
+					},
+					["Gnôblin"] = {
+						"Rogue", -- [1]
+					},
+					["Roguenar"] = {
+						"Rogue", -- [1]
+					},
+					["Critmas"] = {
+						"Rogue", -- [1]
+					},
+					["Artherro"] = {
+						"Rogue", -- [1]
+					},
+					["Elkapwn"] = {
+						"Rogue", -- [1]
+					},
+					["Rakyu"] = {
+						"Rogue", -- [1]
+					},
+					["Kzó"] = {
+						"Rogue", -- [1]
+					},
+					["Toefurr"] = {
+						"Rogue", -- [1]
+					},
+					["Dwane"] = {
+						"Rogue", -- [1]
+					},
+					["Firka"] = {
+						"Rogue", -- [1]
+					},
+					["Sÿnecdoche"] = {
+						"Rogue", -- [1]
+					},
+					["Køiy"] = {
+						"Rogue", -- [1]
+					},
+					["Goldfreys"] = {
+						"Rogue", -- [1]
+					},
+					["Corbec"] = {
+						"Rogue", -- [1]
+					},
+					["Benddover"] = {
+						"Rogue", -- [1]
+					},
+					["Merkb"] = {
+						"Rogue", -- [1]
+					},
+					["Deadforeal"] = {
+						"Rogue", -- [1]
+					},
+					["Gosumang"] = {
+						"Rogue", -- [1]
+					},
+					["Destric"] = {
+						"Rogue", -- [1]
+					},
+					["Polairesx"] = {
+						"Rogue", -- [1]
+					},
+					["Bobotoh"] = {
+						"Rogue", -- [1]
+					},
+					["Kohzies"] = {
+						"Rogue", -- [1]
+					},
+					["Willowumbraa"] = {
+						"Rogue", -- [1]
+					},
+					["Numerals"] = {
+						"Rogue", -- [1]
+					},
+					["Kibberzz"] = {
+						"Rogue", -- [1]
+					},
+					["Rancør"] = {
+						"Rogue", -- [1]
+					},
+					["Adriops"] = {
+						"Rogue", -- [1]
+					},
+					["Sapdaddi"] = {
+						"Rogue", -- [1]
+					},
+					["Røzay"] = {
+						"Rogue", -- [1]
+					},
+					["Kalthain"] = {
+						"Rogue", -- [1]
+					},
+					["Sellick"] = {
+						"Rogue", -- [1]
+					},
+					["Shankweaver"] = {
+						"Rogue", -- [1]
+					},
+					["Kïngcrimson"] = {
+						"Rogue", -- [1]
+					},
+					["Skillitt"] = {
+						"Rogue", -- [1]
+					},
+					["Callidus"] = {
+						"Rogue", -- [1]
+					},
+					["Caèn"] = {
+						"Rogue", -- [1]
+					},
+					["Maxxims"] = {
+						"Rogue", -- [1]
+					},
+					["Myrrkull"] = {
+						"Rogue", -- [1]
+					},
+					["Thrashk"] = {
+						"Rogue", -- [1]
+					},
+					["Frânklit"] = {
+						"Rogue", -- [1]
+					},
+					["Whîspêrs"] = {
+						"Rogue", -- [1]
+					},
+					["Moirai"] = {
+						"Rogue", -- [1]
+					},
+					["Skitsöu"] = {
+						"Rogue", -- [1]
+					},
+					["Ghosting"] = {
+						"Rogue", -- [1]
+					},
+					["Sanqqtum"] = {
+						"Rogue", -- [1]
+					},
+					["Likealight"] = {
+						"Rogue", -- [1]
+					},
+					["Echorng"] = {
+						"Rogue", -- [1]
+					},
+					["Korvynä"] = {
+						"Rogue", -- [1]
+					},
+				},
+				["Mage"] = {
+					["Ylliris"] = {
+						"Mage", -- [1]
+					},
+					["Drekthan"] = {
+						"Mage", -- [1]
+					},
+					["Dazanor"] = {
+						"Mage", -- [1]
+					},
+					["Cleaiic"] = {
+						"Mage", -- [1]
+					},
+					["Rinnir"] = {
+						"Mage", -- [1]
+					},
+					["Jrblaze"] = {
+						"Mage", -- [1]
+					},
+					["Volkr"] = {
+						"Mage", -- [1]
+					},
+					["Nifera"] = {
+						"Mage", -- [1]
+					},
+					["Polyestr"] = {
+						"Mage", -- [1]
+					},
+					["Fróstbité"] = {
+						"Mage", -- [1]
+					},
+					["Satrapayn"] = {
+						"Mage", -- [1]
+					},
+					["Ksmp"] = {
+						"Mage", -- [1]
+					},
+					["Acindriel"] = {
+						"Mage", -- [1]
+					},
+					["Beezly"] = {
+						"Mage", -- [1]
+					},
+					["Budyzer"] = {
+						"Mage", -- [1]
+					},
+					["Urulóki"] = {
+						"Mage", -- [1]
+					},
+					["Comesayeaha"] = {
+						"Mage", -- [1]
+					},
+					["Kushberries"] = {
+						"Mage", -- [1]
+					},
+					["Redmoonn"] = {
+						"Mage", -- [1]
+					},
+					["Degirro"] = {
+						"Mage", -- [1]
+					},
+					["Sekusmage"] = {
+						"Mage", -- [1]
+					},
+					["Oudisious"] = {
+						"Mage", -- [1]
+					},
+					["Wolfswood"] = {
+						"Mage", -- [1]
+					},
+					["Skuubasteve"] = {
+						"Mage", -- [1]
+					},
+					["Mexxipotter"] = {
+						"Mage", -- [1]
+					},
+					["Èßüßéßõkßé"] = {
+						"Mage", -- [1]
+					},
+					["Stãy"] = {
+						"Mage", -- [1]
+					},
+					["Goriznook"] = {
+						"Mage", -- [1]
+					},
+					["Aoetoki"] = {
+						"Mage", -- [1]
+					},
+					["Brutebacon"] = {
+						"Mage", -- [1]
+					},
+					["Adunaphel"] = {
+						"Mage", -- [1]
+					},
+					["Jandalina"] = {
+						"Mage", -- [1]
+					},
+					["Velzeda"] = {
+						"Mage", -- [1]
+					},
+					["Boommagiic"] = {
+						"Mage", -- [1]
+					},
+					["Rammileignus"] = {
+						"Mage", -- [1]
+					},
+					["Phenik"] = {
+						"Mage", -- [1]
+					},
+					["Vfm"] = {
+						"Mage", -- [1]
+					},
+					["Nécrö"] = {
+						"Mage", -- [1]
+					},
+					["Chappoz"] = {
+						"Mage", -- [1]
+					},
+					["Shambels"] = {
+						"Mage", -- [1]
+					},
+					["Vocaliized"] = {
+						"Mage", -- [1]
+					},
+					["Haeresy"] = {
+						"Mage", -- [1]
+					},
+					["Samandrial"] = {
+						"Mage", -- [1]
+					},
+					["Minitte"] = {
+						"Mage", -- [1]
+					},
+					["Majéré"] = {
+						"Mage", -- [1]
+					},
+					["Aeondisk"] = {
+						"Mage", -- [1]
+					},
+					["Weiler"] = {
+						"Mage", -- [1]
+					},
+					["Astromancia"] = {
+						"Mage", -- [1]
+					},
+					["Frozendabzz"] = {
+						"Mage", -- [1]
+					},
+					["Imo"] = {
+						"Mage", -- [1]
+					},
+					["Darres"] = {
+						"Mage", -- [1]
+					},
+					["Purpwizrd"] = {
+						"Mage", -- [1]
+					},
+					["Zepplin"] = {
+						"Mage", -- [1]
+					},
+					["Hypothermiã"] = {
+						"Mage", -- [1]
+					},
+					["Justfog"] = {
+						"Mage", -- [1]
+					},
+					["Zauberin"] = {
+						"Mage", -- [1]
+					},
+					["Maasy"] = {
+						"Mage", -- [1]
+					},
+					["Ripit"] = {
+						"Mage", -- [1]
+					},
+					["Minishaft"] = {
+						"Mage", -- [1]
+					},
+					["Röbots"] = {
+						"Mage", -- [1]
+					},
+					["Loservirgin"] = {
+						"Mage", -- [1]
+					},
+					["Jessar"] = {
+						"Mage", -- [1]
+					},
+					["Slacko"] = {
+						"Mage", -- [1]
+					},
+					["Outoforderr"] = {
+						"Mage", -- [1]
+					},
+					["Markotic"] = {
+						"Mage", -- [1]
+					},
+					["Rockhounder"] = {
+						"Mage", -- [1]
+					},
+					["Shmuu"] = {
+						"Mage", -- [1]
+					},
+					["Gelile"] = {
+						"Mage", -- [1]
+					},
+					["Zemeria"] = {
+						"Mage", -- [1]
+					},
+					["Bunnypig"] = {
+						"Mage", -- [1]
+					},
+					["Baylorbear"] = {
+						"Mage", -- [1]
+					},
+					["Trollnado"] = {
+						"Mage", -- [1]
+					},
+					["Burdi"] = {
+						"Mage", -- [1]
+					},
+					["Nymuehk"] = {
+						"Mage", -- [1]
+					},
+					["Karuneria"] = {
+						"Mage", -- [1]
+					},
+					["Meidg"] = {
+						"Mage", -- [1]
+					},
+					["Signy"] = {
+						"Mage", -- [1]
+					},
+					["Hoelovin"] = {
+						"Mage", -- [1]
+					},
+					["Catwiz"] = {
+						"Mage", -- [1]
+					},
+					["Phorieu"] = {
+						"Mage", -- [1]
+					},
+					["Tuggx"] = {
+						"Mage", -- [1]
+					},
+					["Vll"] = {
+						"Mage", -- [1]
+					},
+					["Ess"] = {
+						"Mage", -- [1]
+					},
+					["Vultz"] = {
+						"Mage", -- [1]
+					},
+					["Blakmagicks"] = {
+						"Mage", -- [1]
+					},
+					["Clermeil"] = {
+						"Mage", -- [1]
+					},
+					["Musaji"] = {
+						"Mage", -- [1]
+					},
+					["Blackiyc"] = {
+						"Mage", -- [1]
+					},
+					["Zanto"] = {
+						"Mage", -- [1]
+					},
+					["Faminecay"] = {
+						"Mage", -- [1]
+					},
+					["Mohavi"] = {
+						"Mage", -- [1]
+					},
+					["Shindorei"] = {
+						"Mage", -- [1]
+					},
+					["Kasm"] = {
+						"Mage", -- [1]
+					},
+					["Zackiavelli"] = {
+						"Mage", -- [1]
+					},
+					["Alarish"] = {
+						"Mage", -- [1]
+					},
+					["Birtchlol"] = {
+						"Mage", -- [1]
+					},
+					["Quizcicle"] = {
+						"Mage", -- [1]
+					},
+					["Seefour"] = {
+						"Mage", -- [1]
+					},
+					["Lixxyy"] = {
+						"Mage", -- [1]
+					},
+					["Tsookalos"] = {
+						"Mage", -- [1]
+					},
+					["Zoely"] = {
+						"Mage", -- [1]
+					},
+					["Littygang"] = {
+						"Mage", -- [1]
+					},
+					["Tolaji"] = {
+						"Mage", -- [1]
+					},
+					["Hyrdoo"] = {
+						"Mage", -- [1]
+					},
+					["Skyrael"] = {
+						"Mage", -- [1]
+					},
+					["Negativefive"] = {
+						"Mage", -- [1]
+					},
+					["Kheyn"] = {
+						"Mage", -- [1]
+					},
+					["Mortyevile"] = {
+						"Mage", -- [1]
+					},
+					["Androlina"] = {
+						"Mage", -- [1]
+					},
+					["Beerbaron"] = {
+						"Mage", -- [1]
+					},
+					["Kemosuhbreh"] = {
+						"Mage", -- [1]
+					},
+					["Undedkev"] = {
+						"Mage", -- [1]
+					},
+					["Dämashi"] = {
+						"Mage", -- [1]
+					},
+					["Coronth"] = {
+						"Mage", -- [1]
+					},
+					["Mojavie"] = {
+						"Mage", -- [1]
+					},
+					["Igast"] = {
+						"Mage", -- [1]
+					},
+					["Frostyspells"] = {
+						"Mage", -- [1]
+					},
+					["Apocalipsys"] = {
+						"Mage", -- [1]
+					},
+					["Skinnykween"] = {
+						"Mage", -- [1]
+					},
+					["Quîck"] = {
+						"Mage", -- [1]
+					},
+					["Hydrolance"] = {
+						"Mage", -- [1]
+					},
+					["Steezeyj"] = {
+						"Mage", -- [1]
+					},
+					["Nåberios"] = {
+						"Mage", -- [1]
+					},
+					["Zyleen"] = {
+						"Mage", -- [1]
+					},
+					["Wizurd"] = {
+						"Mage", -- [1]
+					},
+					["Eternalsunny"] = {
+						"Mage", -- [1]
+					},
+					["Fireboomer"] = {
+						"Mage", -- [1]
+					},
+					["Pomalisk"] = {
+						"Mage", -- [1]
+					},
+					["Nesmuesticus"] = {
+						"Mage", -- [1]
+					},
+					["Yësjulz"] = {
+						"Mage", -- [1]
+					},
+					["Ithalian"] = {
+						"Mage", -- [1]
+					},
+					["Freshpjs"] = {
+						"Mage", -- [1]
+					},
+					["Alleus"] = {
+						"Mage", -- [1]
+					},
+					["Aelearai"] = {
+						"Mage", -- [1]
+					},
+					["Howbowdaa"] = {
+						"Mage", -- [1]
+					},
+					["Dylantroll"] = {
+						"Mage", -- [1]
+					},
+					["Zerakyl"] = {
+						"Mage", -- [1]
+					},
+					["Xaiser"] = {
+						"Mage", -- [1]
+					},
+					["Purpleeganja"] = {
+						"Mage", -- [1]
+					},
+					["Slushee"] = {
+						"Mage", -- [1]
+					},
+					["Touchofhades"] = {
+						"Mage", -- [1]
+					},
+					["Kaelthaws"] = {
+						"Mage", -- [1]
+					},
+					["Mucadimu"] = {
+						"Mage", -- [1]
+					},
+					["Ashrel"] = {
+						"Mage", -- [1]
+					},
+					["Kokipa"] = {
+						"Mage", -- [1]
+					},
+					["Magisean"] = {
+						"Mage", -- [1]
+					},
+				},
+				["Demon Hunter"] = {
+					["Robbe"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Blackrune"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Zbubs"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Yangmanchun"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Yongarii"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Essoh"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Nicklouse"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Díscordíá"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Theunzelmain"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Justbob"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demonicscum"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Speedh"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Deminhuntard"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Glämdrïng"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demonskulls"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Lyruh"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Momoyi"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Grïzzy"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Nymeríá"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Crychan"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ellwynth"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Bloomety"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kattkiss"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Vandalina"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ilovesushi"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kasella"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Hornstarlol"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Razorfever"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Lunamar"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Nitekk"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Khaortas"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Moonpang"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Pinkwhip"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Phoenixrose"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Collete"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Dominopete"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ferrousoxide"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Tilldie"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Byseven"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Farzi"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Alphatoo"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Caladrial"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Notoriðus"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Twiztèd"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Dexran"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Crasiedon"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Soulhacker"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Padtai"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Sabbát"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Gvetted"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Fuctrump"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Hávðc"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Blurnomnom"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ssuriel"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Craftdemon"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Susandresden"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Doombrînger"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Alexdh"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Nyssathelae"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Goldsplatt"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ceriyas"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Pìn"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Showstopperr"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Badmeta"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Missjotab"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Madwings"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Stmdashz"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Uppercutbutt"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jeager"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jaehaeyrs"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ihavenoshirt"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Deadlydemonz"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kaleri"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Lilßecky"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Malikdafreak"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Vynni"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Danqbudz"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Captainmami"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Clappd"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Gamblotron"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Thranrodir"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Cleavekid"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Dyran"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Clinicalclap"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Abezyzz"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Biinah"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Richrussell"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Cthi"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Tigalicious"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Morphyblind"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jermayan"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Khyku"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jamaldh"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ðib"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kiela"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Fomor"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Geene"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Tenderoni"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Buttoutt"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Babyfeeg"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jozmahn"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jehzt"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Dahootch"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Daemed"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Sassytrap"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Pajamatwo"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Narinini"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Vinthrop"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Outsec"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demonlaw"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Microspider"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Slápchop"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Pilseni"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Rahkshasa"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Hospitalfood"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Agrobeam"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Soina"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Batgril"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ziddim"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Trendemic"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Soupstoohot"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Vandile"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Poonlidan"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Northyorkmon"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demonjun"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Zeroxd"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Jahcks"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Faythunter"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Divîde"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Cheeseburg"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Carmenem"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demoxy"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Acrophobian"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Atreyuxx"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Glaiverunner"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Yfnmurda"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kinaari"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demondanse"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Dumbgirl"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Triofaket"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Demonpudge"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Lilitú"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ép"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Blankettz"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Capzielit"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Cüpqüakes"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Reapspoo"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Erekasa"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Ruthvik"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Lamist"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Korkez"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Slayerdemond"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Twinnblade"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Korhum"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Snipernite"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Kiande"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Burrhaus"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Aleiha"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Snoriand"] = {
+						"Demon Hunter", -- [1]
+					},
+					["Hòrnstár"] = {
+						"Demon Hunter", -- [1]
+					},
+				},
+				["Druid"] = {
+					["Newdru"] = {
+						"Druid", -- [1]
+					},
+					["Langbang"] = {
+						"Druid", -- [1]
+					},
+					["Demibaby"] = {
+						"Druid", -- [1]
+					},
+					["Bearordeer"] = {
+						"Druid", -- [1]
+					},
+					["Calderkaderk"] = {
+						"Druid", -- [1]
+					},
+					["Bigbuffguy"] = {
+						"Druid", -- [1]
+					},
+					["Bahaghari"] = {
+						"Druid", -- [1]
+					},
+					["Oaktrèe"] = {
+						"Druid", -- [1]
+					},
+					["Woodchunks"] = {
+						"Druid", -- [1]
+					},
+					["Fahj"] = {
+						"Druid", -- [1]
+					},
+					["Tôidi"] = {
+						"Druid", -- [1]
+					},
+					["Dabroski"] = {
+						"Druid", -- [1]
+					},
+					["Shdruid"] = {
+						"Druid", -- [1]
+					},
+					["Mammalogy"] = {
+						"Druid", -- [1]
+					},
+					["Royalheal"] = {
+						"Druid", -- [1]
+					},
+					["Tushonka"] = {
+						"Druid", -- [1]
+					},
+					["Annoying"] = {
+						"Druid", -- [1]
+					},
+					["Rexs"] = {
+						"Druid", -- [1]
+					},
+					["Sinifanboi"] = {
+						"Druid", -- [1]
+					},
+					["Katbear"] = {
+						"Druid", -- [1]
+					},
+					["Nýenna"] = {
+						"Druid", -- [1]
+					},
+					["Rittikel"] = {
+						"Druid", -- [1]
+					},
+					["Eclipsexx"] = {
+						"Druid", -- [1]
+					},
+					["Xsuns"] = {
+						"Druid", -- [1]
+					},
+					["Ðankleaf"] = {
+						"Druid", -- [1]
+					},
+					["Thrashpls"] = {
+						"Druid", -- [1]
+					},
+					["Boombrox"] = {
+						"Druid", -- [1]
+					},
+					["Francessca"] = {
+						"Druid", -- [1]
+					},
+					["Coala"] = {
+						"Druid", -- [1]
+					},
+					["Iusosang"] = {
+						"Druid", -- [1]
+					},
+					["Elwick"] = {
+						"Druid", -- [1]
+					},
+					["Ëñïgmätïç"] = {
+						"Druid", -- [1]
+					},
+					["Camobear"] = {
+						"Druid", -- [1]
+					},
+					["Bïgpaws"] = {
+						"Druid", -- [1]
+					},
+					["Mkvennèr"] = {
+						"Druid", -- [1]
+					},
+					["Swerp"] = {
+						"Druid", -- [1]
+					},
+					["Yingasx"] = {
+						"Druid", -- [1]
+					},
+					["Mooncatbru"] = {
+						"Druid", -- [1]
+					},
+					["Chihack"] = {
+						"Druid", -- [1]
+					},
+					["Pakunon"] = {
+						"Druid", -- [1]
+					},
+					["Blkfacegød"] = {
+						"Druid", -- [1]
+					},
+					["Ytholol"] = {
+						"Druid", -- [1]
+					},
+					["Moonblaise"] = {
+						"Druid", -- [1]
+					},
+					["Biomes"] = {
+						"Druid", -- [1]
+					},
+					["Ceofribb"] = {
+						"Druid", -- [1]
+					},
+					["Loudpacks"] = {
+						"Druid", -- [1]
+					},
+					["Mystrah"] = {
+						"Druid", -- [1]
+					},
+					["Toadeyx"] = {
+						"Druid", -- [1]
+					},
+					["Squarter"] = {
+						"Druid", -- [1]
+					},
+					["Orejitas"] = {
+						"Druid", -- [1]
+					},
+					["Mooruid"] = {
+						"Druid", -- [1]
+					},
+					["Manadruid"] = {
+						"Druid", -- [1]
+					},
+					["Anthwracks"] = {
+						"Druid", -- [1]
+					},
+					["Sinsombra"] = {
+						"Druid", -- [1]
+					},
+					["Mebe"] = {
+						"Druid", -- [1]
+					},
+					["Zipsdru"] = {
+						"Druid", -- [1]
+					},
+					["Amrin"] = {
+						"Druid", -- [1]
+					},
+					["Nakkota"] = {
+						"Druid", -- [1]
+					},
+					["Decomplished"] = {
+						"Druid", -- [1]
+					},
+					["Rymjobe"] = {
+						"Druid", -- [1]
+					},
+					["Starlordxx"] = {
+						"Druid", -- [1]
+					},
+					["Druidstin"] = {
+						"Druid", -- [1]
+					},
+					["Yeruid"] = {
+						"Druid", -- [1]
+					},
+					["Boondoggle"] = {
+						"Druid", -- [1]
+					},
+					["Sarkons"] = {
+						"Druid", -- [1]
+					},
+					["Demonpoof"] = {
+						"Druid", -- [1]
+					},
+					["Dbzilla"] = {
+						"Druid", -- [1]
+					},
+					["Egotestical"] = {
+						"Druid", -- [1]
+					},
+					["Maroden"] = {
+						"Druid", -- [1]
+					},
+					["Nogàrd"] = {
+						"Druid", -- [1]
+					},
+					["Groót"] = {
+						"Druid", -- [1]
+					},
+					["Loblib"] = {
+						"Druid", -- [1]
+					},
+					["Joraah"] = {
+						"Druid", -- [1]
+					},
+					["Hotboykisser"] = {
+						"Druid", -- [1]
+					},
+					["Bullresh"] = {
+						"Druid", -- [1]
+					},
+					["Lazyhots"] = {
+						"Druid", -- [1]
+					},
+					["Kèety"] = {
+						"Druid", -- [1]
+					},
+					["Kfladyross"] = {
+						"Druid", -- [1]
+					},
+					["Lorïcorn"] = {
+						"Druid", -- [1]
+					},
+					["Fetreezus"] = {
+						"Druid", -- [1]
+					},
+					["Furrynwet"] = {
+						"Druid", -- [1]
+					},
+					["Lepewp"] = {
+						"Druid", -- [1]
+					},
+					["Tenguboom"] = {
+						"Druid", -- [1]
+					},
+					["Zígzag"] = {
+						"Druid", -- [1]
+					},
+					["Boarlis"] = {
+						"Druid", -- [1]
+					},
+					["Xerrul"] = {
+						"Druid", -- [1]
+					},
+					["Murkdort"] = {
+						"Druid", -- [1]
+					},
+					["Daddydino"] = {
+						"Druid", -- [1]
+					},
+					["Ohsees"] = {
+						"Druid", -- [1]
+					},
+					["Shaedrix"] = {
+						"Druid", -- [1]
+					},
+					["Riicchh"] = {
+						"Druid", -- [1]
+					},
+					["Tonnie"] = {
+						"Druid", -- [1]
+					},
+					["Inthehouse"] = {
+						"Druid", -- [1]
+					},
+					["Eeyöre"] = {
+						"Druid", -- [1]
+					},
+					["Niharu"] = {
+						"Druid", -- [1]
+					},
+					["Ameizingg"] = {
+						"Druid", -- [1]
+					},
+					["Ranktwoferal"] = {
+						"Druid", -- [1]
+					},
+					["Voodoohawts"] = {
+						"Druid", -- [1]
+					},
+					["Shadjr"] = {
+						"Druid", -- [1]
+					},
+					["Sylvvie"] = {
+						"Druid", -- [1]
+					},
+					["Reggis"] = {
+						"Druid", -- [1]
+					},
+					["Ferguso"] = {
+						"Druid", -- [1]
+					},
+					["Grówl"] = {
+						"Druid", -- [1]
+					},
+					["Kangru"] = {
+						"Druid", -- [1]
+					},
+					["Nickthetrain"] = {
+						"Druid", -- [1]
+					},
+					["Jezdruid"] = {
+						"Druid", -- [1]
+					},
+					["Karimae"] = {
+						"Druid", -- [1]
+					},
+					["Moonknìght"] = {
+						"Druid", -- [1]
+					},
+					["Fênrìr"] = {
+						"Druid", -- [1]
+					},
+					["Nessá"] = {
+						"Druid", -- [1]
+					},
+					["Vinnylee"] = {
+						"Druid", -- [1]
+					},
+					["Nayy"] = {
+						"Druid", -- [1]
+					},
+					["Ibloodraven"] = {
+						"Druid", -- [1]
+					},
+					["Kaplöx"] = {
+						"Druid", -- [1]
+					},
+					["Frescavena"] = {
+						"Druid", -- [1]
+					},
+					["Chickéñ"] = {
+						"Druid", -- [1]
+					},
+					["Jabtratluz"] = {
+						"Druid", -- [1]
+					},
+					["Animangus"] = {
+						"Druid", -- [1]
+					},
+					["Jabak"] = {
+						"Druid", -- [1]
+					},
+					["Whiskyky"] = {
+						"Druid", -- [1]
+					},
+					["Proheal"] = {
+						"Druid", -- [1]
+					},
+					["Druidrager"] = {
+						"Druid", -- [1]
+					},
+					["Choonhyang"] = {
+						"Druid", -- [1]
+					},
+					["Grymmclaw"] = {
+						"Druid", -- [1]
+					},
+					["Wildhorns"] = {
+						"Druid", -- [1]
+					},
+					["Squantoe"] = {
+						"Druid", -- [1]
+					},
+					["Ticklefickle"] = {
+						"Druid", -- [1]
+					},
+					["Jtqt"] = {
+						"Druid", -- [1]
+					},
+					["Wazalskie"] = {
+						"Druid", -- [1]
+					},
+					["Quadrivium"] = {
+						"Druid", -- [1]
+					},
+					["Jeffww"] = {
+						"Druid", -- [1]
+					},
+					["Playonwordz"] = {
+						"Druid", -- [1]
+					},
+					["Rmpg"] = {
+						"Druid", -- [1]
+					},
+					["Projektb"] = {
+						"Druid", -- [1]
+					},
+					["Phatkow"] = {
+						"Druid", -- [1]
+					},
+					["Snickerdome"] = {
+						"Druid", -- [1]
+					},
+					["Papashift"] = {
+						"Druid", -- [1]
+					},
+					["Mohawkonme"] = {
+						"Druid", -- [1]
+					},
+					["Dinotree"] = {
+						"Druid", -- [1]
+					},
+					["Vorrix"] = {
+						"Druid", -- [1]
+					},
+					["Celzerias"] = {
+						"Druid", -- [1]
+					},
+					["Creamcow"] = {
+						"Druid", -- [1]
+					},
+					["Mossybeaver"] = {
+						"Druid", -- [1]
+					},
+					["Starlordzz"] = {
+						"Druid", -- [1]
+					},
+					["Wythrin"] = {
+						"Druid", -- [1]
+					},
+					["Doublediesel"] = {
+						"Druid", -- [1]
+					},
+					["Ropeshoes"] = {
+						"Druid", -- [1]
+					},
+					["Kluugar"] = {
+						"Druid", -- [1]
+					},
+					["Feníx"] = {
+						"Druid", -- [1]
+					},
+					["Kittenhuffer"] = {
+						"Druid", -- [1]
+					},
+					["Thoowky"] = {
+						"Druid", -- [1]
+					},
+					["Barbatos"] = {
+						"Druid", -- [1]
+					},
+					["Kawanni"] = {
+						"Druid", -- [1]
+					},
+					["Rumcraft"] = {
+						"Druid", -- [1]
+					},
+					["Umdt"] = {
+						"Druid", -- [1]
+					},
+					["Moordred"] = {
+						"Druid", -- [1]
+					},
+					["Bahnak"] = {
+						"Druid", -- [1]
+					},
+					["Lilerickk"] = {
+						"Druid", -- [1]
+					},
+					["Valeya"] = {
+						"Druid", -- [1]
+					},
+					["Druuddood"] = {
+						"Druid", -- [1]
+					},
+					["Kimmihyun"] = {
+						"Druid", -- [1]
+					},
+					["Njd"] = {
+						"Druid", -- [1]
+					},
+					["Securïty"] = {
+						"Druid", -- [1]
+					},
+					["Dracjo"] = {
+						"Druid", -- [1]
+					},
+					["Celem"] = {
+						"Druid", -- [1]
+					},
+					["Richmondhill"] = {
+						"Druid", -- [1]
+					},
+					["Gúùnchi"] = {
+						"Druid", -- [1]
+					},
+					["Baroman"] = {
+						"Druid", -- [1]
+					},
+					["Deanno"] = {
+						"Druid", -- [1]
+					},
+					["Nihillo"] = {
+						"Druid", -- [1]
+					},
+					["Limbeaux"] = {
+						"Druid", -- [1]
+					},
+					["Thayros"] = {
+						"Druid", -- [1]
+					},
+					["Yastela"] = {
+						"Druid", -- [1]
+					},
+					["Twignberrys"] = {
+						"Druid", -- [1]
+					},
+					["Thickyd"] = {
+						"Druid", -- [1]
+					},
+					["Vintunemusic"] = {
+						"Druid", -- [1]
+					},
+					["Itna"] = {
+						"Druid", -- [1]
+					},
+					["Pumpkinspìce"] = {
+						"Druid", -- [1]
+					},
+					["Grootrox"] = {
+						"Druid", -- [1]
+					},
+					["Identityx"] = {
+						"Druid", -- [1]
+					},
+					["Ooshift"] = {
+						"Druid", -- [1]
+					},
+					["Hötts"] = {
+						"Druid", -- [1]
+					},
+					["Psnarf"] = {
+						"Druid", -- [1]
+					},
+					["Grizlybear"] = {
+						"Druid", -- [1]
+					},
+					["Ursall"] = {
+						"Druid", -- [1]
+					},
+					["Taerawr"] = {
+						"Druid", -- [1]
+					},
+					["Hornstriker"] = {
+						"Druid", -- [1]
+					},
+					["Nobrezz"] = {
+						"Druid", -- [1]
+					},
+					["Richterps"] = {
+						"Druid", -- [1]
+					},
+					["Skoffinz"] = {
+						"Druid", -- [1]
+					},
+					["Aeilene"] = {
+						"Druid", -- [1]
+					},
+					["Wrigy"] = {
+						"Druid", -- [1]
+					},
+					["Zeekez"] = {
+						"Druid", -- [1]
+					},
+					["Thaswild"] = {
+						"Druid", -- [1]
+					},
+					["Thedafox"] = {
+						"Druid", -- [1]
+					},
+					["Zannock"] = {
+						"Druid", -- [1]
+					},
+					["Ñïghtìngdälè"] = {
+						"Druid", -- [1]
+					},
+					["Wafflesauce"] = {
+						"Druid", -- [1]
+					},
+					["Saweetie"] = {
+						"Druid", -- [1]
+					},
+					["Hotshere"] = {
+						"Druid", -- [1]
+					},
+					["Ztd"] = {
+						"Druid", -- [1]
+					},
+					["Shersha"] = {
+						"Druid", -- [1]
+					},
+					["Ediblefood"] = {
+						"Druid", -- [1]
+					},
+					["Hawtboi"] = {
+						"Druid", -- [1]
+					},
+					["Tokarr"] = {
+						"Druid", -- [1]
+					},
+					["Izanu"] = {
+						"Druid", -- [1]
+					},
+					["Cårriez"] = {
+						"Druid", -- [1]
+					},
+					["Reflexus"] = {
+						"Druid", -- [1]
+					},
+					["Foreverdruid"] = {
+						"Druid", -- [1]
+					},
+					["Terrabul"] = {
+						"Druid", -- [1]
+					},
+					["Ganjibai"] = {
+						"Druid", -- [1]
+					},
+					["Arsarrius"] = {
+						"Druid", -- [1]
+					},
+					["Furriehentai"] = {
+						"Druid", -- [1]
+					},
+					["Ultramagntic"] = {
+						"Druid", -- [1]
+					},
+					["Emjey"] = {
+						"Druid", -- [1]
+					},
+					["Rhægarr"] = {
+						"Druid", -- [1]
+					},
+					["Druidub"] = {
+						"Druid", -- [1]
+					},
+					["Mintnim"] = {
+						"Druid", -- [1]
+					},
+					["Huqz"] = {
+						"Druid", -- [1]
+					},
+					["Wanato"] = {
+						"Druid", -- [1]
+					},
+					["Mensonm"] = {
+						"Druid", -- [1]
+					},
+					["Astrosparkle"] = {
+						"Druid", -- [1]
+					},
+					["Solardrift"] = {
+						"Druid", -- [1]
+					},
+					["Flowx"] = {
+						"Druid", -- [1]
+					},
+					["Pamchop"] = {
+						"Druid", -- [1]
+					},
+					["Grattokk"] = {
+						"Druid", -- [1]
+					},
+					["Timoothy"] = {
+						"Druid", -- [1]
+					},
+					["Vailo"] = {
+						"Druid", -- [1]
+					},
+					["Synfuldruid"] = {
+						"Druid", -- [1]
+					},
+					["Silvur"] = {
+						"Druid", -- [1]
+					},
+					["Toxictree"] = {
+						"Druid", -- [1]
+					},
+					["Lazorchickn"] = {
+						"Druid", -- [1]
+					},
+					["Kroneckr"] = {
+						"Druid", -- [1]
+					},
+					["Hiphoff"] = {
+						"Druid", -- [1]
+					},
+					["Horseman"] = {
+						"Druid", -- [1]
+					},
+					["Wryb"] = {
+						"Druid", -- [1]
+					},
+					["Howmyasslook"] = {
+						"Druid", -- [1]
+					},
+					["Chilloutbràh"] = {
+						"Druid", -- [1]
+					},
+					["Sïsløvësmë"] = {
+						"Druid", -- [1]
+					},
+					["Mizzypoo"] = {
+						"Druid", -- [1]
+					},
+					["Dorkforhire"] = {
+						"Druid", -- [1]
+					},
+					["Lacc"] = {
+						"Druid", -- [1]
+					},
+					["Aynia"] = {
+						"Druid", -- [1]
+					},
+					["Chronié"] = {
+						"Druid", -- [1]
+					},
+					["Aklar"] = {
+						"Druid", -- [1]
+					},
+					["Druely"] = {
+						"Druid", -- [1]
+					},
+					["Acten"] = {
+						"Druid", -- [1]
+					},
+					["Savingface"] = {
+						"Druid", -- [1]
+					},
+					["Räylinä"] = {
+						"Druid", -- [1]
+					},
+					["Blossomboy"] = {
+						"Druid", -- [1]
+					},
+					["Druusie"] = {
+						"Druid", -- [1]
+					},
+					["Starstrike"] = {
+						"Druid", -- [1]
+					},
+					["Miloc"] = {
+						"Druid", -- [1]
+					},
+					["Seolbin"] = {
+						"Druid", -- [1]
+					},
+					["Soklern"] = {
+						"Druid", -- [1]
+					},
+					["Dinomojo"] = {
+						"Druid", -- [1]
+					},
+					["Darkrooty"] = {
+						"Druid", -- [1]
+					},
+					["Multituskin"] = {
+						"Druid", -- [1]
+					},
+					["Braxdru"] = {
+						"Druid", -- [1]
+					},
+					["Ttr"] = {
+						"Druid", -- [1]
+					},
+					["Nuuraiga"] = {
+						"Druid", -- [1]
+					},
+					["Shellan"] = {
+						"Druid", -- [1]
+					},
+					["Joxeluov"] = {
+						"Druid", -- [1]
+					},
+					["Snozzwangers"] = {
+						"Druid", -- [1]
+					},
+					["Ubaskills"] = {
+						"Druid", -- [1]
+					},
+					["Lunacka"] = {
+						"Druid", -- [1]
+					},
+					["Brueshedrage"] = {
+						"Druid", -- [1]
+					},
+					["Broado"] = {
+						"Druid", -- [1]
+					},
+					["Beamcream"] = {
+						"Druid", -- [1]
+					},
+					["Bells"] = {
+						"Druid", -- [1]
+					},
+					["Forwhat"] = {
+						"Druid", -- [1]
+					},
+					["Bìrchtree"] = {
+						"Druid", -- [1]
+					},
+					["Zlantz"] = {
+						"Druid", -- [1]
+					},
+					["Valiantvader"] = {
+						"Druid", -- [1]
+					},
+					["Samsqüanche"] = {
+						"Druid", -- [1]
+					},
+					["Tøxîn"] = {
+						"Druid", -- [1]
+					},
+					["Aglomy"] = {
+						"Druid", -- [1]
+					},
+					["Cyanwolfy"] = {
+						"Druid", -- [1]
+					},
+					["Shiftyboom"] = {
+						"Druid", -- [1]
+					},
+					["Durando"] = {
+						"Druid", -- [1]
+					},
+					["Spirex"] = {
+						"Druid", -- [1]
+					},
+					["Jetwarg"] = {
+						"Druid", -- [1]
+					},
+					["Nitekd"] = {
+						"Druid", -- [1]
+					},
+					["Sonofabirch"] = {
+						"Druid", -- [1]
+					},
+					["Amberdoge"] = {
+						"Druid", -- [1]
+					},
+					["Cônflicted"] = {
+						"Druid", -- [1]
+					},
+					["Talakitty"] = {
+						"Druid", -- [1]
+					},
+					["Treesum"] = {
+						"Druid", -- [1]
+					},
+				},
+				["Death Knight"] = {
+					["Milleuda"] = {
+						"Death Knight", -- [1]
+					},
+					["Deathhugg"] = {
+						"Death Knight", -- [1]
+					},
+					["Daykay"] = {
+						"Death Knight", -- [1]
+					},
+					["Nánk"] = {
+						"Death Knight", -- [1]
+					},
+					["Pootytanglol"] = {
+						"Death Knight", -- [1]
+					},
+					["Gryliz"] = {
+						"Death Knight", -- [1]
+					},
+					["Kamaranda"] = {
+						"Death Knight", -- [1]
+					},
+					["Vo"] = {
+						"Death Knight", -- [1]
+					},
+					["Therodk"] = {
+						"Death Knight", -- [1]
+					},
+					["Yakica"] = {
+						"Death Knight", -- [1]
+					},
+					["Xinkz"] = {
+						"Death Knight", -- [1]
+					},
+					["Tocoes"] = {
+						"Death Knight", -- [1]
+					},
+					["Kushkníght"] = {
+						"Death Knight", -- [1]
+					},
+					["Lichnyx"] = {
+						"Death Knight", -- [1]
+					},
+					["Vicexo"] = {
+						"Death Knight", -- [1]
+					},
+					["Dawgsdk"] = {
+						"Death Knight", -- [1]
+					},
+					["Brijit"] = {
+						"Death Knight", -- [1]
+					},
+					["Dèpressed"] = {
+						"Death Knight", -- [1]
+					},
+					["Heartbreáker"] = {
+						"Death Knight", -- [1]
+					},
+					["Lôckout"] = {
+						"Death Knight", -- [1]
+					},
+					["Paxuun"] = {
+						"Death Knight", -- [1]
+					},
+					["Grimortality"] = {
+						"Death Knight", -- [1]
+					},
+					["Azre"] = {
+						"Death Knight", -- [1]
+					},
+					["Queldora"] = {
+						"Death Knight", -- [1]
+					},
+					["Helchaer"] = {
+						"Death Knight", -- [1]
+					},
+					["Helpmeup"] = {
+						"Death Knight", -- [1]
+					},
+					["Gillgapilot"] = {
+						"Death Knight", -- [1]
+					},
+					["Geniixx"] = {
+						"Death Knight", -- [1]
+					},
+					["Dhnym"] = {
+						"Death Knight", -- [1]
+					},
+					["Iamforbaconz"] = {
+						"Death Knight", -- [1]
+					},
+					["Vyyvanze"] = {
+						"Death Knight", -- [1]
+					},
+					["Exeler"] = {
+						"Death Knight", -- [1]
+					},
+					["Akomans"] = {
+						"Death Knight", -- [1]
+					},
+					["Vethys"] = {
+						"Death Knight", -- [1]
+					},
+					["Girlbabe"] = {
+						"Death Knight", -- [1]
+					},
+					["Tastemytoes"] = {
+						"Death Knight", -- [1]
+					},
+					["Lichyx"] = {
+						"Death Knight", -- [1]
+					},
+					["Mervick"] = {
+						"Death Knight", -- [1]
+					},
+					["Rojak"] = {
+						"Death Knight", -- [1]
+					},
+					["Drathe"] = {
+						"Death Knight", -- [1]
+					},
+					["Malykie"] = {
+						"Death Knight", -- [1]
+					},
+					["Maliinky"] = {
+						"Death Knight", -- [1]
+					},
+					["Chatterr"] = {
+						"Death Knight", -- [1]
+					},
+					["Frozenpeach"] = {
+						"Death Knight", -- [1]
+					},
+					["Chillygab"] = {
+						"Death Knight", -- [1]
+					},
+					["Iceddk"] = {
+						"Death Knight", -- [1]
+					},
+					["Hoffaluyah"] = {
+						"Death Knight", -- [1]
+					},
+					["Fizzlerot"] = {
+						"Death Knight", -- [1]
+					},
+					["Hããdes"] = {
+						"Death Knight", -- [1]
+					},
+					["Candycane"] = {
+						"Death Knight", -- [1]
+					},
+					["Rigrmorticia"] = {
+						"Death Knight", -- [1]
+					},
+					["Kelodied"] = {
+						"Death Knight", -- [1]
+					},
+					["Submerged"] = {
+						"Death Knight", -- [1]
+					},
+					["Wickdkills"] = {
+						"Death Knight", -- [1]
+					},
+					["Icytusks"] = {
+						"Death Knight", -- [1]
+					},
+					["Busdawg"] = {
+						"Death Knight", -- [1]
+					},
+					["Antiherô"] = {
+						"Death Knight", -- [1]
+					},
+					["Fluffër"] = {
+						"Death Knight", -- [1]
+					},
+					["Herdattack"] = {
+						"Death Knight", -- [1]
+					},
+					["Raldimus"] = {
+						"Death Knight", -- [1]
+					},
+					["Draxomancer"] = {
+						"Death Knight", -- [1]
+					},
+					["Atrophicus"] = {
+						"Death Knight", -- [1]
+					},
+					["Agglo"] = {
+						"Death Knight", -- [1]
+					},
+					["Mulohlen"] = {
+						"Death Knight", -- [1]
+					},
+					["Burritodk"] = {
+						"Death Knight", -- [1]
+					},
+					["Siñbad"] = {
+						"Death Knight", -- [1]
+					},
+					["Blindymcgee"] = {
+						"Death Knight", -- [1]
+					},
+					["Leelan"] = {
+						"Death Knight", -- [1]
+					},
+					["Zexet"] = {
+						"Death Knight", -- [1]
+					},
+					["Safire"] = {
+						"Death Knight", -- [1]
+					},
+					["Icesinger"] = {
+						"Death Knight", -- [1]
+					},
+					["Mâyhèm"] = {
+						"Death Knight", -- [1]
+					},
+					["Dedgunny"] = {
+						"Death Knight", -- [1]
+					},
+					["Savagemercy"] = {
+						"Death Knight", -- [1]
+					},
+					["Angrypuppy"] = {
+						"Death Knight", -- [1]
+					},
+					["Sevaron"] = {
+						"Death Knight", -- [1]
+					},
+					["Kagekoori"] = {
+						"Death Knight", -- [1]
+					},
+					["Sorrowvane"] = {
+						"Death Knight", -- [1]
+					},
+					["Banmyclass"] = {
+						"Death Knight", -- [1]
+					},
+					["Kerbawo"] = {
+						"Death Knight", -- [1]
+					},
+					["Tequilaley"] = {
+						"Death Knight", -- [1]
+					},
+					["Vzbuchka"] = {
+						"Death Knight", -- [1]
+					},
+					["Gcova"] = {
+						"Death Knight", -- [1]
+					},
+					["Slootmcgee"] = {
+						"Death Knight", -- [1]
+					},
+					["Ðönaldtrümp"] = {
+						"Death Knight", -- [1]
+					},
+				},
+				["Hunter"] = {
+					["Utaki"] = {
+						"Hunter", -- [1]
+					},
+					["Tzanen"] = {
+						"Hunter", -- [1]
+					},
+					["Sheeptickler"] = {
+						"Hunter", -- [1]
+					},
+					["Sachpowers"] = {
+						"Hunter", -- [1]
+					},
+					["Staecii"] = {
+						"Hunter", -- [1]
+					},
+					["Hycip"] = {
+						"Hunter", -- [1]
+					},
+					["ßullwôrm"] = {
+						"Hunter", -- [1]
+					},
+					["Piryeon"] = {
+						"Hunter", -- [1]
+					},
+					["Paulyp"] = {
+						"Hunter", -- [1]
+					},
+					["Gazanik"] = {
+						"Hunter", -- [1]
+					},
+					["Rheni"] = {
+						"Hunter", -- [1]
+					},
+					["Nagiskkaya"] = {
+						"Hunter", -- [1]
+					},
+					["Shlurp"] = {
+						"Hunter", -- [1]
+					},
+					["Aryelia"] = {
+						"Hunter", -- [1]
+					},
+					["Abigredkitty"] = {
+						"Hunter", -- [1]
+					},
+					["Tuesdayz"] = {
+						"Hunter", -- [1]
+					},
+					["Grohkka"] = {
+						"Hunter", -- [1]
+					},
+					["ßaelyn"] = {
+						"Hunter", -- [1]
+					},
+					["Lamentari"] = {
+						"Hunter", -- [1]
+					},
+					["Haruhunter"] = {
+						"Hunter", -- [1]
+					},
+					["Taranthos"] = {
+						"Hunter", -- [1]
+					},
+					["Cruneac"] = {
+						"Hunter", -- [1]
+					},
+					["Jaegerin"] = {
+						"Hunter", -- [1]
+					},
+					["Eîghtball"] = {
+						"Hunter", -- [1]
+					},
+					["Hinkie"] = {
+						"Hunter", -- [1]
+					},
+					["Myliina"] = {
+						"Hunter", -- [1]
+					},
+					["Neocamp"] = {
+						"Hunter", -- [1]
+					},
+					["Deathârrow"] = {
+						"Hunter", -- [1]
+					},
+					["Cindyrella"] = {
+						"Hunter", -- [1]
+					},
+					["Niitrax"] = {
+						"Hunter", -- [1]
+					},
+					["Bunsbunsbuns"] = {
+						"Hunter", -- [1]
+					},
+					["Tunguskaa"] = {
+						"Hunter", -- [1]
+					},
+					["Zephire"] = {
+						"Hunter", -- [1]
+					},
+					["Vivyn"] = {
+						"Hunter", -- [1]
+					},
+					["Evenessence"] = {
+						"Hunter", -- [1]
+					},
+					["Kortargasa"] = {
+						"Hunter", -- [1]
+					},
+					["Bòósh"] = {
+						"Hunter", -- [1]
+					},
+					["Skyriver"] = {
+						"Hunter", -- [1]
+					},
+					["Clampoker"] = {
+						"Hunter", -- [1]
+					},
+					["Snarn"] = {
+						"Hunter", -- [1]
+					},
+					["Notforsale"] = {
+						"Hunter", -- [1]
+					},
+					["Saraspank"] = {
+						"Hunter", -- [1]
+					},
+					["Ehae"] = {
+						"Hunter", -- [1]
+					},
+					["Redrocky"] = {
+						"Hunter", -- [1]
+					},
+					["Daamndanniel"] = {
+						"Hunter", -- [1]
+					},
+					["Beastarrow"] = {
+						"Hunter", -- [1]
+					},
+					["Externalgate"] = {
+						"Hunter", -- [1]
+					},
+					["Tankloads"] = {
+						"Hunter", -- [1]
+					},
+					["Crymearlver"] = {
+						"Hunter", -- [1]
+					},
+					["Zinmazra"] = {
+						"Hunter", -- [1]
+					},
+					["Mozambiq"] = {
+						"Hunter", -- [1]
+					},
+					["Dokagi"] = {
+						"Hunter", -- [1]
+					},
+					["Shotzeil"] = {
+						"Hunter", -- [1]
+					},
+					["Jenavyve"] = {
+						"Hunter", -- [1]
+					},
+					["Gbunnz"] = {
+						"Hunter", -- [1]
+					},
+					["Gangshyt"] = {
+						"Hunter", -- [1]
+					},
+					["Zizu"] = {
+						"Hunter", -- [1]
+					},
+					["Powderpaws"] = {
+						"Hunter", -- [1]
+					},
+					["Hobophobiq"] = {
+						"Hunter", -- [1]
+					},
+					["Nmhx"] = {
+						"Hunter", -- [1]
+					},
+					["Jyun"] = {
+						"Hunter", -- [1]
+					},
+					["Rawjin"] = {
+						"Hunter", -- [1]
+					},
+					["Cupatkay"] = {
+						"Hunter", -- [1]
+					},
+					["Anuuirruuk"] = {
+						"Hunter", -- [1]
+					},
+					["Tòmbs"] = {
+						"Hunter", -- [1]
+					},
+					["Powerfuel"] = {
+						"Hunter", -- [1]
+					},
+					["Goldilocks"] = {
+						"Hunter", -- [1]
+					},
+					["Jhost"] = {
+						"Hunter", -- [1]
+					},
+					["Mokhan"] = {
+						"Hunter", -- [1]
+					},
+					["Tonkita"] = {
+						"Hunter", -- [1]
+					},
+					["Rezzik"] = {
+						"Hunter", -- [1]
+					},
+					["Dwáde"] = {
+						"Hunter", -- [1]
+					},
+					["Dragontearz"] = {
+						"Hunter", -- [1]
+					},
+					["Shankenarrow"] = {
+						"Hunter", -- [1]
+					},
+					["Atomsmasher"] = {
+						"Hunter", -- [1]
+					},
+					["Reaagtharn"] = {
+						"Hunter", -- [1]
+					},
+					["Capchica"] = {
+						"Hunter", -- [1]
+					},
+					["Dellort"] = {
+						"Hunter", -- [1]
+					},
+					["Aprilice"] = {
+						"Hunter", -- [1]
+					},
+					["Dievona"] = {
+						"Hunter", -- [1]
+					},
+					["Replikea"] = {
+						"Hunter", -- [1]
+					},
+					["Gregorr"] = {
+						"Hunter", -- [1]
+					},
+					["Tÿriøn"] = {
+						"Hunter", -- [1]
+					},
+					["Möjoe"] = {
+						"Hunter", -- [1]
+					},
+					["Krainka"] = {
+						"Hunter", -- [1]
+					},
+					["Arrowflash"] = {
+						"Hunter", -- [1]
+					},
+					["Ilikebovines"] = {
+						"Hunter", -- [1]
+					},
+					["Supaki"] = {
+						"Hunter", -- [1]
+					},
+					["Krulman"] = {
+						"Hunter", -- [1]
+					},
+					["Défend"] = {
+						"Hunter", -- [1]
+					},
+					["Genjen"] = {
+						"Hunter", -- [1]
+					},
+					["Atreidesqt"] = {
+						"Hunter", -- [1]
+					},
+					["Sasorî"] = {
+						"Hunter", -- [1]
+					},
+				},
+				["Warlock"] = {
+					["Verybusy"] = {
+						"Warlock", -- [1]
+					},
+					["Jylok"] = {
+						"Warlock", -- [1]
+					},
+					["Lotodot"] = {
+						"Warlock", -- [1]
+					},
+					["Warnuts"] = {
+						"Warlock", -- [1]
+					},
+					["Psychosixx"] = {
+						"Warlock", -- [1]
+					},
+					["Durplard"] = {
+						"Warlock", -- [1]
+					},
+					["Acsriot"] = {
+						"Warlock", -- [1]
+					},
+					["Terina"] = {
+						"Warlock", -- [1]
+					},
+					["Verotha"] = {
+						"Warlock", -- [1]
+					},
+					["Lockedupsten"] = {
+						"Warlock", -- [1]
+					},
+					["Xaldren"] = {
+						"Warlock", -- [1]
+					},
+					["Metlakle"] = {
+						"Warlock", -- [1]
+					},
+					["Kamiczår"] = {
+						"Warlock", -- [1]
+					},
+					["Sinneth"] = {
+						"Warlock", -- [1]
+					},
+					["Doitforwoosh"] = {
+						"Warlock", -- [1]
+					},
+					["Isamumikosai"] = {
+						"Warlock", -- [1]
+					},
+					["Roseberry"] = {
+						"Warlock", -- [1]
+					},
+					["Caladra"] = {
+						"Warlock", -- [1]
+					},
+					["Ksemonster"] = {
+						"Warlock", -- [1]
+					},
+					["Darkcurser"] = {
+						"Warlock", -- [1]
+					},
+					["Atheism"] = {
+						"Warlock", -- [1]
+					},
+					["Malfarious"] = {
+						"Warlock", -- [1]
+					},
+					["Rudyguiliani"] = {
+						"Warlock", -- [1]
+					},
+					["Ohbb"] = {
+						"Warlock", -- [1]
+					},
+					["Ðireßane"] = {
+						"Warlock", -- [1]
+					},
+					["Natsuki"] = {
+						"Warlock", -- [1]
+					},
+					["Wäfflë"] = {
+						"Warlock", -- [1]
+					},
+					["Justabox"] = {
+						"Warlock", -- [1]
+					},
+					["Thlivia"] = {
+						"Warlock", -- [1]
+					},
+					["Vishóus"] = {
+						"Warlock", -- [1]
+					},
+					["Rhurilock"] = {
+						"Warlock", -- [1]
+					},
+					["Pändemíc"] = {
+						"Warlock", -- [1]
+					},
+					["Gawdraiztlan"] = {
+						"Warlock", -- [1]
+					},
+					["Nutspecan"] = {
+						"Warlock", -- [1]
+					},
+					["Mìkehoncho"] = {
+						"Warlock", -- [1]
+					},
+					["Ondeadlock"] = {
+						"Warlock", -- [1]
+					},
+					["Loremi"] = {
+						"Warlock", -- [1]
+					},
+					["Sikyeom"] = {
+						"Warlock", -- [1]
+					},
+					["Onikagae"] = {
+						"Warlock", -- [1]
+					},
+					["Austinsimpso"] = {
+						"Warlock", -- [1]
+					},
+					["Perilneum"] = {
+						"Warlock", -- [1]
+					},
+					["Frozenesslox"] = {
+						"Warlock", -- [1]
+					},
+					["Prequel"] = {
+						"Warlock", -- [1]
+					},
+					["Tanariena"] = {
+						"Warlock", -- [1]
+					},
+					["Voodoodot"] = {
+						"Warlock", -- [1]
+					},
+					["Spîkê"] = {
+						"Warlock", -- [1]
+					},
+					["Akitsü"] = {
+						"Warlock", -- [1]
+					},
+					["Trisscho"] = {
+						"Warlock", -- [1]
+					},
+					["Ninegenerals"] = {
+						"Warlock", -- [1]
+					},
+					["Feldeezy"] = {
+						"Warlock", -- [1]
+					},
+					["Xinge"] = {
+						"Warlock", -- [1]
+					},
+					["Psychótic"] = {
+						"Warlock", -- [1]
+					},
+					["Rahviin"] = {
+						"Warlock", -- [1]
+					},
+					["Slîme"] = {
+						"Warlock", -- [1]
+					},
+					["Livelocklove"] = {
+						"Warlock", -- [1]
+					},
+					["Imperorr"] = {
+						"Warlock", -- [1]
+					},
+					["Miffmeister"] = {
+						"Warlock", -- [1]
+					},
+					["Fleshrendér"] = {
+						"Warlock", -- [1]
+					},
+					["Vvoldemortt"] = {
+						"Warlock", -- [1]
+					},
+					["Ascrod"] = {
+						"Warlock", -- [1]
+					},
+					["Steagle"] = {
+						"Warlock", -- [1]
+					},
+					["Pahjhaij"] = {
+						"Warlock", -- [1]
+					},
+					["Rouen"] = {
+						"Warlock", -- [1]
+					},
+					["Gyeop"] = {
+						"Warlock", -- [1]
+					},
+					["Elffire"] = {
+						"Warlock", -- [1]
+					},
+					["Dottasaurus"] = {
+						"Warlock", -- [1]
+					},
+					["Neckro"] = {
+						"Warlock", -- [1]
+					},
+					["Valudrus"] = {
+						"Warlock", -- [1]
+					},
+					["Rumpel"] = {
+						"Warlock", -- [1]
+					},
+					["Beefshades"] = {
+						"Warlock", -- [1]
+					},
+					["Ellissi"] = {
+						"Warlock", -- [1]
+					},
+					["Bubblegutts"] = {
+						"Warlock", -- [1]
+					},
+					["Boarlock"] = {
+						"Warlock", -- [1]
+					},
+					["Æpic"] = {
+						"Warlock", -- [1]
+					},
+					["Stoxinlox"] = {
+						"Warlock", -- [1]
+					},
+					["Nilboggen"] = {
+						"Warlock", -- [1]
+					},
+					["Coolwala"] = {
+						"Warlock", -- [1]
+					},
+				},
+				["Priest"] = {
+					["Gomg"] = {
+						"Priest", -- [1]
+					},
+					["Mugibasu"] = {
+						"Priest", -- [1]
+					},
+					["Sumdayy"] = {
+						"Priest", -- [1]
+					},
+					["Irogasmic"] = {
+						"Priest", -- [1]
+					},
+					["Boxxer"] = {
+						"Priest", -- [1]
+					},
+					["Darkpenance"] = {
+						"Priest", -- [1]
+					},
+					["Lucidbubbler"] = {
+						"Priest", -- [1]
+					},
+					["Zerovoidform"] = {
+						"Priest", -- [1]
+					},
+					["Snufalufaguz"] = {
+						"Priest", -- [1]
+					},
+					["Hydrofoil"] = {
+						"Priest", -- [1]
+					},
+					["Mepo"] = {
+						"Priest", -- [1]
+					},
+					["Velizziel"] = {
+						"Priest", -- [1]
+					},
+					["Freehate"] = {
+						"Priest", -- [1]
+					},
+					["Konvic"] = {
+						"Priest", -- [1]
+					},
+					["Glasia"] = {
+						"Priest", -- [1]
+					},
+					["Taynard"] = {
+						"Priest", -- [1]
+					},
+					["Nefrett"] = {
+						"Priest", -- [1]
+					},
+					["Vankryne"] = {
+						"Priest", -- [1]
+					},
+					["Kandalf"] = {
+						"Priest", -- [1]
+					},
+					["Hentaiitup"] = {
+						"Priest", -- [1]
+					},
+					["Bagelbitess"] = {
+						"Priest", -- [1]
+					},
+					["Sóulreàver"] = {
+						"Priest", -- [1]
+					},
+					["Purpx"] = {
+						"Priest", -- [1]
+					},
+					["Nessenia"] = {
+						"Priest", -- [1]
+					},
+					["Repsi"] = {
+						"Priest", -- [1]
+					},
+					["Mixsi"] = {
+						"Priest", -- [1]
+					},
+					["Powerwrdfeet"] = {
+						"Priest", -- [1]
+					},
+					["Oakay"] = {
+						"Priest", -- [1]
+					},
+					["Emund"] = {
+						"Priest", -- [1]
+					},
+					["Aporetic"] = {
+						"Priest", -- [1]
+					},
+					["Muridius"] = {
+						"Priest", -- [1]
+					},
+					["Isolette"] = {
+						"Priest", -- [1]
+					},
+					["Eternalkami"] = {
+						"Priest", -- [1]
+					},
+					["Voidstacks"] = {
+						"Priest", -- [1]
+					},
+					["Ettata"] = {
+						"Priest", -- [1]
+					},
+					["Silderia"] = {
+						"Priest", -- [1]
+					},
+					["Sinndrynn"] = {
+						"Priest", -- [1]
+					},
+					["Sheltleth"] = {
+						"Priest", -- [1]
+					},
+					["Jiku"] = {
+						"Priest", -- [1]
+					},
+					["Fizzwizzle"] = {
+						"Priest", -- [1]
+					},
+					["Sigmatix"] = {
+						"Priest", -- [1]
+					},
+					["Stuzzii"] = {
+						"Priest", -- [1]
+					},
+					["Aurigail"] = {
+						"Priest", -- [1]
+					},
+					["Alfylicious"] = {
+						"Priest", -- [1]
+					},
+					["Paris"] = {
+						"Priest", -- [1]
+					},
+					["Pillówfight"] = {
+						"Priest", -- [1]
+					},
+					["Nawtyforever"] = {
+						"Priest", -- [1]
+					},
+					["Onfuryzx"] = {
+						"Priest", -- [1]
+					},
+					["Touchtown"] = {
+						"Priest", -- [1]
+					},
+					["Katallyst"] = {
+						"Priest", -- [1]
+					},
+					["Amalizzy"] = {
+						"Priest", -- [1]
+					},
+					["Celciorjr"] = {
+						"Priest", -- [1]
+					},
+					["Lolaâ"] = {
+						"Priest", -- [1]
+					},
+					["Ilarayle"] = {
+						"Priest", -- [1]
+					},
+					["Selkiez"] = {
+						"Priest", -- [1]
+					},
+					["Pontifexous"] = {
+						"Priest", -- [1]
+					},
+					["Runkids"] = {
+						"Priest", -- [1]
+					},
+					["Starshield"] = {
+						"Priest", -- [1]
+					},
+					["Phranchyze"] = {
+						"Priest", -- [1]
+					},
+					["Etsuxd"] = {
+						"Priest", -- [1]
+					},
+					["Yurinim"] = {
+						"Priest", -- [1]
+					},
+					["Patrikswaze"] = {
+						"Priest", -- [1]
+					},
+					["Steela"] = {
+						"Priest", -- [1]
+					},
+					["Epoplar"] = {
+						"Priest", -- [1]
+					},
+					["Ashleybabyyx"] = {
+						"Priest", -- [1]
+					},
+					["Scopareborn"] = {
+						"Priest", -- [1]
+					},
+					["Sleshambolic"] = {
+						"Priest", -- [1]
+					},
+					["Natrii"] = {
+						"Priest", -- [1]
+					},
+					["Ezêkiel"] = {
+						"Priest", -- [1]
+					},
+					["Darkchéstér"] = {
+						"Priest", -- [1]
+					},
+					["Nottheplay"] = {
+						"Priest", -- [1]
+					},
+					["Penitence"] = {
+						"Priest", -- [1]
+					},
+					["Jenobii"] = {
+						"Priest", -- [1]
+					},
+					["Fatherfondal"] = {
+						"Priest", -- [1]
+					},
+					["Healspaztic"] = {
+						"Priest", -- [1]
+					},
+					["Babyoil"] = {
+						"Priest", -- [1]
+					},
+					["Ambberr"] = {
+						"Priest", -- [1]
+					},
+					["Sambwondi"] = {
+						"Priest", -- [1]
+					},
+					["Westfold"] = {
+						"Priest", -- [1]
+					},
+					["Cantrelate"] = {
+						"Priest", -- [1]
+					},
+					["Melcheor"] = {
+						"Priest", -- [1]
+					},
+					["Ropedaniels"] = {
+						"Priest", -- [1]
+					},
+					["Gásoline"] = {
+						"Priest", -- [1]
+					},
+					["Dahuun"] = {
+						"Priest", -- [1]
+					},
+					["Toastlaw"] = {
+						"Priest", -- [1]
+					},
+					["Johnsamdi"] = {
+						"Priest", -- [1]
+					},
+					["Xekania"] = {
+						"Priest", -- [1]
+					},
+					["Kelseybear"] = {
+						"Priest", -- [1]
+					},
+					["Seraphis"] = {
+						"Priest", -- [1]
+					},
+					["Baelgrin"] = {
+						"Priest", -- [1]
+					},
+					["Fukwhatuthot"] = {
+						"Priest", -- [1]
+					},
+					["Gâinsborough"] = {
+						"Priest", -- [1]
+					},
+					["Dowwjones"] = {
+						"Priest", -- [1]
+					},
+					["Spikyten"] = {
+						"Priest", -- [1]
+					},
+					["Âurelia"] = {
+						"Priest", -- [1]
+					},
+					["Adagaki"] = {
+						"Priest", -- [1]
+					},
+					["Sourapplee"] = {
+						"Priest", -- [1]
+					},
+					["Ashliell"] = {
+						"Priest", -- [1]
+					},
+					["Divìnìty"] = {
+						"Priest", -- [1]
+					},
+					["Oceanriceduk"] = {
+						"Priest", -- [1]
+					},
+					["Superspoopy"] = {
+						"Priest", -- [1]
+					},
+					["Telraniel"] = {
+						"Priest", -- [1]
+					},
+					["Ohvampirez"] = {
+						"Priest", -- [1]
+					},
+					["Ogokdyong"] = {
+						"Priest", -- [1]
+					},
+					["Akinky"] = {
+						"Priest", -- [1]
+					},
+					["Johanold"] = {
+						"Priest", -- [1]
+					},
+					["Feddsuh"] = {
+						"Priest", -- [1]
+					},
+					["Flayezz"] = {
+						"Priest", -- [1]
+					},
+					["Khanzu"] = {
+						"Priest", -- [1]
+					},
+					["Happybunny"] = {
+						"Priest", -- [1]
+					},
+					["Hobobible"] = {
+						"Priest", -- [1]
+					},
+					["Sharialyn"] = {
+						"Priest", -- [1]
+					},
+					["Nodispellplz"] = {
+						"Priest", -- [1]
+					},
+					["Moonfeather"] = {
+						"Priest", -- [1]
+					},
+					["Loadslikeme"] = {
+						"Priest", -- [1]
+					},
+					["Vyxene"] = {
+						"Priest", -- [1]
+					},
+					["Døndøtta"] = {
+						"Priest", -- [1]
+					},
+					["Sakurafall"] = {
+						"Priest", -- [1]
+					},
+					["Killuminatix"] = {
+						"Priest", -- [1]
+					},
+					["Fainpriest"] = {
+						"Priest", -- [1]
+					},
+					["Spazie"] = {
+						"Priest", -- [1]
+					},
+					["Mokes"] = {
+						"Priest", -- [1]
+					},
+					["Bigfade"] = {
+						"Priest", -- [1]
+					},
+					["Fingon"] = {
+						"Priest", -- [1]
+					},
+					["Rëmëdÿz"] = {
+						"Priest", -- [1]
+					},
+					["Retsoft"] = {
+						"Priest", -- [1]
+					},
+					["Meanhoez"] = {
+						"Priest", -- [1]
+					},
+					["Terellz"] = {
+						"Priest", -- [1]
+					},
+					["Döç"] = {
+						"Priest", -- [1]
+					},
+					["Orékin"] = {
+						"Priest", -- [1]
+					},
+					["Koronaz"] = {
+						"Priest", -- [1]
+					},
+					["Blasphème"] = {
+						"Priest", -- [1]
+					},
+					["Czarnick"] = {
+						"Priest", -- [1]
+					},
+					["Voa"] = {
+						"Priest", -- [1]
+					},
+					["Deadheadfred"] = {
+						"Priest", -- [1]
+					},
+					["Nicholasblu"] = {
+						"Priest", -- [1]
+					},
+					["Kabel"] = {
+						"Priest", -- [1]
+					},
+					["Anlia"] = {
+						"Priest", -- [1]
+					},
+					["Devshadow"] = {
+						"Priest", -- [1]
+					},
+					["Imilfhunterl"] = {
+						"Priest", -- [1]
+					},
+					["Timespriest"] = {
+						"Priest", -- [1]
+					},
+					["Plaguespree"] = {
+						"Priest", -- [1]
+					},
+					["Lifegrip"] = {
+						"Priest", -- [1]
+					},
+					["Noahqt"] = {
+						"Priest", -- [1]
+					},
+					["Lohurs"] = {
+						"Priest", -- [1]
+					},
+					["Dragonorsted"] = {
+						"Priest", -- [1]
+					},
+					["Keiszou"] = {
+						"Priest", -- [1]
+					},
+					["Míschíef"] = {
+						"Priest", -- [1]
+					},
+					["Esmeraye"] = {
+						"Priest", -- [1]
+					},
+					["Prîestìtute"] = {
+						"Priest", -- [1]
+					},
+					["Shadowfluff"] = {
+						"Priest", -- [1]
+					},
+					["Deallo"] = {
+						"Priest", -- [1]
+					},
+					["Songnim"] = {
+						"Priest", -- [1]
+					},
+					["Sunlest"] = {
+						"Priest", -- [1]
+					},
+					["Festicle"] = {
+						"Priest", -- [1]
+					},
+					["Íkr"] = {
+						"Priest", -- [1]
+					},
+					["Lìghteyes"] = {
+						"Priest", -- [1]
+					},
+					["Lucid"] = {
+						"Priest", -- [1]
+					},
+					["Zahrahmiik"] = {
+						"Priest", -- [1]
+					},
+					["Ambriël"] = {
+						"Priest", -- [1]
+					},
+					["Boondingo"] = {
+						"Priest", -- [1]
+					},
+					["Mavianjr"] = {
+						"Priest", -- [1]
+					},
+					["Mezothelioma"] = {
+						"Priest", -- [1]
+					},
+					["Çatholic"] = {
+						"Priest", -- [1]
+					},
+					["Jupítér"] = {
+						"Priest", -- [1]
+					},
+					["Fatherfrisky"] = {
+						"Priest", -- [1]
+					},
+					["Aldræ"] = {
+						"Priest", -- [1]
+					},
+					["Pibax"] = {
+						"Priest", -- [1]
+					},
+					["Rinarae"] = {
+						"Priest", -- [1]
+					},
+					["Yourstupid"] = {
+						"Priest", -- [1]
+					},
+					["Walakpr"] = {
+						"Priest", -- [1]
+					},
+					["Geisthymn"] = {
+						"Priest", -- [1]
+					},
+					["Sigwood"] = {
+						"Priest", -- [1]
+					},
+					["Nalta"] = {
+						"Priest", -- [1]
+					},
+					["Karapriest"] = {
+						"Priest", -- [1]
+					},
+					["Daddyscript"] = {
+						"Priest", -- [1]
+					},
+					["Andiaisnasty"] = {
+						"Priest", -- [1]
+					},
+					["Haêlia"] = {
+						"Priest", -- [1]
+					},
+					["Thighgapx"] = {
+						"Priest", -- [1]
+					},
+					["Healulater"] = {
+						"Priest", -- [1]
+					},
+					["Beefyshekels"] = {
+						"Priest", -- [1]
+					},
+					["Stormn"] = {
+						"Priest", -- [1]
+					},
+					["Gifferd"] = {
+						"Priest", -- [1]
+					},
+					["Minimynx"] = {
+						"Priest", -- [1]
+					},
+					["Steezynun"] = {
+						"Priest", -- [1]
+					},
+					["Drjalara"] = {
+						"Priest", -- [1]
+					},
+					["Raalisa"] = {
+						"Priest", -- [1]
+					},
+					["Sonofamitch"] = {
+						"Priest", -- [1]
+					},
+					["Ashtato"] = {
+						"Priest", -- [1]
+					},
+					["Ateez"] = {
+						"Priest", -- [1]
+					},
+					["Brockholy"] = {
+						"Priest", -- [1]
+					},
+				},
+			},
+		},
+	},
+	["g_TimeDatabase"] = {
+		["Warrior"] = 0,
+		["Paladin"] = 0,
+		["Shaman"] = 0,
+		["Monk"] = 0,
+		["Rogue"] = 0,
+		["Mage"] = 0,
+		["Demon Hunter"] = 0,
+		["Warlock"] = 0,
+		["Priest"] = 0,
+		["Hunter"] = 0,
+		["Death Knight"] = 0,
+		["Druid"] = 0,
+	},
+	["g_NumUpdatedCharacters"] = 0,
+	["g_NumNewCharacters"] = 1393,
+}

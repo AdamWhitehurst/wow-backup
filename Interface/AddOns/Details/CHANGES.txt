@@ -1,3 +1,28 @@
+commit dfad8bc9fd20f4713295041552ac090c76f10baa
+Author: Tercioo <terciob19@hotmail.com>
+Date:   Tue Apr 23 15:02:34 2019 -0300
+
+    New API Details.SegmentPhases() and Details.UnitDamageByPhase()
+    
+    Details.SegmentPhases(): return a table containing phase numbers, use to query unit damage for a specific encounter phase.
+    Details.UnitDamageByPhase( unitId, phaseNumber): query the damage of a unit during a specific phase.
+
+commit 1869c6134d6e8435e7722a0f953d829c1784eecd
+Author: Tercioo <terciob19@hotmail.com>
+Date:   Mon Apr 22 14:04:50 2019 -0300
+
+    Added API Details.SegmentPhases() and Details.UnitDamageByPhase()
+    
+    See ingame documentation with /details api
+
+commit 5e0e64982d212d7fbf4af080d63a4e3f7958ec0f
+Author: Tercioo <terciob19@hotmail.com>
+Date:   Sun Apr 21 13:50:44 2019 -0300
+
+    Added API Details.UnitInfo and Details.UnitTexture
+    
+    UnitInfo return information about the unit and UnitTexture return the texture for the class and spec for the unit.
+
 commit be966f74369dc95891c6f9d26d5dd205c26f482b
 Author: Tercioo <terciob19@hotmail.com>
 Date:   Tue Apr 16 13:20:28 2019 -0300
@@ -732,29 +757,4 @@ Date:   Fri Jan 26 14:07:43 2018 -0200
 
     - Warlock mana from Life Tap won't show up any more under mana regen, this makes easy to see Soul Shard gain.
     - Due to a framework update, typing the value on a slider shouldn't round the value up.
-
-commit 984db015fc1ebc3579279dd20e557f230c1c2575
-Author: Tercio <Tercio@localhost>
-Date:   Thu Jan 18 14:58:35 2018 -0200
-
-    - Framework upated to v63 (template parenting support).
-    - General front end changes with template changes on plugins and other windows.
-
-commit 5adc52245455f525ad640398e0116062785e59dc
-Author: Tercio <Tercio@localhost>
-Date:   Fri Jan 12 10:36:46 2018 -0200
-
-    - Default width for death window is now 350 (up from 300).
-    - Use new animations is now enabled by default and will be applied to all users immediately.
-    - Increased the amount the spells shown on the tooltip from 5 to 6.
-    - The option to use the new animations has been removed from the options panel.
-    - Fixed an issue with TinyThreat plugin where sometimes it trow errors.
-
-commit 7c6675a200d948a11e3924f6c2948876a250cdbe
-Author: Tercio <Tercio@localhost>
-Date:   Wed Jan 3 11:53:23 2018 -0200
-
-    - Custom window should now clear the previous code when start editing a new custom display.
-    - Fixed the bad look with the scrollbars on both ElvUI skins.
-    - More text formating on the ingame API list.
 

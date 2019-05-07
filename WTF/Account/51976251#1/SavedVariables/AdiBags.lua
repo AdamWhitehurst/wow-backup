@@ -1,12 +1,5 @@
 
 AdiBagsDB = {
-	["char"] = {
-		["Wharapi - Tichondrius"] = {
-			["collapsedSections"] = {
-				["Free space#Free space"] = true,
-			},
-		},
-	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -23,40 +16,37 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
+		},
+		["CurrencyFrame"] = {
 		},
 		["DataSource"] = {
 		},
 		["ItemSets"] = {
 		},
-		["CurrencyFrame"] = {
-		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
 		["Harwapa - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
-			["columnWidth"] = {
-				["Backpack"] = 20,
-				["Bank"] = 20,
-			},
+			["scale"] = 1,
 			["maxHeight"] = 0.9,
 			["skin"] = {
 				["ReagentBankColor"] = {
 					nil, -- [1]
 					0.356862745098039, -- [2]
 				},
-				["border"] = "ElvUI GlowBorder",
-				["background"] = "Solid",
 				["borderWidth"] = 1,
+				["background"] = "Solid",
+				["border"] = "ElvUI GlowBorder",
 				["insets"] = 0,
 			},
 			["dimJunk"] = false,
@@ -71,7 +61,10 @@ AdiBagsDB = {
 			["sectionFont"] = {
 				["size"] = 8,
 			},
-			["scale"] = 1,
+			["columnWidth"] = {
+				["Bank"] = 20,
+				["Backpack"] = 20,
+			},
 		},
 	},
 }

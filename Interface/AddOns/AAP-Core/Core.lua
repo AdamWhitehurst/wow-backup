@@ -198,17 +198,17 @@ AAP.FPs = {
 				["y"] = 27.6,
 				["x"] = 59.2,
 			},
-			["Terokkar Refuge, Talador"] = {
-				["y"] = 57.7,
-				["x"] = 51.7,
+			["Thunder Pass, Frostfire Ridge"] = {
+				["y"] = 35.6,
+				["x"] = 47.1,
 			},
 			["Talon Watch, Spires of Arak"] = {
 				["y"] = 72.9,
 				["x"] = 56,
 			},
-			["Thunder Pass, Frostfire Ridge"] = {
-				["y"] = 35.6,
-				["x"] = 47.1,
+			["Terokkar Refuge, Talador"] = {
+				["y"] = 57.7,
+				["x"] = 51.7,
 			},
 			["Vol'jin's Pride, Talador"] = {
 				["y"] = 51,
@@ -276,41 +276,41 @@ AAP.FPs = {
 				["y"] = 61.2,
 				["x"] = 63.7,
 			},
-			["Devoted Sanctuary, Vol'dun"] = {
-				["y"] = 27.2,
-				["x"] = 28.6,
+			["The Great Seal"] = {
+				["y"] = 61,
+				["x"] = 58.3,
 			},
 			["Zeb'ahari, Zuldazar"] = {
 				["y"] = 44.1,
 				["x"] = 69.9,
 			},
-			["The Great Seal"] = {
-				["y"] = 61,
-				["x"] = 58.3,
-			},
 			["Tusk Isle, Zuldazar"] = {
 				["y"] = 82.8,
 				["x"] = 58.8,
-			},
-			["Nesingwary's Gameland, Zuldazar"] = {
-				["y"] = 45.5,
-				["x"] = 63.1,
 			},
 			["Isle of Fangs, Zuldazar"] = {
 				["y"] = 88.4,
 				["x"] = 55.7,
 			},
+			["Nesingwary's Gameland, Zuldazar"] = {
+				["y"] = 45.5,
+				["x"] = 63.1,
+			},
 			["Atal'Dazar, Zuldazar"] = {
 				["y"] = 56.7,
 				["x"] = 50.6,
+			},
+			["Port of Zandalar, Zuldazar"] = {
+				["y"] = 71.1,
+				["x"] = 58.4,
 			},
 			["Zul'jan, Nazmir"] = {
 				["y"] = 41,
 				["x"] = 53.6,
 			},
-			["Port of Zandalar, Zuldazar"] = {
-				["y"] = 71.1,
-				["x"] = 58.4,
+			["Scorched Sands Outpost, Vol'dun"] = {
+				["y"] = 40,
+				["x"] = 36.7,
 			},
 			["Forlorn Ruins, Nazmir"] = {
 				["y"] = 21.2,
@@ -320,13 +320,13 @@ AAP.FPs = {
 				["y"] = 75,
 				["x"] = 65.7,
 			},
-			["Scorched Sands Outpost, Vol'dun"] = {
-				["y"] = 40,
-				["x"] = 36.7,
+			["Devoted Sanctuary, Vol'dun"] = {
+				["y"] = 27.2,
+				["x"] = 28.6,
 			},
-			["Zo'bal Ruins, Nazmir"] = {
-				["y"] = 27.4,
-				["x"] = 54,
+			["Temple of Akunda, Vol'dun"] = {
+				["y"] = 46.6,
+				["x"] = 41.6,
 			},
 			["Tortaka Refuge, Vol'dun"] = {
 				["y"] = 12.9,
@@ -348,9 +348,9 @@ AAP.FPs = {
 				["y"] = 32.6,
 				["x"] = 36.2,
 			},
-			["Temple of Akunda, Vol'dun"] = {
-				["y"] = 46.6,
-				["x"] = 41.6,
+			["Zo'bal Ruins, Nazmir"] = {
+				["y"] = 27.4,
+				["x"] = 54,
 			},
 			["Vorrik's Sanctum, Vol'dun"] = {
 				["y"] = 19.6,
@@ -672,9 +672,9 @@ AAP.FPs = {
 				["y"] = 51.6,
 				["x"] = 39.6,
 			},
-			["Northern Rocketway, Azshara"] = {
-				["y"] = 31.3,
-				["x"] = 65.5,
+			["Stonemaul Hold, Feralas"] = {
+				["y"] = 68.9,
+				["x"] = 41.2,
 			},
 			["Camp Ataya, Feralas"] = {
 				["y"] = 62.7,
@@ -684,17 +684,17 @@ AAP.FPs = {
 				["y"] = 80.9,
 				["x"] = 50.5,
 			},
-			["Wildheart Point, Felwood"] = {
-				["y"] = 30.8,
-				["x"] = 48.7,
-			},
-			["Stonemaul Hold, Feralas"] = {
-				["y"] = 68.9,
-				["x"] = 41.2,
-			},
 			["Southern Rocketway, Azshara"] = {
 				["y"] = 39.3,
 				["x"] = 63.2,
+			},
+			["Silverwind Refuge, Ashenvale"] = {
+				["y"] = 41.3,
+				["x"] = 49.4,
+			},
+			["Northern Rocketway, Azshara"] = {
+				["y"] = 31.3,
+				["x"] = 65.5,
 			},
 			["Splintertree Post, Ashenvale"] = {
 				["y"] = 40.7,
@@ -708,13 +708,13 @@ AAP.FPs = {
 				["y"] = 46.3,
 				["x"] = 46.4,
 			},
-			["Furien's Post, Desolace"] = {
-				["y"] = 51.9,
-				["x"] = 40.2,
+			["Thunder Bluff, Mulgore"] = {
+				["y"] = 55,
+				["x"] = 46.2,
 			},
-			["Silverwind Refuge, Ashenvale"] = {
-				["y"] = 41.3,
-				["x"] = 49.4,
+			["Wildheart Point, Felwood"] = {
+				["y"] = 30.8,
+				["x"] = 48.7,
 			},
 			["Hunter's Hill, Southern Barrens"] = {
 				["y"] = 53.4,
@@ -760,9 +760,9 @@ AAP.FPs = {
 				["y"] = 45.4,
 				["x"] = 55.5,
 			},
-			["Thunder Bluff, Mulgore"] = {
-				["y"] = 55,
-				["x"] = 46.2,
+			["Furien's Post, Desolace"] = {
+				["y"] = 51.9,
+				["x"] = 40.2,
 			},
 			["Thunk's Abode, Desolace"] = {
 				["y"] = 52.3,
@@ -976,17 +976,17 @@ AAP.FPs = {
 				["y"] = 34.1,
 				["x"] = 46.4,
 			},
-			["Prepfoot, Highmountain"] = {
-				["y"] = 13.1,
-				["x"] = 50.5,
+			["Starsong Refuge, Val'sharah"] = {
+				["y"] = 33.1,
+				["x"] = 38.7,
 			},
 			["Watchers' Aerie, Azsuna"] = {
 				["y"] = 72.1,
 				["x"] = 35.4,
 			},
-			["Starsong Refuge, Val'sharah"] = {
-				["y"] = 33.1,
-				["x"] = 38.7,
+			["Prepfoot, Highmountain"] = {
+				["y"] = 13.1,
+				["x"] = 50.5,
 			},
 			["Eye of Azshara, Azsuna"] = {
 				["y"] = 84.5,
@@ -1336,9 +1336,9 @@ AAP.FPs = {
 				["y"] = 88.5,
 				["x"] = 49.2,
 			},
-			["Sanctuary of Malorne, Hyjal"] = {
-				["y"] = 32.2,
-				["x"] = 52.1,
+			["Northwatch Expedition Base Camp, Stonetalon Mountains"] = {
+				["y"] = 49.2,
+				["x"] = 47.1,
 			},
 			["Emerald Sanctuary, Felwood"] = {
 				["y"] = 33.9,
@@ -1352,13 +1352,13 @@ AAP.FPs = {
 				["y"] = 51.6,
 				["x"] = 39.6,
 			},
-			["Northwatch Expedition Base Camp, Stonetalon Mountains"] = {
-				["y"] = 49.2,
-				["x"] = 47.1,
-			},
 			["Northwatch Hold, Southern Barrens"] = {
 				["y"] = 58.8,
 				["x"] = 56,
+			},
+			["Dolanaar, Teldrassil"] = {
+				["y"] = 9.9,
+				["x"] = 43.7,
 			},
 			["Marshal's Stand, Un'Goro Crater"] = {
 				["y"] = 80.9,
@@ -1368,33 +1368,33 @@ AAP.FPs = {
 				["y"] = 29.9,
 				["x"] = 45.9,
 			},
-			["Dolanaar, Teldrassil"] = {
-				["y"] = 9.9,
-				["x"] = 43.7,
-			},
-			["Fort Triumph, Southern Barrens"] = {
-				["y"] = 63,
-				["x"] = 52.5,
-			},
-			["Nijel's Point, Desolace"] = {
-				["y"] = 49.6,
-				["x"] = 42.7,
+			["Karnum's Glade, Desolace"] = {
+				["y"] = 54.4,
+				["x"] = 41.9,
 			},
 			["Mudsprocket, Dustwallow Marsh"] = {
 				["y"] = 68.7,
 				["x"] = 55.1,
 			},
-			["Bootlegger Outpost, Tanaris"] = {
-				["y"] = 85.5,
-				["x"] = 57.4,
+			["Nijel's Point, Desolace"] = {
+				["y"] = 49.6,
+				["x"] = 42.7,
+			},
+			["Sanctuary of Malorne, Hyjal"] = {
+				["y"] = 32.2,
+				["x"] = 52.1,
+			},
+			["Wildheart Point, Felwood"] = {
+				["y"] = 30.8,
+				["x"] = 48.7,
 			},
 			["Honor's Stand, Southern Barrens"] = {
 				["y"] = 51.5,
 				["x"] = 50.5,
 			},
-			["Wildheart Point, Felwood"] = {
-				["y"] = 30.8,
-				["x"] = 48.7,
+			["Thargad's Camp, Desolace"] = {
+				["y"] = 57,
+				["x"] = 39.3,
 			},
 			["Feathermoon, Feralas"] = {
 				["y"] = 68.3,
@@ -1408,21 +1408,21 @@ AAP.FPs = {
 				["y"] = 24.8,
 				["x"] = 51.4,
 			},
-			["Karnum's Glade, Desolace"] = {
-				["y"] = 54.4,
-				["x"] = 41.9,
-			},
 			["Schnottz's Landing, Uldum"] = {
 				["y"] = 93.8,
 				["x"] = 43.4,
+			},
+			["The Exodar"] = {
+				["y"] = 25.5,
+				["x"] = 30.1,
 			},
 			["Lor'danel, Darkshore"] = {
 				["y"] = 19.7,
 				["x"] = 47.2,
 			},
-			["The Exodar"] = {
-				["y"] = 25.5,
-				["x"] = 30.1,
+			["Darnassus, Teldrassil"] = {
+				["y"] = 9.5,
+				["x"] = 39.2,
 			},
 			["Mirkfallon Post, Stonetalon Mountains"] = {
 				["y"] = 44.5,
@@ -1444,13 +1444,13 @@ AAP.FPs = {
 				["y"] = 17.6,
 				["x"] = 31,
 			},
-			["Thargad's Camp, Desolace"] = {
-				["y"] = 57,
-				["x"] = 39.3,
+			["Bootlegger Outpost, Tanaris"] = {
+				["y"] = 85.5,
+				["x"] = 57.4,
 			},
-			["Darnassus, Teldrassil"] = {
-				["y"] = 9.5,
-				["x"] = 39.2,
+			["Fort Triumph, Southern Barrens"] = {
+				["y"] = 63,
+				["x"] = 52.5,
 			},
 			["Mossy Pile, Un'Goro Crater"] = {
 				["y"] = 78.5,
@@ -1466,149 +1466,137 @@ AAP.FPs = {
 			},
 		},
 		[876] = {
-			["Castaway Point, Tiragarde Sound"] = {
-				["y"] = 81.7,
-				["x"] = 68.4,
+			["Flight"] = {
+				["Brennadam, Stormsong Valley"] = {
+					["y"] = 33.8,
+					["x"] = 57.9,
+				},
+				["Castaway Point, Tiragarde Sound"] = {
+					["y"] = 81.7,
+					["x"] = 68.4,
+				},
+				["The Amber Waves, Stormsong Valley"] = {
+					["y"] = 33.6,
+					["x"] = 54,
+				},
+				["Shrine of the Storm, Stormsong Valley"] = {
+					["y"] = 15.7,
+					["x"] = 65.9,
+				},
+				["Kennings Lodge, Tiragarde Sound"] = {
+					["y"] = 72.9,
+					["x"] = 62.9,
+				},
+				["Bridgeport, Tiragarde Sound"] = {
+					["y"] = 63.4,
+					["x"] = 62.4,
+				},
+				["Barbthorn Ridge, Drustvar"] = {
+					["y"] = 58.3,
+					["x"] = 44.4,
+				},
+				["Fallhaven, Drustvar"] = {
+					["y"] = 63.1,
+					["x"] = 41.1,
+				},
+				["Freehold, Tiragarde Sound"] = {
+					["y"] = 82.8,
+					["x"] = 63.1,
+				},
+				["Outrigger Post, Tiragarde Sound"] = {
+					["y"] = 50,
+					["x"] = 39.5,
+				},
+				["Proudmoore Keep, Tiragarde Sound"] = {
+					["y"] = 56,
+					["x"] = 58.5,
+				},
+				["Tradewinds Market, Tiragarde Sound"] = {
+					["y"] = 49.2,
+					["x"] = 61.1,
+				},
+				["Mariner's Row, Tiragarde Sound"] = {
+					["y"] = 57,
+					["x"] = 62.5,
+				},
+				["Tidecross, Stormsong Valley"] = {
+					["y"] = 24,
+					["x"] = 60.4,
+				},
+				["Vigil Hill, Tiragarde Sound"] = {
+					["y"] = 70.7,
+					["x"] = 52.1,
+				},
+				["Norwington Estate, Tiragarde Sound"] = {
+					["y"] = 52.2,
+					["x"] = 49.3,
+				},
+				["Millstone Hamlet, Stormsong Valley"] = {
+					["y"] = 32.1,
+					["x"] = 45.3,
+				},
+				["Seekers Vista, Stormsong Valley"] = {
+					["y"] = 19.4,
+					["x"] = 49.3,
+				},
+				["Arom's Stand, Drustvar"] = {
+					["y"] = 70.9,
+					["x"] = 33.6,
+				},
+				["Mildenhall Meadery, Stormsong Valley"] = {
+					["y"] = 31.4,
+					["x"] = 61.7,
+				},
+				["Roughneck Camp, Tiragarde Sound"] = {
+					["y"] = 48.9,
+					["x"] = 43.4,
+				},
+				["Whitegrove Chapel, Drustvar"] = {
+					["y"] = 55.1,
+					["x"] = 28.1,
+				},
+				["Hatherford, Tiragarde Sound"] = {
+					["y"] = 49,
+					["x"] = 57.3,
+				},
+				["Fort Daelin, Stormsong Valley"] = {
+					["y"] = 23.7,
+					["x"] = 46.8,
+				},
+				["Deadwash, Stormsong Valley"] = {
+					["y"] = 28.1,
+					["x"] = 50.5,
+				},
 			},
-			["The Amber Waves, Stormsong Valley"] = {
-				["y"] = 33.6,
-				["x"] = 54,
-			},
-			["Tol Dagor, Tiragarde Sound"] = {
-				["y"] = 63.3,
-				["x"] = 77.9,
-			},
-			["Anglepoint Wharf, Tiragarde Sound"] = {
-				["y"] = 53.3,
-				["x"] = 43.2,
-			},
-			["Fallhaven, Drustvar"] = {
-				["y"] = 63.9,
-				["x"] = 44,
-			},
-			["Mariner's Row, Tiragarde Sound"] = {
-				["y"] = 57,
-				["x"] = 62.5,
-			},
-			["Tidecross, Stormsong Valley"] = {
-				["y"] = 24,
-				["x"] = 60.4,
-			},
-			["Vigil Hill, Tiragarde Sound"] = {
-				["y"] = 70.7,
-				["x"] = 52.1,
-			},
-			["Millstone Hamlet, Stormsong Valley"] = {
-				["y"] = 32.1,
-				["x"] = 45.3,
-			},
-			["Seekers Vista, Stormsong Valley"] = {
-				["y"] = 19.4,
-				["x"] = 49.3,
-			},
-			["Mildenhall Meadery, Stormsong Valley"] = {
-				["y"] = 31.4,
-				["x"] = 61.7,
-			},
-			["Deadwash, Stormsong Valley"] = {
-				["y"] = 28.1,
-				["x"] = 50.5,
-			},
-			["Southwind Station, Tiragarde Sound"] = {
-				["y"] = 64,
-				["x"] = 57.2,
-			},
-			["Eastpoint Station, Tiragarde Sound"] = {
-				["y"] = 60.9,
-				["x"] = 61.4,
-			},
-			["Brennadam, Stormsong Valley"] = {
-				["y"] = 33.8,
-				["x"] = 57.9,
-			},
-			["Barbthorn Ridge, Drustvar"] = {
-				["y"] = 58.3,
-				["x"] = 44.4,
-			},
-			["Shrine of the Storm, Stormsong Valley"] = {
-				["y"] = 15.7,
-				["x"] = 65.9,
-			},
-			["Kennings Lodge, Tiragarde Sound"] = {
-				["y"] = 72.9,
-				["x"] = 62.9,
-			},
-			["Hangman's Point, Drustvar"] = {
-				["y"] = 65.8,
-				["x"] = 48.1,
-			},
-			["Proudmoore Keep, Tiragarde Sound"] = {
-				["y"] = 56,
-				["x"] = 58.5,
-			},
-			["Firebreaker Expedition, Tiragarde Sound"] = {
-				["y"] = 53.2,
-				["x"] = 55.6,
-			},
-			["Watchman's Rise, Drustvar"] = {
-				["y"] = 61.2,
-				["x"] = 30.8,
-			},
-			["Tradewinds Market, Tiragarde Sound"] = {
-				["y"] = 50.5,
-				["x"] = 62,
-			},
-			["Norwington Estate, Tiragarde Sound"] = {
-				["y"] = 52.2,
-				["x"] = 49.3,
-			},
-			["Hatherford, Tiragarde Sound"] = {
-				["y"] = 49,
-				["x"] = 57.3,
-			},
-			["Roughneck Camp, Tiragarde Sound"] = {
-				["y"] = 48.9,
-				["x"] = 43.4,
-			},
-			["Anyport, Drustvar"] = {
-				["y"] = 66.9,
-				["x"] = 25.2,
-			},
-			["Falconhurst, Drustvar"] = {
-				["y"] = 79.6,
-				["x"] = 28.7,
-			},
-			["Outrigger Post, Tiragarde Sound"] = {
-				["y"] = 50,
-				["x"] = 39.5,
-			},
-			["Old Drust Road, Tiragarde Sound"] = {
-				["y"] = 66,
-				["x"] = 50,
-			},
-			["Fletcher's Hollow, Drustvar"] = {
-				["y"] = 73,
-				["x"] = 47.3,
-			},
-			["Bridgeport, Tiragarde Sound"] = {
-				["y"] = 63.4,
-				["x"] = 62.4,
-			},
-			["Whitegrove Chapel, Drustvar"] = {
-				["y"] = 55.1,
-				["x"] = 28.1,
-			},
-			["Freehold, Tiragarde Sound"] = {
-				["y"] = 82.8,
-				["x"] = 63.1,
-			},
-			["Fort Daelin, Stormsong Valley"] = {
-				["y"] = 23.7,
-				["x"] = 46.8,
-			},
-			["Arom's Stand, Drustvar"] = {
-				["y"] = 70.9,
-				["x"] = 33.6,
+			["Boat"] = {
+				["Firebreaker Expedition, Tiragarde Sound"] = {
+					["y"] = 53.2,
+					["x"] = 55.6,
+				},
+				["Fletcher's Hollow, Drustvar"] = {
+					["y"] = 73,
+					["x"] = 47.3,
+				},
+				["Eastpoint Station, Tiragarde Sound"] = {
+					["y"] = 60.9,
+					["x"] = 61.4,
+				},
+				["Anglepoint Wharf, Tiragarde Sound"] = {
+					["y"] = 53.3,
+					["x"] = 43.2,
+				},
+				["Fallhaven, Drustvar"] = {
+					["y"] = 63.9,
+					["x"] = 44,
+				},
+				["Old Drust Road, Tiragarde Sound"] = {
+					["y"] = 66,
+					["x"] = 50,
+				},
+				["Southwind Station, Tiragarde Sound"] = {
+					["y"] = 64,
+					["x"] = 57.2,
+				},
 			},
 		},
 		[619] = {
@@ -1786,9 +1774,9 @@ AAP.FPs = {
 				["y"] = 71.9,
 				["x"] = 51.3,
 			},
-			["Thorium Point, Searing Gorge"] = {
-				["y"] = 65.3,
-				["x"] = 47.4,
+			["Lakeshire, Redridge"] = {
+				["y"] = 75.8,
+				["x"] = 50,
 			},
 			["Fuselight, Badlands"] = {
 				["y"] = 65.3,
@@ -1810,9 +1798,9 @@ AAP.FPs = {
 				["y"] = 82.9,
 				["x"] = 45.1,
 			},
-			["Lakeshire, Redridge"] = {
-				["y"] = 75.8,
-				["x"] = 50,
+			["Thorium Point, Searing Gorge"] = {
+				["y"] = 65.3,
+				["x"] = 47.4,
 			},
 			["The Menders' Stead, Western Plaguelands"] = {
 				["y"] = 34.2,
@@ -1828,6 +1816,16 @@ AAP.FPs = {
 			},
 		},
 	},
+}
+AAP.AllyBoatNpcs = {
+	[135064] = 1,
+	[132105] = 1,
+	[132039] = 1,
+	[132146] = 1,
+	[132166] = 1,
+	[132044] = 1,
+	[132116] = 1,
+	[135056] = 1,
 }
 function AAP.getContinent()
     local mapID = C_Map.GetBestMapForUnit("player")

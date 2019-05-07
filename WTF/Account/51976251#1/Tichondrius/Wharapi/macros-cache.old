@@ -31,10 +31,6 @@ VER 3 010000000000000E "Regrowth wrath" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover, help, nodead] Regrowth; [@mouseover, harm, nodead][@target, harm, nodead]Solar Wrath; [@target, help, nodead][@player] Regrowth;
 END
-VER 3 0100000000000003 "Rejuvenation" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help,nodead][@focus][] Rejuvenation
-END
 VER 3 010000000000000C "Rejuvfire" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover, help, nodead] Rejuvenation; [@mouseover, harm, nodead][@target, harm, nodead]sunfire; [@target, help, nodead][@player] Rejuvenation;

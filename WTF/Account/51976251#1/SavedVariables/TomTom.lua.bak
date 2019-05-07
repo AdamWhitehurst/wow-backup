@@ -2,7 +2,10 @@
 TomTomDB = {
 	["profileKeys"] = {
 		["Vedrixa - Moon Guard"] = "Default",
+		["Curaney - Tichondrius"] = "Default",
 		["Byanir - Emerald Dream"] = "Default",
+		["Zandroh - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
 		["Byanir - Moon Guard"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
@@ -25,7 +28,10 @@ TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
 		["Vedrixa - Moon Guard"] = "Vedrixa - Moon Guard",
+		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
 		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
+		["Zandroh - Tichondrius"] = "Zandroh - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
@@ -39,7 +45,13 @@ TomTomWaypointsM = {
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
 		},
+		["Curaney - Tichondrius"] = {
+		},
 		["Byanir - Emerald Dream"] = {
+		},
+		["Zandroh - Tichondrius"] = {
+		},
+		["Zandro - Tichondrius"] = {
 		},
 		["Umbrick - Emerald Dream"] = {
 		},

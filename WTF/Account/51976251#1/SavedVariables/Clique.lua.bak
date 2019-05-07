@@ -2,6 +2,24 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
+		["Wharapi - Tichondrius"] = {
+			["spec1_profileKey"] = "Wharapi - Tichondrius",
+			["specswap"] = false,
+			["downclick"] = false,
+			["spec2_profileKey"] = "Wharapi - Tichondrius",
+			["spec4_profileKey"] = "Wharapi - Tichondrius",
+			["spec3_profileKey"] = "Wharapi - Tichondrius",
+			["alerthidden"] = true,
+			["fastooc"] = false,
+		},
+		["Zandro - Tichondrius"] = {
+			["spec1_profileKey"] = "Zandro - Tichondrius",
+			["fastooc"] = false,
+			["spec3_profileKey"] = "Zandro - Tichondrius",
+			["downclick"] = false,
+			["specswap"] = false,
+			["spec2_profileKey"] = "Zandro - Tichondrius",
+		},
 		["Harwapa - Tichondrius"] = {
 			["spec1_profileKey"] = "Harwapa - Tichondrius",
 			["spec3_profileKey"] = "Harwapa - Tichondrius",
@@ -10,21 +28,14 @@ CliqueDB3 = {
 			["spec2_profileKey"] = "Harwapa - Tichondrius",
 			["specswap"] = false,
 		},
-		["Wharapi - Tichondrius"] = {
-			["spec1_profileKey"] = "Wharapi - Tichondrius",
-			["fastooc"] = false,
-			["spec2_profileKey"] = "Wharapi - Tichondrius",
-			["downclick"] = false,
-			["spec4_profileKey"] = "Wharapi - Tichondrius",
-			["spec3_profileKey"] = "Wharapi - Tichondrius",
-			["alerthidden"] = true,
-			["specswap"] = false,
-		},
 	},
 	["profileKeys"] = {
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Umbrick - Emerald Dream",
 		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
+		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
+		["Zandroh - Tichondrius"] = "Zandroh - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 	},
 	["profiles"] = {
@@ -64,106 +75,6 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 				}, -- [2]
-			},
-		},
-		["Umbrick - Emerald Dream"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["spell"] = "Swiftmend",
-					["key"] = "F",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 134914,
-					["type"] = "spell",
-				}, -- [2]
-				{
-					["spell"] = "Rejuvenation",
-					["key"] = "E",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 136081,
-					["type"] = "spell",
-				}, -- [3]
-				{
-					["spell"] = "Nature's Cure",
-					["key"] = "V",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 236288,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Regrowth",
-					["key"] = "R",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 136085,
-					["type"] = "spell",
-				}, -- [5]
-				{
-					["spell"] = "Soothe",
-					["key"] = "SHIFT-X",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 132163,
-					["type"] = "spell",
-				}, -- [6]
-				{
-					["spell"] = "Lifebloom",
-					["key"] = "Q",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 134206,
-					["type"] = "spell",
-				}, -- [7]
-				{
-					["spell"] = "Entangling Roots",
-					["key"] = "C",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 136100,
-					["type"] = "spell",
-				}, -- [8]
-				{
-					["spell"] = "Overgrowth",
-					["key"] = "SHIFT-Z",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 1408836,
-					["type"] = "spell",
-				}, -- [9]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [10]
-				{
-					["spell"] = "Innervate",
-					["key"] = "SHIFT-R",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 136048,
-					["type"] = "spell",
-				}, -- [11]
 			},
 		},
 		["Wharapi"] = {
@@ -222,6 +133,172 @@ CliqueDB3 = {
 					["icon"] = 136100,
 					["type"] = "spell",
 				}, -- [6]
+			},
+		},
+		["Curaney - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Zandroh - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Zandro - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Umbrick - Emerald Dream"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["spell"] = "Rejuvenation",
+					["key"] = "E",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136081,
+					["type"] = "spell",
+				}, -- [2]
+				{
+					["spell"] = "Soothe",
+					["key"] = "SHIFT-X",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 132163,
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Nature's Cure",
+					["key"] = "V",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 236288,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Swiftmend",
+					["key"] = "F",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 134914,
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Regrowth",
+					["key"] = "R",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136085,
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Innervate",
+					["key"] = "SHIFT-R",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136048,
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Entangling Roots",
+					["key"] = "C",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136100,
+					["type"] = "spell",
+				}, -- [8]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [9]
+				{
+					["spell"] = "Lifebloom",
+					["key"] = "Q",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 134206,
+					["type"] = "spell",
+				}, -- [10]
+				{
+					["spell"] = "Overgrowth",
+					["key"] = "SHIFT-Z",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1408836,
+					["type"] = "spell",
+				}, -- [11]
+				{
+					["spell"] = "Ironbark",
+					["key"] = "Z",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 572025,
+					["type"] = "spell",
+				}, -- [12]
 			},
 		},
 	},

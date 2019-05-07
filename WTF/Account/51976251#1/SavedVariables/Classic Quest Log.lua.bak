@@ -2,8 +2,8 @@
 ClassicQuestLogSettings = {
 	["ShowLevels"] = false,
 	["LockWindow"] = true,
-	["UseClassicSkin"] = false,
 	["UndockWindow"] = true,
+	["UseClassicSkin"] = false,
 	["Height"] = 300,
 	["ShowResizeGrip"] = false,
 	["SolidBackground"] = false,

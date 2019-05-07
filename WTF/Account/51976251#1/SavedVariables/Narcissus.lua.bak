@@ -8,10 +8,10 @@ NarcissusDB = {
 	["EnableDoubleTap"] = false,
 	["ColorChoice"] = 0,
 	["CameraOrbit"] = true,
-	["EnableGrainEffect"] = false,
+	["ShowMinimapButton"] = false,
 	["IsSortedByCategory"] = true,
 	["FontHeightItemName"] = 10,
-	["ShowMinimapButton"] = true,
+	["EnableGrainEffect"] = false,
 	["MinimapButton"] = {
 		["Position"] = -0.523505379928004,
 	},

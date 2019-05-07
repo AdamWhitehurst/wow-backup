@@ -170,16 +170,19 @@ RematchSaved = {
 	},
 }
 RematchSettings = {
+	["UseMinimapButton"] = false,
 	["JournalUsed"] = true,
-	["CustomScale"] = false,
+	["CustomScale"] = true,
+	["HideLevelBubbles"] = true,
 	["SlimListSmallText"] = false,
 	["HidePetToast"] = true,
 	["Sort"] = {
 		["Order"] = 1,
 		["FavoritesFirst"] = true,
 	},
-	["JournalPanel"] = 1,
+	["JournalPanel"] = 3,
 	["BackupCount"] = 0,
+	["PetCardXPos"] = 401.000061035156,
 	["ElvUIToastDefaulted"] = true,
 	["ActivePanel"] = 1,
 	["Sanctuary"] = {
@@ -285,7 +288,9 @@ RematchSettings = {
 		},
 	},
 	["NotifiedExperimental"] = true,
-	["YPos"] = 814.000183105469,
+	["HideNonBattlePets"] = false,
+	["BottomToolbar"] = false,
+	["YPos"] = 720.154174804688,
 	["SelectedTab"] = 1,
 	["ScriptFilters"] = {
 		{
@@ -311,9 +316,15 @@ RematchSettings = {
 	},
 	["SpecialSlots"] = {
 	},
-	["XPos"] = 1195.22253417969,
+	["XPos"] = 605.055114746094,
+	["ShowAbilityNumbersLoaded"] = true,
+	["UseMiniQueue"] = false,
+	["MiniMinimized"] = false,
+	["LowerStrata"] = false,
 	["FavoriteFilters"] = {
 	},
+	["LockWindow"] = false,
+	["PanelTabsToRight"] = true,
 	["HideRarityBorders"] = false,
 	["TeamGroups"] = {
 		{
@@ -321,6 +332,7 @@ RematchSettings = {
 			"Interface\\Icons\\PetJournalPortrait", -- [2]
 		}, -- [1]
 	},
+	["ShowAbilityNumbers"] = true,
 	["Filters"] = {
 		["Other"] = {
 		},
@@ -334,13 +346,13 @@ RematchSettings = {
 		},
 		["Strong"] = {
 		},
-		["Similar"] = {
+		["Sources"] = {
 		},
 		["Breed"] = {
 		},
 		["Rarity"] = {
 		},
-		["Sources"] = {
+		["Similar"] = {
 		},
 		["Level"] = {
 		},
@@ -349,33 +361,24 @@ RematchSettings = {
 		["Moveset"] = {
 		},
 	},
-	["QueueSortOrder"] = 1,
 	["ColorPetNames"] = true,
+	["PetCardYPos"] = 787.540832519531,
+	["loadedTeam"] = 142054,
+	["ShowOnLogin"] = false,
 	["CollapsedOptHeaders"] = {
-		true, -- [1]
-		nil, -- [2]
-		true, -- [3]
-		true, -- [4]
-		true, -- [5]
-		true, -- [6]
-		nil, -- [7]
-		true, -- [8]
-		true, -- [9]
-		true, -- [10]
-		true, -- [11]
-		true, -- [12]
+		[7] = true,
 	},
 	["SlimListButtons"] = true,
-	["PanelTabsToRight"] = true,
-	["loadedTeam"] = 142054,
 	["PreferredMode"] = 3,
+	["AllowHiddenPetsDefaulted"] = true,
 	["LevelingQueue"] = {
 	},
+	["SlowMousewheelScroll"] = true,
 	["CornerPos"] = "TOPRIGHT",
-	["AllowHiddenPetsDefaulted"] = true,
-	["SinglePanel"] = false,
+	["SinglePanel"] = true,
+	["QueueSortOrder"] = 1,
 	["UseTypeBar"] = true,
-	["CustomScaleValue"] = 100,
+	["CustomScaleValue"] = 130,
 	["PetNotes"] = {
 	},
 }
