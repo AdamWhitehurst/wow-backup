@@ -551,14 +551,169 @@ ElvCharacterDB = {
 			[51] = 1556936983,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [25]
+		{
+			" ", -- [1]
+			"Bramblebrow-EmeraldDream", -- [2]
+			"", -- [3]
+			"4. LookingForGroup", -- [4]
+			"Bramblebrow-EmeraldDream", -- [5]
+			"", -- [6]
+			26, -- [7]
+			4, -- [8]
+			"LookingForGroup", -- [9]
+			0, -- [10]
+			6, -- [11]
+			"Player-162-0962A55D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Bramblebrow|r",
+			[51] = 1557367844,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [26]
+		{
+			"Looking for a chill raid group that cares about you? Want to raid, PvE, PvP, quest with awesome people? Tired of being just another raid body? Just wanna hang out on Discord and play some other games? Whisper me to talk about <Toxic> :) ;)", -- [1]
+			"Bramblebrow-EmeraldDream", -- [2]
+			"", -- [3]
+			"4. LookingForGroup", -- [4]
+			"Bramblebrow-EmeraldDream", -- [5]
+			"", -- [6]
+			26, -- [7]
+			4, -- [8]
+			"LookingForGroup", -- [9]
+			0, -- [10]
+			7, -- [11]
+			"Player-162-0962A55D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Bramblebrow|r",
+			[51] = 1557367844,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [27]
+		{
+			" ", -- [1]
+			"Bramblebrow-EmeraldDream", -- [2]
+			"", -- [3]
+			"4. LookingForGroup", -- [4]
+			"Bramblebrow-EmeraldDream", -- [5]
+			"", -- [6]
+			26, -- [7]
+			4, -- [8]
+			"LookingForGroup", -- [9]
+			0, -- [10]
+			10, -- [11]
+			"Player-162-0962A55D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Bramblebrow|r",
+			[51] = 1557367858,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [28]
+		{
+			"|cffffff00Orgrimmar is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Orgrimmar", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Orgrimmar", -- [9]
+			0, -- [10]
+			31, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1560621794,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [29]
+		{
+			"|cffffff00Valley of Strength is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Orgrimmar", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Orgrimmar", -- [9]
+			0, -- [10]
+			32, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1560621816,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [30]
+		{
+			"|cffffff00Orgrimmar is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Orgrimmar", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Orgrimmar", -- [9]
+			0, -- [10]
+			4, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1560622023,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [31]
+		{
+			"|cffffff00Valley of Strength is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Orgrimmar", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Orgrimmar", -- [9]
+			0, -- [10]
+			5, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1560622037,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [32]
 	},
 	["ChatEditHistory"] = {
-		"/reloadui", -- [1]
-		"/reload", -- [2]
-		"/wave", -- [3]
-		"/way 57.1, 90.0", -- [4]
-		"/adibags", -- [5]
-		"/laugh", -- [6]
+		"/laugh", -- [1]
+		"/way 57.1, 90.0", -- [2]
+		"/kb", -- [3]
+		"/wave", -- [4]
+		"/reloadui", -- [5]
+		"/adibags", -- [6]
+		"/reload", -- [7]
 	},
 	["CliqueDatatext"] = {
 	},

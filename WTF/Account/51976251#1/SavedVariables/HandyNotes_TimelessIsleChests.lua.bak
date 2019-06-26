@@ -1,0 +1,20 @@
+
+TimelessIsleChestsDB = {
+	["char"] = {
+		["Zandro - Tichondrius"] = {
+			["33205"] = true,
+			["33208"] = true,
+		},
+	},
+	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

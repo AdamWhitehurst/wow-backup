@@ -1324,7 +1324,7 @@ L["WeightEditor_TooltipText"] = "Mostrar na descrição dos itens"
 L["WeightEditor_VersionText"] = "Versão %s"
 
 
-elseif LOCALE == "ruRU" then -- dartraiden (78), Hubbotu (17), rtim0905 (0), Wolfeg (1), lorientalas (1)
+elseif LOCALE == "ruRU" then -- dartraiden (78), Hubbotu (18), rtim0905 (0), Wolfeg (1), lorientalas (1)
 L["Config_Importing_ImportingCanUpdate"] = "Обновлять уже существующие наборы при импорте"
 L["Config_Importing_ImportingCanUpdate_Desc"] = "При импорте набора, совпадающего с существующим по имени, классу и специализации, вместо создания нового набора будет обновлён уже существующий набор."
 L["Config_Importing_ImportingCanUpdate_Desc_Clarification"] = "Допустимы наборы с одинаковыми названиями, если они предназначены для разных специализаций или классов."
@@ -1375,8 +1375,7 @@ L["CreatePopup_Desc"] = "Создание нового набора. Выбер�
 L["CreatePopup_Error_CreatedNewScale"] = "Создан новый набор \"%s\""
 L["CreatePopup_Error_UnknownError"] = "ОШИБКА: при создании нового набора \"%s\" что-то пошло не так!"
 L["CreatePopup_Title"] = "Создать набор"
---[[Translation missing --]]
---[[ L["Debug_CopyToBugReport"] = ""--]] 
+L["Debug_CopyToBugReport"] = "Скопируйте и вставьте текст выше в ваш отчет об ошибке, если вы считаете, что это актуально."
 L["DefaultScaleName_Default"] = "По умолчанию"
 L["DefaultScaleName_Defensive"] = "Защита"
 L["DefaultScaleName_Offensive"] = "Атака"
@@ -1562,7 +1561,7 @@ L["WeightEditor_TooltipText"] = "在鼠标提示中显示"
 L["WeightEditor_VersionText"] = "版本 %s"
 
 
-elseif LOCALE == "zhTW" then -- BNSSNB (95), Sinusquell (1)
+elseif LOCALE == "zhTW" then -- BNSSNB (96), Sinusquell (1)
 L["Config_Importing_ImportingCanUpdate"] = "導入可以更新現有比例"
 L["Config_Importing_ImportingCanUpdate_Desc"] = "當導入具有相同名稱，職業和專精的比例作為預先存在的比例時，現有比例將使用新權值更新，而不是建立新比例。"
 L["Config_Importing_ImportingCanUpdate_Desc_Clarification"] = "可以有多個具有相同名稱的比例，只要它們用於不同的專精或職業。"
@@ -1614,8 +1613,7 @@ L["CreatePopup_Desc"] = "建立新的比例。從下拉選單選擇職業與專�
 L["CreatePopup_Error_CreatedNewScale"] = "已建立新比例 \"%s\""
 L["CreatePopup_Error_UnknownError"] = "錯誤：建立新比例“％s”出了點問題！"
 L["CreatePopup_Title"] = "建立比例"
---[[Translation missing --]]
---[[ L["Debug_CopyToBugReport"] = ""--]] 
+L["Debug_CopyToBugReport"] = "如果你覺得這有相關請 複製&貼上 文字到錯誤回報中。"
 L["DefaultScaleName_Default"] = "預設"
 L["DefaultScaleName_Defensive"] = "防禦性"
 L["DefaultScaleName_Offensive"] = "攻擊性"

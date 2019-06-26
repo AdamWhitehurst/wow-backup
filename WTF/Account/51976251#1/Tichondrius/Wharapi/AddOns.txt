@@ -1,4 +1,4 @@
-Storyline: disabled
+Storyline: enabled
 Classic Quest Log: enabled
 MaxCam: disabled
 AdiBags: enabled
@@ -39,7 +39,7 @@ Grail-Quests-zhTW: enabled
 Grail-Reputations: enabled
 Grail-Rewards: enabled
 Grail-When: enabled
-Immersion: enabled
+Immersion: disabled
 PetJournalEnhanced: enabled
 PetTracker: enabled
 PetTracker_Breeds: enabled
@@ -71,3 +71,6 @@ DBM-Party-BfA: enabled
 DBM-CrucibleofStorms: enabled
 DBM-Uldir: enabled
 DBM-WorldEvents: enabled
+TradeSkillMaster_AuctionDB: disabled
+HandyNotes: disabled
+WeakAurasCompanion: enabled

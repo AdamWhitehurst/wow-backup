@@ -2,468 +2,6 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:6019:Player-162-09E4019A:1:4:7:19:4294967295:4294967295:4294967295:4294967295|h[Come One, Come All!]|h|r!", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			160, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554672303,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [1]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13441:Player-162-09E4019A:1:4:7:19:4294967295:4294967295:4294967295:4294967295|h[Pushing the Payload]|h|r!", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			225, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554673222,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [2]
-		{
-			":..Lust Detector:..: Frostiana-Area52 Casted a Spell |cff71d5ff|Hspell:80353:0|h[Time Warp]|h|r!", -- [1]
-			"Shundi-Alexstrasza", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Shundi-Alexstrasza", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			7, -- [11]
-			"Player-1070-0B3419D4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Shundi-Alexstrasza|r",
-			[51] = 1554685825,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [3]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:11212:Player-162-09BFEEDA:1:4:7:19:4294967295:4294967295:4294967295:4294967295|h[Raise an Army]|h|r!", -- [1]
-			"Madaf-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Madaf-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			66, -- [11]
-			"Player-162-09BFEEDA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cMadaf|r",
-			[51] = 1554685949,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [4]
-		{
-			"Shockwave on Complement", -- [1]
-			"Complement-EarthenRing", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Complement-EarthenRing", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			84, -- [11]
-			"Player-100-09EC7FA3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Complement-EarthenRing|r",
-			[51] = 1554686045,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [5]
-		{
-			"res pls", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			163, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554686363,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [6]
-		{
-			"lmao", -- [1]
-			"Froszbolt-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Froszbolt-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			166, -- [11]
-			"Player-11-0AD518D4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Froszbolt-Tichondrius|r",
-			[51] = 1554686379,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [7]
-		{
-			"just hit 120.. |cffa335ee|Hitem:166685::::::::120:62::3:3:5479:1522:4783:::|h[Ivus' Tanglemoss Waistcord]|h|r|cffa335ee|Hitem:166684::::::::120:62::3:4:5478:1517:4786:5416:::|h[Garments of the Forest Lord]|h|r", -- [1]
-			"Froszbolt-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Froszbolt-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			171, -- [11]
-			"Player-11-0AD518D4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Froszbolt-Tichondrius|r",
-			[51] = 1554686386,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [8]
-		{
-			"|cffffff00Zuldazar is under attack!|r", -- [1]
-			"", -- [2]
-			"", -- [3]
-			"3. LocalDefense - Zuldazar", -- [4]
-			"", -- [5]
-			"", -- [6]
-			22, -- [7]
-			3, -- [8]
-			"LocalDefense - Zuldazar", -- [9]
-			0, -- [10]
-			577, -- [11]
-			false, -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "",
-			[51] = 1554757241,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [9]
-		{
-			"thx", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			688, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554758171,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [10]
-		{
-			"Hiya", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1216, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554762016,
-			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [11]
-		{
-			"LFG Mythic", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1360, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554762871,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [12]
-		{
-			"Interrupted Water Elemental's |cff71d5ff|Hspell:270606:0|h[Frostbolt]|h|r!", -- [1]
-			"Greikó-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Greikó-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1391, -- [11]
-			"Player-1427-0536E841", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Greikó-Ragnaros|r",
-			[51] = 1554763135,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [13]
-		{
-			"Interrupted Ocean Recluse's |cff71d5ff|Hspell:265582:0|h[Bubble Barrage]|h|r!", -- [1]
-			"Greikó-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Greikó-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1425, -- [11]
-			"Player-1427-0536E841", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Greikó-Ragnaros|r",
-			[51] = 1554763281,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [14]
-		{
-			"Interrupted Vicar Djosa's |cff71d5ff|Hspell:277189:0|h[Dark Bolt]|h|r!", -- [1]
-			"Greikó-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Greikó-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1439, -- [11]
-			"Player-1427-0536E841", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Greikó-Ragnaros|r",
-			[51] = 1554763389,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [15]
-		{
-			"Interrupted Vicar Djosa's |cff71d5ff|Hspell:277118:0|h[Curse of Impotence]|h|r!", -- [1]
-			"Greikó-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Greikó-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1453, -- [11]
-			"Player-1427-0536E841", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Greikó-Ragnaros|r",
-			[51] = 1554763425,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [16]
-		{
-			"Interrupted Tidal Surger's |cff71d5ff|Hspell:270606:0|h[Frostbolt]|h|r!", -- [1]
-			"Greikó-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Greikó-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1471, -- [11]
-			"Player-1427-0536E841", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Greikó-Ragnaros|r",
-			[51] = 1554763490,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [17]
-		{
-			"sooooo whats the strategy for this?", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1533, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554763925,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [18]
-		{
-			"just push?", -- [1]
-			"Umbrick-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1535, -- [11]
-			"Player-162-09E4019A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1554763933,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [19]
-		{
-			"listen", -- [1]
-			"Brah-Durotan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Brah-Durotan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1536, -- [11]
-			"Player-63-0A298FF7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Brah-Durotan|r",
-			[51] = 1554763938,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [20]
-		{
-			"if you want to seriously have fun here", -- [1]
-			"Brah-Durotan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Brah-Durotan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1537, -- [11]
-			"Player-63-0A298FF7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Brah-Durotan|r",
-			[51] = 1554763943,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [21]
-		{
 			"do this: ", -- [1]
 			"Brah-Durotan", -- [2]
 			"", -- [3]
@@ -484,7 +22,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763946,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [22]
+		}, -- [1]
 		{
 			"Get 200 metla", -- [1]
 			"Brah-Durotan", -- [2]
@@ -506,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763958,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [23]
+		}, -- [2]
 		{
 			"metal*", -- [1]
 			"Brah-Durotan", -- [2]
@@ -528,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763962,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [24]
+		}, -- [3]
 		{
 			"go newstead and take that", -- [1]
 			"Brah-Durotan", -- [2]
@@ -550,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763973,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [25]
+		}, -- [4]
 		{
 			"K", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -572,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554763975,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [26]
+		}, -- [5]
 		{
 			"get 2 wolf riders", -- [1]
 			"Brah-Durotan", -- [2]
@@ -594,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763977,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [27]
+		}, -- [6]
 		{
 			"get 4 stacks of altar buff", -- [1]
 			"Brah-Durotan", -- [2]
@@ -616,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763987,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [28]
+		}, -- [7]
 		{
 			"kill pats ", -- [1]
 			"Brah-Durotan", -- [2]
@@ -638,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763991,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [29]
+		}, -- [8]
 		{
 			"get 150% damage buff", -- [1]
 			"Brah-Durotan", -- [2]
@@ -660,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554763998,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [30]
+		}, -- [9]
 		{
 			"go ham on everything", -- [1]
 			"Brah-Durotan", -- [2]
@@ -682,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Brah-Durotan|r",
 			[51] = 1554764006,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [31]
+		}, -- [10]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12877:Player-162-09E4019A:1:4:8:19:4294967295:4294967295:4294967295:4294967295|h[Strike Hard]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -704,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554764785,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [32]
+		}, -- [11]
 		{
 			"Interrupted Veteran Sorceress's |cff71d5ff|Hspell:262006:0|h[Fireball]|h|r!", -- [1]
 			"Aerøsmíth-Zul'jin", -- [2]
@@ -726,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Aerøsmíth-Zul'jin|r",
 			[51] = 1554764865,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [33]
+		}, -- [12]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12918:Player-162-09AD2003:1:4:8:19:4294967295:4294967295:4294967295:4294967295|h[Have a Heart]|h|r!", -- [1]
 			"Gharen-EmeraldDream", -- [2]
@@ -748,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGharen|r",
 			[51] = 1554774984,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [34]
+		}, -- [13]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13144:Player-162-09E4019A:1:4:10:19:4294967295:4294967295:4294967295:4294967295|h[Wide World of Quests]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -770,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554931730,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [35]
+		}, -- [14]
 		{
 			"oh..", -- [1]
 			"Dynk-WyrmrestAccord", -- [2]
@@ -792,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Dynk-WyrmrestAccord|r",
 			[51] = 1554933440,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [36]
+		}, -- [15]
 		{
 			"i guess spell stealing that is a bad idea", -- [1]
 			"Dynk-WyrmrestAccord", -- [2]
@@ -814,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Dynk-WyrmrestAccord|r",
 			[51] = 1554933458,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [37]
+		}, -- [16]
 		{
 			"lol gone up 15 iLevels this run...", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -836,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554933918,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [38]
+		}, -- [17]
 		{
 			"Entomb on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -858,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554933961,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [39]
+		}, -- [18]
 		{
 			"hello", -- [1]
 			"Gazkal-Warsong", -- [2]
@@ -880,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Gazkal-Warsong|r",
 			[51] = 1554933970,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [40]
+		}, -- [19]
 		{
 			"hi", -- [1]
 			"Cloudsong-Whisperwind", -- [2]
@@ -902,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeCloudsong-Whisperwind|r",
 			[51] = 1554933976,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [41]
+		}, -- [20]
 		{
 			"Entomb on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -924,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934008,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [42]
+		}, -- [21]
 		{
 			"Hunting Leap on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -946,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934176,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [43]
+		}, -- [22]
 		{
 			"Hunting Leap on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -968,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934199,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [44]
+		}, -- [23]
 		{
 			"ty", -- [1]
 			"Solthis-EmeraldDream", -- [2]
@@ -990,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Solthis|r",
 			[51] = 1554934243,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [45]
+		}, -- [24]
 		{
 			"Barrel Through on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1012,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934515,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [46]
+		}, -- [25]
 		{
 			"3", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1034,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934520,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [47]
+		}, -- [26]
 		{
 			"2", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1056,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934521,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [48]
+		}, -- [27]
 		{
 			"1", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1078,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934522,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [49]
+		}, -- [28]
 		{
 			"oops lol", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1100,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934560,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [50]
+		}, -- [29]
 		{
 			"Quaking Leap on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1122,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554934679,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [51]
+		}, -- [30]
 		{
 			"Hunting Leap on Gazkal", -- [1]
 			"Gazkal-Warsong", -- [2]
@@ -1144,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Gazkal-Warsong|r",
 			[51] = 1554934708,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [52]
+		}, -- [31]
 		{
 			"thanks everyone", -- [1]
 			"Gazkal-Warsong", -- [2]
@@ -1166,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Gazkal-Warsong|r",
 			[51] = 1554934781,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [53]
+		}, -- [32]
 		{
 			"Hiya guys", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1188,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554940881,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [54]
+		}, -- [33]
 		{
 			"Hunting Leap on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1210,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554940937,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [55]
+		}, -- [34]
 		{
 			"Hunting Leap on Umbrick", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1232,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554940943,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [56]
+		}, -- [35]
 		{
 			"seriously?", -- [1]
 			"Sarire-Caelestrasz", -- [2]
@@ -1254,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sarire-Caelestrasz|r",
 			[51] = 1554941061,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [57]
+		}, -- [36]
 		{
 			"That is so weird lol", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1276,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554941067,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [58]
+		}, -- [37]
 		{
 			"that's 2 tanks", -- [1]
 			"Sarire-Caelestrasz", -- [2]
@@ -1298,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sarire-Caelestrasz|r",
 			[51] = 1554941079,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [59]
+		}, -- [38]
 		{
 			"lol might work?", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1320,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554941096,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [60]
+		}, -- [39]
 		{
 			"yeah. I'm not gonna bother. thanks for the run though", -- [1]
 			"Sarire-Caelestrasz", -- [2]
@@ -1342,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sarire-Caelestrasz|r",
 			[51] = 1554941105,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [61]
+		}, -- [40]
 		{
 			"sad... okay well Im out too, only joined halfway", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1364,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554941125,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [62]
+		}, -- [41]
 		{
 			"not really worth", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1386,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554941130,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [63]
+		}, -- [42]
 		{
 			"over here", -- [1]
 			"Narceoda-Illidan", -- [2]
@@ -1408,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Narceoda-Illidan|r",
 			[51] = 1554941604,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [64]
+		}, -- [43]
 		{
 			":O", -- [1]
 			"Narceoda-Illidan", -- [2]
@@ -1430,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Narceoda-Illidan|r",
 			[51] = 1554941605,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [65]
+		}, -- [44]
 		{
 			"big bags", -- [1]
 			"Narceoda-Illidan", -- [2]
@@ -1452,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Narceoda-Illidan|r",
 			[51] = 1554941605,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [66]
+		}, -- [45]
 		{
 			"rip", -- [1]
 			"Narceoda-Illidan", -- [2]
@@ -1474,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Narceoda-Illidan|r",
 			[51] = 1554941638,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [67]
+		}, -- [46]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13118:Player-162-09E4019A:1:4:10:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Whispering Reef]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1496,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554942047,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [68]
+		}, -- [47]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12957:Player-162-09E4019A:1:4:10:19:4294967295:4294967295:4294967295:4294967295|h[Champion of the Honorbound]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1518,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554948173,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [69]
+		}, -- [48]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:523:Player-162-09E4019A:1:4:10:19:4294967295:4294967295:4294967295:4294967295|h[5 Exalted Reputations]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1540,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554948173,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [70]
+		}, -- [49]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:7525:Player-162-09E4019A:1:4:10:19:4294967295:4294967295:4294967295:4294967295|h[Taming Cataclysm]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1562,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1554950944,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [71]
+		}, -- [50]
 		{
 			"hiya :)", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1584,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026027,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [72]
+		}, -- [51]
 		{
 			"hey hey ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1606,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026035,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [73]
+		}, -- [52]
 		{
 			"brb 5 mins", -- [1]
 			"Bjarn-Barthilas", -- [2]
@@ -1628,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Bjarn-Barthilas|r",
 			[51] = 1555026036,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [74]
+		}, -- [53]
 		{
 			"so frist time run on this lvl is ti pvp or just harder bosses ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1650,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026083,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [75]
+		}, -- [54]
 		{
 			"I think focus bosses", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1672,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026102,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [76]
+		}, -- [55]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13398:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Havenswood]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1694,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026729,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [77]
+		}, -- [56]
 		{
 			"thanks!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1716,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026734,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [78]
+		}, -- [57]
 		{
 			"you all up for a 2 one ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1738,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026750,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [79]
+		}, -- [58]
 		{
 			"yeah", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1760,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026756,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [80]
+		}, -- [59]
 		{
 			"i need the pet from here 2 ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1782,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026780,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [81]
+		}, -- [60]
 		{
 			"pets ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1804,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026795,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [82]
+		}, -- [61]
 		{
 			"Im at 71 SB, once I get 100 I can unlock Zandalari race :D", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1826,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555026810,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [83]
+		}, -- [62]
 		{
 			"nice ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1848,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555026828,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [84]
+		}, -- [63]
 		{
 			"hit the orb ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1870,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555027008,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [85]
+		}, -- [64]
 		{
 			"ty ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -1892,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555027021,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [86]
+		}, -- [65]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13107:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Skittering Hollow]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1914,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555027818,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [87]
+		}, -- [66]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13108:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Skittering Hollow]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1936,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555027818,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [88]
+		}, -- [67]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13109:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Skittering Hollow]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -1958,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555027818,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [89]
+		}, -- [68]
 		{
 			"THANKS", -- [1]
 			"Bjarn-Barthilas", -- [2]
@@ -1980,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Bjarn-Barthilas|r",
 			[51] = 1555027843,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [90]
+		}, -- [69]
 		{
 			"yw ", -- [1]
 			"Lostfortime-Zul'jin", -- [2]
@@ -2002,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lostfortime-Zul'jin|r",
 			[51] = 1555027847,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [91]
+		}, -- [70]
 		{
 			"Woo 87 db", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2024,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555027848,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [92]
+		}, -- [71]
 		{
 			"Thanks too", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2046,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555027851,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [93]
+		}, -- [72]
 		{
 			"Hey guys", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2068,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030182,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [94]
+		}, -- [73]
 		{
 			"hi", -- [1]
 			"Mákamáge-Ragnaros", -- [2]
@@ -2090,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Mákamáge-Ragnaros|r",
 			[51] = 1555030194,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [95]
+		}, -- [74]
 		{
 			"sup", -- [1]
 			"Dämballah-Ragnaros", -- [2]
@@ -2112,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecDämballah-Ragnaros|r",
 			[51] = 1555030204,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [96]
+		}, -- [75]
 		{
 			"Cannot contain this exc itement", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2134,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030211,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [97]
+		}, -- [76]
 		{
 			"Newbie question", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2156,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030370,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [98]
+		}, -- [77]
 		{
 			"?", -- [1]
 			"Dämballah-Ragnaros", -- [2]
@@ -2178,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecDämballah-Ragnaros|r",
 			[51] = 1555030379,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [99]
+		}, -- [78]
 		{
 			"but why do people seem to passs up so many deposit?", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2200,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030382,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [100]
+		}, -- [79]
 		{
 			"bc thats rlly slowly", -- [1]
 			"Dämballah-Ragnaros", -- [2]
@@ -2222,7 +1760,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecDämballah-Ragnaros|r",
 			[51] = 1555030425,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [101]
+		}, -- [80]
 		{
 			"Just killing mobs is fastr?", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2244,7 +1782,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030442,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [102]
+		}, -- [81]
 		{
 			"yeah", -- [1]
 			"Dämballah-Ragnaros", -- [2]
@@ -2266,7 +1804,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecDämballah-Ragnaros|r",
 			[51] = 1555030449,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [103]
+		}, -- [82]
 		{
 			":o thx", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2288,7 +1826,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030461,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [104]
+		}, -- [83]
 		{
 			"lol okay that mob gave some crazy azerite, I see", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2310,7 +1848,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030768,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [105]
+		}, -- [84]
 		{
 			"yep", -- [1]
 			"Dämballah-Ragnaros", -- [2]
@@ -2332,7 +1870,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecDämballah-Ragnaros|r",
 			[51] = 1555030812,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [106]
+		}, -- [85]
 		{
 			"Thanks", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2354,7 +1892,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030831,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [107]
+		}, -- [86]
 		{
 			"Cannot contain my excitement", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2376,7 +1914,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555030992,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [108]
+		}, -- [87]
 		{
 			"This expedition will unlock zandalari for me :D", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2398,7 +1936,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555031006,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [109]
+		}, -- [88]
 		{
 			"gj gj guys", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2420,7 +1958,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555031182,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [110]
+		}, -- [89]
 		{
 			"ally afk...", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2442,7 +1980,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555031338,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [111]
+		}, -- [90]
 		{
 			"gj just keep pushiong", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2464,7 +2002,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555031441,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [112]
+		}, -- [91]
 		{
 			"?", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2486,7 +2024,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555031812,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [113]
+		}, -- [92]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12950:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Zandalari Empire]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2508,7 +2046,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555033339,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [114]
+		}, -- [93]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13161:Player-162-09E4019A:1:4:11:19:4294967295:4294967295:4294967295:4294967295|h[Allied Races: Zandalari Troll]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2530,7 +2068,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555041773,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [115]
+		}, -- [94]
 		{
 			"|cffffff00Valley of Strength is under attack!|r", -- [1]
 			"", -- [2]
@@ -2552,7 +2090,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1555207389,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [116]
+		}, -- [95]
 		{
 			"|cffffff00Orgrimmar is under attack!|r", -- [1]
 			"", -- [2]
@@ -2574,7 +2112,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1555207409,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [117]
+		}, -- [96]
 		{
 			"|cffffff00Valley of Strength is under attack!|r", -- [1]
 			"", -- [2]
@@ -2596,7 +2134,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1555207455,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [118]
+		}, -- [97]
 		{
 			"|cffffff00Valley of Strength is under attack!|r", -- [1]
 			"", -- [2]
@@ -2618,7 +2156,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1555207547,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [119]
+		}, -- [98]
 		{
 			"|cffffff00Orgrimmar is under attack!|r", -- [1]
 			"", -- [2]
@@ -2640,7 +2178,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1555207608,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [120]
+		}, -- [99]
 		{
 			"'s Maggot scratches Cousin Slowhands. How catty!", -- [1]
 			"Midnitedusk-EmeraldDream", -- [2]
@@ -2662,7 +2200,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeMidnitedusk|r",
 			[51] = 1555814267,
 			[50] = "CHAT_MSG_EMOTE",
-		}, -- [121]
+		}, -- [100]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13099:Player-162-097AF139:1:4:20:19:4294967295:4294967295:4294967295:4294967295|h[Molten Cay]|h|r!", -- [1]
 			"Dekal-EmeraldDream", -- [2]
@@ -2684,7 +2222,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dekal|r",
 			[51] = 1555818020,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [122]
+		}, -- [101]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13100:Player-162-097AF139:1:4:20:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Molten Cay]|h|r!", -- [1]
 			"Dekal-EmeraldDream", -- [2]
@@ -2706,7 +2244,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dekal|r",
 			[51] = 1555818020,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [123]
+		}, -- [102]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12556:Player-162-09D44AD5:1:4:21:19:4294967295:4294967295:4294967295:4294967295|h[Explore Tiragarde Sound]|h|r!", -- [1]
 			"Lolamitchell-EmeraldDream", -- [2]
@@ -2728,7 +2266,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Lolamitchell|r",
 			[51] = 1555877582,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [124]
+		}, -- [103]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6606:Player-162-09E4019A:1:4:21:19:4294967295:4294967295:4294967295:4294967295|h[Taming Pandaria]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2750,7 +2288,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555878209,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [125]
+		}, -- [104]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6607:Player-162-09E4019A:1:4:21:19:4294967295:4294967295:4294967295:4294967295|h[Taming Azeroth]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2772,7 +2310,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555878209,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [126]
+		}, -- [105]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:7908:Player-162-09E4019A:1:4:21:19:4294967295:4294967295:4294967295:4294967295|h[I Choose You]|h|r!", -- [1]
 			"Umbrick-EmeraldDream", -- [2]
@@ -2794,29 +2332,500 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cUmbrick|r",
 			[51] = 1555878217,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [106]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:5752:Player-162-09DFFCE9:1:5:5:19:4294967295:4294967295:4294967295:4294967295|h[Justly Rewarded]|h|r!", -- [1]
+			"Nigsiana-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Nigsiana-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			54, -- [11]
+			"Player-162-09DFFCE9", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cNigsiana|r",
+			[51] = 1557106368,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [107]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:1178:Player-162-09E4019A:1:5:17:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			13, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1558138189,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [108]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6579:Player-162-09E4019A:1:5:18:19:4294967295:4294967295:4294967295:4294967295|h[Rookie Pet Group]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			26, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1558228846,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [109]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6578:Player-162-09E4019A:1:5:18:19:4294967295:4294967295:4294967295:4294967295|h[Pro Pet Group]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			28, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1558228846,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [110]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:238:Player-162-09BCDDA3:1:5:18:19:4294967295:4294967295:4294967295:4294967295|h[An Honorable Kill]|h|r!", -- [1]
+			"Zardmar-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Zardmar-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			7, -- [11]
+			"Player-162-09BCDDA3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Zardmar|r",
+			[51] = 1558231480,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [111]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12560:Player-162-09E4019A:1:5:29:19:4294967295:4294967295:4294967295:4294967295|h[Explore Vol'dun]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			51, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1559160946,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [112]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12557:Player-162-09E4019A:1:6:5:19:4294967295:4294967295:4294967295:4294967295|h[Explore Drustvar]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			26, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1559770040,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [113]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12988:Player-162-09E4019A:1:6:5:19:4294967295:4294967295:4294967295:4294967295|h[Battle for Azeroth Explorer]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			28, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1559770040,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [114]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12993:Player-162-09E4019A:1:6:8:19:4294967295:4294967295:4294967295:4294967295|h[Don't Warfront Me]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			381, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1560025596,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [115]
+		{
+			"I'll go disc", -- [1]
+			"Noxindio-Zul'jin", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Noxindio-Zul'jin", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			34, -- [11]
+			"Player-61-0ABEACF9", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeNoxindio-Zul'jin|r",
+			[51] = 1560031258,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [116]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13017:Player-162-09E4019A:1:6:12:19:4294967295:4294967295:4294967295:4294967295|h[Champion of the Vulpera]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			83, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1560385343,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [117]
+		{
+			"not to be rude but how did i get you on my friends thingy", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			296, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387741,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "Syllaris",
+		}, -- [118]
+		{
+			"Im zandro on ruin gaming,w e were running dungeons I believe", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			305, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387777,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "Syllaris",
+		}, -- [119]
+		{
+			"oh okay", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			306, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387813,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "Syllaris",
+		}, -- [120]
+		{
+			"just ignore me i'm paranoid about maybe having a horde spy in my friends lol", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			307, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387847,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "Syllaris",
+		}, -- [121]
+		{
+			"Haha wekk dont worry, I plan on migrating this toon once I get Azeroth diplomat", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			308, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387893,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "Syllaris",
+		}, -- [122]
+		{
+			"*well", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			309, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387900,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "Syllaris",
+		}, -- [123]
+		{
+			"to horde??", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			312, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387923,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "Syllaris",
+		}, -- [124]
+		{
+			"No to tichondirus Alliance", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			313, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387942,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "Syllaris",
+		}, -- [125]
+		{
+			"yay!!!!!", -- [1]
+			"|Kq2|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			314, -- [11]
+			false, -- [12]
+			3, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Syllaris|r",
+			[51] = 1560387958,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "Syllaris",
+		}, -- [126]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13284:Player-162-09E4019A:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Frontline Warrior]|h|r!", -- [1]
+			"Umbrick-EmeraldDream", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Umbrick-EmeraldDream", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			205, -- [11]
+			"Player-162-09E4019A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cUmbrick|r",
+			[51] = 1560559982,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/i gj gj guys", -- [1]
-		"/p Thanks too", -- [2]
-		"/i Cannot contain my excitement", -- [3]
-		"/i Just killing mobs is fastr?", -- [4]
-		"/i gj just keep pushiong", -- [5]
-		"/i This expedition will unlock zandalari for me :D", -- [6]
-		"/i ally afk...", -- [7]
-		"/kb", -- [8]
-		"/p Woo 87 db", -- [9]
-		"/p thanks!", -- [10]
-		"/i Cannot contain this exc itement", -- [11]
-		"/i ?", -- [12]
-		"/i lol okay that mob gave some crazy azerite, I see", -- [13]
-		"/i Thanks", -- [14]
-		"/i :o thx", -- [15]
-		"/i but why do people seem to passs up so many deposit?", -- [16]
-		"/i Hey guys", -- [17]
-		"/i Newbie question", -- [18]
-		"/p Im at 71 SB, once I get 100 I can unlock Zandalari race :D", -- [19]
-		"/p yeah", -- [20]
+		"/i Hey guys", -- [1]
+		"/i Cannot contain my excitement", -- [2]
+		"/way Drustvar 67.46 67.31 Fletcher's Hollow", -- [3]
+		"/tomtom     43.57 87.94", -- [4]
+		"*well", -- [5]
+		"/p Im at 71 SB, once I get 100 I can unlock Zandalari race :D", -- [6]
+		"/p Woo 87 db", -- [7]
+		"/run for i = 1,120 do PickupAction(i) ClearCursor() end", -- [8]
+		"/reload", -- [9]
+		"/elvui", -- [10]
+		"No to tichondirus Alliance", -- [11]
+		"/way Drustvar 19.36 8.83 Western Watch", -- [12]
+		"Im zandro on ruin gaming,w e were running dungeons I believe", -- [13]
+		"Haha wekk dont worry, I plan on migrating this toon once I get Azeroth diplomat", -- [14]
+		"/bow", -- [15]
+		"/i lol okay that mob gave some crazy azerite, I see", -- [16]
+		"/i :o thx", -- [17]
+		"/i Cannot contain this exc itement", -- [18]
+		"/kb", -- [19]
+		"/kba", -- [20]
 	},
 	["CliqueDatatext"] = {
 	},

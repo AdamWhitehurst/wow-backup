@@ -3,1394 +3,228 @@ ElvCharacterDB = {
 	["CliqueDatatext"] = {
 	},
 	["ChatEditHistory"] = {
-		"/aap config", -- [1]
-		"/i Why?", -- [2]
-		"/i Clear adds before pulling a boss pls", -- [3]
-		"/kb", -- [4]
-		"/petleash config", -- [5]
-		"/i ^", -- [6]
-		"/i Thanks :)", -- [7]
-		"/wa", -- [8]
-		"/immersion", -- [9]
-		"/elvui", -- [10]
-		"/i ...", -- [11]
-		"/bow", -- [12]
-		"/i lol", -- [13]
-		"/i He did pretty well last dung lol :D", -- [14]
-		"/reload", -- [15]
-		"/i Hi :)", -- [16]
-		"/sit", -- [17]
-		"/dynamiccam", -- [18]
-		"/s test", -- [19]
-		"/aap reset", -- [20]
+		"/i I mean, we are short a tank", -- [1]
+		"/way Drustvar 61.19 44.73 Barrowknoll Cemetery", -- [2]
+		"/way", -- [3]
+		"/cw Guibernardez-Goldrinn Np my dude", -- [4]
+		"/clap", -- [5]
+		"/i Lol", -- [6]
+		"/i Im just glad the tanks and heals are friendly", -- [7]
+		"/ELVUI", -- [8]
+		"/g Anyone up for some PvP Islands?", -- [9]
+		"/way Drustvar 19.36 8.83 Western Watch", -- [10]
+		"/i please", -- [11]
+		"/i Yeah, seems like that", -- [12]
+		"/reloadui", -- [13]
+		"/i This is my first lfr raid, is it normally so.... hectic?", -- [14]
+		"/cw Vulcke-Tichondrius need a break lol", -- [15]
+		"/i Woo gj guys!", -- [16]
+		"/cw Guibernardez-Goldrinn Nope, yours :)", -- [17]
+		"/run for i = 1,120 do PickupAction(i) ClearCursor() end", -- [18]
+		"/kb", -- [19]
+		"/elvui", -- [20]
 	},
 	["ChatHistoryLog"] = {
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8465:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Fallen Protectors]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:11722:Player-11-0B61F09F:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[War-Mog-ering]|h|r!", -- [1]
+			"Lilfunk-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Lilfunk-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			321, -- [11]
-			"Player-11-0B657D04", -- [12]
+			416, -- [11]
+			"Player-11-0B61F09F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193550,
+			[52] = "|cfffefefeLilfunk|r",
+			[51] = 1560517771,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [1]
 		{
-			"|cffffff00Darkshire is under attack!|r", -- [1]
-			"", -- [2]
-			"", -- [3]
-			"3. LocalDefense - Duskwood", -- [4]
-			"", -- [5]
-			"", -- [6]
-			22, -- [7]
-			3, -- [8]
-			"LocalDefense - Duskwood", -- [9]
-			0, -- [10]
-			332, -- [11]
-			false, -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "",
-			[51] = 1557193690,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [2]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:11995:Player-11-0B5A8DC0:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Portal Keeper Hasabel]|h|r!", -- [1]
-			"Aeroin-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:11721:Player-11-0B61F09F:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Wild Style]|h|r!", -- [1]
+			"Lilfunk-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Aeroin-Tichondrius", -- [5]
+			"Lilfunk-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			335, -- [11]
-			"Player-11-0B5A8DC0", -- [12]
+			417, -- [11]
+			"Player-11-0B61F09F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff38bb9Aeroin|r",
-			[51] = 1557193748,
+			[52] = "|cfffefefeLilfunk|r",
+			[51] = 1560517771,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [2]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:5306:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Parasite Evening]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Tearsfrost-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			554, -- [11]
+			"Player-11-0A7B8045", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518472,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [3]
 		{
-			"|cffffff00Duskwood is under attack!|r", -- [1]
-			"", -- [2]
-			"", -- [3]
-			"3. LocalDefense - Duskwood", -- [4]
-			"", -- [5]
-			"", -- [6]
-			22, -- [7]
-			3, -- [8]
-			"LocalDefense - Duskwood", -- [9]
-			0, -- [10]
-			336, -- [11]
-			false, -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "",
-			[51] = 1557193778,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [4]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8466:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Norushen]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5094:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Magmaw]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			337, -- [11]
-			"Player-11-0B657D04", -- [12]
+			555, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193779,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518472,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [4]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:1178:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Tearsfrost-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			556, -- [11]
+			"Player-11-0A7B8045", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518474,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [5]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8532:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[None Shall Pass]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5307:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Achieve-a-tron]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			338, -- [11]
-			"Player-11-0B657D04", -- [12]
+			562, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193779,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518525,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [6]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8458:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Vale of Eternal Sorrows]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5107:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Omnotron Defense System]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			351, -- [11]
-			"Player-11-0B657D04", -- [12]
+			563, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193950,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518525,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [7]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8467:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Sha of Pride]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5309:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Full of Sound and Fury]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			352, -- [11]
-			"Player-11-0B657D04", -- [12]
+			566, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193950,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518618,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [8]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8521:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Swallow Your Pride]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5115:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Chimaeron]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			353, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557193950,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [9]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:5794:Player-11-0A4B1597:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Time Flies When You're Having Fun]|h|r!", -- [1]
-			"Ganksaurus-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ganksaurus-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			358, -- [11]
-			"Player-11-0A4B1597", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecGanksaurus|r",
-			[51] = 1557193998,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [10]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13287:Player-11-02DE6ADB:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Empire's Fall]|h|r!", -- [1]
-			"Kevfefe-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kevfefe-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			370, -- [11]
-			"Player-11-02DE6ADB", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Kevfefe|r",
-			[51] = 1557194156,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [11]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:6456:Player-11-098628A8:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Stormstout Brewery]|h|r!", -- [1]
-			"Donballer-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Donballer-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			373, -- [11]
-			"Player-11-098628A8", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Donballer|r",
-			[51] = 1557194184,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [12]
-		{
-			"how is everyone tonight?", -- [1]
-			"Diavel-TheForgottenCoast", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Diavel-TheForgottenCoast", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			422, -- [11]
-			"Player-71-0C06F876", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cDiavel-TheForgottenCoast|r",
-			[51] = 1557194250,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [13]
-		{
-			"Both happy and sad.", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			428, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194270,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [14]
-		{
-			"A very strange emotion.", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			429, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194276,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [15]
-		{
-			"ready to win this bg ", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			430, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194282,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [16]
-		{
-			"Always.", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			431, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194286,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [17]
-		{
-			"get that xp !", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			434, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194300,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [18]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13467:Player-11-0B1B2EC0:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Tides of Vengeance]|h|r!", -- [1]
-			"Tokimaster-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Tokimaster-Tichondrius", -- [5]
-			"AFK", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			435, -- [11]
-			"Player-11-0B1B2EC0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Tokimaster|r",
-			[51] = 1557194322,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [19]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13517:Player-11-0B1B2EC0:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Two Sides to Every Tale]|h|r!", -- [1]
-			"Tokimaster-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Tokimaster-Tichondrius", -- [5]
-			"AFK", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			436, -- [11]
-			"Player-11-0B1B2EC0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Tokimaster|r",
-			[51] = 1557194322,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [20]
-		{
-			"Call those incomings folks!", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			439, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194338,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [21]
-		{
-			"also be careful for puish back effects at mid", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			441, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194347,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [22]
-		{
-			"I see 3 inc MT", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			443, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194358,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [23]
-		{
-			"booya", -- [1]
-			"Tokimaster-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			445, -- [11]
-			"Player-11-0B1B2EC0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Tokimaster|r",
-			[51] = 1557194370,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [24]
-		{
-			"1 inc DR", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			463, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194418,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [25]
-		{
-			"INC MT", -- [1]
-			"Sarirn-Agamaggan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sarirn-Agamaggan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			464, -- [11]
-			"Player-1129-0A0DC3B7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Sarirn-Agamaggan|r",
-			[51] = 1557194419,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [26]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:1258:Player-11-0B65575E:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Take a Chill Pill]|h|r!", -- [1]
-			"Zandro-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Zandro-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			467, -- [11]
-			"Player-11-0B65575E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Zandro|r",
-			[51] = 1557194430,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [27]
-		{
-			"1 inc MT", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			472, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194445,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [28]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12997:Player-11-0B5EDBE9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[The Pride of Kul Tiras]|h|r!", -- [1]
-			"Späce-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Späce-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			474, -- [11]
-			"Player-11-0B5EDBE9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Späce|r",
-			[51] = 1557194458,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [29]
-		{
-			"3 mt", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			480, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194463,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [30]
-		{
-			"yeah mt needs help ", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			485, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194486,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [31]
-		{
-			"mt", -- [1]
-			"Kaleb-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kaleb-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			499, -- [11]
-			"Player-1427-09B4C922", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Kaleb-Ragnaros|r",
-			[51] = 1557194547,
-			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [32]
-		{
-			"They got 2 healers on mt", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			503, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194557,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [33]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8468:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Galakras]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			508, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557194576,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [34]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:11997:Player-11-0B5A8DC0:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Imonar the Soulhunter]|h|r!", -- [1]
-			"Aeroin-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Aeroin-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			516, -- [11]
-			"Player-11-0B5A8DC0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Aeroin|r",
-			[51] = 1557194639,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [35]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8469:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Iron Juggernaut]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			522, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557194655,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [36]
-		{
-			"good job at mt ", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			526, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194664,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [37]
-		{
-			"mid", -- [1]
-			"Kaleb-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kaleb-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			527, -- [11]
-			"Player-1427-09B4C922", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Kaleb-Ragnaros|r",
-			[51] = 1557194664,
-			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [38]
-		{
-			"almost gave up on it", -- [1]
-			"Sarirn-Agamaggan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sarirn-Agamaggan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			532, -- [11]
-			"Player-1129-0A0DC3B7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Sarirn-Agamaggan|r",
-			[51] = 1557194682,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [39]
-		{
-			"1 druid inc MT", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			533, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194682,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [40]
-		{
-			"2 inc mt", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			543, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194713,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [41]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8470:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Kor'kron Dark Shaman]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			547, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557194723,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [42]
-		{
-			"neec help at dr", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			564, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194771,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [43]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:513:Player-11-0B65575E:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[100 Honorable Kills]|h|r!", -- [1]
-			"Zandro-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Zandro-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
 			567, -- [11]
-			"Player-11-0B65575E", -- [12]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00fe95Zandro|r",
-			[51] = 1557194784,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518618,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [44]
+		}, -- [9]
 		{
-			"2 cats and a warrior ", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			570, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194786,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [45]
-		{
-			"I see 2 inc mt", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			574, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194803,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [46]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:6470:Player-11-0B64DA05:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Shado-Pan Monastery]|h|r!", -- [1]
-			"Ellaurei-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ellaurei-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			575, -- [11]
-			"Player-11-0B64DA05", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Ellaurei|r",
-			[51] = 1557194813,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [47]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:11652:Player-11-02DE6ADB:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[The Reputable]|h|r!", -- [1]
-			"Kevfefe-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kevfefe-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			581, -- [11]
-			"Player-11-02DE6ADB", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Kevfefe|r",
-			[51] = 1557194817,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [48]
-		{
-			"MT clear", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			590, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194850,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [49]
-		{
-			"good job guys, keep it up", -- [1]
-			"Sarirn-Agamaggan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sarirn-Agamaggan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			592, -- [11]
-			"Player-1129-0A0DC3B7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Sarirn-Agamaggan|r",
-			[51] = 1557194864,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [50]
-		{
-			"ez gg", -- [1]
-			"Shadindre-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Shadindre-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			593, -- [11]
-			"Player-11-09DF73B0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Shadindre|r",
-			[51] = 1557194868,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [51]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:10460:Player-11-0B63ABC5:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Hidden Potential]|h|r!", -- [1]
-			"Njoror-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Njoror-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			594, -- [11]
-			"Player-11-0B63ABC5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cNjoror|r",
-			[51] = 1557194874,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [52]
-		{
-			"4 inc mt", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			595, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557194875,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [53]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8459:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Gates of Retribution]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			602, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557194892,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [54]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:8471:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: General Nazgrim]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			603, -- [11]
-			"Player-11-0B657D04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557194892,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [55]
-		{
-			"slayin em ", -- [1]
-			"Thadeus-MoonGuard", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thadeus-MoonGuard", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			606, -- [11]
-			"Player-3675-085FCB3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Thadeus-MoonGuard|r",
-			[51] = 1557194907,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [56]
-		{
-			"tairae heal", -- [1]
-			"Akunara-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Akunara-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			611, -- [11]
-			"Player-1427-0A3BDC47", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Akunara-Ragnaros|r",
-			[51] = 1557194912,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [57]
-		{
-			"MT", -- [1]
-			"Sarirn-Agamaggan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sarirn-Agamaggan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			612, -- [11]
-			"Player-1129-0A0DC3B7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Sarirn-Agamaggan|r",
-			[51] = 1557194913,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [58]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:399:Player-11-0AC37F61:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Just the Two of Us: 1550]|h|r!", -- [1]
-			"Attonh-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Attonh-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			614, -- [11]
-			"Player-11-0AC37F61", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Attonh|r",
-			[51] = 1557194924,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [59]
-		{
-			"fgood job everyone!", -- [1]
-			"Diavel-TheForgottenCoast", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Diavel-TheForgottenCoast", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			630, -- [11]
-			"Player-71-0C06F876", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cDiavel-TheForgottenCoast|r",
-			[51] = 1557194997,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [60]
-		{
-			"Awesome.", -- [1]
-			"Voksrarzok-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Voksrarzok-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			632, -- [11]
-			"Player-61-0C0780D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Voksrarzok-Zul'jin|r",
-			[51] = 1557195002,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [61]
-		{
-			"gg op gay", -- [1]
-			"Shadindre-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Shadindre-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			633, -- [11]
-			"Player-11-09DF73B0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Shadindre|r",
-			[51] = 1557195005,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [62]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:208:Player-11-0B65575E:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Eye of the Storm Victory]|h|r!", -- [1]
+			"%s has earned the achievement |cffffff00|Hachievement:11629:Player-11-0B65575E:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Untamed Beauty]|h|r!", -- [1]
 			"Zandro-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -1400,7 +234,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			640, -- [11]
+			569, -- [11]
 			"Player-11-0B65575E", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1408,1415 +242,2581 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00fe95Zandro|r",
-			[51] = 1557195006,
+			[51] = 1560518684,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [63]
+		}, -- [10]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8472:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Malkorok]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5308:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Silence is Golden]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			665, -- [11]
-			"Player-11-0B657D04", -- [12]
+			589, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195061,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518732,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [64]
+		}, -- [11]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:11998:Player-11-0B5A8DC0:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Kin'garoth]|h|r!", -- [1]
-			"Aeroin-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5109:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Atramedes]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Aeroin-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			667, -- [11]
-			"Player-11-0B5A8DC0", -- [12]
+			590, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff38bb9Aeroin|r",
-			[51] = 1557195104,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518732,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [65]
+		}, -- [12]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:6456:Player-11-0B6423D9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Stormstout Brewery]|h|r!", -- [1]
-			"Klwnprince-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5108:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Maloriak]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Klwnprince-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			681, -- [11]
-			"Player-11-0B6423D9", -- [12]
+			591, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc31d39Klwnprince|r",
-			[51] = 1557195274,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518803,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [66]
+		}, -- [13]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:6758:Player-11-098628A8:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Temple of the Jade Serpent]|h|r!", -- [1]
-			"Donballer-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:508:Player-11-0A232626:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[1500 Quests Completed]|h|r!", -- [1]
+			"Lunaira-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Donballer-Tichondrius", -- [5]
+			"Lunaira-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			688, -- [11]
-			"Player-11-098628A8", -- [12]
+			596, -- [11]
+			"Player-11-0A232626", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00fe95Donballer|r",
-			[51] = 1557195315,
+			[52] = "|cfffe7b09Lunaira|r",
+			[51] = 1560518874,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [67]
+		}, -- [14]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:5794:Player-11-0B65CBA4:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Time Flies When You're Having Fun]|h|r!", -- [1]
-			"Árbol-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12997:Player-11-07E46693:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[The Pride of Kul Tiras]|h|r!", -- [1]
+			"Moltenarrow-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Árbol-Tichondrius", -- [5]
+			"Moltenarrow-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			696, -- [11]
-			"Player-11-0B65CBA4", -- [12]
+			606, -- [11]
+			"Player-11-07E46693", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Árbol|r",
-			[51] = 1557195390,
+			[52] = "|cffa9d271Moltenarrow|r",
+			[51] = 1560518924,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [68]
+		}, -- [15]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8480:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Siegecrafter Blackfuse]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:4842:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Blackwing Descent]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			697, -- [11]
-			"Player-11-0B657D04", -- [12]
+			608, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195391,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518951,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [69]
+		}, -- [16]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8543:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Lasers and Magnets and Drills! Oh My!]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:4849:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Keeping it in the Family]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			698, -- [11]
-			"Player-11-0B657D04", -- [12]
+			609, -- [11]
+			"Player-11-0A7B8045", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195391,
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518951,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [70]
+		}, -- [17]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8478:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Spoils of Pandaria]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5116:Player-11-0A7B8045:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Nefarian]|h|r!", -- [1]
+			"Tearsfrost-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Tearsfrost-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			610, -- [11]
+			"Player-11-0A7B8045", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Tearsfrost|r",
+			[51] = 1560518951,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [18]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:515:Player-11-0B61F09F:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[500 Honorable Kills]|h|r!", -- [1]
+			"Lilfunk-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lilfunk-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			670, -- [11]
+			"Player-11-0B61F09F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeLilfunk|r",
+			[51] = 1560519798,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [19]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6517:Player-11-0B6C5FD3:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Extinction Event]|h|r!", -- [1]
+			"Lucifire-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lucifire-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			728, -- [11]
+			"Player-11-0B6C5FD3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Lucifire|r",
+			[51] = 1560520416,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [20]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:7437:Player-11-0B6C5FD3:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[A Worthy Opponent]|h|r!", -- [1]
+			"Lucifire-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lucifire-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
 			741, -- [11]
-			"Player-11-0B657D04", -- [12]
+			"Player-11-0B6C5FD3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195811,
+			[52] = "|cfffef367Lucifire|r",
+			[51] = 1560520444,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [21]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:4477:Player-11-0B5C17B3:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Looking For Many]|h|r!", -- [1]
+			"Blooddkingg-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Blooddkingg-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			785, -- [11]
+			"Player-11-0B5C17B3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff006fdcBlooddkingg|r",
+			[51] = 1560520562,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [22]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12847:Player-11-07E46693:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Siege of Boralus]|h|r!", -- [1]
+			"Moltenarrow-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Moltenarrow-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			802, -- [11]
+			"Player-11-07E46693", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Moltenarrow|r",
+			[51] = 1560520635,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [23]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:1176:Player-11-0B6D0568:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Cheesefeet-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Cheesefeet-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			33, -- [11]
+			"Player-11-0B6D0568", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Cheesefeet|r",
+			[51] = 1560560327,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [24]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-0B1EDD4D:1:6:14:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
+			"Dessedith-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dessedith-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			50, -- [11]
+			"Player-11-0B1EDD4D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeDessedith|r",
+			[51] = 1560560468,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [25]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13389:Player-11-0B6C6745:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Jorundall]|h|r!", -- [1]
+			"Trampus-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Trampus-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			12, -- [11]
+			"Player-11-0B6C6745", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Trampus|r",
+			[51] = 1560622295,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [26]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13394:Player-11-0B6C6745:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Jorundall]|h|r!", -- [1]
+			"Trampus-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Trampus-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			13, -- [11]
+			"Player-11-0B6C6745", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Trampus|r",
+			[51] = 1560622295,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [27]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13095:Player-11-0B682931:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Dread Chain]|h|r!", -- [1]
+			"Paramour-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paramour-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			78, -- [11]
+			"Player-11-0B682931", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Paramour|r",
+			[51] = 1560622476,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [28]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13123:Player-11-0B682931:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[My Dubs]|h|r!", -- [1]
+			"Paramour-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paramour-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			107, -- [11]
+			"Player-11-0B682931", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Paramour|r",
+			[51] = 1560622499,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [29]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:5794:Player-11-0B6BF62D:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Time Flies When You're Having Fun]|h|r!", -- [1]
+			"Rexvenandi-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Rexvenandi-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			301, -- [11]
+			"Player-11-0B6BF62D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Rexvenandi|r",
+			[51] = 1560622802,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [30]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12558:Player-11-0B6BF62D:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Explore Stormsong Valley]|h|r!", -- [1]
+			"Rexvenandi-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Rexvenandi-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			308, -- [11]
+			"Player-11-0B6BF62D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Rexvenandi|r",
+			[51] = 1560622912,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [31]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:506:Player-11-0ACBDA2D:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[500 Quests Completed]|h|r!", -- [1]
+			"Nighstafea-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Nighstafea-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			385, -- [11]
+			"Player-11-0ACBDA2D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Nighstafea|r",
+			[51] = 1560623078,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [32]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12837:Player-11-0B689DEC:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Shrine of the Storm]|h|r!", -- [1]
+			"Dreamhealer-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dreamhealer-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			395, -- [11]
+			"Player-11-0B689DEC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Dreamhealer|r",
+			[51] = 1560623091,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [33]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12838:Player-11-0B689DEC:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Shrine of the Storm]|h|r!", -- [1]
+			"Dreamhealer-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dreamhealer-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			396, -- [11]
+			"Player-11-0B689DEC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Dreamhealer|r",
+			[51] = 1560623091,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [34]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:11183:Player-11-0B689DEC:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Keystone Initiate]|h|r!", -- [1]
+			"Dreamhealer-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dreamhealer-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			397, -- [11]
+			"Player-11-0B689DEC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Dreamhealer|r",
+			[51] = 1560623091,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [35]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13107:Player-11-0B682931:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Skittering Hollow]|h|r!", -- [1]
+			"Paramour-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paramour-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			454, -- [11]
+			"Player-11-0B682931", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Paramour|r",
+			[51] = 1560623239,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [36]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13108:Player-11-0B682931:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Skittering Hollow]|h|r!", -- [1]
+			"Paramour-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paramour-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			455, -- [11]
+			"Player-11-0B682931", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Paramour|r",
+			[51] = 1560623239,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [37]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13384:Player-11-0A85747A:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Kul Tirans Don't Look at Explosions]|h|r!", -- [1]
+			"Aimeros-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Aimeros-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			475, -- [11]
+			"Player-11-0A85747A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Aimeros|r",
+			[51] = 1560623409,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [38]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13297:Player-11-0A0AA922:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[War for the Shore]|h|r!", -- [1]
+			"Monarä-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Monarä-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			504, -- [11]
+			"Player-11-0A0AA922", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Monarä|r",
+			[51] = 1560623628,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [39]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12497:Player-11-0B43BAA0:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Drust Do It.]|h|r!", -- [1]
+			"Elyissarin-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Elyissarin-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			508, -- [11]
+			"Player-11-0B43BAA0", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Elyissarin|r",
+			[51] = 1560623669,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [40]
+		{
+			"world pvp 222", -- [1]
+			"Myrcy-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			514, -- [11]
+			"Player-11-0B51EE47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecMyrcy|r",
+			[51] = 1560623719,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [41]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12571:Player-11-0A3A9C81:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Bounty Hunting]|h|r!", -- [1]
+			"Speçies-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Speçies-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			522, -- [11]
+			"Player-11-0A3A9C81", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Speçies|r",
+			[51] = 1560623755,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [42]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12571:Player-11-0B4E18B2:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Bounty Hunting]|h|r!", -- [1]
+			"Drughassles-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Drughassles-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			523, -- [11]
+			"Player-11-0B4E18B2", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Drughassles|r",
+			[51] = 1560623756,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [43]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13433:Player-11-0B6B7353:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Tall, Dark, and Sinister]|h|r!", -- [1]
+			"Face-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Face-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			537, -- [11]
+			"Player-11-0B6B7353", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Face|r",
+			[51] = 1560623817,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [44]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6973:Player-11-0B6464BB:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Can't Stop Won't Stop]|h|r!", -- [1]
+			"Vertîgø-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vertîgø-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			560, -- [11]
+			"Player-11-0B6464BB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Vertîgø|r",
+			[51] = 1560623987,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [45]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:227:Player-11-0B6D479F:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Damage Control]|h|r!", -- [1]
+			"Vaeelarrus-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vaeelarrus-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			617, -- [11]
+			"Player-11-0B6D479F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Vaeelarrus|r",
+			[51] = 1560624320,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [46]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8463:Player-11-0B65575E:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Immerseus]|h|r!", -- [1]
+			"Zandro-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Zandro-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			622, -- [11]
+			"Player-11-0B65575E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Zandro|r",
+			[51] = 1560624361,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [47]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12558:Player-11-0B6AE90C:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Explore Stormsong Valley]|h|r!", -- [1]
+			"Polluticornn-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Polluticornn-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			637, -- [11]
+			"Player-11-0B6AE90C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cPolluticornn|r",
+			[51] = 1560624382,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [48]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12573:Player-11-0B51EE47:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Band of Brothers]|h|r!", -- [1]
+			"Myrcy-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Myrcy-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			638, -- [11]
+			"Player-11-0B51EE47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecMyrcy|r",
+			[51] = 1560624384,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [49]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13096:Player-11-0B682931:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Dread Chain]|h|r!", -- [1]
+			"Paramour-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paramour-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			640, -- [11]
+			"Player-11-0B682931", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Paramour|r",
+			[51] = 1560624430,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [50]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8463:Player-11-0AE09A7B:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Immerseus]|h|r!", -- [1]
+			"Dyrandei-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dyrandei-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			641, -- [11]
+			"Player-11-0AE09A7B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cDyrandei|r",
+			[51] = 1560624437,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [51]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8465:Player-11-0AE09A7B:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Fallen Protectors]|h|r!", -- [1]
+			"Dyrandei-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dyrandei-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			647, -- [11]
+			"Player-11-0AE09A7B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cDyrandei|r",
+			[51] = 1560624550,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [52]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8466:Player-11-0AE09A7B:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Norushen]|h|r!", -- [1]
+			"Dyrandei-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dyrandei-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			671, -- [11]
+			"Player-11-0AE09A7B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cDyrandei|r",
+			[51] = 1560624790,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [53]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8467:Player-11-0AE09A7B:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Sha of Pride]|h|r!", -- [1]
+			"Dyrandei-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dyrandei-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			677, -- [11]
+			"Player-11-0AE09A7B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cDyrandei|r",
+			[51] = 1560624953,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [54]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13433:Player-11-0B6AA809:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Tall, Dark, and Sinister]|h|r!", -- [1]
+			"Surico-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Surico-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			682, -- [11]
+			"Player-11-0B6AA809", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Surico|r",
+			[51] = 1560625006,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [55]
+		{
+			"If you haven't been promoted from recruit to citizen yet, it is fast and easy to get promoted, and get access to guild repairs!", -- [1]
+			"Boiksalot-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			700, -- [11]
+			"Player-11-0B619591", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cBoiksalot|r",
+			[51] = 1560625229,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [56]
+		{
+			"Just join the guild Discord( invite can be found in guild info), and type out your character name, server and faction in #Census and we will get you taken care of!", -- [1]
+			"Boiksalot-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			701, -- [11]
+			"Player-11-0B619591", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cBoiksalot|r",
+			[51] = 1560625230,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [57]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8331:Player-11-0B6D479F:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Deepwind Gorge Victory]|h|r!", -- [1]
+			"Vaeelarrus-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vaeelarrus-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			725, -- [11]
+			"Player-11-0B6D479F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Vaeelarrus|r",
+			[51] = 1560625685,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [58]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:973:Player-11-0B6D479F:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[5 Daily Quests Completed]|h|r!", -- [1]
+			"Vaeelarrus-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vaeelarrus-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			726, -- [11]
+			"Player-11-0B6D479F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Vaeelarrus|r",
+			[51] = 1560625685,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [59]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12848:Player-11-0B6BCF63:1:6:15:19:4294967295:4294967295:4294967295:4294967295|h[Kings' Rest]|h|r!", -- [1]
+			"Snuqz-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Snuqz-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			731, -- [11]
+			"Player-11-0B6BCF63", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecSnuqz|r",
+			[51] = 1560625754,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [60]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:506:Player-11-0B6BF446:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[500 Quests Completed]|h|r!", -- [1]
+			"Deepdarkdog-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Deepdarkdog-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3, -- [11]
+			"Player-11-0B6BF446", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Deepdarkdog|r",
+			[51] = 1560862294,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [61]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6480:Player-11-0B6C5FD3:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Settle Down, Bro]|h|r!", -- [1]
+			"Lucifire-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lucifire-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			65, -- [11]
+			"Player-11-0B6C5FD3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Lucifire|r",
+			[51] = 1560862559,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [62]
+		{
+			"Sup pimps", -- [1]
+			"Frostieguy-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			26, -- [11]
+			"Player-11-0B4F469E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Frostieguy|r",
+			[51] = 1560906894,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [63]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:5456:Player-11-0B1B0E38:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Brickly-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Brickly-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			29, -- [11]
+			"Player-11-0B1B0E38", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cBrickly|r",
+			[51] = 1560906901,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [64]
+		{
+			"DISCORD based WAR MODE and progression raiding community! Active on 15 servers and Classic World of Warcraft. Learn More:  www.Ruinnation.com", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			31, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [65]
+		{
+			"- WELCOME to RUIN! - Founded in 2004", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			32, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [66]
+		{
+			"- RUIN DISCORD SERVER - ", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			33, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [67]
+		{
+			"- Visit: www.Ruinnation.com and click the Discord link.", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			34, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [68]
+		{
+			"- Log into the Welcome lobby to get promoted and get perks!", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			35, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [69]
+		{
+			"- Log into Discord to be connected to 10,000+ players! - ", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			36, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [70]
+		{
+			"- Discord is a guild Requirement. ", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			37, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560906907,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [71]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:7062:Player-11-0A00FFA6:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mine Mine Mine!]|h|r!", -- [1]
-			"Alyanori-Tichondrius", -- [2]
+			"please join discord if you have not already done so!! <3", -- [1]
+			"Tyresias-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Alyanori-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			760, -- [11]
-			"Player-11-0A00FFA6", -- [12]
+			38, -- [11]
+			"Player-11-0B2693B9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Alyanori|r",
-			[51] = 1557195852,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffa22fc8Tyresias|r",
+			[51] = 1560906911,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [72]
 		{
-			"trade talk me for lock stones", -- [1]
-			"Daemonjim-Thunderlord", -- [2]
+			"If i already did it once on this toon do i need to do it for the alt in the guild?", -- [1]
+			"Samuxlol-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Daemonjim-Thunderlord", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			771, -- [11]
-			"Player-77-0C06B44C", -- [12]
+			43, -- [11]
+			"Player-11-0A7EBA66", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8686ecDaemonjim-Thunderlord|r",
-			[51] = 1557195872,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Samuxlol|r",
+			[51] = 1560906932,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [73]
 		{
-			"thnx for fort", -- [1]
-			"Daemonjim-Thunderlord", -- [2]
+			"you want to hop over and have it promoted to citizen yes", -- [1]
+			"Tyresias-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Daemonjim-Thunderlord", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			776, -- [11]
-			"Player-77-0C06B44C", -- [12]
+			47, -- [11]
+			"Player-11-0B2693B9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8686ecDaemonjim-Thunderlord|r",
-			[51] = 1557195886,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffa22fc8Tyresias|r",
+			[51] = 1560906955,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [74]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:10671:Player-11-0B64F1E9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Level 110]|h|r!", -- [1]
-			"Punzante-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5807:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Beth'tilac]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Punzante-Tichondrius", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			779, -- [11]
-			"Player-11-0B64F1E9", -- [12]
+			49, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa22fc8Punzante|r",
-			[51] = 1557195902,
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560906959,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [75]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8461:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[The Underhold]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"sure ill join real quick but i dont got a mic", -- [1]
+			"Frostieguy-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			786, -- [11]
-			"Player-11-0B657D04", -- [12]
+			50, -- [11]
+			"Player-11-0B4F469E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195938,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff3ec5e9Frostieguy|r",
+			[51] = 1560906969,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [76]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8479:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Thok the Bloodthirsty]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"use your phone so we can get you set up ", -- [1]
+			"Tyresias-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			787, -- [11]
-			"Player-11-0B657D04", -- [12]
+			56, -- [11]
+			"Player-11-0B2693B9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195938,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffa22fc8Tyresias|r",
+			[51] = 1560906983,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [77]
 		{
-			"Grats!!", -- [1]
-			"Gåîå-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:973:Player-11-0B7051DA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[5 Daily Quests Completed]|h|r!", -- [1]
+			"Moflak-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Moflak-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			790, -- [11]
-			"Player-11-0B1C73E1", -- [12]
+			60, -- [11]
+			"Player-11-0B7051DA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Gåîå|r",
-			[51] = 1557195946,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff00fe95Moflak|r",
+			[51] = 1560907006,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [78]
 		{
-			"game plan = win", -- [1]
-			"Bledis-ArgentDawn", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:13287:Player-11-0B5EA563:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Empire's Fall]|h|r!", -- [1]
+			"Deathafter-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bledis-ArgentDawn", -- [5]
+			"Deathafter-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			794, -- [11]
-			"Player-75-0C008021", -- [12]
+			62, -- [11]
+			"Player-11-0B5EA563", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Bledis-ArgentDawn|r",
-			[51] = 1557195953,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc31d39Deathafter|r",
+			[51] = 1560907015,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [79]
 		{
-			"meows.", -- [1]
-			"Sendien-Dunemaul", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5830:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Share the Pain]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sendien-Dunemaul", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			796, -- [11]
-			"Player-119-08AF88FC", -- [12]
+			63, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffefefeSendien-Dunemaul|r",
-			[51] = 1557195956,
-			[50] = "CHAT_MSG_EMOTE",
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907020,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [80]
 		{
-			"thanks", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5805:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Baleroc]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			799, -- [11]
-			"Player-11-0B657D04", -- [12]
+			64, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557195962,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907020,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [81]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12847:Player-11-0B5EDBE9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Siege of Boralus]|h|r!", -- [1]
-			"Späce-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12500:Player-11-0B6D479F:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Underrot]|h|r!", -- [1]
+			"Vaeelarrus-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Späce-Tichondrius", -- [5]
+			"Vaeelarrus-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			807, -- [11]
-			"Player-11-0B5EDBE9", -- [12]
+			65, -- [11]
+			"Player-11-0B6D479F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Späce|r",
-			[51] = 1557195989,
+			[52] = "|cffa22fc8Vaeelarrus|r",
+			[51] = 1560907030,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [82]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13107:Player-11-0B6503FA:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Skittering Hollow]|h|r!", -- [1]
-			"Elcor-Tichondrius", -- [2]
+			"Ok, im citizen on this already, my alt is gladiatorsam, but ill do it after this raid", -- [1]
+			"Samuxlol-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Elcor-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			815, -- [11]
-			"Player-11-0B6503FA", -- [12]
+			67, -- [11]
+			"Player-11-0A7EBA66", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3ec5e9Elcor|r",
-			[51] = 1557196061,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cfffef367Samuxlol|r",
+			[51] = 1560907032,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [83]
 		{
-			"easy mines snatch", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"sounds great thank you", -- [1]
+			"Tyresias-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			820, -- [11]
-			"Player-113-08B09F87", -- [12]
+			69, -- [11]
+			"Player-11-0B2693B9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196099,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffa22fc8Tyresias|r",
+			[51] = 1560907050,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [84]
 		{
-			"zan", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"welcome!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			822, -- [11]
-			"Player-113-08B09F87", -- [12]
+			76, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196110,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907090,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [85]
 		{
-			"good...most of them are at ww...grin", -- [1]
-			"Daemonjim-Thunderlord", -- [2]
+			"- WEEKLY GUILD MEETING - PROMOTIONS - NEWS - WORLD BOSS CLEARS! Join us in Boralus! Guild meeting notes: www.Ruinnation.com THANK YOU! PST Archaosrex-Tichondrius \"invite\" for automatic invite!", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Daemonjim-Thunderlord", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			825, -- [11]
-			"Player-77-0C06B44C", -- [12]
+			81, -- [11]
+			"Player-11-09ECC000", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8686ecDaemonjim-Thunderlord|r",
-			[51] = 1557196112,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560907117,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [86]
 		{
-			"all at mines", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:661:Player-11-0B5D8112:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Magister's Terrace]|h|r!", -- [1]
+			"Welchs-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Welchs-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			845, -- [11]
-			"Player-113-08B09F87", -- [12]
+			84, -- [11]
+			"Player-11-0B5D8112", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196201,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cWelchs|r",
+			[51] = 1560907129,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [87]
 		{
-			"take ww", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:682:Player-11-0B5D8112:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Magister's Terrace]|h|r!", -- [1]
+			"Welchs-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Welchs-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			846, -- [11]
-			"Player-113-08B09F87", -- [12]
+			85, -- [11]
+			"Player-11-0B5D8112", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196202,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cWelchs|r",
+			[51] = 1560907129,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [88]
 		{
-			"go go go take ww", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5804:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Majordomo Fandral Staghelm]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			848, -- [11]
-			"Player-113-08B09F87", -- [12]
+			87, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196212,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907140,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [89]
 		{
-			"inc ww 3", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"hey ", -- [1]
+			"Athenos-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			850, -- [11]
-			"Player-113-08B09F87", -- [12]
+			96, -- [11]
+			"Player-11-0B07B770", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196234,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cAthenos|r",
+			[51] = 1560907196,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [90]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:6756:Player-11-0B64DA05:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Mogu'shan Palace]|h|r!", -- [1]
-			"Ellaurei-Tichondrius", -- [2]
+			"TY :)", -- [1]
+			"Frumdaback-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ellaurei-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			852, -- [11]
-			"Player-11-0B64DA05", -- [12]
+			98, -- [11]
+			"Player-11-06AE1905", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa9d271Ellaurei|r",
-			[51] = 1557196239,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cfffef367Frumdaback|r",
+			[51] = 1560907203,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [91]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12891:Player-11-0B5EDBE9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[A Nation United]|h|r!", -- [1]
-			"Späce-Tichondrius", -- [2]
+			" - WAR MODE PVP - IVUS WORLD BOSS CLEAR- 400 ilevel Gear - Titan Residuum - Honor - Conquest - Achievements - /whisper Archaosrex-Tichondrius INVITE for automatic invites. Main Lobby Discord!", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Späce-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			855, -- [11]
-			"Player-11-0B5EDBE9", -- [12]
+			99, -- [11]
+			"Player-11-09ECC000", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Späce|r",
-			[51] = 1557196258,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1560907210,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [92]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13517:Player-11-0B5EDBE9:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Two Sides to Every Tale]|h|r!", -- [1]
-			"Späce-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5802:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Firelands]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Späce-Tichondrius", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			856, -- [11]
-			"Player-11-0B5EDBE9", -- [12]
+			104, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Späce|r",
-			[51] = 1557196258,
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907273,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [93]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12833:Player-11-0B615361:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Freehold]|h|r!", -- [1]
-			"Sabbertooth-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:5803:Player-11-0B67A4CA:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Ragnaros]|h|r!", -- [1]
+			"Lowry-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sabbertooth-Tichondrius", -- [5]
+			"Lowry-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			858, -- [11]
-			"Player-11-0B615361", -- [12]
+			105, -- [11]
+			"Player-11-0B67A4CA", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa9d271Sabbertooth|r",
-			[51] = 1557196279,
+			[52] = "|cfffef367Lowry|r",
+			[51] = 1560907273,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [94]
 		{
-			"dont fight in the road", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:11129:Player-11-0B6B6807:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[1000 World Quests Completed]|h|r!", -- [1]
+			"Maraley-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Maraley-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			859, -- [11]
-			"Player-113-08B09F87", -- [12]
+			106, -- [11]
+			"Player-11-0B6B6807", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196290,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cff3ec5e9Maraley|r",
+			[51] = 1560907273,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [95]
 		{
-			"move it to flag", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"grats", -- [1]
+			"Jaclh-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			860, -- [11]
-			"Player-113-08B09F87", -- [12]
+			109, -- [11]
+			"Player-11-00A22D82", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196294,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffe7b09Jaclh|r",
+			[51] = 1560907281,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [96]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8481:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Paragons of the Klaxxi]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"nice", -- [1]
+			"Trìnitý-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			862, -- [11]
-			"Player-11-0B657D04", -- [12]
+			110, -- [11]
+			"Player-11-0B03E3D6", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557196299,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff3ec5e9Trìnitý|r",
+			[51] = 1560907286,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [97]
 		{
-			"that weay rogues likeme can sneak it", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12898:Player-11-0B632E8C:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Azeroth at War: After Lordaeron]|h|r!", -- [1]
+			"Gettafix-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Gettafix-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			864, -- [11]
-			"Player-113-08B09F87", -- [12]
+			111, -- [11]
+			"Player-11-0B632E8C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196300,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffe7b09Gettafix|r",
+			[51] = 1560907290,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [98]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13111:Player-11-0B63C460:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Verdant Wilds]|h|r!", -- [1]
-			"Brelain-Tichondrius", -- [2]
+			"thats a good one", -- [1]
+			"Trìnitý-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Brelain-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			870, -- [11]
-			"Player-11-0B63C460", -- [12]
+			113, -- [11]
+			"Player-11-0B03E3D6", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Brelain|r",
-			[51] = 1557196349,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff3ec5e9Trìnitý|r",
+			[51] = 1560907293,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [99]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13112:Player-11-0B63C460:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Verdant Wilds]|h|r!", -- [1]
-			"Brelain-Tichondrius", -- [2]
+			"holy shit gratz!", -- [1]
+			"Gêedorah-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Brelain-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			871, -- [11]
-			"Player-11-0B63C460", -- [12]
+			115, -- [11]
+			"Player-11-0A2C7EC9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Brelain|r",
-			[51] = 1557196349,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff8686ecGêedorah|r",
+			[51] = 1560907294,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [100]
 		{
-			"now theyre all back at ww..sigh", -- [1]
-			"Daemonjim-Thunderlord", -- [2]
+			"first run ", -- [1]
+			"Brickly-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Daemonjim-Thunderlord", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			874, -- [11]
-			"Player-77-0C06B44C", -- [12]
+			116, -- [11]
+			"Player-11-0B1B0E38", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8686ecDaemonjim-Thunderlord|r",
-			[51] = 1557196365,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cBrickly|r",
+			[51] = 1560907295,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [101]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:11184:Player-11-0B615361:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Keystone Challenger]|h|r!", -- [1]
-			"Sabbertooth-Tichondrius", -- [2]
+			"wow", -- [1]
+			"Brickly-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sabbertooth-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			875, -- [11]
-			"Player-11-0B615361", -- [12]
+			117, -- [11]
+			"Player-11-0B1B0E38", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa9d271Sabbertooth|r",
-			[51] = 1557196366,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffc59a6cBrickly|r",
+			[51] = 1560907297,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [102]
 		{
-			"was a good playu just didnt expect whole team to show up", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"|cffffff00The Canals is under attack!|r", -- [1]
+			"", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"3. LocalDefense - Stormwind City", -- [4]
+			"", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Stormwind City", -- [9]
 			0, -- [10]
-			882, -- [11]
-			"Player-113-08B09F87", -- [12]
+			118, -- [11]
+			false, -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196424,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			true, -- [17]
+			[52] = "",
+			[51] = 1560907299,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [103]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13287:Player-11-0B5D2D8B:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Empire's Fall]|h|r!", -- [1]
-			"Thiccgírl-Tichondrius", -- [2]
+			"gtfo", -- [1]
+			"Gêedorah-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Thiccgírl-Tichondrius", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			888, -- [11]
-			"Player-11-0B5D2D8B", -- [12]
+			119, -- [11]
+			"Player-11-0A2C7EC9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3ec5e9Thiccgírl|r",
-			[51] = 1557196492,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff8686ecGêedorah|r",
+			[51] = 1560907300,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [104]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:13287:Player-11-0A7F81DC:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Empire's Fall]|h|r!", -- [1]
-			"Netherlence-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:13286:Player-11-0B6BB6FC:1:6:18:19:4294967295:4294967295:4294967295:4294967295|h[Siege of Dazar'alor]|h|r!", -- [1]
+			"Murkyy-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Netherlence-Tichondrius", -- [5]
+			"Murkyy-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			889, -- [11]
-			"Player-11-0A7F81DC", -- [12]
+			120, -- [11]
+			"Player-11-0B6BB6FC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa22fc8Netherlence|r",
-			[51] = 1557196492,
+			[52] = "|cfff38bb9Murkyy|r",
+			[51] = 1560907301,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [105]
 		{
-			"what is up with they're timing????", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"very nice congrats!", -- [1]
+			"Meatmauler-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			896, -- [11]
-			"Player-113-08B09F87", -- [12]
+			122, -- [11]
+			"Player-11-0A390959", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196529,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffe7b09Meatmauler|r",
+			[51] = 1560907311,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [106]
 		{
-			"the whole team shows up immediately", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"well at the very least the first run on wahtever character hes on", -- [1]
+			"Brickly-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			897, -- [11]
-			"Player-113-08B09F87", -- [12]
+			124, -- [11]
+			"Player-11-0B1B0E38", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196537,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cBrickly|r",
+			[51] = 1560907317,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [107]
 		{
-			"just let them 3 cap so we can get this over with", -- [1]
-			"Fookmesookme-Stormrage", -- [2]
+			"|cffffff00Stormwind Harbor is under attack!|r", -- [1]
+			"", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fookmesookme-Stormrage", -- [5]
+			"3. LocalDefense - Stormwind City", -- [4]
+			"", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Stormwind City", -- [9]
 			0, -- [10]
-			899, -- [11]
-			"Player-60-0C043724", -- [12]
+			128, -- [11]
+			false, -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Fookmesookme-Stormrage|r",
-			[51] = 1557196539,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			true, -- [17]
+			[52] = "",
+			[51] = 1560907413,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [108]
 		{
-			"easy work ", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"|cffffff00The Canals is under attack!|r", -- [1]
+			"", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"3. LocalDefense - Stormwind City", -- [4]
+			"", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Stormwind City", -- [9]
 			0, -- [10]
-			911, -- [11]
-			"Player-113-08B09F87", -- [12]
+			1608, -- [11]
+			false, -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196609,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			true, -- [17]
+			[52] = "",
+			[51] = 1561242017,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [109]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12544:Player-11-0B65CBA4:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Level 120]|h|r!", -- [1]
-			"Árbol-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12484:Player-11-0A832212:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Waycrest Manor]|h|r!", -- [1]
+			"Aerøwyn-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Árbol-Tichondrius", -- [5]
+			"Aerøwyn-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			912, -- [11]
-			"Player-11-0B65CBA4", -- [12]
+			1696, -- [11]
+			"Player-11-0A832212", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Árbol|r",
-			[51] = 1557196614,
+			[52] = "|cff3ec5e9Aerøwyn|r",
+			[51] = 1561242168,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [110]
 		{
-			"grats", -- [1]
-			"Klapsan-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12488:Player-11-0A832212:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Waycrest Manor]|h|r!", -- [1]
+			"Aerøwyn-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Aerøwyn-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			913, -- [11]
-			"Player-11-0B650403", -- [12]
+			1697, -- [11]
+			"Player-11-0A832212", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Klapsan|r",
-			[51] = 1557196622,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff3ec5e9Aerøwyn|r",
+			[51] = 1561242168,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [111]
 		{
-			"a little too late... they win with 1", -- [1]
-			"Fookmesookme-Stormrage", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12490:Player-11-0A832212:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Alchemical Romance]|h|r!", -- [1]
+			"Aerøwyn-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Fookmesookme-Stormrage", -- [5]
+			"Aerøwyn-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			914, -- [11]
-			"Player-60-0C043724", -- [12]
+			1698, -- [11]
+			"Player-11-0A832212", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Fookmesookme-Stormrage|r",
-			[51] = 1557196625,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cff3ec5e9Aerøwyn|r",
+			[51] = 1561242168,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [112]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:9:Player-11-0B0C3D0D:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Level 40]|h|r!", -- [1]
-			"Harnolm-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:8213:Player-11-0AD92CBD:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Friends In Places Higher Yet]|h|r!", -- [1]
+			"Appalachun-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Harnolm-Tichondrius", -- [5]
+			"Appalachun-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			915, -- [11]
-			"Player-11-0B0C3D0D", -- [12]
+			1772, -- [11]
+			"Player-11-0AD92CBD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff38bb9Harnolm|r",
-			[51] = 1557196627,
+			[52] = "|cffc59a6cAppalachun|r",
+			[51] = 1561242291,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [113]
 		{
-			"ty!", -- [1]
-			"Árbol-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12544:Player-11-09F77CA9:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Level 120]|h|r!", -- [1]
+			"Stonesavage-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Stonesavage-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			916, -- [11]
-			"Player-11-0B65CBA4", -- [12]
+			1786, -- [11]
+			"Player-11-09F77CA9", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffe7b09Árbol|r",
-			[51] = 1557196629,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff3ec5e9Stonesavage|r",
+			[51] = 1561242443,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [114]
 		{
-			"theres only so many bases i can take solo, everyone fighting on roads and whatnot lmao", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"|cffffff00The Canals is under attack!|r", -- [1]
+			"", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"3. LocalDefense - Stormwind City", -- [4]
+			"", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Stormwind City", -- [9]
 			0, -- [10]
-			918, -- [11]
-			"Player-113-08B09F87", -- [12]
+			1787, -- [11]
+			false, -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196646,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			true, -- [17]
+			[52] = "",
+			[51] = 1561242448,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [115]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8462:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Downfall]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:263:Player-11-0B351757:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Ice the Frost Lord]|h|r!", -- [1]
+			"Deekerton-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Deekerton-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			920, -- [11]
-			"Player-11-0B657D04", -- [12]
+			1813, -- [11]
+			"Player-11-0B351757", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557196649,
+			[52] = "|cff3ec5e9Deekerton|r",
+			[51] = 1561242531,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [116]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8482:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Garrosh Hellscream]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:13440:Player-11-0B6BE9E8:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Pushing the Payload]|h|r!", -- [1]
+			"Loulux-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Loulux-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			921, -- [11]
-			"Player-11-0B657D04", -- [12]
+			1815, -- [11]
+			"Player-11-0B6BE9E8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557196649,
+			[52] = "|cff00fe95Loulux|r",
+			[51] = 1561242537,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [117]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:8679:Player-11-0B657D04:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Conqueror of Orgrimmar]|h|r!", -- [1]
-			"Karmaguss-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:661:Player-11-0B1C03B1:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Magister's Terrace]|h|r!", -- [1]
+			"Ketaminez-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Karmaguss-Tichondrius", -- [5]
+			"Ketaminez-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			922, -- [11]
-			"Player-11-0B657D04", -- [12]
+			1931, -- [11]
+			"Player-11-0B1C03B1", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc59a6cKarmaguss|r",
-			[51] = 1557196649,
+			[52] = "|cfff38bb9Ketaminez|r",
+			[51] = 1561242694,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [118]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12556:Player-11-0B23C619:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Explore Tiragarde Sound]|h|r!", -- [1]
-			"Ðrago-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:682:Player-11-0B1C03B1:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Magister's Terrace]|h|r!", -- [1]
+			"Ketaminez-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ðrago-Tichondrius", -- [5]
+			"Ketaminez-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			923, -- [11]
-			"Player-11-0B23C619", -- [12]
+			1932, -- [11]
+			"Player-11-0B1C03B1", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Ðrago|r",
-			[51] = 1557196659,
+			[52] = "|cfff38bb9Ketaminez|r",
+			[51] = 1561242694,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [119]
 		{
-			"i wasnt...i was at mines", -- [1]
-			"Daemonjim-Thunderlord", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:651:Player-11-0ADC952E:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Mana-Tombs]|h|r!", -- [1]
+			"Linneah-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Daemonjim-Thunderlord", -- [5]
+			"Linneah-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			925, -- [11]
-			"Player-77-0C06B44C", -- [12]
+			1947, -- [11]
+			"Player-11-0ADC952E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8686ecDaemonjim-Thunderlord|r",
-			[51] = 1557196661,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffa22fc8Linneah|r",
+			[51] = 1561242718,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [120]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:504:Player-11-0B0C3D0D:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[100 Quests Completed]|h|r!", -- [1]
-			"Harnolm-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:671:Player-11-0ADC952E:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Mana-Tombs]|h|r!", -- [1]
+			"Linneah-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Harnolm-Tichondrius", -- [5]
+			"Linneah-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			931, -- [11]
-			"Player-11-0B0C3D0D", -- [12]
+			1948, -- [11]
+			"Player-11-0ADC952E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff38bb9Harnolm|r",
-			[51] = 1557196712,
+			[52] = "|cffa22fc8Linneah|r",
+			[51] = 1561242718,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [121]
 		{
-			"gg", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:671:Player-11-0B60ABEF:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Mana-Tombs]|h|r!", -- [1]
+			"Gravîe-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Gravîe-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			939, -- [11]
-			"Player-113-08B09F87", -- [12]
+			1949, -- [11]
+			"Player-11-0B60ABEF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196726,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cffc59a6cGravîe|r",
+			[51] = 1561242718,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [122]
 		{
-			"omg", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12297:Player-11-024C3536:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[The Siege of Ulduar]|h|r!", -- [1]
+			"Hidngfrmwife-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Hidngfrmwife-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			943, -- [11]
-			"Player-113-08B09F87", -- [12]
+			84, -- [11]
+			"Player-11-024C3536", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196732,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Hidngfrmwife|r",
+			[51] = 1561247502,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [123]
 		{
-			"please dont tell me i'm the only one", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12326:Player-11-024C3536:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Nerf Engineering]|h|r!", -- [1]
+			"Hidngfrmwife-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Hidngfrmwife-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			948, -- [11]
-			"Player-113-08B09F87", -- [12]
+			85, -- [11]
+			"Player-11-024C3536", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196738,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Hidngfrmwife|r",
+			[51] = 1561247502,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [124]
 		{
-			"that got any bases ", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12328:Player-11-024C3536:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Nerf Gravity Bombs]|h|r!", -- [1]
+			"Hidngfrmwife-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Hidngfrmwife-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			950, -- [11]
-			"Player-113-08B09F87", -- [12]
+			86, -- [11]
+			"Player-11-024C3536", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196742,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Hidngfrmwife|r",
+			[51] = 1561247502,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [125]
 		{
-			"lmfao", -- [1]
-			"Moonblade-Suramar", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12329:Player-11-024C3536:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[Must Deconstruct Faster]|h|r!", -- [1]
+			"Hidngfrmwife-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moonblade-Suramar", -- [5]
+			"Hidngfrmwife-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			951, -- [11]
-			"Player-113-08B09F87", -- [12]
+			87, -- [11]
+			"Player-11-024C3536", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffef367Moonblade-Suramar|r",
-			[51] = 1557196743,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
+			[52] = "|cfffef367Hidngfrmwife|r",
+			[51] = 1561247502,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [126]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:889:Player-11-0B0C3D0D:1:5:6:19:4294967295:4294967295:4294967295:4294967295|h[Fast and Furious]|h|r!", -- [1]
-			"Harnolm-Tichondrius", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:1182:Player-11-0B1C0CDF:1:6:22:19:4294967295:4294967295:4294967295:4294967295|h[The Bread Winner]|h|r!", -- [1]
+			"Urzius-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Harnolm-Tichondrius", -- [5]
+			"Urzius-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			953, -- [11]
-			"Player-11-0B0C3D0D", -- [12]
+			88, -- [11]
+			"Player-11-0B1C0CDF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff38bb9Harnolm|r",
-			[51] = 1557196781,
+			[52] = "|cffc59a6cUrzius|r",
+			[51] = 1561247506,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [127]
 	},

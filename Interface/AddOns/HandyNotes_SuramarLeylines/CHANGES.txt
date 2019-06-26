@@ -1,0 +1,48 @@
+tag 71f99f3edcb3cbaed3b5a574a706672de4ba2162 v2
+Author:	David Lynch <kemayo@gmail.com>
+Date:	Tue Mar 12 15:43:05 2019 -0500
+
+Tagging v2
+
+commit dc9d86f0fa36616a813781493034c4d25e737a52
+Author: David Lynch <kemayo@gmail.com>
+Date:   Tue Mar 12 15:43:05 2019 -0500
+
+    Update for 8.1.5
+
+commit 41c57d94f223ef9f8d327ad8c7dc4c3bf789e8d2
+Author: David Lynch <kemayo@gmail.com>
+Date:   Mon Jul 23 17:28:11 2018 -0500
+
+    Fix tomtom integration
+
+commit b73f9e5b1e9cdbd18a29ad57b0993af9f39bb6d8
+Author: David Lynch <kemayo@gmail.com>
+Date:   Sat Jul 21 21:35:43 2018 -0500
+
+    Update for Battle for Azeroth
+
+commit 8e3abed761737876ac563959100e7004dfe613f8
+Author: David Lynch <kemayo@gmail.com>
+Date:   Fri Oct 14 13:26:54 2016 -0500
+
+    Elor'shan internals
+
+commit 1f019392acb7cfc38fe052f86bfe6a5267c749b0
+Author: David Lynch <kemayo@gmail.com>
+Date:   Fri Oct 14 13:19:15 2016 -0500
+
+    Include Kel'balor internal
+
+commit 4165d2a097fedfd345da9bdb8664278048cf93ae
+Author: David Lynch <kemayo@gmail.com>
+Date:   Wed Sep 28 02:49:33 2016 -0500
+
+    Moonwhisper Gulch: internal map
+
+commit 4ef832f79cc55b530fa456078ec112728fd02ad1
+Author: David Lynch <kemayo@gmail.com>
+Date:   Wed Sep 28 01:51:27 2016 -0500
+
+    Show Moon Guard tap on internal map
+

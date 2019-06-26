@@ -1,0 +1,10 @@
+VER 3 0100000000000001 "attack cobra" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Cobra Shot
+END
+VER 3 0100000000000002 "super CD" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Bestial Wrath
+/cast Aspect of the Wild
+END

@@ -1,13 +1,10 @@
 
 PetTracker_State = {
-	["Turn"] = 1,
 	["Casts"] = {
 		{
 			["id"] = {
-				[0] = 163,
 			},
 			["turn"] = {
-				[0] = 1,
 			},
 		}, -- [1]
 		{
@@ -23,4 +20,5 @@ PetTracker_State = {
 			},
 		}, -- [3]
 	},
+	["Turn"] = 0,
 }

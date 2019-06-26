@@ -1,0 +1,12 @@
+Details: disabled
+Details_3DModelsPaths: disabled
+Details_DataStorage: disabled
+Details_EncounterDetails: disabled
+Details_RaidCheck: disabled
+Details_Streamer: disabled
+Details_TinyThreat: disabled
+Details_Vanguard: disabled
+TradeSkillMaster_AuctionDB: disabled
+HandyNotes: disabled
+Storyline: enabled
+Immersion: disabled

@@ -9,6 +9,9 @@
             <Anchor point="LEFT"/>
             <Anchor point="RIGHT"/>
         </Anchors>
+        <PushedTextOffset>
+            <AbsDimension x="1" y="-0.6"/>
+        </PushedTextOffset>
         <Layers>
             <Layer level="BORDER">
 				<Texture setAllPoints="true" parentKey="BackgroundColor">
@@ -148,7 +151,7 @@
                 </Layers>
             </Frame>
 
-            <Frame name="Narci_TitleManager_TitleTooltip" parentKey="TooltipFrame" FrameLevel="30" Alpha="0">
+            <Frame name="Narci_TitleManager_TitleTooltip" parentKey="TooltipFrame" frameLevel="30" Alpha="0">
                 <Size x="240" y="60"/>
                 <HitRectInsets>
                     <AbsInset left="-4" right="-4" top="-4" bottom="-4"/>
@@ -364,6 +367,7 @@
                                 <Scripts>
                                     <OnValueChanged>
                                         HybridScrollFrame_SetOffset(self:GetParent(), value);
+                                        Narci_TitleManager_TitleTooltip:SetAlpha(0);
                                     </OnValueChanged>
                                     <OnEnter>
                                         Narci_TitleManager_TitleTooltip.AnimFrame:Hide()

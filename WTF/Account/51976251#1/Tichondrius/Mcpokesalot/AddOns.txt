@@ -1,0 +1,2 @@
+WeakAurasCompanion: enabled
+Storyline: disabled

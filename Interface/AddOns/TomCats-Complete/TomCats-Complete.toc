@@ -1,0 +1,12 @@
+## Interface: 80100
+## Title: TomCat's Tours: Complete
+## Author: TomCat
+## X-Website: https://www.tomcatstours.com
+## Version: 1.0.24
+## DefaultState: enabled
+## OptionalDeps: TomCats
+## X-Part-Of: TomCat's Tours:
+## X-Category: Miscellaneous
+## X-Localizations: enUS, deDE, esES, esMX, frFR, itIT, koKR, ptBR, ruRU, zhCN, zhTW
+
+Main.xml

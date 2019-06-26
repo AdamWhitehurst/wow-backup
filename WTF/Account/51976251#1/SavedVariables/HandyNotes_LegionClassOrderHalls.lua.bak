@@ -1,0 +1,22 @@
+
+HandyNotes_LegionClassOrderHallsDB = {
+	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+	},
+	["profiles"] = {
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Umbrick - Emerald Dream"] = {
+		},
+		["Umbrick - Tichondrius"] = {
+		},
+		["Zandro - Tichondrius"] = {
+		},
+		["Brungar - Tichondrius"] = {
+		},
+	},
+}

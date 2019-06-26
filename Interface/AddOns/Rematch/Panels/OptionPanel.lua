@@ -355,6 +355,13 @@ end
 panel.funcs.ReverseToolbar = function()
 	rematch.Toolbar:Resize(rematch.Toolbar.width)
 end
+panel.funcs.ShowImportButton = function()
+	rematch.Toolbar:SetTemplate(settings.ShowImportButton and "Import" or "Original")
+	if rematch.Toolbar.width then
+		rematch.Toolbar:Resize(rematch.Toolbar.width)
+	end
+end
+
 panel.funcs.PanelTabsToRight = function()
 	local anchorPoint, relativePoint, xoff = "TOPLEFT", "BOTTOMLEFT", 0
 	if settings.PanelTabsToRight then
@@ -439,6 +446,8 @@ panel.funcs.DebugNoModels = function()
 	showReloadPopup("Debug: No Models")
 end
 
+panel.funcs.ShowInTeamsFootnotes = rematch.UpdateUI
+
 -- collapses or expands an option header
 function panel:HeaderOnClick()
 	local headerIndex = self.headerIndex
@@ -515,3 +524,4 @@ function panel:RescaleFrame(value)
 	frame:SetPoint(corner,UIParent,"BOTTOMLEFT",settings.XPos,settings.YPos)
 end
 panel.funcs.CustomScale = panel.RescaleFrame
+

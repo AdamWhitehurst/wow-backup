@@ -10,6 +10,7 @@ AAP.RaceLocale, AAP.Race = UnitRace("player")
 AAP.Class[1],AAP.Class[2],AAP.Class[3] = UnitClass("player")
 AAP.QuestList = {}
 AAP.NPCList = {}
+AAP.Gender = UnitSex("player")
 AAP.Icons = {}
 AAP.MapIcons = {}
 AAP.Breadcrums = {}
@@ -2101,6 +2102,13 @@ AAP.CoreEventFrame:RegisterEvent ("CINEMATIC_START")
 
 AAP.CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 	if (event=="ADDON_LOADED") then
+	
+	
+if (IsAddOnLoaded("AAP-Classic") == false) then
+	--LoadAddOn("AAP-Classic")
+end
+	
+	
 		local arg1, arg2, arg3, arg4, arg5 = ...;
 		if (arg1 ~= "AAP-Core") then
 			return
@@ -2209,6 +2217,10 @@ AAP.CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			if (not AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowMap10s"]) then
 				AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowMap10s"] = 0
 			end
+			
+			if (not AAP1[AAP.Realm][AAP.Name]["Settings"]["Legion"]) then
+				AAP1[AAP.Realm][AAP.Name]["Settings"]["Legion"] = 0
+			end			
 			if (not AAP1[AAP.Realm][AAP.Name]["Settings"]["WQs"]) then
 				AAP1[AAP.Realm][AAP.Name]["Settings"]["WQs"] = 1
 			end

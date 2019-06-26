@@ -72,3 +72,7 @@ VER 3 0100000000000001 "Swiftmend" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover, help, nodead][]Swiftmend
 END
+VER 3 0100000000000018 "Thorns" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,exists,noharm][] Thorns
+END

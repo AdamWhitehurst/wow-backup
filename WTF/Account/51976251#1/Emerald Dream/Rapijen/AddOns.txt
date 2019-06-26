@@ -19,3 +19,5 @@ PetTracker: enabled
 PetTracker_Switcher: disabled
 PetTracker_Breeds: enabled
 MaxCam: disabled
+TradeSkillMaster: enabled
+TradeSkillMaster_AppHelper: enabled

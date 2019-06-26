@@ -2,22 +2,34 @@
 TomTomDB = {
 	["profileKeys"] = {
 		["Vedrixa - Moon Guard"] = "Default",
-		["Curaney - Tichondrius"] = "Default",
-		["Byanir - Emerald Dream"] = "Default",
+		["Honabar - Emerald Dream"] = "Default",
 		["Zandroh - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
-		["Byanir - Moon Guard"] = "Default",
-		["Mininimi - Moon Guard"] = "Default",
+		["Whitmoore - Emerald Dream"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
 		["Ayanir - Moon Guard"] = "Default",
-		["Bramblebrow - Emerald Dream"] = "Default",
+		["Mcpokesalot - Tichondrius"] = "Default",
+		["Iscrackl - Tichondrius"] = "Default",
 		["Lonalber - Emerald Dream"] = "Default",
-		["Whitmoore - Emerald Dream"] = "Default",
+		["Magnr - Tichondrius"] = "Default",
+		["Byanir - Emerald Dream"] = "Default",
+		["Tirdailough - Tichondrius"] = "Default",
+		["Curaney - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
+		["Mininimi - Moon Guard"] = "Default",
+		["Bjorgr - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Grandh - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
+		["Byanir - Moon Guard"] = "Default",
 		["Harwapa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
+			["general"] = {
+				["announce"] = true,
+			},
 			["block"] = {
 				["enable"] = false,
 			},
@@ -28,46 +40,73 @@ TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
 		["Vedrixa - Moon Guard"] = "Vedrixa - Moon Guard",
-		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
-		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
+		["Honabar - Emerald Dream"] = "Honabar - Emerald Dream",
 		["Zandroh - Tichondrius"] = "Zandroh - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
-		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
-		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
+		["Whitmoore - Emerald Dream"] = "Whitmoore - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
 		["Ayanir - Moon Guard"] = "Ayanir - Moon Guard",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Iscrackl - Tichondrius"] = "Iscrackl - Tichondrius",
 		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
-		["Whitmoore - Emerald Dream"] = "Whitmoore - Emerald Dream",
+		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
+		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
+		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
+		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
+		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
 	},
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
 		},
-		["Curaney - Tichondrius"] = {
-		},
-		["Byanir - Emerald Dream"] = {
+		["Honabar - Emerald Dream"] = {
 		},
 		["Zandroh - Tichondrius"] = {
 		},
 		["Zandro - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Whitmoore - Emerald Dream"] = {
 		},
-		["Byanir - Moon Guard"] = {
-		},
-		["Mininimi - Moon Guard"] = {
+		["Bramblebrow - Emerald Dream"] = {
 		},
 		["Wharapi - Tichondrius"] = {
 		},
 		["Ayanir - Moon Guard"] = {
 		},
-		["Bramblebrow - Emerald Dream"] = {
+		["Mcpokesalot - Tichondrius"] = {
+		},
+		["Iscrackl - Tichondrius"] = {
 		},
 		["Lonalber - Emerald Dream"] = {
 		},
-		["Whitmoore - Emerald Dream"] = {
+		["Magnr - Tichondrius"] = {
+		},
+		["Byanir - Emerald Dream"] = {
+		},
+		["Tirdailough - Tichondrius"] = {
+		},
+		["Curaney - Tichondrius"] = {
+		},
+		["Brungar - Tichondrius"] = {
+		},
+		["Mininimi - Moon Guard"] = {
+		},
+		["Bjorgr - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
+		},
+		["Grandh - Tichondrius"] = {
+		},
+		["Umbrick - Emerald Dream"] = {
+		},
+		["Byanir - Moon Guard"] = {
 		},
 		["Harwapa - Tichondrius"] = {
 		},

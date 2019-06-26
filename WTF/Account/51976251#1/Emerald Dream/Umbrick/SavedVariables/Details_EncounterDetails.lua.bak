@@ -437,14 +437,15 @@ EncounterDetailsDB = {
 				["SPELL_DAMAGE"] = true,
 			},
 		},
-		[269351] = {
+		[268586] = {
 			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
 				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "T'zala",
+			["source"] = "King Dazar",
 		},
 		[259277] = {
 			["school"] = 1,
@@ -471,12 +472,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "T'lonja",
 		},
-		[268587] = {
+		[270117] = {
 			["school"] = 1,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_HEAL"] = true,
 			},
-			["source"] = "King Dazar",
+			["source"] = "Peperinus-Drakkari",
 		},
 		[255835] = {
 			["school"] = 32,
@@ -528,12 +529,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "King Dazar",
 		},
-		[268590] = {
-			["school"] = 1,
+		[273945] = {
+			["school"] = 32,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "King Dazar",
+			["source"] = "N'raqi Destroyer",
 		},
 		[273944] = {
 			["school"] = 32,
@@ -571,13 +572,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Kula the Butcher",
 		},
-		[267060] = {
+		[268590] = {
 			["school"] = 1,
 			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Zanazal the Wise",
+			["source"] = "King Dazar",
 		},
 		[980] = {
 			["school"] = 32,
@@ -704,13 +704,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Mchimba the Embalmer",
 		},
-		[268403] = {
-			["school"] = 8,
+		[270443] = {
+			["school"] = 40,
+			["type"] = "DEBUFF",
 			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "King Dazar",
+			["source"] = "G'huun",
 		},
 		[269232] = {
 			["school"] = 1,
@@ -831,14 +831,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Seeyy-Tichondrius",
 		},
-		[263307] = {
-			["school"] = 32,
+		[270447] = {
+			["school"] = 1,
+			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Gibbering Horror",
+			["source"] = "G'huun",
 		},
 		[108366] = {
 			["school"] = 32,
@@ -916,14 +915,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Fiorina-Goldrinn",
 		},
-		[29722] = {
-			["school"] = 4,
+		[255620] = {
+			["school"] = 8,
+			["type"] = "DEBUFF",
 			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_DAMAGE"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "Spazzyy-Tichondrius",
+			["source"] = "Reanimated Honor Guard",
 		},
 		[287280] = {
 			["school"] = 2,
@@ -973,13 +973,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Vol'kaal",
 		},
-		[263504] = {
-			["school"] = 1,
-			["type"] = "DEBUFF",
+		[256959] = {
+			["school"] = 8,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "G'huun",
+			["source"] = "Reanimated Honor Guard",
 		},
 		[263503] = {
 			["school"] = 64,
@@ -995,22 +994,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Babidytwo-Stormreaver",
 		},
-		[255620] = {
-			["school"] = 8,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_DAMAGE"] = true,
-				["SPELL_PERIODIC_DAMAGE"] = true,
-			},
-			["source"] = "Reanimated Honor Guard",
-		},
-		[256959] = {
-			["school"] = 8,
+		[29722] = {
+			["school"] = 4,
 			["token"] = {
 				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Reanimated Honor Guard",
+			["source"] = "Spazzyy-Tichondrius",
 		},
 		[269369] = {
 			["school"] = 32,
@@ -1022,6 +1013,14 @@ EncounterDetailsDB = {
 				["SPELL_DAMAGE"] = true,
 			},
 			["source"] = "T'zala",
+		},
+		[263504] = {
+			["school"] = 1,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "G'huun",
 		},
 		[256849] = {
 			["school"] = 8,
@@ -1059,12 +1058,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Remoraz-Spirestone",
 		},
-		[270454] = {
-			["school"] = 40,
+		[256864] = {
+			["school"] = 1,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "G'huun",
+			["source"] = "Dinomancer Kish'o",
 		},
 		[276128] = {
 			["school"] = 1,
@@ -1098,12 +1099,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "G'huun",
 		},
-		[276894] = {
-			["school"] = 32,
+		[259574] = {
+			["school"] = 8,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "N'raqi Destroyer",
+			["source"] = "Vol'kaal",
 		},
 		[267077] = {
 			["school"] = 4,
@@ -1312,13 +1313,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Yazma",
 		},
-		[268932] = {
-			["school"] = 1,
+		[115175] = {
+			["school"] = 8,
+			["type"] = "BUFF",
 			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
+				["SPELL_PERIODIC_HEAL"] = true,
 			},
-			["source"] = "King Dazar",
+			["source"] = "Maralina-Fizzcrank",
 		},
 		[273794] = {
 			["school"] = 1,
@@ -1334,6 +1337,22 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Spazzyy-Tichondrius",
 		},
+		[289524] = {
+			["school"] = 1,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "Jazeline-Ragnaros",
+		},
+		[224127] = {
+			["school"] = 8,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "Spirit Wolf",
+		},
 		[255434] = {
 			["school"] = 1,
 			["type"] = "DEBUFF",
@@ -1344,22 +1363,6 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Rezan",
 		},
-		[224127] = {
-			["school"] = 8,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-			["source"] = "Spirit Wolf",
-		},
-		[289524] = {
-			["school"] = 1,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-			["source"] = "Jazeline-Ragnaros",
-		},
 		[267257] = {
 			["school"] = 8,
 			["token"] = {
@@ -1367,15 +1370,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Unknown",
 		},
-		[115175] = {
-			["school"] = 8,
-			["type"] = "BUFF",
+		[268932] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_PERIODIC_HEAL"] = true,
+				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "Maralina-Fizzcrank",
+			["source"] = "King Dazar",
 		},
 		[52042] = {
 			["school"] = 8,
@@ -1464,12 +1465,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Seeyy-Tichondrius",
 		},
-		[259574] = {
-			["school"] = 8,
+		[276894] = {
+			["school"] = 32,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Vol'kaal",
+			["source"] = "N'raqi Destroyer",
 		},
 		[250368] = {
 			["school"] = 8,
@@ -1485,14 +1486,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Sortuna-Azralon",
 		},
-		[256864] = {
-			["school"] = 1,
+		[270454] = {
+			["school"] = 40,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "Dinomancer Kish'o",
+			["source"] = "G'huun",
 		},
 		[157644] = {
 			["school"] = 1,
@@ -1582,13 +1581,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "G'huun",
 		},
-		[270447] = {
-			["school"] = 1,
-			["type"] = "BUFF",
+		[263307] = {
+			["school"] = 32,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "G'huun",
+			["source"] = "Gibbering Horror",
 		},
 		[271682] = {
 			["school"] = 32,
@@ -1646,13 +1646,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Babidytwo-Stormreaver",
 		},
-		[270443] = {
-			["school"] = 40,
-			["type"] = "DEBUFF",
+		[268403] = {
+			["school"] = 8,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "G'huun",
+			["source"] = "King Dazar",
 		},
 		[271711] = {
 			["school"] = 8,
@@ -1670,12 +1670,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Cyclopean Terror",
 		},
-		[273945] = {
-			["school"] = 32,
+		[267060] = {
+			["school"] = 1,
 			["token"] = {
 				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "N'raqi Destroyer",
+			["source"] = "Zanazal the Wise",
 		},
 		[273406] = {
 			["school"] = 32,
@@ -1710,20 +1711,10 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Peperinus-Drakkari",
 		},
-		[270117] = {
+		[268587] = {
 			["school"] = 1,
 			["token"] = {
-				["SPELL_HEAL"] = true,
-			},
-			["source"] = "Peperinus-Drakkari",
-		},
-		[268586] = {
-			["school"] = 1,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
 			["source"] = "King Dazar",
 		},
@@ -1733,6 +1724,15 @@ EncounterDetailsDB = {
 				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
 			["source"] = "Sordasch-Hyjal",
+		},
+		[269351] = {
+			["school"] = 1,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "T'zala",
 		},
 	},
 	["emotes"] = {

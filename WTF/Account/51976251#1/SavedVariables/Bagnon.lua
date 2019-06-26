@@ -16,14 +16,6 @@ Bagnon_Sets = {
 	},
 	["inscribeColor"] = {
 	},
-	["leatherColor"] = {
-	},
-	["tackleColor"] = {
-	},
-	["herbColor"] = {
-	},
-	["normalColor"] = {
-	},
 	["global"] = {
 		["inventory"] = {
 			["enabled"] = false,
@@ -65,9 +57,9 @@ Bagnon_Sets = {
 			["x"] = -49.9998779296875,
 			["borderColor"] = {
 			},
-			["alpha"] = 1,
-			["scale"] = 1,
 			["itemScale"] = 1,
+			["scale"] = 1,
+			["alpha"] = 1,
 		},
 		["vault"] = {
 			["rules"] = {
@@ -138,6 +130,7 @@ Bagnon_Sets = {
 			},
 		},
 		["bank"] = {
+			["y"] = 267.499938964844,
 			["rules"] = {
 				"all", -- [1]
 				"all/all", -- [2]
@@ -161,15 +154,28 @@ Bagnon_Sets = {
 				"trade/recipe", -- [20]
 				"quest", -- [21]
 				"misc", -- [22]
+				"quest/all", -- [23]
+				"contain/all", -- [24]
+				"misc/all", -- [25]
 			},
+			["point"] = "BOTTOMLEFT",
 			["hiddenBags"] = {
 			},
 			["color"] = {
 			},
-			["hiddenRules"] = {
-			},
 			["borderColor"] = {
 			},
+			["hiddenRules"] = {
+			},
+			["x"] = 95.0000152587891,
 		},
+	},
+	["normalColor"] = {
+	},
+	["herbColor"] = {
+	},
+	["tackleColor"] = {
+	},
+	["leatherColor"] = {
 	},
 }

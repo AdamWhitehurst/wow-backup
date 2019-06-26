@@ -1,0 +1,12 @@
+tag 043d46006cb295cddb13e4158e691e1e2087d6c3 8.1.2-release
+Author:	Hizuro <hizuro@gmx.net>
+Date:	Tue Jun 25 09:44:32 2019 +0200
+
+Tagging as 8.1.2-release
+
+commit b6fb58628c9380031df1e4e3edf883f23bc5f06f
+Author: Hizuro <hizuro@gmx.net>
+Date:   Tue Jun 25 09:17:02 2019 +0200
+
+    update toc file for 8.2
+

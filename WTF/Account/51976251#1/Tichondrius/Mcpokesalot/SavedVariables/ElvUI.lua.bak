@@ -1,0 +1,13 @@
+
+ElvCharacterDB = {
+	["CliqueDatatext"] = {
+	},
+	["ChatEditHistory"] = {
+		"/wa", -- [1]
+		"/kb", -- [2]
+		"/elvui", -- [3]
+		"/reload", -- [4]
+	},
+	["ChatHistoryLog"] = {
+	},
+}

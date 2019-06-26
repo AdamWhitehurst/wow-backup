@@ -1,0 +1,332 @@
+
+ElvCharacterDB = {
+	["CliqueDatatext"] = {
+	},
+	["ChatEditHistory"] = {
+		"/reload", -- [1]
+		"/elvui", -- [2]
+		"/wa", -- [3]
+		"/kb", -- [4]
+		"/2 definitely search up Ruin gaming", -- [5]
+		"/2 Im in them but can invite", -- [6]
+		"/2 Largest, most powerful", -- [7]
+		"/2 ruinnation.com", -- [8]
+		"/2 That an aoutomatic service", -- [9]
+		"/2 if youre on discord, they wont kick you", -- [10]
+		"/2 Cannot speak for the validity of those accusions", -- [11]
+		"/2 But, say what you will, still most active", -- [12]
+		"/2 And people are nice so, whatever about Archaos", -- [13]
+		"/2 Yes but you don't play games with the GM, you play with the nice other members", -- [14]
+		"/2 I only joined a month ago but its been fun, what do you want in a guild?", -- [15]
+	},
+	["ChatHistoryLog"] = {
+		{
+			"|cffffff00Hall of Explorers is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Ironforge", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Ironforge", -- [9]
+			0, -- [10]
+			254, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1561425895,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [1]
+		{
+			"definitely search up Ruin gaming", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			342, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426243,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [2]
+		{
+			"Im in them but can invite", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			343, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426250,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [3]
+		{
+			"Largest, most powerful", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			347, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426283,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [4]
+		{
+			"ruinnation.com", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			350, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426310,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [5]
+		{
+			"That an aoutomatic service", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			353, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426332,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [6]
+		{
+			"if youre on discord, they wont kick you", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			354, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426340,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [7]
+		{
+			"|cffffff00The Great Forge is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Ironforge", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Ironforge", -- [9]
+			0, -- [10]
+			364, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1561426362,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [8]
+		{
+			"Cannot speak for the validity of those accusions", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			373, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426389,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [9]
+		{
+			"|cffffff00The Commons is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Ironforge", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Ironforge", -- [9]
+			0, -- [10]
+			374, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1561426395,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [10]
+		{
+			"But, say what you will, still most active", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			375, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426402,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [11]
+		{
+			"And people are nice so, whatever about Archaos", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			377, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426419,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [12]
+		{
+			"Yes but you don't play games with the GM, you play with the nice other members", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			380, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426465,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [13]
+		{
+			"I only joined a month ago but its been fun, what do you want in a guild?", -- [1]
+			"Mcpokesalot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Mcpokesalot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			383, -- [11]
+			"Player-11-0B716F47", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Mcpokesalot|r",
+			[51] = 1561426493,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [14]
+	},
+}

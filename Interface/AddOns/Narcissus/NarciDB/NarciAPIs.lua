@@ -1,3 +1,9 @@
+local max = math.max;
+local GetText = GetText;
+local GetTexture = GetTexture;
+local NumLines = NumLines;
+local _G = _G;
+local GetItemInfo = GetItemInfo;
 --------------------
 ----API Datebase----
 --------------------
@@ -17,13 +23,15 @@ local HeritageArmorItemIDs = {
     156690, 156691, 156692, 156693, 156694, 156695, 156696, 156697, 157758, 158917,     --Void Elf
     156675, 156676, 156677, 156678, 156679, 156680, 156681, 156685,                     --Nightborne
     166348, 166349, 166351, 166352, 166353, 166354, 166355, 166356, 166357,             --Blood Elf
-    
+    164993, 164994, 164995, 164996, 164997, 164998, 164999, 165000,                     --Zandalari
+    165002, 165003, 165004, 165005, 165006, 165007, 165008, 165009,                     --Kul'tiran
+
     --Reserved for test↓
     
 }
 
 local SecretlItemIDs = {
-    [157636]  = true,     --Waist of Time
+    [162690]  = true,     --Waist of Time
 }
 
 local SpecialItemList = {
@@ -41,7 +49,20 @@ local SpecialItemList = {
     [152341] = CommanderOfArgus,            --Lustrous Eventide Greatsword
     [152342] = CommanderOfArgus,            --Lustrous Daybreak Staff
     [152343] = CommanderOfArgus,            --Lustrous Eventide Staff
-    [157636] = CommanderOfArgus,            --Test
+    --[157636] = CommanderOfArgus,            --Test
+}
+
+local Ensemble_TheChosenDead_ItemIDs = {
+    142423, 142421, 142422, 142434, 142420, 142433,     --Mail
+    142427, 142425, 142431, 142435, 142426, 142424,     --Plate
+    142419, 142430, 142432, 142417, 142418, 142416,     --Leather
+    142415, 142411, 142410, 142413, 142429, 142414,     --Cloth
+    143355, 143345, 143334, 143354, 143346, 143347,
+    143356, 143339, 143349, 143342, 143344, 143335,
+    143353, 143368, 143340, 143337, 143348, 143341,
+    143343, 143367, 143336, 143352, 143366, 143351,
+    143360, 143358, 143350, 143361, 143364, 143359,
+    143338, 143369, 143365, 143363, 143362,
 }
 
 
@@ -56,11 +77,12 @@ local function BuildSearchTable(table)
         newTable[v] = true;
     end
 
-    wipe(HeritageArmorItemIDs)
+    wipe(table)
     return newTable;
 end
 
 local HeritageArmorList = BuildSearchTable(HeritageArmorItemIDs);
+local Ensemble_TheChosenDead = BuildSearchTable(Ensemble_TheChosenDead_ItemIDs);
 
 -----Color API------
 Narci_GlobalColorIndex = 0;
@@ -101,6 +123,44 @@ Narci_ColorTable = {
 	[896] = {156, 165, 153},	--Drustvar
 }
 
+local BorderTexture = {
+    ["Bright"]  = {
+        [0] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Black",
+        [1] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder",
+        [2] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Uncommon",
+        [3] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Rare",
+        [4] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Epic",
+        [5] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Legendary",
+        [6] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Artifact",
+        [7] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Heirloom",	--Void
+        [8] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Azerite",
+        [12] = "Interface/AddOns/Narcissus/Art/Border/HexagonBorder-Special",
+        ["Minimap"] = "Interface/AddOns/Narcissus/Art/Minimap/LOGO",
+    },
+
+    ["Dark"] = {
+        [0] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Black",
+        [1] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Black",
+        [2] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Uncommon",
+        [3] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Rare",
+        [4] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Epic",
+        [5] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Legendary",
+        [6] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Artifact",
+        [7] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Heirloom",	--Void
+        [8] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Azerite",
+        [12] = "Interface/AddOns/Narcissus/Art/Border-Thick/HexagonThickBorder-Black",
+        ["Minimap"] = "Interface/AddOns/Narcissus/Art/Minimap/LOGO-Thick",
+    },
+}
+
+function NarciAPI_GetBorderTexture()
+    local index = NarcissusDB and NarcissusDB.BorderTheme
+    if not index then
+        return BorderTexture["Bright"], BorderTexture["Bright"]["Minimap"], "Bright"
+    else
+        return (BorderTexture[index] or BorderTexture["Bright"]), BorderTexture[index]["Minimap"], index
+    end
+end
 
 --------------------
 ------Item API------
@@ -143,11 +203,207 @@ function NarciAPI_IsSpecialItem(itemID)
 
     if SecretlItemIDs[itemID] then
         return true, ITEMSOURCE_SECRETFINDING;
-    else
-        return false;
     end
+
+    if Ensemble_TheChosenDead[itemID] then
+        return true, "|cFFFFD100"..DUNGEON_FLOOR_HELHEIMRAID1.."|r";
+    end
+
+    return false;
 end
 
+local PrimaryStatusList = {
+	[LE_UNIT_STAT_STRENGTH] = NARCI_STAT_STRENGTH,
+	[LE_UNIT_STAT_AGILITY] = NARCI_STAT_AGILITY,
+	[LE_UNIT_STAT_INTELLECT] = NARCI_STAT_INTELLECT,
+};
+
+function NarciAPI_GetPrimaryStatusName()
+	local currentSpec = GetSpecialization();
+	local _, _, _, _, _, primaryStat = GetSpecializationInfo(currentSpec);
+	local ps = PrimaryStatusList[primaryStat];
+	return ps;
+end
+
+--------------------
+----Tooltip Scan----
+--------------------
+
+local TP = CreateFrame("GameTooltip", "NarciVirtualTooltip", nil, "GameTooltipTemplate")
+TP:SetScript("OnLoad", GameTooltip_OnLoad);
+TP:SetOwner(UIParent, 'ANCHOR_NONE');
+
+local SocketAction = ITEM_SOCKETABLE;
+local find = string.find;
+local SocketPath = "ItemSocketingFrame";
+function NarciAPI_IsItemSocketable(itemLink)
+    if not itemLink then    return; end
+    
+    local gemName, gemLink = GetItemGem(itemLink, 1)
+    if gemName then
+        return gemName, gemLink;
+    end
+    --]]
+
+    local tex, texID;
+    for i = 1, 3 do
+        tex = _G["NarciVirtualTooltip".."Texture"..i]
+        tex = tex:SetTexture(nil);
+    end
+
+    TP:SetHyperlink(itemLink);
+
+    for i = 1, 3 do     --max 10
+        tex = _G["NarciVirtualTooltip".."Texture"..i]
+        texID = tex and tex:GetTexture();
+        if texID and find(texID, SocketPath) then
+            --print(texID)
+            --print("Has Socket")
+            return "Empty", nil;
+        end
+    end
+    --[[
+    for i = begin, num do
+        local str = _G["NarciVirtualTooltip".."TextLeft"..i]
+        if str and str:GetText() == SocketAction then
+            print("Has Socket")
+            return;
+        end
+    end
+    --]]
+    return nil, nil;
+end
+
+local strtrim = strtrim;
+local gsub = gsub;
+local greyFont = "|cff959595";
+local leftBrace = "%(";
+local rightBrace = "%)";
+if (GetLocale() == "zhCN") or (GetLocale() == "zhTW") then
+    leftBrace = "（"
+    rightBrace = "）"
+end
+
+
+local SOURCE_KNOWN = TRANSMOGRIFY_TOOLTIP_APPEARANCE_KNOWN;
+local APPEARANCE_KNOWN = TRANSMOGRIFY_TOOLTIP_ITEM_UNKNOWN_APPEARANCE_KNOWN;
+local APPEARANCE_UNKNOWN = TRANSMOGRIFY_TOOLTIP_APPEARANCE_UNKNOWN;
+
+function NarciAPI_IsAppearanceKnown(itemLink)
+    --Need to correspond with C_TransmogCollection.PlayerHasTransmog
+    if not itemLink then    return; end
+    TP:SetHyperlink(itemLink);
+    local str;
+    local num = TP:NumLines();
+    for i = num, num - 2, -1 do
+        str = nil;
+        str = _G["NarciVirtualTooltip".."TextLeft"..i]
+        if not str then
+            return false;
+        else
+            str = str:GetText();
+        end
+        if str == SOURCE_KNOWN or str == APPEARANCE_KNOWN then
+            return true;
+        elseif str == APPEARANCE_UNKNOWN then
+            return false;
+        end
+    end
+    return false;
+end
+
+local function trimComma(text)
+    return strtrim(text, ":：");
+end
+
+local function formatString(text, removedText)
+    text = strtrim(text, removedText);
+    text = trimComma(text);
+    text = strtrim(text);                               --remove space
+    text = gsub(text, leftBrace, "\n\n"..greyFont)
+    text = gsub(text, rightBrace, "|r")
+    return text;
+end
+
+
+
+local onUse = ITEM_SPELL_TRIGGER_ONUSE;
+local onEquip = ITEM_SPELL_TRIGGER_ONEQUIP;
+local onProc = ITEM_SPELL_TRIGGER_ONPROC;
+local minLevel = SOCKETING_ITEM_MIN_LEVEL_I;
+local _onUse = trimComma(onUse)
+local _onEquip = trimComma(onEquip)
+local _onProc = trimComma(onProc)
+
+function NarciAPI_GetItemExtraEffect(itemLink)
+    if not itemLink then    return; end
+
+    TP:SetHyperlink(itemLink);
+    local num = TP:NumLines();
+    local begin = max(num - 6, 0);
+    local output = "";
+    local category, str;
+
+    for i = begin, num, 1 do
+        str = nil;
+        str = _G["NarciVirtualTooltip".."TextLeft"..i]
+        if not str then
+            return;
+        else
+            str = str:GetText();
+        end
+
+        if find(str, onUse) then
+            str = formatString(str, _onUse);
+            if not category then    category = _onUse; end
+            --return _onUse, str;
+            output = output..str.."\n\n"
+        elseif find(str, onEquip) then
+            str = formatString(str, _onEquip);
+            if not category then    category = _onEquip; end
+            --return _onEquip, str;
+            output = output..str.."\n\n"
+        elseif find(str, onProc) then
+            str = formatString(str, _onProc);
+            if not category then    category = _onProc; end
+            --return _onProc, str;
+            output = output..str.."\n\n"
+        end
+        
+    end
+    return category, output;
+end
+
+function NarciAPI_GetGemBonues(itemID)
+    if not itemID then    return; end
+    if type(itemID) == "number" then
+        TP:SetItemByID(itemID)
+    else
+        TP:SetHyperlink(itemID)
+    end
+    local num = TP:NumLines();
+    local output;
+    local str, level;
+    for i = 1, num do
+        str = _G["NarciVirtualTooltip".."TextLeft"..i]
+        if not str then
+            return;
+        else
+            str = str:GetText();
+        end
+        
+        if strsub(str, 1, 1) == "+" then
+            output = str;
+        end
+
+        if find(str, minLevel) then
+            level = formatString(str, minLevel);
+        end
+
+        if level and output then return output, tonumber(level); end
+    end
+    return output, level;
+end
 --------------------
 ---Formating API----
 --------------------
@@ -206,8 +462,9 @@ function NarciAPI_OptimizeBorderThickness(self)
     self:SetPoint(point, relativeTo, relativePoint, math.floor(xOfs + 0.5), math.floor(yOfs + 0.5))
 
     local scale = string.match(GetCVar( "gxWindowedResolution" ), "%d+x(%d+)" );
-    local uiScale = self:GetEffectiveScale();
+    local uiScale = self:GetEffectiveScale(); 
     local rate = 768/scale/uiScale;
+    --print(rate)
     local borderWeight = 2;
     local weight = borderWeight * rate;
     local weight2 = weight * math.sqrt(2);
@@ -227,7 +484,7 @@ function NarciAPI_OptimizeBorderThickness(self)
 end
 
 function NarciAPI_SliderWithSteps_OnLoad(self)
-    self.oldValue = 0;
+    self.oldValue = -1208;
     self.Marks = {};
     local width = self:GetWidth();
     local step = self:GetValueStep();
@@ -247,4 +504,145 @@ function NarciAPI_SliderWithSteps_OnLoad(self)
         tex:SetPoint("LEFT", self, "LEFT", markOffset + (i-1)*width/num_Gap, 0)
         tinsert(self.Marks, tex);
     end
+end
+
+-----Smooth Scroll-----
+local min = math.min;
+local max = math.max;
+local minOffset = 2;
+local function SmoothScrollContainer_OnUpdate(self, elapsed)
+	local delta = self.delta;
+    local scrollBar = self:GetParent().scrollBar;
+	local step = max(abs(scrollBar:GetValue() - self.EndValue)*(self.timeRatio) , self.minOffset);		--if the step (Δy) is too small, the fontstring will jitter.
+
+	if ( delta == 1 ) then
+		scrollBar:SetValue(max(0, scrollBar:GetValue() - step));
+	else
+		scrollBar:SetValue(min(self.maxVal, scrollBar:GetValue() + step));
+	end
+
+	local remainedStep = abs(self.EndValue - scrollBar:GetValue())
+	if self.animationDuration >= 2 or remainedStep <= ( self.minOffset) then
+		scrollBar:SetValue(math.floor(min(self.maxVal, self.EndValue) + 0.5));
+		self:Hide();
+	end
+end
+
+local function NarciAPI_SmoothScroll_OnMouseWheel(self, delta, stepSize)
+	if ( not self.scrollBar:IsVisible() ) then
+		return;
+	end
+    local ScrollContainer = self.SmoothScrollContainer; 
+	local stepSize = stepSize or self.stepSize or self.buttonHeight;
+
+    ScrollContainer.stepSize = stepSize;
+	ScrollContainer.maxVal = self.range
+
+	self.scrollBar:SetValueStep(0.01);
+	ScrollContainer.delta = delta;
+
+	local Current = self.scrollBar:GetValue();
+	if not((Current == 0 and delta > 0) or (Current == self.range and delta < 0 )) then
+		ScrollContainer:Show()
+	end
+	
+	local deltaRatio = ScrollContainer.deltaRatio or 1;
+    ScrollContainer.EndValue = min(max(0, ScrollContainer.EndValue - delta*deltaRatio*self.buttonHeight), self.range);
+end
+
+function NarciAPI_SmoothScroll_Initialization(self, updatedList, updateFunc, deltaRatio, timeRatio, minOffset)     --self=ListScrollFrame
+	self.update = updateFunc;
+    self.updatedList = UpdatedList;
+
+    local parentName = self:GetName();
+    local frameName = parentName and (parentName .. "SmoothScrollContainer") or nil;
+    
+    local SmoothScrollContainer = CreateFrame("Frame", frameName, self);
+    SmoothScrollContainer:Hide();
+    
+    local scale = string.match(GetCVar( "gxWindowedResolution" ), "%d+x(%d+)" );
+    local uiScale = self:GetEffectiveScale(); 
+    local pixel = 768/scale/uiScale;
+    
+    SmoothScrollContainer.stepSize = 0;
+    SmoothScrollContainer.delta = 0;
+    SmoothScrollContainer.animationDuration = 0;
+    SmoothScrollContainer.EndValue = 0;
+	SmoothScrollContainer.maxVal = 0;
+    SmoothScrollContainer.deltaRatio = deltaRatio or 1;
+    SmoothScrollContainer.timeRatio = timeRatio or 1;
+    SmoothScrollContainer.minOffset = pixel or minOffset or 2;
+    SmoothScrollContainer:SetScript("OnUpdate", SmoothScrollContainer_OnUpdate);
+    SmoothScrollContainer:SetScript("OnShow", function(self)
+        self.EndValue = self:GetParent().scrollBar:GetValue();
+    end);
+
+    self.SmoothScrollContainer = SmoothScrollContainer;
+
+    self:SetScript("OnMouseWheel", NarciAPI_SmoothScroll_OnMouseWheel);
+end
+
+-----Create A List of Button----
+function NarciAPI_BuildButtonList(self, buttonTemplate, buttonNameTable, initialOffsetX, initialOffsetY, initialPoint, initialRelative, offsetX, offsetY, point, relativePoint)
+	local button, buttonHeight, buttons, numButtons;
+
+	local parentName = self:GetName();
+	local buttonName = parentName and (parentName .. "Button") or nil;
+
+	initialPoint = initialPoint or "TOPLEFT";
+    initialRelative = initialRelative or "TOPLEFT";
+    initialOffsetX = initialOffsetX or 0;
+    initialOffsetY = initialOffsetY or 0;
+	point = point or "TOPLEFT";
+	relativePoint = relativePoint or "BOTTOMLEFT";
+	offsetX = offsetX or 0;
+	offsetY = offsetY or 0;
+
+	if ( self.buttons ) then
+		buttons = self.buttons;
+		buttonHeight = buttons[1]:GetHeight();
+	else
+		button = CreateFrame("BUTTON", buttonName and (buttonName .. 1) or nil, self, buttonTemplate);
+		buttonHeight = button:GetHeight();
+        button:SetPoint(initialPoint, self, initialRelative, initialOffsetX, initialOffsetY);
+        button:SetID(0);
+        buttons = {}
+        button.Name:SetText(buttonNameTable[1])
+		tinsert(buttons, button);
+	end
+
+	local numButtons = #buttonNameTable;
+
+	for i = 2, numButtons do
+		button = CreateFrame("BUTTON", buttonName and (buttonName .. i) or nil, self, buttonTemplate);
+        button:SetPoint(point, buttons[i-1], relativePoint, offsetX, offsetY);
+        button:SetID(i-1);
+        button.Name:SetText(buttonNameTable[i])
+		tinsert(buttons, button);
+	end
+
+	self.buttons = buttons;
+end
+
+
+
+-----Filter Shared Functions-----
+function NarciAPI_LetterboxAnimation(command)
+	local frame = Narci_FullScreenMask;
+	frame:StopAnimating();
+	if command == "IN" then
+		frame:Show();
+		frame.BottomMask.animIn:Play();
+		frame.TopMask.animIn:Play();
+	elseif command == "OUT" then
+		frame.BottomMask.animOut:Play();
+		frame.TopMask.animOut:Play();
+	else
+        if NarcissusDB.LetterboxEffect then
+            PhotoModeController.PhotoModeController_AnimFrame.toAlpha = 0
+			frame:Show();
+			frame.BottomMask.animIn:Play();
+			frame.TopMask.animIn:Play();
+		end
+	end
 end

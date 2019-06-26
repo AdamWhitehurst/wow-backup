@@ -1,2 +1,3 @@
 AAP-Core: enabled
 AAP-TBC-WotLK: enabled
+TradeSkillMaster_AuctionDB: disabled

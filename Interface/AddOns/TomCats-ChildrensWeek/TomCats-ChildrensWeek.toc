@@ -1,0 +1,14 @@
+## Interface: 80100
+## Title: TomCat's Tours: Children's Week
+## Author: TomCat
+## X-Website: https://www.tomcatstours.com
+## Version: 1.0.5
+## DefaultState: enabled
+## SavedVariables: TomCats_ChildrensWeek_Account
+## SavedVariablesPerCharacter: TomCats_ChildrensWeek_Character
+## OptionalDeps: TomCats
+## X-Part-Of: TomCat's Tours:
+## X-Category: Achievements, Map, Miscellaneous
+## X-Localizations: enUS, deDE, esES, esMX, frFR, itIT, koKR, ptBR, ruRU, zhCN, zhTW
+
+Main.xml

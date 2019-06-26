@@ -5,10 +5,15 @@ PetJournalEnhancedDB = {
 		},
 	},
 	["profileKeys"] = {
+		["Magnr - Tichondrius"] = "Default",
+		["Mahakah - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
 		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
-		["Mahakah - Tichondrius"] = "Default",
+		["Bjorgr - Tichondrius"] = "Default",
+		["Mcpokesalot - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
 	},
 }

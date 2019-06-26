@@ -1,7 +1,35 @@
-04/07/2018 version 4.9.7
+06/15/2019 version 4.9.9
+- Added Stratholme, Mechagon and Nazjatar to the target menus for 8.2 clients.
+- Added option 'Show Import Button' in Toolbar Options, to add an import button to the toolbar to more easily import teams without opening any menus.
+- Added sub-option 'Show After Pet Battle' -> 'But Not After PVP Battle' in Miscellaneous Options, to prevent automatically showing the Rematch window after leaving a PVP battle.
+- Added option 'Use Random If Queue Empty' in Leveling Queue Options, to load a random high level pet into leveling slots when the queue is empty rather than leaving the leveling slot alone.
+- Attempted fix for sub-option 'Load Healthiest Pet' -> 'After Pet Battles Too' from not properly loading abilities when an alternate pet is found.
+- Fix for SetPoint bug on 8.2 clients when moving the standalone frame.
+- Fix for the Load button being incorrectly enabled in an empty import dialog.
+
+05/18/2019 version 4.9.8
+- The leveling queue should now survive server-side petID reassignments, rather than being wiped.
+- Added new option in Team Options: Load Healthiest Pet -> "After Pet Battles Too" to replace pets with their healthiest version after a battle or revive/bandages used within Rematch. (Revive, bandages and stable masters outside Rematch will not be noticed and have no effect.)
+- Added new option in Team Options: "Show Icons For Pets In Teams" to display an icon beside pets that belong to a team.
+- Added a new option category "Team Win Record Options" and moved existing options to this new category.
+- While loadout slots are locked (such as while queued for a pvp pet battle) in dual pane or journal views, pet cards will appear and can be locked into place and interacted with, but the underlying slots will otherwise remain uninteractable. There is no change in behavior for single panel or minimized views yet, sorry! This will come in a future update.
+- Better support for empty loadout slots for new players and server transfers: "empty" icon rather than red question mark for empty slots, "Unknown" name changed to "Battle Pet Slot #" with help text, text to explain how to unlock a slot if applicable.
+- The icon signfiying a pet belongs to a team is now a green paw.
+- On the pet card, moved the leveling queue "stat" down by the number of teams the pet belongs to, to better mirror their proximity in lists.
+- Dead or injured pets in the pet list and queue now show the red X (dead) or red border (injured) again.
+- Fix for texture alignment on dead or injured pets where they were still showing.
+- Fix for bug where "Load Healthiest Pet" would sometimes pick a lower level max-health pet over a higher level pet.
+- Fix for error involving Icons\INV_Misc_QuestionMark on PTR/8.2 clients.
+- Fix for /rematch Name of Team failing to load a team in German and Russian clients.
+- Fix for bug where an action to automatically summon Rematch while Rematch is already summoned but not in the preferred mode will switch to the preferred mode.
+- Removed one-time popup for Mac users about the retired experimental version.
+
+Special note: If you manually update to this version while logged into the game, exit the game and log back in. Otherwise, new textures will be bright green squares until you exit.
+
+04/07/2019 version 4.9.7
 - Fix for potential scroll offset bug when pet list changes length.
 
-03/22/2018 version 4.9.6
+03/22/2019 version 4.9.6
 - Fix for error some may get trying to open a notable NPCs menu when targets aren't fully cached.
 - An attempt to cache will only happen a few times before giving up.
 
