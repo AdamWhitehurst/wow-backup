@@ -4,19 +4,21 @@ local oUF = E.oUF
 --Lua functions
 local _G = _G
 local pairs, tonumber = pairs, tonumber
-local ceil, floor = math.ceil, floor
-local strmatch = strmatch
+local strmatch, strfind = strmatch, strfind
+local ceil, floor = ceil, floor
 --WoW API / Variables
-local IsInInstance = IsInInstance
 local GetLocale = GetLocale
 local GetQuestLogIndexByID = GetQuestLogIndexByID
 local GetQuestLogSpecialItemInfo = GetQuestLogSpecialItemInfo
 local GetQuestLogTitle = GetQuestLogTitle
-local UnitName = UnitName
+local IsInInstance = IsInInstance
+local UnitIsPlayer = UnitIsPlayer
 local C_TaskQuest_GetQuestProgressBarInfo = C_TaskQuest.GetQuestProgressBarInfo
+local ThreatTooltip = THREAT_TOOLTIP:gsub('%%d', '%%d-')
 
+local questIconTypes = {"Item", "Loot", "Skull", "Chat"}
 local ActiveQuests = {
-	-- [questName] = questID ?
+	--[questName] = questID
 }
 
 local UsedLocale = GetLocale()
@@ -40,6 +42,7 @@ local QuestTypesLocalized = {
 		["zerstört"] = "KILL",
 		["befragt"] = "CHAT",
 		["sprecht"] = "CHAT",
+		["genährt"] = "KILL",
 
 	},
 	["esMX"] = {
@@ -89,7 +92,6 @@ local QuestTypes = QuestTypesLocalized[UsedLocale] or QuestTypesLocalized.enUS
 local function QUEST_ACCEPTED(self, event, questLogIndex, questID)
 	if questLogIndex and questLogIndex > 0 then
 		local questName = GetQuestLogTitle(questLogIndex)
-
 		if questName and (questID and questID > 0) then
 			ActiveQuests[questName] = questID
 		end
@@ -98,8 +100,8 @@ end
 
 local function QUEST_REMOVED(self, event, questID)
 	if not questID then return end
-	for questName, __questID in pairs(ActiveQuests) do
-		if __questID == questID then
+	for questName, id in pairs(ActiveQuests) do
+		if id == questID then
 			ActiveQuests[questName] = nil
 			break
 		end
@@ -113,62 +115,69 @@ local function GetQuests(unitID)
 	E.ScanTooltip:SetUnit(unitID)
 	E.ScanTooltip:Show()
 
-	local QuestList, questID = {}
+	local QuestList, notMyQuest
 	for i = 3, E.ScanTooltip:NumLines() do
 		local str = _G['ElvUI_ScanTooltipTextLeft' .. i]
 		local text = str and str:GetText()
-		if not text then return end
-		if not questID then
-			questID = ActiveQuests[text]
-		end
+		if not text or text == '' then return end
 
-		local playerName, progressText = strmatch(text, '^ ([^ ]-) ?%- (.+)$') -- nil or '' if 1 is missing but 2 is there
-		if (not playerName or playerName == '' or playerName == UnitName('player')) and progressText then
-			local index = #QuestList + 1
-			QuestList[index] = {}
-			progressText = progressText:lower()
+		if UnitIsPlayer(text) then
+			notMyQuest = text ~= E.myname
+		elseif text and not notMyQuest then
+			local objCount, QuestType, IsPerc, logIndex, itemTex, _
 
-			local x, y = strmatch(progressText, '(%d+)/(%d+)')
-			if x and y then
-				QuestList[index].objectiveCount = floor(y - x)
-			else
-				local progress = tonumber(strmatch(progressText, '([%d%.]+)%%')) -- contains % in the progressText
-				if progress and progress <= 100 then
-					QuestList[index].objectiveCount = ceil(100 - progress)
-				end
-			end
+			-- active quest
+			local QuestID = ActiveQuests[text]
+			if QuestID then
+				logIndex = GetQuestLogIndexByID(QuestID)
+				_, itemTex = GetQuestLogSpecialItemInfo(logIndex)
 
-			local QuestLogIndex, itemTexture, _
-			if questID then
-				QuestLogIndex = GetQuestLogIndexByID(questID)
-				_, itemTexture = GetQuestLogSpecialItemInfo(QuestLogIndex)
-
-				QuestList[index].isPerc = false
-				local progress = C_TaskQuest_GetQuestProgressBarInfo(questID)
+				local progress = C_TaskQuest_GetQuestProgressBarInfo(QuestID)
 				if progress then
-					QuestList[index].objectiveCount = floor(progress)
-					QuestList[index].isPerc = true
+					objCount = floor(progress)
+					IsPerc = true
 				end
-
-				QuestList[index].itemTexture = itemTexture
-				QuestList[index].questID = questID
 			end
 
-			if itemTexture then
-				QuestList[index].questType = "QUEST_ITEM"
-			else
-				QuestList[index].questType = "LOOT"
+			-- text check, only if active quest doesnt find the objective
+			if not objCount then
+				local x, y = strmatch(text, '(%d+)/(%d+)')
+				if x and y then
+					objCount = floor(y - x)
+				elseif not strmatch(text, ThreatTooltip) then
+					local progress = tonumber(strmatch(text, '([%d%.]+)%%')) -- contains % in the text
+					if progress and progress <= 100 then
+						objCount = ceil(100 - progress)
+					end
+				end
+			end
 
+			if itemTex then
+				QuestType = "QUEST_ITEM"
+			elseif objCount then
+				QuestType = "LOOT"
+
+				local lowerText = text:lower()
 				for questString in pairs(QuestTypes) do
-					if progressText:find(questString) then
-						QuestList[index].questType = QuestTypes[questString]
+					if strfind(lowerText, questString) then
+						QuestType = QuestTypes[questString]
 						break
 					end
 				end
 			end
 
-			questID = nil
-			QuestList[index].questLogIndex = QuestLogIndex
+			if QuestType then
+				if not QuestList then QuestList = {} end
+				QuestList[#QuestList + 1] = {
+					isPerc = IsPerc,
+					itemTexture = itemTex,
+					objectiveCount = objCount,
+					questType = QuestType,
+					-- below keys are currently unused
+					questLogIndex = logIndex,
+					questID = QuestID
+				}
+			end
 		end
 	end
 
@@ -176,57 +185,85 @@ local function GetQuests(unitID)
 	return QuestList
 end
 
+local function hideIcons(element)
+	for _, object in pairs(questIconTypes) do
+		local icon = element[object]
+		icon:Hide()
+
+		if icon.Text then
+			icon.Text:SetText('')
+		end
+	end
+end
+
 local function Update(self, event, unit)
-	if (unit ~= self.unit) then return end
-
 	local element = self.QuestIcons
+	if not element then return end
 
-	if (element.PreUpdate) then
+	if event ~= "UNIT_NAME_UPDATE" then
+		unit = self.unit
+	end
+
+	if unit ~= self.unit then return end
+
+	if element.PreUpdate then
 		element:PreUpdate()
 	end
 
-	local QuestList = GetQuests(unit)
+	hideIcons(element)
 
-	element:Hide()
-	for i = 1, #element do
-		element[i]:Hide()
+	local QuestList = GetQuests(unit)
+	if QuestList then
+		element:Show()
+	else
+		element:Hide()
+		return
 	end
 
-	if not QuestList then return end
-
-	local objectiveCount, questType, itemTexture
+	local shownCount
 	for i = 1, #QuestList do
-		objectiveCount = QuestList[i].objectiveCount
-		questType = QuestList[i].questType
-		itemTexture = QuestList[i].itemTexture
+		local quest = QuestList[i]
+		local objectiveCount = quest.objectiveCount
+		local questType = quest.questType
+		local isPerc = quest.isPerc
 
-		if objectiveCount and (objectiveCount > 0 or QuestList[i].isPerc) then
-			element.Text:SetText((QuestList[i].isPerc and objectiveCount.."%") or objectiveCount)
+		if objectiveCount and (objectiveCount > 0 or isPerc) then
+			local icon
 
-			element.Skull:Hide()
-			element.Loot:Hide()
-			element.Item:Hide()
-			element.Chat:Hide()
-
-			if questType == "KILL" or QuestList[i].isPerc == true then
-				element.Skull:Show()
+			if questType == "KILL" or isPerc then
+				icon = element.Skull
 			elseif questType == "LOOT" then
-				element.Loot:Show()
+				icon = element.Loot
 			elseif questType == "CHAT" then
-				element.Chat:Show()
-				element.Text:SetText('')
+				icon = element.Chat
 			elseif questType == "QUEST_ITEM" then
-				element.Item:Show()
-				element.Item:SetTexture(itemTexture)
+				icon = element.Item
 			end
 
-			element:Show()
-		else
-			element:Hide()
+			if not icon:IsShown() then
+				shownCount = (shownCount and shownCount + 1) or 0
+
+				local size = icon.size or 25
+				local setPosition = icon.position or "TOPLEFT"
+				local newPosition = E.InversePoints[setPosition]
+				local offset = 2 + (shownCount * size)
+
+				icon:Show()
+				icon:ClearAllPoints()
+				icon:Point(newPosition, element, newPosition, (strmatch(setPosition, "LEFT") and -offset) or offset, 0)
+
+				if questType ~= "CHAT" and icon.Text then
+					icon.Text:SetText((isPerc and objectiveCount.."%") or objectiveCount)
+				end
+
+				if questType == "QUEST_ITEM" then
+					element.Item:SetTexture(quest.itemTexture)
+				end
+			end
 		end
 	end
 
-	if (element.PostUpdate) then
+	if element.PostUpdate then
 		return element:PostUpdate()
 	end
 end
@@ -241,26 +278,18 @@ end
 
 local function Enable(self)
 	local element = self.QuestIcons
-	if (element) then
+	if element then
 		element.__owner = self
 		element.ForceUpdate = ForceUpdate
 
-		if (element.Loot) then
-			if(element.Loot:IsObjectType('Texture') and not element.Loot:GetAtlas()) then
-				element.Loot:SetAtlas('Banker')
-			end
+		if element.Loot:IsObjectType('Texture') and not element.Loot:GetAtlas() then
+			element.Loot:SetAtlas('Banker')
 		end
-
-		if (element.Skull) then
-			if (element.Skull:IsObjectType('Texture') and not element.Skull:GetTexture()) then
-				element.Skull:SetTexture(E.Media.Textures.SkullIcon)
-			end
+		if element.Skull:IsObjectType('Texture') and not element.Skull:GetTexture() then
+			element.Skull:SetTexture(E.Media.Textures.SkullIcon)
 		end
-
-		if(element.Chat) then
-			if(element.Chat:IsObjectType('StatusBar') and not element.Chat:GetTexture()) then
-				element.Chat:SetTexture([[Interface\WorldMap\ChatBubble_64.PNG]])
-			end
+		if element.Chat:IsObjectType('StatusBar') and not element.Chat:GetTexture() then
+			element.Chat:SetTexture([[Interface\WorldMap\ChatBubble_64.PNG]])
 		end
 
 		self:RegisterEvent('QUEST_ACCEPTED', QUEST_ACCEPTED, true)
@@ -275,12 +304,15 @@ end
 
 local function Disable(self)
 	local element = self.QuestIcons
-	if (element) then
+	if element then
 		element:Hide()
+		hideIcons(element)
 
 		self:UnregisterEvent('QUEST_ACCEPTED', QUEST_ACCEPTED)
 		self:UnregisterEvent('QUEST_REMOVED', QUEST_REMOVED)
 		self:UnregisterEvent('QUEST_LOG_UPDATE', Path)
+		self:UnregisterEvent('UNIT_NAME_UPDATE', Path)
+		self:UnregisterEvent('PLAYER_ENTERING_WORLD', Path)
 	end
 end
 

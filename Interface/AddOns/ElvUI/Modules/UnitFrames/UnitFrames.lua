@@ -1086,11 +1086,6 @@ function UF:UpdateAllHeaders(event)
 			shouldUpdateHeader = true
 		end
 		self:CreateAndUpdateHeaderGroup(group, nil, nil, shouldUpdateHeader)
-
-		if group == 'party' or group == 'raid' or group == 'raid40' then
-			--Update BuffIndicators on profile change as they might be using profile specific data
-			self:UpdateAuraWatchFromHeader(group)
-		end
 	end
 end
 
@@ -1473,7 +1468,10 @@ function UF:Initialize()
 		self:Construct_UF(frame, unit)
 	end)
 
-	self:LoadUnits()
+	ElvUF:SetActiveStyle("ElvUF")
+
+	UF:LoadUnits()
+
 	self:RegisterEvent('PLAYER_ENTERING_WORLD')
 
 	--InterfaceOptionsFrameCategoriesButton9:SetScale(0.0001)

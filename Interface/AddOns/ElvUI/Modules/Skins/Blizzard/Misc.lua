@@ -353,20 +353,20 @@ local function LoadSkin()
 				end
 
 				button.backdrop:Show()
-				check:SetTexCoord(0, 1, 0, 1);
+				check:SetTexCoord(0, 1, 0, 1)
 			else
 				check:Size(16, 16)
 			end
 		end
 	end)
 
-
 	local SideDressUpFrame = _G.SideDressUpFrame
-	S:HandleCloseButton(_G.SideDressUpModelCloseButton)
+	S:HandleCloseButton(_G.SideDressUpFrameCloseButton)
+	S:HandleButton(_G.SideDressUpFrame.ResetButton)
+	_G.SideDressUpFrame.ResetButton:SetFrameLevel(_G.SideDressUpFrame.ResetButton:GetFrameLevel()+1)
 	SideDressUpFrame:StripTextures()
 	SideDressUpFrame.BGTopLeft:Hide()
 	SideDressUpFrame.BGBottomLeft:Hide()
-	S:HandleButton(_G.SideDressUpModelResetButton)
 	SideDressUpFrame:SetTemplate("Transparent")
 
 	-- StackSplit

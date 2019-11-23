@@ -54,7 +54,7 @@ E.Options.args.general = {
 					type = 'execute',
 					name = L["Auto Scale"],
 					func = function()
-						E.global.general.UIScale = E:PixelClip(E:PixelBestSize())
+						E.global.general.UIScale = E:PixelBestSize()
 						E:StaticPopup_Show("UISCALE_CHANGE")
 					end,
 				},
@@ -62,7 +62,7 @@ E.Options.args.general = {
 					order = 3,
 					type = "range",
 					name = L["UI_SCALE"],
-					min = 0.1, max = 1.25, step = 0.00001,
+					min = 0.1, max = 1.25, step = 0.000000000000001,
 					softMin = 0.40, softMax = 1.15, bigStep = 0.01,
 					get = function(info) return E.global.general.UIScale end,
 					set = function(info, value)
@@ -865,10 +865,26 @@ E.Options.args.general = {
 						},
 					},
 				},
+				DurabilityGroup = {
+					order = 12,
+					type = "group",
+					name = L["Durability"],
+					guiInline = true,
+					get = function(info) return E.db.general.durabilityScale end,
+					set = function(info, value) E.db.general.durabilityScale = value; E:StaticPopup_Show("PRIVATE_RL") end,
+					args = {
+						scale = {
+							order = 1,
+							type = "range",
+							name = L["Scale"],
+							min = 0.5, max = 8, step = 0.5,
+						}
+					}
+				},
 			},
 		},
 		misc = {
-			order = 12,
+			order = 20,
 			type = "group",
 			name = L["Miscellaneous"],
 			get = function(info) return E.db.general[info[#info]] end,
@@ -887,6 +903,7 @@ E.Options.args.general = {
 					values = {
 						['NONE'] = L["NONE"],
 						['SAY'] = L["SAY"],
+						['YELL'] = L["YELL"],
 						['PARTY'] = L["Party Only"],
 						['RAID'] = L["Party / Raid"],
 						['RAID_ONLY'] = L["Raid Only"],
@@ -924,6 +941,12 @@ E.Options.args.general = {
 					desc = L["Automatically select greed or disenchant (when available) on green quality items. This will only work if you are the max level."],
 					type = 'toggle',
 					disabled = function() return not E.private.general.lootRoll end
+				},
+				questRewardMostValueIcon = {
+					order = 5,
+					type = "toggle",
+					name = L["Mark Quest Reward"],
+					desc = L["Marks the most valuable quest reward with a gold coin."],
 				},
 			},
 		},

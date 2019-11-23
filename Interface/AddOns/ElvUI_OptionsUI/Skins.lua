@@ -6,6 +6,7 @@ E.Options.args.skins = {
 	type = "group",
 	name = L["Skins"],
 	childGroups = "tree",
+	order = 2,
 	args = {
 		intro = {
 			order = 0,
@@ -46,6 +47,13 @@ E.Options.args.skins = {
 					get = function(info) return E.private.skins.parchmentRemover.enable end,
 					set = function(info, value) E.private.skins.parchmentRemover.enable = value; E:StaticPopup_Show("PRIVATE_RL") end,
 				},
+				cleanBossButton = {
+					order = 5,
+					type = 'toggle',
+					name = L["Clean Boss Button"],
+					get = function(info) return E.private.skins.cleanBossButton end,
+					set = function(info, value) E.private.skins.cleanBossButton = value; E:StaticPopup_Show("PRIVATE_RL") end,
+				}
 			},
 		},
 		talkingHead = {
@@ -463,9 +471,14 @@ E.Options.args.skins = {
 				},
 				AzeriteEssence = {
 					type = "toggle",
-					name = L["Azerite Essence"], -- Maybe Temp Name
+					name = L["Azerite Essence"],
 					desc = L["TOGGLESKIN_DESC"],
 				},
+				Tutorials = {
+					type = "toggle",
+					name = L["Tutorials"],
+					desc = L["TOGGLESKIN_DESC"],
+				}
 			},
 		},
 	},

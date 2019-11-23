@@ -12,6 +12,20 @@ local function WorldMapBountyBoard(Frame)
 	S:HandleCloseButton(Frame.TutorialBox.CloseButton)
 end
 
+local function SkinPartySyncPopups(frame)
+	if not frame then return end
+
+	local frameName = frame or frame:GetName()
+
+	frameName:StripTextures()
+	frameName:CreateBackdrop("Transparent")
+
+	local Confirm = frameName.ButtonContainer.Confirm
+	local Decline = frameName.ButtonContainer.Decline
+	S:HandleButton(Confirm)
+	S:HandleButton(Decline)
+end
+
 local function LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.worldmap ~= true then return end
 
@@ -26,6 +40,8 @@ local function LoadSkin()
 
 	WorldMapFrame.ScrollContainer:CreateBackdrop()
 	WorldMapFrame:CreateBackdrop("Transparent")
+	WorldMapFrame.backdrop:SetPoint("TOPLEFT", WorldMapFrame, "TOPLEFT", -8, 0)
+	WorldMapFrame.backdrop:SetPoint("BOTTOMRIGHT", WorldMapFrame, "BOTTOMRIGHT", 0, -9)
 
 	S:HandleButton(WorldMapFrame.NavBar.homeButton)
 	WorldMapFrame.NavBar.homeButton.xoffset = 1
@@ -46,6 +62,7 @@ local function LoadSkin()
 
 	local QuestScrollFrame = _G.QuestScrollFrame
 	QuestScrollFrame.DetailFrame:StripTextures()
+	QuestScrollFrame.DetailFrame.BottomDetail:Hide()
 	QuestScrollFrame.Contents.Separator.Divider:Hide()
 
 	local QuestScrollFrameScrollBar = _G.QuestScrollFrameScrollBar
@@ -102,6 +119,33 @@ local function LoadSkin()
 	WorldMapBountyBoard(WorldMapFrame.overlayFrames[3]) -- BountyBoard
 	--WorldMapActionButtonTemplate(WorldMapFrame.overlayFrames[4]) -- ActionButtons
 	--WorldMapZoneTimerTemplate(WorldMapFrame.overlayFrames[5]) -- Timer?
+
+	-- 8.2.5 Party Sync
+	QuestMapFrame.QuestSessionManagement:StripTextures()
+	-- TODO: Deal with the Button
+	--S:HandleButton(QuestMapFrame.QuestSessionManagement.ExecuteSessionCommand, nil, nil, nil, true)
+
+	SkinPartySyncPopups(_G.QuestSessionManager.CheckStartDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.StartDialog)
+
+	local minimizeButton = _G.QuestSessionManager.StartDialog.MinimizeButton
+	minimizeButton:StripTextures()
+	minimizeButton:Size(16, 16)
+
+	minimizeButton.tex = minimizeButton:CreateTexture(nil, "OVERLAY")
+	minimizeButton.tex:SetTexture(E.Media.Textures.MinusButton)
+	minimizeButton.tex:SetInside()
+	minimizeButton:SetHighlightTexture("Interface\\Buttons\\UI-PlusButton-Hilight", "ADD")
+
+	SkinPartySyncPopups(_G.QuestSessionManager.CheckLeavePartyDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.CheckStopDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.CheckConvertToRaidDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmJoinGroupRequestDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmInviteToGroupDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmInviteToGroupReceivedDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmRequestToJoinGroupDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmBNJoinGroupRequestDialog)
+	SkinPartySyncPopups(_G.QuestSessionManager.ConfirmInviteTravelPassConfirmationDialog)
 end
 
 S:AddCallback("SkinWorldMap", LoadSkin)

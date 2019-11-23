@@ -1,16 +1,36 @@
 local ElvUI = select(2, ...)
-
-local gameLocale
-do -- Locale doesn't exist yet, make it exist.
-	local convert = {enGB = 'enUS', esES = 'esMX', itIT = 'enUS'}
-	local lang = GetLocale()
-
-	gameLocale = convert[lang] or lang or 'enUS'
-	ElvUI[2] = ElvUI[1].Libs.ACL:GetLocale('ElvUI', gameLocale)
-end
-
+ElvUI[2] = ElvUI[1].Libs.ACL:GetLocale('ElvUI', ElvUI[1]:GetLocale()) -- Locale doesn't exist yet, make it exist.
 local E, L, V, P, G = unpack(ElvUI); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 
+--Lua functions
+local _G = _G
+local tonumber, pairs, ipairs, error, unpack, select, tostring = tonumber, pairs, ipairs, error, unpack, select, tostring
+local gsub, strjoin, twipe, tinsert, tremove, tContains = gsub, strjoin, wipe, tinsert, tremove, tContains
+local format, find, strrep, strlen, sub = format, strfind, strrep, strlen, strsub
+local assert, type, pcall, xpcall, next, print = assert, type, pcall, xpcall, next, print
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local GetCVar = GetCVar
+local GetCVarBool = GetCVarBool
+local GetNumGroupMembers = GetNumGroupMembers
+local GetSpecialization = GetSpecialization
+local hooksecurefunc = hooksecurefunc
+local InCombatLockdown = InCombatLockdown
+local GetAddOnEnableState = GetAddOnEnableState
+local IsInGroup = IsInGroup
+local IsInGuild = IsInGuild
+local IsInRaid = IsInRaid
+local SetCVar = SetCVar
+local UnitFactionGroup = UnitFactionGroup
+local UnitGUID = UnitGUID
+
+local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
+local LE_PARTY_CATEGORY_HOME = LE_PARTY_CATEGORY_HOME
+local LE_PARTY_CATEGORY_INSTANCE = LE_PARTY_CATEGORY_INSTANCE
+local C_ChatInfo_SendAddonMessage = C_ChatInfo.SendAddonMessage
+-- GLOBALS: ElvUIPlayerBuffs, ElvUIPlayerDebuffs
+
+--Modules
 local ActionBars = E:GetModule('ActionBars')
 local AFK = E:GetModule('AFK')
 local Auras = E:GetModule('Auras')
@@ -28,34 +48,6 @@ local Totems = E:GetModule('Totems')
 local UnitFrames = E:GetModule('UnitFrames')
 local LSM = E.Libs.LSM
 
---Lua functions
-local _G = _G
-local tonumber, pairs, ipairs, error, unpack, select, tostring = tonumber, pairs, ipairs, error, unpack, select, tostring
-local gsub, strjoin, twipe, tinsert, tremove, tContains = gsub, strjoin, wipe, tinsert, tremove, tContains
-local format, find, strrep, strlen, sub = format, strfind, strrep, strlen, strsub
-local assert, type, pcall, xpcall, next, print = assert, type, pcall, xpcall, next, print
---WoW API / Variables
-local CreateFrame = CreateFrame
-local GetCVar = GetCVar
-local GetCVarBool = GetCVarBool
-local GetNumGroupMembers = GetNumGroupMembers
-local GetSpecialization = GetSpecialization
-local hooksecurefunc = hooksecurefunc
-local InCombatLockdown = InCombatLockdown
-local IsAddOnLoaded = IsAddOnLoaded
-local IsInGroup = IsInGroup
-local IsInGuild = IsInGuild
-local IsInRaid = IsInRaid
-local SetCVar = SetCVar
-local UnitFactionGroup = UnitFactionGroup
-local UnitGUID = UnitGUID
-
-local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
-local LE_PARTY_CATEGORY_HOME = LE_PARTY_CATEGORY_HOME
-local LE_PARTY_CATEGORY_INSTANCE = LE_PARTY_CATEGORY_INSTANCE
-local C_ChatInfo_SendAddonMessage = C_ChatInfo.SendAddonMessage
--- GLOBALS: ElvUIPlayerBuffs, ElvUIPlayerDebuffs
-
 --Constants
 E.noop = function() end
 E.title = format('|cfffe7b2c%s |r', 'ElvUI')
@@ -69,11 +61,16 @@ E.myspec = GetSpecialization()
 E.version = GetAddOnMetadata('ElvUI', 'Version')
 E.wowpatch, E.wowbuild = GetBuildInfo()
 E.wowbuild = tonumber(E.wowbuild)
+E.IsRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 E.resolution = ({GetScreenResolutions()})[GetCurrentResolution()] or GetCVar('gxWindowedResolution') --only used for now in our install.lua line 779
 E.screenwidth, E.screenheight = GetPhysicalScreenSize()
 E.isMacClient = IsMacClient()
 E.NewSign = '|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:14:14|t' -- not used by ElvUI yet, but plugins like BenikUI and MerathilisUI use it.
 E.InfoColor = '|cfffe7b2c'
+
+-- oUF Defines
+E.oUF.Tags.Vars.E = E
+E.oUF.Tags.Vars.L = L
 
 --Tables
 E.media = {}
@@ -155,8 +152,13 @@ E.DispelClasses = {
 	MAGE = { Curse = true }
 }
 
+E.BadDispels = {
+	[34914] = 'Vampiric Touch', --horrifies
+	[233490] = 'Unstable Affliction' --silences
+}
+
 --Workaround for people wanting to use white and it reverting to their class color.
-E.PriestColors = { r = 0.99, g = 0.99, b = 0.99, colorStr = 'fcfcfc' }
+E.PriestColors = { r = 0.99, g = 0.99, b = 0.99, colorStr = 'fffcfcfc' }
 
 -- Socket Type info from 8.2
 E.GemTypeInfo = {
@@ -221,7 +223,7 @@ function E:CheckClassColor(r, g, b)
 	local matchFound = false
 	for class in pairs(_G.RAID_CLASS_COLORS) do
 		if class ~= E.myclass then
-			local colorTable = class == 'PRIEST' and E.PriestColors or (_G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[class] or _G.RAID_CLASS_COLORS[class])
+			local colorTable = E:ClassColor(class, true)
 			local red, green, blue = E:GrabColorPickerValues(colorTable.r, colorTable.g, colorTable.b)
 			if red == r and green == g and blue == b then
 				matchFound = true
@@ -295,7 +297,7 @@ function E:UpdateMedia()
 	--Border Color
 	local border = E.db.general.bordercolor
 	if self:CheckClassColor(border.r, border.g, border.b) then
-		local classColor = E.myclass == 'PRIEST' and E.PriestColors or (_G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[E.myclass] or _G.RAID_CLASS_COLORS[E.myclass])
+		local classColor = E:ClassColor(E.myclass, true)
 		E.db.general.bordercolor.r = classColor.r
 		E.db.general.bordercolor.g = classColor.g
 		E.db.general.bordercolor.b = classColor.b
@@ -306,7 +308,7 @@ function E:UpdateMedia()
 	--UnitFrame Border Color
 	border = E.db.unitframe.colors.borderColor
 	if self:CheckClassColor(border.r, border.g, border.b) then
-		local classColor = E.myclass == 'PRIEST' and E.PriestColors or (_G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[E.myclass] or _G.RAID_CLASS_COLORS[E.myclass])
+		local classColor = E:ClassColor(E.myclass, true)
 		E.db.unitframe.colors.borderColor.r = classColor.r
 		E.db.unitframe.colors.borderColor.g = classColor.g
 		E.db.unitframe.colors.borderColor.b = classColor.b
@@ -323,7 +325,7 @@ function E:UpdateMedia()
 	local value = self.db.general.valuecolor
 
 	if self:CheckClassColor(value.r, value.g, value.b) then
-		value = E.myclass == 'PRIEST' and E.PriestColors or (_G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[E.myclass] or _G.RAID_CLASS_COLORS[E.myclass])
+		value = E:ClassColor(E.myclass, true)
 		self.db.general.valuecolor.r = value.r
 		self.db.general.valuecolor.g = value.g
 		self.db.general.valuecolor.b = value.b
@@ -348,7 +350,7 @@ end
 
 do	--Update font/texture paths when they are registered by the addon providing them
 	--This helps fix most of the issues with fonts or textures reverting to default because the addon providing them is loading after ElvUI.
-	--We use a wrapper to avoid errors in :UpdateMedia because "self" is passed to the function with a value other than ElvUI.
+	--We use a wrapper to avoid errors in :UpdateMedia because 'self' is passed to the function with a value other than ElvUI.
 	local function LSMCallback() E:UpdateMedia() end
 	LSM.RegisterCallback(E, 'LibSharedMedia_Registered', LSMCallback)
 end
@@ -497,13 +499,18 @@ function E:IncompatibleAddOn(addon, module)
 	E:StaticPopup_Show('INCOMPATIBLE_ADDON', addon, module)
 end
 
+function E:IsAddOnEnabled(addon)
+	return GetAddOnEnableState(E.myname, addon) == 2
+end
+
 function E:CheckIncompatible()
 	if E.global.ignoreIncompatible then return end
-	if IsAddOnLoaded('Prat-3.0') and E.private.chat.enable then E:IncompatibleAddOn('Prat-3.0', 'Chat') end
-	if IsAddOnLoaded('Chatter') and E.private.chat.enable then E:IncompatibleAddOn('Chatter', 'Chat') end
-	if IsAddOnLoaded('TidyPlates') and E.private.nameplates.enable then E:IncompatibleAddOn('TidyPlates', 'NamePlates') end
-	if IsAddOnLoaded('Aloft') and E.private.nameplates.enable then E:IncompatibleAddOn('Aloft', 'NamePlates') end
-	if IsAddOnLoaded('Healers-Have-To-Die') and E.private.nameplates.enable then E:IncompatibleAddOn('Healers-Have-To-Die', 'NamePlates') end
+	if E:IsAddOnEnabled('Prat-3.0') and E.private.chat.enable then E:IncompatibleAddOn('Prat-3.0', 'Chat') end
+	if E:IsAddOnEnabled('Chatter') and E.private.chat.enable then E:IncompatibleAddOn('Chatter', 'Chat') end
+	if E:IsAddOnEnabled('TidyPlates') and E.private.nameplates.enable then E:IncompatibleAddOn('TidyPlates', 'NamePlates') end
+	if E:IsAddOnEnabled('Aloft') and E.private.nameplates.enable then E:IncompatibleAddOn('Aloft', 'NamePlates') end
+	if E:IsAddOnEnabled('Healers-Have-To-Die') and E.private.nameplates.enable then E:IncompatibleAddOn('Healers-Have-To-Die', 'NamePlates') end
+	if E:IsAddOnEnabled('Bartender4') and E.private.actionbar.enable then E:IncompatibleAddOn('Bartender4', 'ActionBar') end
 end
 
 function E:CopyTable(currentTable, defaultTable)
@@ -716,7 +723,7 @@ do	--The code in this function is from WeakAuras, credit goes to Mirrored and th
 		if not profileText then return end
 
 		twipe(lineStructureTable)
-		local ret = ""
+		local ret = ''
 		if inTable and profileType then
 			sameLine = false
 			ret = recurse(inTable, ret, profileText)
@@ -828,7 +835,7 @@ function E:UpdateStart(skipCallback, skipUpdateDB)
 	E:UpdateUnitFrames()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -857,7 +864,7 @@ end
 
 function E:UpdateMoverPositions()
 	--The mover is positioned before it is resized, which causes issues for unitframes
-	--Allow movers to be "pushed" outside the screen, when they are resized they should be back in the screen area.
+	--Allow movers to be 'pushed' outside the screen, when they are resized they should be back in the screen area.
 	--We set movers to be clamped again at the bottom of this function.
 	E:SetMoversClampedToScreen(false)
 	E:SetMoversPositions()
@@ -879,7 +886,7 @@ function E:UpdateMediaItems(skipCallback)
 	E:UpdateStatusBars()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -890,7 +897,7 @@ function E:UpdateLayout(skipCallback)
 	Layout:SetDataPanelStyle()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -903,7 +910,7 @@ function E:UpdateActionBars(skipCallback)
 	ActionBars:UpdatePetCooldownSettings()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -912,7 +919,7 @@ function E:UpdateNamePlates(skipCallback)
 	NamePlates:StyleFilterInitialize()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -928,7 +935,7 @@ function E:UpdateBags(skipCallback)
 	Bags:UpdateItemLevelDisplay()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -938,7 +945,7 @@ function E:UpdateChat(skipCallback)
 	Chat:UpdateAnchors()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -950,7 +957,7 @@ function E:UpdateDataBars(skipCallback)
 	DataBars:UpdateDataBarDimensions()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -958,7 +965,7 @@ function E:UpdateDataTexts(skipCallback)
 	DataTexts:LoadDataTexts()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -966,7 +973,7 @@ function E:UpdateMinimap(skipCallback)
 	Minimap:UpdateSettings()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -975,7 +982,7 @@ function E:UpdateAuras(skipCallback)
 	if ElvUIPlayerDebuffs then Auras:UpdateHeader(ElvUIPlayerDebuffs) end
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -990,7 +997,7 @@ function E:UpdateMisc(skipCallback)
 	Totems:ToggleEnable()
 
 	if not skipCallback then
-		E.callbacks:Fire("StaggeredUpdate")
+		E.callbacks:Fire('StaggeredUpdate')
 	end
 end
 
@@ -1033,7 +1040,7 @@ do
 			E:Delay(nextDelay or staggerDelay, E[nextUpdate])
 		end
 	end
-	E:RegisterCallback("StaggeredUpdate", CallStaggeredUpdate)
+	E:RegisterCallback('StaggeredUpdate', CallStaggeredUpdate)
 
 	function E:StaggeredUpdateAll(event, installSetup)
 		if not self.initialized then
@@ -1042,30 +1049,30 @@ do
 		end
 
 		self.installSetup = installSetup
-		if (installSetup or event and event == "OnProfileChanged" or event == "OnProfileCopied") and not self.staggerUpdateRunning then
-			tinsert(staggerTable, "UpdateLayout")
+		if (installSetup or event and event == 'OnProfileChanged' or event == 'OnProfileCopied') and not self.staggerUpdateRunning then
+			tinsert(staggerTable, 'UpdateLayout')
 			if E.private.actionbar.enable then
-				tinsert(staggerTable, "UpdateActionBars")
+				tinsert(staggerTable, 'UpdateActionBars')
 			end
 			if E.private.nameplates.enable then
-				tinsert(staggerTable, "UpdateNamePlates")
+				tinsert(staggerTable, 'UpdateNamePlates')
 			end
 			if E.private.bags.enable then
-				tinsert(staggerTable, "UpdateBags")
+				tinsert(staggerTable, 'UpdateBags')
 			end
 			if E.private.chat.enable then
-				tinsert(staggerTable, "UpdateChat")
+				tinsert(staggerTable, 'UpdateChat')
 			end
-			tinsert(staggerTable, "UpdateDataBars")
-			tinsert(staggerTable, "UpdateDataTexts")
+			tinsert(staggerTable, 'UpdateDataBars')
+			tinsert(staggerTable, 'UpdateDataTexts')
 			if E.private.general.minimap.enable then
-				tinsert(staggerTable, "UpdateMinimap")
+				tinsert(staggerTable, 'UpdateMinimap')
 			end
 			if ElvUIPlayerBuffs or ElvUIPlayerDebuffs then
-				tinsert(staggerTable, "UpdateAuras")
+				tinsert(staggerTable, 'UpdateAuras')
 			end
-			tinsert(staggerTable, "UpdateMisc")
-			tinsert(staggerTable, "UpdateEnd")
+			tinsert(staggerTable, 'UpdateMisc')
+			tinsert(staggerTable, 'UpdateEnd')
 
 			--Stagger updates
 			self.staggerUpdateRunning = true
@@ -1279,10 +1286,6 @@ function E:DBConversions()
 		E.global.general.UIScale = G.general.UIScale
 	end
 
-	if gameLocale and E.global.general.locale == 'auto' then
-		E.global.general.locale = gameLocale
-	end
-
 	--Combat & Resting Icon options update
 	if E.db.unitframe.units.player.combatIcon ~= nil then
 		E.db.unitframe.units.player.CombatIcon.enable = E.db.unitframe.units.player.combatIcon
@@ -1329,7 +1332,7 @@ function E:DBConversions()
 		end
 	end
 
-	--Convert old "Buffs and Debuffs" font size option to individual options
+	--Convert old 'Buffs and Debuffs' font size option to individual options
 	if E.db.auras.fontSize then
 		local fontSize = E.db.auras.fontSize
 		E.db.auras.buffs.countFontSize = fontSize
@@ -1488,8 +1491,6 @@ function E:Initialize()
 	self:UpdateCooldownSettings('all')
 	self:Tutorials()
 	self.initialized = true
-
-	Minimap:UpdateSettings()
 
 	if E.db.general.smoothingAmount and (E.db.general.smoothingAmount ~= 0.33) then
 		E:SetSmoothingAmount(E.db.general.smoothingAmount)

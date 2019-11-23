@@ -72,6 +72,7 @@ L["Choose a theme layout you wish to use for your initial setup."] = "为你的�
 L["Class Totems"] = "职业图腾"
 L["Classbar"] = "职业特有条"
 L["Classic"] = "经典"
+L["Clean Boss Button"] = true
 L["Combat"] = "战斗"
 L["Combat/Arena Time"] = "战斗时间"
 L["Config Mode:"] = "设置模式:"
@@ -155,6 +156,7 @@ L["Importance: |cffD3CF00Medium|r"] = "重要性: |cffD3CF00中|r"
 L["Importance: |cffFF0000Low|r"] = "重要性:|cffFF0000低|r"
 L["In Progress"] = "正在进行中"
 L["INCOMPATIBLE_ADDON"] = "插件 %s 不相容于 ElvUI 的 %s 模组, 请停用不相容的插件, 或停用模组."
+L["Info/Controls"] = true
 L["Installation Complete"] = "安装完成"
 L["Invalid Target"] = "无效的目标"
 L["is looking for members"] = "正在寻找队友"
@@ -202,7 +204,7 @@ L["Mobile"] = "App"
 L["Modulating Blend"] = true
 L["Mov. Speed:"] = _G.STAT_MOVEMENT_SPEED
 L["MT Frames"] = "主坦克框"
-L["Nazjatar Follower XP"] = true
+L["Nazjatar Follower XP"] = "纳沙塔尔随从经验"
 L["Naval Mission(s) Report:"] = "海军任务报告:"
 L["No bindings set."] = "无绑定设定"
 L["No gray items to delete."] = "没有要删除的灰色物品"
@@ -233,6 +235,7 @@ L["Player Powerbar"] = "玩家能量条"
 L["Please click the button below so you can setup variables and ReloadUI."] = "请按下方按钮设定变数并重载介面。"
 L["Please click the button below to setup your CVars."] = "请按下方按钮设定参数."
 L["Please press the continue button to go onto the next step."] = "请按继续按钮到下一步"
+L["Plugins"] = true
 L["Preview Changes"] = "预览改动"
 L["Preview"] = "预览"
 L["Profile download complete from %s, but the profile %s already exists. Change the name or else it will overwrite the existing profile."] = "配置文件从 %s 下载完成, 但是配置文件 %s 已存在. 请更改名称, 否则它会覆盖你的现有配置文件."
@@ -305,7 +308,6 @@ L["Theme Setup"] = "主题安装"
 L["This install process will help you learn some of the features in ElvUI has to offer and also prepare your user interface for usage."] = "此安装程序有助你了解 ElvUI 部份功能，并可协助你预先设定 UI。"
 L["This part of the installation process sets up your chat windows names, positions and colors."] = "此安装步骤将会设定聊天框的名称、位置和颜色。"
 L["This part of the installation process sets up your World of Warcraft default options it is recommended you should do this step for everything to behave properly."] = "此安装步骤将会设定 WOW 预设选项，建议你执行此步骤，以确保功能均可正常运作。"
-L["This release of ElvUI contains changes to how we handle UI scale. See changelog for specifics. We need to set your UI scale again in order to use a new system. It appears your old UI scale was %s.\n\nYou can either apply this value, or use the 'Auto Scale' function to apply the UI scale that is considered the most optimal for your resolution.\n\nYou also have the option of choosing your own UI scale in the General section of the ElvUI Options. In theory ElvUI should be able to look pixel perfect with any UI scale now but there may be a few issues with the ingame config."] = "当前ElvUI版本包含了如何处理界面缩放的改动. 查看更新日志以了解更多细节. 为了使用这个新的系统，我们需要重新设置你的界面缩放比例. 你原本的界面缩放比例为 %s.\n\n你可以继续使用这个比例，或者使用'自动缩放'功能来找到最适合你屏幕分辨率的缩放比例.\n\n你也可以在ElvUI设置界面的'一般'选项卡中选择你的界面缩放比例. 理论上ElvUI应该可以在任何界面缩放比例中保持像素完美显示，但仍有一些游戏内的设置导致的问题."
 L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."] = "这个设置引起一个互相矛盾的锚点, '%s' 被依附于他自身. 请检查你的锚点设置. 设置 '%s' 依附到 '%s'."
 L["This will change the layout of your unitframes and actionbars."] = "这将会改变你单位框架和动作条的构架。"
 L["To move abilities on the actionbars by default hold shift + drag. You can change the modifier key from the actionbar options menu."] = "你可以通过按住Shift拖动技能条中的按键. 你可以在 Blizzard 的动作条设置中更改按键."
@@ -369,8 +371,6 @@ L["Poen Gillbrack"] = true
 L["Vim Brineheart"] = true
 
 ----------------------------------
-L["RED_ENABLE"] = "|cFFff3333启用|r"
-L["GREEN_ENABLE"] = "|cFF33ff33启用|r"
 L["DESC_MOVERCONFIG"] = [=[解除框架移动锁定. 现在可以移动它们, 移好后请点击「锁定」.
 
 选项：

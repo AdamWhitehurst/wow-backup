@@ -1,17 +1,17 @@
 -- Portuguese localization file for ptBR.
 local L = ElvUI[1].Libs.ACL:NewLocale("ElvUI", "ptBR")
 
+L["# Displayed Auras"] = true
+L["%s and then %s"] = "%s e depois %s"
+L["24-Hour Time"] = "24 horas"
+L["2D"] = "2D"
+L["3D"] = "3D"
 L["Add / Remove"] = true
 L["Allows you to tie a stack count to an aura when you add it to the list, which allows the trigger to act when an aura reaches X number of stacks."] = true
 L["Added Map ID: %s"] = true
 L["Added Instance ID: %s"] = true
 L["Added Zone Name: %s"] = true
 L["Added Subzone Name: %s"] = true
-L["# Displayed Auras"] = true
-L["%s and then %s"] = "%s e depois %s"
-L["24-Hour Time"] = "24 horas"
-L["2D"] = "2D"
-L["3D"] = "3D"
 L["Above Chat"] = "Acima do Bate-papo"
 L["Above"] = "Acima"
 L["Absorbs"] = "Absorções"
@@ -115,6 +115,8 @@ L["Automatically hide the objetive frame during boss or arena fights."] = true
 L["Automatically repair using the following method when visiting a merchant."] = "Reparar automaticamente usando o seguinte método ao visitar um vendedor."
 L["Automatically select greed or disenchant (when available) on green quality items. This will only work if you are the max level."] = "Selecionar automaticamente ganância ou desencantar (quando disponível) em itens de qualidade verde. Funciona apenas se estiver no nível máximo."
 L["Automatically vendor gray items when visiting a vendor."] = "Vender itens cinzentos automaticamente quando visitar um vendedor"
+L["Available Tags"] = true
+L["AzeriteUI"] = true
 L["Backdrop color of transparent frames"] = "Cor de fundo de Painéis transparentes"
 L["Backdrop Color"] = "Cor de fundo"
 L["Backdrop Faded Color"] = "Cor de fundo desvanecida"
@@ -154,6 +156,7 @@ L["BG Map"] = "Mapa do CB"
 L["BG Score"] = "Placar do CB"
 L["Blacklist Modifier"] = true
 L["Blacklist"] = "Lista negra"
+L["Blank Texture"] = true
 L["Blizzard Style"] = true
 L["Blizzard"] = true
 L["BlizzUI Improvements"] = true
@@ -182,6 +185,7 @@ L["BottomRightMiniPanel"] = "Minimap BottomRight (Inside)"
 L["BoU"] = true
 L["Buff Indicator"] = "Indicador de Bônus"
 L["Buffs"] = "Bônus"
+L["Button Flash"] = true
 L["Button Size (Bag)"] = "Tamanho do Botão (Bolsas)"
 L["Button Size (Bank)"] = "Tamanho do Botão (Banco)"
 L["Button Size"] = "Tamanho do botão"
@@ -237,6 +241,7 @@ L["Clickable Width / Width"] = true
 L["Coding:"] = "Codificação:"
 L["Color all buffs that reduce the unit's incoming damage."] = "Colorir todos os bônus que reduzem o dano recebido pela unidade."
 L["Color aurabar debuffs by type."] = "Colorir penalidades da barra de auras por tipo."
+L["Color by Value"] = true
 L["Color castbars by the class of player units."] = true
 L["Color castbars by the reaction type of non-player units."] = true
 L["Color Gradient"] = true
@@ -349,6 +354,7 @@ L["Defines the sort order of the selected sort method."] = "Define a ordem de or
 L["Delete a created filter, you cannot delete pre-existing filters, only custom ones."] = "Excluir um filtro criado, você não pode excluir filtros pré-existentes, apenas aqueles personalizados."
 L["Delete Filter"] = "Apagar Filtro"
 L["Desaturate Cooldowns"] = true
+L["Desaturate Icon"] = true
 L["Desaturate Junk Items"] = true
 L["Desaturate Voice Icons"] = true
 L["Desaturated Icon"] = true
@@ -406,7 +412,7 @@ L["Display the npc ID when mousing over a npc tooltip."] = true
 L["Display the scrap icon on items that can be scrapped."] = true
 L["Display the spell or item ID when mousing over a spell or item tooltip."] = "Quando pairar o rato (mouse) sobre Itens ou Feitiços, mostra o ID destes na tooltip."
 L["Display the target of your current cast. Useful for mouseover casts."] = "Mostra os alvos do seu lançamento atual. Útil para lançamentos mouseover."
-L["Display the unit name who interrupted a spell on the castbar. You should increase the 'Time to Hold' to show properly."] = true
+L["Display the unit name who interrupted a spell on the castbar. You should increase the Time to Hold to show properly."] = true
 L["Display the unit role in the tooltip."] = true
 L["Display the upgrade icon on items that WoW considers an upgrade for your character."] = true
 L["Display tick marks on the castbar for channelled spells. This will adjust automatically for spells like Drain Soul and add additional ticks based on haste."] = "Exibir marcas na barra de lançamento para feitiços canalizados. Isto irá se ajustar automaticamente para feitiços como Drenar Alma e adicionará ticks baseado na Aceleração."
@@ -418,6 +424,7 @@ L["Don't display auras that are shorter than this duration (in seconds). Set to 
 L["Donations:"] = "Doações:"
 L["Down"] = "Baixo"
 L["Dungeon & Raid Filter"] = true
+L["Duration Enable"] = true
 L["Duration Font Size"] = true
 L["Duration Reverse"] = "Duração Reversa"
 L["Duration Text"] = true
@@ -456,6 +463,7 @@ L["Export Now"] = true
 L["Export Profile"] = true
 L["Exported"] = true
 L["Fade Chat"] = "Desvanecer o bate-papo"
+L["Fade Duration"] = true
 L["Fade Out Delay"] = true
 L["Fade Out"] = true
 L["Fade Tabs No Backdrop"] = true
@@ -529,6 +537,7 @@ L["Growth Direction"] = "Direção de crescimento"
 L["Growth X-Direction"] = true
 L["Growth Y-Direction"] = true
 L["Guardians"] = true
+L["Guide:"] = true
 L["Guild Control Frame"] = "Controle da Guilda"
 L["Guild Ranks"] = "Posto na Guilda"
 L["Guild Registrar"] = "Registrar Guilda"
@@ -552,8 +561,10 @@ L["Herbalism"] = true
 L["Here you can add items or search terms that you want to be excluded from sorting. To remove an item just click on its name in the list."] = true
 L["HH:MM Threshold"] = true
 L["Hide At Max Level"] = true
+L["Hide At Max Power"] = true
 L["Hide Below Max Level"] = true
 L["Hide Both"] = "Esconder Ambos"
+L["Hide Castbar text. Useful if your power height is very low or if you use power offset."] = true
 L["Hide Cooldown Bling"] = true
 L["Hide Delay"] = true
 L["Hide Error Text"] = "Esconder Texto de Erro"
@@ -563,6 +574,7 @@ L["Hide In Vehicle"] = true
 L["Hide Outside PvP"] = true
 L["Hide specific sections in the datatext tooltip."] = true
 L["Hide Spell Name"] = true
+L["Hide Text"] = true
 L["Hide Time"] = true
 L["Hide tooltip while in combat."] = "Esconder tooltip em combate"
 L["Hide Voice Buttons"] = true
@@ -646,7 +658,7 @@ L["If not set to 0 then override the size of the aura icon to this."] = "Se não
 L["If not set to true then the server time will be displayed instead."] = "Se não definido como verdade, então a hora do servidor será exibida."
 L["If the aura is listed with a number then you need to use that to remove it from the list."] = true
 L["If this is enabled then the reaction check will use your reputation with the faction the unit belongs to."] = true
-L["If this list is empty, and if 'Interruptible' is checked, then the filter will activate on any type of cast that can be interrupted."] = true
+L["If this list is empty, and if Interruptible is checked, then the filter will activate on any type of cast that can be interrupted."] = true
 L["If this threshold is used then the health of the unit needs to be higher than this value in order for the filter to activate. Set to 0 to disable."] = true
 L["If this threshold is used then the health of the unit needs to be lower than this value in order for the filter to activate. Set to 0 to disable."] = true
 L["If this threshold is used then the power of the unit needs to be higher than this value in order for the filter to activate. Set to 0 to disable."] = true
@@ -703,6 +715,7 @@ L["Keybind Text"] = "Texto das Teclas de Atalho"
 L["Keyword Alert"] = "Alerta de palavra-chave"
 L["Keywords"] = "Palavras-chave"
 L["Latency"] = "Latência"
+L["Leader Indicator"] = true
 L["Leatherworking"] = true
 L["Left Alt"] = true
 L["Left Control"] = true
@@ -746,6 +759,8 @@ L["Make the world map smaller."] = true
 L["Map Opacity When Moving"] = true
 L["Map ID"] = true
 L["Maps"] = true
+L["Mark Quest Reward"] = true
+L["Marks the most valuable quest reward with a gold coin."] = true
 L["Masque Support"] = true
 L["Match Frame Width"] = "Igualar comprimento do quadro"
 L["Match if Name or NPC ID is NOT in the list."] = true
@@ -859,6 +874,7 @@ L["Over Power Threshold"] = true
 L["Overlap Horizontal"] = true
 L["Overlap Vertical"] = true
 L["Overlay"] = "Sobrepor"
+L["Overlay Alpha"] = true
 L["Overnuking"] = true
 L["Override any custom visibility setting in certain situations, EX: Only show groups 1 and 2 inside a 10 man instance."] = "Sobrescrever qualquer visibilidade personalizada em certas situações, Ex: Mostrar apenas grupo 1 e 2 dentro de uma instância de 10 pessoas."
 L["Override the default class color setting."] = "Sobrescreve a configuração de cor de classe padrão."
@@ -1017,7 +1033,6 @@ L["Right"] = "Direita"
 L["RightChatDataPanel"] = "Bate-papo direito"
 L["RightClick Self-Cast"] = true
 L["RightMiniPanel"] = "Minimapa - direita"
-L["RL Icon"] = true
 L["Role Icon"] = "Ícone do papel"
 L["Run the installation process."] = "Execute o processo de instalação."
 L["Scale"] = true
@@ -1043,8 +1058,10 @@ L["Sends your current profile to your target."] = "Envia seu perfil atual para s
 L["Sends your filter settings to your target."] = "Envia as configurações de filtro para seu alvo."
 L["Separate Panel Sizes"] = true
 L["Seperate"] = "Separar"
+L["Set auras that are not from you to desaturad."] = true
 L["Set Settings to Default"] = true
 L["Set the alpha level of nameplates that are not the target nameplate. Works only in combat."] = true
+L["Set the alpha level of portrait when frame is overlayed."] = true
 L["Set the filter type. Blacklist will hide any auras in the list and show all others. Whitelist will show any auras in the filter and hide all others."] = true
 L["Set the font outline."] = "Definir o contorno de fonte."
 L["Set the font size for everything in UI. Note: This doesn't effect somethings that have their own seperate options (UnitFrame Font, Datatext Font, ect..)"] = "Define o tamanho da fonte para toda a Interface. Nota: Isto nao afeta coisas que tenham suas prórpias opções de fonte (Quadros de Unidade, Textos Informativos, etc..)"
@@ -1063,7 +1080,7 @@ L["Share Current Profile"] = "Compartilhar Perfil Atual"
 L["Share Filters"] = "Compartilhar Filtros"
 L["Short (Whole Numbers)"] = true
 L["Short Channels"] = "Abreviar os Canáis"
-L["Shortcut to 'Filters' section of the config."] = true
+L["Shortcut to Filters section of the config."] = true
 L["Shortcut to global filters."] = true
 L["Shortcuts"] = true
 L["Shorten the channel names in chat."] = "Abreviar o nome dos canáis no bate-papo."
@@ -1093,6 +1110,7 @@ L["Show Over Absorbs"] = true
 L["Show PvP Badge Indicator if available"] = true
 L["Show Quality Color"] = true
 L["Show Scrap Icon"] = true
+L["Show Special Bags Color"] = true
 L["Show the castbar icon desaturated if a spell is not interruptible."] = true
 L["Show Title"] = true
 L["Show Upgrade Icon"] = true
@@ -1168,7 +1186,7 @@ L["Tapped"] = "Reservado"
 L["Target Indicator Color"] = true
 L["Target Info"] = true
 L["Target On Mouse-Down"] = "Selecionar ao Pressionar o Mouse"
-L["Target units on mouse down rather than mouse up. \n\n|cffFF0000Warning: If you are using the addon 'Clique' you may have to adjust your clique settings when changing this."] = "Seleciona unidades ao pressionar o mouse em ves de ao soltar. \n\n|cffFF0000Atenção: Se você estiver usando o addon 'Clique' poderá ter que ajustá-lo quando alterar essa opção."
+L["Target units on mouse down rather than mouse up. \n\n|cffFF0000Warning: If you are using the addon Clique you may have to adjust your Clique settings when changing this."] = "Seleciona unidades ao pressionar o mouse em ves de ao soltar. \n\n|cffFF0000Atenção: Se você estiver usando o addon Clique poderá ter que ajustá-lo quando alterar essa opção."
 L["Target"] = true
 L["Target, Quest, Combat"] = true
 L["Target/Low Health Indicator"] = true
@@ -1180,11 +1198,9 @@ L["Testing:"] = "Testar:"
 L["Text Color"] = "Cor do Texto"
 L["Text Font Size"] = true
 L["Text Format"] = "Formato de texto"
-L["Text Position"] = "Posição do Texto"
+L["Text Options"] = true
 L["Text Threshold"] = "Limiar do Texto"
 L["Text Toggle On NPC"] = "Texto ligado no PNJ"
-L["Text xOffset"] = "Distãncia X do Texto"
-L["Text yOffset"] = "Distância Y do Texto"
 L["Text"] = "Texto"
 L["Texture"] = true
 L["Textured Icon"] = "Ícone Texturizado"
@@ -1196,7 +1212,7 @@ L["The debuff needs to reach this amount of stacks before it is shown. Set to 0 
 L["The direction that the bag frames be (Horizontal or Vertical)."] = "Direcção em que os quadros das bolsas são (Horizontal ou Vertical)."
 L["The direction that the bag frames will grow from the anchor."] = "Direcção para qual as barras crescerão a partir do seu Fixador."
 L["The direction the auras will grow and then the direction they will grow after they reach the wrap after limit."] = true
-L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = "O formato de exibição dos ícones de moeda exibidos abaixo da bolsa principal. (Para isto ser exibido é necessário que selecione 'Mostrar na Mochila' na moeda desejada na aba Moeda dentro do Quadro do Personagem)."
+L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = "O formato de exibição dos ícones de moeda exibidos abaixo da bolsa principal. (Para isto ser exibido é necessário que selecione Mostrar na Mochila na moeda desejada na aba Moeda dentro do Quadro do Personagem)."
 L["The display format of the money text that is shown at the top of the main bag."] = true
 L["The display format of the money text that is shown in the gold datatext and its tooltip."] = true
 L["The first button anchors itself to this point on the bar."] = "O primeiro botão fixa-se a este ponto da barra"
@@ -1220,7 +1236,7 @@ L["The texture that will be used mainly for statusbars."] = "Textura que será u
 L["The Thin Border Theme option will change the overall apperance of your UI. Using Thin Border Theme is a slight performance increase over the traditional layout."] = true
 L["The unit prefixes you want to use when values are shortened in ElvUI. This is mostly used on UnitFrames."] = true
 L["These filters don't use a list of spells like the regular filters. Instead they use the WoW API and some code logic to determine if an aura should be allowed or blocked."] = true
-L["These filters use a list of spells to determine if an aura should be allowed or blocked. The content of these filters can be modified in the 'Filters' section of the config."] = true
+L["These filters use a list of spells to determine if an aura should be allowed or blocked. The content of these filters can be modified in the Filters section of the config."] = true
 L["Thin Border Theme"] = true
 L["Thin Borders"] = true
 L["This allows you to create a new datatext which will track the currency with the supplied currency ID. The datatext can be added to a panel immediately after creation."] = true
@@ -1230,7 +1246,7 @@ L["This is for Customized Icons in your Interface/Icons folder."] = true
 L["This opens the UnitFrames Color settings. These settings affect all unitframes."] = true
 L["This option allows the overlay to span the whole health, including the background."] = true
 L["This option controls the Blizzard setting for whether or not the Nameplates should be shown."] = true
-L["This option will force hide Blizzard's cooldown text if it's enabled at [Interface > ActionBars > Show Numbers on Cooldown]."] = true
+L["This option will force hide Blizzard's cooldown text if it is enabled at [Interface > ActionBars > Show Numbers on Cooldown]."] = true
 L["This section will allow you to copy settings to a select module from or to a different profile."] = true
 L["This section will help reset specfic settings back to default."] = true
 L["This selects the Chat Frame to use as the output of ElvUI messages."] = true
@@ -1250,8 +1266,11 @@ L["Threshold (in seconds) before text is shown in the MM:SS format. Set to -1 to
 L["Threshold before text goes into decimal form. Set to -1 to disable decimals."] = true
 L["Threshold before text turns red and is in decimal form. Set to -1 for it to never turn red"] = "Limiar antes do texto se tornar vermelho e em forma décimal. Definir -1 para nunca se tornar vermelho"
 L["Threshold before the icon will fade out and back in. Set to -1 to disable."] = true
+L["Threshold Colors"] = true
 L["Ticks"] = "Ticks"
 L["Tiers"] = true
+L["Time Indicator Colors"] = true
+L["Time Options"] = true
 L["Time Remaining Reverse"] = "Tempo Remanescente Reverso"
 L["Time Remaining"] = "Tempo Remanescente"
 L["Time To Hold"] = true
@@ -1285,6 +1304,7 @@ L["Transparent"] = "Transparente"
 L["Triggers"] = true
 L["Trivial"] = true
 L["Turtle Color"] = "Cor para Tartaruga"
+L["Tutorials"] = true
 L["Under Health Threshold"] = true
 L["Under Power Threshold"] = true
 L["Unfriendly"] = true
@@ -1312,6 +1332,7 @@ L["Unlock various elements of the UI to be repositioned."] = "Destravar vários 
 L["Up"] = "Acima"
 L["URL Links"] = "Links URL"
 L["Usable"] = true
+L["Use a more visible flash animation for Auto Attacks."] = true
 L["Use Alt Key"] = true
 L["Use Atlas Textures if there is one available."] = true
 L["Use Atlas Textures"] = true
@@ -1327,6 +1348,7 @@ L["Use Dead Backdrop"] = true
 L["Use Default"] = "usar Padrão"
 L["Use drag and drop to rearrange filter priority or right click to remove a filter."] = true
 L["Use Health Texture on Background"] = true
+L["Use Indicator Color"] = true
 L["Use Instance ID or Name"] = true
 L["Use Map ID or Name"] = true
 L["Use Subzone Names"] = true
@@ -1338,7 +1360,7 @@ L["Use Shift+LeftClick to toggle between friendly or enemy or normal state. Norm
 L["Use Static Position"] = true
 L["Use Tanked Color when a nameplate is being effectively tanked by another tank."] = true
 L["Use the custom backdrop color instead of a multiple of the main color."] = "Usar a cor de fundo da vida personalizada em vez de um multiplo da cor de vida principal."
-L["Use the profile specific filter 'Buff Indicator (Profile)' instead of the global filter 'Buff Indicator'."] = true
+L["Use the profile specific filter Buff Indicator (Profile) instead of the global filter Buff Indicator."] = true
 L["Use thin borders on certain unitframe elements."] = true
 L["Use this backdrop color for units that are dead or ghosts."] = true
 L["Use Threat Color"] = true
@@ -1379,14 +1401,12 @@ L["Word Wrap"] = true
 L["World Map Coordinates"] = true
 L["WoW Token:"] = true
 L["Wrap After"] = "Enrolar depois"
-L["X-Offset"] = true
-L["xOffset"] = "Distância X"
-L["Y-Offset"] = true
-L["yOffset"] = "Distância Y"
+L["X-Offset"] = "Distância X"
+L["Y-Offset"] = "Distância Y"
 L["You are going to copy settings for |cffD3CF00\"%s\"|r from your current |cff4beb2c\"%s\"|r profile to |cff4beb2c\"%s\"|r profile. Are you sure?"] = true
 L["You are going to copy settings for |cffD3CF00\"%s\"|r from |cff4beb2c\"%s\"|r profile to your current |cff4beb2c\"%s\"|r profile. Are you sure?"] = true
 L["You cannot copy settings from the same unit."] = "Você não pode copiar as configurações da mesma unidade."
-L["You do not need to use 'Is Casting Anything' or 'Is Channeling Anything' for these spells to trigger."] = true
+L["You do not need to use Is Casting Anything or Is Channeling Anything for these spells to trigger."] = true
 L["You may not remove a spell from a default filter that is not customly added. Setting spell to false instead."] = "Você não pode remover um feitiço de um filtro padrão que não seja um feitiço personalizado. Em vez disso definindo feitiço para falso."
 L["You must be targeting a player."] = "É necessário ter um jogador como alvo."
 L["You need to hold this modifier down in order to blacklist an aura by right-clicking the icon. Set to None to disable the blacklist functionality."] = true
@@ -1396,20 +1416,20 @@ L["Zone Ability"] = true
 L["Zone Name"] = true
 
 ----------------------------------
-L['blockCastByPlayers'] = "[Block] Cast By Players"
-L['blockDispellable'] = "[Block] Dispellable"
-L['blockNoDuration'] = "[Block] No Duration"
-L['blockNonPersonal'] = "[Block] Non Personal"
-L['blockNotDispellable'] = "[Block] Not Dispellable"
-L['Boss'] = true
-L['CastByNPC'] = "Cast By NPC"
-L['CastByPlayers'] = "Cast By Players"
-L['CastByUnit'] = "Cast By Unit"
-L['Dispellable'] = true
-L['nonPersonal'] = "Non Personal"
-L['notCastByUnit'] = "Not Cast By Unit"
-L['notDispellable'] = "Not Dispellable"
-L['Personal'] = true
+L["blockCastByPlayers"] = "[Block] Cast By Players"
+L["blockDispellable"] = "[Block] Dispellable"
+L["blockNoDuration"] = "[Block] No Duration"
+L["blockNonPersonal"] = "[Block] Non Personal"
+L["blockNotDispellable"] = "[Block] Not Dispellable"
+L["Boss"] = true
+L["CastByNPC"] = "Cast By NPC"
+L["CastByPlayers"] = "Cast By Players"
+L["CastByUnit"] = "Cast By Unit"
+L["Dispellable"] = true
+L["nonPersonal"] = "Non Personal"
+L["notCastByUnit"] = "Not Cast By Unit"
+L["notDispellable"] = "Not Dispellable"
+L["Personal"] = true
 ----------------------------------
 
 L["ACTIONBARS_DESC"] = "Modify the actionbar settings."
@@ -1454,30 +1474,6 @@ The following search keywords can also be used:
     • keystone : Mythic Keystone.
     • followers : Follower items.
     • champions : Champion equipment.]=]
-
-L["TEXT_FORMAT_DESC"] = [=[Fornece uma sting para mudar o formato do texto.
-
-Examples:
-[namecolor][name] [difficultycolor][smartlevel] [shortclassification]
-[healthcolor][health:current-max]
-[powercolor][power:current]
-
-Formatos de Vida / Poder:
-'current' - Quantidade Actual
-'percent' - Quantidade de Percentagem
-'current-max' - Quantidade actual seguida pela quantidade máxima, será exibida apenas a máxima se a actual for igual à máxima
-'current-percent' - Quantidade actual seguida pela quantidade em percentagem, será exibida apenas a máxima se a actual for igual à máxima
-'current-max-percent' - Quantidade actual, quantidade máxima seguida por quantidade em percentagem, será exibida apenas a máxima se a actual for igual à máxima
-'deficit' - Exibir o valor em falta, nao será exibido nada se não houver nada em falta
-
-Formato de Nomes:
-'name:veryshort' - Name restricted to 5 characters
-'name:short' - Nome restringido a 10 caracteres
-'name:medium' - Nome restringido a 15 caracteres
-'name:long' - Nome restringido a 20 caracteres
-'name:short:translit' - Name restricted to 10 characters with transliteration
-
-Para desactivar deixe o espaço em branco, se precisar de mais informações visite o site https://www.tukui.org/forum/viewtopic.php?t=6]=]
 
 L[ [=[This works like a macro, you can run different situations to get the actionbar to page differently.
 Example: '[combat] 2;']=] ] = [=[Isto funciona como uma macro, você pode executar várias situações para que a barra de ação pagine de forma diferente.
@@ -1669,3 +1665,4 @@ L["UNIT_NAMEPLATES_TYPE_2"] = "Placas de identificação empilhadas";
 L["VOID_STORAGE"] = "Cofre Etéreo";
 L["WORLD_MAP"] = "Mapa";
 L["XPBAR_LABEL"] = "Barra de EXP";
+L["YELL"] = "Gritar";

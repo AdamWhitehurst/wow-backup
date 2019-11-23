@@ -40,7 +40,6 @@ S.Blizzard.Regions = {
 	'Cover',
 	'Border',
 	'Background',
-	-- EditBox
 	'TopTex',
 	'TopLeftTex',
 	'TopRightTex',
@@ -241,8 +240,8 @@ function S:SkinTalentListButtons(frame)
 end
 
 function S:HandleButton(button, strip, isDeclineButton, useCreateBackdrop, noSetTemplate)
-	if button.isSkinned then return end
 	assert(button, "doesn't exist!")
+	if button.isSkinned then return end
 
 	local buttonName = button.GetName and button:GetName()
 
@@ -293,6 +292,7 @@ local function GrabScrollBarElement(frame, element)
 end
 
 function S:HandleScrollBar(frame, thumbTrimY, thumbTrimX)
+	assert(frame, "doesnt exist!")
 	if frame.backdrop then return end
 	local parent = frame:GetParent()
 
@@ -420,6 +420,7 @@ function S:HandleMaxMinFrame(frame)
 end
 
 function S:HandleEditBox(frame)
+	assert(frame, "doesnt exist!")
 	if frame.backdrop then return end
 
 	local EditBoxName = frame.GetName and frame:GetName()
@@ -443,54 +444,42 @@ function S:HandleEditBox(frame)
 	end
 end
 
-function S:HandleDropDownBox(frame, width, override)
-	if frame.backdrop then return end
+function S:HandleDropDownBox(frame, width, pos)
+	assert(frame, "doesnt exist!")
 
-	local FrameName = frame.GetName and frame:GetName()
+	local frameName = frame.GetName and frame:GetName()
+	local button = frame.Button or frameName and (_G[frameName.."Button"] or _G[frameName.."_Button"])
+	local text = frameName and _G[frameName.."Text"] or frame.Text
+	local icon = frame.Icon
 
-	local button = FrameName and _G[FrameName..'Button'] or frame.Button
-	local text = FrameName and _G[FrameName..'Text'] or frame.Text
+	if not width then
+		width = 155
+	end
 
 	frame:StripTextures()
-	frame:CreateBackdrop()
-	frame.backdrop:SetFrameLevel(frame:GetFrameLevel())
-	frame.backdrop:Point("TOPLEFT", 12, -6)
-	frame.backdrop:Point("BOTTOMRIGHT", -12, 6)
+	frame:SetWidth(width)
 
-	if width then
-		frame:Width(width)
+	frame:CreateBackdrop()
+	frame:SetFrameLevel(frame:GetFrameLevel() + 2)
+	frame.backdrop:SetPoint("TOPLEFT", 20, -2)
+	frame.backdrop:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", 2, -2)
+
+	button:ClearAllPoints()
+	if pos then
+		button:SetPoint("TOPRIGHT", frame.Right, -20, -21)
+	else
+		button:SetPoint("RIGHT", frame, "RIGHT", -10, 3)
 	end
+	button.SetPoint = E.noop
+	S:HandleNextPrevButton(button)
 
 	if text then
-		local justifyH = text:GetJustifyH()
-		local right = justifyH == 'RIGHT'
-		local left = justifyH == 'LEFT'
-
-		local a, _, c, d, e = text:GetPoint()
 		text:ClearAllPoints()
-
-		if right then
-			text:Point('RIGHT', button or frame.backdrop, 'LEFT', (right and -3) or 0, 0)
-		elseif left and override then -- for now only on the Communities.StreamDropdown in minimized mode >.>
-			text:Point('RIGHT', button or frame.backdrop, 'LEFT', (left and 1) or -1, 0)
-		elseif left then
-			text:Point('RIGHT', button or frame.backdrop, 'LEFT', (left and -20) or -1, 0)
-		else
-			text:Point(a, frame.backdrop, c, (left and 10) or d, e-3)
-		end
-
-		text:Width(frame:GetWidth() / 1.4)
+		text:SetPoint("RIGHT", button, "LEFT", -2, 0)
 	end
 
-	if button then
-		S:HandleNextPrevButton(button)
-		button:ClearAllPoints()
-		button:Point("TOPRIGHT", -14, -8)
-		button:Size(16, 16)
-	end
-
-	if frame.Icon then
-		frame.Icon:Point('LEFT', 23, 0)
+	if icon then
+		icon:SetPoint("LEFT", 23, 0)
 	end
 end
 
@@ -687,6 +676,7 @@ local handleCloseButtonOnEnter = function(btn) if btn.Texture then btn.Texture:S
 local handleCloseButtonOnLeave = function(btn) if btn.Texture then btn.Texture:SetVertexColor(1, 1, 1) end end
 
 function S:HandleCloseButton(f, point)
+	assert(f, "doenst exist!")
 	f:StripTextures()
 
 	if not f.Texture then
@@ -1118,14 +1108,41 @@ function S:WorldMapMixin_AddOverlayFrame(frame, templateName)
 	S[templateName](frame.overlayFrames[#frame.overlayFrames])
 end
 
+-- UIWidgets
 function S:SkinIconAndTextWidget(widgetFrame)
 end
 
+-- For now see the function below
 function S:SkinCaptureBarWidget(widgetFrame)
 end
 
+-- Credits ShestakUI
+hooksecurefunc(UIWidgetTemplateCaptureBarMixin, "Setup", function(widgetInfo)
+	widgetInfo.LeftLine:SetAlpha(0)
+	widgetInfo.RightLine:SetAlpha(0)
+	widgetInfo.BarBackground:SetAlpha(0)
+	widgetInfo.Glow1:SetAlpha(0)
+	widgetInfo.Glow2:SetAlpha(0)
+	widgetInfo.Glow3:SetAlpha(0)
+
+	widgetInfo.LeftBar:SetTexture(E.media.normTex)
+	widgetInfo.NeutralBar:SetTexture(E.media.normTex)
+	widgetInfo.RightBar:SetTexture(E.media.normTex)
+
+	widgetInfo.LeftBar:SetVertexColor(0.2, 0.6, 1)
+	widgetInfo.NeutralBar:SetVertexColor(0.8, 0.8, 0.8)
+	widgetInfo.RightBar:SetVertexColor(0.9, 0.2, 0.2)
+
+	if not widgetInfo.backdrop then
+		widgetInfo:CreateBackdrop()
+		widgetInfo.backdrop:SetPoint("TOPLEFT", widgetInfo.LeftBar, -2, 2)
+		widgetInfo.backdrop:SetPoint("BOTTOMRIGHT", widgetInfo.RightBar, 2, -2)
+	end
+end)
+
 function S:SkinStatusBarWidget(widgetFrame)
-	local bar = widgetFrame.Bar;
+	local bar = widgetFrame.Bar
+
 	if bar and not bar.IsSkinned then
 		-- Hide StatusBar textures
 		if bar.BorderLeft then bar.BorderLeft:Hide() end
@@ -1146,8 +1163,35 @@ function S:SkinStatusBarWidget(widgetFrame)
 	end
 end
 
+-- For now see the function below
 function S:SkinDoubleStatusBarWidget(widgetFrame)
 end
+
+-- Credits ShestakUI
+local frame = CreateFrame("Frame")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+frame:RegisterEvent("UPDATE_ALL_UI_WIDGETS")
+frame:SetScript("OnEvent", function()
+	for _, widgetFrame in pairs(_G.UIWidgetTopCenterContainerFrame.widgetFrames) do
+		if widgetFrame.widgetType == _G.Enum.UIWidgetVisualizationType.DoubleStatusBar then
+			for _, bar in pairs({widgetFrame.LeftBar, widgetFrame.RightBar}) do
+				if not bar.IsSkinned then
+					bar.BG:SetAlpha(0)
+					bar.BorderLeft:SetAlpha(0)
+					bar.BorderRight:SetAlpha(0)
+					bar.BorderCenter:SetAlpha(0)
+					bar.Spark:SetAlpha(0)
+					bar.SparkGlow:SetAlpha(0)
+					bar.BorderGlow:SetAlpha(0)
+
+					bar:CreateBackdrop("Transparent")
+
+					bar.IsSkinned = true
+				end
+			end
+		end
+	end
+end)
 
 function S:SkinIconTextAndBackgroundWidget(widgetFrame)
 end
@@ -1162,6 +1206,11 @@ function S:SkinIconTextAndCurrenciesWidget(widgetFrame)
 end
 
 function S:SkinTextWithStateWidget(widgetFrame)
+	local text = widgetFrame.Text
+
+	if text then
+		text:SetTextColor(1, 1, 1)
+	end
 end
 
 function S:SkinHorizontalCurrenciesWidget(widgetFrame)
@@ -1182,6 +1231,10 @@ function S:SkinSpellDisplay(widgetFrame)
 
 	if spell.Border then
 		spell.Border:Hide()
+	end
+
+	if spell.Text then
+		spell.Text:SetTextColor(1, 1, 1)
 	end
 
 	if spell.Icon then
@@ -1206,6 +1259,9 @@ end
 function S:SkinZoneControl(widgetFrame)
 end
 
+function S:SkinCaptureZone(widgetFrame)
+end
+
 local W = Enum.UIWidgetVisualizationType;
 S.WidgetSkinningFuncs = {
 	[W.IconAndText] = "SkinIconAndTextWidget",
@@ -1225,6 +1281,7 @@ S.WidgetSkinningFuncs = {
 	[W.DoubleStateIconRow] = "SkinDoubleStateIconRow",
 	[W.TextureAndTextRow] = "SkinTextureAndTextRowWidget",
 	[W.ZoneControl] = "SkinZoneControl",
+	[W.CaptureZone] = "SkinCaptureZone",
 }
 
 function S:SkinWidgetContainer(widgetContainer)

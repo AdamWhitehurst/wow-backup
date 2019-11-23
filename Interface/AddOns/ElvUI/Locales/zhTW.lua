@@ -72,6 +72,7 @@ L["Choose a theme layout you wish to use for your initial setup."] = "為你的�
 L["Class Totems"] = "職業圖騰"
 L["Classbar"] = "職業特有條"
 L["Classic"] = "經典"
+L["Clean Boss Button"] = true
 L["Combat"] = "戰鬥"
 L["Combat/Arena Time"] = "戰鬥時間"
 L["Config Mode:"] = "設定模式:"
@@ -155,6 +156,7 @@ L["Importance: |cffD3CF00Medium|r"] = "重要性: |cffD3CF00中|r"
 L["Importance: |cffFF0000Low|r"] = "重要性: |cffFF0000低|r"
 L["In Progress"] = "進行中"
 L["INCOMPATIBLE_ADDON"] = "插件 %s 與 ElvUI 的 %s 模組不相容。請停用不相容的插件, 或停用相關的模組."
+L["Info/Controls"] = true
 L["Installation Complete"] = "安裝完畢"
 L["Invalid Target"] = "無效的目標"
 L["is looking for members"] = "正在尋找團隊成員"
@@ -233,6 +235,7 @@ L["Player Powerbar"] = "玩家能量條"
 L["Please click the button below so you can setup variables and ReloadUI."] = "請按下方按鈕設定變數並重載介面."
 L["Please click the button below to setup your CVars."] = "請按下方按鈕設定參數."
 L["Please press the continue button to go onto the next step."] = "請按「繼續」按鈕, 執行下一個步驟."
+L["Plugins"] = true
 L["Preview Changes"] = "預覽修改"
 L["Preview"] = "預覽"
 L["Profile download complete from %s, but the profile %s already exists. Change the name or else it will overwrite the existing profile."] = "設定文件從 %s 下載完成, 但是設定文件 %s 已存在. 請更改名稱, 否則它會覆蓋你的現有設定檔."
@@ -305,7 +308,6 @@ L["Theme Setup"] = "主題安裝"
 L["This install process will help you learn some of the features in ElvUI has to offer and also prepare your user interface for usage."] = "此安裝程序有助你瞭解ElvUI 部份功能, 並可協助你預先設定UI."
 L["This part of the installation process sets up your chat windows names, positions and colors."] = "此安裝步驟將會設定對話視窗的名稱、位置和顏色."
 L["This part of the installation process sets up your World of Warcraft default options it is recommended you should do this step for everything to behave properly."] = "此安裝步驟將會設定魔獸世界的預設選項, 建議你執行此步驟, 以確保功能均可正常運作."
-L["This release of ElvUI contains changes to how we handle UI scale. See changelog for specifics. We need to set your UI scale again in order to use a new system. It appears your old UI scale was %s.\n\nYou can either apply this value, or use the 'Auto Scale' function to apply the UI scale that is considered the most optimal for your resolution.\n\nYou also have the option of choosing your own UI scale in the General section of the ElvUI Options. In theory ElvUI should be able to look pixel perfect with any UI scale now but there may be a few issues with the ingame config."] = "這個 ElvUI 版本中包含了我們處理介面縮放比例的方法改動. 你可以查看更新日誌來獲取更多訊息. 為了使用新的顯示系統, 我們需要你重新設置你的介面縮放比例. 看起來你之前設定的介面縮放比例是 %s.\n\n你可以直接設定為這個值, 或者你也可以使用 '自動縮放' 函式來找到最適合你螢幕解析度的設定.\n\n你還可以在 ElvUI設定 的 一般設定 之中來調節它. 理論上現在ElvUI可以在任何介面縮放比例之下保持完美的像素顯示, 不過還是有少數遊戲內選項導致的問題."
 L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."] = "此設定造成了錨點衝突, '%s' 框架會依附於自己, 請檢查你的錨點. 將 '%s' 依附於 '%s'."
 L["This will change the layout of your unitframes and actionbars."] = "這將會改變你的單位框架和動作條的佈局"
 L["To move abilities on the actionbars by default hold shift + drag. You can change the modifier key from the actionbar options menu."] = "你可以通過按住Shift拖動技能條中的按鍵. 你可以在Blizzard的快捷列設定中更改按鍵."
@@ -369,8 +371,6 @@ L["Poen Gillbrack"] = true
 L["Vim Brineheart"] = true
 
 ----------------------------------
-L["RED_ENABLE"] = "|cFFff3333啟用|r"
-L["GREEN_ENABLE"] = "|cFF33ff33啟用|r"
 L["DESC_MOVERCONFIG"] = [=[解除框架移動鎖定. 現在可以移動它們, 移好後請點擊「鎖定」.
 選項:
   左鍵 - 開啟微調窗口.

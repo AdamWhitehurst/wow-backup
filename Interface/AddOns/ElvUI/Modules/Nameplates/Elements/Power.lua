@@ -1,6 +1,5 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local NP = E:GetModule('NamePlates')
-local oUF = E.oUF
 
 -- Cache global variables
 -- Lua functions
@@ -126,7 +125,7 @@ function NP:Construct_Power(nameplate)
 
 	NP.StatusBars[Power] = true
 
-	Power.frequentUpdates = true --Azil, keep this for now. It seems it may prevent event bugs
+	Power.frequentUpdates = true
 	Power.colorTapping = false
 	Power.colorClass = false
 

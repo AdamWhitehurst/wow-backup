@@ -2,7 +2,6 @@ local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, Private
 
 --Lua functions
 local min, max, abs, floor = min, max, abs, floor
-local format, tonumber = format, tonumber
 --WoW API / Variables
 local UIParent = UIParent
 
@@ -67,10 +66,6 @@ end
 
 function E:PixelBestSize()
 	return max(0.4, min(1.15, 768 / E.screenheight))
-end
-
-function E:PixelClip(num)
-	return tonumber(format('%.5f', num))
 end
 
 function E:PixelScaleChanged(event, skip)

@@ -55,6 +55,7 @@ V.skins = {
 		enable = true,
 	},
 	checkBoxSkin = true,
+	cleanBossButton = false,
 	parchmentRemover = {
 		enable = false,
 	},
@@ -139,6 +140,7 @@ V.skins = {
 		IslandsPartyPose = true,
 		GMChat = true,
 		AzeriteEssence = true,
+		Tutorials = true,
 	},
 }
 

@@ -5,14 +5,15 @@ local Bags = E:GetModule('Bags')
 local Layout = E:GetModule('Layout')
 
 local _G = _G
-local gsub = string.gsub
-local strlower = string.lower
+local gsub = gsub
+local strlower = strlower
 local GameTooltip = _G.GameTooltip
 
 E.Options.args.chat = {
 	type = "group",
 	name = L["Chat"],
 	childGroups = "tab",
+	order = 2,
 	get = function(info) return E.db.chat[info[#info]] end,
 	set = function(info, value) E.db.chat[info[#info]] = value end,
 	args = {

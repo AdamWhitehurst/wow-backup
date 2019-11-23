@@ -1,8 +1,6 @@
 local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule("UnitFrames")
 
-local CreateFrame = CreateFrame
-
 function UF:Construct_Cutaway(frame)
 	local cutaway = {}
 	local frameName = frame:GetDebugName()
@@ -58,7 +56,7 @@ function UF:Configure_Cutaway(frame)
 		frame.Cutaway:UpdateConfigurationValues(db)
 		local health = frame.Cutaway.Health
 		if health and healthEnabled then
-			local point1, point2 = UF:GetPoints_Cutaway(frame.db.health)
+			local point1, point2 = UF:GetPoints_Cutaway(healthDB)
 			local barTexture = frame.Health:GetStatusBarTexture()
 
 			health:ClearAllPoints()
@@ -71,7 +69,7 @@ function UF:Configure_Cutaway(frame)
 		local power = frame.Cutaway.Power
 		local powerUsable = powerEnabled and frame.USE_POWERBAR
 		if power and powerUsable then
-			local point1, point2 = UF:GetPoints_Cutaway(frame.db.power)
+			local point1, point2 = UF:GetPoints_Cutaway(powerDB)
 			local barTexture = frame.Power:GetStatusBarTexture()
 
 			power:ClearAllPoints()

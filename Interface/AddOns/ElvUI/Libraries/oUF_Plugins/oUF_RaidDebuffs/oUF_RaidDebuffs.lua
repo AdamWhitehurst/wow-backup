@@ -296,30 +296,30 @@ local function Update(self, event, unit)
 	UpdateDebuff(self, _name, _icon, _count, _dtype, _duration, _endTime, _spellId, _stackThreshold)
 
 	--Reset the DispellPriority
-	DispellPriority = {
-		['Magic']	= 4,
-		['Curse']	= 3,
-		['Disease']	= 2,
-		['Poison']	= 1,
-	}
+	DispellPriority['Magic'] = 4
+	DispellPriority['Curse'] = 3
+	DispellPriority['Disease'] = 2
+	DispellPriority['Poison'] = 1
 end
 
-
 local function Enable(self)
-	if self.RaidDebuffs then
-		self:RegisterEvent('UNIT_AURA', Update)
-		return true
-	end
-	--Need to run these always
 	self:RegisterEvent("PLAYER_TALENT_UPDATE", CheckSpec, true)
 	self:RegisterEvent("CHARACTER_POINTS_CHANGED", CheckSpec, true)
+
+	if self.RaidDebuffs then
+		self:RegisterEvent('UNIT_AURA', Update)
+
+		return true
+	end
 end
 
 local function Disable(self)
 	if self.RaidDebuffs then
 		self:UnregisterEvent('UNIT_AURA', Update)
+
 		self.RaidDebuffs:Hide()
 	end
+
 	self:UnregisterEvent("PLAYER_TALENT_UPDATE", CheckSpec)
 	self:UnregisterEvent("CHARACTER_POINTS_CHANGED", CheckSpec)
 end

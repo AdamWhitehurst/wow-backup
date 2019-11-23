@@ -135,7 +135,7 @@ local function FixSidebarTabCoords()
 			if IsAddOnLoaded("DejaCharacterStats") then
 				tab.Hider:SetTexture()
 			else
-				tab.Hider:SetColorTexture(0.0, 0.0, 0.0, 0.8)
+				tab.Hider:SetColorTexture(0, 0, 0, 0.8)
 			end
 			tab.Hider:SetAllPoints(tab.backdrop)
 			tab.TabBg:Kill()
@@ -459,9 +459,6 @@ local function LoadSkin()
 	--Buttons used to toggle between equipment manager, titles, and character stats
 	hooksecurefunc("PaperDollFrame_UpdateSidebarTabs", FixSidebarTabCoords)
 
-	--Reputation
-	S:HandleCloseButton(CharacterFrame.ReputationTabHelpBox.CloseButton)
-
 	hooksecurefunc("ExpandFactionHeader", UpdateFactionSkins)
 	hooksecurefunc("CollapseFactionHeader", UpdateFactionSkins)
 	hooksecurefunc("ReputationFrame_Update", UpdateFactionSkins)
@@ -491,8 +488,8 @@ local function LoadSkin()
 	hooksecurefunc("TokenFrame_Update", UpdateCurrencySkins)
 	hooksecurefunc(_G.TokenFrameContainer, "update", UpdateCurrencySkins)
 
-	-- Tutorials
-	S:HandleCloseButton(_G.PaperDollItemsFrame.HelpTipBox.CloseButton)
+	-- Tutorials have a look for the new name on PTR 8.2.5
+	-- S:HandleCloseButton(_G.PaperDollItemsFrame.HelpTipBox.CloseButton)
 end
 
 S:AddCallback("Character", LoadSkin)

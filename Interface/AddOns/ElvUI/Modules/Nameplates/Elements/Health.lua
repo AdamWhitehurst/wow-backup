@@ -1,6 +1,5 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local NP = E:GetModule('NamePlates')
-local oUF = E.oUF
 
 -- Cache global variables
 -- Lua functions
@@ -96,7 +95,6 @@ function NP:Construct_Health(nameplate)
 
 	Health.colorTapping = true
 	Health.colorSelection = true
-	Health.frequentUpdates = true --Azil, keep this for now. It seems it may prevent event bugs
 	Health.UpdateColor = NP.Health_UpdateColor
 
 	return Health
@@ -136,7 +134,6 @@ function NP:Update_Health(nameplate)
 	end
 
 	nameplate:Tag(nameplate.Health.Text, db.health.text.format)
-
 	nameplate.Health.Text.frequentUpdates = .1
 
 	nameplate.Health.width = db.health.width
