@@ -28,15 +28,15 @@ function ConsolePort:CreateSlashHandler()
 	local function ShowSplash(controller)
 		controller = controller and strupper(controller)
 		if db.Controllers[controller] then
-			db.Settings.type = controller
+			db('type', controller)
 
 			for k, v in pairs(db.Controllers[controller].Settings) do
-				db.Settings[k] = v
+				db(k, v)
 			end
 
 			-- Store this flag to run settings check after reload
-			db.Settings.newController = true
-			db.Settings.forceController = controller
+			db('newController', true)
+			db('forceController', controller)
 
 			PlaySound(SOUNDKIT.GS_CHARACTER_SELECTION_ENTER_WORLD)
 			ReloadUI()
@@ -60,8 +60,8 @@ function ConsolePort:CreateSlashHandler()
 
 
 	local function ShowCalibration() 
-		if ConsolePortConfig:IsVisible() then
-			ConsolePortConfig:Hide()
+		if ConsolePortOldConfig:IsVisible() then
+			ConsolePortOldConfig:Hide()
 		end
 		ConsolePort:CalibrateController(true)
 	end
@@ -219,9 +219,9 @@ function ConsolePort:CreateSlashHandler()
 	end
 
 
-	local function ShowHelp() ConsolePortConfig:OpenCategory(HELP_LABEL) end
-	local function ShowBinds() ConsolePortConfig:OpenCategory(2) end
-	local function ShowConfig() ConsolePortConfig:Show() end
+	local function ShowHelp() ConsolePortOldConfig:OpenCategory(HELP_LABEL) end
+	local function ShowBinds() ConsolePortOldConfig:OpenCategory(2) end
+	local function ShowConfig() ConsolePortOldConfig:Show() end
 
 
 	local instructions = {

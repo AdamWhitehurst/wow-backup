@@ -1,9 +1,21 @@
+if not WeakAuras.IsCorrectVersion() then return end
 
 local L = WeakAuras.L
 
 
 local send_chat_message_types = WeakAuras.send_chat_message_types;
 local sound_types = WeakAuras.sound_types;
+
+local RestrictedChannelCheck
+if WeakAuras.IsClassic() then
+  RestrictedChannelCheck = function()
+    return false
+  end
+else
+  RestrictedChannelCheck = function(data)
+    return data.message_type == "SAY" or data.message_type == "YELL" or data.message_type == "SMARTRAID"
+  end
+end
 
 function WeakAuras.AddActionOption(id, data)
   local action = {
@@ -45,9 +57,9 @@ function WeakAuras.AddActionOption(id, data)
         data.actions[field][value] = v;
       end
       if(value == "sound" or value == "sound_path") then
-        PlaySoundFile(v, "Master");
+        pcall(PlaySoundFile, v, "Master");
       elseif(value == "sound_kit_id") then
-        PlaySound(v, "Master");
+        pcall(PlaySound, v, "Master");
       end
       WeakAuras.Add(data);
     end,
@@ -83,6 +95,13 @@ function WeakAuras.AddActionOption(id, data)
         values = send_chat_message_types,
         disabled = function() return not data.actions.start.do_message end,
         control = "WeakAurasSortedDropdown"
+      },
+      start_message_warning = {
+        type = "description",
+        width = WeakAuras.doubleWidth,
+        name = L["Note: Automated Messages to SAY and YELL are blocked outside of Instances."],
+        order = 2.5,
+        hidden = function() return not RestrictedChannelCheck(data.actions.start) end
       },
       start_message_space = {
         type = "execute",
@@ -130,9 +149,7 @@ function WeakAuras.AddActionOption(id, data)
         order = 5,
         disabled = function() return not data.actions.start.do_message end,
         desc = function()
-          local ret = L["Dynamic text tooltip"];
-          ret = ret .. WeakAuras.GetAdditionalProperties(data);
-          return ret
+          return L["Dynamic text tooltip"] .. WeakAuras.GetAdditionalProperties(data)
         end,
       },
       -- texteditor added later
@@ -291,6 +308,13 @@ function WeakAuras.AddActionOption(id, data)
         disabled = function() return not data.actions.finish.do_message end,
         control = "WeakAurasSortedDropdown"
       },
+      finish_message_warning = {
+        type = "description",
+        width = WeakAuras.doubleWidth,
+        name = L["Note: Automated Messages to SAY and YELL are blocked outside of Instances."],
+        order = 22.5,
+        hidden = function() return not RestrictedChannelCheck(data.actions.finish) end
+      },
       finish_message_space = {
         type = "execute",
         width = WeakAuras.normalWidth,
@@ -337,9 +361,7 @@ function WeakAuras.AddActionOption(id, data)
         order = 25,
         disabled = function() return not data.actions.finish.do_message end,
         desc = function()
-          local ret = L["Dynamic text tooltip"];
-          ret = ret .. WeakAuras.GetAdditionalProperties(data);
-          return ret
+          return L["Dynamic text tooltip"] .. WeakAuras.GetAdditionalProperties(data)
         end,
       },
       -- texteditor added below

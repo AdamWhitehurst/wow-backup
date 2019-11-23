@@ -1,0 +1,25 @@
+OPie_Classic: disabled
+WeakAurasCompanion: enabled
+Gladius: disabled
+AAP-Core: disabled
+AAP-BfA: disabled
+Azeroth Auto Pilot: disabled
+AAP-Legion: disabled
+AAP-Cata-MoP: disabled
+AAP-Vanilla: disabled
+AAP-TBC-WotLK: disabled
+AAP-WoD: disabled
+BagBrother: disabled
+LibStub: enabled
+WoWUnit: enabled
+Bagnon: disabled
+Bagnon_Config: disabled
+Bagnon_GuildBank: disabled
+Bagnon_VoidStorage: disabled
+CandyBuckets: disabled
+Immersion: enabled
+ConsolePort: disabled
+Storyline: disabled
+ConsolePortUI: disabled
+ConsolePortUI_NPC: disabled
+ElvUI_ExtraActionBars: disabled

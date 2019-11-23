@@ -1,7 +1,8 @@
 -------------------------------------
 --   P R E S E T S   M O D U L E   --
 -------------------------------------
-AllTheThings.Presets = {
+select(2, ...).Presets = {
+	["ALL"] = setmetatable({}, { __index = function() return true; end}),
 	["DEATHKNIGHT"] = {
 		true, -- [1]
 		true, -- [2]

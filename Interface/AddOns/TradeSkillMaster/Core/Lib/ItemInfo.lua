@@ -12,6 +12,8 @@
 local _, TSM = ...
 local ItemInfo = TSM:NewPackage("ItemInfo")
 local L = TSM.L
+local ItemClass = TSM.Include("Data.ItemClass")
+local VendorSell = TSM.Include("Data.VendorSell")
 local private = {
 	db = nil,
 	pendingItems = {},
@@ -24,7 +26,7 @@ local ITEM_INFO_INTERVAL = 0.05
 local MAX_REQUESTED_ITEM_INFO = 50
 local MAX_REQUESTS_PER_ITEM = 5
 local UNKNOWN_ITEM_NAME = L["Unknown Item"]
-local DB_VERSION = 4
+local DB_VERSION = 5
 local RECORD_DATA_LENGTH = 17
 local FIELD_LENGTH_BITS = {
 	itemLevel = 16,
@@ -60,7 +62,7 @@ end
 -- ============================================================================
 
 function ItemInfo.OnInitialize()
-	TSMAPI_FOUR.Event.Register("GET_ITEM_INFO_RECEIVED", function(_, itemId, success)
+	TSM.Event.Register("GET_ITEM_INFO_RECEIVED", function(_, itemId, success)
 		if not success or itemId <= 0 or itemId > TSM.CONST.ITEM_MAX_ID or private.numRequests[itemId] == math.huge then
 			return
 		end
@@ -70,7 +72,7 @@ function ItemInfo.OnInitialize()
 
 	-- load the item info database
 	local build, revision = GetBuildInfo()
-	if not TSMItemInfoDB or TSMItemInfoDB.version ~= DB_VERSION or TSMItemInfoDB.locale ~= GetLocale() or TSMItemInfoDB.build ~= build or TSMItemInfoDB.revision ~= revision then
+	if not TSMItemInfoDB or #TSMItemInfoDB.data % RECORD_DATA_LENGTH ~= 0 or TSMItemInfoDB.version ~= DB_VERSION or TSMItemInfoDB.locale ~= GetLocale() or TSMItemInfoDB.build ~= build or TSMItemInfoDB.revision ~= revision then
 		private.isRebuilding = true
 		TSMItemInfoDB = {
 			names = nil,
@@ -81,12 +83,12 @@ function ItemInfo.OnInitialize()
 	end
 
 	-- load hard-coded vendor costs
-	for itemString, cost in pairs(TSM.CONST.VENDOR_SELL_PRICES) do
+	for itemString, cost in VendorSell.Iterator() do
 		TSM.db.global.internalData.vendorItems[itemString] = TSM.db.global.internalData.vendorItems[itemString] or cost
 	end
 
-	local names = TSMItemInfoDB.names and TSMAPI_FOUR.Util.SafeStrSplit(TSMItemInfoDB.names, SEP_CHAR) or {}
-	local itemStrings = TSMItemInfoDB.itemStrings and TSMAPI_FOUR.Util.SafeStrSplit(TSMItemInfoDB.itemStrings, SEP_CHAR) or {}
+	local names = TSMItemInfoDB.names and TSM.String.SafeSplit(TSMItemInfoDB.names, SEP_CHAR) or {}
+	local itemStrings = TSMItemInfoDB.itemStrings and TSM.String.SafeSplit(TSMItemInfoDB.itemStrings, SEP_CHAR) or {}
 	assert(#itemStrings == #names)
 	local numItemsLoaded = #names
 	TSM:LOG_INFO("Imported %d items worth of data", numItemsLoaded)
@@ -138,8 +140,8 @@ function ItemInfo.OnInitialize()
 	-- process pending item info every 0.05 seconds
 	TSMAPI_FOUR.Delay.AfterTime("processItemInfo", 0, private.ProcessItemInfo, ITEM_INFO_INTERVAL)
 	-- scan the merchant when the goods are shown
-	TSMAPI_FOUR.Event.Register("MERCHANT_SHOW", private.ScanMerchant)
-	TSMAPI_FOUR.Event.Register("MERCHANT_UPDATE", private.UpdateMerchant)
+	TSM.Event.Register("MERCHANT_SHOW", private.ScanMerchant)
+	TSM.Event.Register("MERCHANT_UPDATE", private.UpdateMerchant)
 end
 
 function ItemInfo.OnEnable()
@@ -179,11 +181,21 @@ function ItemInfo.OnDisable()
 		names[i] = name
 		itemStrings[i] = itemString
 		dataParts[i] = strchar(itemLevel % 256, itemLevel / 256, minLevel, maxStack % 256, maxStack / 256, vendorSell % 256, (vendorSell % 65536) / 256, (vendorSell % 16777216) / 65536, vendorSell / 16777216, bitfield, invSlotId, texture % 256, (texture % 65536) / 256, (texture % 16777216) / 65536, texture / 16777216, classId, subClassId)
+
+		if #dataParts[i] ~= RECORD_DATA_LENGTH then
+			names[i] = nil
+			itemStrings[i] = nil
+			dataParts[i] = nil
+		end
 	end
 	TSMItemInfoDB.names = #names > 0 and table.concat(names, SEP_CHAR) or nil
 	TSMItemInfoDB.itemStrings = #itemStrings > 0 and table.concat(itemStrings, SEP_CHAR) or nil
 	TSMItemInfoDB.data = table.concat(dataParts)
-	assert(#TSMItemInfoDB.data % RECORD_DATA_LENGTH == 0)
+
+	if #TSMItemInfoDB.data % RECORD_DATA_LENGTH ~= 0 then
+		TSMItemInfoDB = nil
+		return
+	end
 
 	local build, revision = GetBuildInfo()
 	TSMItemInfoDB.version = DB_VERSION
@@ -398,7 +410,7 @@ function TSMAPI_FOUR.Item.GetMinLevel(item)
 	if not minLevel and private.IsItem(itemString) then
 		local baseItemString = TSMAPI_FOUR.Item.ToBaseItemString(itemString)
 		local classId = TSMAPI_FOUR.Item.GetClassId(itemString)
-		local subClassId = TSMAPI_FOUR.Item.GetClassId(itemString)
+		local subClassId = TSMAPI_FOUR.Item.GetSubClassId(itemString)
 		if itemString ~= baseItemString and classId and subClassId and classId ~= LE_ITEM_CLASS_WEAPON and classId ~= LE_ITEM_CLASS_ARMOR and (classId ~= LE_ITEM_CLASS_GEM or subClassId ~= LE_ITEM_GEM_ARTIFACTRELIC) then
 			-- the bonusId does not affect the minLevel of this item
 			minLevel = TSMAPI_FOUR.Item.GetMinLevel(baseItemString)
@@ -420,7 +432,7 @@ function TSMAPI_FOUR.Item.GetMaxStack(item)
 	if not maxStack and private.IsItem(itemString) then
 		-- we might be able to deduce the maxStack based on the classId and subClassId
 		local classId = TSMAPI_FOUR.Item.GetClassId(item)
-		local subClassId = TSMAPI_FOUR.Item.GetClassId(item)
+		local subClassId = TSMAPI_FOUR.Item.GetSubClassId(item)
 		if classId and subClassId then
 			if classId == 1 then
 				maxStack = 1
@@ -479,7 +491,8 @@ end
 function TSMAPI_FOUR.Item.GetVendorSell(item)
 	local itemString = TSMAPI_FOUR.Item.ToItemString(item)
 	if not itemString then return end
-	return private.GetFieldValueHelper(itemString, "vendorSell", false, false, 0)
+	local vendorSell = private.GetFieldValueHelper(itemString, "vendorSell", false, false, 0)
+	return (vendorSell or 0) > 0 and vendorSell or nil
 end
 
 --- Get the class id.
@@ -535,15 +548,6 @@ function TSMAPI_FOUR.Item.IsCraftingReagent(item)
 		isCraftingReagent = isCraftingReagent == 1
 	end
 	return isCraftingReagent
-end
-
---- Get whether or not the item is a soulbound material.
--- @tparam string item The item
--- @treturn boolean Whether or not the item is a soulbound material
-function TSMAPI_FOUR.Item.IsSoulboundMat(item)
-	local itemString = TSMAPI_FOUR.Item.ToItemString(item)
-	if not itemString then return end
-	return TSM.CONST.SOULBOUND_CRAFTING_MATS[itemString]
 end
 
 --- Get the vendor buy price.
@@ -632,7 +636,7 @@ function private.GetFieldValueHelper(itemString, field, baseIsSame, storeBaseVal
 			private.SetSingleField(itemString, field, value)
 		end
 	end
-	if value ~= nil and baseIsSame then
+	if value == nil and baseIsSame then
 		-- the value is the same for the base item
 		local baseItemString = TSMAPI_FOUR.Item.ToBaseItemString(itemString)
 		if baseItemString ~= itemString then
@@ -677,7 +681,7 @@ function private.ProcessItemInfo()
 		maxRequests = MAX_REQUESTED_ITEM_INFO
 	end
 
-	local toRemove = TSMAPI_FOUR.Util.AcquireTempTable()
+	local toRemove = TSM.TempTable.Acquire()
 	local numRequested = 0
 	for itemString in pairs(private.pendingItems) do
 		local name = private.GetField(itemString, "name")
@@ -686,9 +690,11 @@ function private.ProcessItemInfo()
 		if (private.numRequests[itemString] or 0) > MAX_REQUESTS_PER_ITEM then
 			-- give up on this item
 			if private.numRequests[itemString] ~= math.huge then
-				TSM:LOG_ERR("Giving up on item info for %s", itemString)
 				private.numRequests[itemString] = math.huge
 				local itemId = TSMAPI_FOUR.Item.ToItemID(itemString)
+				if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+					TSM:LOG_ERR("Giving up on item info for %s", itemString)
+				end
 				if itemId then
 					private.numRequests[itemId] = math.huge
 				end
@@ -712,7 +718,7 @@ function private.ProcessItemInfo()
 	for _, itemString in ipairs(toRemove) do
 		private.pendingItems[itemString] = nil
 	end
-	TSMAPI_FOUR.Util.ReleaseTempTable(toRemove)
+	TSM.TempTable.Release(toRemove)
 
 	if not next(private.pendingItems) then
 		if private.isRebuilding then
@@ -732,7 +738,7 @@ function private.ScanMerchant()
 			local _, _, price, quantity, _, _, _, extendedCost = GetMerchantItemInfo(i)
 			-- bug with big keech vendor returning extendedCost = true for gold only items so need to check GetMerchantItemCostInfo
 			if price > 0 and (not extendedCost or GetMerchantItemCostInfo(i) == 0) then
-				TSM.db.global.internalData.vendorItems[itemString] = TSMAPI_FOUR.Util.Round(price / quantity)
+				TSM.db.global.internalData.vendorItems[itemString] = TSM.Math.Round(price / quantity)
 			else
 				TSM.db.global.internalData.vendorItems[itemString] = nil
 			end
@@ -819,22 +825,26 @@ function private.StoreGetItemInfoInstant(itemString)
 
 	if itemStringType == "i" then
 		local _, classStr, subClassStr, equipSlot, texture, classId, subClassId = GetItemInfoInstant(id)
+		equipSlot = equipSlot and equipSlot ~= "" and _G[equipSlot] or nil
 		if not texture then
 			return
 		end
 		-- some items (such as i:37445) give a classId of -1 for some reason in which case we can look up the classId
 		if classId < 0 then
-			classId = TSMAPI_FOUR.Item.GetClassIdFromClassString(classStr)
+			classId = ItemClass.GetClassIdFromClassString(classStr)
 			assert(subClassStr == "")
 			subClassId = 0
 		end
-		local invSlotId = TSMAPI_FOUR.Item.GetInventorySlotIdFromInventorySlotString(equipSlot) or 0
+		local invSlotId = equipSlot and ItemClass.GetInventorySlotIdFromInventorySlotString(equipSlot) or 0
 		private.SetItemInfoInstantFields(itemString, texture, classId, subClassId, invSlotId)
 		local baseItemString = TSMAPI_FOUR.Item.ToBaseItemString(itemString)
 		if baseItemString ~= itemString then
 			private.SetItemInfoInstantFields(baseItemString, texture, classId, subClassId, invSlotId)
 		end
 	elseif itemStringType == "p" then
+		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+			return
+		end
 		local name, texture, petTypeId = C_PetJournal.GetPetInfoBySpeciesID(id)
 		if not texture then
 			return
@@ -964,7 +974,7 @@ function private.ProcessAvailableItems()
 	private.db:BulkInsertEnd()
 
 	-- remove the items we process after processing them all because GET_ITEM_INFO_RECEIVED events may fire as we do this
-	local processedItems = TSMAPI_FOUR.Util.AcquireTempTable()
+	local processedItems = TSM.TempTable.Acquire()
 	for itemId in pairs(private.availableItems) do
 		processedItems[itemId] = true
 		local itemString = "i:"..itemId
@@ -975,7 +985,7 @@ function private.ProcessAvailableItems()
 	for itemId in pairs(processedItems) do
 		private.availableItems[itemId] = nil
 	end
-	TSMAPI_FOUR.Util.ReleaseTempTable(processedItems)
+	TSM.TempTable.Release(processedItems)
 
 	private.db:SetQueryUpdatesPaused(false)
 end

@@ -12,7 +12,7 @@
 -- @classmod ScrollingTable
 
 local _, TSM = ...
-local ScrollingTable = TSMAPI_FOUR.Class.DefineClass("ScrollingTable", TSM.UI.Element, "ABSTRACT")
+local ScrollingTable = TSM.Include("LibTSMClass").DefineClass("ScrollingTable", TSM.UI.Element, "ABSTRACT")
 TSM.UI.ScrollingTable = ScrollingTable
 local private = {
 	rowPool = TSMAPI_FOUR.ObjectPool.New("TABLE_ROWS", TSM.UI.Util.TableRow, 1),
@@ -181,7 +181,7 @@ function ScrollingTable.SetSelection(self, selection)
 	end
 	local index = nil
 	if selection then
-		index = TSMAPI_FOUR.Util.TableKeyByValue(self._data, selection)
+		index = TSM.Table.KeyByValue(self._data, selection)
 		assert(index)
 	end
 	self._selection = selection
@@ -264,7 +264,7 @@ function ScrollingTable.Draw(self)
 		self._header:SetHeight(HEADER_HEIGHT)
 	end
 
-	if TSMAPI_FOUR.Util.Round(scrollOffset + visibleHeight) == totalHeight then
+	if TSM.Math.Round(scrollOffset + visibleHeight) == totalHeight then
 		-- we are at the bottom
 		self._scrollFrame:SetVerticalScroll(numVisibleRows * rowHeight - visibleHeight)
 	else
@@ -273,13 +273,8 @@ function ScrollingTable.Draw(self)
 
 	while #self._rows < numVisibleRows do
 		local row = self:_GetTableRow(false)
-		if #self._rows == 0 then
-			row._frame:SetPoint("TOPLEFT", self._content)
-			row._frame:SetPoint("TOPRIGHT", self._content)
-		else
-			row._frame:SetPoint("TOPLEFT", self._rows[#self._rows]._frame, "BOTTOMLEFT")
-			row._frame:SetPoint("TOPRIGHT", self._rows[#self._rows]._frame, "BOTTOMRIGHT")
-		end
+		row._frame:SetPoint("TOPLEFT", 0, -rowHeight * #self._rows)
+		row._frame:SetPoint("TOPRIGHT", 0, -rowHeight * #self._rows)
 		tinsert(self._rows, row)
 	end
 

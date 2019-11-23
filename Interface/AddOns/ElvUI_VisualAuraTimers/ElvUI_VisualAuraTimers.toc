@@ -1,0 +1,12 @@
+## Interface: 80205
+## Author: Blazeflack
+## Credit: Hydra, Cutepally
+## Version: 1.63
+## Title: |cff1784d1ElvUI|r VisualAuraTimers
+## Notes: Allows you to change text color and add statusbars to the 'Buffs and Debuffs' auras near the minimap.
+## RequiredDeps: ElvUI
+## X-Tukui-ProjectFolders: ElvUI_VisualAuraTimers
+
+locales.lua
+config.lua
+core.lua

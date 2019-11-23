@@ -707,13 +707,19 @@ ElvCharacterDB = {
 		}, -- [32]
 	},
 	["ChatEditHistory"] = {
-		"/laugh", -- [1]
-		"/way 57.1, 90.0", -- [2]
-		"/kb", -- [3]
-		"/wave", -- [4]
-		"/reloadui", -- [5]
-		"/adibags", -- [6]
-		"/reload", -- [7]
+		"/wave", -- [1]
+		"/tar Ku", -- [2]
+		"/adibags", -- [3]
+		"/way 43 55", -- [4]
+		"/kb", -- [5]
+		"/tar \"Mistweaver Ku\"", -- [6]
+		"/way 57.1, 90.0", -- [7]
+		"/tar Mistweaver Ku", -- [8]
+		"/msbt", -- [9]
+		"/laugh", -- [10]
+		"/ec", -- [11]
+		"/reload", -- [12]
+		"/reloadui", -- [13]
 	},
 	["CliqueDatatext"] = {
 	},

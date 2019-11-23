@@ -1,4 +1,4 @@
-﻿## Interface: 80100
+﻿## Interface: 80200
 ## Title: Improved Options Frames
 ## Version: 1.5.6
 ## Author: Cybeloras of Detheroc/Mal'Ganis

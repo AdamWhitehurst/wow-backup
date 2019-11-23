@@ -1,6 +1,5 @@
 local addon = select(2,...)
 local TCL = addon.TomCatsLibs
-
 local function ADDON_LOADED(_, event, ...)
     local var1 = select(1, ...)
     if (var1 == addon.name) then
@@ -17,7 +16,6 @@ local function ADDON_LOADED(_, event, ...)
         TCL.Events.UnregisterEvent("ADDON_LOADED", ADDON_LOADED)
     end
 end
-
 function TCL.SavedVariables.init()
     TCL.Events.RegisterEvent("ADDON_LOADED", ADDON_LOADED)
 end

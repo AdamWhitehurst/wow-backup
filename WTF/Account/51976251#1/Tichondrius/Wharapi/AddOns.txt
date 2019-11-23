@@ -11,8 +11,8 @@ AAP-Cata-MoP: enabled
 AAP-WoD: enabled
 AAP-Legion: enabled
 AAP-BfA: enabled
-Azeroth Auto Pilot: enabled
-Clique: enabled
+Azeroth Auto Pilot: disabled
+Clique: disabled
 Details: enabled
 Details_3DModelsPaths: enabled
 Details_EncounterDetails: enabled
@@ -49,14 +49,14 @@ PetTracker_Switcher: enabled
 PetTracker_Upgrades: enabled
 Rematch: enabled
 TomTom: enabled
-WeakAuras: enabled
+WeakAuras: disabled
 WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 WeakAurasTemplates: enabled
 Wholly: enabled
-AddOnSkins: enabled
-ElvUI_AuraBarsMovers: enabled
-ElvUI_CliqueDatatext: enabled
+AddOnSkins: disabled
+ElvUI_AuraBarsMovers: disabled
+ElvUI_CliqueDatatext: disabled
 ElvUI_Config: enabled
 ElvUI: enabled
 DBM-Core: enabled
@@ -74,3 +74,27 @@ DBM-WorldEvents: enabled
 TradeSkillMaster_AuctionDB: disabled
 HandyNotes: disabled
 WeakAurasCompanion: enabled
+AddonUsage: disabled
+CensusPlus: disabled
+ElvUI_ExtraActionBars: disabled
+Parrot: disabled
+HandyNotes_BrokenShore: enabled
+HandyNotes_LegionClassOrderHalls: enabled
+HandyNotes_LegionInstanceWorldQuests: enabled
+HandyNotes_Argus: enabled
+HandyNotes_DMF_basic: enabled
+HandyNotes_DMF_treasure: enabled
+HandyNotes_DungeonLocations: enabled
+HandyNotes_DraenorTreasures: enabled
+HandyNotes_LegionRaresTreasures: enabled
+HandyNotes_LegionTreasures: enabled
+HandyNotes_PandariaTreasures: enabled
+HandyNotes_Lorewalkers: enabled
+HandyNotes_SuramarLeylines: enabled
+HandyNotes_SuramarLocations: enabled
+HandyNotes_SuramarTelemancy: enabled
+HandyNotes_TimelessIsle_RareElites: enabled
+HandyNotes_TimelessIsleChests: enabled
+HandyNotes_TimelessTreasures: enabled
+Gladius: disabled
+OPie_Classic: disabled

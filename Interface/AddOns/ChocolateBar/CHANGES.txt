@@ -1,0 +1,14 @@
+lightweight tag 6b533c243d2676c61b30743e4854a10ee8cb732f v3.3.3
+Author:	zanony <zanony@jsommer.at>
+Date:	Mon Sep 2 21:40:47 2019 +0200
+
+commit 6b533c243d2676c61b30743e4854a10ee8cb732f
+Author: zanony <zanony@jsommer.at>
+Date:   Mon Sep 2 21:40:47 2019 +0200
+
+    fix launchers
+    
+    --add an option to change the color of labels
+    --fix no text for launchers
+    --reset default gap to 7
+

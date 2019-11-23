@@ -1,23 +1,18 @@
 local _, addon = ...
 local D = addon.TomCatsLibs.Data
 local tcl = addon.TomCatsLibs
-
 local tour
 local groupID
 local side = 1
 local currentPosition
 local arrow
-
 -- todo: Activate only during hallow's end
--- tcl.Events.RegisterEvent("PLAYER_LOGIN", addon)
-
+tcl.Events.RegisterEvent("PLAYER_LOGIN", addon)
 local function announceRoute()
     if (tour and #tour > 0) then
         print("|cffff0000[|cfff48cbaTomCat|cffff0000] yells: Next stop on the tour is |cffffffff" .. C_Map.GetMapInfo(tour[1]["Map ID"]).name .. "|cffff0000. All aboard!")
     end
 end
-
-
 local function findLocationGroupID(mapID)
     if (mapID == 0) then return end
     for _, locationGroup in pairs(D["Location Groups"].records) do
@@ -28,7 +23,6 @@ local function findLocationGroupID(mapID)
     local mapInfo = C_Map.GetMapInfo(mapID)
     return findLocationGroupID(mapInfo.parentMapID)
 end
-
 local function isLocationActive(location)
     if (IsQuestFlaggedCompleted(location["Quest ID"])) then return false end
     if (location["Faction"]) then
@@ -40,13 +34,11 @@ local function isLocationActive(location)
     end
     return true
 end
-
 local function calculateDistance(location)
     local distance = CreateVector2D(currentPosition:GetXY())
     distance:Subtract(location["Group Position"])
     return distance:GetLength()
 end
-
 local function updateTour()
     currentPosition = C_Map.GetPlayerMapPosition(groupID, "player")
     local updatedTour = {}
@@ -72,7 +64,6 @@ local function updateTour()
     tour = updatedTour
     announceRoute()
 end
-
 local function switchTour(newGroupID)
     if (IsInInstance()) then
         tour = nil
@@ -91,7 +82,6 @@ local function switchTour(newGroupID)
         updateTour()
     end
 end
-
 local function setupArrow(location)
     if (arrow and (not tour)) then
         arrow:ClearTarget()
@@ -104,7 +94,6 @@ local function setupArrow(location)
         arrow:SetTarget(tour[1]["Group Position"], groupID)
     end
 end
-
 local function zoneChanged()
     local mapID = C_Map.GetBestMapForUnit("player")
     if (mapID) then
@@ -114,7 +103,6 @@ local function zoneChanged()
     end
     setupArrow()
 end
-
 local function checkTreats()
     for bagId = 0, 4 do
         for slot = 1, GetContainerNumSlots(bagId) do
@@ -130,7 +118,6 @@ local function checkTreats()
     end
     return false
 end
-
 local function questComplete(event, ...)
     if (QuestInfoRewardsFrameQuestInfoItem1IconTexture and QuestInfoRewardsFrameQuestInfoItem1IconTexture:GetTexture() == 132940) then
         if (not checkTreats()) then
@@ -138,7 +125,6 @@ local function questComplete(event, ...)
         end
     end
 end
-
 local function questLogUpdate(event, ...)
     if (tour) then
         if (IsQuestFlaggedCompleted(tour[1]["Quest ID"])) then
@@ -152,11 +138,10 @@ local function questLogUpdate(event, ...)
         end
     end
 end
-
 local function bagUpdate()
     questComplete()
+    questLogUpdate()
 end
-
 function addon:PLAYER_LOGIN(event, ...)
     tcl.Events.UnregisterEvent("PLAYER_LOGIN", self)
     tcl.Events.RegisterEvent("ZONE_CHANGED", zoneChanged)
@@ -165,7 +150,6 @@ function addon:PLAYER_LOGIN(event, ...)
     tcl.Events.RegisterEvent("QUEST_COMPLETE", questComplete)
     tcl.Events.RegisterEvent("QUEST_LOG_UPDATE", questLogUpdate)
     tcl.Events.RegisterEvent("BAG_UPDATE", bagUpdate)
-
     if (UnitFactionGroup("player") == "Horde") then
         side = 2
     end
@@ -180,12 +164,11 @@ function addon:PLAYER_LOGIN(event, ...)
     switchTour(findLocationGroupID(C_Map.GetBestMapForUnit("player")))
     setupArrow()
 end
-
 if (TomCats and TomCats.Register) then
     TomCats:Register(
         {
             name = "Hallow's End",
-            version = "1.2.0"
+            version = "1.3.3"
         }
     )
 end

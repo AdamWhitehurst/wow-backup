@@ -1,0 +1,251 @@
+
+AzeriteUI_DB = {
+	["Core"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["enableHealerMode"] = false,
+					["loadDebugConsole"] = true,
+					["enableDebugConsole"] = false,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["enableHealerMode"] = false,
+					["loadDebugConsole"] = true,
+					["enableDebugConsole"] = false,
+				},
+			},
+			["global"] = {
+				["enableHealerMode"] = false,
+				["loadDebugConsole"] = true,
+				["enableDebugConsole"] = false,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["enableHealerMode"] = false,
+					["loadDebugConsole"] = true,
+					["enableDebugConsole"] = false,
+				},
+			},
+		},
+	},
+	["FloaterHUD"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["enableTalkingHead"] = true,
+					["enableAlerts"] = true,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["enableTalkingHead"] = true,
+					["enableAlerts"] = true,
+				},
+			},
+			["global"] = {
+				["enableTalkingHead"] = true,
+				["enableAlerts"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["enableTalkingHead"] = true,
+					["enableAlerts"] = true,
+				},
+			},
+		},
+	},
+	["Minimap"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["useServerTime"] = false,
+					["useStandardTime"] = true,
+					["stickyBars"] = false,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["useServerTime"] = false,
+					["useStandardTime"] = true,
+					["stickyBars"] = false,
+				},
+			},
+			["global"] = {
+				["useServerTime"] = false,
+				["useStandardTime"] = true,
+				["stickyBars"] = false,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["useServerTime"] = false,
+					["useStandardTime"] = true,
+					["stickyBars"] = false,
+				},
+			},
+		},
+	},
+	["ExplorerMode"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["useFadingInInstance"] = true,
+					["enableTrackerFading"] = false,
+					["enableExplorer"] = true,
+					["useFadingInvehicles"] = false,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["useFadingInInstance"] = true,
+					["enableTrackerFading"] = false,
+					["enableExplorer"] = true,
+					["useFadingInvehicles"] = false,
+				},
+			},
+			["global"] = {
+				["useFadingInvehicles"] = false,
+				["useFadingInInstance"] = true,
+				["enableTrackerFading"] = false,
+				["enableExplorer"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["useFadingInInstance"] = true,
+					["enableTrackerFading"] = false,
+					["enableExplorer"] = true,
+					["useFadingInvehicles"] = false,
+				},
+			},
+		},
+	},
+	["UnitFrameParty"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["enablePartyFrames"] = true,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["enablePartyFrames"] = true,
+				},
+			},
+			["global"] = {
+				["enablePartyFrames"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["enablePartyFrames"] = true,
+				},
+			},
+		},
+	},
+	["UnitFrameArena"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["enableArenaFrames"] = true,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["enableArenaFrames"] = true,
+				},
+			},
+			["global"] = {
+				["enableArenaFrames"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["enableArenaFrames"] = true,
+				},
+			},
+		},
+	},
+	["UnitFrameRaid"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["enableRaidFrames"] = true,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["enableRaidFrames"] = true,
+				},
+			},
+			["global"] = {
+				["enableRaidFrames"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["enableRaidFrames"] = true,
+				},
+			},
+		},
+	},
+	["ActionBarMain"] = {
+		["profiles"] = {
+			["faction"] = {
+				["Alliance"] = {
+					["dragRequireAlt"] = true,
+					["dragRequireCtrl"] = true,
+					["castOnDown"] = true,
+					["extraButtonsCount"] = 5,
+					["extraButtonsVisibility"] = "combat",
+					["stanceBarVisibility"] = "hover",
+					["dragRequireShift"] = true,
+					["petBarEnabled"] = true,
+					["stanceBarEnabled"] = true,
+					["petBarVisibility"] = "hover",
+					["buttonLock"] = true,
+				},
+			},
+			["character"] = {
+				["Andalsam-Tichondrius"] = {
+					["dragRequireAlt"] = true,
+					["dragRequireCtrl"] = true,
+					["castOnDown"] = true,
+					["extraButtonsCount"] = 5,
+					["extraButtonsVisibility"] = "combat",
+					["stanceBarVisibility"] = "hover",
+					["dragRequireShift"] = true,
+					["petBarEnabled"] = true,
+					["stanceBarEnabled"] = true,
+					["petBarVisibility"] = "hover",
+					["buttonLock"] = true,
+				},
+			},
+			["global"] = {
+				["dragRequireAlt"] = true,
+				["dragRequireCtrl"] = true,
+				["castOnDown"] = true,
+				["extraButtonsCount"] = 5,
+				["extraButtonsVisibility"] = "combat",
+				["stanceBarVisibility"] = "hover",
+				["dragRequireShift"] = true,
+				["petBarEnabled"] = true,
+				["stanceBarEnabled"] = true,
+				["petBarVisibility"] = "hover",
+				["buttonLock"] = true,
+			},
+			["realm"] = {
+				["Tichondrius"] = {
+					["dragRequireAlt"] = true,
+					["dragRequireCtrl"] = true,
+					["castOnDown"] = true,
+					["extraButtonsCount"] = 5,
+					["extraButtonsVisibility"] = "combat",
+					["stanceBarVisibility"] = "hover",
+					["dragRequireShift"] = true,
+					["petBarEnabled"] = true,
+					["stanceBarEnabled"] = true,
+					["petBarVisibility"] = "hover",
+					["buttonLock"] = true,
+				},
+			},
+		},
+	},
+}

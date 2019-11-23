@@ -1,0 +1,59 @@
+
+HHTD_SavedVariables = {
+	["char"] = {
+		["Andalsam - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Zandro - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Bramblebrow - Emerald Dream"] = {
+			["settingsMigrated"] = false,
+		},
+		["Wharapi - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Umbrick - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Andallsa - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Andalsa - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Stoakt - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Madylad - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Brungar - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+	},
+	["namespaces"] = {
+		["Announcer"] = {
+		},
+		["CM"] = {
+		},
+		["NPH"] = {
+		},
+	},
+	["global"] = {
+		["settingsMigrated"] = false,
+		["oldNameEnableState"] = 0,
+	},
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+	},
+}

@@ -1,0 +1,445 @@
+
+TRP3_Register = {
+	["blackList"] = {
+	},
+	["character"] = {
+		["Såmpson-WyrmrestAccord"] = {
+			["extended"] = 1017,
+			["profileID"] = "1007175204<b[Ao",
+			["class"] = "MONK",
+			["msp"] = false,
+			["guild"] = "Guardians of Fate",
+			["extendedVersion"] = "1.3.3",
+			["race"] = "Gnome",
+			["faction"] = "Alliance",
+			["client"] = "TRP3: Extended",
+			["clientVersion"] = "1.6.7",
+			["isTrial"] = 0,
+			["gender"] = 2,
+		},
+		["Retinazor-AeriePeak"] = {
+			["extended"] = 1017,
+			["profileID"] = "1027162927KHcme",
+			["class"] = "HUNTER",
+			["msp"] = false,
+			["gender"] = 2,
+			["extendedVersion"] = "1.3.3",
+			["race"] = "Worgen",
+			["faction"] = "Alliance",
+			["clientVersion"] = "1.6.7.1",
+			["client"] = "TRP3: Extended",
+			["isTrial"] = 0,
+			["guild"] = "Kindred Spirits",
+		},
+		["Telisande-MoonGuard"] = {
+			["extended"] = 0,
+			["profileID"] = "1104002553FECa1",
+			["class"] = "DRUID",
+			["msp"] = false,
+			["race"] = "NightElf",
+			["guild"] = "Cremoria",
+			["faction"] = "Alliance",
+			["client"] = "Total RP 3",
+			["clientVersion"] = "1.6.7.1",
+			["isTrial"] = 0,
+			["gender"] = 2,
+		},
+		["Tayuyä-MoonGuard"] = {
+			["extendedVersion"] = "1.3.3",
+			["extended"] = 1017,
+			["profileID"] = "0817134431PNQgg",
+			["isTrial"] = 0,
+			["clientVersion"] = "1.6.7.1",
+			["msp"] = false,
+			["client"] = "TRP3: Extended",
+		},
+		["Dalelifrah-Tichondrius"] = {
+			["extended"] = 0,
+			["profileID"] = "11131626513Q5Ef",
+			["msp"] = false,
+			["clientVersion"] = "1.6.7.1",
+			["isTrial"] = 0,
+			["client"] = "Total RP 3",
+		},
+	},
+	["companion"] = {
+	},
+	["whiteList"] = {
+	},
+	["profiles"] = {
+		["0817134431PNQgg"] = {
+			["misc"] = {
+				["ST"] = {
+					["1"] = 0,
+					["3"] = 0,
+					["2"] = 0,
+					["5"] = 0,
+					["4"] = 0,
+					["6"] = 0,
+				},
+				["PE"] = {
+				},
+				["v"] = 7,
+			},
+			["time"] = 1573272953,
+			["link"] = {
+				["Tayuyä-MoonGuard"] = 1,
+			},
+			["about"] = {
+				["v"] = 1,
+				["TE"] = 1,
+				["T1"] = {
+				},
+			},
+			["character"] = {
+				["v"] = 63,
+				["CO"] = "- 18+ ; Walk Up's Welcome.\n- Targeted = Looking At\n- Mental Health Nurse; If anyone needs to vent.",
+				["RP"] = 1,
+				["LC"] = "enUS",
+				["XP"] = 2,
+				["CU"] = "Observing the world",
+			},
+			["characteristics"] = {
+				["LN"] = "Starsong",
+				["MI"] = {
+					{
+						["IC"] = "inv_misc_kingsring1",
+						["NA"] = "House name",
+						["VA"] = "Starsong",
+					}, -- [1]
+				},
+				["FN"] = "Tayuyä",
+				["AG"] = "210",
+				["CL"] = "Priest",
+				["EH"] = "7f7f7f",
+				["HE"] = "6'7\"",
+				["CH"] = "00ffff",
+				["RA"] = "Night Elf",
+				["RE"] = "Stormwind City, Elwynn Forest",
+				["v"] = 6,
+				["EC"] = "Dark",
+				["BP"] = "Starfall Village, Winterspring",
+				["RS"] = 1,
+				["PS"] = {
+					{
+						["ID"] = 1,
+						["VA"] = 0,
+						["V2"] = 0,
+					}, -- [1]
+					{
+						["ID"] = 2,
+						["VA"] = 5,
+						["V2"] = 15,
+					}, -- [2]
+					{
+						["ID"] = 3,
+						["VA"] = 4,
+						["V2"] = 14,
+					}, -- [3]
+					{
+						["ID"] = 4,
+						["VA"] = 5,
+						["V2"] = 18,
+					}, -- [4]
+					{
+						["ID"] = 5,
+						["VA"] = 6,
+						["V2"] = 20,
+					}, -- [5]
+					{
+						["ID"] = 6,
+						["VA"] = 5,
+						["V2"] = 18,
+					}, -- [6]
+					{
+						["ID"] = 7,
+						["VA"] = 2,
+						["V2"] = 6,
+					}, -- [7]
+					{
+						["ID"] = 8,
+						["VA"] = 0,
+						["V2"] = 0,
+					}, -- [8]
+					{
+						["ID"] = 9,
+						["VA"] = 6,
+						["V2"] = 19,
+					}, -- [9]
+					{
+						["ID"] = 10,
+						["VA"] = 5,
+						["V2"] = 17,
+					}, -- [10]
+					{
+						["ID"] = 11,
+						["VA"] = 6,
+						["V2"] = 20,
+					}, -- [11]
+				},
+				["IC"] = "Achievement_Character_Nightelf_Female",
+				["WE"] = "Fit, Slender",
+			},
+		},
+		["11131626513Q5Ef"] = {
+			["misc"] = {
+				["ST"] = {
+				},
+				["PE"] = {
+				},
+				["v"] = 1,
+			},
+			["time"] = 1573700702,
+			["link"] = {
+				["Dalelifrah-Tichondrius"] = 1,
+			},
+			["about"] = {
+				["v"] = 1,
+				["TE"] = 1,
+				["T1"] = {
+				},
+			},
+			["character"] = {
+				["RP"] = 1,
+				["LC"] = "enUS",
+				["XP"] = 2,
+				["v"] = 1,
+			},
+			["characteristics"] = {
+				["CL"] = "Priest",
+				["RA"] = "Human",
+				["FN"] = "Dalelifrah",
+				["MI"] = {
+				},
+				["PS"] = {
+				},
+				["IC"] = "Achievement_Character_Human_Male",
+				["v"] = 1,
+			},
+		},
+		["1027162927KHcme"] = {
+			["misc"] = {
+				["ST"] = {
+				},
+				["PE"] = {
+				},
+				["v"] = 1,
+			},
+			["time"] = 1573352050,
+			["zone"] = "Orgrimmar - Valley of Strength",
+			["about"] = {
+				["T1"] = {
+				},
+				["TE"] = 1,
+				["v"] = 1,
+			},
+			["characteristics"] = {
+				["CL"] = "Hunter",
+				["RA"] = "Worgen",
+				["FN"] = "Retinazor",
+				["MI"] = {
+				},
+				["PS"] = {
+				},
+				["IC"] = "achievement_worganhead",
+				["v"] = 1,
+			},
+			["character"] = {
+				["RP"] = 1,
+				["LC"] = "enUS",
+				["XP"] = 2,
+				["v"] = 1,
+			},
+			["link"] = {
+				["Retinazor-AeriePeak"] = 1,
+			},
+		},
+		["1104002553FECa1"] = {
+			["misc"] = {
+				["ST"] = {
+					["1"] = 0,
+					["3"] = 0,
+					["2"] = 0,
+					["5"] = 0,
+					["4"] = 0,
+					["6"] = 0,
+				},
+				["PE"] = {
+					["1"] = {
+						["AC"] = true,
+						["TI"] = "Dirty",
+						["IC"] = "rogue_dirtytricks",
+						["TX"] = "Not only is she covered in dirt, but the undersides of her gnarled fingernails and toenails are packed with mud. Sand and dried sediment are stuck in her hair. ",
+					},
+					["3"] = {
+						["AC"] = true,
+						["TI"] = "Marked for Death",
+						["IC"] = "ability_blackhand_marked4death",
+						["TX"] = "The glow is completely absent from her eyes. Her features are sunken and swollen, leaving her as only the husk of a night elf. Her back is hunched and she constantly walks with a limp.",
+					},
+					["2"] = {
+						["AC"] = true,
+						["TI"] = "Aroma",
+						["IC"] = "rogue_paralytic_poison",
+						["TX"] = "Telisande gives off a putrid stench that is more than obvious to all around her. She seems to be unaware of this.",
+					},
+					["5"] = {
+						["AC"] = true,
+						["TI"] = "Starving",
+						["IC"] = "inv_misc_food_115_condorsoup",
+						["TX"] = "Her stomache rumbles loudly. Luckily in a bustling city, this is usually a hidden burden.",
+					},
+					["4"] = {
+						["AC"] = true,
+						["TI"] = "Scarred",
+						["IC"] = "ability_rogue_bloodyeye",
+						["TX"] = "Where her cultural markings should be are replaced by deep scars as if they were forcibly removed from her face.",
+					},
+				},
+				["v"] = 14,
+			},
+			["time"] = 1573272787,
+			["zone"] = "The Eternal Palace",
+			["about"] = {
+				["v"] = 1,
+				["TE"] = 1,
+				["T1"] = {
+				},
+			},
+			["link"] = {
+				["Telisande-MoonGuard"] = 1,
+			},
+			["character"] = {
+				["CU"] = "Biding her time",
+				["CO"] = "I promise I don't bite! Please feel free to walk up!\n\nTRP is sort of a WIP",
+				["RP"] = 1,
+				["LC"] = "enUS",
+				["XP"] = 2,
+				["v"] = 94,
+			},
+			["characteristics"] = {
+				["RA"] = "Kaldorei",
+				["LN"] = "Blackwind",
+				["MI"] = {
+				},
+				["PS"] = {
+				},
+				["v"] = 6,
+				["IC"] = "ability_hunter_aspectoftheironhawk",
+				["FN"] = "Telisande",
+				["CL"] = "Nomad",
+				["RS"] = 0,
+				["CH"] = "aeaeae",
+			},
+		},
+		["1007175204<b[Ao"] = {
+			["misc"] = {
+				["ST"] = {
+					["1"] = 2,
+					["3"] = 3,
+					["2"] = 3,
+					["5"] = 3,
+					["4"] = 3,
+					["6"] = 1,
+				},
+				["PE"] = {
+					["1"] = {
+						["AC"] = true,
+						["TI"] = "Mustache",
+						["TX"] = "Waxed, Manly, Very well maintained Mustache. (The ladies love it)",
+						["IC"] = "THUMBSUP",
+					},
+					["3"] = {
+						["AC"] = true,
+						["TI"] = "Boots",
+						["TX"] = "Lightweight boots crafted for quick movement",
+						["IC"] = "INV_Boot_Leather_PVPMonk_F_01",
+					},
+					["2"] = {
+						["AC"] = true,
+						["TI"] = "Headband",
+						["TX"] = "A red bandana is wrapped around his head, it is normally covered in sweat.",
+						["IC"] = "INV_Misc_Bandana_03",
+					},
+					["5"] = {
+						["AC"] = false,
+						["TI"] = "Tux",
+						["TX"] = "Tuxedo made from the finest elven silk",
+						["IC"] = "INV_Shirt_08",
+					},
+					["4"] = {
+						["AC"] = false,
+						["TI"] = "Rhinestone Sunglasses",
+						["TX"] = "Red lensed rhinestone sunglasses that sparkle in the sun",
+						["IC"] = "INV_Helmet_176",
+					},
+				},
+				["v"] = 63,
+			},
+			["time"] = 1573273471,
+			["zone"] = "Alterac Valley - Dun Baldar",
+			["about"] = {
+				["v"] = 6,
+				["BK"] = 1,
+				["TE"] = 1,
+				["T1"] = {
+					["TX"] = "Sampson grew up in the slums of Gnomeregan.  His father died in an unfortunate inventing accident and his mother worked as a waitress at a local bar.  He spent most of his time in the streets where he did nothing but pick fights with anyone and everyone that gave him a reason to, and some that didn't.  He tired of Gnomeregan and left it before the Third-War and the trogs took the city.  He would travel from city to city picking fights with tougher and tougher opponents.  Upon seeing one of Sampsons fights, a human named James Leon Johanson decided to take the young gnome under his wing and became his promoter, helping him set up more and more difficult fights.  Once he became aware of the Brawlers Guild he fought his way to the top obtaining the rank \"Brawler\", Afterwards he decided to go his own way from Mr. Johanson as he could not provide any challenges anymore.  Sampson now travels around searching for worthy opponents so that he can test his metal.  He walked upon a tournement in Stormwind known as the \"Back Alley Brawl\" upon which he saw the strength of the Betrayed Consortium firsthand, he was given an invitation which he took.  He challenged a \"Champion\" of the group to a 1v1 match and lost upon which he joined the Consortium.",
+				},
+			},
+			["link"] = {
+				["Såmpson-WyrmrestAccord"] = 1,
+			},
+			["character"] = {
+				["v"] = 24,
+				["CO"] = "",
+				["RP"] = 1,
+				["LC"] = "enUS",
+				["XP"] = 2,
+				["CU"] = "Wandering, Being a Dapper Gnome",
+			},
+			["characteristics"] = {
+				["LN"] = "McStormsteel",
+				["MI"] = {
+				},
+				["FN"] = "Såmpson",
+				["AG"] = "45",
+				["CL"] = "Brawler",
+				["EH"] = "28dbff",
+				["HE"] = "3'08\"",
+				["CH"] = "ff0005",
+				["RA"] = "Gnome",
+				["RC"] = {
+					301, -- [1]
+					0.74276900291443, -- [2]
+					0.62655031681061, -- [3]
+					"Stormwind City - Old Town", -- [4]
+				},
+				["BP"] = "Gnomeregan Slums",
+				["v"] = 15,
+				["RE"] = "Stormwind City - Old Town",
+				["IC"] = "INV_Legendary_FistWeapon",
+				["FT"] = "Dancin' Sampson, Owner of Fire and Ice, Brawlmaster",
+				["PS"] = {
+					{
+						["ID"] = 6,
+						["VA"] = 1,
+						["V2"] = 3,
+					}, -- [1]
+					{
+						["ID"] = 9,
+						["VA"] = 1,
+						["V2"] = 3,
+					}, -- [2]
+					{
+						["ID"] = 1,
+						["VA"] = 2,
+						["V2"] = 7,
+					}, -- [3]
+				},
+				["TI"] = "Brawler",
+				["EC"] = "Blue",
+				["WE"] = "Muscular",
+			},
+		},
+	},
+}

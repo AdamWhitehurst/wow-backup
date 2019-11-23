@@ -34,10 +34,9 @@ function UF:Construct_PowerBar(frame, bg, text, textPos)
 	power.PostUpdateColor = self.PostUpdatePowerColor
 
 	if bg then
-		power.bg = power:CreateTexture(nil, 'BORDER')
-		power.bg:SetAllPoints()
-		power.bg:SetTexture(E.media.blankTex)
-		power.bg.multiplier = 0.35
+		power.BG = power:CreateTexture(nil, 'BORDER')
+		power.BG:SetAllPoints()
+		power.BG:SetTexture(E.media.blankTex)
 	end
 
 	if text then
@@ -56,6 +55,13 @@ function UF:Construct_PowerBar(frame, bg, text, textPos)
 	power.colorDisconnected = false
 	power.colorTapping = false
 	power:CreateBackdrop(nil, nil, nil, self.thinBorders, true)
+
+	local clipFrame = CreateFrame('Frame', nil, power)
+	clipFrame:SetClipsChildren(true)
+	clipFrame:SetAllPoints()
+	clipFrame:EnableMouse(false)
+	clipFrame.__frame = frame
+	power.ClipFrame = clipFrame
 
 	return power
 end
@@ -217,15 +223,19 @@ function UF:Configure_Power(frame)
 			E.FrameLocks[power] = nil
 			power:SetParent(frame)
 		end
-
 	elseif frame:IsElementEnabled('Power') then
 		frame:DisableElement('Power')
 		power:Hide()
 		frame:Tag(power.value, "")
 	end
 
+	frame.Power.custom_backdrop = UF.db.colors.custompowerbackdrop and UF.db.colors.power_backdrop
+
 	--Transparency Settings
-	UF:ToggleTransparentStatusBar(UF.db.colors.transparentPower, frame.Power, frame.Power.bg)
+	UF:ToggleTransparentStatusBar(UF.db.colors.transparentPower, frame.Power, frame.Power.BG, nil, UF.db.colors.invertPower)
+
+	--Prediction Texture; keep under ToggleTransparentStatusBar
+	UF:UpdatePredictionStatusBar(frame.PowerPrediction, frame.Power, "Power")
 end
 
 local tokens = {[0]="MANA","RAGE","FOCUS","ENERGY","RUNIC_POWER"}
@@ -237,8 +247,10 @@ function UF:PostUpdatePowerColor()
 
 		if not self.colorClass then
 			self:SetStatusBarColor(color[1], color[2], color[3])
-			local mu = self.bg.multiplier or 1
-			self.bg:SetVertexColor(color[1] * mu, color[2] * mu, color[3] * mu)
+
+			if self.BG then
+				UF:UpdateBackdropTextureColor(self.BG, color[1], color[2], color[3])
+			end
 		end
 	end
 end
@@ -251,10 +263,5 @@ function UF:PostUpdatePower(unit, _, _, max)
 
 	if parent.db and parent.db.power and parent.db.power.hideonnpc then
 		UF:PostNamePosition(parent, unit)
-	end
-
-	--Force update to AdditionalPower in order to reposition text if necessary
-	if parent:IsElementEnabled("AdditionalPower") then
-		E:Delay(0.01, parent.AdditionalPower.ForceUpdate, parent.AdditionalPower) --Delay it slightly so Power text has a chance to clear itself first
 	end
 end

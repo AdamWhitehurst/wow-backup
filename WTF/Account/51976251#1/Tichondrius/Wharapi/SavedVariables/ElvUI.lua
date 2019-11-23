@@ -2,28 +2,6 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:153:Player-11-0A702499:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[The Old Gnome and the Sea]|h|r!", -- [1]
-			"Sinfulmage-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sinfulmage-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			28, -- [11]
-			"Player-11-0A702499", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Sinfulmage|r",
-			[51] = 1556847137,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [1]
-		{
 			"%s has earned the achievement |cffffff00|Hachievement:10704:Player-11-0A748174:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Not For You]|h|r!", -- [1]
 			"Rhaethalas-Tichondrius", -- [2]
 			"", -- [3]
@@ -44,7 +22,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Rhaethalas|r",
 			[51] = 1556847269,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [2]
+		}, -- [1]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6755:Player-11-0B627996:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Mogu'shan Palace]|h|r!", -- [1]
 			"Ihavenoshirt-Tichondrius", -- [2]
@@ -66,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Ihavenoshirt|r",
 			[51] = 1556847312,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [3]
+		}, -- [2]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6756:Player-11-0B627996:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Mogu'shan Palace]|h|r!", -- [1]
 			"Ihavenoshirt-Tichondrius", -- [2]
@@ -88,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Ihavenoshirt|r",
 			[51] = 1556847312,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [4]
+		}, -- [3]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:8028:Player-11-0AE20925:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Praise the Sun!]|h|r!", -- [1]
 			"Heff-Tichondrius", -- [2]
@@ -110,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cHeff|r",
 			[51] = 1556847313,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [5]
+		}, -- [4]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13161:Player-11-09FA98B1:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Allied Races: Zandalari Troll]|h|r!", -- [1]
 			"Fuzzyfork-Tichondrius", -- [2]
@@ -132,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Fuzzyfork|r",
 			[51] = 1556847356,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [6]
+		}, -- [5]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-0B5A4AD9:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
 			"Oddesteye-Tichondrius", -- [2]
@@ -154,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Oddesteye|r",
 			[51] = 1556848308,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [7]
+		}, -- [6]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:10838:Player-11-0A748174:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Nightspire]|h|r!", -- [1]
 			"Rhaethalas-Tichondrius", -- [2]
@@ -176,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Rhaethalas|r",
 			[51] = 1556848386,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [8]
+		}, -- [7]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13512:Player-11-0B0E606D:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Master Calligrapher]|h|r!", -- [1]
 			"Yuriq-Tichondrius", -- [2]
@@ -198,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Yuriq|r",
 			[51] = 1556848403,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [9]
+		}, -- [8]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:229:Player-11-0AE86594:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[The Grim Reaper]|h|r!", -- [1]
 			"Shameandfun-Tichondrius", -- [2]
@@ -220,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Shameandfun|r",
 			[51] = 1556848670,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [10]
+		}, -- [9]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6757:Player-11-0B627996:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Temple of the Jade Serpent]|h|r!", -- [1]
 			"Ihavenoshirt-Tichondrius", -- [2]
@@ -242,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Ihavenoshirt|r",
 			[51] = 1556848678,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [11]
+		}, -- [10]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6758:Player-11-0B627996:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Temple of the Jade Serpent]|h|r!", -- [1]
 			"Ihavenoshirt-Tichondrius", -- [2]
@@ -264,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Ihavenoshirt|r",
 			[51] = 1556848678,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [12]
+		}, -- [11]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12504:Player-11-0B60B670:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[The Temple of Sethraliss]|h|r!", -- [1]
 			"Dinokhan-Tichondrius", -- [2]
@@ -286,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dinokhan|r",
 			[51] = 1556848716,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [13]
+		}, -- [12]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12505:Player-11-0B60B670:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: The Temple of Sethraliss]|h|r!", -- [1]
 			"Dinokhan-Tichondrius", -- [2]
@@ -308,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dinokhan|r",
 			[51] = 1556848716,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [14]
+		}, -- [13]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11609:Player-11-0B2C9970:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Power Unbound]|h|r!", -- [1]
 			"Xixi-Tichondrius", -- [2]
@@ -330,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Xixi|r",
 			[51] = 1556848803,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [15]
+		}, -- [14]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:154:Player-11-0AE86594:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Arathi Basin Victory]|h|r!", -- [1]
 			"Shameandfun-Tichondrius", -- [2]
@@ -352,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Shameandfun|r",
 			[51] = 1556849045,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [16]
+		}, -- [15]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6688:Player-11-0B5D4438:1:5:2:19:4294967295:4294967295:4294967295:4294967295|h[Where's My Air Support?]|h|r!", -- [1]
 			"Ttigtone-Tichondrius", -- [2]
@@ -374,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Ttigtone|r",
 			[51] = 1556849460,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [17]
+		}, -- [16]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1727:Player-11-0B6405C9:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Leaning Tower]|h|r!", -- [1]
 			"Mcmike-Tichondrius", -- [2]
@@ -396,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Mcmike|r",
 			[51] = 1556934204,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [18]
+		}, -- [17]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12957:Player-11-0AB69921:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Champion of the Honorbound]|h|r!", -- [1]
 			"Voràan-Tichondrius", -- [2]
@@ -418,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Voràan|r",
 			[51] = 1556934363,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [19]
+		}, -- [18]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11185:Player-11-0B05DD27:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Keystone Conqueror]|h|r!", -- [1]
 			"Maÿbe-Tichondrius", -- [2]
@@ -440,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Maÿbe|r",
 			[51] = 1556935132,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [20]
+		}, -- [19]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6688:Player-11-0A9AD875:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Where's My Air Support?]|h|r!", -- [1]
 			"Yungskrit-Tichondrius", -- [2]
@@ -462,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Yungskrit|r",
 			[51] = 1556935563,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [21]
+		}, -- [20]
 		{
 			"hey can we no longer purchase wow tokens?", -- [1]
 			"Degatez-Tichondrius", -- [2]
@@ -484,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Degatez|r",
 			[51] = 1556935785,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [22]
+		}, -- [21]
 		{
 			"with money or gold?", -- [1]
 			"Sinfulmage-Tichondrius", -- [2]
@@ -506,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Sinfulmage|r",
 			[51] = 1556935801,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [23]
+		}, -- [22]
 		{
 			"money", -- [1]
 			"Degatez-Tichondrius", -- [2]
@@ -528,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Degatez|r",
 			[51] = 1556935805,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [24]
+		}, -- [23]
 		{
 			"cause you still can do both", -- [1]
 			"Sinfulmage-Tichondrius", -- [2]
@@ -550,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Sinfulmage|r",
 			[51] = 1556935806,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [25]
+		}, -- [24]
 		{
 			"i checked the wow store and couldn't find it.", -- [1]
 			"Degatez-Tichondrius", -- [2]
@@ -572,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Degatez|r",
 			[51] = 1556935820,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [26]
+		}, -- [25]
 		{
 			"its in the in game shop", -- [1]
 			"Sinfulmage-Tichondrius", -- [2]
@@ -594,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Sinfulmage|r",
 			[51] = 1556935832,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [27]
+		}, -- [26]
 		{
 			"its the one right under the toys", -- [1]
 			"Sinfulmage-Tichondrius", -- [2]
@@ -616,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Sinfulmage|r",
 			[51] = 1556935858,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [28]
+		}, -- [27]
 		{
 			"oh. just found it. thanks. i checked the store from the character screen and it wasn't there", -- [1]
 			"Degatez-Tichondrius", -- [2]
@@ -638,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Degatez|r",
 			[51] = 1556935861,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [29]
+		}, -- [28]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6688:Player-11-0B55BFB4:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Where's My Air Support?]|h|r!", -- [1]
 			"Akorâ-Tichondrius", -- [2]
@@ -660,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Akorâ|r",
 			[51] = 1556935867,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [30]
+		}, -- [29]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:399:Player-11-0B641FF8:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Just the Two of Us: 1550]|h|r!", -- [1]
 			"Frenxhiee-Tichondrius", -- [2]
@@ -682,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Frenxhiee|r",
 			[51] = 1556937174,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [31]
+		}, -- [30]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6469:Player-11-0ABFDA93:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Shado-Pan Monastery]|h|r!", -- [1]
 			"Mahkay-Tichondrius", -- [2]
@@ -704,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Mahkay|r",
 			[51] = 1556937271,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [32]
+		}, -- [31]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6470:Player-11-0ABFDA93:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Shado-Pan Monastery]|h|r!", -- [1]
 			"Mahkay-Tichondrius", -- [2]
@@ -726,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Mahkay|r",
 			[51] = 1556937271,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [33]
+		}, -- [32]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1180:Player-11-0ABFDA93:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
 			"Mahkay-Tichondrius", -- [2]
@@ -748,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Mahkay|r",
 			[51] = 1556937284,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [34]
+		}, -- [33]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-09C68791:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
 			"Theritual-Tichondrius", -- [2]
@@ -770,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcTheritual|r",
 			[51] = 1556937625,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [35]
+		}, -- [34]
 		{
 			"WTS |cffa335ee|Hitem:159125::::::::120:269::13::::|h[Darkmoon Deck: Fathoms]|h|r|cffa335ee|Hitem:159128::::::::120:269::13::::|h[Darkmoon Deck: Blockades]|h|r", -- [1]
 			"Mepoostink-Tichondrius", -- [2]
@@ -792,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Mepoostink|r",
 			[51] = 1556937691,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [36]
+		}, -- [35]
 		{
 			"=)", -- [1]
 			"Mepoostink-Tichondrius", -- [2]
@@ -814,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Mepoostink|r",
 			[51] = 1556937694,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [37]
+		}, -- [36]
 		{
 			"ask trade", -- [1]
 			"Jurassisdead-Tichondrius", -- [2]
@@ -836,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Jurassisdead|r",
 			[51] = 1556937721,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [38]
+		}, -- [37]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1005:Player-11-0B642F4F:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Know Thy Enemy]|h|r!", -- [1]
 			"Maltegra-Tichondrius", -- [2]
@@ -858,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcMaltegra|r",
 			[51] = 1556937755,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [39]
+		}, -- [38]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:229:Player-11-0B642F4F:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[The Grim Reaper]|h|r!", -- [1]
 			"Maltegra-Tichondrius", -- [2]
@@ -880,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcMaltegra|r",
 			[51] = 1556937755,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [40]
+		}, -- [39]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12950:Player-11-0B07F6A3:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Zandalari Empire]|h|r!", -- [1]
 			"Wölfeng-Tichondrius", -- [2]
@@ -902,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Wölfeng|r",
 			[51] = 1556937894,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [41]
+		}, -- [40]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:524:Player-11-0B07F6A3:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[10 Exalted Reputations]|h|r!", -- [1]
 			"Wölfeng-Tichondrius", -- [2]
@@ -924,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Wölfeng|r",
 			[51] = 1556937894,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [42]
+		}, -- [41]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1791:Player-11-0B07F6A3:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Home Alone]|h|r!", -- [1]
 			"Wölfeng-Tichondrius", -- [2]
@@ -946,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Wölfeng|r",
 			[51] = 1556937972,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [43]
+		}, -- [42]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11652:Player-11-0B5B4BF2:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[The Reputable]|h|r!", -- [1]
 			"Collete-Tichondrius", -- [2]
@@ -968,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Collete|r",
 			[51] = 1556938110,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [44]
+		}, -- [43]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1180:Player-11-0B6554F2:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
 			"Bwro-Tichondrius", -- [2]
@@ -990,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Bwro|r",
 			[51] = 1556938155,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [45]
+		}, -- [44]
 		{
 			"yeah  but maybe some in guild need =)", -- [1]
 			"Mepoostink-Tichondrius", -- [2]
@@ -1012,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Mepoostink|r",
 			[51] = 1556938202,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [46]
+		}, -- [45]
 		{
 			"i think you will be able to upgrade next month", -- [1]
 			"Jurassisdead-Tichondrius", -- [2]
@@ -1034,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Jurassisdead|r",
 			[51] = 1556938258,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [47]
+		}, -- [46]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12:Player-11-0B61B3BF:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Level 70]|h|r!", -- [1]
 			"Younggodz-Tichondrius", -- [2]
@@ -1056,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Younggodz|r",
 			[51] = 1556938446,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [48]
+		}, -- [47]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:689:Player-11-0B51EB45:1:5:3:19:4294967295:4294967295:4294967295:4294967295|h[Ruins of Ahn'Qiraj]|h|r!", -- [1]
 			"Athelan-Tichondrius", -- [2]
@@ -1078,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Athelan|r",
 			[51] = 1556938628,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [49]
+		}, -- [48]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1791:Player-11-0B6259E6:1:5:4:19:4294967295:4294967295:4294967295:4294967295|h[Home Alone]|h|r!", -- [1]
 			"Wharapi-Tichondrius", -- [2]
@@ -1100,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Wharapi|r",
 			[51] = 1556989618,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [50]
+		}, -- [49]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1792:Player-11-0B6259E6:1:5:4:19:4294967295:4294967295:4294967295:4294967295|h[Aw, Isn't It Cute?]|h|r!", -- [1]
 			"Wharapi-Tichondrius", -- [2]
@@ -1122,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Wharapi|r",
 			[51] = 1556989957,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [51]
+		}, -- [50]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-0912836F:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
 			"Roguetastigo-Tichondrius", -- [2]
@@ -1144,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Roguetastigo|r",
 			[51] = 1557360997,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [52]
+		}, -- [51]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6980:Player-11-0B4A8DF7:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Temple of Kotmogu All-Star]|h|r!", -- [1]
 			"Monkeybutte-Tichondrius", -- [2]
@@ -1166,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeMonkeybutte|r",
 			[51] = 1557361232,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [53]
+		}, -- [52]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1791:Player-11-0B114159:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Home Alone]|h|r!", -- [1]
 			"Sislock-Tichondrius", -- [2]
@@ -1188,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecSislock|r",
 			[51] = 1557361264,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [54]
+		}, -- [53]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:10786:Player-11-0B5D4438:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Halls of Valor]|h|r!", -- [1]
 			"Ttigtone-Tichondrius", -- [2]
@@ -1210,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Ttigtone|r",
 			[51] = 1557362019,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [55]
+		}, -- [54]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13144:Player-11-0AD6FA66:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Wide World of Quests]|h|r!", -- [1]
 			"Bendthekneè-Tichondrius", -- [2]
@@ -1232,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cBendthekneè|r",
 			[51] = 1557366232,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [56]
+		}, -- [55]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12957:Player-11-0B624B9A:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Champion of the Honorbound]|h|r!", -- [1]
 			"Cmäc-Tichondrius", -- [2]
@@ -1254,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecCmäc|r",
 			[51] = 1557366862,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [57]
+		}, -- [56]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12405:Player-11-0912836F:1:5:8:19:4294967295:4294967295:4294967295:4294967295|h[Death from Above]|h|r!", -- [1]
 			"Roguetastigo-Tichondrius", -- [2]
@@ -1276,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Roguetastigo|r",
 			[51] = 1557366995,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [58]
+		}, -- [57]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11184:Player-11-0B2D202C:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Keystone Challenger]|h|r!", -- [1]
 			"Kartoonz-Tichondrius", -- [2]
@@ -1298,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cKartoonz|r",
 			[51] = 1558283942,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [59]
+		}, -- [58]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12575:Player-11-0B5CC8CD:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Tour of Duty: Zuldazar]|h|r!", -- [1]
 			"Badloreqq-Tichondrius", -- [2]
@@ -1320,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Badloreqq|r",
 			[51] = 1558284252,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [60]
+		}, -- [59]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6619:Player-11-0B3A439D:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Win Streak]|h|r!", -- [1]
 			"Cöven-Tichondrius", -- [2]
@@ -1342,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Cöven|r",
 			[51] = 1558284455,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [61]
+		}, -- [60]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11126:Player-11-0B241009:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[50 World Quests Completed]|h|r!", -- [1]
 			"Supremmus-Tichondrius", -- [2]
@@ -1364,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Supremmus|r",
 			[51] = 1558284517,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [62]
+		}, -- [61]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12484:Player-11-0AC3C8E6:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Waycrest Manor]|h|r!", -- [1]
 			"Rahjim-Tichondrius", -- [2]
@@ -1386,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Rahjim|r",
 			[51] = 1558284828,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [63]
+		}, -- [62]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12488:Player-11-0AC3C8E6:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Waycrest Manor]|h|r!", -- [1]
 			"Rahjim-Tichondrius", -- [2]
@@ -1408,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Rahjim|r",
 			[51] = 1558284828,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [64]
+		}, -- [63]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:245:Player-11-0B656F75:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[That Takes Class]|h|r!", -- [1]
 			"Shiftybøi-Tichondrius", -- [2]
@@ -1430,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shiftybøi|r",
 			[51] = 1558284841,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [65]
+		}, -- [64]
 		{
 			"- Visit: www.Ruinnation.com and click the Discord Icon.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1452,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [66]
+		}, -- [65]
 		{
 			"- Please log into the RUIN Discord for promotion! - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1474,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [67]
+		}, -- [66]
 		{
 			"- RUIN DISCORD SERVER - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1496,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [68]
+		}, -- [67]
 		{
 			"- Discord is a Guild Requirement", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1518,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [69]
+		}, -- [68]
 		{
 			"- Log into the WELCOME Lobby for promotion to CITIZEN for GUILD REPAIRS.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1540,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [70]
+		}, -- [69]
 		{
 			"- WELCOME to RUIN! -", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1562,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [71]
+		}, -- [70]
 		{
 			"Ruin is a Discord based Gaming Community founded in Vanilla World of Warcraft! WAR MODE Player versus Player and progression Raid guild with over 10,000 active members on Ten servers! www.Ruinnation.com", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1584,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558284985,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [72]
+		}, -- [71]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4847:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[The Vortex Pinnacle]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -1606,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558285153,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [73]
+		}, -- [72]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5288:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[No Static at All]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -1628,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558285153,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [74]
+		}, -- [73]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5064:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: The Vortex Pinnacle]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -1650,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558285153,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [75]
+		}, -- [74]
 		{
 			"- Visit: www.Ruinnation.com and click the Discord Icon.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1672,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [76]
+		}, -- [75]
 		{
 			"- Please log into the RUIN Discord for promotion! - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1694,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [77]
+		}, -- [76]
 		{
 			"- Discord is a Guild Requirement", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1716,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [78]
+		}, -- [77]
 		{
 			"- Log into the WELCOME Lobby for promotion to CITIZEN for GUILD REPAIRS.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1738,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [79]
+		}, -- [78]
 		{
 			"- RUIN DISCORD SERVER - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1760,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [80]
+		}, -- [79]
 		{
 			"Ruin is a Discord based Gaming Community founded in Vanilla World of Warcraft! WAR MODE Player versus Player and progression Raid guild with over 10,000 active members on Ten servers! www.Ruinnation.com", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1782,7 +1760,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [81]
+		}, -- [80]
 		{
 			"- WELCOME to RUIN! -", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -1804,7 +1782,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285204,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [82]
+		}, -- [81]
 		{
 			"lol hey arch", -- [1]
 			"Sasriel-Tichondrius", -- [2]
@@ -1826,7 +1804,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sasriel|r",
 			[51] = 1558285212,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [83]
+		}, -- [82]
 		{
 			"anyone wanna do mythics for the weekend event", -- [1]
 			"Wingstopx-Tichondrius", -- [2]
@@ -1848,7 +1826,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Wingstopx|r",
 			[51] = 1558285245,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [84]
+		}, -- [83]
 		{
 			"holy fuck so many people online", -- [1]
 			"Loaoflife-Tichondrius", -- [2]
@@ -1870,7 +1848,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Loaoflife|r",
 			[51] = 1558285267,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [85]
+		}, -- [84]
 		{
 			"i just go in the welcome lobby for discord do we just chill until someone comes and greets us type thing?", -- [1]
 			"Herbitual-Tichondrius", -- [2]
@@ -1892,7 +1870,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcHerbitual|r",
 			[51] = 1558285337,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [86]
+		}, -- [85]
 		{
 			"someone come do these mythics w me", -- [1]
 			"Wingstopx-Tichondrius", -- [2]
@@ -1914,7 +1892,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Wingstopx|r",
 			[51] = 1558285348,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [87]
+		}, -- [86]
 		{
 			"|cffa335ee|Hkeystone:158923:252:3:10:0:0:0|h[Keystone: Shrine of the Storm (3)]|h|r", -- [1]
 			"Wingstopx-Tichondrius", -- [2]
@@ -1936,7 +1914,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Wingstopx|r",
 			[51] = 1558285361,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [88]
+		}, -- [87]
 		{
 			"i would help but about to pug heroic BoD with my boy", -- [1]
 			"Loaoflife-Tichondrius", -- [2]
@@ -1958,7 +1936,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Loaoflife|r",
 			[51] = 1558285366,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [89]
+		}, -- [88]
 		{
 			"(Commander): post in #census", -- [1]
 			"Stonesx-Tichondrius", -- [2]
@@ -1980,7 +1958,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cStonesx|r",
 			[51] = 1558285409,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [90]
+		}, -- [89]
 		{
 			"w", -- [1]
 			"Loaoflife-Tichondrius", -- [2]
@@ -2002,7 +1980,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Loaoflife|r",
 			[51] = 1558285429,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [91]
+		}, -- [90]
 		{
 			"(Commander): in Discord :)", -- [1]
 			"Stonesx-Tichondrius", -- [2]
@@ -2024,7 +2002,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cStonesx|r",
 			[51] = 1558285467,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [92]
+		}, -- [91]
 		{
 			"ill join the discord after this raid thanks for the inv ", -- [1]
 			"Loaoflife-Tichondrius", -- [2]
@@ -2046,7 +2024,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Loaoflife|r",
 			[51] = 1558285525,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [93]
+		}, -- [92]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13125:Player-11-0AA15AB8:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Azerite Admiral]|h|r!", -- [1]
 			"Sasriel-Tichondrius", -- [2]
@@ -2068,7 +2046,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sasriel|r",
 			[51] = 1558285546,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [94]
+		}, -- [93]
 		{
 			"- Please log into the RUIN Discord for promotion! - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2090,7 +2068,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285579,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [95]
+		}, -- [94]
 		{
 			"- RUIN DISCORD SERVER - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2112,7 +2090,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285579,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [96]
+		}, -- [95]
 		{
 			"- Visit: www.Ruinnation.com and click the Discord Icon.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2134,7 +2112,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285579,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [97]
+		}, -- [96]
 		{
 			"- Log into the WELCOME Lobby for promotion to CITIZEN for GUILD REPAIRS.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2156,7 +2134,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285579,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [98]
+		}, -- [97]
 		{
 			"- Discord is a Guild Requirement", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2178,7 +2156,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285579,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [99]
+		}, -- [98]
 		{
 			"need tnak for |cffa335ee|Hkeystone:158923:252:3:10:0:0:0|h[Keystone: Shrine of the Storm (3)]|h|r", -- [1]
 			"Wingstopx-Tichondrius", -- [2]
@@ -2200,7 +2178,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Wingstopx|r",
 			[51] = 1558285588,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [100]
+		}, -- [99]
 		{
 			"- RUIN DISCORD SERVER - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2222,7 +2200,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285614,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [101]
+		}, -- [100]
 		{
 			"- Discord is a Guild Requirement", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2244,7 +2222,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285614,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [102]
+		}, -- [101]
 		{
 			"- Please log into the RUIN Discord for promotion! - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2266,7 +2244,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285614,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [103]
+		}, -- [102]
 		{
 			"- Visit: www.Ruinnation.com and click the Discord Icon.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2288,7 +2266,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285614,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [104]
+		}, -- [103]
 		{
 			"- Log into the WELCOME Lobby for promotion to CITIZEN for GUILD REPAIRS.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2310,7 +2288,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285615,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [105]
+		}, -- [104]
 		{
 			"- WELCOME to RUIN! -", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2332,7 +2310,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285615,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [106]
+		}, -- [105]
 		{
 			"Ruin is a Discord based Gaming Community founded in Vanilla World of Warcraft! WAR MODE Player versus Player and progression Raid guild with over 10,000 active members on Ten servers! www.Ruinnation.com", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2354,7 +2332,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285615,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [107]
+		}, -- [106]
 		{
 			"is ruin also on runetotem?", -- [1]
 			"Loaoflife-Tichondrius", -- [2]
@@ -2376,7 +2354,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Loaoflife|r",
 			[51] = 1558285629,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [108]
+		}, -- [107]
 		{
 			"why did i ever stop playing monk, this class is so versatile", -- [1]
 			"Sasriel-Tichondrius", -- [2]
@@ -2398,7 +2376,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sasriel|r",
 			[51] = 1558285636,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [109]
+		}, -- [108]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13144:Player-11-0B644046:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Wide World of Quests]|h|r!", -- [1]
 			"Jumoji-Tichondrius", -- [2]
@@ -2420,7 +2398,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cJumoji|r",
 			[51] = 1558285686,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [110]
+		}, -- [109]
 		{
 			"- Log into the WELCOME Lobby for promotion to CITIZEN for GUILD REPAIRS.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2442,7 +2420,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [111]
+		}, -- [110]
 		{
 			"- Please log into the RUIN Discord for promotion! - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2464,7 +2442,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [112]
+		}, -- [111]
 		{
 			"- Discord is a Guild Requirement", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2486,7 +2464,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [113]
+		}, -- [112]
 		{
 			"- Visit: www.Ruinnation.com and click the Discord Icon.", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2508,7 +2486,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [114]
+		}, -- [113]
 		{
 			"- RUIN DISCORD SERVER - ", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2530,7 +2508,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [115]
+		}, -- [114]
 		{
 			"Ruin is a Discord based Gaming Community founded in Vanilla World of Warcraft! WAR MODE Player versus Player and progression Raid guild with over 10,000 active members on Ten servers! www.Ruinnation.com", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2552,7 +2530,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [116]
+		}, -- [115]
 		{
 			"- WELCOME to RUIN! -", -- [1]
 			"Arconchilon-Tichondrius", -- [2]
@@ -2574,7 +2552,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Arconchilon|r",
 			[51] = 1558285756,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [117]
+		}, -- [116]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12559:Player-11-0B6554F2:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Explore Zuldazar]|h|r!", -- [1]
 			"Bwro-Tichondrius", -- [2]
@@ -2596,7 +2574,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Bwro|r",
 			[51] = 1558285807,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [118]
+		}, -- [117]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12556:Player-11-0B6397DF:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Explore Tiragarde Sound]|h|r!", -- [1]
 			"Rubinya-Tichondrius", -- [2]
@@ -2618,7 +2596,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Rubinya|r",
 			[51] = 1558286045,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [119]
+		}, -- [118]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5122:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Conclave of Wind]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -2640,7 +2618,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558286133,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [120]
+		}, -- [119]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4851:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Throne of the Four Winds]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -2662,7 +2640,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558286281,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [121]
+		}, -- [120]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5123:Player-11-0B4AA2D1:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Al'Akir]|h|r!", -- [1]
 			"Deathdealer-Tichondrius", -- [2]
@@ -2684,7 +2662,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cDeathdealer|r",
 			[51] = 1558286281,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [122]
+		}, -- [121]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12558:Player-11-0B664E41:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Explore Stormsong Valley]|h|r!", -- [1]
 			"Gstealth-Tichondrius", -- [2]
@@ -2706,7 +2684,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGstealth|r",
 			[51] = 1558286302,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [123]
+		}, -- [122]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:10785:Player-11-0B5D6C28:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Darkheart Thicket]|h|r!", -- [1]
 			"Kizzminut-Tichondrius", -- [2]
@@ -2728,7 +2706,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Kizzminut|r",
 			[51] = 1558286375,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [124]
+		}, -- [123]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13289:Player-11-0A441B60:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Defense of Dazar'alor]|h|r!", -- [1]
 			"Herbitual-Tichondrius", -- [2]
@@ -2750,7 +2728,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcHerbitual|r",
 			[51] = 1558286386,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [125]
+		}, -- [124]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:6593:Player-11-0B3A439D:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Experienced Pet Battler]|h|r!", -- [1]
 			"Cöven-Tichondrius", -- [2]
@@ -2772,7 +2750,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Cöven|r",
 			[51] = 1558286644,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [126]
+		}, -- [125]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:1176:Player-11-0B67F6F8:1:5:19:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
 			"Sauccin-Tichondrius", -- [2]
@@ -2794,29 +2772,51 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sauccin|r",
 			[51] = 1558313093,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [126]
+		{
+			"Pardon me, I see you are not in a guild.< The Defiant Ones>  is a Cross Realm Guild . All mature adults 18 & over welcome. Whisper me \"LF GUILD\" for an invite.", -- [1]
+			"Capchica-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Capchica-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			4, -- [11]
+			"Player-11-0B5FCC27", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Capchica|r",
+			[51] = 1569027741,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/g aww I am so sad to see two warriors hating warriors. :,( My first char is arms", -- [1]
-		"/i fuck....", -- [2]
-		"/i Oh so the secret", -- [3]
-		"/reload", -- [4]
-		"/i oom", -- [5]
-		"/i oof", -- [6]
-		"/i Hi hi :)", -- [7]
-		"/s Thanks", -- [8]
-		"/g Hello", -- [9]
-		"/i anyonhe have mana table thing?", -- [10]
-		"/i uhh... ouch. :(", -- [11]
-		"/dance", -- [12]
-		"/g :o", -- [13]
-		"/i What happened to that other guy?", -- [14]
-		"/i :D thanks", -- [15]
-		"/i Man this runback.", -- [16]
-		"/i Thanks@", -- [17]
-		"/i for this boss is to pull to door?", -- [18]
-		"/g Im new, are WW fun in pvp", -- [19]
-		"/i yyay thx guys", -- [20]
+		"/i fuck....", -- [1]
+		"/reload", -- [2]
+		"/i oof", -- [3]
+		"/s Thanks", -- [4]
+		"/i anyonhe have mana table thing?", -- [5]
+		"/dance", -- [6]
+		"/i What happened to that other guy?", -- [7]
+		"/i Man this runback.", -- [8]
+		"/i for this boss is to pull to door?", -- [9]
+		"/i yyay thx guys", -- [10]
+		"/i Oh so the secret", -- [11]
+		"/i Hi hi :)", -- [12]
+		"/i uhh... ouch. :(", -- [13]
+		"/i :D thanks", -- [14]
+		"/g Im new, are WW fun in pvp", -- [15]
+		"/i oom", -- [16]
+		"/g :o", -- [17]
+		"/g aww I am so sad to see two warriors hating warriors. :,( My first char is arms", -- [18]
+		"/i Thanks@", -- [19]
+		"/g Hello", -- [20]
 	},
 	["CliqueDatatext"] = {
 	},

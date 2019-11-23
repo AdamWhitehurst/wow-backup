@@ -3388,6 +3388,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Figment of Doubt",
 		},
+		[93857] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
+			},
+			["source"] = "Baron Silverlaine",
+		},
 		[15976] = {
 			["school"] = 1,
 			["type"] = "DEBUFF",
@@ -3396,14 +3404,6 @@ EncounterDetailsDB = {
 				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
 			["source"] = "Razorlash",
-		},
-		[93857] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
-			},
-			["source"] = "Baron Silverlaine",
 		},
 		[153556] = {
 			["school"] = 12,
@@ -3845,12 +3845,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Bogey-Rivendare",
 		},
-		[19627] = {
-			["school"] = 4,
+		[119300] = {
+			["school"] = 32,
 			["token"] = {
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Flameguard",
+			["source"] = "Dark Shaman Koranthal",
 		},
 		[19659] = {
 			["school"] = 4,
@@ -3871,14 +3873,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Kresh",
 		},
-		[119300] = {
-			["school"] = 32,
+		[19627] = {
+			["school"] = 4,
 			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Dark Shaman Koranthal",
+			["source"] = "Flameguard",
 		},
 		[10341] = {
 			["school"] = 8,
@@ -3911,13 +3911,6 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Flamewaker",
 		},
-		[15496] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Skeletal Berserker",
-		},
 		[119684] = {
 			["school"] = 1,
 			["type"] = "DEBUFF",
@@ -3929,6 +3922,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Xin the Weaponmaster",
 		},
+		[38391] = {
+			["school"] = 4,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
+			},
+			["source"] = "Searing Destroyer",
+		},
 		[7965] = {
 			["school"] = 1,
 			["type"] = "BUFF",
@@ -3937,15 +3939,6 @@ EncounterDetailsDB = {
 				["SPELL_CAST_SUCCESS"] = true,
 			},
 			["source"] = "Lord Cobrahn",
-		},
-		[21833] = {
-			["school"] = 4,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Tinkerer Gizlock",
 		},
 		[151774] = {
 			["school"] = 4,
@@ -3963,6 +3956,15 @@ EncounterDetailsDB = {
 				["SPELL_DAMAGE"] = true,
 			},
 			["source"] = "Glintrok Hexxer",
+		},
+		[21833] = {
+			["school"] = 4,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+			},
+			["source"] = "Tinkerer Gizlock",
 		},
 		[150879] = {
 			["school"] = 1,
@@ -4095,14 +4097,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Wise Mari",
 		},
-		[38391] = {
-			["school"] = 4,
+		[15496] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "Searing Destroyer",
+			["source"] = "Skeletal Berserker",
 		},
 		[150881] = {
 			["school"] = 1,
@@ -4565,10 +4565,10 @@ EncounterDetailsDB = {
 		[93697] = {
 			["school"] = 8,
 			["token"] = {
-				["SPELL_CAST_START"] = true,
 				["SPELL_DAMAGE"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
 				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
 			},
 			["source"] = "Lord Walden",
 		},

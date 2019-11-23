@@ -10,6 +10,7 @@ local format = string.format
 local C_AzeriteItem_FindActiveAzeriteItem = C_AzeriteItem.FindActiveAzeriteItem
 local C_AzeriteItem_GetAzeriteItemXPInfo = C_AzeriteItem.GetAzeriteItemXPInfo
 local C_AzeriteItem_GetPowerLevel = C_AzeriteItem.GetPowerLevel
+local C_AzeriteItem_IsAzeriteItemAtMaxLevel = C_AzeriteItem.IsAzeriteItemAtMaxLevel
 local InCombatLockdown = InCombatLockdown
 local CreateFrame = CreateFrame
 local ARTIFACT_POWER = ARTIFACT_POWER
@@ -29,7 +30,7 @@ function mod:UpdateAzerite(event, unit)
 	local bar = self.azeriteBar
 	local azeriteItemLocation = C_AzeriteItem_FindActiveAzeriteItem()
 
-	if not azeriteItemLocation or (event == "PLAYER_REGEN_DISABLED" and self.db.azerite.hideInCombat) then
+	if not azeriteItemLocation or (event == "PLAYER_REGEN_DISABLED" and self.db.azerite.hideInCombat) or C_AzeriteItem_IsAzeriteItemAtMaxLevel() then
 		bar:Hide()
 	elseif azeriteItemLocation and (not self.db.azerite.hideInCombat or not InCombatLockdown()) then
 		bar:Show()
@@ -77,8 +78,8 @@ function mod:AzeriteBar_OnEnter()
 	_G.GameTooltip:ClearLines()
 	_G.GameTooltip:SetOwner(self, 'ANCHOR_CURSOR', 0, -4)
 
-	local azeriteItemLocation = C_AzeriteItem_FindActiveAzeriteItem();
-	local azeriteItem = Item:CreateFromItemLocation(azeriteItemLocation);
+	local azeriteItemLocation = C_AzeriteItem_FindActiveAzeriteItem()
+	local azeriteItem = Item:CreateFromItemLocation(azeriteItemLocation)
 	local xp, totalLevelXP = C_AzeriteItem_GetAzeriteItemXPInfo(azeriteItemLocation)
 	local currentLevel = C_AzeriteItem_GetPowerLevel(azeriteItemLocation)
 	local xpToNextLevel = totalLevelXP - xp
@@ -87,8 +88,8 @@ function mod:AzeriteBar_OnEnter()
 		local azeriteItemName = azeriteItem:GetItemName()
 
 		--[[ From Blizz Code
-		GameTooltip:SetText(AZERITE_POWER_TOOLTIP_TITLE:format(currentLevel, xpToNextLevel), HIGHLIGHT_FONT_COLOR:GetRGB());
-		GameTooltip:AddLine(AZERITE_POWER_TOOLTIP_BODY:format(azeriteItemName));
+		GameTooltip:SetText(AZERITE_POWER_TOOLTIP_TITLE:format(currentLevel, xpToNextLevel), HIGHLIGHT_FONT_COLOR:GetRGB())
+		GameTooltip:AddLine(AZERITE_POWER_TOOLTIP_BODY:format(azeriteItemName))
 		]]
 
 		_G.GameTooltip:AddDoubleLine(ARTIFACT_POWER, azeriteItemName.." ("..currentLevel..")", nil,  nil, nil, 0.90, 0.80, 0.50) -- Temp Locale

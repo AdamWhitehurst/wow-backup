@@ -40,8 +40,6 @@ local function HandleGoldIcon(button)
 	iconTexture:SetTexCoord(unpack(E.TexCoords))
 	iconTexture:SetDrawLayer("OVERLAY")
 	iconTexture:SetParent(Button.backdrop)
-	iconTexture:SetSnapToPixelGrid(false)
-	iconTexture:SetTexelSnappingBias(0)
 	iconTexture:SetInside()
 
 	count:SetParent(Button.backdrop)
@@ -64,8 +62,6 @@ local function SkinItemButton(parentFrame, _, index)
 		item.Icon:SetTexCoord(unpack(E.TexCoords))
 		item.Icon:SetDrawLayer("OVERLAY")
 		item.Icon:SetParent(item.backdrop)
-		item.Icon:SetSnapToPixelGrid(false)
-		item.Icon:SetTexelSnappingBias(0)
 		item.Icon:SetInside()
 
 		hooksecurefunc(item.IconBorder, "SetVertexColor", function(self, r, g, b)
@@ -75,6 +71,12 @@ local function SkinItemButton(parentFrame, _, index)
 		hooksecurefunc(item.IconBorder, "Hide", function(self)
 			self:GetParent().backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
 		end)
+
+		local r, g, b, a = item.IconBorder:GetVertexColor()
+		if r then
+			item.IconBorder:SetTexture()
+			item.backdrop:SetBackdropBorderColor(r, g, b, a)
+		end
 
 		item.Count:SetDrawLayer("OVERLAY")
 		item.Count:SetParent(item.backdrop)
@@ -112,6 +114,7 @@ end
 local function LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.lfg ~= true then return end
 
+
 	local PVEFrame = _G.PVEFrame
 	S:HandlePortraitFrame(PVEFrame, true)
 
@@ -125,9 +128,10 @@ local function LoadSkin()
 	S:HandleButton(_G.ScenarioQueueFrameRandomScrollFrameChildFrameBonusRepFrame.ChooseButton)
 	S:HandleScrollBar(_G.ScenarioQueueFrameRandomScrollFrameScrollBar);
 
-	_G.GroupFinderFrameGroupButton1.icon:SetTexture("Interface\\Icons\\INV_Helmet_08")
-	_G.GroupFinderFrameGroupButton2.icon:SetTexture("Interface\\Icons\\inv_helmet_06")
-	_G.GroupFinderFrameGroupButton3.icon:SetTexture("Interface\\Icons\\Icon_Scenarios")
+	_G.GroupFinderFrame.groupButton1.icon:SetTexture("Interface\\Icons\\INV_Helmet_08")
+	_G.GroupFinderFrame.groupButton2.icon:SetTexture("Interface\\LFGFrame\\UI-LFR-PORTRAIT")
+	_G.GroupFinderFrame.groupButton3.icon:SetTexture("Interface\\Icons\\Icon_Scenarios")
+	_G.GroupFinderFrame.groupButton4.icon:SetTexture("Interface\\Icons\\Achievement_General_StayClassy")
 
 	_G.LFGDungeonReadyDialogBackground:Kill()
 	S:HandleButton(_G.LFGDungeonReadyDialogEnterDungeonButton)
@@ -190,7 +194,7 @@ local function LoadSkin()
 	_G.LFGDungeonReadyDialog.bottomArt:SetAlpha(0)
 	S:HandleCloseButton(_G.LFGDungeonReadyStatusCloseButton)
 
-	local roleButtons = {
+	local RoleButtons1 = {
 		_G.LFDQueueFrameRoleButtonHealer,
 		_G.LFDQueueFrameRoleButtonDPS,
 		_G.LFDQueueFrameRoleButtonLeader,
@@ -207,7 +211,7 @@ local function LoadSkin()
 		_G.LFGListApplicationDialog.DamagerButton,
 	}
 
-	for _, roleButton in pairs(roleButtons) do
+	for _, roleButton in pairs(RoleButtons1) do
 		S:HandleCheckBox(roleButton.checkButton or roleButton.CheckButton, true)
 		roleButton:DisableDrawLayer("ARTWORK")
 		roleButton:DisableDrawLayer("OVERLAY")
@@ -412,21 +416,20 @@ local function LoadSkin()
 	S:HandleButton(_G.LFRQueueFrameFindGroupButton)
 	S:HandleButton(_G.LFRQueueFrameAcceptCommentButton)
 
+	local RoleButtons2 = {
+		_G.LFRQueueFrameRoleButtonHealer,
+		_G.LFRQueueFrameRoleButtonDPS,
+		_G.LFRQueueFrameRoleButtonTank,
+	}
+
 	S:HandleScrollBar(_G.LFRQueueFrameCommentScrollFrameScrollBar)
 	S:HandleScrollBar(_G.LFDQueueFrameSpecificListScrollFrameScrollBar)
 	_G.LFDQueueFrameSpecificListScrollFrame:StripTextures()
 	_G.RaidBrowserFrame:HookScript('OnShow', function()
 		if not _G.LFRQueueFrameSpecificListScrollFrameScrollBar.skinned then
 			S:HandleScrollBar(_G.LFRQueueFrameSpecificListScrollFrameScrollBar)
-
-			local RoleButtons = {
-				_G.LFRQueueFrameRoleButtonHealer,
-				_G.LFRQueueFrameRoleButtonDPS,
-				_G.LFRQueueFrameRoleButtonTank,
-			}
-
 			_G.LFRBrowseFrame:StripTextures()
-			for _, roleButton in pairs(RoleButtons) do
+			for _, roleButton in pairs(RoleButtons2) do
 				roleButton:SetNormalTexture("")
 				S:HandleCheckBox(roleButton.checkButton, nil, true)
 				roleButton:GetChildren():SetFrameLevel(roleButton:GetChildren():GetFrameLevel() + 1)
@@ -453,7 +456,7 @@ local function LoadSkin()
 					if texPath ~= nil then
 						self:SetTexture();
 					end
-				end	)
+				end)
 			end
 
 			for i=1, 7 do
@@ -536,6 +539,7 @@ local function LoadSkin()
 	S:HandleButton(_G.LFGListApplicationDialog.CancelButton)
 	S:HandleEditBox(_G.LFGListApplicationDialogDescription)
 
+	_G.LFGListInviteDialog:StripTextures()
 	_G.LFGListInviteDialog:SetTemplate("Transparent")
 	S:HandleButton(_G.LFGListInviteDialog.AcknowledgeButton)
 	S:HandleButton(_G.LFGListInviteDialog.AcceptButton)

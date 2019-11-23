@@ -11,7 +11,7 @@
 
 
 local WL_NAME = "|cffffff7fWowhead Looter|r";
-local WL_VERSION = 80100;
+local WL_VERSION = 80200;
 local WL_VERSION_PATCH = 0;
 local WL_ADDONNAME, WL_ADDONTABLE = ...
 
@@ -186,6 +186,14 @@ local WL_LOOT_TOAST_BAGS = {
     [254385] = 152650,  -- scuffed krokul cache
     
     
+};
+
+-- Openable loot with toast but no spell
+local WL_LOOT_TOAST_NOSPELL =
+{
+    [170061] = true, -- Rustbolt Supplies
+    [169939] = true, -- Ankoan Supplies
+    [169940] = true, -- Unshackled Supplies
 };
 
 local WL_REP_MODS = {
@@ -416,6 +424,15 @@ local WL_SPECIAL_CONTAINERS = {
     [128327] = true, -- small-pouch-of-coins
     [147384] = true,
     [147446] = true, -- brawler's footlocker
+
+    -- BFA 8.2
+    [170061] = true, -- Rustbolt Supplies
+    [169939] = true, -- Ankoan Supplies
+    [169940] = true, -- Unshackled Supplies
+    [168395] = true, -- Irradiated box of assorted parts
+    [168094] = true, -- Faintly humming sea stones
+    [168266] = true, -- Strange recycling requisition
+    [168264] = true, -- Recycling requisition
 };
 
 -- garrison trading post NPCs, for today in draenor tracking
@@ -426,6 +443,8 @@ local WL_DAILY_NPCS = {
     '90675', '91014', '91015', '91016', '91017', '91361', '91026', '91364', '91363', '91362', -- erris/kura battle pet NPCs
     '110321', '108879', '109943', '110378', '109331', '102075', '107023', '99929', '108829', '106984', '108678', -- world bosses, achievement=11160
     '143762', '143764', '143763', '143757', '143754', '143756', '143755', '143761', '143760', '137438', '131261', '137608', '131246', '143759', '143758', '137439', '143753', -- seafarer's dubloon vendors
+    -- Mechagon daily visitors
+    '151007', '151936', '152499', '152501', '154335', '154967', '154982', '155187', '155254', '155357', '155450',
 };
 
 -- dungeon difficulty -> npcs we're looking for in that difficulty
@@ -622,17 +641,14 @@ function wlEvent_PLAYER_LOGIN(self)
 
     wlId = wlConcat(wlSelectOne(1, UnitName("player")), GetRealmName());
     
-    -- Only add the data to the wlProfile if the character is level 10 or above
-    if UnitLevel("player") > 10 then
-        wlUpdateVariable(wlProfile, wlId, "init", {
-            faction = UnitFactionGroup("player"),
-            race = select(2, UnitRace("player")),
-            class = select(2, UnitClass("player")),
-            sex = UnitSex("player"),
-            n = 0,
-        });
-        wlN = wlUpdateVariable(wlProfile, wlId, "n", "add", 1);
-    end
+    wlUpdateVariable(wlProfile, wlId, "init", {
+        faction = UnitFactionGroup("player"),
+        race = select(2, UnitRace("player")),
+        class = select(2, UnitClass("player")),
+        sex = UnitSex("player"),
+        n = 0,
+    });
+    wlN = wlUpdateVariable(wlProfile, wlId, "n", "add", 1);
     
     wlUpdateVariable(wlEvent, wlId, wlN, wlGetNextEventId(), "set", {
         what = "login",
@@ -2243,6 +2259,10 @@ function wlSeenWorldQuests()
         end
     end
 
+    -- These zones are weird, too. Figures.
+    checkMaps[#checkMaps + 1] = C_Map.GetMapInfo(1355); -- Nazjatar
+    checkMaps[#checkMaps + 1] = C_Map.GetMapInfo(1462); -- Mechagon
+
     -- Query for all the world quests under each map
     for i = 1, #checkMaps, 1 do
         local rows = C_TaskQuest.GetQuestsForPlayerByMapID(checkMaps[i].mapID)
@@ -2269,13 +2289,23 @@ end
 --**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--
 
 function wlSeenIslandExpeditions()
+
+    -- BFA 8.2 GetTextureWithStateVisualizationInfo renamed to GetTextureAndTextVisualizationInfo
+    local textureFunc = C_UIWidgetManager.GetTextureWithStateVisualizationInfo or C_UIWidgetManager.GetTextureAndTextVisualizationInfo;
+    if (not textureFunc) then
+        return;
+    end
+
     -- found in Blizzard_IslandsQueueUI.lua
     local ISLANDS_QUEUE_WIDGET_SET_ID = 127;
 
     for i,widget in ipairs(C_UIWidgetManager.GetAllWidgetsBySetID(ISLANDS_QUEUE_WIDGET_SET_ID)) do
-        local info = C_UIWidgetManager.GetTextureWithStateVisualizationInfo(widget.widgetID)
-        if info.shownState ~= 0 then
-            wlSeenDaily('t'..info.portraitTextureKitID)
+        local info = textureFunc(widget.widgetID);
+        if info and info.shownState ~= 0 then
+            local textureId = info.portraitTextureKitID or info.textureKitID;
+            if (textureId) then
+                wlSeenDaily('t'..textureId);
+            end
         end
     end
 end
@@ -2604,7 +2634,12 @@ function wlEvent_SHOW_LOOT_TOAST(self, typeIdentifier, itemLink, quantity, specI
         return;
     end
     
-    if wlLootToastSourceId then
+    if wlLootToastSourceId or
+        (wlTracker.spell and
+         wlTracker.spell.action == "Opening" and
+         wlTracker.spell.kind == "item" and
+         WL_LOOT_TOAST_NOSPELL[wlTracker.spell.id]) then
+
         if not wlEvent or not wlId or not wlEvent[wlId] or not wlN or not wlEvent[wlId][wlN] then
             return;
         end
@@ -2631,7 +2666,10 @@ function wlEvent_SHOW_LOOT_TOAST(self, typeIdentifier, itemLink, quantity, specI
         else
             wlTracker.spell.action = "Opening";
             wlTracker.spell.kind = "item";
-            wlTracker.spell.id = wlLootToastSourceId;
+            wlTracker.spell.lootToastSourceId = wlLootToastSourceId;
+            if (wlLootToastSourceId) then
+                wlTracker.spell.id = wlLootToastSourceId;
+            end
             wlUpdateVariable(wlEvent, wlId, wlN, eventId, "initArray", 0);
             wlEvent[wlId][wlN][eventId].what = "loot";
             wlTableCopy(wlEvent[wlId][wlN][eventId], wlTracker.spell);

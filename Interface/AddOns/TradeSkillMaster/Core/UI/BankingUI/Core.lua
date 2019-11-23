@@ -156,7 +156,9 @@ function private.GroupTreeGetList(groups, headerNameLookup)
 end
 
 function private.UpdateCurrentModule(frame)
-	ReagentBankFrame_OnShow(ReagentBankFrame)
+	if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+		ReagentBankFrame_OnShow(ReagentBankFrame)
+	end
 	-- update nav buttons
 	local navButtonsFrame = frame:GetElement("content.navButtons")
 	for _, module in ipairs(MODULE_LIST) do
@@ -355,12 +357,12 @@ function private.SimpleBtnOnClick(button)
 end
 
 function private.GroupBtnOnClick(button)
-	local groups = TSMAPI_FOUR.Util.AcquireTempTable()
+	local groups = TSM.TempTable.Acquire()
 	for _, groupPath in button:GetElement("__base.content.groupTree"):SelectedGroupsIterator() do
 		groups[groupPath] = true
 	end
 	private.fsm:ProcessEvent("EV_BUTTON_CLICKED", button, button:GetContext(), groups)
-	TSMAPI_FOUR.Util.ReleaseTempTable(groups)
+	TSM.TempTable.Release(groups)
 end
 
 

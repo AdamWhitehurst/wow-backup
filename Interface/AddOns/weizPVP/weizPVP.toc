@@ -1,0 +1,36 @@
+﻿## Interface: 80200
+## Title: weiz|cffffa012PVP|r
+## Version: 1.81.1
+#--------------------------------------------------------------------
+## Notes: World PVP Multitool: Detect, analyze, and display enemies. Crosshairs, Stealth Alerts, Phase Detection and more!
+## Author: weiz
+#--------------------------------------------------------------------
+## OptionalDeps:  Ace3, LibSharedMedia-3.0, LibDDI-1.0, LibDBIcon-1.0
+## SavedVariables: weizPVPDatabase
+## SavedVariablesPerCharacter: weizPVPOptions
+#--------------------------------------------------------------------
+## DefaultState: enabled
+## LoadOnDemand: 0
+#--------------------------------------------------------------------
+## X-Website: https://www.curseforge.com/wow/addons/weizpvp
+## X-Curse-Project-ID: 300711
+## X-WoWI-ID: 24779
+# Load: Dependencies
+embeds.xml
+# Load: Addon
+bindings.xml
+Init.lua
+Data/DB.lua
+Modules/Utils.lua
+Modules/Alerts.lua
+Modules/Frames.lua
+Modules/Bars.lua
+Modules/Buttons.lua
+Modules/StatusBar.lua
+Modules/Config.lua
+Modules/Events.lua
+Modules/Lists.lua
+Modules/DataProcessing.lua
+Modules/SplashScreen.lua
+Modules/LDB.lua
+Plugins/Crosshair/Crosshair.lua

@@ -10,6 +10,15 @@ CliqueDB3 = {
 			["specswap"] = false,
 			["spec2_profileKey"] = "Magnr - Tichondrius",
 		},
+		["Andalsam - Tichondrius"] = {
+			["spec1_profileKey"] = "Andalsam - Tichondrius",
+			["spec3_profileKey"] = "Andalsam - Tichondrius",
+			["downclick"] = false,
+			["fastooc"] = false,
+			["specswap"] = false,
+			["spec2_profileKey"] = "Andalsam - Tichondrius",
+			["spec4_profileKey"] = "Andalsam - Tichondrius",
+		},
 		["Tirdailough - Tichondrius"] = {
 			["spec1_profileKey"] = "Tirdailough - Tichondrius",
 			["spec3_profileKey"] = "Tirdailough - Tichondrius",
@@ -20,11 +29,11 @@ CliqueDB3 = {
 		},
 		["Zandro - Tichondrius"] = {
 			["spec1_profileKey"] = "Zandro - Tichondrius",
-			["specswap"] = false,
+			["spec3_profileKey"] = "Zandro - Tichondrius",
 			["downclick"] = false,
 			["fastooc"] = false,
-			["spec3_profileKey"] = "Zandro - Tichondrius",
 			["spec2_profileKey"] = "Zandro - Tichondrius",
+			["specswap"] = false,
 		},
 		["Umbrick - Emerald Dream"] = {
 			["spec1_profileKey"] = "Umbrick - Emerald Dream",
@@ -39,10 +48,10 @@ CliqueDB3 = {
 			["specswap"] = false,
 			["downclick"] = false,
 			["alerthidden"] = true,
-			["spec4_profileKey"] = "Wharapi - Tichondrius",
+			["fastooc"] = false,
 			["spec3_profileKey"] = "Wharapi - Tichondrius",
 			["spec2_profileKey"] = "Wharapi - Tichondrius",
-			["fastooc"] = false,
+			["spec4_profileKey"] = "Wharapi - Tichondrius",
 		},
 		["Bjorgr - Tichondrius"] = {
 			["spec1_profileKey"] = "Bjorgr - Tichondrius",
@@ -70,9 +79,9 @@ CliqueDB3 = {
 		},
 		["Umbrick - Tichondrius"] = {
 			["spec1_profileKey"] = "Umbrick - Tichondrius",
-			["fastooc"] = false,
 			["specswap"] = false,
 			["downclick"] = false,
+			["fastooc"] = false,
 			["spec3_profileKey"] = "Umbrick - Tichondrius",
 			["spec2_profileKey"] = "Umbrick - Tichondrius",
 		},
@@ -86,62 +95,25 @@ CliqueDB3 = {
 		},
 	},
 	["profileKeys"] = {
-		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
-		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
 		["Honabar - Emerald Dream"] = "Honabar - Emerald Dream",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandroh - Tichondrius"] = "Zandroh - Tichondrius",
-		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Umbrick - Emerald Dream",
-		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
-		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
 		["Iscrackl - Tichondrius"] = "Iscrackl - Tichondrius",
+		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
+		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
+		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
+		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
+		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["profiles"] = {
-		["Harwapa - Tichondrius"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Magnr - Tichondrius"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
 		["Honabar - Emerald Dream"] = {
 			["bindings"] = {
 				{
@@ -161,32 +133,13 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Zandro - Tichondrius"] = {
+		["Andalsam - Tichondrius"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
 						["default"] = true,
 					},
 					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Curaney - Tichondrius"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -218,7 +171,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Grandh - Tichondrius"] = {
+		["Zandro - Tichondrius"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -235,6 +188,15 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 				}, -- [2]
+				{
+					["spell"] = "Provoke",
+					["key"] = "T",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 620830,
+					["type"] = "spell",
+				}, -- [3]
 			},
 		},
 		["Umbrick - Emerald Dream"] = {
@@ -365,7 +327,83 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
+		["Mcpokesalot - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Iscrackl - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Magnr - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
 		["Tirdailough - Tichondrius"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Curaney - Tichondrius"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",
@@ -461,13 +499,13 @@ CliqueDB3 = {
 				}, -- [6]
 			},
 		},
-		["Mcpokesalot - Tichondrius"] = {
+		["Harwapa - Tichondrius"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -480,7 +518,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Iscrackl - Tichondrius"] = {
+		["Grandh - Tichondrius"] = {
 			["bindings"] = {
 				{
 					["sets"] = {

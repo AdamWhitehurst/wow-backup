@@ -9,7 +9,7 @@ if (TomCats and TomCats.Register) then
 --                }
 --            },
             name = "Love is in the Air",
-            version = "1.0.13"
+            version = "1.0.14"
         }
     )
 end
@@ -214,7 +214,7 @@ local function ADDON_LOADED(_, _, arg1)
                 GameTooltip:Hide()
             end
         }
-        if ("1.0.13" ~= AP["lastVersionSeen"]) then
+        if ("1.0.14" ~= AP["lastVersionSeen"]) then
             addon.charm.MinimapLoopPulseAnim:Play()
         end
     end

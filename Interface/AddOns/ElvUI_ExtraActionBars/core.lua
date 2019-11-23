@@ -85,7 +85,7 @@ function EAB:PLAYER_ENTERING_WORLD()
 	EAB:CreateBars()
 end
 
-function EAB:OnInitialize()
+function EAB:Initialize()
 	-- Register callback with LibElvUIPlugin
 	EP:RegisterPlugin(addon, EAB.InsertOptions)
 

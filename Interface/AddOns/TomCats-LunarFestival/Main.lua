@@ -64,7 +64,7 @@ if (TomCats and TomCats.Register) then
     TomCats:Register(
         {
             name = "Lunar Festival",
-            version = "1.0.20"
+            version = "1.0.21"
         }
     )
 end

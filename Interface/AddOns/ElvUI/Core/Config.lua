@@ -16,8 +16,7 @@ local EditBox_ClearFocus = EditBox_ClearFocus
 local RESET = RESET
 -- GLOBALS: ElvUIMoverPopupWindow, ElvUIMoverNudgeWindow, ElvUIMoverPopupWindowDropDown
 
-local grid
-local selectedValue = 'ALL'
+local selectedValue, grid = 'ALL'
 
 E.ConfigModeLayouts = {
 	'ALL',
@@ -56,7 +55,7 @@ function E:Grid_Hide()
 	end
 end
 
-function E:ToggleConfigMode(override, configType)
+function E:ToggleMoveMode(override, configType)
 	if InCombatLockdown() then return; end
 	if override ~= nil and override ~= '' then E.ConfigurationMode = override end
 
@@ -69,7 +68,7 @@ function E:ToggleConfigMode(override, configType)
 
 		ElvUIMoverPopupWindow:Show()
 
-		if IsAddOnLoaded("ElvUI_Config") then
+		if IsAddOnLoaded("ElvUI_OptionsUI") then
 			if E.Libs.AceConfigDialog then
 				E.Libs.AceConfigDialog:Close("ElvUI")
 			end
@@ -181,21 +180,21 @@ end
 
 local function ConfigMode_OnClick(self)
 	selectedValue = self.value
-	E:ToggleConfigMode(false, self.value)
-	_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, self.value);
+	E:ToggleMoveMode(false, self.value)
+	_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, self.value)
 end
 
 local function ConfigMode_Initialize()
-	local info = _G.UIDropDownMenu_CreateInfo();
-	info.func = ConfigMode_OnClick;
+	local info = _G.UIDropDownMenu_CreateInfo()
+	info.func = ConfigMode_OnClick
 
 	for _, configMode in ipairs(E.ConfigModeLayouts) do
-		info.text = E.ConfigModeLocalizedStrings[configMode];
-		info.value = configMode;
-		_G.UIDropDownMenu_AddButton(info);
+		info.text = E.ConfigModeLocalizedStrings[configMode]
+		info.value = configMode
+		_G.UIDropDownMenu_AddButton(info)
 	end
 
-	_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, selectedValue);
+	_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, selectedValue)
 end
 
 function E:NudgeMover(nudgeX, nudgeY)
@@ -227,7 +226,7 @@ function E:UpdateNudgeFrame(mover, x, y)
 end
 
 function E:AssignFrameToNudge()
-	ElvUIMoverNudgeWindow.child = self;
+	ElvUIMoverNudgeWindow.child = self
 	E:UpdateNudgeFrame(self)
 end
 
@@ -245,7 +244,7 @@ function E:CreateMoverPopup()
 	f:Point("BOTTOM", _G.UIParent, 'CENTER', 0, 100)
 	f:SetScript('OnHide', function()
 		if ElvUIMoverPopupWindowDropDown then
-			_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, 'ALL');
+			_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, 'ALL')
 		end
 	end)
 	f:SetBackdropBorderColor(unpack(E.media.rgbvaluecolor))
@@ -291,14 +290,14 @@ function E:CreateMoverPopup()
 	_G[lock:GetName() .. "Text"]:SetText(L["Lock"])
 
 	lock:SetScript("OnClick", function()
-		E:ToggleConfigMode(true)
+		E:ToggleMoveMode(true)
 
-		if IsAddOnLoaded("ElvUI_Config") and E.Libs.AceConfigDialog then
+		if IsAddOnLoaded("ElvUI_OptionsUI") and E.Libs.AceConfigDialog then
 			E.Libs.AceConfigDialog:Open('ElvUI')
 		end
 
 		selectedValue = 'ALL'
-		_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, selectedValue);
+		_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, selectedValue)
 	end)
 
 	local align = CreateFrame('EditBox', f:GetName()..'EditBox', f, 'InputBoxTemplate')
@@ -350,7 +349,7 @@ function E:CreateMoverPopup()
 		if mover:IsShown() then
 			mover:Hide()
 			E:Grid_Hide()
-			E:ToggleConfigMode(true)
+			E:ToggleMoveMode(true)
 		end
 	end)
 
@@ -361,7 +360,7 @@ function E:CreateMoverPopup()
 	configMode.text:Point('RIGHT', configMode.backdrop, 'LEFT', -2, 0)
 	configMode.text:SetText(L["Config Mode:"])
 
-	_G.UIDropDownMenu_Initialize(configMode, ConfigMode_Initialize);
+	_G.UIDropDownMenu_Initialize(configMode, ConfigMode_Initialize)
 
 	local nudgeFrame = CreateFrame('Frame', 'ElvUIMoverNudgeWindow', E.UIParent)
 	nudgeFrame:SetFrameStrata("DIALOG")

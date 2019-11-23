@@ -1,18 +1,20 @@
 local AS, ASL = unpack(AddOnSkins)
-
 local AddOnName = ...
 
-local AcceptFrame, BugReportFrame
-
+-- Cache global variables
+--Lua functions
+local _G = _G
 local select, pairs, ipairs, type, pcall = select, pairs, ipairs, type, pcall
 local floor, print, format, strlower, strfind, strmatch = floor, print, format, strlower, strfind, strmatch
 local sort, tinsert = sort, tinsert
-local _G = _G
+--WoW API / Variables
 local IsAddOnLoaded, C_Timer = IsAddOnLoaded, C_Timer
+-- GLOBALS:
 
 AS.SkinErrors = {}
-AS.ErrorIndex = 0
-AS.ErrorCurrentIndex = 1
+
+local AcceptFrame
+local Validator = CreateFrame('Frame')
 
 function AS:CheckOption(optionName, ...)
 	for i = 1, select('#', ...) do
@@ -136,7 +138,7 @@ function AS:UnregisterSkin(addonName, skinFunc)
 end
 
 local function GenerateEventFunction()
-	local eventHandler = function(self, event, ...)
+	local eventHandler = function(_, event, ...)
 		for skin, funcs in pairs(AS.skins) do
 			if AS:CheckOption(skin) and AS.events[event][skin] then
 				for _, func in ipairs(funcs) do
@@ -159,12 +161,15 @@ function AS:RegisteredSkin(addonName, priority, func, events)
 	AS.skins[addonName][priority] = func
 	for event, _ in pairs(events) do
 		if not strfind(event, '%[') then
-			if not AS.events[event] then
-				AS[event] = GenerateEventFunction()
-				AS:RegisterEvent(event)
-				AS.events[event] = {}
+			if pcall(Validator.RegisterEvent, Validator, event) then
+				Validator:UnregisterEvent(event)
+				if not AS.events[event] then
+					AS[event] = GenerateEventFunction()
+					AS:RegisterEvent(event)
+					AS.events[event] = {}
+				end
+				AS.events[event][addonName] = true
 			end
-			AS.events[event][addonName] = true
 		end
 	end
 end
@@ -190,18 +195,16 @@ function AS:CallSkin(addonName, func, event, ...)
 	else
 		local pass, error = pcall(func, self, event, ...)
 		if not pass then
+			AS.FoundError = true
 			AddOnSkinsDS[AS.Version] = AddOnSkinsDS[AS.Version] or {}
 			AddOnSkinsDS[AS.Version][addonName] = true
 			AS:SetOption(addonName, false)
+			local Name = AS:CheckAddOn(addonName) and format('%s %s', addonName, AS:GetAddOnVersion(addonName) or 'UNKNOWN') or addonName
 
-			AS.ErrorIndex = AS.ErrorIndex + 1
-			AS.SkinErrors[AS.ErrorIndex] = { Name = AS:CheckAddOn(addonName) and format('%s %s', addonName, AS:GetAddOnVersion(addonName)) or addonName, Error = format('```lua\n%s\n```\n\nGenerated with %s %s', error, AS.Title, AS.Version) }
+			tinsert(AS.SkinErrors, Name)
 
 			if AS.RunOnce then
-				AS.ErrorCurrentIndex = AS.ErrorIndex
-				AS:BugReportFrame(AS.ErrorIndex)
-			else
-				AS.FoundError = true
+				AS:Print(format('%s: There was an error in the following skin: %s', AS.Version, Name))
 			end
 		end
 	end
@@ -233,18 +236,15 @@ function AS:UpdateMedia()
 	AS.HideShadows = false
 end
 
-function AS:StartSkinning(event)
-	if AS:CheckAddOn('ElvUI') then
-		if tonumber(ElvUI[1].version) < 10.91 then
-			AS:AcceptFrame(format('AddOnSkins is not compatible with ElvUI %s.\nPlease update ElvUI at www.tukui.org', ElvUI[1].version))
-			return
-		end
-	end
+function AS:GetPixelScale()
+	AS.mult = max(0.4, min(1.15, 768 / AS.ScreenHeight))
+end
 
+function AS:StartSkinning(event)
 	AS:UnregisterEvent(event)
+	AS:GetPixelScale()
 
 	AS.Color = AS:CheckOption('ClassColor') and AS.ClassColor or { 0, 0.44, .87, 1 }
-	AS.Mult = PixelUtil.GetNearestPixelSize(1, AS:Round(max(0.4, min(1.15, 768 / AS.ScreenHeight)), 5))
 	AS.ParchmentEnabled = AS:CheckOption('Parchment')
 
 	AS:UpdateMedia()
@@ -297,16 +297,12 @@ function AS:StartSkinning(event)
 		AS:AcceptFrame('AddOnSkins is not compatible with AddonLoader.\nPlease remove it if you would like all the skins to function.')
 	end
 
-	if AS.FoundError then
-		AS:BugReportFrame(1)
+	if not AS:CheckOption('SkinDebug') and AS.FoundError then
+		AS:Print(format('%s: There was an error in the following skin(s): %s', AS.Version, table.concat(AS.SkinErrors, ", ")))
+		AS:Print(format('Please report this to Azilroka immediately @ %s', AS:PrintURL(AS.TicketTracker)))
 	end
 
-	AS:CreateChangeLog()
-
-	if AS:CheckOption('ChangeLogVersion') == nil or tonumber(AS:CheckOption('ChangeLogVersion')) < tonumber(AS.Version) then
-		AS:SetOption('ChangeLogVersion', AS.Version)
-		AS:ToggleChangeLog()
-	end
+	AS:EmbedInit()
 
 	AS.RunOnce = true
 end
@@ -322,8 +318,6 @@ function AS:Init(event, addon)
 
 	if event == 'PLAYER_LOGIN' then
 		AS:BuildOptions()
-		AS:UpdateMedia()
-		AS:EmbedInit()
 
 		if _G.EnhancedShadows then
 			AS.ES = _G.EnhancedShadows
@@ -332,14 +326,19 @@ function AS:Init(event, addon)
 		AS.EP = LibStub('LibElvUIPlugin-1.0', true)
 		if AS.EP then
 			AS.EP:RegisterPlugin(AddOnName, AS.GetOptions)
+		else
+			AS:GetOptions()
 		end
 
-		AS:RegisterEvent('PET_BATTLE_CLOSE', 'AddNonPetBattleFrames')
-		AS:RegisterEvent('PET_BATTLE_OPENING_START', 'RemoveNonPetBattleFrames')
 		AS:RegisterEvent('PLAYER_ENTERING_WORLD', 'StartSkinning')
 
 		if AS.LSM then
 			AS.LSM:Register('statusbar', 'Solid', [[Interface\Buttons\WHITE8X8]])
+		end
+
+		if AS.Retail then
+			AS:RegisterEvent('PET_BATTLE_CLOSE', 'AddNonPetBattleFrames')
+			AS:RegisterEvent('PET_BATTLE_OPENING_START', 'RemoveNonPetBattleFrames')
 		end
 	end
 end
@@ -369,170 +368,6 @@ function AS:AcceptFrame(MainText, Function)
 	AcceptFrame:SetSize(AcceptFrame.Text:GetStringWidth() + 100, AcceptFrame.Text:GetStringHeight() + 60)
 	AcceptFrame.Accept:SetScript('OnClick', Function or function(self) AcceptFrame:Hide() end)
 	AcceptFrame:Show()
-end
-
-function AS:BugReportFrame(ErrorIndex)
-	if not BugReportFrame then
-		BugReportFrame = CreateFrame('Frame', 'AddOnSkinsBugReportFrame', UIParent)
-		AS:SkinFrame(BugReportFrame)
-		AS:CreateShadow(BugReportFrame)
-		BugReportFrame:SetPoint('CENTER', UIParent, 'CENTER')
-		BugReportFrame:SetFrameStrata('DIALOG')
-		BugReportFrame:SetSize(480, 230)
-		BugReportFrame:EnableMouse(true)
-		BugReportFrame:SetMovable(true)
-		BugReportFrame:RegisterForDrag('LeftButton')
-		BugReportFrame:SetClampedToScreen(true)
-
-		BugReportFrame.Title = BugReportFrame:CreateFontString(nil, "OVERLAY")
-		BugReportFrame.Title:SetFont(AS.Font, 14)
-		BugReportFrame.Title:SetPoint('TOP', BugReportFrame, 'TOP', 0, -4)
-		BugReportFrame.Title:SetText(ASL['AddOnSkins Bug Report'])
-
-		for _, Name in pairs({ 'GitLab', 'BugTitle', 'BugError'}) do
-			BugReportFrame[Name] = CreateFrame("EditBox", nil, BugReportFrame, "InputBoxTemplate")
-			BugReportFrame[Name]:SetAutoFocus(false)
-			BugReportFrame[Name]:SetFontObject(ChatFontNormal)
-			AS:SkinEditBox(BugReportFrame[Name])
-			BugReportFrame[Name]:SetTextInsets(3, 3, 3, 3)
-			BugReportFrame[Name]:SetMaxLetters(0)
-			BugReportFrame[Name].Text = BugReportFrame[Name]:CreateFontString(nil, 'OVERLAY', "ChatFontNormal")
-		end
-
-		BugReportFrame.GitLab:SetPoint("TOP", 0, -30)
-		BugReportFrame.GitLab:SetSize(250, 19)
-		BugReportFrame.GitLab:SetText(AS.TicketTracker)
-		BugReportFrame.GitLab.Text:SetPoint('RIGHT', BugReportFrame.GitLab, 'LEFT', -10, 0)
-		BugReportFrame.GitLab.Text:SetText('GitLab')
-
-		BugReportFrame.BugTitle:SetPoint("TOP", 0, -80)
-		BugReportFrame.BugTitle:SetSize(250, 19)
-		BugReportFrame.BugTitle.Text:SetPoint('RIGHT', BugReportFrame.BugTitle, 'LEFT', -10, 0)
-		BugReportFrame.BugTitle.Text:SetText('Ticket Title')
-
-		BugReportFrame.BugError:SetPoint("TOP", 0, -130)
-		BugReportFrame.BugError:SetSize(350, 150)
-		BugReportFrame.BugError:SetMultiLine(true)
-		BugReportFrame.BugError.Text:SetPoint('BOTTOM', BugReportFrame.BugError, 'TOP', 0, 5)
-		BugReportFrame.BugError.Text:SetText('Ticket Text')
-
-		BugReportFrame.Text = BugReportFrame:CreateFontString(nil, "OVERLAY")
-		BugReportFrame.Text:SetFont(AS.Font, 14)
-		BugReportFrame.Text:SetPoint('TOP', BugReportFrame, 'TOP', 0, -10)
-
-		BugReportFrame.Prev = CreateFrame('Button', nil, BugReportFrame, 'OptionsButtonTemplate')
-		AS:SkinButton(BugReportFrame.Prev)
-		BugReportFrame.Prev:SetSize(70, 25)
-		BugReportFrame.Prev:SetPoint('RIGHT', BugReportFrame, 'BOTTOM', -80, 20)
-		BugReportFrame.Prev:SetFormattedText('|cFFFFFFFF%s|r', PREVIOUS)
-
-		BugReportFrame.Prev:SetScript('OnClick', function()
-			AS.ErrorCurrentIndex = AS.ErrorCurrentIndex - 1
-			if AS.SkinErrors[AS.ErrorCurrentIndex] then
-				BugReportFrame.BugTitle:SetText(AS.SkinErrors[AS.ErrorCurrentIndex].Name)
-				BugReportFrame.BugError:SetText(AS.SkinErrors[AS.ErrorCurrentIndex].Error)
-			else
-				AS.ErrorCurrentIndex = AS.ErrorCurrentIndex + 1
-			end
-		end)
-
-		BugReportFrame.Next = CreateFrame('Button', nil, BugReportFrame, 'OptionsButtonTemplate')
-		AS:SkinButton(BugReportFrame.Next)
-		BugReportFrame.Next:SetSize(70, 25)
-		BugReportFrame.Next:SetPoint('RIGHT', BugReportFrame, 'BOTTOM', 0, 20)
-		BugReportFrame.Next:SetFormattedText('|cFFFFFFFF%s|r', NEXT)
-
-		BugReportFrame.Next:SetScript('OnClick', function()
-			AS.ErrorCurrentIndex = AS.ErrorCurrentIndex + 1
-			if AS.SkinErrors[AS.ErrorCurrentIndex] then
-				BugReportFrame.BugTitle:SetText(AS.SkinErrors[AS.ErrorCurrentIndex].Name)
-				BugReportFrame.BugError:SetText(AS.SkinErrors[AS.ErrorCurrentIndex].Error)
-			else
-				AS.ErrorCurrentIndex = AS.ErrorCurrentIndex - 1
-			end
-		end)
-
-		BugReportFrame.Close = CreateFrame('Button', nil, BugReportFrame, 'OptionsButtonTemplate')
-		AS:SkinButton(BugReportFrame.Close)
-		BugReportFrame.Close:SetSize(70, 25)
-		BugReportFrame.Close:SetPoint('LEFT', BugReportFrame, 'BOTTOM', 80, 20)
-		BugReportFrame.Close:SetScript('OnClick', function(self) self:GetParent():Hide() end)
-		BugReportFrame.Close:SetFormattedText('|cFFFFFFFF%s|r', CLOSE)
-	end
-
-	BugReportFrame.BugTitle:SetText(AS.SkinErrors[ErrorIndex].Name)
-	BugReportFrame.BugError:SetText(AS.SkinErrors[ErrorIndex].Error)
-	BugReportFrame:Show()
-end
-
-function AS:CreateChangeLog()
-	local ProperVersion = tostring(strlen(AS.Version) == 3 and AS.Version..'0' or AS.Version)
-	local ChangeLogFrame = CreateFrame("Frame", 'AddOnSkins_ChangeLog', UIParent)
-	ChangeLogFrame:Hide()
-	ChangeLogFrame:SetPoint("CENTER")
-	AS:SkinFrame(ChangeLogFrame)
-	ChangeLogFrame:SetMovable(true)
-	ChangeLogFrame:EnableMouse(true)
-	ChangeLogFrame:RegisterForDrag("LeftButton")
-	ChangeLogFrame:SetScript("OnDragStart", ChangeLogFrame.StartMoving)
-	ChangeLogFrame:SetScript("OnDragStop", ChangeLogFrame.StopMovingOrSizing)
-	ChangeLogFrame:SetClampedToScreen(true)
-	ChangeLogFrame.Time = 6
-
-	ChangeLogFrame.Title = ChangeLogFrame:CreateFontString(nil, 'OVERLAY')
-	ChangeLogFrame.Title:SetFont(AS.Font, 16)
-	ChangeLogFrame.Title:SetPoint("TOP", ChangeLogFrame, "TOP", 0, -3)
-	ChangeLogFrame.Title:SetSize(400, 20)
-	ChangeLogFrame.Title:SetFormattedText('%s - ChangeLog %s', AS.Title, WrapTextInColorCode(ProperVersion, "FF00C0FA"))
-
-	ChangeLogFrame.Close = CreateFrame("Button", nil, ChangeLogFrame, "UIPanelButtonTemplate")
-	ChangeLogFrame.Close:Point("BOTTOM", ChangeLogFrame, "BOTTOM", 0, 10)
-	ChangeLogFrame.Close:SetText(CLOSE)
-	ChangeLogFrame.Close:SetSize(80, 20)
-	ChangeLogFrame.Close:SetScript("OnClick", function() ChangeLogFrame:Hide() end)
-	AS:SkinButton(ChangeLogFrame.Close)
-	ChangeLogFrame.Close:Disable()
-
-	ChangeLogFrame.Changes = {}
-
-	local offset, i = 0, 0
-
-	for _, Change in pairs(AS.ChangeLog[ProperVersion]) do
-		i, offset = i + 1, offset + 28
-		ChangeLogFrame.Changes[i] = ChangeLogFrame:CreateFontString(nil, 'OVERLAY')
-		ChangeLogFrame.Changes[i]:SetSize(375, 28)
-		ChangeLogFrame.Changes[i]:SetFont(AS.Font, 14)
-		ChangeLogFrame.Changes[i]:SetPoint("TOP", ChangeLogFrame.Title, "BOTTOM", 5, -offset)
-		ChangeLogFrame.Changes[i]:SetText(Change)
-		ChangeLogFrame.Changes[i]:SetWordWrap(true)
-	end
-
-	ChangeLogFrame:SetSize(400, 100 + (i * 28))
-
-	AS.ChangeLogFrame = ChangeLogFrame
-end
-
-function AS:ChangeLogTimer()
-	AS.ChangeLogFrame.Time = (AS.ChangeLogFrame.Time < 0 and 0 or AS.ChangeLogFrame.Time - 1)
-
-	if AS.ChangeLogFrame.Time == 0 then
-		AS.ChangeLogFrame.Close:SetText(CLOSE)
-		AS.ChangeLogFrame.Close:Enable()
-		AS:CancelTimer(AS.ChangeLogFrameTimer)
-	else
-		AS.ChangeLogFrame.Close:Disable()
-		AS.ChangeLogFrame.Close:SetFormattedText('%s (%s)', CLOSE, AS.ChangeLogFrame.Time)
-	end
-end
-
-function AS:ToggleChangeLog()
-	PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF or 857)
-	if AS.ChangeLogFrame:IsShown() then
-		AS.ChangeLogFrame:Hide()
-	else
-		AS.ChangeLogFrame:Show()
-		AS.ChangeLogFrameTimer = AS:ScheduleRepeatingTimer("ChangeLogTimer", 1)
-	end
 end
 
 AS:RegisterEvent('ADDON_LOADED', 'Init')

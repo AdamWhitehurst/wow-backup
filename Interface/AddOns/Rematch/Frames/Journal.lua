@@ -74,6 +74,7 @@ function journal:SetupJournal()
 	journal.CloseButton:SetScript("OnClick",function() HideUIPanel(CollectionsJournal) end)
 	C_Timer.After(0.1,journal.OtherAddonJournalStuff)
 	hooksecurefunc("PetJournal_ShowPetCardBySpeciesID",function(speciesID) rematch:SearchForSpecies(speciesID) end)
+	hooksecurefunc("PetJournal_SelectPet",journal.PetJournal_SelectPet)
 	return true
 end
 
@@ -249,6 +250,7 @@ function journal:ConfigureJournal(hide)
 			if panel.Resize then
 				panel:Resize(280)
 			end
+			panel:ClearAllPoints()
 			panel:SetPoint("BOTTOMLEFT",layout[i]=="left" and 4 or layout[i]=="mid" and 286 or 568,26)
 			panel:Show()
 		elseif panel then
@@ -299,4 +301,9 @@ function journal.SetItemRef(link,text,button)
 			rematch:HidePetCard()
 		end
 	end
+end
+
+-- a click of the alert for a pet just uncaged will select the pet in the journal and also search for it in Rematch
+function journal:PetJournal_SelectPet(petID)
+	rematch:SearchForSpecies(rematch.petInfo:Fetch(petID).speciesID)
 end

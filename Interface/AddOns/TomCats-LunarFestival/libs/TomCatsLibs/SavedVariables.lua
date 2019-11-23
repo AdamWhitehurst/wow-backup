@@ -13,6 +13,7 @@ local function ADDON_LOADED(_, event, ...)
             account = _G[accountSavedVarsName]
         }
         addon.savedVariables.character.preferences = addon.savedVariables.character.preferences or {}
+        addon.savedVariables.account.preferences = addon.savedVariables.account.preferences or {}
         TCL.Events.UnregisterEvent("ADDON_LOADED", ADDON_LOADED)
     end
 end

@@ -22,12 +22,12 @@ local OPERATION_INFO = {
 	keepQuantity = { type = "number", default = 0 },
 	keepQtySources = { type = "table", default = {} },
 	maxExpires = { type = "number", default = 0 },
-	duration = { type = "number", default = 24 },
+	duration = { type = "number", default = 24, customSanitizeFunction = nil },
 	bidPercent = { type = "number", default = 1 },
 	undercut = { type = "string", default = "1c" },
-	minPrice = { type = "string", default = "max(0.25*avg(crafting,dbmarket,dbregionmarketavg),1.5*vendorsell)" },
-	maxPrice = { type = "string", default = "max(5*avg(crafting,dbmarket,dbregionmarketavg),30*vendorsell)" },
-	normalPrice = { type = "string", default = "max(2*avg(crafting,dbmarket,dbregionmarketavg),12*vendorsell)" },
+	minPrice = { type = "string", default = "check(first(crafting,dbmarket,dbregionmarketavg),max(0.25*avg(crafting,dbmarket,dbregionmarketavg),1.5*vendorsell))" },
+	maxPrice = { type = "string", default = "check(first(crafting,dbmarket,dbregionmarketavg),max(5*avg(crafting,dbmarket,dbregionmarketavg),30*vendorsell))" },
+	normalPrice = { type = "string", default = "check(first(crafting,dbmarket,dbregionmarketavg),max(2*avg(crafting,dbmarket,dbregionmarketavg),12*vendorsell))" },
 	priceReset = { type = "string", default = "none" },
 	aboveMax = { type = "string", default = "normalPrice" },
 	-- cancel
@@ -35,6 +35,12 @@ local OPERATION_INFO = {
 	keepPosted = { type = "number", default = 0 },
 	cancelRepost = { type = "boolean", default = true },
 	cancelRepostThreshold = { type = "string", default = "1g" },
+}
+local OPERATION_VALUE_LIMITS = {
+	postCap = { min = 0, max = 200 },
+	stackSize = { min = 1, max = 200 },
+	keepQuantity = { min = 0, max = 5000 },
+	maxExpires = { min = 0, max = 5000 },
 }
 
 
@@ -44,7 +50,25 @@ local OPERATION_INFO = {
 -- ============================================================================
 
 function Auctioning.OnInitialize()
+	OPERATION_INFO.duration.customSanitizeFunction = private.SanitizeDuration
 	TSM.Operations.Register("Auctioning", L["Auctioning"], OPERATION_INFO, 20, private.GetOperationInfo)
+end
+
+function Auctioning.GetMinMaxValues(key)
+	local info = OPERATION_VALUE_LIMITS[key]
+	return info and info.min or -math.huge, info and info.max or math.huge
+end
+
+function Auctioning.GetMinPrice(itemString)
+	return private.GetOperationValueHelper(itemString, "minPrice")
+end
+
+function Auctioning.GetMaxPrice(itemString)
+	return private.GetOperationValueHelper(itemString, "maxPrice")
+end
+
+function Auctioning.GetNormalPrice(itemString)
+	return private.GetOperationValueHelper(itemString, "normalPrice")
 end
 
 
@@ -53,8 +77,30 @@ end
 -- Private Helper Functions
 -- ============================================================================
 
+function private.SanitizeDuration(value)
+	-- convert from 12/24/48 durations to 1/2/3 API values
+	if value == 12 then
+		return 1
+	elseif value == 24 then
+		return 2
+	elseif value == 48 then
+		return 3
+	else
+		return value
+	end
+end
+
+function private.GetOperationValueHelper(itemString, key)
+	itemString = TSMAPI_FOUR.Item.ToBaseItemString(itemString, true)
+	local operationName, operationSettings = TSM.Operations.GetFirstOperationByItem("Auctioning", itemString)
+	if not operationName then
+		return
+	end
+	return TSM.Auctioning.Util.GetPrice(key, operationSettings, itemString)
+end
+
 function private.GetOperationInfo(operationSettings)
-	local parts = TSMAPI_FOUR.Util.AcquireTempTable()
+	local parts = TSM.TempTable.Acquire()
 
 	-- get the post string
 	if operationSettings.postCap == 0 then
@@ -75,6 +121,6 @@ function private.GetOperationInfo(operationSettings)
 	end
 
 	local result = table.concat(parts, " ")
-	TSMAPI_FOUR.Util.ReleaseTempTable(parts)
+	TSM.TempTable.Release(parts)
 	return result
 end

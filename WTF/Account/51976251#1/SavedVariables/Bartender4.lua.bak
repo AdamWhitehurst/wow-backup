@@ -1,0 +1,205 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["StatusTrackingBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["enabled"] = true,
+					["position"] = {
+						["y"] = 5.059932797885267,
+						["x"] = 446.4250886406153,
+						["point"] = "TOPLEFT",
+						["scale"] = 1.264999985694885,
+					},
+					["version"] = 3,
+				},
+			},
+		},
+		["ActionBars"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["position"] = {
+								["y"] = 256.280517578125,
+								["x"] = -360,
+								["point"] = "BOTTOM",
+							},
+							["padding"] = 20,
+						}, -- [1]
+						{
+							["showgrid"] = true,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 207,
+								["x"] = -333,
+								["point"] = "BOTTOM",
+							},
+							["padding"] = 20,
+						}, -- [2]
+						{
+							["showgrid"] = true,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 158,
+								["x"] = -361,
+								["point"] = "BOTTOM",
+							},
+							["padding"] = 20,
+						}, -- [3]
+						{
+							["showgrid"] = true,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 109,
+								["x"] = -332,
+								["point"] = "BOTTOM",
+							},
+							["padding"] = 20,
+						}, -- [4]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 114.0000305175781,
+								["x"] = -195.3696594238281,
+								["point"] = "BOTTOM",
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -179.7289276123047,
+								["x"] = 368.0608520507813,
+								["point"] = "CENTER",
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						nil, -- [9]
+						{
+						}, -- [10]
+					},
+				},
+			},
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["ExtraActionBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["position"] = {
+						["y"] = -223.7288665771484,
+						["x"] = -431.5394287109375,
+						["point"] = "RIGHT",
+					},
+					["version"] = 3,
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["position"] = {
+						["y"] = 5,
+						["x"] = -281.9998779296875,
+						["point"] = "TOPRIGHT",
+						["scale"] = 1,
+					},
+					["version"] = 3,
+					["padding"] = -2,
+				},
+			},
+		},
+		["BagBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 38.5,
+						["x"] = 345,
+						["point"] = "BOTTOM",
+					},
+				},
+			},
+		},
+		["BlizzardArt"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["position"] = {
+						["y"] = 47,
+						["x"] = -512,
+						["point"] = "BOTTOM",
+					},
+					["version"] = 3,
+				},
+			},
+		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["position"] = {
+						["y"] = 42.5,
+						["x"] = 104.4998779296875,
+						["point"] = "CENTER",
+					},
+					["version"] = 3,
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["enabled"] = false,
+					["position"] = {
+						["y"] = 36.00000762939453,
+						["x"] = 389.6566162109375,
+						["point"] = "BOTTOMLEFT",
+						["scale"] = 1,
+					},
+					["version"] = 3,
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 36.00000762939453,
+						["x"] = 405.0305786132813,
+						["point"] = "BOTTOMLEFT",
+					},
+				},
+			},
+		},
+		["ZoneAbilityBar"] = {
+			["profiles"] = {
+				["Andalsam - Tichondrius"] = {
+					["position"] = {
+						["y"] = 259.7795715332031,
+						["x"] = -431.5394287109375,
+						["point"] = "BOTTOMRIGHT",
+					},
+					["version"] = 3,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+	},
+	["profiles"] = {
+		["Andalsam - Tichondrius"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+	},
+}

@@ -99,6 +99,13 @@ The frame cannot be moved when using the default position. This option requires 
 			SL_BYPASS_NPC_TT = [[Mark this NPC so that its flavor gossip dialog should always be bypassed to directly access its functionality.
 
 Useful for vendors, flight masters or tables to tend to talk to a lot.]],
+			SL_USE_DYNAMIC_BACKGROUNDS = "Use animated backgrounds based on the current zone when possible",
+
+			TUTORIAL_DIALOG_SCROLL = "When there are many dialog choices available, the pulsating glowing bottom border indicates that you can scroll on the list to navigate to more dialog choices.",
+			TUTORIAL_REWARD_CHOICES = [[This quest offers you to choose your reward.
+Click on the reward you want to accept.
+
+You can also %s to preview the reward's appearance in the Dressing Room or %s to create a chat link for the item.]]
 		}
 	},
 
@@ -179,7 +186,13 @@ Expérience: |cffffffff%s xp|r
 	["SL_SELECT_AVAILABLE_QUEST"] = "Sélectionnez une quête",
 	["SL_SELECT_DIALOG_OPTION"] = "Sélectionnez une option",
 	["SL_SELECT_REWARD"] = "Choisissez votre récompense",
-	["SL_STORYLINE"] = "Storyline"
+	["SL_STORYLINE"] = "Storyline",
+	["TUTORIAL_DIALOG_SCROLL"] = "Quand il y a beaucoup de choix de dialogue disponible, la bordure brillante qui pulse en bas de la liste indique que vous pouvez utiliser la molette de la souris pour naviguer vers plus de choix de dialogue.",
+	["TUTORIAL_REWARD_CHOICES"] = [=[Cette quête vous propose de choisir votre récompense.
+
+Cliquez sur la récompense que vous souhaitez accepter.
+
+Vous pouvez également %s pour ouvrir un aperçu de l'apparence de l'objet dans la Cabine d'essayage ou encore %s pour créer un lien vers l'objet dans une discussion.]=]
 }
 
 		
@@ -404,6 +417,8 @@ Esperienza: |cffffffff%s xp|r
 
 %s]=],
 	["SL_ACCEPTANCE"] = "Принимаю",
+	["SL_BYPASS_NPC"] = "Обойти диалог разговора этого НПС",
+	["SL_BYPASS_NPC_TT"] = "Отметьте этого НПС так, чтобы его диалоговое окно с разговором всегда было убрано, чтобы получить прямой доступ к его функциональности. Полезно для продавцов, мастеров полета или столов, которые имеют тенденцию много говорить.",
 	["SL_CHECK_OBJ"] = "Показать цель задания",
 	["SL_CONFIG"] = "Параметры",
 	["SL_CONFIG_AUTOEQUIP"] = "Автоматически экипировать награды (Экспериментальная функция)",

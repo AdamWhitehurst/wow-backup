@@ -59,8 +59,8 @@ CPp.TZWarningSent = false;  -- not used?
 
 local CensusPlus_Version_Major = "8"; -- changing this number will force a saved data purge
 local CensusPlus_Version_Minor = "0"; -- changing this number will force a saved data purge
-local CensusPlus_Version_Maint = "1";
-local CensusPlus_SubVersion = " >=WoW.8.0.1";
+local CensusPlus_Version_Maint = "2";
+local CensusPlus_SubVersion = " >=WoW.8.2.0";
 --local CensusPlus_VERSION = "WoD"
 local CensusPlus_VERSION = CensusPlus_Version_Major.."."..CensusPlus_Version_Minor .."."..CensusPlus_Version_Maint; 
 local CensusPlus_VERSION_FULL = CensusPlus_VERSION.."."..CensusPlus_SubVersion ;

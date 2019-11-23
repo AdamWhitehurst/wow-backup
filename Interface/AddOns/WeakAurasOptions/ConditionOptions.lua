@@ -44,7 +44,7 @@
 --   - setter: The setter function, called both on activating and deactivating a property change
 ---  - action: The action function, called on activating a condition
 --   - type: The type
-
+if not WeakAuras.IsCorrectVersion() then return end
 
 local WeakAuras = WeakAuras;
 local L = WeakAuras.L;
@@ -204,9 +204,9 @@ local function wrapWithPlaySound(func, kit)
   return function(info, v)
     func(info, v);
     if (tonumber(v)) then
-      PlaySound(tonumber(v), "Master");
+      pcall(PlaySound, tonumber(v), "Master");
     else
-      PlaySoundFile(v, "Master");
+      pcall(PlaySoundFile, v, "Master");
     end
   end
 end
@@ -602,6 +602,19 @@ local function addControlsForChange(args, order, data, conditionVariable, condit
       return false;
     end
 
+    if not WeakAuras.IsClassic() then
+      args["condition" .. i .. "value" .. j .. "message type warning"] = {
+        type = "description",
+        width = WeakAuras.doubleWidth,
+        name = L["Note: Automated Messages to SAY and YELL are blocked outside of Instances."],
+        order = order,
+        hidden = function()
+          return not (anyMessageType("SAY") or anyMessageType("YELL") or anyMessageType("SMARTRAID"));
+        end
+      }
+      order = order + 1;
+    end
+
     args["condition" .. i .. "value" .. j .. "message dest"] = {
       type = "input",
       width = WeakAuras.normalWidth,
@@ -636,10 +649,7 @@ local function addControlsForChange(args, order, data, conditionVariable, condit
 
     local descMessage = descIfNoValue2(data, conditions[i].changes[j], "value", "message", propertyType);
     if (not descMessage and data ~= WeakAuras.tempGroup) then
-      local additionalProperties = WeakAuras.GetAdditionalProperties(data);
-      if (additionalProperties) then
-        descMessage = L["Dynamic text tooltip"] .. additionalProperties;
-      end
+      descMessage = L["Dynamic text tooltip"] .. WeakAuras.GetAdditionalProperties(data)
     end
 
     args["condition" .. i .. "value" .. j .. "message"] = {

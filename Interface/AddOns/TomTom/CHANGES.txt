@@ -1,10 +1,10 @@
-lightweight tag 9d6a06aa2440ab8676801f813ce1e824ee6c03f7 v80200-1.0.1
+lightweight tag c6371e3429199a96ffe41cd99f02a5b11671e650 v80205-1.0.7
 Author:	Ludovicus <ludovicus.maior@gmail.com>
-Date:	Tue Jun 25 19:21:02 2019 -0400
+Date:	Tue Sep 24 17:49:38 2019 -0400
 
-commit 9d6a06aa2440ab8676801f813ce1e824ee6c03f7
+commit c6371e3429199a96ffe41cd99f02a5b11671e650
 Author: Ludovicus <ludovicus.maior@gmail.com>
-Date:   Tue Jun 25 19:21:02 2019 -0400
+Date:   Tue Sep 24 17:49:38 2019 -0400
 
-    Update Interface to 80200
+    Update interface to 8.2.5
 

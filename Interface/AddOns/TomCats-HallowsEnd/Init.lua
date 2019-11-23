@@ -1,5 +1,4 @@
 local addonName, addon = ...
-
 -- If ACP is enabled, conditionally hook GetAddOnInfo to set the short name to be displayed in the ACP Group By Name control panel
 local _, _, _, ACP_ENABLED = GetAddOnInfo("ACP")
 if (ACP_ENABLED) then

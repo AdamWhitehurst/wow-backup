@@ -1,6 +1,5 @@
 local addon = select(2,...)
 local lib = addon.TomCatsLibs.Data
-
 local recordMetatable = {
     __index = function(table, key)
         return table.record[table.parent.columnNames[key]]
@@ -18,7 +17,6 @@ local recordMetatable = {
         end
     end
 }
-
 local tableMixin = {
     SetAfterUpdate = function(self, columnName, callback)
         if (not self.afterUpdateCallbacks) then
@@ -27,13 +25,11 @@ local tableMixin = {
         self.afterUpdateCallbacks[columnName] = callback
     end
 }
-
 local tableMetatable = {
     __index = function(self, key)
         return self.records[key]
     end
 }
-
 function lib.loadData(name, columnNames, records)
     local table = CreateFromMixins(tableMixin)
     table.columnNames = {}
@@ -52,7 +48,6 @@ function lib.loadData(name, columnNames, records)
     setmetatable(table, tableMetatable)
     lib[name] = table
 end
-
 function lib.flatten(record)
     local result = {}
     for k, v in pairs(record.parent.columnNames) do

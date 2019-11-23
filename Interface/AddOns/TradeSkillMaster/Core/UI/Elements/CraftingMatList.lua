@@ -11,7 +11,7 @@
 -- @classmod CraftingMatList
 
 local _, TSM = ...
-local CraftingMatList = TSMAPI_FOUR.Class.DefineClass("CraftingMatList", TSM.UI.ScrollList)
+local CraftingMatList = TSM.Include("LibTSMClass").DefineClass("CraftingMatList", TSM.UI.ScrollList)
 local private = { }
 TSM.UI.CraftingMatList = CraftingMatList
 
@@ -68,7 +68,7 @@ function CraftingMatList._UpdateData(self)
 	if not self._spellId then
 		return
 	end
-	for i = 1, C_TradeSkillUI.GetRecipeNumReagents(self._spellId) do
+	for i = 1, TSM.Crafting.ProfessionUtil.GetNumMats(self._spellId) do
 		tinsert(self._data, i)
 	end
 end
@@ -102,10 +102,12 @@ end
 
 function CraftingMatList._DrawRow(self, row, dataIndex)
 	local index = row:GetContext()
-	local itemString = TSMAPI_FOUR.Item.ToItemString(C_TradeSkillUI.GetRecipeReagentItemLink(self._spellId, index))
-
-	local _, texture, quantity = C_TradeSkillUI.GetRecipeReagentInfo(self._spellId, index)
-	local bagQuantity = TSMAPI_FOUR.Inventory.GetBagQuantity(itemString) + TSMAPI_FOUR.Inventory.GetReagentBankQuantity(itemString) + TSMAPI_FOUR.Inventory.GetBankQuantity(itemString)
+	local itemLink, _, texture, quantity = TSM.Crafting.ProfessionUtil.GetMatInfo(self._spellId, index)
+	local itemString = TSMAPI_FOUR.Item.ToItemString(itemLink)
+	local bagQuantity = TSMAPI_FOUR.Inventory.GetBagQuantity(itemString)
+	if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+		bagQuantity = bagQuantity + TSMAPI_FOUR.Inventory.GetReagentBankQuantity(itemString) + TSMAPI_FOUR.Inventory.GetBankQuantity(itemString)
+	end
 	local color = bagQuantity >= quantity and "|cff2cec0d" or "|cfff21319"
 	row:GetElement("qty"):SetText(format("%s%s / %d|r", color, bagQuantity > 999 and "*" or bagQuantity, quantity))
 	row:GetElement("icon"):SetStyle("texture", texture)
@@ -123,5 +125,8 @@ end
 -- ============================================================================
 
 function private.ItemOnClick(button)
-	TSMAPI_FOUR.Util.SafeItemRef(C_TradeSkillUI.GetRecipeReagentItemLink(button:GetElement("__parent.__parent"):GetContext(), button:GetParentElement():GetContext()))
+	local spellId = button:GetElement("__parent.__parent"):GetContext()
+	local index = button:GetParentElement():GetContext()
+	local itemLink = TSM.Crafting.ProfessionUtil.GetMatInfo(spellId, index)
+	TSM.Wow.SafeItemRef(itemLink)
 end

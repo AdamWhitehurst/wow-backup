@@ -1,0 +1,5 @@
+<Bindings>
+	<Binding name="WEIZPVP_CROSSHAIRTOGGLE" header="WEIZPVP" category="ADDONS">
+		weizPVP:ToggleCrosshairs()
+	</Binding>
+</Bindings>

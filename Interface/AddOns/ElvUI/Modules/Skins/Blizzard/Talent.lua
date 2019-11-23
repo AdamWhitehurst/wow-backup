@@ -6,7 +6,6 @@ local _G = _G
 local pairs, select, unpack = pairs, select, unpack
 --WoW API / Variables
 local hooksecurefunc = hooksecurefunc
-local CreateAnimationGroup = CreateAnimationGroup
 local CreateFrame = CreateFrame
 local GetNumSpecializations = GetNumSpecializations
 local GetSpecialization = GetSpecialization
@@ -41,7 +40,7 @@ local function LoadSkin()
 	S:HandleButton(_G.PlayerTalentFrameActivateButton)
 
 	for _, button in pairs(buttons) do
-		S:HandleButton(button, true)
+		S:HandleButton(button)
 	end
 
 	for i = 1, 3 do
@@ -138,7 +137,7 @@ local function LoadSkin()
 			row.TopLine:Point("TOP", 0, 4)
 			row.BottomLine:Point("BOTTOM", 0, -4)
 
-			row.transition = CreateAnimationGroup(row)
+			row.transition = _G.CreateAnimationGroup(row)
 			row.transition:SetLooping(true)
 
 			row.transition.color = row.transition:CreateAnimation("Color")
@@ -250,6 +249,10 @@ local function LoadSkin()
 				index = index + 1
 			end
 		end
+
+		-- Hide the default flash anim
+		self.learnButton.Flash:Hide()
+		self.learnButton.FlashAnim:Stop()
 	end)
 
 	local PvpTalentFrame = _G.PlayerTalentFrameTalents.PvpTalentFrame

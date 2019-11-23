@@ -249,10 +249,9 @@ local blacklistedKeys = {
 	},
 	private = {},
 	global = {
-		uiScaleInformed = true,
-		userInformedNewChanges1 = true,
 		general = {
 			UIScale = true,
+			locale = true,
 			version = true,
 			eyefinity = true,
 			ignoreScalePopup = true,
@@ -578,8 +577,4 @@ E.PopupDialogs.IMPORT_RL = {
 	preferredIndex = 3
 }
 
-local function InitializeCallback()
-	D:Initialize()
-end
-
-E:RegisterModule(D:GetName(), InitializeCallback)
+E:RegisterModule(D:GetName())

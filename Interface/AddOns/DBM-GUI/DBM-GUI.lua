@@ -43,7 +43,7 @@
 --
 
 
-local revision =(string.sub("20190622165337", 1, -5))
+local revision =(string.sub("20190927201201", 1, -5))
 local FrameTitle = "DBM_GUI_Option_"	-- all GUI frames get automatically a name FrameTitle..ID
 
 local PanelPrototype = {}
@@ -240,6 +240,7 @@ local function MixinSharedMedia3(mediatype, mediatable)
 		local LSM = LibStub("LibSharedMedia-3.0")
 		soundsRegistered = true
 		--Embedded Sound Clip media
+		LSM:Register("sound", "AirHorn (DBM)", [[Interface\AddOns\DBM-Core\sounds\AirHorn.ogg]])
 		LSM:Register("sound", "Jaina: Beware", [[Interface\AddOns\DBM-Core\sounds\SoundClips\beware.ogg]])
 		LSM:Register("sound", "Jaina: Beware (reverb)", [[Interface\AddOns\DBM-Core\sounds\SoundClips\beware_with_reverb.ogg]])
 		LSM:Register("sound", "Thrall: That's Incredible!", [[Interface\AddOns\DBM-Core\sounds\SoundClips\incredible.ogg]])
@@ -407,11 +408,31 @@ do
 	end
 
 	local sounds = MixinSharedMedia3("sound", {
+		--Inject basically dummy values for ordering special warnings to just use default SW sound assignments
 		{ sound=true, text = L.None, value = "None" },
 		{ sound=true, text = "SW 1", value = 1 },
 		{ sound=true, text = "SW 2", value = 2 },
 		{ sound=true, text = "SW 3", value = 3 },
 		{ sound=true, text = "SW 4", value = 4 },
+
+		--Inject DBMs custom media that's not available to LibSharedMedia because it uses SoundKit Id (which LSM doesn't support)
+		--{ sound=true, text = "AirHorn (DBM)", value = "Interface\\AddOns\\DBM-Core\\sounds\\AirHorn.ogg" },
+		{ sound=true, text = "Algalon: Beware!", value = 15391 },
+		{ sound=true, text = "BB Wolf: Run Away", value = 9278 },
+		{ sound=true, text = "Blizzard Raid Emote", value = 37666 },
+		{ sound=true, text = "C'Thun: You Will Die!", value = 8585 },
+		{ sound=true, text = "Headless Horseman: Laugh", value = 12506 },
+		{ sound=true, text = "Illidan: Not Prepared", value = 68563 },
+		{ sound=true, text = "Illidan: Not Prepared2", value = 12506 },
+		{ sound=true, text = "Kaz'rogal: Marked", value = 11052 },
+		{ sound=true, text = "Kil'Jaeden: Destruction", value = 12506 },
+		{ sound=true, text = "Loatheb: I see you", value = 128466 },
+		{ sound=true, text = "Lady Malande: Flee", value = 11482 },
+		{ sound=true, text = "Milhouse: Light You Up", value = 49764 },
+		{ sound=true, text = "Night Elf Bell", value = 11742 },
+		{ sound=true, text = "PvP Flag", value = 8174 },
+		{ sound=true, text = "Void Reaver: Marked", value = 11213 },
+		{ sound=true, text = "Yogg Saron: Laugh", value = 15757 },
 	})
 
 	local tcolors = {
@@ -425,12 +446,23 @@ do
 		{ text = L.CBTImportant, value = 7 },
 	}
 
-	local cvoice = {
+	local function MixinCountTable(baseTable)
+		-- DBM values (baseTable) first, mediatable values afterwards
+		local result = baseTable
+		for i=1,#DBM.Counts do
+			local mediatext = DBM.Counts[i].text
+			local mediapath = DBM.Counts[i].path
+			tinsert(result, {text=mediatext, value=mediapath})
+		end
+		return result
+	end
+
+	local cvoice = MixinCountTable({
 		{ text = L.None, value = 0 },
 		{ text = L.CVoiceOne, value = 1 },
 		{ text = L.CVoiceTwo, value = 2 },
 		{ text = L.CVoiceThree, value = 3 },
-	}
+	})
 
 	function PanelPrototype:CreateCheckButton(name, autoplace, textleft, dbmvar, dbtvar, mod, modvar, globalvar, isTimer)
 		if not name then
@@ -474,8 +506,10 @@ do
 				end)
 				dropdown2 = self:CreateDropdown(nil, cvoice, nil, nil, function(value)
 					mod.Options[modvar.."CVoice"] = value
-					if value > 0 then
-						local countPlay = value == 3 and DBM.Options.CountdownVoice3v2 or value == 2 and DBM.Options.CountdownVoice2 or DBM.Options.CountdownVoice
+					if type(value) == "string" then
+						DBM:PlayCountSound(1, nil, value)
+					elseif value > 0 then
+						local countPlay = value == 3 and DBM.Options.CountdownVoice3 or value == 2 and DBM.Options.CountdownVoice2 or DBM.Options.CountdownVoice
 						DBM:PlayCountSound(1, countPlay)
 					end
 				end, 20, 25, button)
@@ -1132,8 +1166,8 @@ do
 				button.toggle:SetNormalTexture(130838)--"Interface\\Buttons\\UI-PlusButton-UP"
 				button.toggle:SetPushedTexture(130836)--"Interface\\Buttons\\UI-PlusButton-DOWN"
 			else
-				button.toggle:SetNormalTexture(130838)--"Interface\\Buttons\\UI-MinusButton-UP"
-				button.toggle:SetPushedTexture(130836)--"Interface\\Buttons\\UI-PlusButton-DOWN"
+				button.toggle:SetNormalTexture(130821)--"Interface\\Buttons\\UI-MinusButton-UP"
+				button.toggle:SetPushedTexture(130820)--"Interface\\Buttons\\UI-MinusButton-DOWN"
 			end
 			button.toggle:Show()
 		else
@@ -1417,7 +1451,6 @@ local function CreateOptionsMenu()
 		generalMessagesArea:CreateCheckButton(L.ShowGuildMessagesPlus, true, nil, "ShowGuildMessagesPlus")
 		local generalWhispersArea = generalWarningPanel:CreateArea(L.WhisperMessages, nil, 135, true)
 		generalWhispersArea:CreateCheckButton(L.AutoRespond, true, nil, "AutoRespond")
-		generalWhispersArea:CreateCheckButton(L.EnableStatus, true, nil, "StatusEnabled")
 		generalWhispersArea:CreateCheckButton(L.WhisperStats, true, nil, "WhisperStats")
 		generalWhispersArea:CreateCheckButton(L.DisableStatusWhisper, true, nil, "DisableStatusWhisper")
 		generalWhispersArea:CreateCheckButton(L.DisableGuildStatus, true, nil, "DisableGuildStatus")
@@ -2707,24 +2740,25 @@ local function CreateOptionsMenu()
 		end
 
 		local Sounds = MixinSharedMedia3("sound", {
-			{	text	= L.NoSound,			value	= "" },
-			{	text	= "PvP Flag",			value 	= 8174, 		sound=true },--"Sound\\Spells\\PVPFlagTaken.ogg"
-			{	text	= "Blizzard",			value 	= 37666, 		sound=true },--"Sound\\interface\\UI_RaidBossWhisperWarning.ogg"
-			{	text	= "Beware!",			value 	= 15391, 		sound=true },--"Sound\\Creature\\AlgalonTheObserver\\UR_Algalon_BHole01.ogg"
-			{	text	= "AirHorn",			value 	= "Interface\\AddOns\\DBM-Core\\sounds\\AirHorn.ogg", 		sound=true },
-			{	text	= "Destruction",		value 	= 12506, 		sound=true },--"Sound\\Creature\\KilJaeden\\KILJAEDEN02.ogg"
-			{	text	= "NotPrepared",		value 	= 11466, 		sound=true },--"Sound\\Creature\\Illidan\\BLACK_Illidan_04.ogg"
-			{	text	= "NotPrepared2",		value 	= 68563, 		sound=true },--"Sound\\Creature\\Illidan_Stormrage\\VO_703_Illidan_Stormrage_03.ogg"
-			{	text	= "RunAwayLittleGirl",	value 	= 9278, 		sound=true },--"Sound\\Creature\\HoodWolf\\HoodWolfTransformPlayer01.ogg"
-			{	text	= "NightElfBell",		value 	= 11742, 		sound=true },--"Sound\\Doodad\\BellTollNightElf.ogg"
-			{	text	= "Headless Horseman: Laugh", value = 11965, sound = true },
-			{	text	= "Yogg Saron: Laugh", value = 15757, sound = true },
-			{	text	= "Loatheb: I see you", value = 128466, sound = true },
-			{	text	= "Lady Malande: Flee", value = 11482, sound = true },
-			{	text	= "Milhouse: Light You Up", value = 49764, sound = true },
-			{	text	= "Void Reaver: Marked", value = 11213, sound = true },
-			{	text	= "Kaz'rogal: Marked", value = 11052, sound = true },
-			{	text	= "C'Thun: You Will Die!", value = 8585, sound = true }
+			{ text = L.NoSound, value = "" },
+			--Inject DBMs custom media that's not available to LibSharedMedia because it uses SoundKit Id (which LSM doesn't support)
+			--{ sound=true, text = "AirHorn (DBM)", value = "Interface\\AddOns\\DBM-Core\\sounds\\AirHorn.ogg" },
+			{ sound=true, text = "Algalon: Beware!", value = 15391 },
+			{ sound=true, text = "BB Wolf: Run Away", value = 9278 },
+			{ sound=true, text = "Blizzard Raid Emote", value = 37666 },
+			{ sound=true, text = "C'Thun: You Will Die!", value = 8585 },
+			{ sound=true, text = "Headless Horseman: Laugh", value = 12506 },
+			{ sound=true, text = "Illidan: Not Prepared", value = 68563 },
+			{ sound=true, text = "Illidan: Not Prepared2", value = 12506 },
+			{ sound=true, text = "Kaz'rogal: Marked", value = 11052 },
+			{ sound=true, text = "Kil'Jaeden: Destruction", value = 12506 },
+			{ sound=true, text = "Loatheb: I see you", value = 128466 },
+			{ sound=true, text = "Lady Malande: Flee", value = 11482 },
+			{ sound=true, text = "Milhouse: Light You Up", value = 49764 },
+			{ sound=true, text = "Night Elf Bell", value = 11742 },
+			{ sound=true, text = "PvP Flag", value = 8174 },
+			{ sound=true, text = "Void Reaver: Marked", value = 11213 },
+			{ sound=true, text = "Yogg Saron: Laugh", value = 15757 },
 		})
 
 		local SpecialWarnSoundDropDown = specArea:CreateDropdown(L.SpecialWarnSound, Sounds, "DBM", "SpecialWarningSound", function(value)
@@ -3004,7 +3038,6 @@ local function CreateOptionsMenu()
 			DBM.Options.CountdownVoice = value
 			DBM:PlayCountSound(1, DBM.Options.CountdownVoice)
 			DBM:BuildVoiceCountdownCache()
-			DBM:BuildVoiceCountdownCacheTwo()
 		end)
 		CountSoundDropDown:SetPoint("TOPLEFT", spokenGeneralArea.frame, "TOPLEFT", 0, -20)
 
@@ -3012,15 +3045,13 @@ local function CreateOptionsMenu()
 			DBM.Options.CountdownVoice2 = value
 			DBM:PlayCountSound(1, DBM.Options.CountdownVoice2)
 			DBM:BuildVoiceCountdownCache()
-			DBM:BuildVoiceCountdownCacheTwo()
 		end)
 		CountSoundDropDown2:SetPoint("LEFT", CountSoundDropDown, "RIGHT", 50, 0)
 
-		local CountSoundDropDown3 = spokenGeneralArea:CreateDropdown(L.CountdownVoice3, DBM.Counts, "DBM", "CountdownVoice3v2", function(value)
-			DBM.Options.CountdownVoice3v2 = value
-			DBM:PlayCountSound(1, DBM.Options.CountdownVoice3v2)
+		local CountSoundDropDown3 = spokenGeneralArea:CreateDropdown(L.CountdownVoice3, DBM.Counts, "DBM", "CountdownVoice3", function(value)
+			DBM.Options.CountdownVoice3 = value
+			DBM:PlayCountSound(1, DBM.Options.CountdownVoice3)
 			DBM:BuildVoiceCountdownCache()
-			DBM:BuildVoiceCountdownCacheTwo()
 		end)
 		CountSoundDropDown3:SetPoint("TOPLEFT", CountSoundDropDown, "TOPLEFT", 0, -45)
 
@@ -3063,8 +3094,8 @@ local function CreateOptionsMenu()
 
 	do
 		local Sounds = MixinSharedMedia3("sound", {
-			{	text	= L.NoSound,						value	= "" },
-			{	text	= "Muradin: Charge",				value 	= "Sound\\Creature\\MuradinBronzebeard\\IC_Muradin_Saurfang02.ogg", 		sound=true },--16971
+			{	text	= L.NoSound,			value	= "None" },
+			{	text	= "Muradin: Charge",	value 	= 16971, 		sound=true },--"Sound\\Creature\\MuradinBronzebeard\\IC_Muradin_Saurfang02.ogg"
 		})
 
 		local eventSoundsPanel	 	= DBM_GUI_Frame:CreateNewPanel(L.Panel_EventSounds, "option")
@@ -3121,13 +3152,13 @@ local function CreateOptionsMenu()
 		end)
 		MusicDropDown:SetPoint("TOPLEFT", VictorySoundDropdown2, "TOPLEFT", 0, -45)
 
-		local VictorySoundDropdown3 = eventSoundsGeneralArea:CreateDropdown(L.EventEngageSound, Sounds, "DBM", "EventSoundEngage", function(value)
-			DBM.Options.EventSoundEngage = value
-			DBM:PlaySoundFile(DBM.Options.EventSoundEngage)
+		local VictorySoundDropdown3 = eventSoundsGeneralArea:CreateDropdown(L.EventEngageSound, Sounds, "DBM", "EventSoundEngage2", function(value)
+			DBM.Options.EventSoundEngage2 = value
+			DBM:PlaySoundFile(DBM.Options.EventSoundEngage2)
 		end)
 		VictorySoundDropdown3:SetPoint("TOPLEFT", DungeonMusicDropDown, "TOPLEFT", 0, -45)
 
-		local TurtleDropDown = eventSoundsGeneralArea:CreateDropdown(L.EventTurtleMusic, useCombined and DBM.Music or DBM.BattleMusic, "DBM", "EventSoundTurle", function(value)
+		local TurtleDropDown = eventSoundsGeneralArea:CreateDropdown(L.EventTurtleMusic, DBM.Music, "DBM", "EventSoundTurle", function(value)
 			DBM.Options.EventSoundTurle = value
 			if value ~= "Random" then
 				if not DBM.Options.tempMusicSetting then
@@ -4562,19 +4593,21 @@ do
 				-- Create a Panel for "Wrath of the Lich King" "Burning Crusade" ...
 				local expLevel = GetExpansionLevel()
 				if expLevel == 7 then--Choose default expanded category based on players current expansion is.
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="BFA"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="BFA"))
 				elseif expLevel == 6 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="LEG"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="LEG"))
 				elseif expLevel == 5 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="WOD"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="WOD"))
 				elseif expLevel == 4 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="MOP"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="MOP"))
 				elseif expLevel == 3 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="CATA"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="CATA"))
 				elseif expLevel == 2 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="WotLK"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="WotLK"))
 				elseif expLevel == 1 then
-					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_Other, nil, (addon.category:upper()=="BC"))
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="BC"))
+				else
+					Categories[addon.category] = DBM_GUI:CreateNewPanel(L["TabCategory_"..addon.category:upper()] or L.TabCategory_OTHER, nil, (addon.category:upper()=="CLASSIC"))
 				end
 				if L["TabCategory_"..addon.category:upper()] then
 					local ptext = Categories[addon.category]:CreateText(L["TabCategory_"..addon.category:upper()])
@@ -4683,46 +4716,69 @@ do
 				for _, v in ipairs(category) do
 					if v == DBM_OPTION_SPACER then
 						addSpacer = true
-					elseif v.line then
+					else
 						lastButton = button
-						button = catpanel:CreateLine(v.text)
-					elseif type(mod.Options[v]) == "boolean" then
-						lastButton = button
-						if mod.Options[v .. "TColor"] then
-							button = catpanel:CreateCheckButton(mod.localization.options[v], true, nil, nil, nil, mod, v, nil, true)
-						elseif mod.Options[v .. "SWSound"] then
-							button = catpanel:CreateCheckButton(mod.localization.options[v], true, nil, nil, nil, mod, v)
-						else
-							button = catpanel:CreateCheckButton(mod.localization.options[v], true)
+						if v.line then
+							button = catpanel:CreateLine(v.text)
+						elseif type(mod.Options[v]) == "boolean" then
+							if mod.Options[v .. "TColor"] then
+								button = catpanel:CreateCheckButton(mod.localization.options[v], true, nil, nil, nil, mod, v, nil, true)
+							elseif mod.Options[v .. "SWSound"] then
+								button = catpanel:CreateCheckButton(mod.localization.options[v], true, nil, nil, nil, mod, v)
+							else
+								button = catpanel:CreateCheckButton(mod.localization.options[v], true)
+							end
+							button:SetScript("OnShow", function(self)
+								self:SetChecked(mod.Options[v])
+							end)
+							button:SetScript("OnClick", function(self)
+								mod.Options[v] = not mod.Options[v]
+								if mod.optionFuncs and mod.optionFuncs[v] then
+									mod.optionFuncs[v]()
+								end
+							end)
+						elseif mod.buttons and mod.buttons[v] then
+							local but = mod.buttons[v]
+							button = catpanel:CreateButton(v, but.width, but.height, but.onClick, but.fontObject)
+						elseif mod.editboxes and mod.editboxes[v] then
+							local editBox = mod.editboxes[v]
+							button = catpanel:CreateEditBox(mod.localization.options[v], mod.Options[v], editBox.width, editBox.height)
+							button:SetScript("OnTextChanged", function(self)
+								if mod.optionFuncs and mod.optionFuncs[v] then
+									mod.optionFuncs[v]()
+								end
+							end)
+						elseif mod.sliders and mod.sliders[v] then
+							local slider = mod.sliders[v]
+							button = catpanel:CreateSlider(mod.localization.options[v], slider.minValue, slider.maxValue, slider.valueStep)
+							button:SetScript("OnShow", function(self)
+								self:SetValue(mod.Options[v])
+							end)
+							button:HookScript("OnValueChanged", function(self)
+								if mod.optionFuncs and mod.optionFuncs[v] then
+									mod.optionFuncs[v]()
+								end
+							end)
+						elseif mod.dropdowns and mod.dropdowns[v] then
+							local dropdownOptions = {}
+							for i, v in ipairs(mod.dropdowns[v]) do
+								dropdownOptions[#dropdownOptions + 1] = { text = mod.localization.options[v], value = v }
+							end
+							button = catpanel:CreateDropdown(mod.localization.options[v], dropdownOptions, mod, v, function(value)
+								mod.Options[v] = value
+								if mod.optionFuncs and mod.optionFuncs[v] then
+									mod.optionFuncs[v]()
+								end
+							end, nil, 32)
+							if not addSpacer then
+								hasDropdowns = hasDropdowns + 7--Add 7 extra pixels per dropdown, because autodims is only reserving 25 per line, and dropdowns are 32
+								button:SetPoint("TOPLEFT", lastButton, "BOTTOMLEFT", 0, -10)
+							end
 						end
 						if addSpacer then
 							button:SetPoint("TOPLEFT", lastButton, "BOTTOMLEFT", 0, -6)
 							addSpacer = false
 						end
-						button:SetScript("OnShow",  function(self)
-							self:SetChecked(mod.Options[v])
-						end)
-						button:SetScript("OnClick", function(self)
-							mod.Options[v] = not mod.Options[v]
-							if mod.optionFuncs and mod.optionFuncs[v] then mod.optionFuncs[v]() end
-						end)
-					elseif mod.dropdowns and mod.dropdowns[v] then
-						lastButton = button
-						local dropdownOptions = {}
-						for i, v in ipairs(mod.dropdowns[v]) do
-							dropdownOptions[#dropdownOptions + 1] = { text = mod.localization.options[v], value = v }
-						end
-						button = catpanel:CreateDropdown(mod.localization.options[v], dropdownOptions, mod, v, function(value) mod.Options[v] = value end, nil, 32)
-						if addSpacer then
-							button:SetPoint("TOPLEFT", lastButton, "BOTTOMLEFT", 0, -6)
-							addSpacer = false
-						else
-							hasDropdowns = hasDropdowns + 7--Add 7 extra pixels per dropdown, because autodims is only reserving 25 per line, and dropdowns are 32
-							button:SetPoint("TOPLEFT", lastButton, "BOTTOMLEFT", 0, -10)
-						end
-						button:SetScript("OnShow", function(self)
-							self:SetSelectedValue(mod.Options[v])
-						end)
 					end
 				end
 				catpanel:AutoSetDimension(hasDropdowns)

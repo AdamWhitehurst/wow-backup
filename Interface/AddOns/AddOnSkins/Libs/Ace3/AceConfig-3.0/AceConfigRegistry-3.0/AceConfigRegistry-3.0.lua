@@ -8,10 +8,10 @@
 -- :IterateOptionsTables() (and :GetOptionsTable() if only given one argument) return a function reference that the requesting config handling addon must call with valid "uiType", "uiName".
 -- @class file
 -- @name AceConfigRegistry-3.0
--- @release $Id$
+-- @release $Id: AceConfigRegistry-3.0.lua 1207 2019-06-23 12:08:33Z nevcairiel $
 local CallbackHandler = LibStub("CallbackHandler-1.0")
 
-local MAJOR, MINOR = "AceConfigRegistry-3.0", 18
+local MAJOR, MINOR = "AceConfigRegistry-3.0", 20
 local AceConfigRegistry = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not AceConfigRegistry then return end
@@ -94,13 +94,20 @@ local basekeys={
 }
 
 local typedkeys={
-	header={},
+	header={
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
+	},
 	description={
 		image=optstringnumberfunc,
 		imageCoords=optmethodtable,
 		imageHeight=optnumber,
 		imageWidth=optnumber,
 		fontSize=optstringfunc,
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 	group={
 		args=istable,
@@ -117,6 +124,9 @@ local typedkeys={
 		imageCoords=optmethodtable,
 		imageHeight=optnumber,
 		imageWidth=optnumber,
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 	input={
 		pattern=optstring,
@@ -130,6 +140,9 @@ local typedkeys={
 		tristate=optbool,
 		image=optstringnumberfunc,
 		imageCoords=optmethodtable,
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 	tristate={
 	},
@@ -141,9 +154,13 @@ local typedkeys={
 		step=optnumber,
 		bigStep=optnumber,
 		isPercent=optbool,
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 	select={
 		values=ismethodtable,
+		sorting=optmethodtable,
 		style={
 			["nil"]=true,
 			["string"]={dropdown=true,radio=true},
@@ -164,9 +181,14 @@ local typedkeys={
 	},
 	color={
 		hasAlpha=optmethodbool,
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 	keybinding={
-		-- TODO
+		control=optstring,
+		dialogControl=optstring,
+		dropdownControl=optstring,
 	},
 }
 

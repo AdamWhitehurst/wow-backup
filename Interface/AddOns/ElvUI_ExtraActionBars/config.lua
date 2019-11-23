@@ -84,15 +84,6 @@ P['actionbar']['bar10'] = {
 }
 
 function EAB:InsertOptions()
-	if not E.Options.args.blazeplugins then
-		E.Options.args.blazeplugins = {
-			order = -2,
-			type = 'group',
-			name = 'Plugins (by Blazeflack)',
-			args = {},
-		}
-	end
-
 	local points = {
 		['TOPLEFT'] = 'TOPLEFT',
 		['TOPRIGHT'] = 'TOPRIGHT',
@@ -100,7 +91,7 @@ function EAB:InsertOptions()
 		['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
 	}
 
-	E.Options.args.blazeplugins.args.EAB = {
+	E.Options.args.plugins.args.EAB = {
 		order = 40,
 		type = 'group',
 		name = 'ExtraActionBars',
@@ -109,14 +100,14 @@ function EAB:InsertOptions()
 		args = {},
 	}
 
-	local group = E.Options.args.blazeplugins.args.EAB.args
+	local group = E.Options.args.plugins.args.EAB.args
 	for i = 7, 10 do
 		local name = L['Bar ']..i
 		group['bar'..i] = {
 			order = i,
 			name = name,
 			type = 'group',
-			disabled = function() return not E.private.actionbar.enable end,
+			disabled = function() return not E.ActionBars.Initialized end,
 			get = function(info) return E.db.actionbar['bar'..i][ info[#info] ] end,
 			set = function(info, value) E.db.actionbar['bar'..i][ info[#info] ] = value; AB:PositionAndSizeBar('bar'..i) end,
 			args = {
@@ -254,6 +245,10 @@ function EAB:InsertOptions()
 					multiline = true,
 					get = function(info) return E.db.actionbar['bar'..i]['paging'][E.myclass] end,
 					set = function(info, value)
+						if value and value:match('[\n\r]') then
+							value = value:gsub('[\n\r]','')
+						end
+
 						if not E.db.actionbar['bar'..i]['paging'][E.myclass] then
 							E.db.actionbar['bar'..i]['paging'][E.myclass] = {}
 						end
@@ -270,6 +265,9 @@ function EAB:InsertOptions()
 					width = 'full',
 					multiline = true,
 					set = function(info, value)
+						if value and value:match('[\n\r]') then
+							value = value:gsub('[\n\r]','')
+						end
 						E.db.actionbar['bar'..i]['visibility'] = value;
 						AB:UpdateButtonSettings()
 					end,
@@ -279,4 +277,8 @@ function EAB:InsertOptions()
 	end
 end
 
-E:RegisterModule(EAB:GetName())
+local function InitializeCallback()
+	EAB:Initialize()
+end
+
+E:RegisterModule(EAB:GetName(), InitializeCallback)

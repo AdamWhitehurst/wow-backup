@@ -1,10 +1,15 @@
 local AS = unpack(AddOnSkins)
 
-local _G, CreateFrame = _G, CreateFrame
+-- Cache global variables
+--Lua functions
+local _G = _G
 local unpack, pairs, select, type, assert, next = unpack, pairs, select, type, assert, next
 local strlower, strfind = strlower, strfind
 local CopyTable, tremove = CopyTable, tremove
+--WoW API / Variables
+local CreateFrame = CreateFrame
 local EnumerateFrames = EnumerateFrames
+-- GLOBALS:
 
 -- Add texture id's to be stripped
 -- 137056 -- Interface\\Tooltips\\UI-Tooltip-Background
@@ -68,6 +73,7 @@ AS.Blizzard.Frames = {
 	'LeftInset',
 	'RightInset',
 	'NineSlice',
+	'Border',
 	'BorderFrame',
 	'bottomInset',
 	'BottomInset',
@@ -171,22 +177,22 @@ function AS:BuildPixelBorders(frame, noSecureHook)
 		borders.CENTER:SetSnapToPixelGrid(false)
 		borders.CENTER:SetTexelSnappingBias(0)
 
-		borders.TOPLEFT:Point("BOTTOMRIGHT", borders.CENTER, "TOPLEFT", 1, -1)
-		borders.TOPRIGHT:Point("BOTTOMLEFT", borders.CENTER, "TOPRIGHT", -1, -1)
-		borders.BOTTOMLEFT:Point("TOPRIGHT", borders.CENTER, "BOTTOMLEFT", 1, 1)
-		borders.BOTTOMRIGHT:Point("TOPLEFT", borders.CENTER, "BOTTOMRIGHT", -1, 1)
+		borders.TOPLEFT:SetPoint("BOTTOMRIGHT", borders.CENTER, "TOPLEFT", 1, -1)
+		borders.TOPRIGHT:SetPoint("BOTTOMLEFT", borders.CENTER, "TOPRIGHT", -1, -1)
+		borders.BOTTOMLEFT:SetPoint("TOPRIGHT", borders.CENTER, "BOTTOMLEFT", 1, 1)
+		borders.BOTTOMRIGHT:SetPoint("TOPLEFT", borders.CENTER, "BOTTOMRIGHT", -1, 1)
 
-		borders.TOP:Point("TOPLEFT", borders.TOPLEFT, "TOPRIGHT", 0, 0)
-		borders.TOP:Point("TOPRIGHT", borders.TOPRIGHT, "TOPLEFT", 0, 0)
+		borders.TOP:SetPoint("TOPLEFT", borders.TOPLEFT, "TOPRIGHT", 0, 0)
+		borders.TOP:SetPoint("TOPRIGHT", borders.TOPRIGHT, "TOPLEFT", 0, 0)
 
-		borders.BOTTOM:Point("BOTTOMLEFT", borders.BOTTOMLEFT, "BOTTOMRIGHT", 0, 0)
-		borders.BOTTOM:Point("BOTTOMRIGHT", borders.BOTTOMRIGHT, "BOTTOMLEFT", 0, 0)
+		borders.BOTTOM:SetPoint("BOTTOMLEFT", borders.BOTTOMLEFT, "BOTTOMRIGHT", 0, 0)
+		borders.BOTTOM:SetPoint("BOTTOMRIGHT", borders.BOTTOMRIGHT, "BOTTOMLEFT", 0, 0)
 
-		borders.LEFT:Point("TOPLEFT", borders.TOPLEFT, "BOTTOMLEFT", 0, 0)
-		borders.LEFT:Point("BOTTOMLEFT", borders.BOTTOMLEFT, "TOPLEFT", 0, 0)
+		borders.LEFT:SetPoint("TOPLEFT", borders.TOPLEFT, "BOTTOMLEFT", 0, 0)
+		borders.LEFT:SetPoint("BOTTOMLEFT", borders.BOTTOMLEFT, "TOPLEFT", 0, 0)
 
-		borders.RIGHT:Point("TOPRIGHT", borders.TOPRIGHT, "BOTTOMRIGHT", 0, 0)
-		borders.RIGHT:Point("BOTTOMRIGHT", borders.BOTTOMRIGHT, "TOPRIGHT", 0, 0)
+		borders.RIGHT:SetPoint("TOPRIGHT", borders.TOPRIGHT, "BOTTOMRIGHT", 0, 0)
+		borders.RIGHT:SetPoint("BOTTOMRIGHT", borders.BOTTOMRIGHT, "TOPRIGHT", 0, 0)
 
 		if not noSecureHook then
 			hooksecurefunc(frame, "SetBackdropColor", AS.HookedSetBackdropColor)
@@ -309,9 +315,9 @@ function AS:CreateShadow(Frame, NoRegister, Inverted)
 		Shadow:SetFrameLevel(FrameLevel + 1)
 		Shadow:SetInside(Frame)
 	else
-		Shadow:SetBackdrop({ edgeFile = [[Interface\AddOns\AddOnSkins\Media\Textures\Shadows]], edgeSize = AS:Scale(3) })
+		Shadow:SetBackdrop({ edgeFile = [[Interface\AddOns\AddOnSkins\Media\Textures\Shadows]], edgeSize = 3 })
 		Shadow:SetFrameLevel(FrameLevel)
-		Shadow:SetOutside(Frame, 3, 3)
+		Shadow:SetOutside(Frame)
 	end
 
 	Shadow.Inverted = Inverted
@@ -323,6 +329,29 @@ function AS:CreateShadow(Frame, NoRegister, Inverted)
 	end
 
 	Frame.Shadow = Shadow
+end
+
+function AS:GradientHighlight(frame, layer, color)
+	if frame.SetHighlightTexture then
+		frame:SetHighlightTexture("")
+	end
+
+	local r, g, b = .9, .9, .9
+	if color then
+		r, g, b = color.r or color[1], color.g or color[2], color.b or color[3]
+	end
+
+	local leftGrad = frame:CreateTexture(nil, layer or "HIGHLIGHT")
+	leftGrad:SetSize(frame:GetWidth() * 0.5, frame:GetHeight() * 0.95)
+	leftGrad:SetPoint("LEFT", frame, "CENTER")
+	leftGrad:SetTexture(AS.Blank)
+	leftGrad:SetGradientAlpha("Horizontal", r, g, b, 0.35, r, g, b, 0)
+
+	local rightGrad = frame:CreateTexture(nil, layer or "HIGHLIGHT")
+	rightGrad:SetSize(frame:GetWidth() * 0.5, frame:GetHeight() * 0.95)
+	rightGrad:SetPoint("RIGHT", frame, "CENTER")
+	rightGrad:SetTexture(AS.Blank)
+	rightGrad:SetGradientAlpha("Horizontal", r, g, b, 0, r, g, b, 0.35)
 end
 
 function AS:Desaturate(frame)
@@ -392,9 +421,9 @@ function AS:SetTemplate(Frame, Template, Texture)
 	AS:BuildPixelBorders(Frame)
 
 	--AS:SetBackdrop(frame, bgFile, edgeSize, insetLeft, insetRight, insetTop, insetBottom)
-	AS:SetBackdrop(Frame, Texture, AS.Mult)
+	AS:SetBackdrop(Frame, Texture, (AS:CheckOption('Theme') == 'TwoPixel' and AS.Mult*2 or AS.Mult))
 
-	if (AS:CheckOption('Theme') == 'TwoPixel' or AS:CheckOption('Theme') == 'ThickBorder') then
+	if AS:CheckOption('Theme') == 'ThickBorder' or AS:CheckOption('Theme') == 'TwoPixel' then
 		for _, Inset in pairs({ 'InsideBorder', 'OutsideBorder' }) do
 			Frame[Inset] = CreateFrame('Frame', nil, Frame)
 			AS:BuildPixelBorders(Frame[Inset], true)
@@ -447,69 +476,84 @@ AS.ArrowRotation = {
 	['right'] = -1.57,
 }
 
-function AS:SkinArrowButton(Button, Arrow)
+function AS:SkinArrowButton(object, Arrow)
 	if Arrow then
 		Arrow = strlower(Arrow)
 	else
 		Arrow = 'down'
-		local ButtonName = Button:GetDebugName() and Button:GetDebugName():lower()
-		if ButtonName then
-			if (strfind(ButtonName, 'left') or strfind(ButtonName, 'prev') or strfind(ButtonName, 'decrement') or strfind(ButtonName, 'back')) then
+		local Name = object:GetDebugName() and object:GetDebugName():lower()
+		if Name then
+			if (strfind(Name, 'left') or strfind(Name, 'prev') or strfind(Name, 'decrement') or strfind(Name, 'back')) then
 				Arrow = 'left'
-			elseif (strfind(ButtonName, 'right') or strfind(ButtonName, 'next') or strfind(ButtonName, 'increment') or strfind(ButtonName, 'forward')) then
+			elseif (strfind(Name, 'right') or strfind(Name, 'next') or strfind(Name, 'increment') or strfind(Name, 'forward')) then
 				Arrow = 'right'
-			elseif (strfind(ButtonName, 'upbutton') or strfind(ButtonName, 'top') or strfind(ButtonName, 'asc') or strfind(ButtonName, 'home') or strfind(ButtonName, 'maximize')) then
+			elseif (strfind(Name, 'upbutton') or strfind(Name, 'top') or strfind(Name, 'asc') or strfind(Name, 'home') or strfind(Name, 'maximize')) then
 				Arrow = 'up'
 			end
 		end
 	end
 
-	if not Button.Mask then
-		AS:SkinFrame(Button)
+	if object:IsObjectType("Button") then
+		local Button = object
 
-		local Mask = Button:CreateMaskTexture()
-		Mask:SetTexture([[Interface\AddOns\AddOnSkins\Media\Textures\Arrow]], 'CLAMPTOBLACKADDITIVE', 'CLAMPTOBLACKADDITIVE')
-		Mask:SetRotation(AS.ArrowRotation[Arrow])
-		Mask:SetSize(Button:GetWidth() / 1.5, Button:GetHeight() / 1.5)
-		Mask:SetPoint('CENTER')
+		if not Button.Mask then
+			AS:SkinFrame(Button)
 
-		Button.Mask = Mask
+			local Mask = Button:CreateMaskTexture()
+			Mask:SetTexture([[Interface\AddOns\AddOnSkins\Media\Textures\Arrow]], 'CLAMPTOBLACKADDITIVE', 'CLAMPTOBLACKADDITIVE')
+			Mask:SetRotation(AS.ArrowRotation[Arrow])
+			Mask:SetSize(Button:GetWidth() / 1.5, Button:GetHeight() / 1.5)
+			Mask:SetPoint('CENTER')
 
-		Button:SetNormalTexture(AS.NormTex)
-		Button:SetDisabledTexture(AS.NormTex)
-		Button:SetPushedTexture(AS.NormTex)
+			Button.Mask = Mask
 
-		local Normal, Disabled, Pushed = Button:GetNormalTexture(), Button:GetDisabledTexture(), Button:GetPushedTexture()
+			Button:SetNormalTexture(AS.NormTex)
+			Button:SetDisabledTexture(AS.NormTex)
+			Button:SetPushedTexture(AS.NormTex)
 
-		Normal:SetInside()
-		Normal:SetTexCoord(0, 1, 0, 1)
-		Normal.SetTexCoord = AS.Noop
-		Normal:SetVertexColor(1, 1, 1)
-		Normal:AddMaskTexture(Mask)
+			local Normal, Disabled, Pushed = Button:GetNormalTexture(), Button:GetDisabledTexture(), Button:GetPushedTexture()
 
-		Disabled:SetInside()
-		Disabled:SetTexCoord(0, 1, 0, 1)
-		Disabled.SetTexCoord = AS.Noop
-		Disabled:SetVertexColor(.3, .3, .3)
-		Disabled:AddMaskTexture(Mask)
+			Normal:SetInside()
+			Normal:SetTexCoord(0, 1, 0, 1)
+			Normal.SetTexCoord = AS.Noop
+			Normal:SetVertexColor(1, 1, 1)
+			Normal:AddMaskTexture(Mask)
 
-		Pushed:SetInside()
-		Pushed:SetTexCoord(0, 1, 0, 1)
-		Pushed.SetTexCoord = AS.Noop
-		Pushed:SetVertexColor(unpack(AS.Color))
-		Pushed:AddMaskTexture(Mask)
+			Disabled:SetInside()
+			Disabled:SetTexCoord(0, 1, 0, 1)
+			Disabled.SetTexCoord = AS.Noop
+			Disabled:SetVertexColor(.3, .3, .3)
+			Disabled:AddMaskTexture(Mask)
 
-		Button:HookScript('OnEnter', function(self) self:SetBackdropBorderColor(unpack(AS.Color)) Normal:SetVertexColor(unpack(AS.Color)) end)
-		Button:HookScript('OnLeave', function(self) self:SetBackdropBorderColor(unpack(AS.BorderColor)) Normal:SetVertexColor(1, 1, 1) end)
+			Pushed:SetInside()
+			Pushed:SetTexCoord(0, 1, 0, 1)
+			Pushed.SetTexCoord = AS.Noop
+			Pushed:SetVertexColor(unpack(AS.Color))
+			Pushed:AddMaskTexture(Mask)
+
+			Button:HookScript('OnEnter', function(self) self:SetBackdropBorderColor(unpack(AS.Color)) Normal:SetVertexColor(unpack(AS.Color)) end)
+			Button:HookScript('OnLeave', function(self) self:SetBackdropBorderColor(unpack(AS.BorderColor)) Normal:SetVertexColor(1, 1, 1) end)
+		end
+
+		Button.Mask:SetRotation(AS.ArrowRotation[Arrow])
+	elseif object:IsObjectType("Texture") then
+		object:SetTexture([[Interface\AddOns\AddOnSkins\Media\Textures\Arrow]], 'CLAMPTOBLACKADDITIVE', 'CLAMPTOBLACKADDITIVE')
+		object:SetRotation(AS.ArrowRotation[Arrow])
 	end
-
-	Button.Mask:SetRotation(AS.ArrowRotation[Arrow])
 end
 
 function AS:SkinButton(Button, Strip)
 	if Button.isSkinned then return end
 
 	local ButtonName = Button.GetName and Button:GetName()
+	local foundArrow
+
+	if Button.Icon then
+		local Texture = Button.Icon:GetTexture()
+		if Texture and (type(Texture) == 'string' and strfind(Texture, [[Interface\ChatFrame\ChatFrameExpandArrow]])) then
+			foundArrow = true
+		end
+	end
 
 	if Strip then
 		AS:StripTextures(Button)
@@ -522,15 +566,12 @@ function AS:SkinButton(Button, Strip)
 		end
 	end
 
-	if Button.Icon then
-		local Texture = Button.Icon:GetTexture()
-		if Texture and (type(Texture) == 'string' and strfind(Texture, [[Interface\ChatFrame\ChatFrameExpandArrow]])) then
-			Button.Icon:SetTexture([[Interface\AddOns\AddOnSkins\Media\Textures\Arrow]])
-			Button.Icon:SetSnapToPixelGrid(false)
-			Button.Icon:SetTexelSnappingBias(0)
-			Button.Icon:SetVertexColor(1, 1, 1)
-			Button.Icon:SetRotation(AS.ArrowRotation['right'])
-		end
+	if foundArrow then
+		Button.Icon:SetTexture([[Interface\AddOns\AddOnSkins\Media\Textures\Arrow]])
+		Button.Icon:SetSnapToPixelGrid(false)
+		Button.Icon:SetTexelSnappingBias(0)
+		Button.Icon:SetVertexColor(1, 1, 1)
+		Button.Icon:SetRotation(AS.ArrowRotation['right'])
 	end
 
 	if Button.SetNormalTexture then Button:SetNormalTexture('') end
@@ -702,7 +743,7 @@ function AS:SkinEditBox(EditBox, Width, Height)
 	if EditBox.GetTextInsets and EditBox.SetTextInsets then
 		local Left, Right, Top, Bottom = EditBox:GetTextInsets()
 		if (Left == 0 and Right == 0 and Top == 0 and Bottom == 0) then
-			EditBox:SetTextInsets(3, 3, 3, 3)
+			EditBox:SetTextInsets(3, 3, 0, 0)
 		end
 	end
 
@@ -978,6 +1019,7 @@ end
 function AS:SkinFrame(frame, template, override, kill)
 	local name = frame and frame.GetName and frame:GetName()
 	local insetFrame = name and _G[name..'Inset'] or frame.Inset
+	local closeButton = name and _G[name..'CloseButton'] or frame.CloseButton
 
 	if not override then
 		AS:StripTextures(frame, kill)
@@ -985,18 +1027,19 @@ function AS:SkinFrame(frame, template, override, kill)
 
 	AS:SetTemplate(frame, template)
 
-	--if insetFrame then
-	--	AS:SkinFrame(insetFrame)
-	--end
+	if insetFrame then
+		AS:SkinFrame(insetFrame)
+	end
 
-	if frame.CloseButton then
-		AS:SkinCloseButton(frame.CloseButton)
+	if closeButton then
+		AS:SkinCloseButton(closeButton)
 	end
 end
 
 function AS:SkinBackdropFrame(frame, template, override, kill)
 	local name = frame and frame.GetName and frame:GetName()
 	local insetFrame = name and _G[name..'Inset'] or frame.Inset
+	local closeButton = name and _G[name..'CloseButton'] or frame.CloseButton
 
 	if not override then
 		AS:StripTextures(frame, kill)
@@ -1009,8 +1052,8 @@ function AS:SkinBackdropFrame(frame, template, override, kill)
 		AS:SkinFrame(insetFrame)
 	end
 
-	if frame.CloseButton then
-		AS:SkinCloseButton(frame.CloseButton)
+	if closeButton then
+		AS:SkinCloseButton(closeButton)
 	end
 end
 
@@ -1031,8 +1074,8 @@ function AS:SkinTooltip(tooltip, scale)
 		end
 	end
 
-	tooltip:SetTemplate(AS:CheckOption('SkinTemplate'))
-	tooltip.SetBackdrop = AS.Noop
+	AS:SkinFrame(tooltip)
+
 	if scale then
 		tooltip:SetScale(AS.UIScale)
 	end
@@ -1042,6 +1085,11 @@ function AS:SkinTexture(icon, backdrop)
 	if AS:CheckOption('CropIcons') then
 		icon:SetTexCoord(unpack(AS.TexCoords))
 	end
+
+	if icon:GetDrawLayer() ~= 'ARTWORK' then
+		icon:SetDrawLayer("ARTWORK")
+	end
+
 	icon:SetSnapToPixelGrid(false)
 	icon:SetTexelSnappingBias(0)
 	if backdrop then
@@ -1252,13 +1300,15 @@ function AS:SkinIconTextAndBackgroundWidget(widgetFrame) end
 
 function AS:SkinDoubleIconAndTextWidget(widgetFrame) end
 
-function AS:SKinStackedResourceTrackerWidget(widgetFrame) end
+function AS:SkinStackedResourceTrackerWidget(widgetFrame) end
 
 function AS:SkinIconTextAndCurrenciesWidget(widgetFrame) end
 
 function AS:SkinTextWithStateWidget(widgetFrame)
-	local text = widgetFrame.Text;
-	text:SetTextColor(1, 1, 1)
+	local text = widgetFrame.Text
+	if text then
+		text:SetTextColor(1, 1, 1)
+	end
 end
 
 function AS:SkinHorizontalCurrenciesWidget(widgetFrame) end
@@ -1267,7 +1317,15 @@ function AS:SkinBulletTextListWidget(widgetFrame) end
 
 function AS:SkinScenarioHeaderCurrenciesAndBackgroundWidget(widgetFrame) end
 
-function AS:SkinTextureWithStateWidget(widgetFrame) end
+function AS:SkinTextureAndTextWidget(widgetFrame) end
+
+function AS:SkinSpellDisplay(widgetFrame) end
+
+function AS:SkinDoubleStateIconRow(widgetFrame) end
+
+function AS:SkinTextureAndTextRowWidget(widgetFrame) end
+
+function AS:SkinZoneControl(widgetFrame) end
 
 local W = Enum.UIWidgetVisualizationType;
 AS.WidgetSkinningFuncs = {
@@ -1277,14 +1335,21 @@ AS.WidgetSkinningFuncs = {
 	[W.DoubleStatusBar] = "SkinDoubleStatusBarWidget",
 	[W.IconTextAndBackground] = "SkinIconTextAndBackgroundWidget",
 	[W.DoubleIconAndText] = "SkinDoubleIconAndTextWidget",
-	[W.StackedResourceTracker] = "SKinStackedResourceTrackerWidget",
+	[W.StackedResourceTracker] = "SkinStackedResourceTrackerWidget",
 	[W.IconTextAndCurrencies] = "SkinIconTextAndCurrenciesWidget",
 	[W.TextWithState] = "SkinTextWithStateWidget",
 	[W.HorizontalCurrencies] = "SkinHorizontalCurrenciesWidget",
 	[W.BulletTextList] = "SkinBulletTextListWidget",
 	[W.ScenarioHeaderCurrenciesAndBackground] = "SkinScenarioHeaderCurrenciesAndBackgroundWidget",
-	[W.TextureWithState] = "SkinTextureWithStateWidget"
 }
+
+if AS.Retail then
+	AS.WidgetSkinningFuncs[W.TextureAndText] = "SkinTextureAndTextWidget"
+	AS.WidgetSkinningFuncs[W.SpellDisplay] = "SkinSpellDisplay"
+	AS.WidgetSkinningFuncs[W.DoubleStateIconRow] = "SkinDoubleStateIconRow"
+	AS.WidgetSkinningFuncs[W.TextureAndTextRow] = "SkinTextureAndTextRowWidget"
+	AS.WidgetSkinningFuncs[W.ZoneControl] = "SkinZoneControl"
+end
 
 function AS:SkinWidgetContainer(widgetContainer)
 	for _, child in ipairs({widgetContainer:GetChildren()}) do

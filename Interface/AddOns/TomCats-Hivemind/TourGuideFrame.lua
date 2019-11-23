@@ -35,7 +35,7 @@ local function ADDON_LOADED(_, event, ...)
         UIPanelWindows["TomCats-HivemindTourGuideFrame"] = UIPanelWindows["SpellBookFrame"]
         TourGuideFrame.portrait:SetTexture("Interface\\AddOns\\" .. addon.name .. "\\images\\hivemind-icon");
         TourGuideFrame.portrait:SetTexCoord(0, 1, 0, 1);
-        PortraitFrameTemplate_SetTitle(TourGuideFrame, "TomCat's Tours: The Hivemind");
+        TourGuideFrame:SetTitle("TomCat's Tours: The Hivemind");
         ButtonFrameTemplate_HideButtonBar(TourGuideFrame);
         ButtonFrameTemplate_HideAttic(TourGuideFrame);
         TourGuideFrame.pageNavigationFrame.nextPageButton:SetScript("OnClick", TourGuideFrame.nextPage)

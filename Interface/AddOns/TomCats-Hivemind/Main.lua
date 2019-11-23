@@ -40,7 +40,7 @@ if (TomCats and TomCats.Register) then
                 }
             },
             name = "The Hivemind",
-            version = "0.1.4"
+            version = "0.1.6"
         }
     )
 end

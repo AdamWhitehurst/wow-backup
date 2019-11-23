@@ -50,7 +50,7 @@ FarmHudDB = {
 	["cardinalpoints_radius"] = 0.47,
 	["buttons_buttom"] = false,
 	["time_bottom"] = false,
-	["buttons_radius"] = 0.56,
+	["showDummyBg"] = true,
 	["MinimapIcon"] = {
 		["minimapPos"] = 318.395807533005,
 		["radius"] = 80,
@@ -60,19 +60,19 @@ FarmHudDB = {
 	["player_dot"] = "gold",
 	["time_show"] = true,
 	["text_scale"] = 1.4,
-	["areaborder_arch_show"] = "blizz",
+	["background_alpha"] = 0,
 	["coords_bottom"] = false,
-	["areaborder_tasks_show"] = "blizz",
-	["time_radius"] = 0.48,
-	["areaborder_quest_show"] = "blizz",
 	["time_color"] = {
 		1, -- [1]
 		0.82, -- [2]
 		0, -- [3]
 		0.7, -- [4]
 	},
-	["background_alpha"] = 0,
+	["time_radius"] = 0.48,
+	["areaborder_quest_show"] = "blizz",
+	["areaborder_tasks_show"] = "blizz",
+	["areaborder_arch_show"] = "blizz",
 	["time_local"] = true,
 	["areaborder_task_texture"] = false,
-	["showDummyBg"] = true,
+	["buttons_radius"] = 0.56,
 }

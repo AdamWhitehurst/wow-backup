@@ -1,3 +1,4 @@
 
 AddonUsageSettings = {
+	["sortOrder"] = 3,
 }

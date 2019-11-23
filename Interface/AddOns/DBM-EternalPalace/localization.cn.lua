@@ -1,7 +1,7 @@
 -- Mini Dragon(projecteurs@gmail.com)
 -- 夏一可
 -- Blizzard Entertainment
--- Last update: 2019/05/29
+-- Last update: 2019/08/09
 
 if GetLocale() ~= "zhCN" then return end
 local L
@@ -52,7 +52,7 @@ L= DBM:GetModLocalization(2351)
 L= DBM:GetModLocalization(2359)
 
 L:SetMiscLocalization({
-	Circles =	"Circles in 3s"
+	Circles =	"3秒后出圈"
 })
 
 ---------------------------
@@ -61,7 +61,8 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2349)
 
 L:SetMiscLocalization({
-	Tear =	"撕裂"
+	Phase3	=	"扎库尔把你拽进了恐惧领域！",
+	Tear	=	"撕裂"
 })
 
 ---------------------------
@@ -69,13 +70,14 @@ L:SetMiscLocalization({
 ---------------------------
 L= DBM:GetModLocalization(2361)
 
--------------
---  Trash  --
--------------
-L = DBM:GetModLocalization("EternalPalaceTrash")
+L:SetTimerLocalization{
+	timerStageThreeBerserk		= "小怪狂暴"
+}
 
-L:SetGeneralLocalization({
-	name =	"永恒王宫小怪"
+L:SetOptionLocalization({
+	SortDesc 				= "$spell:298569的层数计数信息窗使用从高到低显示，而不是从低到高",
+	ShowTimeNotStacks		= "使用信息窗提示$spell:298569的剩余时间而不是使用层数计数器信息框显示剩代替",
+	timerStageThreeBerserk	= "为3阶段小怪狂暴显示计时器"
 })
 
 L:SetMiscLocalization({
@@ -85,10 +87,26 @@ L:SetMiscLocalization({
 	Spread =	"分散",
 	Move	 =	"保持移动",
 	DontMove =	"停止移动",
-	--For Yells, not yet used, localize anyways.
-	Soaking =	"{rt3}吸收{rt3}",--Diamond for arcane orbs
-	Stacking =	"吸收",
-	Solo =		"Solo",
-	Marching =	"{rt4}配对{rt4}",--Green Triangle
-	Staying =	"{rt7}保持{rt7}"--Red X
+	HelpSoakMove		= "{rt3}帮忙吸收移动{rt3}",--Purple Diamond
+	HelpSoakStay		= "{rt6}帮忙吸收不动{rt6}",--Blue Square
+	HelpSoak			= "{rt3}帮忙吸收{rt3}",--Purple Diamond
+	HelpMove			= "{rt4}帮忙移动{rt4}",--Green Triangle
+	HelpStay			= "{rt7}帮忙不动{rt7}",--Red X
+	SoloSoak 			= "单独吸收",
+	Solo 				= "单独",
+	--Not currently used Yells
+	SoloMoving			= "单独移动",
+	SoloStay			= "单独不动",
+	SoloSoakMove		= "单独吸收移动",
+	SoloSoakStay		= "单独吸收不动"
+})
+
+
+-------------
+--  Trash  --
+-------------
+L = DBM:GetModLocalization("EternalPalaceTrash")
+
+L:SetGeneralLocalization({
+	name =	"永恒王宫小怪"
 })

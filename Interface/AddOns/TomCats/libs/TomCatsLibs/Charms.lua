@@ -1,7 +1,5 @@
 local addon = select(2,...)
---noinspection UnusedDef
 local TCL = addon.TomCatsLibs
-local cursorStartX, cursorStartY
 local seqNum = 1;
 local handleSlideBar, handleSexyMap
 
@@ -43,8 +41,12 @@ function TCL.Charms.Create(buttonInfo)
     if (buttonInfo.handler_onclick) then
         frame:SetHandler("OnClick",buttonInfo.handler_onclick)
     end
-    handleSlideBar(frame)
-    handleSexyMap(frame)
+    if not buttonInfo.ignoreSlideBar then
+        handleSlideBar(frame)
+    end
+    if not buttonInfo.ignoreSexyMap then
+        handleSexyMap(frame)
+    end
     return frame
 end
 

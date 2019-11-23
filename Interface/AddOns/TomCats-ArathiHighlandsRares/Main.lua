@@ -1,19 +1,38 @@
 local addon = select(2, ...)
+-- Begin interim restart checking code
+local function convertVersionToNumber(version)
+    local parts = addon.split(version)
+    return tonumber(parts[1]) * 1000000 + tonumber(parts[2]) * 1000 + tonumber(parts[3])
+end
+local addonTOCVersion = convertVersionToNumber(GetAddOnMetadata("TomCats-ArathiHighlandsRares", "version"))
+local newFilesSinceVersion = convertVersionToNumber("1.3.8")
+if (newFilesSinceVersion > addonTOCVersion) then
+    DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Warning: TomCat's Tours: Arathi Highlands requires that you restart WoW in order for the recent update to function properly|r")
+end
+local tomcatsMinVersion = convertVersionToNumber("1.3.6")
+local tomcatsCurrentVersion = 0
+if TomCats and TomCats.version then
+    tomcatsCurrentVersion = convertVersionToNumber(TomCats.version)
+end
+if (not TomCats) then
+    DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Warning: TomCat's Tours must be installed and enabled for TomCat's Tours: Arathi Highlands to function properly|r")
+elseif (tomcatsCurrentVersion < tomcatsMinVersion) then
+    DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Warning: TomCat's Tours must be updated to the latest version for TomCat's Tours: Arathi Highlands to function properly|r")
+end
+-- End interim restart checking code
 local D, L, P = addon.getLocalVars()
 local TCL = addon.TomCatsLibs
-local AceGUI = LibStub("AceGUI-3.0")
 local gameVersion = GetBuildInfo()
-local _, checkIsBossAvailable, QUEST_STATUS, initializeWindow, setQuestLabelStyle, updateQuests, labels, buttons, quests, windowSettings
+local _, checkIsBossAvailable, QUEST_STATUS, setQuestLabelStyle, updateQuests, labels, buttons, quests, windowSettings
 local tourWindow, newTourWindow, warfrontFont, warningFont, updateTimer
 local questTrackingColumnName, enemyReactColumnName
 local GetVignettes_Orig = C_VignetteInfo.GetVignettes
 local playerFaction, enemyFaction = addon.playerFaction, addon.enemyFaction
-local initializeQuests, updateLabelTexts
+local initializeQuests
 local warfrontPhases = {
     ["Alliance"] = 1,
     ["Horde"] = 2
 }
-
 local function suppressVignettes()
     if (HandyNotes and addon.savedVariables.character.enableHandyNotesPlugin) then
         return true
@@ -27,7 +46,6 @@ local function suppressVignettes()
     if (WorldMapFrame and WorldMapFrame:GetMapID() == addon.params["Vignette MapID"]) then return false end
     return true
 end
-
 function C_VignetteInfo.GetVignettes()
     local vignettes = GetVignettes_Orig()
     if (suppressVignettes()) then return vignettes end
@@ -42,9 +60,7 @@ function C_VignetteInfo.GetVignettes()
     end
     return vignettes
 end
-
 local GetVignetteInfo_Orig = C_VignetteInfo.GetVignetteInfo
-
 function C_VignetteInfo.GetVignetteInfo(vignetteGUID)
     if (suppressVignettes()) then return GetVignetteInfo_Orig(vignetteGUID) end
     local creature = D["Creatures by Vignette GUID"][vignetteGUID]
@@ -52,15 +68,15 @@ function C_VignetteInfo.GetVignetteInfo(vignetteGUID)
         return creature["Vignette Info"]
     end
     local vignetteInfo = GetVignetteInfo_Orig(vignetteGUID)
+    if not vignetteInfo then return nil end
     if (C_VignetteInfo.GetVignettePosition(vignetteGUID, P["Vignette MapID"]) and D["Creatures by Vignette ID"][vignetteInfo.vignetteID]) then
+        vignetteInfo.atlasName = "VignetteEventElite"
         vignetteInfo.onWorldMap = true
         vignetteInfo.hasTooltip = true
     end
     return vignetteInfo
 end
-
 local GetVignettePosition_Orig = C_VignetteInfo.GetVignettePosition
-
 function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID)
     if (suppressVignettes()) then return GetVignettePosition_Orig(vignetteGUID, uiMapID) end
     if (uiMapID == P["Vignette MapID"]) then
@@ -77,9 +93,7 @@ function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID)
     end
     return GetVignettePosition_Orig(vignetteGUID, uiMapID)
 end
-
 local FindBestUniqueVignette_Orig = C_VignetteInfo.FindBestUniqueVignette
-
 function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs)
     local index = FindBestUniqueVignette_Orig(vignetteGUIDs)
     if (suppressVignettes()) then return index end
@@ -93,8 +107,30 @@ function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs)
     end
     return index
 end
-
+local function replaceMapOnShow(mapFrame)
+    local dataproviders = mapFrame["dataProviders"]
+    local provider
+    for k, v in pairs(dataproviders) do
+        if (k.uniqueVignettesGUIDs) then
+            provider = k
+        end
+    end
+    function provider:OnShow()
+        self:RegisterEvent("VIGNETTES_UPDATED");
+        self.ticker = C_Timer.NewTicker(0.1, function() self:UpdatePinPositions() end);
+    end
+    if (provider.ticker) then
+        provider.ticker:Cancel()
+        provider:OnShow()
+    end
+end
 local function ADDON_LOADED(self)
+    replaceMapOnShow(WorldMapFrame)
+    if not BattlefieldMapFrame then
+        hooksecurefunc("BattlefieldMap_LoadUI", function() replaceMapOnShow(BattlefieldMapFrame) end)
+    else
+        replaceMapOnShow(BattlefieldMapFrame)
+    end
     windowSettings = addon.savedVariables.character.windowSettings or { width = 360, height = 330 }
     local completeFont = CreateFont("Complete")
     completeFont:SetFontObject(SystemFont_Small)
@@ -121,7 +157,7 @@ local function ADDON_LOADED(self)
             color = { r = 0, g = 1, b = 0 }
         },
         INCOMPLETE = {
-            getImage = function() return 1121272, 576/1024, 608/1024, 302/512, 334/512 end,
+            getImage = function() return 1121272, 576/1024, 608/1024, 373/512, 405/512 end,
             font = incompleteFont,
             texture = "incomplete",
             color = { r = 0.75, g = 0.75, b = 0.75 }
@@ -135,12 +171,11 @@ local function ADDON_LOADED(self)
     }
     questTrackingColumnName = ("%s Tracking ID"):format(playerFaction)
     enemyReactColumnName = ("%s React"):format(enemyFaction)
-    initializeQuests()
     TCL.Charms.Create({
         name = addon.name .. "MinimapButton",
-        iconTexture = "Interface\\AddOns\\" .. addon.name .. "\\images\\" .. addon.params["Minimap Icon"],
+        iconTexture = addon.params["Minimap Icon"],
         backgroundColor = addon.params["Icon BGColor"],
-        handler_onclick = addon.toggleTourWindow,
+        handler_onclick = addon.OpenWorldMapToZone,
         title = "TomCat's Tours: " .. addon.params["Title Line 1"]
     }).tooltip = {
         Show = function(this)
@@ -148,7 +183,7 @@ local function ADDON_LOADED(self)
             GameTooltip:SetOwner(this, "ANCHOR_LEFT")
             GameTooltip:SetText("TomCat's Tours:", 1, 1, 1)
             GameTooltip:AddLine(addon.params["Title Line 1"], nil, nil, nil, true)
-            GameTooltip:AddLine("(" .. addon.params["Title Line 2"] .. ")", nil, nil, nil, true)
+            --GameTooltip:AddLine("(" .. addon.params["Title Line 2"] .. ")", nil, nil, nil, true)
             GameTooltip:Show()
         end,
         Hide = function()
@@ -156,31 +191,15 @@ local function ADDON_LOADED(self)
         end
     }
     TCL.Events.RegisterEvent("PLAYER_LOGOUT", addon)
-    if (windowSettings.showing) then
-        --todo: remove timer
-        C_Timer.After(1, initializeWindow)
-    end
     TCL.Events.RegisterEvent("QUEST_LOG_UPDATE", addon)
     C_Timer.After(5,addon.checkForQuestUpdates)
-    C_Timer.After(P["Timer Delay"], updateTimer)
     TCL.Events.UnregisterEvent("ADDON_LOADED", ADDON_LOADED)
 end
-
 TCL.Events.RegisterEvent("ADDON_LOADED", ADDON_LOADED)
-
 function addon.checkForQuestUpdates()
     addon.QUEST_LOG_UPDATE()
     C_Timer.After(5, addon.checkForQuestUpdates)
 end
-
-function initializeWindow()
-    if (tourWindow and tourWindow:IsShown()) then
-        return
-    else
-        addon:toggleTourWindow()
-    end
-end
-
 function addon:PLAYER_LOGOUT()
     if (tourWindow) then
         windowSettings.width = tourWindow.frame:GetWidth()
@@ -189,300 +208,102 @@ function addon:PLAYER_LOGOUT()
         addon.savedVariables.character.windowSettings = windowSettings
     end
 end
-
 function addon:QUEST_LOG_UPDATE()
-    if (windowSettings.showing and tourWindow and tourWindow:IsShown()) then
-        updateQuests()
-    end
     addon.refreshStatusForAllCreatures()
     if (HandyNotes) then
-        HandyNotes.WorldMapDataProvider:RefreshPlugin("TomCat's Tours: " .. addon.params["Title Line 1"])
+        HandyNotes.UpdateWorldMapPlugin("TomCat's Tours: " .. addon.params["Title Line 1"])
         HandyNotes:UpdateMinimapPlugin("TomCat's Tours: " .. addon.params["Title Line 1"])
     end
 end
-
-updateQuests = function()
-    local playerLevel = UnitLevel("player")
-    if (playerLevel < 120) then
-        return
-    end
-    if(tourWindow) then
-        if (tourWindow.warningLabel) then
-            tourWindow.warningLabel:SetText("")
-            tourWindow.warningLabel = nil
-            tourWindow:DoLayout()
+local lastWaypoint
+local function onClickWayPoint(creature)
+    if (TomTom) then
+        local currentMapID = C_Map.GetBestMapForUnit("player")
+        if (addon.params["Vignette MapID"] == currentMapID) then
+            if (lastWaypoint) then
+                TomTom:RemoveWaypoint(lastWaypoint)
+            end
+            local location = creature["Locations"][addon.raresLog.locationIndex]
+            lastWaypoint = TomTom:AddWaypoint(WorldMapFrame:GetMapID(), location[1], location[2], {
+                title = creature["Name"],
+                persistent = false,
+                minimap = true,
+                world = true
+            })
         end
     end
-    local isBossAvailable = checkIsBossAvailable()
-    local qc = GetQuestsCompleted()
-    for k in pairs(quests) do
-        if (qc[k]) then
-            if (quests[k].status ~= QUEST_STATUS.COMPLETE) then
-                quests[k].status = QUEST_STATUS.COMPLETE
-                setQuestLabelStyle(quests[k])
-            end
+end
+function addon:OpenWorldMapToZone()
+    if TomCatsRareMapFrame then
+        if TomCatsRareMapFrame:IsShown() and WorldMapFrame:GetMapID() == tonumber("14") then
+            HideUIPanel(WorldMapFrame)
         else
-            if (not D["Creatures"][quests[k]["Creature ID"]]["Locations"][warfrontPhases[addon.getWarfrontPhase()]]) then
-                if (quests[k].status ~= QUEST_STATUS.UNAVAILABLE) then
-                    quests[k].status = QUEST_STATUS.UNAVAILABLE
-                    setQuestLabelStyle(quests[k])
-                end
-            else
-                if (quests[k].status ~= QUEST_STATUS.INCOMPLETE) then
-                    quests[k].status = QUEST_STATUS.INCOMPLETE
-                    setQuestLabelStyle(quests[k])
-                end
+            WorldMapFrame:SetDisplayState(3)
+            WorldMapFrame:SetMapID(tonumber("14"))
+            if not TomCatsRareMapFrame:IsShown() then
+                TomCatsRarePanelToggle:OnClick()
             end
         end
-    end
-end
-
-function initializeQuests()
-    quests = {}
-    labels = {}
-    buttons = {}
-    local isBossAvailable = checkIsBossAvailable()
-    local playerLevel = UnitLevel("player")
-    local namesLoaded = true
-    local labelMinWidth = 0
-    local buttonMinWidth = 0
-    for k, v in pairs(D["Creatures"].records) do
-        local questID = v[questTrackingColumnName]
-        if (questID) then
-            local quest = {}
-            quests[questID] = quest
-            quest["Creature ID"] = k
-            local label = AceGUI:Create("TomCatsInteractiveLabel")
-            label:SetCallback("OnEnter", function(widget)
-                addon.showItemTooltip(widget.frame, v, true)
-            end)
-            label:SetCallback("OnLeave", addon.hideItemTooltip)
-            local button = CreateFrame("BUTTON", "TomCats-ArathiHighlandsRaresRareButton"..k, UIParent, "TomCats-ArathiHighlandsRaresRareButtonTemplate")
-            quest.label = label
-            quest.button = button
-            if (namesLoaded) then
-                local name = addon.getRareNameByCreatureID(k)
-                if (not name) then
-                    -- todo: localize
-                    label:SetText("Loading...")
-                    button:SetText("Loading...")
-                    namesLoaded = false
-                else
-                    label:SetText(name)
-                    button:SetText(name)
-                end
-            else
-                label:SetText("Loading...")
-                button:SetText("Loading...")
-            end
-            local minWidth = label:GetMinWidth()
-            if minWidth > labelMinWidth then
-                labelMinWidth = minWidth
-            end
-            minWidth = button:GetTextWidth()
-            if minWidth > labelMinWidth then
-                buttonMinWidth = minWidth
-            end
-            if (playerLevel < 120) then
-                quest.status = QUEST_STATUS.UNAVAILABLE
-            elseif (IsQuestFlaggedCompleted(questID)) then
-                quest.status = QUEST_STATUS.COMPLETE
-            else
-                if ((not isBossAvailable) and (v[enemyReactColumnName] == 1)) then
-                    quest.status = QUEST_STATUS.UNAVAILABLE
-                else
-                    quest.status = QUEST_STATUS.INCOMPLETE
-                end
-            end
-            setQuestLabelStyle(quest)
-            table.insert(labels, label)
-            table.insert(buttons, button)
-        end
-    end
-    labelMinWidth = labelMinWidth + 15
-    for i = 1, #labels, 1 do
-        labels[i]:SetWidth(labelMinWidth)
-    end
-    buttonMinWidth = buttonMinWidth + 18
-    for i = 1, #buttons, 1 do
-        buttons[i]:SetWidth(buttonMinWidth)
-    end
-end
-
-function addon:toggleTourWindow()
-    if (tourWindow and tourWindow:IsShown()) then
-        PlaySound(799)
-        windowSettings.showing = false
-        tourWindow:Hide()
-        --newTourWindow:Hide()
-    elseif (tourWindow) then
-        PlaySound(799)
-        windowSettings.showing = true
-        updateQuests()
-        tourWindow:Show()
-        --newTourWindow:Show()
     else
-        PlaySound(799)
-        ----------------------------------
-        newTourWindow = CreateFrame("Frame", "TomCats-ArathiHighlandsRaresTourWindow", UIParent, "TomCats-ArathiHighlandsRaresTourWindowTemplate")
-        --newTourWindow:Show()
-        _G["TomCats-ArathiHighlandsRaresTourWindowPortrait"]:SetTexture("Interface\\AddOns\\" .. addon.name .. "\\images\\" .. addon.params["Minimap Icon"]);
-        _G["TomCats-ArathiHighlandsRaresTourWindowPortrait"]:SetTexCoord(0, 1, 0, 1);
-        _G["TomCats-ArathiHighlandsRaresTourWindowPortraitBackground"]:SetTexture("Interface\\CHARACTERFRAME\\TempPortraitAlphaMaskSmall");
-        _G["TomCats-ArathiHighlandsRaresTourWindowPortraitBackground"]:SetVertexColor(118/255,18/255,20/255,1);
-        _G["TomCats-ArathiHighlandsRaresTourWindowTitleText"]:SetText("|cFFFFFFFF" .. L["TomCat's Tours"]);
-        _G["TomCats-ArathiHighlandsRaresTourWindowTitle2Text"]:SetText(L[addon.params["Title Line 1"]] .. "\n(" .. L[addon.params["Title Line 2"]] .. ")");
-        newTourWindow.onCloseCallback = function() addon:toggleTourWindow() end
-        ----------------------------------
-
-        tourWindow = AceGUI:Create("Window")
-        tourWindow.closebutton:SetScript("OnClick", function()
-            addon:toggleTourWindow()
-        end)
-        tourWindow:SetTitle(L["TomCat's Tours"] .. ": " .. L[addon.params["Title Line 1"]])
-        tourWindow:SetLayout("Fill")
-        tourWindow:SetAutoAdjustHeight(true)
-        if (windowSettings.height and windowSettings.width) then
-            tourWindow:SetHeight(windowSettings.height)
-            tourWindow:SetWidth(windowSettings.width)
-        end
-        if (windowSettings.point and windowSettings.relativePoint and windowSettings.x and windowSettings.y) then
-            tourWindow:ClearAllPoints()
-            tourWindow:SetPoint(windowSettings.point, nil, windowSettings.relativePoint, windowSettings.x, windowSettings.y)
-        end
-        tourWindow.scroll = AceGUI:Create("ScrollFrame")
-        tourWindow.scroll:SetLayout("Flow")
-        tourWindow:AddChild(tourWindow.scroll)
-        local playerLevel = UnitLevel("player")
-        if (playerLevel < 120) then
-            if (not tourWindow.warningLabel) then
-                tourWindow.warningLabel = AceGUI:Create("Label")
-                tourWindow.warningLabel:SetFontObject(warningFont)
-                tourWindow.warningLabel:SetColor(warningFont:GetTextColor())
-                tourWindow.warningLabel:SetJustifyH("CENTER")
-                tourWindow.warningLabel:SetRelativeWidth(1)
-                tourWindow.warningLabel:SetText(L["Unavailable_Below_120"] .. "\r\n")
-                tourWindow.scroll:AddChild(tourWindow.warningLabel)
-            end
-        end
-        if (not addon.creatureNamesLoaded) then
-            updateLabelTexts()
-        end
-        for i = 1, #labels, 1 do
-            tourWindow.scroll:AddChild(labels[i])
-        end
-        for i = 1, #buttons, 1 do
-            buttons[i]:SetParent(_G["TomCats-ArathiHighlandsRaresTourWindowRaresScrollFrameScrollChild"])
-            if i > 1 then
-                buttons[i]:SetPoint("TOPLEFT", buttons[i-1]:GetName(), "BOTTOMLEFT", 0, 0)
-            else
-                buttons[i]:SetPoint("TOPLEFT", _G["TomCats-ArathiHighlandsRaresTourWindowRaresScrollFrameScrollChild"], "TOPLEFT", 0, 0)
-            end
-            buttons[i]:Show()
-        end
-        tourWindow.frame:SetMinResize(300, 150)
-        tourWindow.frame:SetFrameStrata("MEDIUM")
-        tourWindow.initialized = true
-        windowSettings.showing = true
-    --workaround for incorrect render
-    --TODO: Debug this
-        tourWindow:Hide()
-        tourWindow:Show()
+        DEFAULT_CHAT_FRAME:AddMessage("|cffff0000Warning: TomCat's Tours must be installed and enabled for TomCat's Tours: Arathi Highlands to function properly|r")
     end
 end
-
-function updateLabelTexts()
-    if ((not addon.creatureNamesLoaded) and addon.loadCreatureNames()) then
-        local labelMinWidth = 0
-        for _, quest in pairs(quests) do
-            quest.label:SetText(D["Creatures"][quest["Creature ID"]]["Name"])
-            local minWidth = quest.label:GetMinWidth()
-            if minWidth > labelMinWidth then
-                labelMinWidth = minWidth
-            end
-        end
-        labelMinWidth = labelMinWidth + 15
-        for i = 1, #labels, 1 do
-            labels[i]:SetWidth(labelMinWidth)
-        end
-        if (tourWindow) then
-            tourWindow:DoLayout()
-        end
-    end
-end
-
-setQuestLabelStyle = function(quest)
-    quest.label:SetImage(quest.status.getImage())
-    quest.label:SetFontObject(quest.status.font)
-    quest.label:SetImageSize(14, 14)
-    for k, v in pairs(QUEST_STATUS) do
-        if (quest.status == v) then
-            quest.button[v.texture]:Show()
-        else
-            quest.button[v.texture]:Hide()
-        end
-    end
-    local color = quest.status.color
-    quest.button.text:SetTextColor(color.r, color.g, color.b)
-end
-
-updateTimer = function()
-    updateLabelTexts()
-    if (tourWindow and tourWindow.initialized and tourWindow:IsShown()) then
-        updateQuests()
-    end
-    C_Timer.After(P["Timer Delay"], updateTimer)
-end
-
 checkIsBossAvailable = function()
     return (playerFaction == addon.getWarfrontPhase())
 end
-
 local LOOT_NOUN_COLOR = CreateColor(1.0, 0.82, 0.0, 1.0)
-
 function addon.showItemTooltip(self, creature, showCreatureName, offX, offY)
     local tooltip = EmbeddedItemTooltip
-    tooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT", offX or -50, offY or 20);
+    tooltip:SetOwner(self, "ANCHOR_RIGHT", -4, -8);
     if (showCreatureName) then
         local color = WORLD_QUEST_QUALITY_COLORS[1];
-    --todo: Check for any reason that creature["Name"] could return nil
         EmbeddedItemTooltip:SetText(creature["Name"], color.r, color.g, color.b);
-        GameTooltip_AddBlankLinesToTooltip(tooltip, 1);
     end
+    local footerText
     if (creature["Loot"]) then
-        GameTooltip_AddColoredLine(tooltip, LOOT_NOUN, LOOT_NOUN_COLOR, true);
-        EmbeddedItemTooltip_SetItemByID(tooltip.ItemTooltip, creature["Loot"])
-    elseif (creature["Level"] == nil) then
-        GameTooltip_AddColoredLine(tooltip, STAT_AVERAGE_ITEM_LEVEL .. " " .. "385" .. " " .. LOOT_NOUN, LOOT_NOUN_COLOR, true);
-        GameTooltip_AddColoredLine(tooltip, "(See adventure guide)", LOOT_NOUN_COLOR, true);
-    else
-        GameTooltip_AddColoredLine(tooltip, LOOT_NOUN, LOOT_NOUN_COLOR, true);
-        local name, texture, quantity, quality = CurrencyContainerUtil.GetCurrencyContainerInfo(1553, 39);
-        local text = BONUS_OBJECTIVE_REWARD_FORMAT:format(texture, name);
-        local color = ITEM_QUALITY_COLORS[quality];
-        tooltip:AddLine(text, color.r, color.g, color.b);
+        local itemID
+        if type(creature["Loot"]) == "table" then
+            if creature["Loot"].items then
+                itemID = creature["Loot"].items[1]
+                if #(creature["Loot"].items) > 1 then
+                    footerText = ("+ %d more items"):format(#(creature["Loot"].items) - 1)
+                end
+            end
+        else
+            itemID = creature["Loot"]
+        end
+        if itemID then
+            GameTooltip_AddBlankLinesToTooltip(tooltip, 1);
+            GameTooltip_AddColoredLine(EmbeddedItemTooltip, LOOT_NOUN, LOOT_NOUN_COLOR, true);
+            EmbeddedItemTooltip_SetItemByID(EmbeddedItemTooltip.ItemTooltip, itemID)
+        end
     end
-    --EmbeddedItemTooltip.recalculatePadding = true;
+    if footerText then
+        EmbeddedItemTooltip.BottomFontString:SetText(footerText)
+        EmbeddedItemTooltip.BottomFontString:SetShown(true)
+    end
     EmbeddedItemTooltip:Show()
 end
-
 function addon.hideItemTooltip()
     EmbeddedItemTooltip:Hide()
 end
-
+local function pinOnClick(pin)
+    local creature = D["Creatures by Vignette ID"][pin.vignetteID]
+    if (creature) then
+        onClickWayPoint(creature)
+    end
+end
 local VignettePinMixin_OnMouseEnter_Orig = VignettePinMixin.OnMouseEnter
-
 function VignettePinMixin:OnMouseEnter()
     local creature = D["Creatures by Vignette ID"][self.vignetteID]
     if (creature) then
+        self:SetScript("OnMouseUp", pinOnClick)
         addon.showItemTooltip(self, creature, true, 10, 5)
     else
         return VignettePinMixin_OnMouseEnter_Orig(self)
     end
 end
-
 local VignettePinMixin_OnMouseLeave_Orig = VignettePinMixin.OnMouseLeave
-
 function VignettePinMixin:OnMouseLeave()
     local creature = D["Creatures by Vignette ID"][self.vignetteID]
     if (creature) then
@@ -491,10 +312,9 @@ function VignettePinMixin:OnMouseLeave()
         return VignettePinMixin_OnMouseLeave_Orig(self)
     end
 end
-
 if (HandyNotes) then
-    local incompleteIcon = {icon = 1121272, tCoordLeft = 575/1024, tCoordRight = 607/1024, tCoordTop = 205/512, tCoordBottom = 237/512 }
-    local completeIcon = {icon = 973338, tCoordLeft = 123/256, tCoordRight = 159/256, tCoordTop = 94/128, tCoordBottom = 126/128 }
+    local incompleteIcon = {icon = 1121272, tCoordLeft = 576/1024, tCoordRight = 608/1024, tCoordTop = 373/512, tCoordBottom = 405/512 }
+    local completeIcon = {icon = 973338, tCoordLeft = 124/256, tCoordRight = 160/256, tCoordTop = 94/128, tCoordBottom = 126/128 }
     local nilFunc = function() return nil end
     local coordLookup = {}
     local HandyNotesPlugin = {
@@ -523,9 +343,13 @@ if (HandyNotes) then
                     if (creature["Status"] == addon.STATUS.COMPLETE) then
                         icon = completeIcon
                     end
+                    local alpha = 1.0
+                    if (minimap) then
+                        alpha = 0.50
+                    end
                     return coord, uiMapID,
                     icon,
-                    2.0, 1.0
+                    2.0, alpha
                 else
                     return nil
                 end
@@ -536,9 +360,13 @@ if (HandyNotes) then
         end,
         OnLeave = function()
             addon.hideItemTooltip()
+        end,
+        OnClick = function(_, button, down, _, coord)
+            if button == "LeftButton" and not down then
+                onClickWayPoint(coordLookup[coord])
+            end
         end
     }
-
     local HandyNotesOptions = {
         type="group",
         name="TomCat's Tours: " .. addon.params["Map Name"],
@@ -556,10 +384,16 @@ if (HandyNotes) then
             }
         }
     }
-
     HandyNotes:RegisterPluginDB("TomCat's Tours: " .. addon.params["Title Line 1"], HandyNotesPlugin, HandyNotesOptions)
 end
-
+addon.raresLog = {
+    creatures = D["Creatures"].records,
+    locationIndex = warfrontPhases[addon.getWarfrontPhase()],
+    updated = true
+}
+local function GetRaresLog()
+    return addon.raresLog
+end
 if (TomCats and TomCats.Register) then
     TomCats:Register(
         {
@@ -567,11 +401,16 @@ if (TomCats and TomCats.Register) then
                 {
                     command = "ARATHI TOGGLE",
                     desc = "Toggle Rares of Arathi Highlands Window",
-                    func = addon.toggleTourWindow
+                    func = addon.OpenWorldMapToZone
                 }
             },
             name = "Rares of Arathi Highlands",
-            version = "1.2.7"
+            version = "1.3.10",
+            raresLogHandlers = {
+                [tonumber("14")] = {
+                    raresLog = GetRaresLog
+                }
+            }
         }
     )
 end

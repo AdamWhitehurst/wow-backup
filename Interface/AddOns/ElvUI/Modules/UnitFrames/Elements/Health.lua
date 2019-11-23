@@ -15,6 +15,12 @@ local _, ns = ...
 local ElvUF = ns.oUF
 assert(ElvUF, "ElvUI was unable to locate oUF.")
 
+function UF.HealthClipFrame_OnUpdate(clipFrame)
+	UF.HealthClipFrame_HealComm(clipFrame.__frame)
+
+	clipFrame:SetScript('OnUpdate', nil)
+end
+
 function UF:Construct_HealthBar(frame, bg, text, textPos)
 	local health = CreateFrame('StatusBar', nil, frame)
 	UF.statusbars[health] = true
@@ -27,7 +33,7 @@ function UF:Construct_HealthBar(frame, bg, text, textPos)
 		health.bg = health:CreateTexture(nil, 'BORDER')
 		health.bg:SetAllPoints()
 		health.bg:SetTexture(E.media.blankTex)
-		health.bg.multiplier = 0.25
+		health.bg.multiplier = 0.35
 	end
 
 	if text then
@@ -45,6 +51,14 @@ function UF:Construct_HealthBar(frame, bg, text, textPos)
 	health.colorTapping = true
 	health.colorDisconnected = true
 	health:CreateBackdrop(nil, nil, nil, self.thinBorders, true)
+
+	local clipFrame = CreateFrame('Frame', nil, health)
+	clipFrame:SetScript('OnUpdate', UF.HealthClipFrame_OnUpdate)
+	clipFrame:SetClipsChildren(true)
+	clipFrame:SetAllPoints()
+	clipFrame:EnableMouse(false)
+	clipFrame.__frame = frame
+	health.ClipFrame = clipFrame
 
 	return health
 end
@@ -179,43 +193,29 @@ function UF:Configure_HealthBar(frame)
 		end
 	end
 
-	health.bg:ClearAllPoints()
-	if not frame.USE_PORTRAIT_OVERLAY then
-		health.bg:SetParent(health)
-		health.bg:SetAllPoints()
-	else
-		health.bg:Point('BOTTOMLEFT', health:GetStatusBarTexture(), 'BOTTOMRIGHT')
-		health.bg:Point('TOPRIGHT', health)
-		health.bg:SetParent(frame.Portrait.overlay)
-	end
-
 	if db.health then
-		if db.health.reverseFill then
-			health:SetReverseFill(true)
-		else
-			health:SetReverseFill(false)
-		end
-
 		--Party/Raid Frames allow to change statusbar orientation
 		if db.health.orientation then
 			health:SetOrientation(db.health.orientation)
 		end
 
 		--Party/Raid Frames can toggle frequent updates
-		if db.health.frequentUpdates == nil then db.health.frequentUpdates = true end
+		if db.health.frequentUpdates == nil then
+			db.health.frequentUpdates = true
+		end
 
 		health:SetFrequentUpdates(db.health.frequentUpdates)
-
-		if db.health.bgUseBarTexture then
-			health.bg:SetTexture(E.Libs.LSM:Fetch('statusbar', E.db.unitframe.statusbar))
-		end
+		health:SetReverseFill(db.health.reverseFill)
 	end
 
 	--Transparency Settings
-	UF:ToggleTransparentStatusBar(UF.db.colors.transparentHealth, frame.Health, frame.Health.bg, (frame.USE_PORTRAIT and frame.USE_PORTRAIT_OVERLAY) ~= true, nil, (db.health and db.health.reverseFill))
+	UF:ToggleTransparentStatusBar(UF.db.colors.transparentHealth, frame.Health, frame.Health.bg, true, nil, db.health and db.health.reverseFill)
 
-	--Highlight Texture
-	UF:Configure_HighlightGlow(frame)
+	--Prediction Texture; keep under ToggleTransparentStatusBar
+	UF:UpdatePredictionStatusBar(frame.HealthPrediction, frame.Health, "Health")
+
+	--Frame Glow
+	UF:Configure_FrameGlow(frame)
 
 	if frame:IsElementEnabled("Health") then
 	    frame.Health:ForceUpdate()
@@ -236,11 +236,10 @@ end
 
 function UF:PostUpdateHealthColor(unit, r, g, b)
 	local parent = self:GetParent()
+	local colors = E.db.unitframe.colors
 
-	-- Health by Value
-	local colors = E.db.unitframe.colors;
-	local multiplier = (colors.healthmultiplier > 0 and colors.healthmultiplier) or 0.25
-
+	local newr, newg, newb -- fallback for bg if custom settings arent used
+	if not b then r, g, b = colors.health.r, colors.health.g, colors.health.b end
 	if (((colors.healthclass and colors.colorhealthbyvalue) or (colors.colorhealthbyvalue and parent.isForced)) and not UnitIsTapDenied(unit)) then
 		local cur, max = self.cur or 1, self.max or 100
 		if parent.isForced then
@@ -248,43 +247,35 @@ function UF:PostUpdateHealthColor(unit, r, g, b)
 			max = (cur > max and cur * 2) or max
 		end
 
-		if not (r and g and b) then
-			r, g, b = colors.health.r, colors.health.g, colors.health.b
-		end
-
-		local newr, newg, newb = ElvUF:ColorGradient(cur, max, 1, 0, 0, 1, 1, 0, r, g, b)
+		newr, newg, newb = ElvUF:ColorGradient(cur, max, 1, 0, 0, 1, 1, 0, r, g, b)
 		self:SetStatusBarColor(newr, newg, newb)
-		self.bg:SetVertexColor(newr * multiplier, newg * multiplier, newb * multiplier)
-		self.bg.multiplier = multiplier
 	end
 
-	-- Class Backdrop
-	if self.bg and colors.classbackdrop then
-		local reaction = UnitReaction(unit, 'player')
-		local t
-		if UnitIsPlayer(unit) then
-			local _, class = UnitClass(unit)
-			t = parent.colors.class[class]
-		elseif reaction then
-			t = parent.colors.reaction[reaction]
+	if self.bg then
+		self.bg.multiplier = (colors.healthMultiplier > 0 and colors.healthMultiplier) or 0.35
+
+		if colors.useDeadBackdrop and UnitIsDeadOrGhost(unit) then
+			self.bg:SetVertexColor(colors.health_backdrop_dead.r, colors.health_backdrop_dead.g, colors.health_backdrop_dead.b)
+		elseif colors.customhealthbackdrop then
+			self.bg:SetVertexColor(colors.health_backdrop.r, colors.health_backdrop.g, colors.health_backdrop.b)
+		elseif colors.classbackdrop then
+			local reaction, color = (UnitReaction(unit, 'player'))
+
+			if UnitIsPlayer(unit) then
+				local _, Class = UnitClass(unit)
+				color = parent.colors.class[Class]
+			elseif reaction then
+				color = parent.colors.reaction[reaction]
+			end
+
+			if color then
+				self.bg:SetVertexColor(color[1] * self.bg.multiplier, color[2] * self.bg.multiplier, color[3] * self.bg.multiplier)
+			end
+		elseif newb then
+			self.bg:SetVertexColor(newr * self.bg.multiplier, newg * self.bg.multiplier, newb * self.bg.multiplier)
+		else
+			self.bg:SetVertexColor(r * self.bg.multiplier, g * self.bg.multiplier, b * self.bg.multiplier)
 		end
-
-		if t then
-			multiplier = (colors.healthmultiplier > 0 and colors.healthmultiplier) or 1
-			self.bg:SetVertexColor(t[1] * multiplier , t[2] * multiplier, t[3] * multiplier)
-			self.bg.multiplier = multiplier
-		end
-	end
-
-	-- Custom Backdrop
-	if self.bg and colors.customhealthbackdrop then
-		local backdrop = colors.health_backdrop
-		self.bg:SetVertexColor(backdrop.r, backdrop.g, backdrop.b)
-	end
-
-	if self.bg and colors.useDeadBackdrop and UnitIsDeadOrGhost(unit) then
-		local backdrop = colors.health_backdrop_dead
-		self.bg:SetVertexColor(backdrop.r, backdrop.g, backdrop.b)
 	end
 end
 

@@ -49,7 +49,7 @@ function mod:UpdateDataBarDimensions()
 end
 
 function mod:PLAYER_LEVEL_UP(level)
-	local maxLevel = MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()];
+	local maxLevel = MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()]
 	if (level ~= maxLevel or not self.db.experience.hideAtMaxLevel) and self.db.experience.enable then
 		self:UpdateExperience("PLAYER_LEVEL_UP", level)
 	else
@@ -76,8 +76,4 @@ function mod:Initialize()
 	self:RegisterEvent("PLAYER_LEVEL_UP")
 end
 
-local function InitializeCallback()
-	mod:Initialize()
-end
-
-E:RegisterModule(mod:GetName(), InitializeCallback)
+E:RegisterModule(mod:GetName())

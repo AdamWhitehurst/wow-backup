@@ -1,5 +1,6 @@
-## v4.7.13 Changes
+## v4.8.20 Changes
 
-* Fixed an issue where withdrawing items from a different then the current Guild Bank tab would get stuck.
+* Fixed bug with saving of Accounting data.
+* Fixed bug with AH not properly hiding.
 
 [Known Issues](http://support.tradeskillmaster.com/display/KB/TSM4+Currently+Known+Issues)

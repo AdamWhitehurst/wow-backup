@@ -1,8 +1,8 @@
-## Interface: 80100
+## Interface: 80200
 ## Title: TomCat's Tours: Lunar Festival
 ## Author: TomCat
 ## X-Website: https://www.tomcatstours.com
-## Version: 1.0.20
+## Version: 1.0.21
 ## DefaultState: enabled
 ## SavedVariablesPerCharacter: TomCats_LunarFestival_Character
 ## OptionalDeps: TomCats

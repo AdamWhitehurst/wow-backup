@@ -14,6 +14,10 @@ local AZERITE = 1553
 local CHEST = 'Treasure Chest'
 local CHEST_SM = 'Small Treasure Chest'
 local CHEST_GLIM = 'Glimmering Treasure Chest'
+local CHEST_MECH = 'Mechanized Chest'
+local CHEST_AR = 'Arcane Chest'
+local AR_TRUNK = 'Arcane Trunk'
+local KITTY = 'Crystalline Cat Figurine'
 
 local path_meta = {__index = {
     label = "Path to treasure",
@@ -48,6 +52,8 @@ ns.points = {
             npc=[id], -- related npc id, used to display names in tooltip
             note=[string], -- some text which might be helpful
             hide_before=[id], -- hide if quest not completed
+            requires_buff=[id], -- hide if player does not have buff, mostly useful for buff-based zone phasing
+            requires_no_buff=[id] -- hide if player has buff, mostly useful for buff-based zone phasing
         },
     },
     --]]
@@ -62,7 +68,7 @@ ns.points = {
         [41003328] = path{quest=50707, note="Path behind the waterfall"},
         [41973566] = path{quest=50707},
         [61065863] = {quest=50947, achievement=12851, criteria=40994, npc=133208, note="Event: kill Da White Shark first",}, -- Da White Shark's Bounty
-        [71821677] = {quest=50949, achievement=12851, criteria=40995, note="In cave",}, -- The Exile's Lament
+        [71821677] = {quest=50949, item=163036, achievement=12851, criteria=40995, note="In cave",}, -- The Exile's Lament
         [71161767] = path{quest=50949},
         [56123806] = {quest=51338, achievement=12851, criteria=40996, note="In cave behind waterfall",}, -- Cache of Secrets
         [52974719] = {quest=51624, achievement=12851, criteria=40997}, -- Riches of Tor'nowa
@@ -99,6 +105,22 @@ ns.points = {
         [46228295] = {quest=49889, achievement=12771, criteria=40864,}, -- Venomous Seal
         [76826220] = {quest=50045, achievement=12771, criteria=40865, note="Underwater cave",}, -- Swallowed Naga Chest
         [35455498] = {quest=49313, achievement=12771, criteria=40866, note="In cave",}, -- Wunja's Trove
+        -- Hoppin' Sad (Lost Spawn of Krag'wa)
+        [69105790] = {quest=53417, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",}, --verify
+        [65605090] = {quest=53418, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",}, --verify
+        [56106490] = {quest=53419, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",},
+        [52804290] = {quest=53420, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",}, --verify
+        [33506160] = {quest=53421, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",},
+        [45609100] = {quest=53422, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",}, --verify
+        [28408230] = {quest=53423, achievement=13028, minimap=true, atlas="WildBattlePetCapturable", note="Cave in cliffs",}, --verify
+        [24209160] = {quest=53424, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",}, --verify
+        [21706930] = {quest=53425, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",},
+        -- [52804290] = {quest=53426, achievement=13828, minimap=true,}, -- maybe?
+        [25694058] = {quest=53426, achievement=13028, minimap=true, atlas="WildBattlePetCapturable",},
+        -- junk
+        [41575046] = {quest=49916, junk=true, label=CHEST,},
+        [41596574] = {quest=49916, junk=true, label=CHEST,},
+        [28048187] = {quest=50895, junk=true, label=CHEST,},
     },
     [864] = { -- Vol'dun
         [46598801] = {quest=50237, achievement=12849, criteria=40966, note="Use mine cart",}, -- Ashvane Spoils
@@ -135,6 +157,7 @@ ns.points = {
         [62832267] = {quest=53145, minimap=true, atlas="VignetteLootElite", scale=1.2, achievement=13016, criteria=41355, note="Down from Tortaka Refuge",}, -- Kurt's Ornate Key
         -- junk
         [46984656] = {quest=50883, junk=true, label="Mysterious trashpile", achievement=12482, note="In alcove, Summon Jani, give her Charged Ranishu Antennae"},
+        [59631517] = {quest=50914, junk=true, label=CHEST,},
         [61071734] = {quest=50914, junk=true, label=CHEST,},
         [53841481] = {quest=50915, junk=true, label=CHEST,},
         [60843637] = {quest=50916, junk=true, label=CHEST,},
@@ -183,6 +206,7 @@ ns.points = {
         [70602270] = {quest=53407, item=163716, atlas="poi-workorders", minimap=true, achievement=13057, criteria=41543, note="Behind Jay the Tavern Bard",}, -- Inebriation
         [74403540] = {quest=53408, item=163714, atlas="poi-workorders", minimap=true, achievement=13057, criteria=41541, note="On the fireplace mantel",}, -- Lively Men
         -- junk:
+        [83673580] = {quest=53631, junk=true, label="Dusty Marine Supplies",},
         [76967543] = {quest=48593, junk=true, label=CHEST_SM,},
         [78008050] = {quest=48595, junk=true, label=CHEST_SM,},
         [76358090] = {quest=48595, junk=true, label=CHEST_SM,},
@@ -213,15 +237,20 @@ ns.points = {
         [25472416] = {quest=53474, item=163796, minimap=true, achievement=12995, criteria=41705, note="Click on Witch Torch",}, -- Enchanted Chest
         [25751995] = {quest=53357, achievement=12995, criteria=41698, note="Get keys from Gorging Raven",}, -- Merchant's Chest
         [44222770] = {quest=53386, item=163742, achievement=12995, criteria=41700, note="Left Right Down Up",}, -- Runebound Chest
-        [18515133] = {quest=53471, minimap=true, achievement=12995, criteria=41702, note="Click on Witch Torch",}, -- Hexed Chest
+        [18515133] = {quest=53471, item=163789, minimap=true, achievement=12995, criteria=41702, note="Click on Witch Torch",}, -- Hexed Chest
         [67767367] = {quest=53473, item=163791, minimap=true, achievement=12995, criteria=41704, note="Click on Witch Torch",}, -- Ensorcelled Chest
-        [24304840] = {quest=53475, achievement=12995, criteria=41752,}, -- Stolen Thornspeaker Cache
+        [24304840] = {quest=53475, minimap=true, achievement=12995, criteria=41752,}, -- Stolen Thornspeaker Cache
         -- junk
         [65312905] = {quest=51871, junk=true, label=CHEST_SM,},
         [57862187] = {quest=51875, junk=true, label=CHEST_SM,},
         [58642825] = {quest=51875, junk=true, label=CHEST_SM,},
         [50332252] = {quest=51878, junk=true, label=CHEST_SM,},
+        [62094463] = {quest=51882, junk=true, label=CHEST_SM,},
         [60306860] = {quest=51896, junk=true, label=CHEST_SM,},
+        [26222993] = {quest=51907, junk=true, label=CHEST_SM,},
+        [23181263] = {quest=5191, junk=true, label=CHEST_SM,},
+        [24223681] = {quest=51911, junk=true, label=CHEST_SM,},
+        [39326173] = {quest=51914, junk=true, label=CHEST_SM,},
     },
     [942] = { -- Stormsong Valley
         [66901200] = {quest=51449, achievement=12853, criteria=41061,}, -- Weathered Treasure Chest
@@ -289,5 +318,108 @@ ns.points = {
         [41141101] = path{quest=48938},
         -- junk
         [48981013] = {quest=49142, junk=true, label=CHEST,},
+    },
+    [1355] = { -- Nazjatar
+        -- [43227436] = {quest=56290, minimap=true, achievement=13549, label=CHEST_AR,}, -- forgot what this is
+        [85203860] = {quest=55938, minimap=true, achievement=13549, label=CHEST_AR,},
+        [80302980] = {quest=55939, minimap=true, achievement=13549, label=CHEST_AR,},
+        [74805320] = {quest=55940, minimap=true, achievement=13549, label=CHEST_AR,},
+        [73313580] = {quest=55941, minimap=true, achievement=13549, label=CHEST_AR, note="Inside Temple, bottom floor"},
+        [79502720] = {quest=55942, minimap=true, achievement=13549, label=CHEST_AR},
+        [64303350] = {quest=55943, minimap=true, achievement=13549, label=CHEST_AR},
+        [56493390] = {quest=55944, minimap=true, achievement=13549, label=CHEST_AR, note="Top of the cliffs"},
+        [52904980] = {quest=55945, minimap=true, achievement=13549, label=CHEST_AR},
+        [58103510] = {quest=55946, minimap=true, achievement=13549, label=CHEST_AR, note="Underwater Cave"}, [57303900] = path{quest=55946},
+        [44804880] = {quest=55947, minimap=true, achievement=13549, label=CHEST_AR},
+        [43305810] = {quest=55948, minimap=true, achievement=13549, label=CHEST_AR},
+        [49506450] = {quest=55949, minimap=true, achievement=13549, label=CHEST_AR},
+        [38707440] = {quest=55950, minimap=true, achievement=13549, label=CHEST_AR},
+        [48508740] = {quest=55951, minimap=true, achievement=13549, label=CHEST_AR},
+        [34704350] = {quest=55952, minimap=true, achievement=13549, label=CHEST_AR, note="Inside Cave"}, [37404280] = path{quest=55952},
+        [26003230] = {quest=55953, minimap=true, achievement=13549, label=CHEST_AR, note="Under Starfish pile"},
+        [34504050] = {quest=55954, minimap=true, achievement=13549, label=CHEST_AR},
+        [50605000] = {quest=55955, minimap=true, achievement=13549, label=CHEST_AR, note="Inside Cave"}, [49705030] = path{quest=55955},
+        [39804930] = {quest=55956, minimap=true, achievement=13549, label=CHEST_AR},
+        [38006060] = {quest=55957, minimap=true, achievement=13549, label=CHEST_AR},
+
+        [61502290] = {quest=55958, minimap=true, achievement=13549, label="Arcane Pylon", note="Inside Cave"}, [61401990] = path{quest=55958}, -- game quest id: 55359
+        [37900604] = {quest=55959, minimap=true, achievement=13549, label=AR_TRUNK, note="Inside Cave"}, [39351005] = path{quest=55959},
+        [55701440] = {quest=55961, minimap=true, achievement=13549, label=AR_TRUNK}, -- game quest id: 55998
+        [64202850] = {quest=55962, minimap=true, achievement=13549, label=AR_TRUNK, note="Click Arcane device on the side on the right"}, -- game quest id: 55996
+        [43901680] = {quest=55963, minimap=true, achievement=13549, label=AR_TRUNK},
+        [37191919] = {quest=55960, minimap=true, achievement=13549, label=AR_TRUNK, note="Underwater Cave"},
+        [24803520] = {quest=56912, minimap=true, achievement=13549, label="Arcane Pylon", note="Inside Cave"}, [26703380] = path{quest=56912}, -- game quest id: 56913
+        [80503190] = {quest=56547, minimap=true, achievement=13549, label="Arcane Pylon", note="Up the building"}, [83003380] = path{quest=56547}, -- game quest id: 56913
+        -- Cats!
+        [28802910] = {quest=56983, minimap=true, achievement=13836, label=KITTY, note="Underwater cave", atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [61102680] = {quest=56984, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [59103040] = {quest=56985, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [55302720] = {quest=56986, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [40158608] = {quest=56987, minimap=true, achievement=13836, label=KITTY, note="In underwater cave", atlas="Warfront-AllianceHero-Silver", scale=1.2}, [40318144] = path{quest=56987},
+        [71402370] = {quest=56988, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [38004930] = {quest=56989, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2}, [38704930] = path{quest=56989},
+        [58202200] = {quest=56990, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [61601070] = {quest=56991, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+        [73602590] = {quest=56992, minimap=true, achievement=13836, label=KITTY, atlas="Warfront-AllianceHero-Silver", scale=1.2},
+    },
+    [1462] = { -- Mechagon
+        -- 325659
+        [43304977] = {quest=55547, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 1 (of 9 in Normal Time)"},
+        [52115326] = {quest=55547, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 1 (of 9 in Normal Time)"},
+        [53254190] = {quest=55547, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 1 (of 9 in Normal Time)"},
+        [49223021] = {quest=55547, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 1 (of 9 in Normal Time)"},
+        [56973861] = {quest=55547, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 1 (of 9 in Normal Time)"},
+        -- 325660
+        [35683833] = {quest=55548, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 2 (of 9 in Normal Time)"},
+        [30785183] = {quest=55548, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 2 (of 9 in Normal Time)"},
+        [40155409] = {quest=55548, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 2 (of 9 in Normal Time)"},
+        [20617141] = {quest=55548, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 2 (of 9 in Normal Time)"},
+        -- 325661
+        [80374838] = {quest=55549, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 3 (of 9 in Normal Time)"},
+        [73515334] = {quest=55549, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 3 (of 9 in Normal Time)"},
+        [67075645] = {quest=55549, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 3 (of 9 in Normal Time)"},
+        [65866460] = {quest=55549, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 3 (of 9 in Normal Time)"},
+        [59946357] = {quest=55549, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 3 (of 9 in Normal Time)"},
+        -- 325662
+        [65555284] = {quest=55550, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 4 (of 9 in Normal Time)"},
+        [72594733] = {quest=55550, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 4 (of 9 in Normal Time)"},
+        [73014950] = {quest=55550, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 4 (of 9 in Normal Time)"},
+        [76215286] = {quest=55550, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 4 (of 9 in Normal Time)"},
+        [81196149] = {quest=55550, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 4 (of 9 in Normal Time)"},
+        -- 325663, Alt Mechagon only
+        [61583230] = {quest=55551, criteria=0, label=CHEST_MECH, requires_buff=296644, note="Chest 1 (of 1 in Alternate Time)"},
+        [58634160] = {quest=55551, criteria=0, label=CHEST_MECH, requires_buff=296644, note="Chest 1 (of 1 in Alternate Time)"},
+        [70654796] = {quest=55551, criteria=0, label=CHEST_MECH, requires_buff=296644, note="Chest 1 (of 1 in Alternate Time)"},
+        [64365961] = {quest=55551, criteria=0, label=CHEST_MECH, requires_buff=296644, note="Chest 1 (of 1 in Alternate Time)"},
+        [56665739] = {quest=55551, criteria=0, label=CHEST_MECH, requires_buff=296644, note="Chest 1 (of 1 in Alternate Time)"},
+        -- 325664
+        [66432227] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        [64092627] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        [56782918] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        [57142283] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        [55612404] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        [50662858] = {quest=55552, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 5 (of 9 in Normal Time)"},
+        -- 325665
+        [67322289] = {quest=55553, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 6 (of 9 in Normal Time)"},
+        [80691868] = {quest=55553, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 6 (of 9 in Normal Time)"},
+        [86232042] = {quest=55553, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 6 (of 9 in Normal Time)"},
+        [88732015] = {quest=55553, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 6 (of 9 in Normal Time)"},
+        [85752824] = {quest=55553, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 6 (of 9 in Normal Time)"},
+        -- 325666
+        [48367595] = {quest=55554, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 7 (of 9 in Normal Time)"},
+        [57258202] = {quest=55554, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 7 (of 9 in Normal Time)"},
+        [62297390] = {quest=55554, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 7 (of 9 in Normal Time)"},
+        [66767759] = {quest=55554, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 7 (of 9 in Normal Time)"},
+        -- 325667
+        [63626715] = {quest=55555, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 8 (of 9 in Normal Time)"},
+        [72126545] = {quest=55555, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 8 (of 9 in Normal Time)"},
+        [76516601] = {quest=55555, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 8 (of 9 in Normal Time)"},
+        [81167231] = {quest=55555, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 8 (of 9 in Normal Time)"},
+        [85166335] = {quest=55555, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 8 (of 9 in Normal Time)"},
+        -- 325668
+        [24796526] = {quest=55556, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 9 (of 9 in Normal Time)"},
+        [20537696] = {quest=55556, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 9 (of 9 in Normal Time)"},
+        [21788303] = {quest=55556, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 9 (of 9 in Normal Time)"},
+        [12088568] = {quest=55556, criteria=0, label=CHEST_MECH, requires_no_buff=296644, note="Chest 9 (of 9 in Normal Time)"},
     },
 }

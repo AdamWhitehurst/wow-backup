@@ -11,7 +11,7 @@
 -- @classmod Button
 
 local _, TSM = ...
-local Button = TSMAPI_FOUR.Class.DefineClass("Button", TSM.UI.Element)
+local Button = TSM.Include("LibTSMClass").DefineClass("Button", TSM.UI.Element)
 TSM.UI.Button = Button
 local ICON_PADDING = 2
 
@@ -32,7 +32,6 @@ function Button.__init(self)
 	frame.highlight = frame:CreateTexture(nil, "HIGHLIGHT")
 	frame.highlight:SetAllPoints()
 	frame.highlight:SetBlendMode("BLEND")
-	frame:SetHighlightTexture(self.highlight)
 
 	-- create the text
 	frame.text = frame:CreateFontString()
@@ -164,6 +163,9 @@ function Button.Draw(self)
 	local highlight = self:_GetStyle("highlight")
 	if highlight then
 		frame.highlight:SetColorTexture(TSM.UI.HexToRGBA(highlight))
+		frame:SetHighlightTexture(frame.highlight)
+	else
+		frame:SetHighlightTexture(nil)
 	end
 
 	local iconTexturePack = self:_GetStyle("iconTexturePack")

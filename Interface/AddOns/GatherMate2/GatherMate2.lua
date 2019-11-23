@@ -11,6 +11,8 @@ _G["GatherMate2"] = GatherMate
 GatherMate.HBD = LibStub("HereBeDragons-2.0")
 local HBDMigrate = LibStub("HereBeDragons-Migrate")
 
+local WoWClassic = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
+
 -- locals
 local db, gmdbs, filter
 local reverseTables = {}
@@ -27,6 +29,7 @@ local defaults = {
 		},
 		showMinimap = true,
 		showWorldMap = true,
+		worldMapIconsInteractive = true,
 		minimapTooltips = true,
 		filter = {
 			["*"] = {
@@ -51,7 +54,7 @@ local defaults = {
 			["Fishing"]        = 15,
 			["Mining"]         = 15,
 			["Extract Gas"]    = 50,
-			["Treasure"]	   = 15,
+			["Treasure"]       = 15,
 			["Archaeology"]    = 10,
 			["Logging"]        = 20,
 		},
@@ -92,21 +95,25 @@ function GatherMate:OnInitialize()
 	-- These 4 savedvars are global and doesnt need char specific stuff in it
 	GatherMate2HerbDB = GatherMate2HerbDB or {}
 	GatherMate2MineDB = GatherMate2MineDB or {}
-	GatherMate2GasDB = GatherMate2GasDB or {}
 	GatherMate2FishDB = GatherMate2FishDB or {}
 	GatherMate2TreasureDB = GatherMate2TreasureDB or {}
-	GatherMate2ArchaeologyDB = GatherMate2ArchaeologyDB or {}
-	GatherMate2LoggingDB = GatherMate2LoggingDB or {}
+	if not WoWClassic then
+		GatherMate2GasDB = GatherMate2GasDB or {}
+		GatherMate2ArchaeologyDB = GatherMate2ArchaeologyDB or {}
+		GatherMate2LoggingDB = GatherMate2LoggingDB or {}
+	end
 	self.gmdbs = {}
 	self.db_types = {}
 	gmdbs = self.gmdbs
 	self:RegisterDBType("Herb Gathering", GatherMate2HerbDB)
 	self:RegisterDBType("Mining", GatherMate2MineDB)
 	self:RegisterDBType("Fishing", GatherMate2FishDB)
-	self:RegisterDBType("Extract Gas", GatherMate2GasDB)
 	self:RegisterDBType("Treasure", GatherMate2TreasureDB)
-	self:RegisterDBType("Archaeology", GatherMate2ArchaeologyDB)
-	self:RegisterDBType("Logging", GatherMate2LoggingDB)
+	if not WoWClassic then
+		self:RegisterDBType("Extract Gas", GatherMate2GasDB)
+		self:RegisterDBType("Archaeology", GatherMate2ArchaeologyDB)
+		self:RegisterDBType("Logging", GatherMate2LoggingDB)
+	end
 	db = self.db.profile
 	filter = db.filter
 	-- depractaion scan
@@ -206,11 +213,11 @@ function GatherMate:ClearDB(dbx)
 	end
 	if dbx == "Herb Gathering" then	GatherMate2HerbDB = {}; gmdbs[dbx] = GatherMate2HerbDB
 	elseif dbx == "Fishing" then GatherMate2FishDB = {}; gmdbs[dbx] = GatherMate2FishDB
-	elseif dbx == "Extract Gas" then GatherMate2GasDB = {}; gmdbs[dbx] = GatherMate2GasDB
 	elseif dbx == "Mining" then GatherMate2MineDB = {}; gmdbs[dbx] = GatherMate2MineDB
 	elseif dbx == "Treasure" then GatherMate2TreasureDB = {}; gmdbs[dbx] = GatherMate2TreasureDB
-	elseif dbx == "Archaeology" then GatherMate2ArchaeologyDB = {}; gmdbs[dbx] = GatherMate2ArchaeologyDB
-	elseif dbx == "Logging" then GatherMate2LoggingDB = {}; gmdbs[dbx] = GatherMate2LoggingDB
+	elseif not WoWClassic and dbx == "Extract Gas" then GatherMate2GasDB = {}; gmdbs[dbx] = GatherMate2GasDB
+	elseif not WoWClassic and dbx == "Archaeology" then GatherMate2ArchaeologyDB = {}; gmdbs[dbx] = GatherMate2ArchaeologyDB
+	elseif not WoWClassic and dbx == "Logging" then GatherMate2LoggingDB = {}; gmdbs[dbx] = GatherMate2LoggingDB
 	else -- for custom DBs we dont know the global name, so we clear it old-fashion style
 		local db = gmdbs[dbx]
 		if not db then error("Trying to clear unknown database: "..dbx) end
@@ -225,6 +232,7 @@ end
 ]]
 function GatherMate:AddNode(zone, x, y, nodeType, name)
 	local db = gmdbs[nodeType]
+	if not db then return end
 	local id = self:EncodeLoc(x,y)
 	-- db lock check
 	if GatherMate.db.profile.dbLocks[nodeType] then
@@ -243,6 +251,7 @@ end
 ]]
 function GatherMate:InjectNode2(zone, coords, nodeType, nodeID)
 	local db = gmdbs[nodeType]
+	if not db then return end
 	-- db lock check
 	if GatherMate.db.profile.dbLocks[nodeType] then
 		return
@@ -252,6 +261,7 @@ function GatherMate:InjectNode2(zone, coords, nodeType, nodeID)
 	db[zone][coords] = nodeID
 end
 function GatherMate:DeleteNode2(zone, coords, nodeType)
+	if not gmdbs[nodeType] then return end
 	-- db lock check
 	if GatherMate.db.profile.dbLocks[nodeType] then
 		return
@@ -352,6 +362,7 @@ end
 	Remove an item from the DB
 ]]
 function GatherMate:RemoveNode(zone, x, y, nodeType)
+	if not gmdbs[nodeType] then return end
 	local db = gmdbs[nodeType][zone]
 	local coord = self:EncodeLoc(x,y)
 	if db[coord] then
@@ -364,6 +375,7 @@ end
 	Remove an item from the DB by node ID and type
 ]]
 function GatherMate:RemoveNodeByID(zone, nodeType, coord)
+	if not gmdbs[nodeType] then return end
 	-- db lock check
 	if GatherMate.db.profile.dbLocks[nodeType] then
 		return
@@ -450,6 +462,7 @@ end
 	Function to delete all of a specified node from a specific zone
 ]]
 function GatherMate:DeleteNodeFromZone(nodeType, nodeID, zone)
+	if not gmdbs[nodeType] then return end
 	local db = gmdbs[nodeType][zone]
 	if db then
 		for coord, node in pairs(db) do

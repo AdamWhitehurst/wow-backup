@@ -4,7 +4,6 @@ local TCL = addon.TomCatsLibs
 local cursorStartX, cursorStartY
 local seqNum = 1;
 local handleSlideBar, handleSexyMap
-
 function TCL.Charms.Create(buttonInfo)
     --noinspection GlobalCreationOutsideO
     TOMCATS_LIBS_ICON_LASTFRAMELEVEL = (TOMCATS_LIBS_ICON_LASTFRAMELEVEL or 7) + 3
@@ -47,11 +46,9 @@ function TCL.Charms.Create(buttonInfo)
     handleSexyMap(frame)
     return frame
 end
-
 -- Begin SexyMap Compatibility --
 local sexyMapPresent = select(4, GetAddOnInfo("SexyMap"))
 local sexyMapQueue = {}
-
 function handleSexyMap(button, event)
     if (not sexyMapPresent) then return end
     if (IsAddOnLoaded("SexyMap")) then
@@ -68,6 +65,8 @@ function handleSexyMap(button, event)
             function ldbiMock:SetPoint() end
             function ldbiMock:SetAllPoints() end
             function ldbiMock:ClearAllPoints() end
+            function ldbiMock:Hide() end
+            function ldbiMock:Show() end
             _G[ldbiMock:GetName()] = ldbiMock
             table.insert(LibStub["libs"]["LibDBIcon-1.0"].objects, ldbiMock)
             LibStub["libs"]["LibDBIcon-1.0"].callbacks:Fire("LibDBIcon_IconCreated", ldbiMock, btn.title)
@@ -78,16 +77,13 @@ function handleSexyMap(button, event)
         return
     end
 end
-
 if (sexyMapPresent and (not IsAddOnLoaded("SexyMap"))) then
     TCL.Events.RegisterEvent("ADDON_LOADED", handleSexyMap)
 end
 -- End SexyMap Compatibility --
-
 -- Begin SlideBar Compatibility --
 local slideBarPresent = select(4, GetAddOnInfo("SlideBar"))
 local slideBarQueue = {}
-
 function handleSlideBar(button, event)
     if (not slideBarPresent) then return end
     if (LibStub and LibStub.libs and LibStub.libs.SlideBar) then
@@ -130,7 +126,6 @@ function handleSlideBar(button, event)
         table.insert(slideBarQueue, button)
     end
 end
-
 if (slideBarPresent and (not (LibStub and LibStub.libs and LibStub.libs.SlideBar))) then
     TCL.Events.RegisterEvent("ADDON_LOADED", handleSlideBar)
 end

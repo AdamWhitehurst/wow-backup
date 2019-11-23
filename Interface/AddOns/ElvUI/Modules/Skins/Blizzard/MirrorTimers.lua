@@ -1,10 +1,7 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
---Lua functions
 local _G = _G
-local format = format
---WoW API / Variables
 
 local function MirrorTimer_OnUpdate(frame, elapsed)
 	if frame.paused then return end
@@ -14,9 +11,9 @@ local function MirrorTimer_OnUpdate(frame, elapsed)
 		local text = frame.label:GetText()
 
 		if frame.value > 0 then
-			frame.TimerText:SetText(format("%s (%d:%02d)", text, minutes, seconds))
+			frame.TimerText:SetFormattedText("%s (%d:%02d)", text, minutes, seconds)
 		else
-			frame.TimerText:SetText(format("%s (0:00)", text))
+			frame.TimerText:SetFormattedText("%s (0:00)", text)
 		end
 
 		frame.timeSinceUpdate = 0

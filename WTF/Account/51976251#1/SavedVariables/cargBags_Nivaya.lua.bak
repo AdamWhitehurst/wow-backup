@@ -1,0 +1,45 @@
+
+cBnivCfg = {
+	["CompressEmpty"] = true,
+	["scale"] = 1,
+	["Consumables"] = true,
+	["Armor"] = true,
+	["ItemSets"] = true,
+	["Junk"] = true,
+	["BankBlack"] = true,
+	["SortBags"] = true,
+	["BankCustomBags"] = true,
+	["Unlocked"] = true,
+	["SellJunk"] = true,
+	["Quest"] = true,
+	["NewItems"] = true,
+	["Gem"] = true,
+	["SortBank"] = true,
+	["TradeGoods"] = true,
+	["CoolStuff"] = false,
+	["FilterBank"] = true,
+	["Restack"] = true,
+}
+cB_CustomBags = {
+	{
+		["active"] = true,
+		["prio"] = 1,
+		["name"] = "foodstuffs",
+		["col"] = 0,
+	}, -- [1]
+}
+cBniv_CatInfo = {
+	[169477] = "Bag",
+	[169479] = "Bag",
+	[170177] = "Consumables",
+	[170179] = "Consumables",
+	[169809] = "Armor",
+	[169478] = "Bag",
+	[170515] = "ArtifactPower",
+	[169482] = "Bag",
+	[167759] = "Stuff",
+	[168832] = "Stuff",
+	[170178] = "Consumables",
+	[169610] = "TradeGoods",
+	[168327] = "Stuff",
+}

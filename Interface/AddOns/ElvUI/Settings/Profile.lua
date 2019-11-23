@@ -48,11 +48,11 @@ P.general = {
 	fontSize = 12,
 	font = 'PT Sans Narrow',
 	fontStyle = 'OUTLINE',
-	bordercolor = { r = 0.1,g = 0.1,b = 0.1 },
-	backdropcolor = { r = 0.1,g = 0.1,b = 0.1 },
-	backdropfadecolor = { r = .06,g = .06,b = .06, a = 0.8 },
-	valuecolor = {r = 254/255,g = 123/255,b = 44/255},
-	cropIcon = true,
+	bordercolor = { r = 0.1, g = 0.1, b = 0.1 },
+	backdropcolor = { r = 0.1, g = 0.1, b = 0.1 },
+	backdropfadecolor = { r = .06, g = .06, b = .06, a = 0.8 },
+	valuecolor = {r = 254/255, g = 123/255, b = 44/255},
+	cropIcon = 2,
 	minimap = {
 		size = 176,
 		locationText = 'MOUSEOVER',
@@ -206,6 +206,7 @@ P.bags = {
 	moneyFormat = 'SMART',
 	moneyCoins = true,
 	junkIcon = false,
+	junkDesaturate = false,
 	scrapIcon = false,
 	upgradeIcon = true,
 	newItemGlow = true,
@@ -315,15 +316,18 @@ P.bags = {
 P.nameplates = {
 	smoothbars = false,
 	clampToScreen = false,
-	cutawayHealth = false,
-	cutawayHealthFadeOutTime = 0.6,
-	cutawayHealthLength = 0.3,
-	clickableWidth = 150,
-	clickableHeight = 30,
 	clickThrough = {
 		personal = false,
 		friendly = false,
 		enemy = false,
+	},
+	plateSize ={
+		personalWidth = 150,
+		personalHeight = 30,
+		friendlyWidth = 150,
+		friendlyHeight = 30,
+		enemyWidth = 150,
+		enemyHeight = 30,
 	},
 	colors = {
 		glowColor = {r = 1, g = 1, b = 1, a = 1},
@@ -356,12 +360,12 @@ P.nameplates = {
 		power = {
 			ENERGY = {r = 0.65, g = 0.63, b = 0.35},
 			FOCUS = {r = 0.71, g = 0.43, b = 0.27},
-			FURY = {r = 227/255, g = 126/255, b = 39/255},
-			INSANITY = {r = 0.55, g = 0.14, b = 0.69},
-			LUNAR_POWER = {r = .9, g = .86, b = .12},
-			MAELSTROM = {r = 0, g = 0.5, b = 1},
+			FURY = {r = 227/255, g = 126/255, b = 39/255, atlas = '_DemonHunter-DemonicFuryBar'},
+			INSANITY = {r = 0.55, g = 0.14, b = 0.69, atlas = '_Priest-InsanityBar'},
+			LUNAR_POWER = {r = .9, g = .86, b = .12, atlas = '_Druid-LunarBar'},
+			MAELSTROM = {r = 0, g = 0.5, b = 1, atlas = '_Shaman-MaelstromBar'},
 			MANA = {r = 0.31, g = 0.45, b = 0.63},
-			PAIN = {r = 225/255, g = 225/255, b = 225/255},
+			PAIN = {r = 225/255, g = 225/255, b = 225/255, atlas = '_DemonHunter-DemonicPainBar'},
 			RAGE = {r = 0.78, g = 0.25, b = 0.25},
 			RUNIC_POWER = {r = 0, g = 0.82, b = 1},
 		},
@@ -370,15 +374,11 @@ P.nameplates = {
 			[ 1] = {r = 255/255, g = 129/255, b = 050/255}, -- UNFRIENDLY
 			[ 2] = {r = 255/255, g = 217/255, b = 050/255}, -- NEUTRAL
 			[ 3] = {r = 050/255, g = 180/255, b = 000/255}, -- FRIENDLY
-			[ 4] = {r = 050/255, g = 100/255, b = 255/255}, -- PLAYER_SIMPLE
 			[ 5] = {r = 102/255, g = 136/255, b = 255/255}, -- PLAYER_EXTENDED
 			[ 6] = {r = 102/255, g = 050/255, b = 255/255}, -- PARTY
 			[ 7] = {r = 187/255, g = 050/255, b = 255/255}, -- PARTY_PVP
 			[ 8] = {r = 050/255, g = 255/255, b = 108/255}, -- FRIEND
 			[ 9] = {r = 153/255, g = 153/255, b = 153/255}, -- DEAD
-			--[10] = {}, -- COMMENTATOR_TEAM_1, unavailable to players
-			--[11] = {}, -- COMMENTATOR_TEAM_2, unavailable to players
-			[12] = {r = 017/255, g = 221/255, b = 255/255}, -- SELF, buggy
 			[13] = {r = 025/255, g = 147/255, b = 072/255}, -- BATTLEGROUND_FRIENDLY_PVP
 		},
 		classResources = {
@@ -428,18 +428,11 @@ P.nameplates = {
 			fontSize = 18,
 		},
 	},
-	displayStyle = 'ALL',
 	filters = {
-		Boss = {
-			triggers = {
-				enable = false,
-			},
-		},
-		Explosives = {
-			triggers = {
-				enable = true,
-			},
-		},
+		ElvUI_Boss = {triggers = {enable = false}},
+		ElvUI_Target = {triggers = {enable = true}},
+		ElvUI_NonTarget = {triggers = {enable = true}},
+		ElvUI_Explosives = {triggers = {enable = true}},
 	},
 	font = 'PT Sans Narrow',
 	fontOutline = 'OUTLINE',
@@ -461,9 +454,42 @@ P.nameplates = {
 		useThreatColor = true,
 		indicator = false,
 	},
+	visibility = {
+		showAll = true,
+		enemy = {
+			guardians = false,
+			minions = false,
+			minus = true,
+			pets = false,
+			totems = false,
+		},
+		friendly = {
+			guardians = false,
+			minions = false,
+			npcs = true,
+			pets = false,
+			totems = false,
+		},
+	},
+	cutaway =  {
+		health = {
+			enabled = false,
+			fadeOutTime = 0.6,
+			lengthBeforeFade = 0.3,
+			forceBlankTexture = true,
+		},
+		power = {
+			enabled = false,
+			fadeOutTime = 0.6,
+			lengthBeforeFade = 0.3,
+			forceBlankTexture = true,
+		},
+	},
 	units = {
 		PLAYER = {
 			enable = false,
+			showTitle = true,
+			nameOnly = false,
 			useStaticPosition = false,
 			clickthrough = false,
 			classpower = {
@@ -494,7 +520,6 @@ P.nameplates = {
 				enable = true,
 				healPrediction = true,
 				height = 10,
-				yOffset = 0,
 				text = {
 					enable = false,
 					format = '[health:percent]',
@@ -507,7 +532,6 @@ P.nameplates = {
 					fontSize = 11,
 				},
 				useClassColor = true,
-				width = 150,
 			},
 			name = {
 				enable = false,
@@ -523,6 +547,17 @@ P.nameplates = {
 			level = {
 				enable = false,
 				format = '[difficultycolor][level]',
+				position = 'TOPRIGHT',
+				parent = 'Nameplate',
+				xOffset = 0,
+				yOffset = -7,
+				font = 'PT Sans Narrow',
+				fontOutline = 'OUTLINE',
+				fontSize = 11,
+			},
+			title = {
+				enable = false,
+				format = '[guild]',
 				position = 'TOPRIGHT',
 				parent = 'Nameplate',
 				xOffset = 0,
@@ -682,9 +717,7 @@ P.nameplates = {
 		},
 		TARGET = {
 			enable = true,
-			nonTargetTransparency = 0.5,
 			glowStyle = 'style4',
-			scale = 1.1,
 			classpower = {
 				enable = false,
 				classColor = false,
@@ -708,14 +741,11 @@ P.nameplates = {
 				xOffset = 3,
 				yOffset = -5,
 			},
-			minions = false,
 			markHealers = true,
 			health = {
 				enable = true,
 				height = 10,
-				width = 150,
 				healPrediction = false,
-				yOffset = 0,
 				text = {
 					enable = true,
 					format = '[health:percent]',
@@ -924,14 +954,11 @@ P.nameplates = {
 				xOffset = 3,
 				yOffset = -5,
 			},
-			minions = false,
 			markHealers = true,
 			health = {
 				enable = true,
 				height = 10,
-				width = 150,
 				healPrediction = false,
-				yOffset = 0,
 				text = {
 					enable = true,
 					format = '[health:percent]',
@@ -1142,9 +1169,7 @@ P.nameplates = {
 			health = {
 				enable = true,
 				height = 10,
-				width = 150,
 				healPrediction = false,
-				yOffset = 0,
 				text = {
 					enable = true,
 					format = '[health:percent]',
@@ -1345,6 +1370,15 @@ P.nameplates = {
 				xOffset = 0,
 				yOffset = 0,
 			},
+			nazjatarFollowerXP = {
+				enable = true,
+				yOffset = -4,
+				color = {
+					r = 0.529,
+					g = 0.808,
+					b = 0.922
+				}
+			}
 		},
 		ENEMY_NPC = {
 			enable = true,
@@ -1358,13 +1392,10 @@ P.nameplates = {
 				xOffset = 3,
 				yOffset = -5,
 			},
-			minors = true,
 			health = {
 				enable = true,
 				height = 10,
-				width = 150,
 				healPrediction = false,
-				yOffset = 0,
 				text = {
 					enable = true,
 					format = '[health:percent]',
@@ -1674,7 +1705,7 @@ P.chat = {
 	tabFontOutline = 'NONE',
 	copyChatLines = false,
 	useBTagName = false,
-	panelColor = {r = .06,g = .06,b = .06, a = 0.8},
+	panelColor = {r = .06, g = .06, b = .06, a = 0.8},
 	pinVoiceButtons = true,
 	hideVoiceButtons = false,
 	desaturateVoiceIcons = true,
@@ -1850,9 +1881,13 @@ P.unitframe = {
 		powerselection = false,
 		colorhealthbyvalue = true,
 		customhealthbackdrop = false,
+		custompowerbackdrop = false,
+		customcastbarbackdrop = false,
+		customaurabarbackdrop = false,
+		customclasspowerbackdrop = false,
 		useDeadBackdrop = false,
 		classbackdrop = false,
-		healthmultiplier = 0,
+		healthMultiplier = 0,
 		auraBarByType = true,
 		auraBarTurtle = true,
 		auraBarTurtleColor = {r = 143/255, g = 101/255, b = 158/255},
@@ -1860,16 +1895,25 @@ P.unitframe = {
 		transparentPower = false,
 		transparentCastbar = false,
 		transparentAurabars = false,
-		castColor = { r = .31,g = .31,b = .31 },
+		transparentClasspower = false,
+		invertCastBar = false,
+		invertAurabars = false,
+		invertPower = false,
+		invertClasspower = false,
+		castColor = { r = .31, g = .31, b = .31 },
 		castNoInterrupt = { r = 0.78, g = 0.25, b = 0.25 },
 		castClassColor = false,
 		castReactionColor = false,
-		health = { r = .31,g = .31,b = .31 },
-		health_backdrop = { r = .8,g = .01,b = .01 },
-		health_backdrop_dead = { r = .8,g = .01,b = .01 },
+		health = { r = .31, g = .31, b = .31 },
+		health_backdrop = { r = .8, g = .01, b = .01 },
+		health_backdrop_dead = { r = .8, g = .01, b = .01 },
+		castbar_backdrop = { r = 0.5, g = 0.5, b = 0.5 },
+		classpower_backdrop = { r = 0.5, g = 0.5, b = 0.5 },
+		aurabar_backdrop = { r = 0.5, g = 0.5, b = 0.5 },
+		power_backdrop = { r = 0.5, g = 0.5, b = 0.5 },
 		tapped = { r = 0.55, g = 0.57, b = 0.61},
 		disconnected = { r = 0.84, g = 0.75, b = 0.65},
-		auraBarBuff = { r = .31,g = .31,b = .31 },
+		auraBarBuff = { r = .31, g = .31, b = .31 },
 		auraBarDebuff = {r = 0.8, g = 0.1, b = 0.1},
 		power = {
 			MANA = {r = 0.31, g = 0.45, b = 0.63},
@@ -1899,15 +1943,11 @@ P.unitframe = {
 			[ 1] = {r = 255/255, g = 129/255, b = 050/255}, -- UNFRIENDLY
 			[ 2] = {r = 255/255, g = 217/255, b = 050/255}, -- NEUTRAL
 			[ 3] = {r = 050/255, g = 180/255, b = 000/255}, -- FRIENDLY
-			[ 4] = {r = 050/255, g = 100/255, b = 255/255}, -- PLAYER_SIMPLE
 			[ 5] = {r = 102/255, g = 136/255, b = 255/255}, -- PLAYER_EXTENDED
 			[ 6] = {r = 102/255, g = 050/255, b = 255/255}, -- PARTY
 			[ 7] = {r = 187/255, g = 050/255, b = 255/255}, -- PARTY_PVP
 			[ 8] = {r = 050/255, g = 255/255, b = 108/255}, -- FRIEND
 			[ 9] = {r = 153/255, g = 153/255, b = 153/255}, -- DEAD
-			--[10] = {}, -- COMMENTATOR_TEAM_1, unavailable to players
-			--[11] = {}, -- COMMENTATOR_TEAM_2, unavailable to players
-			[12] = {r = 017/255, g = 221/255, b = 255/255}, -- SELF, buggy
 			[13] = {r = 025/255, g = 147/255, b = 072/255}, -- BATTLEGROUND_FRIENDLY_PVP
 		},
 		healPrediction = {
@@ -1925,14 +1965,13 @@ P.unitframe = {
 			color = {r = 1, g = 1, b = 1, a = 1},
 		},
 		classResources = {
-			bgColor = {r = 0.1,g = 0.1,b = 0.1, a = 1},
 			comboPoints = {
 				[1] = {r = 0.69, g = 0.31, b = 0.31},
 				[2] = {r = 0.65, g = 0.63, b = 0.34},
 				[3] = {r = 0.33, g = 0.59, b = 0.33},
 			},
 			DEATHKNIGHT = {r = 0, g = 1, b = 1},
-			PALADIN = {r = 228/255,g = 225/255,b = 16/255},
+			PALADIN = {r = 228/255, g = 225/255, b = 16/255},
 			MAGE = {r = 0, g = 157/255, b = 255/255},
 			MONK = {
 				[1] = {r = .57, g = .63, b = .35},
@@ -1967,6 +2006,7 @@ P.unitframe = {
 			Curse = {r = 0.6, g = 0, b = 1, a = 0.45},
 			Disease = {r = 0.6, g = 0.4, b = 0, a = 0.45},
 			Poison = {r = 0, g = 0.6, b = 0, a = 0.45},
+			blendMode = "ADD",
 		},
 	},
 	units = {
@@ -2087,6 +2127,7 @@ P.unitframe = {
 				enable = false,
 				width = 45,
 				overlay = false,
+				fullOverlay = false,
 				camDistanceScale = 2,
 				rotation = 0,
 				style = '3D',
@@ -2205,6 +2246,20 @@ P.unitframe = {
 			stagger = {
 				enable = true,
 				width = 10,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		target = {
@@ -2391,6 +2446,20 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 8,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		targettarget = {
 			enable = true,
@@ -2507,6 +2576,20 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 8,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		targettargettarget = {
 			enable = false,
@@ -2621,6 +2704,20 @@ P.unitframe = {
 				attachToObject = 'Frame',
 				xOffset = 0,
 				yOffset = 8,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		focus = {
@@ -2783,6 +2880,20 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 8,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		focustarget = {
 			enable = false,
@@ -2897,6 +3008,20 @@ P.unitframe = {
 				attachToObject = 'Frame',
 				xOffset = 0,
 				yOffset = 8,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		pet = {
@@ -3053,6 +3178,20 @@ P.unitframe = {
 					frameLevel = 1,
 				},
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		pettarget = {
 			enable = false,
@@ -3159,6 +3298,20 @@ P.unitframe = {
 				priority = 'Blacklist,Personal,Boss,RaidDebuffs', --PetTarget Debuffs
 				xOffset = 0,
 				yOffset = 0,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		boss = {
@@ -3302,6 +3455,20 @@ P.unitframe = {
 				attachToObject = 'Frame',
 				xOffset = 0,
 				yOffset = 8,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		arena = {
@@ -3450,6 +3617,20 @@ P.unitframe = {
 				size = 46,
 				xOffset = 1,
 				yOffset = 0,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		party = {
@@ -3723,6 +3904,20 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 0,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		raid = {
 			enable = true,
@@ -3931,6 +4126,20 @@ P.unitframe = {
 				attachToObject = 'Frame',
 				xOffset = 0,
 				yOffset = 0,
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
 			},
 		},
 		raid40 = {
@@ -4141,6 +4350,20 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 0,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+				power = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		raidpet = {
 			enable = false,
@@ -4286,6 +4509,14 @@ P.unitframe = {
 				xOffset = 0,
 				yOffset = 8,
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 		tank = {
 			enable = true,
@@ -4419,6 +4650,14 @@ P.unitframe = {
 					attachToObject = 'Frame',
 					xOffset = 0,
 					yOffset = 8,
+				},
+			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
 				},
 			},
 		},
@@ -4556,6 +4795,14 @@ P.unitframe = {
 					yOffset = 8,
 				},
 			},
+			cutaway =  {
+				health = {
+					enabled = false,
+					fadeOutTime = 0.6,
+					lengthBeforeFade = 0.3,
+					forceBlankTexture = true,
+				},
+			},
 		},
 	},
 }
@@ -4602,6 +4849,9 @@ P.actionbar = {
 	countTextPosition = 'BOTTOMRIGHT',
 	countTextXOffset = 0,
 	countTextYOffset = 2,
+
+	equippedItem = false,
+	equippedItemColor = { r = 0.4, g = 1.0, b = 0.4 },
 
 	useRangeColorText = false,
 	noRangeColor = { r = 0.8, g = 0.1, b = 0.1 },

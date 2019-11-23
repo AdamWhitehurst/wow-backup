@@ -4,10 +4,6 @@ local NPC, Text = ImmersionFrame, ImmersionFrame.TalkBox.TextFrame.Text
 local playbackQueue, questCache = {}, {}
 local QUEST_TOAST_CACHE_LIMIT = 30
 ----------------------------------
-local function GetCreatureID(unit)
-	local guid = UnitGUID(unit)
-	return guid and select(6, strsplit('-', guid))
-end
 
 local function IsTextCached(text, tbl)
 	for i, toast in ipairs(tbl) do
@@ -60,7 +56,7 @@ local function QueueToast(tbl, title, text, purpose, unit)
 			purpose = purpose;
 			questID = GetQuestID();
 			youSaid = L.ClickedTitleCache or {};
-			display = GetCreatureID(unit);
+			display = ImmersionAPI:GetCreatureID(unit);
 		})
 	end
 end
@@ -75,8 +71,7 @@ function NPC:PlaySuperTrackedQuestToast(questID)
 			not IsOptionFrameOpen() and
 			not self:IsToastObstructed() then
 			----------------------------------
-			PlayToast(toast)
-			tremove(questCache, i)
+			PlayToast(tremove(questCache, i))
 			break
 		end
 	end
@@ -149,12 +144,12 @@ do	-- OBSTRUCTION:
 	end
 
 	-- Force base frames and TalkingHeadFrame.
-	AddToastObstructor(LevelUpDisplay)
-	AddToastObstructor(AlertFrame)
+	if LevelUpDisplay then AddToastObstructor(LevelUpDisplay) end
+	if AlertFrame then AddToastObstructor(AlertFrame) end
 
 	if TalkingHeadFrame then
 		AddToastObstructor(TalkingHeadFrame)
-	else
+	elseif TalkingHead_LoadUI then
 		hooksecurefunc('TalkingHead_LoadUI', function() AddToastObstructor(TalkingHeadFrame) end)
 	end
 end

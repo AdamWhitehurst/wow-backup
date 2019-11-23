@@ -4,8 +4,7 @@ local DT = E:GetModule('DataTexts')
 
 --Lua functions
 local _G = _G
-local pairs, select = pairs, select
-local wipe = wipe
+local pairs, select, wipe = pairs, select, wipe
 --WoW API / Variables
 local CreateFrame = CreateFrame
 local GetThreatStatusColor = GetThreatStatusColor
@@ -101,7 +100,7 @@ function THREAT:Update()
 				local r, g, b = self:GetColor(largestUnit)
 				self.bar.text:SetFormattedText(L["ABOVE_THREAT_FORMAT"], name, percent, leadPercent, r, g, b, UnitName(largestUnit) or UNKNOWN)
 
-				if E.role == 'Tank' then
+				if E.myrole == 'TANK' then
 					self.bar:SetStatusBarColor(0, 0.839, 0)
 					self.bar:SetValue(leadPercent)
 				else
@@ -159,8 +158,4 @@ function THREAT:Initialize()
 	self:ToggleEnable()
 end
 
-local function InitializeCallback()
-	THREAT:Initialize()
-end
-
-E:RegisterModule(THREAT:GetName(), InitializeCallback)
+E:RegisterModule(THREAT:GetName())

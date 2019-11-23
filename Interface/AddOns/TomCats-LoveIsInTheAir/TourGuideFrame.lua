@@ -213,7 +213,7 @@ function TourGuideFrameMixin:OnLoad()
     }
     self.portrait:SetTexture("Interface\\AddOns\\TomCats-LoveIsInTheAir\\images\\liith-icon")
     self.portrait:SetTexCoord(0, 1, 0, 1)
-    PortraitFrameTemplate_SetTitle(self, "TomCat's Tours: Love is in the Air");
+    self:SetTitle("TomCat's Tours: Love is in the Air");
     self.dungeon.roles.tank.OnClick = RoleButton_OnClick
     self.dungeon.roles.tank.checkButton.onClick = RoleButton_OnClick
     self.dungeon.roles.healer.OnClick = RoleButton_OnClick
@@ -240,8 +240,8 @@ function TourGuideFrameMixin:OnShow()
     end
     message = message .. "\n\nComing next update: A list of your characters with the holiday instance status (done or not since last reset)"
     --_G["TomCats-LoveIsInTheAirTourGuidePageNavigationFrame"].description:SetText(message)
-    if ("1.0.13" ~= AP["lastVersionSeen"]) then
-        AP["lastVersionSeen"] = "1.0.13"
+    if ("1.0.14" ~= AP["lastVersionSeen"]) then
+        AP["lastVersionSeen"] = "1.0.14"
         if (not addon.showUnopenedBoxesAlert) then
             addon.charm.MinimapLoopPulseAnim:Stop()
         end

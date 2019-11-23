@@ -10,28 +10,43 @@ HandyNotes_BFA_HF_TrackerDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
+		["Magnr - Tichondrius"] = {
+		},
+		["Andalsam - Tichondrius"] = {
+		},
+		["Zandro - Tichondrius"] = {
+		},
+		["Umbrick - Emerald Dream"] = {
+		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Magnr - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
 		},
 		["Brungar - Tichondrius"] = {
 		},
 		["Mcpokesalot - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
 		},
-		["Zandro - Tichondrius"] = {
+		["Andallsa - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Stoakt - Tichondrius"] = {
 		},
 	},
 }
@@ -110,12 +125,12 @@ NPC_Name_CacheDB = {
 		[137681] = "King Clickyclack",
 		[125250] = "Ancient Jawbreaker",
 		[136335] = "Enraged Krolusk",
-		[121242] = "Glompmaw",
+		[122004] = "Umbra'jin",
 		[136336] = "Scorpox",
 		[128965] = "Uroku the Bound",
 		[135510] = "Azuresail the Ancient",
 		[126187] = "Corpse Bringer Yal'kar",
-		[136304] = "Songstress Nahjeen",
+		[121242] = "Glompmaw",
 		[135939] = "Vinespeaker Ratha",
 		[129005] = "King Kooba",
 		[133812] = "Zanxib",
@@ -141,7 +156,7 @@ NPC_Name_CacheDB = {
 		[130443] = "Hivemother Kraxi",
 		[128426] = "Gutrip",
 		[136323] = "Fangcaller Xorreth",
-		[122004] = "Umbra'jin",
+		[136304] = "Songstress Nahjeen",
 		[128951] = "Nez'ara",
 		[141286] = "Poacher Zane",
 		[138938] = "Seabreaker Skoloth",

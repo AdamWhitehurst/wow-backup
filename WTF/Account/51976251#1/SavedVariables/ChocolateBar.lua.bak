@@ -1,0 +1,191 @@
+
+ChocolateBarDB = {
+	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+	},
+	["addonVersion"] = "v3.3.3",
+	["profiles"] = {
+		["Default"] = {
+			["fontSize"] = 15,
+			["iconSize"] = 1,
+			["labelColor"] = {
+				["b"] = 0.6784313725490196,
+				["g"] = 1,
+				["r"] = 0.4627450980392157,
+			},
+			["fontPath"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Sriracha.ttf",
+			["objSettings"] = {
+				["Leatrix_Plus"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["CopyPasta"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["MoreChocolate"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TRP3 — NPC speeches"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Wholly"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["weizPVP"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["DBM"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TRP3 — Character status (IC/OOC)"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["BugSack"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["DetailsStreamer"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Rematch"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["|cffb4b4ffALL THE THINGS|r"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["FarmHud"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["WeakAuras"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Broker_RunSpeed"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Wholly Coordinates"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["TradeSkillMaster"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["PetLeash"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TRP3 — Language"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Details"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["BtWQuests"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Bartender4"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["GatherMate2"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TRP3 — Player status (AFK/DND)"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["NPCScan"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Parrot"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["MogIt"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Total RP 3"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Paste"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["BagnonLauncher"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Masque"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+			},
+			["gap"] = 6,
+			["fixedStrata"] = true,
+			["background"] = {
+				["tile"] = false,
+				["color"] = {
+					["a"] = 0.6584511995315552,
+					["b"] = 0.08235294117647059,
+					["g"] = 0.07450980392156863,
+					["r"] = 0.0784313725490196,
+				},
+				["textureName"] = "Minimalist",
+				["tileSize"] = 256,
+				["texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\Minimalist",
+			},
+			["forceColor"] = false,
+			["desaturated"] = false,
+			["textOffset"] = 2,
+			["height"] = 23,
+			["fontName"] = "Sriracha",
+			["moduleOptions"] = {
+				["MoreChocolate"] = {
+				},
+			},
+			["textColor"] = {
+				["a"] = 1,
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+		},
+	},
+}
+CB_PlayedTime = nil

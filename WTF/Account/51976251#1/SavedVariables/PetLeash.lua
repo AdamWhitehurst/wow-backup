@@ -6,18 +6,23 @@ PetLeash3DB = {
 	},
 	["profileKeys"] = {
 		["Honabar - Emerald Dream"] = "Default",
-		["Umbrick - Tichondrius"] = "Default",
-		["Tirdailough - Tichondrius"] = "Default",
-		["Grandh - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
 		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
-		["Bjorgr - Tichondrius"] = "Default",
-		["Magnr - Tichondrius"] = "Default",
 		["Mcpokesalot - Tichondrius"] = "Default",
 		["Iscrackl - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Magnr - Tichondrius"] = "Default",
+		["Tirdailough - Tichondrius"] = "Default",
 		["Brungar - Tichondrius"] = "Default",
+		["Bjorgr - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Grandh - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -26,7 +31,7 @@ PetLeash3DB = {
 				["$Default"] = {
 					["defaultValue"] = 0,
 					["pets"] = {
-						["BattlePet-0-000008FD5A4E"] = 1,
+						["BattlePet-0-00000B74B04C"] = 1,
 					},
 				},
 			},

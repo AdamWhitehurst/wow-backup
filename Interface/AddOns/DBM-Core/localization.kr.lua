@@ -100,7 +100,7 @@ DBM_CORE_NOTESHAREERRORALREADYOPEN	= "메모 편집기가 이미 열려 있는 �
 DBM_CORE_ALLMOD_DEFAULT_LOADED		= "이 인스턴스에 속한 모든 모드의 기본 설정이 로딩됐습니다."
 DBM_CORE_ALLMOD_STATS_RESETED		= "모든 모드 통계가 초기화 되었습니다."
 DBM_CORE_MOD_DEFAULT_LOADED			= "이 전투의 기본 설정이 로딩됐습니다."
-DBM_CORE_SOUNDKIT_MIGRATION			= "한개 이상의 경고/특수 경고 효과음이 8.2 패치 이후의 버전과 호환되지 않아 기본값으로 초기화 되었습니다 (interface 폴더 안에 있는 효과음 파일 경로 또는 SoundKit ID를 사용해야 합니다)"
+DBM_CORE_SOUNDKIT_MIGRATION			= "한개 이상의 경고/특수 경고 효과음이 호환되지 않는 미디어 형식이거나 파일 경로가 잘못되는 등의 문제로 인해 기본값으로 초기화 되었습니다. DBM은 현재 애드온 폴더 내에 있는 효과음 파일이나 미디어 재생에 쓰이는 SoundKit ID만 지원하고 있습니다."
 
 DBM_CORE_WORLDBOSS_ENGAGED			= "당신이 속한 서버에서 %s 전투가 %s 퍼센트의 체력으로 시작된 것 같습니다. (%s|1이;가; 전송)"
 DBM_CORE_WORLDBOSS_DEFEATED			= "당신이 속한 서버에서 %s|1이;가; 잡힌 것 같습니다. (%s|1이;가; 전송)"
@@ -174,6 +174,7 @@ DBM_CORE_UPDATEREMINDER_MAJORPATCH		= "경고: 대규모 패치로 인해 Deadly
 DBM_CORE_UPDATEREMINDER_TESTVERSION		= "경고: 현재 게임 버전과 맞지 않는 Deadly Boss Mods 버전을 사용중입니다. 게임 클라이언트에 맞는 버전을 deadlybossmods.com이나 Curse에서 다운로드 하시기 바랍니다."
 DBM_CORE_VEM							= "경고: Deadly Boss Mods와 Voice Encounter Mods를 함께 사용중입니다. 현재 설정으로는 DBM이 작동하지 않으며 로딩도 되지 않을 것입니다."
 DBM_CORE_3RDPROFILES					= "경고: DBM-Profiles가 이 버전의 DBM과 호환되지 않습니다. DBM이 읽기 전에 삭제해야 충돌을 방지할 수 있습니다."
+DBM_CORE_VICTORYSOUND					= "경고: DBM-VictorySound가 이 버전의 DBM과 호환되지 않습니다. DBM이 해결할 수 있기 전까진 충돌 방지를 위해 삭제해야 합니다."
 DBM_CORE_DPMCORE						= "경고: Deadly PvP 모드는 더이상 개발되지 않으며 본 DBM 버전과 호환되지 않습니다. DBM이 읽기 전에 삭제해야 충돌을 방지할 수 있습니다."
 DBM_CORE_DBMLDB							= "경고: DBM-LDB는 이제 DBM-Core에 편입되었습니다. 같이 사용해도 문제가 생기는건 아니지만 가급적 애드온 폴더에서 'DBM-LDB' 폴더를 삭제하는걸 권장합니다"
 DBM_CORE_UPDATE_REQUIRES_RELAUNCH		= "경고: 지금 업데이트한 DBM은 게임 클라이언트를 완전히 재시작하기 전까진 정상 작동하지 않습니다. 이 업데이트엔 새 파일이 포함되어 있거나 UI 재시작으로는 로딩할 수 없는 .toc 파일의 변경 사항이 있습니다. 클라이언트 재시작 없이 사용할 경우 오류가 발생하거나 작동하지 않을 수 있습니다."
@@ -286,6 +287,7 @@ DBM_CORE_FAR_AWAY					= "먼 곳"
 DBM_CORE_BREAK_LOS					= "시야를 가리는 곳"
 DBM_CORE_RESTORE_LOS				= "시야가 나오는 곳"
 DBM_CORE_SAFE						= "안전함"
+DBM_CORE_NOTSAFE					= "위험함"
 DBM_CORE_SHIELD						= "보호막"
 DBM_INCOMING						= "%s 등장"
 --Common Locals end
@@ -386,8 +388,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.stack		= "당신에게 %s (%%d중첩)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switch		= "%s - 대상 바꾸세요"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switchcount	= "%s - 대상 바꾸세요 (%%s)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.gtfo		= "%%s 깔림 - 피하세요"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Adds		= "쫄 등장 - 대상 바꾸세요"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Addscustom	= "쫄 등장 - %%s"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.adds		= "쫄 등장 - 대상 바꾸세요"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.addscustom	= "쫄 등장 - %%s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.targetchange	= "대상 변경 - %%s 치세요"
 
 -- Auto-generated Special Warning Localizations
@@ -430,8 +432,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.stack			= "당신이 $spell:%2$s %1$d중첩 이�
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch			= "$spell:%s에 대상 변경 특수 경고 보기"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount 		= "$spell:%s에 대상 변경 특수 경고 보기 (횟수 포함)"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.gtfo 			= "바닥 피하기 특수 경고 보기"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Adds 			= "쫄 등장시 대상 변경 특수 경고 보기"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Addscustom		= "쫄 등장시 특수 경고 보기"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.adds 			= "쫄 등장시 대상 변경 특수 경고 보기"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.addscustom		= "쫄 등장시 특수 경고 보기"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.targetchange		= "점사 우선순위 변경시 특수 경고 보기"
 
 -- Auto-generated Timer Localizations
@@ -476,13 +478,6 @@ DBM_CORE_AUTO_ICONS_OPTION_TEXT2		= "$spell:%s에 공격대 징표 설정"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT			= "$spell:%s 대상을 향하는 DBM 화살표 표시"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT2		= "$spell:%s 대상과 반대 방향의 DBM 화살표 표시"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT3		= "$spell:%s 특정 지점을 가리키는 DBM 화살표 표시"
-DBM_CORE_AUTO_VOICE_OPTION_TEXT			= "$spell:%s에 대한 음성 경보 듣기"
-DBM_CORE_AUTO_VOICE2_OPTION_TEXT		= "단계 전환시 음성 경보 듣기"
-DBM_CORE_AUTO_VOICE3_OPTION_TEXT		= "쫄 등장시 음성 경보 듣기"
-DBM_CORE_AUTO_VOICE4_OPTION_TEXT		= "바닥 밟았을 때 음성 경보 듣기"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT		= "$spell:%s 쿨타임에 맞춰 초읽기 듣기"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT2		= "$spell:%s 남은 시간 초읽기 듣기"
-DBM_CORE_AUTO_COUNTOUT_OPTION_TEXT		= "$spell:%s 지속 시간 초읽기 듣기"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.shortyell	= "$spell:%s 대상일 때 말풍선으로 알리기"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.yell		= "$spell:%s 대상일 때 말풍선으로 알리기 (플레이어 이름 포함)"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.count		= "$spell:%s 대상일 때 말풍선으로 알리기 (횟수 포함)"
@@ -526,7 +521,7 @@ DBM_CORE_HUD_USAGE	= {
 	"유효한 형식: arrow, red, blue, green, yellow, icon (대상에게 공격대 징표가 설정되어 있어야 함)",
 	"유효한 대상: target, focus, <대상이름>",
 	"유효한 시간: 아무 숫자(초단위). 지정하지 않으면 20분간 적용됩니다.",
-	"/dbm hud hide: HUD를 숨기고 비활성화"
+	"/dbm hud hide: 사용자가 생성한 HUD를 비활성화"
 }
 
 DBM_ARROW_MOVABLE						= "화살표 이동"

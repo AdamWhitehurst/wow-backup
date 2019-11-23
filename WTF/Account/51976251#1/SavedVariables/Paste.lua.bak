@@ -1,0 +1,27 @@
+
+PasteDB = {
+	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+	},
+	["profiles"] = {
+		["Bramblebrow - Emerald Dream"] = {
+			["loaded"] = true,
+		},
+		["Umbrick - Tichondrius"] = {
+			["loaded"] = true,
+		},
+		["Zandro - Tichondrius"] = {
+			["loaded"] = true,
+			["whispertarget"] = "",
+			["where"] = "Default",
+			["pos"] = {
+			},
+		},
+		["Stoakt - Tichondrius"] = {
+			["loaded"] = true,
+		},
+	},
+}

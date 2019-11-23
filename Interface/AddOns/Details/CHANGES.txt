@@ -1,0 +1,28 @@
+lightweight tag 0281d28a569e6b463445e01605e94703e12328a8 v8.2.5.7225.140
+Author:	Tercio Jose <terciob19@hotmail.com>
+Date:	Wed Oct 30 20:17:49 2019 -0300
+
+commit 0281d28a569e6b463445e01605e94703e12328a8
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Wed Oct 30 20:17:49 2019 -0300
+
+    Framework Update
+    
+    To version 155.
+
+commit 5e05d6b824214e15e4ff3ddbb12526e510c67b01
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Sun Oct 27 18:13:54 2019 -0300
+
+    Added LibTranslit-1.0
+    
+    In reference to previous commit.
+
+commit b700d874917f44d5686fd46fe054e36e691c3222
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Sun Oct 27 18:07:15 2019 -0300
+
+    Merging pull request 'Add support for transliteration' by Vardex.
+    
+    This commit adds the code changes in Details! that is required to make the new library work.
+

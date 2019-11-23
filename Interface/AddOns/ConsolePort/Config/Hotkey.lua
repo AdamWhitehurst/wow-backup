@@ -179,7 +179,7 @@ end
 
 ---------------------------------------------------------------
 
-function db.CreateHotKey(self, forceStyle, forceName, forceMod)
+function db.CreateHotkey(self, forceStyle, forceName, forceMod)
 	-- self is the secure button in this case
 	local count = self.HotKeys and #self.HotKeys+1 or 1
 	local hotKey = CreateFrame("Frame", "$parentHOTKEY"..count, self)
@@ -254,32 +254,30 @@ end
 
 ---------------------------------------------------------------
 
-function ConsolePort:LoadHotKeyTextures(newSet)
-	local set = newSet or db.Bindings
+function ConsolePort:LoadHotKeyTextures(set) set = set or db.Bindings
+	if not set then return end
+	
 	local actionButtons = self:GetActionButtons(true)
-	local IsFrameWidget = C_Widget.IsFrameWidget
-
-	local index, subSet, modifier, binding, ID
 	for secureBtn in pairs(db.SECURE) do
-		for i, HotKey in pairs(secureBtn.HotKeys) do
-			HotKey:ClearAllPoints()
-			HotKey:SetParent(secureBtn)
-			HotKey:Hide()
+		for i, hotkey in pairs(secureBtn.HotKeys) do
+			hotkey:ClearAllPoints()
+			hotkey:SetParent(secureBtn)
+			hotkey:Hide()
 		end
-		index = 0
-		modifier = secureBtn.mod
-		subSet = set[secureBtn.name]
-		binding = subSet and subSet[modifier]
-		ID = binding and self:GetActionID(binding)
+		local index = 0
+		local modifier = secureBtn.mod
+		local subSet = set[secureBtn.name]
+		local binding = subSet and subSet[modifier]
+		local ID = binding and self:GetActionID(binding)
 
 		if ID then
 			for actionButton, actionID in pairs(actionButtons) do
 				if 	ID == actionID or 
 					self:GetActionBinding(ID) == self:GetActionBinding(actionID) then
 					index = index + 1
-					secureBtn.HotKeys[index] = 	secureBtn.HotKeys[index] or secureBtn:CreateHotKey()
+					secureBtn.HotKeys[index] = 	secureBtn.HotKeys[index] or secureBtn:CreateHotkey()
 
-					secureBtn:ShowHotKey(index, actionButton)
+					secureBtn:ShowHotkey(index, actionButton)
 
 					if actionButton.HotKey then
 						actionButton.HotKey:SetAlpha(0)
@@ -287,9 +285,9 @@ function ConsolePort:LoadHotKeyTextures(newSet)
 				end
 			end
 		elseif binding and not binding:match('ConsolePort') then
-			local button = _G[(gsub(gsub(binding, "CLICK ", ""), ":.+", ""))]
-			if IsFrameWidget(button) then
-				secureBtn:ShowInterfaceHotKey(button)
+			local button = _G[(gsub(gsub(binding, 'CLICK ', ''), ':.+', ''))]
+			if C_Widget.IsFrameWidget(button) then
+				secureBtn:ShowInterfaceHotkey(button)
 			end
 		end
 	end

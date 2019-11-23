@@ -4,7 +4,7 @@ local LSM = E.Libs.LSM
 
 --Lua functions
 local _G = _G
-local unpack, strfind, format, tinsert, strsplit, sort, ceil = unpack, strfind, format, tinsert, strsplit, sort, ceil
+local unpack, strfind, format, strsplit, sort, ceil = unpack, strfind, format, strsplit, sort, ceil
 --WoW API / Variables
 local CreateFrame = CreateFrame
 local IsShiftKeyDown = IsShiftKeyDown
@@ -44,6 +44,19 @@ function UF:Construct_Debuffs(frame)
 	return debuffs
 end
 
+local function OnClick(btn)
+	local mod = E.db.unitframe.auraBlacklistModifier
+	if mod == "NONE" or not ((mod == "SHIFT" and IsShiftKeyDown()) or (mod == "ALT" and IsAltKeyDown()) or (mod == "CTRL" and IsControlKeyDown())) then return end
+	local auraName = btn.name
+
+	if auraName then
+		E:Print(format(L["The spell '%s' has been added to the Blacklist unitframe aura filter."], auraName))
+		E.global.unitframe.aurafilters.Blacklist.spells[btn.spellID] = { enable = true, priority = 0 }
+
+		UF:Update_AllFrames()
+	end
+end
+
 function UF:Construct_AuraIcon(button)
 	local offset = UF.thinBorders and E.mult or E.Border
 	button:SetTemplate(nil, nil, nil, UF.thinBorders, true)
@@ -52,10 +65,7 @@ function UF:Construct_AuraIcon(button)
 	button.cd:SetInside(button, offset, offset)
 
 	button.icon:SetInside(button, offset, offset)
-	button.icon:SetTexCoord(unpack(E.TexCoords))
 	button.icon:SetDrawLayer('ARTWORK')
-	button.icon:SetSnapToPixelGrid(false)
-	button.icon:SetTexelSnappingBias(0)
 
 	button.count:ClearAllPoints()
 	button.count:Point('BOTTOMRIGHT', 1, 1)
@@ -65,17 +75,7 @@ function UF:Construct_AuraIcon(button)
 	button.stealable:SetTexture()
 
 	button:RegisterForClicks('RightButtonUp')
-	button:SetScript('OnClick', function(btn)
-		if E.db.unitframe.auraBlacklistModifier == "NONE" or not ((E.db.unitframe.auraBlacklistModifier == "SHIFT" and IsShiftKeyDown()) or (E.db.unitframe.auraBlacklistModifier == "ALT" and IsAltKeyDown()) or (E.db.unitframe.auraBlacklistModifier == "CTRL" and IsControlKeyDown())) then return; end
-		local auraName = btn.name
-
-		if auraName then
-			E:Print(format(L["The spell '%s' has been added to the Blacklist unitframe aura filter."], auraName))
-			E.global.unitframe.aurafilters.Blacklist.spells[btn.spellID] = { enable = true, priority = 0 }
-
-			UF:Update_AllFrames()
-		end
-	end)
+	button:SetScript('OnClick', OnClick)
 
 	button.cd.CooldownOverride = 'unitframe'
 	E:RegisterCooldown(button.cd)
@@ -90,6 +90,9 @@ end
 function UF:UpdateAuraSettings(auras, button)
 	if button.db then
 		button.count:FontTemplate(LSM:Fetch('font', button.db.countFont), button.db.countFontSize, button.db.countFontOutline)
+	end
+	if button.icon then
+		button.icon:SetTexCoord(unpack(E.TexCoords))
 	end
 
 	button:Size((auras and auras.size) or 30)
@@ -115,18 +118,16 @@ local function ReverseUpdate(frame)
 end
 
 function UF:UpdateAuraCooldownPosition(button)
-	if button.cd and button.cd.timer and button.cd.timer.text then
-		button.cd.timer.text:ClearAllPoints()
-		local point = (button.db and button.db.durationPosition) or 'CENTER'
-		if point == 'CENTER' then
-			button.cd.timer.text:Point(point, 1, 0)
-		else
-			local bottom, right = point:find('BOTTOM'), point:find('RIGHT')
-			button.cd.timer.text:Point(point, right and -1 or 1, bottom and 1 or -1)
-		end
-
-		button.needsUpdateCooldownPosition = nil
+	button.cd.timer.text:ClearAllPoints()
+	local point = (button.db and button.db.durationPosition) or 'CENTER'
+	if point == 'CENTER' then
+		button.cd.timer.text:Point(point, 1, 0)
+	else
+		local bottom, right = point:find('BOTTOM'), point:find('RIGHT')
+		button.cd.timer.text:Point(point, right and -1 or 1, bottom and 1 or -1)
 	end
+
+	button.needsUpdateCooldownPosition = nil
 end
 
 function UF:Configure_Auras(frame, auraType)
@@ -370,12 +371,12 @@ function UF:PostUpdateAura(unit, button)
 		end
 	end
 
-	if button.needsUpdateCooldownPosition then
+	if button.needsUpdateCooldownPosition and (button.cd and button.cd.timer and button.cd.timer.text) then
 		UF:UpdateAuraCooldownPosition(button)
 	end
 end
 
-function UF:AuraFilter(unit, button, name, _, _, debuffType, duration, expiration, caster, isStealable, _, spellID, _, isBossDebuff, casterIsPlayer)
+function UF:AuraFilter(unit, button, name, _, count, debuffType, duration, expiration, caster, isStealable, _, spellID, _, isBossDebuff, casterIsPlayer)
 	if not name then return end -- checking for an aura that is not there, pass nil to break while loop
 
 	local parent = self:GetParent()
@@ -391,6 +392,7 @@ function UF:AuraFilter(unit, button, name, _, _, debuffType, duration, expiratio
 	button.dtype = debuffType
 	button.duration = duration
 	button.expiration = expiration
+	button.stackCount = count
 	button.name = name
 	button.spellID = spellID
 	button.owner = caster
@@ -404,7 +406,7 @@ function UF:AuraFilter(unit, button, name, _, _, debuffType, duration, expiratio
 	if db.priority ~= '' then
 		local isUnit = unit and caster and UnitIsUnit(unit, caster)
 		local canDispell = (self.type == 'buffs' and isStealable) or (self.type == 'debuffs' and debuffType and E:IsDispellableByMe(debuffType))
-		filterCheck, spellPriority = UF:CheckFilter(name, caster, spellID, isFriend, isPlayer, isUnit, isBossDebuff, allowDuration, noDuration, canDispell, casterIsPlayer, strsplit(",", db.priority))
+		filterCheck, spellPriority = UF:CheckFilter(name, caster, spellID, isFriend, isPlayer, isUnit, isBossDebuff, allowDuration, noDuration, canDispell, casterIsPlayer, strsplit(',', db.priority))
 		if spellPriority then button.priority = spellPriority end -- this is the only difference from auarbars code
 	else
 		filterCheck = allowDuration and true -- Allow all auras to be shown when the filter list is empty, while obeying duration sliders

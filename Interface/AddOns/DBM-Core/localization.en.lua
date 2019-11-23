@@ -99,7 +99,7 @@ DBM_CORE_NOTESHAREERRORALREADYOPEN	= "Cannot open a shared note link while note 
 DBM_CORE_ALLMOD_DEFAULT_LOADED		= "Default options for all mods in this instance have been loaded."
 DBM_CORE_ALLMOD_STATS_RESETED		= "All mod stats have been reset."
 DBM_CORE_MOD_DEFAULT_LOADED			= "Default options for this fight have been loaded."
-DBM_CORE_SOUNDKIT_MIGRATION			= "One or more of your warning/special warning sounds were reset to defaults do to incompatability with patch 8.2 and later. DBM now only supports sound files residing your addons folder, or SoundKit IDs for playing media"
+DBM_CORE_SOUNDKIT_MIGRATION			= "One or more of your warning/special warning sounds were reset to defaults do to incompatability media type or invalid sound path. DBM now only supports sound files residing your addons folder, or SoundKit IDs for playing media"
 
 DBM_CORE_WORLDBOSS_ENGAGED			= "%s was possibly engaged on your realm at %s percent health. (Sent by %s)"
 DBM_CORE_WORLDBOSS_DEFEATED			= "%s was possibly defeated on your realm (Sent by %s)."
@@ -176,6 +176,7 @@ DBM_CORE_UPDATEREMINDER_MAJORPATCH		= "WARNING: Do to your Deadly Boss Mods bein
 DBM_CORE_UPDATEREMINDER_TESTVERSION		= "WARNING: You are using a version of Deadly Boss Mods not intended to be used with this game version. Please make sure you download the appropriate version for your game client from deadlybossmods.com or curse."
 DBM_CORE_VEM							= "WARNING: You are running both Deadly Boss Mods and Voice Encounter Mods. DBM will not run in this configuration and therefore will not be loaded."
 DBM_CORE_3RDPROFILES					= "WARNING: DBM-Profiles not compatible with this version of DBM. It must be removed before DBM can proceed, to avoid conflict."
+DBM_CORE_VICTORYSOUND					= "WARNING: DBM-VictorySound not compatible with this version of DBM. It must be removed before DBM can proceed, to avoid conflict."
 DBM_CORE_DPMCORE						= "WARNING: Deadly PvP mods is discontinued and not compatible with this version of DBM. It must be removed before DBM can proceed, to avoid conflict."
 DBM_CORE_DBMLDB							= "WARNING: DBM-LDB is now built into DBM-Core. While it won't do any harm, it's recommended to remove 'DBM-LDB' from your addons folder"
 DBM_CORE_UPDATE_REQUIRES_RELAUNCH		= "WARNING: This DBM update will not work correctly if you don't fully restart your game client. This update contains new files or .toc file changes that cannot be loaded via ReloadUI. You may encounter broken functionality or errors if you continue without a client restart."
@@ -290,6 +291,7 @@ DBM_CORE_FAR_AWAY					= "Far Away"
 DBM_CORE_BREAK_LOS					= "Break LOS"
 DBM_CORE_RESTORE_LOS				= "Restore/Maintain LOS"
 DBM_CORE_SAFE						= "Safe"
+DBM_CORE_NOTSAFE					= "Not Safe"
 DBM_CORE_SHIELD						= "Shield"
 DBM_INCOMING						= "%s Incoming"
 --Common Locals end
@@ -399,8 +401,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 	switch			= "%s - switch targets",
 	switchcount		= "%s - switch targets (%%s)",
 	gtfo			= "%%s under you - move away",
-	Adds			= "Incoming Adds - switch targets",
-	Addscustom		= "Incoming Adds - %%s",
+	adds			= "Incoming Adds - switch targets",
+	addscustom		= "Incoming Adds - %%s",
 	targetchange	= "Target Change - switch to %%s"
 }
 
@@ -445,8 +447,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS = {
 	switch			= "Show special warning to switch targets for $spell:%s",
 	switchcount		= "Show special warning (with count) to switch targets for $spell:%s",
 	gtfo 			= "Show special warning to move out of bad stuff on ground",
-	Adds			= "Show special warning to switch targets for incoming adds",
-	Addscustom		= "Show special warning for incoming adds",
+	adds			= "Show special warning to switch targets for incoming adds",
+	addscustom		= "Show special warning for incoming adds",
 	targetchange	= "Show special warning for priority target changes"
 }
 
@@ -503,13 +505,6 @@ DBM_CORE_AUTO_ICONS_OPTION_TEXT2		= "Set icons on $spell:%s"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT			= "Show DBM Arrow to move toward target affected by $spell:%s"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT2		= "Show DBM Arrow to move away from target affected by $spell:%s"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT3		= "Show DBM Arrow to move toward specific location for $spell:%s"
-DBM_CORE_AUTO_VOICE_OPTION_TEXT			= "Play spoken alerts for $spell:%s"
-DBM_CORE_AUTO_VOICE2_OPTION_TEXT		= "Play spoken alerts for stage changes"
-DBM_CORE_AUTO_VOICE3_OPTION_TEXT		= "Play spoken alerts for incoming adds"
-DBM_CORE_AUTO_VOICE4_OPTION_TEXT		= "Play spoken alerts for bad stuff on ground"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT		= "Play countdown sound for $spell:%s cooldown"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT2	= "Play countdown sound for when $spell:%s fades"
-DBM_CORE_AUTO_COUNTOUT_OPTION_TEXT		= "Play countout sound for $spell:%s duration"
 DBM_CORE_AUTO_YELL_OPTION_TEXT = {
 	shortyell		= "Yell when you are affected by $spell:%s",
 	yell			= "Yell (with player name) when you are affected by $spell:%s",
@@ -530,8 +525,8 @@ DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT = {
 	position 		= "%s %%s on {rt%%d}"..UnitName("player").."{rt%%d}",
 	combo			= "%s and %%s"--Spell name (from option, plus spellname given in arg)
 }
-DBM_CORE_AUTO_YELL_CUSTOM_POSITION		= "{rt%d}%s{rt%d}"--Doesn't need translating. Has no strings
-DBM_CORE_AUTO_YELL_CUSTOM_POSITION2		= "{rt%d}{rt%d}%s{rt%d}{rt%d}"--Doesn't need translating. Has no strings
+DBM_CORE_AUTO_YELL_CUSTOM_POSITION		= "{rt%d}%s"--Doesn't need translating. Has no strings
+DBM_CORE_AUTO_YELL_CUSTOM_POSITION2		= "{rt%d}%s{rt%d}"--Doesn't need translating. Has no strings
 DBM_CORE_AUTO_YELL_CUSTOM_FADE			= "%s faded"
 DBM_CORE_AUTO_HUD_OPTION_TEXT			= "Show HudMap for $spell:%s (Retired)"
 DBM_CORE_AUTO_HUD_OPTION_TEXT_MULTI		= "Show HudMap for various mechanics (Retired)"
@@ -562,7 +557,7 @@ DBM_CORE_HUD_USAGE	= {
 	"Valid types: arrow, dot, red, blue, green, yellow, icon (requires a target with raid icon)",
 	"Valid targets: target, focus, <playername>",
 	"Valid durations: any number (in seconds). If left blank, 20min will be used.",
-	"/dbm hud hide:  disables and hides the HUD"
+	"/dbm hud hide: disables user generated HUD objects"
 }
 
 DBM_ARROW_MOVABLE					= "Arrow movable"
@@ -637,8 +632,8 @@ DBM_CORE_DISEASE_ICON		= "|TInterface\\EncounterJournal\\UI-EJ-Icons.blp:20:20:0
 DBM_CORE_ENRAGE_ICON		= "|TInterface\\EncounterJournal\\UI-EJ-Icons.blp:20:20:0:0:255:66:102:118:40:58|t"
 
 --LDB
-DBM_LDB_TOOLTIP_HELP1	= "Left-click to open DBM"
-DBM_LDB_TOOLTIP_HELP2	= "Right-click to open config menu"
+DBM_LDB_TOOLTIP_HELP1	= "Click to open DBM"
+--DBM_LDB_TOOLTIP_HELP2	= "Right-click to open config menu"
 
 DBM_LDB_LOAD_MODS		= "Load boss mods"
 

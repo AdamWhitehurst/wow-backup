@@ -53,11 +53,10 @@ local function LoadSkin()
 		"ReadyCheckFrame",
 		"QueueStatusFrame",
 		"LFDReadyCheckPopup",
-		"DropDownList1Backdrop",
-		"DropDownList1MenuBackdrop",
 	}
 
 	for i = 1, #skins do
+		_G[skins[i]]:StripTextures()
 		_G[skins[i]]:SetTemplate("Transparent")
 	end
 
@@ -132,6 +131,7 @@ local function LoadSkin()
 		-- Skin the ElvUI Menu Button
 		S:HandleButton(_G.GameMenuFrame.ElvUI)
 
+		_G.GameMenuFrame:StripTextures()
 		_G.GameMenuFrame:SetTemplate("Transparent")
 		_G.GameMenuFrameHeader:SetTexture()
 		_G.GameMenuFrameHeader:ClearAllPoints()
@@ -213,7 +213,18 @@ local function LoadSkin()
 			end
 		end)
 		for j = 1, 4 do
-			S:HandleButton(StaticPopup["button"..j])
+			local button = StaticPopup["button"..j]
+			S:HandleButton(button)
+
+			button.Flash:Hide()
+
+			button:CreateShadow(5)
+			button.shadow:SetAlpha(0)
+			button.shadow:SetBackdropBorderColor(unpack(E.media.rgbvaluecolor))
+
+			local anim1, anim2 = button.PulseAnim:GetAnimations()
+			anim1:SetTarget(button.shadow)
+			anim2:SetTarget(button.shadow)
 		end
 		_G["StaticPopup"..i.."EditBox"]:SetFrameLevel(_G["StaticPopup"..i.."EditBox"]:GetFrameLevel()+1)
 		S:HandleEditBox(_G["StaticPopup"..i.."EditBox"])
@@ -276,13 +287,20 @@ local function LoadSkin()
 		local listFrameName = listFrame:GetName();
 		local expandArrow = _G[listFrameName.."Button"..index.."ExpandArrow"];
 		if expandArrow then
+			local normTex = expandArrow:GetNormalTexture()
 			expandArrow:SetNormalTexture(E.Media.Textures.ArrowUp)
+			normTex:SetVertexColor(unpack(E.media.rgbvaluecolor))
+			normTex:SetRotation(S.ArrowRotation.right)
 			expandArrow:Size(12, 12)
-			expandArrow:GetNormalTexture():SetVertexColor(unpack(E.media.rgbvaluecolor))
-			expandArrow:GetNormalTexture():SetRotation(S.ArrowRotation.right)
 		end
 
-		 _G[listFrameName.."MenuBackdrop"]:SetTemplate("Transparent")
+		local Backdrop = _G[listFrameName.."Backdrop"]
+		if not Backdrop.template then Backdrop:StripTextures() end
+		Backdrop:SetTemplate("Transparent")
+
+		local menuBackdrop = _G[listFrameName.."MenuBackdrop"]
+		if not menuBackdrop.template then menuBackdrop:StripTextures() end
+		menuBackdrop:SetTemplate("Transparent")
 	end)
 
 	hooksecurefunc("UIDropDownMenu_SetIconImage", function(icon, texture)

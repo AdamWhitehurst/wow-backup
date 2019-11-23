@@ -1,3 +1,79 @@
+### 8.2.12
+
+- Update Russian translations
+- Fix missing changelog from last update
+
+### 8.2.11
+
+- Updated Default-scales (SimulationCraft 820-02 for World of Warcraft 8.2.0 Live (wow build 31478))
+- At least Traditional Chinese translations have been updated
+- Minor version TOC bump because it was bothering someone
+
+### 8.2.10
+
+- Fixed a bug where slash-sign ('/') in scales name would make the scale unselectable in the scales list. This solves [Issue #46](https://www.curseforge.com/wow/addons/azeritepowerweights/issues/46)
+- New feature: There is a button in scale editor to switch between Trait-weights and Essence-weights of the scale.
+   - This adds two new strings for translators to translate at [Curseforge Localization tool](https://www.curseforge.com/wow/addons/azeritepowerweights/localization)
+- Updated one API call to match todays standards.
+- Changing Github Webhook to BigWigs packager -script
+- No changes to the Default-scales. They will follow in another update soon(tm) when I have time to run them first.
+
+### 8.2.9
+
+- Updated Default-scales (SimulationCraft 820-02 for World of Warcraft 8.2.0 Live (wow build 31429))
+- New Blood Death Knight Defensive scale by Acherus.
+- There has been update on German-translations at some point.
+
+### 8.2.8
+
+- Added missing Default-scale for Enhancement Shaman. This solves [Ticket #40](https://www.curseforge.com/wow/addons/azeritepowerweights/issues/40) by Mastadood.
+- Also fixed bug where changes made for the Azerite Essence -scoring was reverted to pre-8.2 code and might have caused weird stuff with timestamps of Default-scales.
+
+### 8.2.7
+
+- Update Default-scales (SimulationCraft 820-02)
+
+### 8.2.6
+
+- Moved misplaced `Person-Computer Interface` from `Professions Powers` to `Zone Powers`. [Ticket #35](https://www.curseforge.com/wow/addons/azeritepowerweights/issues/35)
+   - While fixing this, found and fixed bug where `Clockwork Heart` wasn't showing up in the Weight Editor at all (you can find it now also under `Zone Powers`).
+
+### 8.2.5
+
+- Removed two mispalced commas that sabotaged the previous release. [Ticket #34](https://www.curseforge.com/wow/addons/azeritepowerweights/issues/34)
+
+### 8.2.4
+
+- Fixed the missing Azerite Traits (When you automate stuff, remember to update your automation tools also when updating data!) [Ticket #33](https://www.curseforge.com/wow/addons/azeritepowerweights/issues/33)
+
+### 8.2.3
+
+- Fixed Azerite Essences current potential score and maximum score calculations resulting in wrong scores if you scroll the Essence-list down.
+- Even more Debug-stuff added.
+
+### 8.2.2
+
+- Added more Debug-stuff to help me to solve tickets in the future.
+
+### 8.2.1
+
+- Update Default-scales (SimulationCraft 820-01)
+- Update on translations
+   - The new Curseforge page makes it really hard to keep track on what languages has changed and who contributed, so sorry for I can't name you here like I have done in the past.
+- Raised the layer where the Azerite Essence scores were drawn on the scoll element on the right side of the UI since they disappeared from me after the weekly reset.
+
+### 8.2.0
+
+- TOC update
+- Added support for Azerite Essences, but there isn't any weights for them since I didn't have time to update my tools yet.
+- Also Default-scales are old, I'll push out update when the sims are done (I have really slow CPU).
+- 5 new strings for translators to translate at [Curseforge Localization tool](https://www.curseforge.com/wow/addons/azeritepowerweights/localization)
+- New version of Import-strings supports Azerite Essences, but the old strings should still import
+   - If you import old version string, it will create a new copy instead of updating the existing one even if `Importing can update existing scales` is turned on.
+- Added outline around the score numbers in Azerite Trait and Azerite Essence UIs to make it easier to read the numbers if they are on top of a light icon.
+   - This can be turned off from the config if you don't like the new look.
+- Fixed one or two leaking globals.
+
 ### 8.1.15
 
 - Update Default-scales (SimulationCraft 815-02)

@@ -1,0 +1,9 @@
+------------------------------------------------------------------------
+r108 | Caliaha | 2019-10-13 03:26:54 +0000 (Sun, 13 Oct 2019) | 2 lines
+Changed paths:
+   M /trunk/HandyNotes_DungeonLocations.lua
+
+Added Operation: Mechagon and The Eternal Palace
+
+------------------------------------------------------------------------
+

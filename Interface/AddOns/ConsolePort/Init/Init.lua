@@ -21,17 +21,17 @@ db.PLUGINS 	= {}
 -- Popup functions 
 ---------------------------------------------------------------
 local function LoadDefaultBindings()
-	ConsolePortConfig:OpenCategory('Binds')
-	ConsolePortConfigContainerBinds:Default()
+	ConsolePortOldConfig:OpenCategory('Binds')
+	ConsolePortOldConfigContainerBinds:Default()
 	ConsolePort:CheckLoadedSettings()
 end
 
 local function LoadWoWmapper()
-	db.Settings.calibration = db.table.copy(WoWmapper.Keys)
+	db('calibration', db.table.copy(WoWmapper.Keys))
 	for k, v in pairs(WoWmapper.Settings) do
-		db.Settings[k] = v
+		db(k, v)
 	end
-	db.Settings.type = db.Settings.forceController or db.Settings.type
+	db('type', db('forceController') or db('type'))
 end
 
 local function CancelPopup()
@@ -53,7 +53,7 @@ function ConsolePort:LoadSettings()
 	end
 
 	db.Settings = ConsolePortSettings
-	db.Settings.calibration = db.Settings.calibration or {}
+	db('calibration', db('calibration') or {})
 
 	-----------------------------------------------------------
 	-- Load exported WoWmapper settings
@@ -63,7 +63,7 @@ function ConsolePort:LoadSettings()
 			print('Calibration or settings table missing in WoWmapper export data.')
 		else
 			if db('wmupdate') or ( not db('calibration') ) then
-				db.Settings.wmupdate = nil
+				db('wmupdate', nil)
 				LoadWoWmapper()
 			else
 				local cs, ws = db.Settings, WoWmapper.Settings
@@ -162,6 +162,11 @@ function ConsolePort:LoadSettings()
 	self:CreateSlashHandler()
 
 	----------------------------------------------------------
+	-- Dispatch a cvar refresh for reguistered callbacks
+	----------------------------------------------------------
+	self:RefreshCVars()
+
+	----------------------------------------------------------
 	self.LoadSettings = nil
 end
 
@@ -178,7 +183,7 @@ function ConsolePort:WMupdate()
 		enterClicksFirstButton = true,
 		exclusive = true,
 		OnAccept = function()
-			db.Settings.wmupdate = true
+			db('wmupdate', true)
 			ReloadUI()
 		end,
 		OnCancel = CancelPopup,
@@ -190,7 +195,7 @@ function ConsolePort:GetBindingSet(specID)
 	-----------------------------------------------------------
 	-- Set/load binding table
 	-----------------------------------------------------------
-	local specID = specID or GetSpecialization()
+	local specID = specID or CPAPI:GetSpecialization()
 
 	-- Flag bindings loaded so the settings checkup doesn't run this part.
 	BINDINGSLOADED = true
@@ -251,11 +256,11 @@ function ConsolePort:CheckLoadedSettings()
 	end
 end
 
-function ConsolePort:CreateActionButtons()
+function ConsolePort:CreateSecureButtons()
 	for name in self:GetBindings() do
 		for modifier in self:GetModifiers() do
-			self:CreateSecureButton(name, modifier, self:GetUIControlKey(name))
+			self:SetSecureButton(name, modifier, self:GetUIControlKey(name))
 		end
 	end
-	self.CreateActionButtons = nil
+	self.CreateSecureButtons = nil
 end

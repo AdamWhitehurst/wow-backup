@@ -7,7 +7,7 @@
 -- secure frames with the 'unit' attribute assigned.
 
 local 	addOn, db = ...
-local 	Flash, FadeIn, FadeOut = db.UIFrameFlash, db.UIFrameFadeIn, db.UIFrameFadeOut
+local 	Flash, FadeIn, FadeOut = db.UIFrameFlash, db.GetFaders()
 ---------------------------------------------------------------
 local 	Cursor = ConsolePortRaidCursor
 ---------------------------------------------------------------
@@ -27,9 +27,6 @@ do
 	Cursor:SetFrameRef('SetFocus', Cursor.SetFocus)
 	Cursor:SetFrameRef('SetTarget', Cursor.SetTarget)
 	Cursor:SetFrameRef('Mouse', ConsolePortMouseHandle)
-	---------------------------------------------------------------
-	Cursor:SetFrameRef('actionBar', MainMenuBarArtFrame)
-	Cursor:SetFrameRef('overrideBar', OverrideActionBar)
 	---------------------------------------------------------------
 	ConsolePort:RegisterSpellHeader(Cursor)
 	Cursor:Execute(format([[
@@ -78,10 +75,11 @@ do
 		GetNodes = [=[
 			local node = CurrentNode
 			local isProtected = node:IsProtected()
-			local children = isProtected and newtable(node:GetChildren())
 			local unit = isProtected and node:GetAttribute('unit')
 			local action = isProtected and node:GetAttribute('action')
+			local children = isProtected and newtable(node:GetChildren())
 			local childUnit
+
 			if children then
 				for i, child in pairs(children) do
 					if child:IsProtected() then
@@ -93,6 +91,7 @@ do
 					end
 				end
 			end
+
 			if isProtected then
 				if Cache[node] then
 					return
@@ -298,9 +297,13 @@ do
 
 		-- Cache default bars right away
 		CurrentNode = self:GetFrameRef('actionBar')
-		self:Run(GetNodes)
+		if CurrentNode then
+			self:Run(GetNodes)
+		end
 		CurrentNode = self:GetFrameRef('overrideBar')
-		self:Run(GetNodes)
+		if CurrentNode then
+			self:Run(GetNodes)
+		end
 	]])
 	Cursor:SetAttribute('pageupdate', [[
 		if IsEnabled then
@@ -408,7 +411,7 @@ function Cursor:OnEvent(event, ...)
 		FadeOut(self.CastBar, 0.2, self.CastBar:GetAlpha(), 0)
 
 	elseif event == 'UNIT_SPELLCAST_START' then
-		local name, _, texture, startTime, endTime = UnitCastingInfo('player')
+		local name, _, texture, startTime, endTime = CPAPI:GetPlayerCastingInfo()
 
 		local targetRelation = self:GetAttribute('relation')
 		local spellRelation = IsHarmfulSpell(name) and 'harm' or IsHelpfulSpell(name) and 'help'
@@ -516,22 +519,23 @@ function Cursor:OnAttributeChanged(attribute, value)
 	end
 end
 
+
+function Cursor:UpdateCastbar(startCast, endCast)
+	local time = GetTime() * 1000
+	local progress = (time - startCast) / (endCast - startCast)
+	local resize = 86 - (22 * (1 - progress))
+	self.CastBar:SetRotation(-2 * progress * pi)
+	self.CastBar:SetSize(resize, resize)
+end
+
 function Cursor:OnUpdate(elapsed)
 	self.Timer = self.Timer + elapsed
 	if self.Timer > 0.025 then
 		if self.unit and UnitExists(self.unit) then
 			if self.isCasting then
-				local time = GetTime() * 1000
-				local progress = (time - self.startCast) / (self.endCast - self.startCast)
-				local resize = 128 - (40 * (1 - progress))
-				self.CastBar:SetRotation(-2 * progress * pi)
-				self.CastBar:SetSize(resize, resize)
+				self:UpdateCastbar(self.startCast, self.endCast)
 			elseif self.isChanneling then
-				local time = GetTime() * 1000
-				local progress = (time - self.startChannel) / (self.endChannel - self.startChannel)
-				local resize = 128 - (40 * (1 - progress))
-				self.CastBar:SetRotation(-2 * progress * pi)
-				self.CastBar:SetSize(resize, resize)
+				self:UpdateCastbar(self.startChannel, self.endChannel)
 			elseif self.resetPortrait then
 				self.resetPortrait = false
 				SetPortraitTexture(self.UnitPortrait, self.unit)

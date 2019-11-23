@@ -99,9 +99,9 @@ function private.GetPostingSettings()
 				:SetStyle("selectedBackground", "#e2e2e2")
 				:SetStyle("height", 24)
 				:SetDisabled(TSM.Operations.HasRelationship("Auctioning", private.currentOperationName, "duration"))
-				:AddOption(AUCTION_DURATION_ONE, operation.duration == 12)
-				:AddOption(AUCTION_DURATION_TWO, operation.duration == 24)
-				:AddOption(AUCTION_DURATION_THREE, operation.duration == 48)
+				:AddOption(TSM.CONST.AUCTION_DURATIONS[1], operation.duration == 1)
+				:AddOption(TSM.CONST.AUCTION_DURATIONS[2], operation.duration == 2)
+				:AddOption(TSM.CONST.AUCTION_DURATIONS[3], operation.duration == 3)
 				:SetScript("OnValueChanged", private.SetAuctioningDuration)
 			)
 		)
@@ -335,7 +335,7 @@ function private.AddBlacklistPlayers(frame)
 	if operation.blacklist == "" then return end
 	local containerFrame = TSMAPI_FOUR.UI.NewElement("Frame", "blacklistFrame")
 		:SetLayout("FLOW")
-	for index, player in TSMAPI_FOUR.Util.VarargIterator(strsplit(",", operation.blacklist)) do
+	for index, player in TSM.Vararg.Iterator(strsplit(",", operation.blacklist)) do
 		containerFrame:AddChild(TSMAPI_FOUR.UI.NewElement("Frame", "blacklist" .. index)
 			:SetLayout("HORIZONTAL")
 			:SetStyle("height", 20)
@@ -412,18 +412,18 @@ end
 
 function private.AuctioningIgnoreLowDuration(self, selection)
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
-	operation.ignoreLowDuration = TSMAPI_FOUR.Util.GetDistinctTableKey(IGNORE_DURATION_OPTIONS, selection) - 1
+	operation.ignoreLowDuration = TSM.Table.GetDistinctKey(IGNORE_DURATION_OPTIONS, selection) - 1
 end
 
 function private.BlacklistInputOnEnterPressed(input)
 	local newPlayer = strtrim(input:GetText())
-	if newPlayer == "" or strfind(newPlayer, ",") or newPlayer ~= TSMAPI_FOUR.Util.StrEscape(newPlayer) then
+	if newPlayer == "" or strfind(newPlayer, ",") or newPlayer ~= TSM.String.Escape(newPlayer) then
 		-- this is an invalid player name
 		return
 	end
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
 	local found = false
-	for _, player in TSMAPI_FOUR.Util.VarargIterator(strsplit(",", operation.blacklist)) do
+	for _, player in TSM.Vararg.Iterator(strsplit(",", operation.blacklist)) do
 		if newPlayer == player then
 			-- this player is already added
 			input:SetText("")
@@ -438,7 +438,7 @@ function private.BlacklistInputOnEnterPressed(input)
 end
 
 function private.MoneyValueConvert(input)
-	local text = gsub(strtrim(input:GetText()), TSMAPI_FOUR.Util.StrEscape(LARGE_NUMBER_SEPERATOR), "")
+	local text = gsub(strtrim(input:GetText()), TSM.String.Escape(LARGE_NUMBER_SEPERATOR), "")
 	local value = min(max(tonumber(text) or TSM.Money.FromString(text) or 0, 0), MAXIMUM_BID_PRICE)
 
 	input:SetFocused(false)
@@ -467,15 +467,7 @@ end
 
 function private.SetAuctioningDuration(self, value)
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
-	if value == AUCTION_DURATION_ONE then
-		operation.duration = 12
-	elseif value == AUCTION_DURATION_TWO then
-		operation.duration = 24
-	elseif value == AUCTION_DURATION_THREE then
-		operation.duration = 48
-	else
-		error("Unknown value: "..tostring(value))
-	end
+	operation.duration = TSM.Table.GetDistinctKey(TSM.CONST.AUCTION_DURATIONS, value)
 end
 
 function private.BidPercentOnEnterPressed(self)
@@ -483,7 +475,7 @@ function private.BidPercentOnEnterPressed(self)
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
 	value = max(tonumber(value) or (operation.bidPercent and operation.bidPercent * 100 or 100), 0)
 	value = min(value, 100)
-	value = TSMAPI_FOUR.Util.Round(value)
+	value = TSM.Math.Round(value)
 	value = value / 100
 	operation.bidPercent = value
 
@@ -505,7 +497,7 @@ end
 
 function private.OperationOnCursorChanged(input, _, y)
 	local scrollFrame = input:GetParentElement()
-	scrollFrame._scrollbar:SetValue(TSMAPI_FOUR.Util.Round(abs(y) / (input:_GetStyle("height") - 22) * scrollFrame:_GetMaxScroll()))
+	scrollFrame._scrollbar:SetValue(TSM.Math.Round(abs(y) / (input:_GetStyle("height") - 22) * scrollFrame:_GetMaxScroll()))
 end
 
 function private.OperationOnMouseUp(frame)

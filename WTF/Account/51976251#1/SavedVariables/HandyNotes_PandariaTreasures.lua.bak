@@ -1,2 +1,16 @@
 
-PandariaTreasuresDB = nil
+PandariaTreasuresDB = {
+	["profileKeys"] = {
+		["Andalsa - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

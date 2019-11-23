@@ -1,0 +1,5 @@
+VER 3 0100000000000001 "stealthshadowste" "132303"
+#showtooltip
+/cast [nostealth] Stealth;
+/cast Shadowstep;
+END

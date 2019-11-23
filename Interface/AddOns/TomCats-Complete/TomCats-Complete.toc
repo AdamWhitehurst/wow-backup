@@ -1,8 +1,8 @@
-## Interface: 80100
+## Interface: 80200
 ## Title: TomCat's Tours: Complete
 ## Author: TomCat
 ## X-Website: https://www.tomcatstours.com
-## Version: 1.0.24
+## Version: 1.0.31
 ## DefaultState: enabled
 ## OptionalDeps: TomCats
 ## X-Part-Of: TomCat's Tours:

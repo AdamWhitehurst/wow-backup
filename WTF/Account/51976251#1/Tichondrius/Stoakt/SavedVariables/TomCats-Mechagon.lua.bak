@@ -1,0 +1,17 @@
+
+TomCats_Mechagon_Character = {
+	["preferences"] = {
+		["TomCats-MechagonMinimapButton"] = {
+			["position"] = -2.655992544467119,
+		},
+	},
+	["windowSettings"] = {
+		["y"] = 0,
+		["x"] = 0,
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["showing"] = false,
+		["height"] = 330,
+		["width"] = 360.0000305175781,
+	},
+}

@@ -1,13 +1,16 @@
 local AS = unpack(AddOnSkins)
-
 if not AS:CheckAddOn('Details') then return end
 
-local Details
-
-local wipe, tinsert, select, type = wipe, tinsert, select, type
-
+-- Cache global variables
+--Lua functions
 local _G = _G
+local select, type = select, type
+local wipe, tinsert  = table.wipe, table.insert
+--WoW API / Variables
+local hooksecurefunc = hooksecurefunc
+-- GLOBALS:
 
+local Details
 local NumberToEmbed
 
 AS['DetailsInstances'] = {}
@@ -122,42 +125,6 @@ function AS:EmbedDetailsWindow(window, width, height, point, relativeFrame, rela
 		_G.DetailsRowFrame2:SetFrameLevel(_G.DetailsBaseFrame2:GetFrameLevel() + 1)
 	end
 
-	window:ChangeSkin()
-
-	if (window.skin ~= "Forced Square") then
-		if (AS:CheckOption("DetailsBackdrop")) then
-			window:ShowSideBars()
-		else
-			window:HideSideBars()
-
-			local skin = Details.skins[window.skin]
-
-			window.row_info.space.left = skin.instance_cprops.row_info.space.left
-			window.row_info.space.right = skin.instance_cprops.row_info.space.right
-
-			window:InstanceWallpaper (false)
-
-			window:SetBarGrowDirection()
-		end
-	elseif (window.skin == "Forced Square") then
-		if (AS:CheckOption("DetailsBackdrop")) then
-			window:ShowSideBars()
-			window:InstanceColor (1, 1, 1, 1, nil, true)
-		else
-			window:HideSideBars()
-			window:InstanceColor (1, 1, 1, 0, nil, true)
-
-			local skin = Details.skins[window.skin]
-
-			window.row_info.space.left = skin.instance_cprops.row_info.space.left
-			window.row_info.space.right = skin.instance_cprops.row_info.space.right
-
-			window:InstanceWallpaper (false)
-
-			window:SetBarGrowDirection()
-		end
-	end
-
 	if (window:GetSegment() ~= 0) then
 		window:SetDisplay (0)
 	end
@@ -176,8 +143,8 @@ function AS:Embed_Details()
 	end
 
 	if AS:CheckOption('EmbedSystemDual') then
-		if strlower(AS:CheckOption('EmbedRight')) == 'details' then NumberToEmbed = NumberToEmbed + 1 end
-		if strlower(AS:CheckOption('EmbedLeft')) == 'details' then NumberToEmbed = NumberToEmbed + 1 end
+		if AS:CheckOption('EmbedRight') == 'Details' then NumberToEmbed = NumberToEmbed + 1 end
+		if AS:CheckOption('EmbedLeft') == 'Details' then NumberToEmbed = NumberToEmbed + 1 end
 	end
 
 	if (Details:GetMaxInstancesAmount() < NumberToEmbed) then
@@ -194,12 +161,10 @@ function AS:Embed_Details()
 		end
 	end
 
-	Details:SetTooltipBackdrop("Blizzard Tooltip", 16, {1, 1, 1, 0})
-
 	if NumberToEmbed == 1 then
 		local EmbedParent = _G.EmbedSystem_MainWindow
 		if AS:CheckOption('EmbedSystemDual') then
-			EmbedParent = strlower(AS:CheckOption('EmbedRight')) == 'details' and _G.EmbedSystem_RightWindow or _G.EmbedSystem_LeftWindow
+			EmbedParent = AS:CheckOption('EmbedRight') == 'Details' and _G.EmbedSystem_RightWindow or _G.EmbedSystem_LeftWindow
 		end
 		AS:EmbedDetailsWindow(AS.DetailsInstances[1], EmbedParent:GetWidth(), EmbedParent:GetHeight(), 'TOPLEFT', EmbedParent, 'TOPLEFT', 2, 0)
 

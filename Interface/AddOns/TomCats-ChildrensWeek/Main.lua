@@ -9,7 +9,7 @@ if (TomCats and TomCats.Register) then
 --                    }
 --                },
                 name = "Children's Week",
-                version = "1.0.5"
+                version = "1.0.6"
             }
     )
 end
@@ -674,7 +674,7 @@ local function ADDON_LOADED(_, _, arg1)
                 GameTooltip:Hide()
             end
         }
-        if ("1.0.5" ~= AP["lastVersionSeen"]) then
+        if ("1.0.6" ~= AP["lastVersionSeen"]) then
             --addon.charm.MinimapLoopPulseAnim:Play()
         end
         refreshProgress()
@@ -707,7 +707,7 @@ if (TomCats and TomCats.Register) then
                                     }
                                 },
                 name = "Children's Week",
-                version = "1.0.5"
+                version = "1.0.6"
             }
     )
 end

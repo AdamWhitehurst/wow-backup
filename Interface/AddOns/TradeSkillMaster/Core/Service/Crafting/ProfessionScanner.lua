@@ -8,6 +8,7 @@
 
 local _, TSM = ...
 local ProfessionScanner = TSM.Crafting:NewPackage("ProfessionScanner")
+local ProfessionInfo = TSM.Include("Data.ProfessionInfo")
 local private = {
 	db = nil,
 	hasScanned = false,
@@ -35,12 +36,22 @@ function ProfessionScanner.OnInitialize()
 		:AddNumberField("numSkillUps")
 		:Commit()
 	TSM.Crafting.ProfessionState.RegisterUpdateCallback(private.ProfessionStateUpdate)
-	TSMAPI_FOUR.Event.Register("TRADE_SKILL_LIST_UPDATE", private.OnTradeSkillUpdateEvent)
+	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+		TSM.Event.Register("CRAFT_UPDATE", private.OnTradeSkillUpdateEvent)
+		TSM.Event.Register("TRADE_SKILL_UPDATE", private.OnTradeSkillUpdateEvent)
+	else
+		TSM.Event.Register("TRADE_SKILL_LIST_UPDATE", private.OnTradeSkillUpdateEvent)
+	end
 end
 
 function ProfessionScanner.SetDisabled(disabled)
+	if private.disabled == disabled then
+		return
+	end
 	private.disabled = disabled
-	private.ScanProfession()
+	if not disabled then
+		private.ScanProfession()
+	end
 end
 
 function ProfessionScanner.HasScanned()
@@ -61,6 +72,10 @@ end
 
 function ProfessionScanner.CreateQuery()
 	return private.db:NewQuery()
+end
+
+function ProfessionScanner.GetIndexBySpellId(spellId)
+	return private.db:GetUniqueRowField("spellId", spellId, "index")
 end
 
 function ProfessionScanner.GetNameBySpellId(spellId)
@@ -118,19 +133,23 @@ end
 
 function private.OnTradeSkillUpdateEvent()
 	TSMAPI_FOUR.Delay.Cancel("PROFESSION_SCAN_DELAY")
-	TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+	private.QueueProfessionScan()
 end
 
 
 
 -- ============================================================================
--- Profession Scan Thread
+-- Profession Scanning
 -- ============================================================================
+
+function private.QueueProfessionScan()
+	TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+end
 
 function private.ScanProfession()
 	if InCombatLockdown() then
 		-- we are in combat, so try again in a bit
-		TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+		private.QueueProfessionScan()
 		return
 	elseif private.disabled then
 		return
@@ -141,105 +160,146 @@ function private.ScanProfession()
 	local professionName = TSM.Crafting.ProfessionState.GetCurrentProfession()
 	if not professionName then
 		-- profession hasn't fully opened yet
-		TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+		private.QueueProfessionScan()
 		return
 	end
-	assert(professionName and C_TradeSkillUI.IsTradeSkillReady() and not C_TradeSkillUI.IsDataSourceChanging())
 
-	local hadFilter = false
-	if C_TradeSkillUI.GetOnlyShowUnlearnedRecipes() then
-		C_TradeSkillUI.SetOnlyShowLearnedRecipes(true)
-		C_TradeSkillUI.SetOnlyShowUnlearnedRecipes(false)
-		hadFilter = true
-	end
-	if C_TradeSkillUI.GetOnlyShowMakeableRecipes() then
-		C_TradeSkillUI.SetOnlyShowMakeableRecipes(false)
-		hadFilter = true
-	end
-	if C_TradeSkillUI.GetOnlyShowSkillUpRecipes() then
-		C_TradeSkillUI.SetOnlyShowSkillUpRecipes(false)
-		hadFilter = true
-	end
-	if C_TradeSkillUI.AnyRecipeCategoriesFiltered() then
-		C_TradeSkillUI.ClearRecipeCategoryFilter()
-		hadFilter = true
-	end
-	if C_TradeSkillUI.AreAnyInventorySlotsFiltered() then
-		C_TradeSkillUI.ClearInventorySlotFilter()
-		hadFilter = true
-	end
-	for i = 1, C_PetJournal.GetNumPetSources() do
-		if C_TradeSkillUI.IsAnyRecipeFromSource(i) and C_TradeSkillUI.IsRecipeSourceTypeFiltered(i) then
-			C_TradeSkillUI.ClearRecipeSourceTypeFilter()
+	assert(professionName and TSM.Crafting.ProfessionUtil.IsDataStable())
+	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+		-- TODO: check and clear filters on classic
+	else
+		local hadFilter = false
+		if C_TradeSkillUI.GetOnlyShowUnlearnedRecipes() then
+			C_TradeSkillUI.SetOnlyShowLearnedRecipes(true)
+			C_TradeSkillUI.SetOnlyShowUnlearnedRecipes(false)
 			hadFilter = true
-			break
 		end
-	end
-	if C_TradeSkillUI.GetRecipeItemNameFilter() ~= "" then
-		C_TradeSkillUI.SetRecipeItemNameFilter(nil)
-		hadFilter = true
-	end
-	local minItemLevel, maxItemLevel = C_TradeSkillUI.GetRecipeItemLevelFilter()
-	if minItemLevel ~= 0 or maxItemLevel ~= 0 then
-		C_TradeSkillUI.SetRecipeItemLevelFilter(0, 0)
-		hadFilter = true
-	end
-
-	if hadFilter then
-		-- an update event will be triggered
-		return
-	end
-
-	local prevRecipeIds = TSMAPI_FOUR.Util.AcquireTempTable()
-	local nextRecipeIds = TSMAPI_FOUR.Util.AcquireTempTable()
-	local recipeLearned = TSMAPI_FOUR.Util.AcquireTempTable()
-	local recipes = TSMAPI_FOUR.Util.AcquireTempTable()
-	assert(C_TradeSkillUI.GetFilteredRecipeIDs(recipes) == recipes)
-	local spellIdIndex = TSMAPI_FOUR.Util.AcquireTempTable()
-	for index, spellId in ipairs(recipes) do
-		-- There's a Blizzard bug where First Aid duplicates spellIds, so check that we haven't seen this before
-		if not spellIdIndex[spellId] then
-			spellIdIndex[spellId] = index
-			local info = TSMAPI_FOUR.Util.AcquireTempTable()
-			assert(C_TradeSkillUI.GetRecipeInfo(spellId, info) == info)
-			if info.previousRecipeID then
-				prevRecipeIds[spellId] = info.previousRecipeID
-				nextRecipeIds[info.previousRecipeID] = spellId
+		if C_TradeSkillUI.GetOnlyShowMakeableRecipes() then
+			C_TradeSkillUI.SetOnlyShowMakeableRecipes(false)
+			hadFilter = true
+		end
+		if C_TradeSkillUI.GetOnlyShowSkillUpRecipes() then
+			C_TradeSkillUI.SetOnlyShowSkillUpRecipes(false)
+			hadFilter = true
+		end
+		if C_TradeSkillUI.AnyRecipeCategoriesFiltered() then
+			C_TradeSkillUI.ClearRecipeCategoryFilter()
+			hadFilter = true
+		end
+		if C_TradeSkillUI.AreAnyInventorySlotsFiltered() then
+			C_TradeSkillUI.ClearInventorySlotFilter()
+			hadFilter = true
+		end
+		for i = 1, C_PetJournal.GetNumPetSources() do
+			if C_TradeSkillUI.IsAnyRecipeFromSource(i) and C_TradeSkillUI.IsRecipeSourceTypeFiltered(i) then
+				C_TradeSkillUI.ClearRecipeSourceTypeFilter()
+				hadFilter = true
+				break
 			end
-			recipeLearned[spellId] = info.learned
-			TSMAPI_FOUR.Util.ReleaseTempTable(info)
+		end
+		if C_TradeSkillUI.GetRecipeItemNameFilter() ~= "" then
+			C_TradeSkillUI.SetRecipeItemNameFilter(nil)
+			hadFilter = true
+		end
+		local minItemLevel, maxItemLevel = C_TradeSkillUI.GetRecipeItemLevelFilter()
+		if minItemLevel ~= 0 or maxItemLevel ~= 0 then
+			C_TradeSkillUI.SetRecipeItemLevelFilter(0, 0)
+			hadFilter = true
+		end
+
+		if hadFilter then
+			-- an update event will be triggered
+			return
 		end
 	end
-	private.db:TruncateAndBulkInsertStart()
-	for index, spellId in ipairs(recipes) do
-		local hasHigherRank = nextRecipeIds[spellId] and recipeLearned[nextRecipeIds[spellId]]
-		-- TODO: show unlearned recipes in the TSM UI
-		-- There's a Blizzard bug where First Aid duplicates spellIds, so check that this is the right index
-		if spellIdIndex[spellId] == index and recipeLearned[spellId] and not hasHigherRank then
-			local info = TSMAPI_FOUR.Util.AcquireTempTable()
-			assert(C_TradeSkillUI.GetRecipeInfo(spellId, info) == info)
-			local rank = -1
-			if prevRecipeIds[spellId] or nextRecipeIds[spellId] then
-				rank = 1
-				local tempSpellId = spellId
-				while prevRecipeIds[tempSpellId] do
-					rank = rank + 1
-					tempSpellId = prevRecipeIds[tempSpellId]
+
+	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+		local lastHeaderIndex = 0
+		private.db:TruncateAndBulkInsertStart()
+		for i = 1, TSM.Crafting.ProfessionState.IsClassicCrafting() and GetNumCrafts() or GetNumTradeSkills() do
+			local name, _, skillType, hash = nil, nil, nil, nil
+			if TSM.Crafting.ProfessionState.IsClassicCrafting() then
+				name, _, skillType = GetCraftInfo(i)
+				if skillType ~= "header" then
+					hash = TSM.Math.CalculateHash(name)
+					for j = 1, GetCraftNumReagents(i) do
+						local _, _, quantity = GetCraftReagentInfo(i, j)
+						hash = TSM.Math.CalculateHash(TSMAPI_FOUR.Item.ToItemString(GetCraftReagentItemLink(i, j)), hash)
+						hash = TSM.Math.CalculateHash(quantity, hash)
+					end
+				end
+			else
+				name, skillType = GetTradeSkillInfo(i)
+				if skillType ~= "header" then
+					hash = TSM.Math.CalculateHash(name)
+					for j = 1, GetTradeSkillNumReagents(i) do
+						local _, _, quantity = GetTradeSkillReagentInfo(i, j)
+						hash = TSM.Math.CalculateHash(TSMAPI_FOUR.Item.ToItemString(GetTradeSkillReagentItemLink(i, j)), hash)
+						hash = TSM.Math.CalculateHash(quantity, hash)
+					end
 				end
 			end
-			local numSkillUps = info.difficulty == "optimal" and info.numSkillUps or 1
-			private.db:BulkInsertNewRow(index, spellId, info.name, info.categoryID, info.difficulty, rank, numSkillUps)
-			TSMAPI_FOUR.Util.ReleaseTempTable(info)
+			if skillType == "header" then
+				lastHeaderIndex = i
+			else
+				if name then
+					private.db:BulkInsertNewRow(i, hash, name, lastHeaderIndex, skillType, -1, 1)
+				end
+			end
 		end
+		private.db:BulkInsertEnd()
+	else
+		local prevRecipeIds = TSM.TempTable.Acquire()
+		local nextRecipeIds = TSM.TempTable.Acquire()
+		local recipeLearned = TSM.TempTable.Acquire()
+		local recipes = TSM.TempTable.Acquire()
+		assert(C_TradeSkillUI.GetFilteredRecipeIDs(recipes) == recipes)
+		local spellIdIndex = TSM.TempTable.Acquire()
+		for index, spellId in ipairs(recipes) do
+			-- There's a Blizzard bug where First Aid duplicates spellIds, so check that we haven't seen this before
+			if not spellIdIndex[spellId] then
+				spellIdIndex[spellId] = index
+				local info = TSM.TempTable.Acquire()
+				assert(C_TradeSkillUI.GetRecipeInfo(spellId, info) == info)
+				if info.previousRecipeID then
+					prevRecipeIds[spellId] = info.previousRecipeID
+					nextRecipeIds[info.previousRecipeID] = spellId
+				end
+				recipeLearned[spellId] = info.learned
+				TSM.TempTable.Release(info)
+			end
+		end
+		private.db:TruncateAndBulkInsertStart()
+		for index, spellId in ipairs(recipes) do
+			local hasHigherRank = nextRecipeIds[spellId] and recipeLearned[nextRecipeIds[spellId]]
+			-- TODO: show unlearned recipes in the TSM UI
+			-- There's a Blizzard bug where First Aid duplicates spellIds, so check that this is the right index
+			if spellIdIndex[spellId] == index and recipeLearned[spellId] and not hasHigherRank then
+				local info = TSM.TempTable.Acquire()
+				assert(C_TradeSkillUI.GetRecipeInfo(spellId, info) == info)
+				local rank = -1
+				if prevRecipeIds[spellId] or nextRecipeIds[spellId] then
+					rank = 1
+					local tempSpellId = spellId
+					while prevRecipeIds[tempSpellId] do
+						rank = rank + 1
+						tempSpellId = prevRecipeIds[tempSpellId]
+					end
+				end
+				local numSkillUps = info.difficulty == "optimal" and info.numSkillUps or 1
+				private.db:BulkInsertNewRow(index, spellId, info.name, info.categoryID, info.difficulty, rank, numSkillUps)
+				TSM.TempTable.Release(info)
+			end
+		end
+		private.db:BulkInsertEnd()
+		TSM.TempTable.Release(spellIdIndex)
+		TSM.TempTable.Release(recipes)
+		TSM.TempTable.Release(prevRecipeIds)
+		TSM.TempTable.Release(nextRecipeIds)
+		TSM.TempTable.Release(recipeLearned)
 	end
-	private.db:BulkInsertEnd()
-	TSMAPI_FOUR.Util.ReleaseTempTable(spellIdIndex)
-	TSMAPI_FOUR.Util.ReleaseTempTable(recipes)
-	TSMAPI_FOUR.Util.ReleaseTempTable(prevRecipeIds)
-	TSMAPI_FOUR.Util.ReleaseTempTable(nextRecipeIds)
-	TSMAPI_FOUR.Util.ReleaseTempTable(recipeLearned)
 
-	if C_TradeSkillUI.IsNPCCrafting() or C_TradeSkillUI.IsTradeSkillLinked() or C_TradeSkillUI.IsTradeSkillGuild() then
+	if TSM.Crafting.ProfessionUtil.IsNPCProfession() or TSM.Crafting.ProfessionUtil.IsLinkedProfession() or TSM.Crafting.ProfessionUtil.IsGuildProfession() then
 		-- we don't want to store this profession in our DB, so we're done
 		if not private.hasScanned then
 			private.hasScanned = true
@@ -252,12 +312,12 @@ function private.ScanProfession()
 
 	if not TSM.db.sync.internalData.playerProfessions[professionName] then
 		-- we are in combat or the player's professions haven't been scanned yet by PlayerProfessions.lua, so try again in a bit
-		TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+		private.QueueProfessionScan()
 		return
 	end
 
 	-- update the link for this profession
-	TSM.db.sync.internalData.playerProfessions[professionName].link = C_TradeSkillUI.GetTradeSkillListLink()
+	TSM.db.sync.internalData.playerProfessions[professionName].link = WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and C_TradeSkillUI.GetTradeSkillListLink() or nil
 
 	-- scan all the recipes
 	TSM.Crafting.SetSpellDBQueryUpdatesPaused(true)
@@ -275,7 +335,7 @@ function private.ScanProfession()
 	TSM:LOG_INFO("Scanned %s (failed to scan %d)", professionName, numFailed)
 	if numFailed > 0 then
 		-- didn't completely scan, so we'll try again
-		TSMAPI_FOUR.Delay.AfterFrame("PROFESSION_SCAN_DELAY", SCAN_DEBOUNCE_FRAMES, private.ScanProfession)
+		private.QueueProfessionScan()
 	end
 	if not private.hasScanned then
 		private.hasScanned = true
@@ -287,20 +347,23 @@ end
 
 function private.ScanRecipe(professionName, spellId)
 	-- get the links
-	local itemLink = C_TradeSkillUI.GetRecipeItemLink(spellId)
-	local spellLink = C_TradeSkillUI.GetRecipeLink(spellId)
-	assert(itemLink and spellLink and strfind(spellLink, "enchant:"), "Invalid craft: "..tostring(spellId))
+	local itemLink, lNum, hNum = TSM.Crafting.ProfessionUtil.GetRecipeInfo(WOW_PROJECT_ID == WOW_PROJECT_CLASSIC and ProfessionScanner.GetIndexBySpellId(spellId) or spellId)
+	assert(itemLink, "Invalid craft: "..tostring(spellId))
 
 	-- get the itemString and craft name
 	local itemString, craftName = nil, nil
 	if strfind(itemLink, "enchant:") then
-		-- result of craft is not an item
-		itemString = TSM.CONST.ENCHANT_ITEM_STRINGS[spellId] or TSM.CONST.MASS_MILLING_RECIPES[spellId]
-		if not itemString then
-			-- we don't care about this craft
+		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			return true
+		else
+			-- result of craft is not an item
+			itemString = ProfessionInfo.GetIndirectCraftResult(spellId)
+			if not itemString then
+				-- we don't care about this craft
+				return true
+			end
+			craftName = GetSpellInfo(spellId)
 		end
-		craftName = GetSpellInfo(spellId)
 	elseif strfind(itemLink, "item:") then
 		-- result of craft is item
 		itemString = TSMAPI_FOUR.Item.ToBaseItemString(itemLink)
@@ -318,13 +381,12 @@ function private.ScanRecipe(professionName, spellId)
 	if isEnchant then
 		numResult = 1
 	else
-		local lNum, hNum = C_TradeSkillUI.GetRecipeNumItemsProduced(spellId)
 		-- workaround for incorrect values returned for Temporal Crystal
 		if spellId == 169092 and itemString == "i:113588" then
 			lNum, hNum = 1, 1
 		end
 		-- workaround for incorrect values returned for new mass milling recipes
-		if TSM.CONST.MASS_MILLING_RECIPES[spellId] then
+		if ProfessionInfo.IsMassMill(spellId) then
 			if spellId == 210116 then -- Yseralline
 				lNum, hNum = 4, 4 -- always four
 			elseif spellId == 209664 then -- Felwort
@@ -339,20 +401,20 @@ function private.ScanRecipe(professionName, spellId)
 	end
 
 	-- store general info about this recipe
-	local _, cooldown = C_TradeSkillUI.GetRecipeCooldown(spellId)
-	local hasCD = cooldown and true or false
+	local hasCD = TSM.Crafting.ProfessionUtil.HasCooldown(spellId)
 	TSM.Crafting.CreateOrUpdate(spellId, itemString, professionName, craftName, numResult, UnitName("player"), hasCD)
 
 	-- get the mat quantities and add mats to our DB
-	local matQuantities = TSMAPI_FOUR.Util.AcquireTempTable()
+	local matQuantities = TSM.TempTable.Acquire()
 	local haveInvalidMats = false
-	for i = 1, C_TradeSkillUI.GetRecipeNumReagents(spellId) do
-		local matItemString = TSMAPI_FOUR.Item.ToBaseItemString(C_TradeSkillUI.GetRecipeReagentItemLink(spellId, i))
+	local numReagents = TSM.Crafting.ProfessionUtil.GetNumMats(spellId)
+	for i = 1, numReagents do
+		local matItemLink, name, _, quantity = TSM.Crafting.ProfessionUtil.GetMatInfo(spellId, i)
+		local matItemString = TSMAPI_FOUR.Item.ToBaseItemString(matItemLink)
 		if not matItemString then
 			haveInvalidMats = true
 			break
 		end
-		local name, _, quantity = C_TradeSkillUI.GetRecipeReagentInfo(spellId, i)
 		if not name or not quantity then
 			haveInvalidMats = true
 			break
@@ -363,7 +425,7 @@ function private.ScanRecipe(professionName, spellId)
 	end
 	-- if this is an enchant, add a vellum to the list of mats
 	if isEnchant then
-		local matItemString = TSM.CONST.VELLUM_ITEM_STRING
+		local matItemString = ProfessionInfo.GetVellumItemString()
 		TSM.db.factionrealm.internalData.mats[matItemString] = TSM.db.factionrealm.internalData.mats[matItemString] or {}
 		matQuantities[matItemString] = 1
 	end
@@ -371,6 +433,6 @@ function private.ScanRecipe(professionName, spellId)
 	if not haveInvalidMats then
 		TSM.Crafting.SetMats(spellId, matQuantities)
 	end
-	TSMAPI_FOUR.Util.ReleaseTempTable(matQuantities)
+	TSM.TempTable.Release(matQuantities)
 	return not haveInvalidMats
 end

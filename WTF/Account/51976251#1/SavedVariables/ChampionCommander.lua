@@ -1,20 +1,18 @@
 
 dbBFA = {
 	["char"] = {
-		["Umbrick - Tichondrius"] = {
-			["firstun"] = false,
-		},
-		["Zandro - Tichondrius"] = {
+		["Andalsam - Tichondrius"] = {
 			["firstun"] = false,
 		},
 		["Umbrick - Emerald Dream"] = {
 			["firstun"] = false,
 		},
-	},
-	["profileKeys"] = {
-		["Umbrick - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
+		["Zandro - Tichondrius"] = {
+			["firstun"] = false,
+		},
+		["Umbrick - Tichondrius"] = {
+			["firstun"] = false,
+		},
 	},
 	["global"] = {
 		["warn01_seen"] = 0,
@@ -22,6 +20,13 @@ dbBFA = {
 		["news"] = {
 		},
 		["warn02_seen"] = 0,
+		["changedkeywarned"] = true,
+	},
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -45,15 +50,19 @@ dbBFA = {
 				["PREFERHIGH"] = false,
 				["NOTROOPS"] = false,
 				["MAKEITQUICK"] = true,
-				["TROOPALERT"] = true,
 				["MAXCHAMP"] = 3,
+				["TROOPALERT"] = true,
 				["IGNOREBUSY"] = true,
 				["BASECHANCE"] = 0,
 			},
-			["showmenu"] = true,
 			["blacklist"] = {
+				[1892] = false,
+				[1903] = false,
+				[1883] = false,
+				[2128] = true,
 				[1897] = false,
 			},
+			["showmenu"] = true,
 		},
 	},
 }

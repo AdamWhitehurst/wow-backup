@@ -391,8 +391,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.stack 			= "На вас %%d стаков от %s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switch 			= "%s - переключитесь"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switchcount 		= "%s - переключитесь (%%s)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.gtfo				= "Под вами %%s - выбегите"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Adds				= "Прибыли адды - смените цель"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Addscustom		= "Прибыли адды - %%s"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.adds				= "Прибыли адды - смените цель"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.addscustom		= "Прибыли адды - %%s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.targetchange		= "Смена цели - переключитесь на %%s"
 
 -- Auto-generated Special Warning Localizations
@@ -435,8 +435,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.stack 			= "Спец-предупреждени�
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch			= "Спец-предупреждение о смене цели для $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount 	= "Спец-предупреждение (со счетчиком) о смене цели для $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.gtfo 			= "Спец-предупреждение выбегите из войды на земле"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Adds			= "Спец-предупреждение сменить цель для прибывающих аддов"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Addscustom		= "Спец-предупреждение для прибывающих аддов"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.adds			= "Спец-предупреждение сменить цель для прибывающих аддов"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.addscustom		= "Спец-предупреждение для прибывающих аддов"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.targetchange	= "Спец-предупреждение для смены приоритетной цели"
 
 -- Auto-generated Timer Localizations
@@ -487,13 +487,6 @@ DBM_CORE_AUTO_ICONS_OPTION_TEXT2		= "Устанавливать метки на 
 DBM_CORE_AUTO_ARROW_OPTION_TEXT			= "Показывать стрелку DBM к цели, на которой $spell:%s"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT2		= "Показывать стрелку DBM от цели, на которой $spell:%s"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT3		= "Показывать стрелку DBM к определенному месту для $spell:%s"
-DBM_CORE_AUTO_VOICE_OPTION_TEXT			= "Звуковое оповещение для $spell:%s"
-DBM_CORE_AUTO_VOICE2_OPTION_TEXT		= "Звуковое оповещение о сменах фаз"
-DBM_CORE_AUTO_VOICE3_OPTION_TEXT		= "Звуковое оповещение о прибытии аддов"
-DBM_CORE_AUTO_VOICE4_OPTION_TEXT		= "Звуковое оповещение о войде на земле"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT		= "Звуковой отсчет до восстановления $spell:%s"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT2	= "Звуковой отсчет до спадения $spell:%s"
-DBM_CORE_AUTO_COUNTOUT_OPTION_TEXT		= "Звуковой отсчет во время действия $spell:%s"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.shortyell= "Кричать когда на вас $spell:%s"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.yell		= "Кричать (с именем игрока), когда на вас $spell:%s"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.count	= "Кричать (со счетчиком), когда на вас $spell:%s"
@@ -510,8 +503,6 @@ DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT.shortfade	= "%%d"
 DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT.iconfade	= "{rt%%2$d}%%1$d"
 DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT.position = "%s %%s на {rt%%d}"..UnitName("player").."{rt%%d}"
 DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT.combo	= "%s и %%s"--Spell name (from option, plus spellname given in arg)
-DBM_CORE_AUTO_YELL_CUSTOM_POSITION		= "{rt%d}%s{rt%d}"--Doesn't need translating. Has no strings
-DBM_CORE_AUTO_YELL_CUSTOM_POSITION2		= "{rt%d}{rt%d}%s{rt%d}{rt%d}"--Doesn't need translating. Has no strings
 DBM_CORE_AUTO_YELL_CUSTOM_FADE			= "%s спал"
 DBM_CORE_AUTO_HUD_OPTION_TEXT			= "Показывать HudMap для $spell:%s"
 DBM_CORE_AUTO_HUD_OPTION_TEXT_MULTI		= "Показывать HudMap для различных механик"

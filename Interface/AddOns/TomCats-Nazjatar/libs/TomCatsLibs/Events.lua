@@ -3,12 +3,10 @@ local addon = select(2,...)
 local eventFrame = CreateFrame("Frame")
 local onUpdate, eventHandler
 local eventListeners = { }
-
 local function validateRegisterUnregisterInput(event, listener)
     if ((not event) or (type(event) ~= "string")) then error("Event must be specified", 3) end
     if ((not listener) or (type(listener) ~= "table" and type(listener) ~= "function")) then error("Listener must be specified", 3) end
 end
-
 function addon.TomCatsLibs.Events.RegisterEvent(event, listener)
     validateRegisterUnregisterInput(event, listener)
     eventListeners[event] = eventListeners[event] or {}
@@ -24,7 +22,6 @@ function addon.TomCatsLibs.Events.RegisterEvent(event, listener)
         end
     end
 end
-
 function addon.TomCatsLibs.Events.UnregisterEvent(event, listener)
     validateRegisterUnregisterInput(event, listener)
     if (eventListeners[event]) then
@@ -43,11 +40,9 @@ function addon.TomCatsLibs.Events.UnregisterEvent(event, listener)
         end
     end
 end
-
 function onUpdate()
     eventHandler(nil, "ON_UPDATE")
 end
-
 function eventHandler(_, event, ...)
     local eventListenersQueue = Mixin({}, eventListeners[event])
     if (eventListenersQueue) then
@@ -66,5 +61,4 @@ function eventHandler(_, event, ...)
         end
     end
 end
-
 eventFrame:SetScript("OnEvent", eventHandler)

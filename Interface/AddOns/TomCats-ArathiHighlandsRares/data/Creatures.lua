@@ -1,9 +1,10 @@
-select(2, ...).TomCatsLibs.Data.loadData(
+local TCL = select(2, ...).TomCatsLibs
+TCL.Data.loadData(
 	"Creatures",
 	{ "Creature ID", "Vignette ID", "Alliance React", "Horde React", "Level", "Locations", "Alliance Tracking ID", "Horde Tracking ID", "World Quest ID", "Bonus Roll Tracking ID", "Loot", },
 	{
-		{ 137374, nil, 1, -1, nil, { nil, { 0.38967067, 0.395183563 }}, nil, 53001, 52848, 52274, 163828, }, -- null
-		{ 138122, nil, -1, 1, nil, {{ 0.38967067, 0.396477342 }, nil }, 53002, nil, 52847, 52273, 163829, }, -- null
+		{ 137374, nil, 1, -1, nil, { nil, { 0.38967067, 0.395183563 }}, nil, 53001, 52848, 52274, {items = {163828,161455,161453,161457,161460,161454,161456,161459,161458,161463,161461,161462}}, }, -- The Lion's Roar
+		{ 138122, nil, -1, 1, nil, {{ 0.38967067, 0.396477342 }, nil }, 53002, nil, 52847, 52273, {items = {163829,161464,161466,161468,161471,161465,161470,161469,161467,161472,161473,161474}}, }, -- Doom's Howl
 		{ 141615, 3194, -1, -1, 122, {{ 0.306419045, 0.447245717 }, { 0.306419045, 0.447245717 }}, 53017, 53506, nil, nil, 163691, }, -- Burning Goliath
 		{ 141618, 3195, -1, -1, 122, {{ 0.620794833, 0.315023124 }, { 0.620794833, 0.315023124 }}, 53018, 53531, nil, nil, 163700, }, -- Cresting Goliath
 		{ 141620, 3198, -1, -1, 122, {{ 0.298632681, 0.598170519 }, { 0.298632681, 0.598170519 }}, 53021, 53523, nil, nil, 163701, }, -- Rumbling Goliath
@@ -34,3 +35,14 @@ select(2, ...).TomCatsLibs.Data.loadData(
 		{ 142741, 3209, -1, 1, 121, {{ 0.534679234, 0.577130377 }, nil }, 53085, nil, nil, nil, 163579, }, -- Doomrider Helgrim
 	}
 )
+local L = TCL.Locales
+for creatureID, creature in pairs(TCL.Data["Creatures"].records) do
+	local key = creatureID .. "_DESC"
+	local description = L[key]
+	if description ~= key then
+		if L.IsTranslationNeeded(key) then
+			description = "(" .. L["Translator_Needed"] .. ")\n" .. description
+		end
+		creature["Description"] = description
+	end
+end

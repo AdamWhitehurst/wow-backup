@@ -1,0 +1,70 @@
+VER 3 0100000000000012 "Bear Taunt" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nostance:1] Bear Form; [stance:1] Growl;
+END
+VER 3 0100000000000006 "Feral Rake" "INV_MISC_QUESTIONMARK"
+#showtooltip Rake
+/cast [nostance:2] Cat form; [stance:2] Rake;
+END
+VER 3 0100000000000001 "Feral Rip" "INV_MISC_QUESTIONMARK"
+#showtooltip Rip
+/cast [nostance:2] Cat form; [stance:2] Rip;
+END
+VER 3 0100000000000007 "Feral Shred" "INV_MISC_QUESTIONMARK"
+#showtooltip Shred
+/cast [nostance:2] Cat form; [stance:2] Shred;
+END
+VER 3 0100000000000010 "Feral Stampeding" "INV_MISC_QUESTIONMARK"
+#showtooltip Stampeding Roar
+/cast [nostance:2] Cat form; [stance:2] Stampeding Roar;
+END
+VER 3 010000000000000E "Feral Thrash" "INV_MISC_QUESTIONMARK"
+#showtooltip Thrash
+/cast [nostance:2] Cat form; [stance:2] Thrash;
+END
+VER 3 010000000000000F "FeralWild Charge" "INV_MISC_QUESTIONMARK"
+#showtooltip Wild Charge
+/cast [nostance:2] Cat form; [stance:2] Wild Charge
+END
+VER 3 010000000000000D "FeraRip And Tear" "INV_MISC_QUESTIONMARK"
+#showtooltip Rip and Tear(PvP Talent);
+/cast [nostance:2] Cat form; [stance:2]  Rip and Tear(PvP Talent);
+END
+VER 3 0100000000000013 "Moonfire" "INV_MISC_QUESTIONMARK"
+#showtooltip Moonfire
+/cast [stance:4,stance:2] Moonfire;[stance:0,stance:1,stance:3] Moonkin form;
+END
+VER 3 010000000000000C "Moonfire Cat" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:1/3] moonfire;
+/cast Berserk
+END
+VER 3 0100000000000017 "Regrowth" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@player] Regrowth;
+END
+VER 3 0100000000000016 "SolarWrath" "INV_MISC_QUESTIONMARK"
+#showtooltip Solar Wrath
+/cast [nostance:4] Moonkin form;[stance:4] Solar Wrath;
+END
+VER 3 0100000000000015 "Starsurge" "INV_MISC_QUESTIONMARK"
+#showtooltip Starsurge
+/cast [nostance:4] Moonkin form;[stance:4] Starsurge;
+END
+VER 3 0100000000000009 "Stop Skullbash" "INV_MISC_QUESTIONMARK"
+#showtooltip Skull Bash
+/stopcasting
+/cast [@focus,exists][@target] Skull Bash
+END
+VER 3 0100000000000014 "Sunfire" "INV_MISC_QUESTIONMARK"
+#showtooltip Sunfire
+/cast [nostance:4] Moonkin form;[stance:4] Sunfire;
+END
+VER 3 0100000000000004 "Swipe" "INV_MISC_QUESTIONMARK"
+#showtooltip Swipe
+/cast [nostance:2] Cat form; [stance:2] Swipe;
+END
+VER 3 0100000000000011 "Travel Form" "INV_MISC_QUESTIONMARK"
+#showtooltip Travel Form
+/cast [swimming] Travel Form(Shapeshift);[outdoors] Travel Form(Shapeshift)
+END

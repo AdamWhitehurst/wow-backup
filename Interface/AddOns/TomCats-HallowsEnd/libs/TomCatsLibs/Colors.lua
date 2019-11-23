@@ -1,7 +1,6 @@
 local addon = select(2,...)
 local lib = addon.TomCatsLibs.Colors
 local colors = {}
-
 setmetatable(lib,{
     __index = function(table, key)
         local color = colors[string.upper(key)]
@@ -20,7 +19,6 @@ setmetatable(lib,{
         colors[string.upper(key)] = value
     end
 })
-
 lib["BLACK"] = 0x000000
 lib["NAVY"] = 0x000080
 lib["BLUE"] = 0x0000FF

@@ -2,8 +2,7 @@ local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, Private
 local DT = E:GetModule('DataTexts')
 
 --Lua functions
-local format, strjoin = format, strjoin
-local abs = abs
+local format, strjoin, abs = format, strjoin, math.abs
 --WoW API / Variables
 local GetBlockChance = GetBlockChance
 local GetBonusBarOffset = GetBonusBarOffset
@@ -19,11 +18,9 @@ local DODGE_CHANCE = DODGE_CHANCE
 local MISS_CHANCE = MISS_CHANCE
 local PARRY_CHANCE = PARRY_CHANCE
 
-local displayString, lastPanel
-local targetlv, playerlv
+local displayString, lastPanel, targetlv, playerlv
 local basemisschance, leveldifference, dodge, parry, block, unhittable
-local chanceString = "%.2f%%"
-local AVD_DECAY_RATE = 1.5
+local AVD_DECAY_RATE, chanceString = 1.5, "%.2f%%"
 
 local function IsWearingShield()
 	local slotID = GetInventorySlotInfo("SecondaryHandSlot")
@@ -36,7 +33,7 @@ local function IsWearingShield()
 end
 
 local function OnEvent(self)
-	targetlv, playerlv = UnitLevel("target"), UnitLevel("player")
+	targetlv, playerlv = UnitLevel("target"), E.mylevel
 
 	basemisschance = E.myrace == "NightElf" and 7 or 5
 	if targetlv == -1 then

@@ -1,0 +1,11 @@
+## Interface: 80000
+## Title: Broker_RunSpeed
+## Notes: Display Current % of Run Speed
+## Author: Gaddor
+## Version: 1.7
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+
+Broker_RunSpeed.lua

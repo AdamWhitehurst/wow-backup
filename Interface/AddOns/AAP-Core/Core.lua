@@ -1996,6 +1996,7 @@ function AAP.ResetSettings()
 
 	AAP.QuestList.MainFrame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP.Realm][AAP.Name]["Settings"]["left"], AAP1[AAP.Realm][AAP.Name]["Settings"]["top"])
 	AAP.ArrowFrame:SetScale(AAP1[AAP.Realm][AAP.Name]["Settings"]["ArrowScale"])
+	AAP.ArrowFrameM:ClearAllPoints()
 	AAP.ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"], AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"])
 end
 local function AAP_SlashCmd(AAP_index)
@@ -2054,6 +2055,7 @@ AAP.ArrowFrame:SetScript("OnMouseUp", function(self, button)
 		AAP.ArrowFrameM.isMoving = false;
 		AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"] = AAP.ArrowFrameM:GetLeft()
 		AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"] = AAP.ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP.ArrowFrameM:ClearAllPoints()
 		AAP.ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"], AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"])
 	end
 end)
@@ -2063,6 +2065,7 @@ AAP.ArrowFrame:SetScript("OnHide", function(self)
 		AAP.ArrowFrameM.isMoving = false;
 		AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"] = AAP.ArrowFrameM:GetLeft()
 		AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"] = AAP.ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP.ArrowFrameM:ClearAllPoints()
 		AAP.ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"], AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"])
 	end
 end)

@@ -1,22 +1,37 @@
 
 HandyNotes_LegionTreasuresDB = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["profiles"] = {
-		["Bramblebrow - Emerald Dream"] = {
-		},
-		["Brungar - Tichondrius"] = {
-		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsam - Tichondrius"] = {
 		},
 		["Zandro - Tichondrius"] = {
 		},
 		["Umbrick - Emerald Dream"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
+		},
+		["Andalsa - Tichondrius"] = {
+		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Brungar - Tichondrius"] = {
 		},
 	},
 }

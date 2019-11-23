@@ -1,0 +1,32 @@
+
+RSADB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "DRUID",
+	},
+	["global"] = {
+		["ID"] = "1270529522801",
+		["revision"] = "522",
+		["version"] = 4,
+	},
+	["profiles"] = {
+		["DRUID"] = {
+			["General"] = {
+				["GlobalAnnouncements"] = {
+					["Battlegrounds"] = true,
+					["InWarMode"] = true,
+				},
+				["Class"] = "DRUID",
+			},
+			["Modules"] = {
+				["Racials"] = true,
+				["Druid"] = true,
+				["Utilities"] = true,
+			},
+			["Fixed"] = true,
+		},
+	},
+}

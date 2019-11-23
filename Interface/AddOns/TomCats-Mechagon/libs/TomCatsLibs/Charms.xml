@@ -1,6 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-
     <Button name="TomCats-MechagonMiniMapButtonTemplate" virtual="true" frameStrata="MEDIUM" frameLevel="10" dontSavePosition="true">
         <Size x="32" y="32"/>
         <Anchors>
@@ -173,49 +172,44 @@
                     local isDragging = false
                     local tooltipIsShowing = false
                     local Ax, Ay, scale, top, right
-                    local r = 80
+                    local mapsize = Minimap:GetSize()
+                    local r = (mapsize / 2) + 10
+                    local h = math.sqrt((r^2)*2)
                     local preferences = {}
                     local handlers = {}
                     local shape = GetMinimapShape and GetMinimapShape() or "ROUND"
-
                     local function RefreshMeasurements()
                         Ax, Ay = Minimap:GetCenter()
                         scale = self:GetEffectiveScale()
                         right = UIParent:GetRight()
                         top = UIParent:GetTop()
                     end
-
                     local function ButtonDown()
                         _G[name .. "Icon"]:SetPoint("TOPLEFT", self, "TOPLEFT", 8, -8);
                         _G[name .. "IconOverlay"]:Show();
                     end
-
                     local function ButtonUp()
                         _G[name .. "Icon"]:SetPoint("TOPLEFT", self, "TOPLEFT", 6, -6);
                         _G[name .. "IconOverlay"]:Hide();
                     end
-
                     local function OnMouseDown()
                         ButtonDown()
                     end
-
                     local function OnMouseUp()
                         ButtonUp()
                     end
-
                     local function OnClick()
                         if (handlers.OnClick) then
                             handlers.OnClick()
                         end
                     end
-
                     local function UpdatePosition()
+                        RefreshMeasurements()
                         local rad = preferences.position
                         if (GetMinimapShape and GetMinimapShape() == "SQUARE") then
                             local x, y = math.cos(rad), math.sin(rad)
-                            local h = 113.14
-                            x = math.max(-80, math.min(x * h, 80))
-                            y = math.max(-80, math.min(y * h, 80))
+                            x = math.max(-r, math.min(x * h, r))
+                            y = math.max(-r, math.min(y * h, r))
                             self:SetPoint("CENTER", Minimap, "CENTER", x, y)
                         else
                             local Cx = r * math.cos(rad)
@@ -225,37 +219,38 @@
                         local buttonRight = self:GetRight()
                         if (buttonRight > right) then
                             local point = { self:GetPoint() }
-                            local adj = (buttonRight - right) * scale
+                            local adj = (buttonRight - right) --* scale
                             point[4] = point[4] - adj
                             self:SetPoint(unpack(point))
                         end
                         local buttonTop = self:GetTop()
                         if (buttonTop > top) then
                             local point = { self:GetPoint() }
-                            local adj = (buttonTop - top) * scale
+                            local adj = (buttonTop - top) --* scale
                             point[5] = point[5] - adj
                             self:SetPoint(unpack(point))
                         end
                     end
-
                     local function UpdatePositionByCursor()
                         local Bx, By = GetCursorPosition()
                         preferences.position = math.atan2((By / scale) - Ay, (Bx / scale) - Ax)
                         UpdatePosition()
                     end
-
                     local function OnUpdate()
                         if (isDragging) then
                             UpdatePositionByCursor()
                         else
                             local newShape = GetMinimapShape and GetMinimapShape() or "ROUND"
-                            if (shape ~= newShape) then
+                            local newSize = Minimap:GetSize()
+                            if (shape ~= newShape or mapsize ~= newSize) then
                                 shape = newShape
+                                mapsize = newSize
+                                r = (mapsize / 2) + 10
+                                h = math.sqrt((r^2)*2)
                                 UpdatePosition()
                             end
                         end
                     end
-
                     local function OnDragStart()
                         if (tooltipIsShowing) then
                             self.tooltip:Hide()
@@ -265,26 +260,22 @@
                         self:ClearAllPoints()
                         isDragging = true
                     end
-
                     local function OnDragStop()
                         ButtonUp()
                         isDragging = false
                     end
-
                     local function OnEnter()
                         if (self.tooltip and (not isDragging)) then
                             self.tooltip.Show(self)
                             tooltipIsShowing = true
                         end
                     end
-
                     local function OnLeave()
                         if (self.tooltip) then
                             self.tooltip.Hide()
                             tooltipIsShowing = false
                         end
                     end
-
                     function self:GetPreferences()
                         if (not preferences.position) then
                             local _, _, _, Bx, By = self:GetPoint()
@@ -293,7 +284,6 @@
                         end
                         return preferences
                     end
-
                     function self:SetPreferences(savedPreferences)
                         if (savedPreferences) then
                             if (savedPreferences.position and type(savedPreferences.position) == "number") then
@@ -306,7 +296,6 @@
                             end
                         end
                     end
-
                     function self:SetEnabled(enabled)
                         if (enabled) then
                             self:Show()
@@ -316,11 +305,9 @@
                             preferences.hidden = true
                         end
                     end
-
                     function self:SetHandler(handlerType, handler)
                         handlers[handlerType] = handler
                     end
-
                     self:SetScript("OnMouseDown", OnMouseDown)
                     self:SetScript("OnMouseUp", OnMouseUp)
                     self:SetScript("OnClick", OnClick)
@@ -332,7 +319,6 @@
             </OnLoad>
         </Scripts>
         <HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
-
     </Button>
     <Script file="Charms.lua" />
 </Ui>

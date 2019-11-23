@@ -1,0 +1,4 @@
+WeakAurasCompanion: enabled
+Gladius: disabled
+Storyline: disabled
+OPie_Classic: disabled

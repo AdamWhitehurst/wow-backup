@@ -1,0 +1,19 @@
+
+WorldMapTrackingEnhancedDB = {
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

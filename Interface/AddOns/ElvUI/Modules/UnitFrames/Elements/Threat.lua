@@ -33,10 +33,12 @@ function UF:Construct_Threat(frame)
 end
 
 function UF:Configure_Threat(frame)
-	if not frame.VARIABLES_SET then return end
-	local threat = frame.ThreatIndicator
-	local db = frame.db
+	if not (frame.VARIABLES_SET and frame.ThreatIndicator) then return end
 
+	local threat = frame.ThreatIndicator
+	if not threat then return end
+
+	local db = frame.db
 	if db.threatStyle ~= 'NONE' and db.threatStyle ~= nil then
 		if not frame:IsElementEnabled('ThreatIndicator') then
 			frame:EnableElement('ThreatIndicator')

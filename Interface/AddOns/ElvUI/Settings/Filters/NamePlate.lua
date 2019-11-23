@@ -3,28 +3,54 @@
 
 	Add the nameplates name that you do NOT want to see.
 ]]
-local E, L, V, P, G = unpack(select(2, ...)); --Engine
+local E, L, V, P, G = unpack(select(2, ...)) --Engine
 
 G.nameplate.filters = {
-	Boss = {
+	ElvUI_Boss = {
 		triggers = {
 			level = true,
 			curlevel = -1,
+			priority = 2
 		},
 		actions = {
 			usePortrait = true,
-			scale = 1.15,
-		},
+			scale = 1.15
+		}
 	},
-	Explosives = {
+	ElvUI_Target = {
 		triggers = {
+			isTarget = true
+		},
+		actions = {
+			scale = 1.2
+		}
+	},
+	ElvUI_NonTarget = {
+		triggers = {
+			notTarget = true,
+			requireTarget = true,
 			nameplateType = {
 				enable = true,
-				enemyNPC = true,
+				friendlyPlayer = true,
+				friendlyNPC = true,
+				enemyPlayer = true,
+				enemyNPC = true
+			}
+		},
+		actions = {
+			alpha = 30
+		}
+	},
+	ElvUI_Explosives = {
+		triggers = {
+			priority = 2,
+			nameplateType = {
+				enable = true,
+				enemyNPC = true
 			},
 			names = {
-				['120651'] = true,
-			},
+				["120651"] = true
+			}
 		},
 		actions = {
 			usePortrait = true,
@@ -32,9 +58,9 @@ G.nameplate.filters = {
 			color = {
 				health = true,
 				healthColor = {r = 0, g = 255, b = 255}
-			},
-		},
-	},
+			}
+		}
+	}
 }
 
 E.StyleFilterDefaults = {
@@ -43,16 +69,22 @@ E.StyleFilterDefaults = {
 		targetMe = false,
 		isTarget = false,
 		notTarget = false,
+		requireTarget = false,
 		questBoss = false,
 		level = false,
 		casting = {
+			isCasting = false,
+			isChanneling = false,
+			notCasting = false,
+			notChanneling = false,
 			interruptible = false,
-			spells = {},
+			notSpell = false,
+			spells = {}
 		},
 		role = {
 			tank = false,
 			healer = false,
-			damager = false,
+			damager = false
 		},
 		classification = {
 			worldboss = false,
@@ -61,11 +93,21 @@ E.StyleFilterDefaults = {
 			rare = false,
 			normal = false,
 			trivial = false,
-			minus = false,
+			minus = false
 		},
 		class = {}, -- this can stay empty we only will accept values that exist
+		raidTarget = {
+			star = false,
+			circle = false,
+			diamond = false,
+			triangle = false,
+			moon = false,
+			square = false,
+			cross = false,
+			skull = false
+		},
 		talent = {
-			type = 'normal',
+			type = "normal",
 			enabled = false,
 			requireAll = false,
 			tier1enabled = false,
@@ -81,7 +123,17 @@ E.StyleFilterDefaults = {
 			tier6enabled = false,
 			tier6 = {missing = false, column = 0},
 			tier7enabled = false,
-			tier7 = {missing = false, column = 0},
+			tier7 = {missing = false, column = 0}
+		},
+		threat = {
+			enable = false,
+			good = false,
+			goodTransition = false,
+			badTransition = false,
+			bad = false,
+			offTank = false,
+			offTankGoodTransition = false,
+			offTankBadTransition = false
 		},
 		curlevel = 0,
 		maxlevel = 0,
@@ -96,30 +148,30 @@ E.StyleFilterDefaults = {
 		overPowerThreshold = 0,
 		names = {},
 		creatureType = {
+			enable = false,
 			Aberration = false,
 			Beast = false,
 			Critter = false,
 			Demon = false,
 			Dragonkin = false,
 			Elemental = false,
-			['Gas Cloud'] = false,
+			["Gas Cloud"] = false,
 			Giant = false,
 			Humanoid = false,
 			Mechanical = false,
-			['Not specified'] = false,
+			["Not specified"] = false,
 			Totem = false,
 			Undead = false,
-			['Wild Pet'] = false,
-			['Non-combat Pet'] = false
+			["Wild Pet"] = false,
+			["Non-combat Pet"] = false
 		},
 		nameplateType = {
 			enable = false,
 			friendlyPlayer = false,
 			friendlyNPC = false,
-			healer = false,
 			enemyPlayer = false,
 			enemyNPC = false,
-			neutral = false
+			player = false
 		},
 		reactionType = {
 			enabled = false,
@@ -139,15 +191,38 @@ E.StyleFilterDefaults = {
 			party = false,
 			raid = false,
 			arena = false,
-			pvp = false,
+			pvp = false
+		},
+		location = {
+			mapIDEnabled = false,
+			mapIDs = {},
+			instanceIDEnabled = false,
+			instanceIDs = {},
+			zoneNamesEnabled = false,
+			zoneNames = {},
+			subZoneNamesEnabled = false,
+			subZoneNames = {},
+		},
+		keyMod = {
+			enable = false,
+			Modifier = false,
+			Shift = false,
+			Alt = false,
+			Control = false,
+			LeftShift = false,
+			LeftAlt = false,
+			LeftControl = false,
+			RightShift = false,
+			RightAlt = false,
+			RightControl = false
 		},
 		instanceDifficulty = {
 			dungeon = {
 				normal = false,
 				heroic = false,
 				mythic = false,
-				['mythic+'] = false,
-				timewalking = false,
+				["mythic+"] = false,
+				timewalking = false
 			},
 			raid = {
 				lfr = false,
@@ -158,31 +233,50 @@ E.StyleFilterDefaults = {
 				legacy10normal = false,
 				legacy25normal = false,
 				legacy10heroic = false,
-				legacy25heroic = false,
+				legacy25heroic = false
 			}
 		},
 		cooldowns = {
 			names = {},
-			mustHaveAll = false,
+			mustHaveAll = false
 		},
 		buffs = {
 			mustHaveAll = false,
 			missing = false,
 			names = {},
 			minTimeLeft = 0,
-			maxTimeLeft = 0,
+			maxTimeLeft = 0
 		},
 		debuffs = {
 			mustHaveAll = false,
 			missing = false,
 			names = {},
 			minTimeLeft = 0,
-			maxTimeLeft = 0,
+			maxTimeLeft = 0
 		},
+		isResting = false,
+		isPet = false,
+		isNotPet = false,
+		isPlayerControlled = false,
+		isNotPlayerControlled = false,
+		isOwnedByPlayer = false,
+		isNotOwnedByPlayer = false,
+		isPvP = false,
+		isNotPvP = false,
+		isTapDenied = false,
+		isNotTapDenied = false,
+		playerCanAttack = false,
+		playerCanNotAttack = false,
+		-- combat
 		inCombat = false,
 		outOfCombat = false,
 		inCombatUnit = false,
 		outOfCombatUnit = false,
+		-- vehicle
+		inVehicle = false,
+		outOfVehicle = false,
+		inVehicleUnit = false,
+		outOfVehicleUnit = false
 	},
 	actions = {
 		color = {
@@ -190,24 +284,24 @@ E.StyleFilterDefaults = {
 			power = false,
 			border = false,
 			name = false,
-			healthColor = {r=1,g=1,b=1,a=1},
-			powerColor = {r=1,g=1,b=1,a=1},
-			borderColor = {r=1,g=1,b=1,a=1},
-			nameColor = {r=1,g=1,b=1,a=1}
+			healthColor = {r = 1, g = 1, b = 1, a = 1},
+			powerColor = {r = 1, g = 1, b = 1, a = 1},
+			borderColor = {r = 1, g = 1, b = 1, a = 1},
+			nameColor = {r = 1, g = 1, b = 1, a = 1}
 		},
 		texture = {
 			enable = false,
-			texture = 'ElvUI Norm',
+			texture = "ElvUI Norm"
 		},
 		flash = {
 			enable = false,
-			color = {r=1,g=1,b=1,a=1},
-			speed = 4,
+			color = {r = 1, g = 1, b = 1, a = 1},
+			speed = 4
 		},
 		hide = false,
 		usePortrait = false,
 		nameOnly = false,
-		scale = 1.0,
-		alpha = -1,
-	},
+		scale = 1,
+		alpha = -1
+	}
 }

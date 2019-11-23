@@ -7,7 +7,7 @@ _detalhes_database = {
 		["tabelas"] = {
 		},
 	},
-	["last_version"] = "v8.1.5.7129",
+	["last_version"] = "v8.2.0.7183",
 	["SoloTablesSaved"] = {
 		["Mode"] = 1,
 	},
@@ -15,7 +15,7 @@ _detalhes_database = {
 	},
 	["on_death_menu"] = true,
 	["nick_tag_cache"] = {
-		["nextreset"] = 1561917648,
+		["nextreset"] = 1570478821,
 		["last_version"] = 11,
 	},
 	["last_instance_id"] = 0,
@@ -27,7 +27,7 @@ _detalhes_database = {
 		["next"] = "",
 	},
 	["last_instance_time"] = 0,
-	["active_profile"] = "Wharapi-Tichondrius",
+	["active_profile"] = "Zandro-Tichondrius",
 	["mythic_dungeon_currentsaved"] = {
 		["dungeon_name"] = "",
 		["started"] = false,
@@ -123,7 +123,12 @@ _detalhes_database = {
 			["point"] = "CENTER",
 			["enabled"] = false,
 			["arrow_size"] = 10,
-			["main_frame_strata"] = "LOW",
+			["row_color"] = {
+				0.1, -- [1]
+				0.1, -- [2]
+				0.1, -- [3]
+				0.4, -- [4]
+			},
 			["row_spacement"] = 21,
 			["main_frame_color"] = {
 				0, -- [1]
@@ -131,51 +136,37 @@ _detalhes_database = {
 				0, -- [3]
 				0.2, -- [4]
 			},
-			["author"] = "Details! Team",
+			["main_frame_strata"] = "LOW",
 			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-			["use_spark"] = true,
-			["y"] = -6.1035156250e-05,
-			["x"] = 0,
-			["font_face"] = "Friz Quadrata TT",
-			["font_size"] = 10,
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
 				["scale"] = 1,
 				["font_shadow"] = true,
-				["y"] = -6.1035156250e-05,
-				["x"] = 3.05175781250e-05,
+				["y"] = -6.103515625e-05,
+				["x"] = 3.0517578125e-05,
 				["size"] = 32,
 				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
 			},
-			["row_color"] = {
-				0.1, -- [1]
-				0.1, -- [2]
-				0.1, -- [3]
-				0.4, -- [4]
-			},
+			["font_size"] = 10,
+			["x"] = 0,
+			["font_face"] = "Friz Quadrata TT",
+			["y"] = -6.103515625e-05,
+			["use_spark"] = true,
+			["author"] = "Details! Team",
 			["main_frame_locked"] = false,
 			["arrow_anchor_y"] = 0,
 		},
+	},
+	["cached_talents"] = {
 	},
 	["announce_prepots"] = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 		["reverse"] = false,
 	},
-	["last_day"] = "15",
-	["cached_talents"] = {
-		["Player-162-0962A55D"] = {
-			22093, -- [1]
-			22107, -- [2]
-			20173, -- [3]
-			20185, -- [4]
-			23364, -- [5]
-			22098, -- [6]
-			19304, -- [7]
-		},
-	},
+	["last_day"] = "22",
 	["benchmark_db"] = {
 		["frame"] = {
 		},
@@ -188,7 +179,7 @@ _detalhes_database = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 	},
-	["combat_counter"] = 66,
+	["combat_counter"] = 74,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -336,10 +327,10 @@ _detalhes_database = {
 			["attribute"] = 1,
 			["pos"] = {
 				["normal"] = {
-					["y"] = -427.215744018555,
-					["x"] = 605.716552734375,
-					["w"] = 236.088928222656,
-					["h"] = 217.985275268555,
+					["y"] = -501.3150482177734,
+					["x"] = 642.365234375,
+					["w"] = 184.8885650634766,
+					["h"] = 232.6295318603516,
 				},
 				["solo"] = {
 					["y"] = 2,
@@ -349,9 +340,42 @@ _detalhes_database = {
 				},
 			},
 		}, -- [1]
+		{
+			["segment"] = 0,
+			["sub_attribute"] = 1,
+			["horizontalSnap"] = false,
+			["verticalSnap"] = false,
+			["is_open"] = false,
+			["isLocked"] = true,
+			["sub_atributo_last"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+				1, -- [5]
+			},
+			["snap"] = {
+			},
+			["mode"] = 2,
+			["attribute"] = 1,
+			["pos"] = {
+				["normal"] = {
+					["y"] = -520.9630889892578,
+					["x"] = -238.1666870117188,
+					["w"] = 292.0370483398438,
+					["h"] = 222.9629821777344,
+				},
+				["solo"] = {
+					["y"] = 2,
+					["x"] = 1,
+					["w"] = 300,
+					["h"] = 200,
+				},
+			},
+		}, -- [2]
 	},
 	["character_data"] = {
-		["logons"] = 39,
+		["logons"] = 43,
 	},
 	["announce_cooldowns"] = {
 		["enabled"] = false,
@@ -369,6 +393,5 @@ _detalhes_database = {
 		["channel"] = "SELF",
 	},
 	["cached_specs"] = {
-		["Player-162-0962A55D"] = 269,
 	},
 }

@@ -70,7 +70,7 @@ function Util.GetLowestAuction(query, itemString, operationSettings, resultTbl)
 			lowestItemBuyout = lowestItemBuyout or itemBuyout
 			if itemBuyout == lowestItemBuyout then
 				local seller = record:GetField("seller")
-				local temp = TSMAPI_FOUR.Util.AcquireTempTable()
+				local temp = TSM.TempTable.Acquire()
 				temp.buyout = itemBuyout
 				temp.bid = record:GetField("itemDisplayedBid")
 				temp.seller = seller
@@ -84,7 +84,7 @@ function Util.GetLowestAuction(query, itemString, operationSettings, resultTbl)
 					hasInvalidSeller = true
 				end
 				if operationSettings.blacklist then
-					for _, player in TSMAPI_FOUR.Util.VarargIterator(strsplit(",", operationSettings.blacklist)) do
+					for _, player in TSM.Vararg.Iterator(strsplit(",", operationSettings.blacklist)) do
 						if strlower(strtrim(player)) == strlower(seller) then
 							temp.isBlacklist = true
 						end
@@ -93,10 +93,10 @@ function Util.GetLowestAuction(query, itemString, operationSettings, resultTbl)
 				if not lowestAuction then
 					lowestAuction = temp
 				elseif private.LowestAuctionCompare(temp, lowestAuction) then
-					TSMAPI_FOUR.Util.ReleaseTempTable(lowestAuction)
+					TSM.TempTable.Release(lowestAuction)
 					lowestAuction = temp
 				else
-					TSMAPI_FOUR.Util.ReleaseTempTable(temp)
+					TSM.TempTable.Release(temp)
 				end
 			end
 		end
@@ -107,7 +107,7 @@ function Util.GetLowestAuction(query, itemString, operationSettings, resultTbl)
 	for k, v in pairs(lowestAuction) do
 		resultTbl[k] = v
 	end
-	TSMAPI_FOUR.Util.ReleaseTempTable(lowestAuction)
+	TSM.TempTable.Release(lowestAuction)
 	if resultTbl.isWhitelist and ignoreWhitelist then
 		resultTbl.isWhitelist = false
 	end
@@ -130,8 +130,8 @@ end
 function Util.GetPlayerLowestBuyout(query, itemString, operationSettings)
 	local lowestItemBuyout = nil
 	for _, record in query:Iterator() do
-		if not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and TSMAPI_FOUR.PlayerInfo.IsPlayer(record:GetField("seller"), true, true, true) then
-			lowestItemBuyout = lowestItemBuyout or record:GetField("itemBuyout")
+		if not lowestItemBuyout and not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and TSMAPI_FOUR.PlayerInfo.IsPlayer(record:GetField("seller"), true, true, true) then
+			lowestItemBuyout = record:GetField("itemBuyout")
 		end
 	end
 	return lowestItemBuyout
@@ -140,7 +140,7 @@ end
 function Util.IsPlayerOnlySeller(query, itemString, operationSettings)
 	local isOnly = true
 	for _, record in query:Iterator() do
-		if not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and not TSMAPI_FOUR.PlayerInfo.IsPlayer(record:GetField("seller"), true, true, true) then
+		if isOnly and not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and not TSMAPI_FOUR.PlayerInfo.IsPlayer(record:GetField("seller"), true, true, true) then
 			isOnly = false
 		end
 	end
@@ -151,8 +151,8 @@ function Util.GetNextLowestItemBuyout(query, itemString, lowestItemBuyout, opera
 	local nextLowestItemBuyout = nil
 	for _, record in query:Iterator() do
 		local itemBuyout = record:GetField("itemBuyout")
-		if not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and itemBuyout > lowestItemBuyout then
-			nextLowestItemBuyout = nextLowestItemBuyout or itemBuyout
+		if not nextLowestItemBuyout and not private.ShouldIgnoreAuctionRecord(record, itemString, operationSettings) and itemBuyout > lowestItemBuyout then
+			nextLowestItemBuyout = itemBuyout
 		end
 	end
 	return nextLowestItemBuyout

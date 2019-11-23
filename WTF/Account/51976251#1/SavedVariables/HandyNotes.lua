@@ -1,55 +1,89 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
+		["Magnr - Tichondrius"] = {
+		},
+		["Andalsam - Tichondrius"] = {
+			["enabled"] = false,
+		},
+		["Zandro - Tichondrius"] = {
+			["enabled"] = false,
+		},
+		["Umbrick - Emerald Dream"] = {
+		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Magnr - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
+			["enabled"] = false,
+		},
+		["Madylad - Tichondrius"] = {
 		},
 		["Brungar - Tichondrius"] = {
 		},
 		["Mcpokesalot - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
+			["enabled"] = false,
 		},
-		["Zandro - Tichondrius"] = {
+		["Andallsa - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Stoakt - Tichondrius"] = {
 		},
 	},
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
+		["Magnr - Tichondrius"] = {
+		},
+		["Andalsam - Tichondrius"] = {
+		},
+		["Zandro - Tichondrius"] = {
+		},
+		["Umbrick - Emerald Dream"] = {
+		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Magnr - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
 		},
 		["Brungar - Tichondrius"] = {
 		},
 		["Mcpokesalot - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
 		},
-		["Zandro - Tichondrius"] = {
+		["Andallsa - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Stoakt - Tichondrius"] = {
 		},
 	},
 }

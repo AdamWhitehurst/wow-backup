@@ -15,7 +15,7 @@ ConsolePortSettings = {
 	["nameplateShowAll"] = true,
 	["CP_T4"] = "CP_R_GRIP",
 	["interactScrape"] = true,
-	["mouseOnCenter"] = false,
+	["mouseOnCenter"] = true,
 	["disableKeyboard"] = false,
 	["doubleModTap"] = false,
 	["UIdropDownFix"] = true,
@@ -23,50 +23,65 @@ ConsolePortSettings = {
 	["forceController"] = "XBOX",
 	["CP_M1"] = "CP_TL2",
 	["TargetNearestUseNew"] = false,
-	["autoExtra"] = true,
-	["mouseOnJump"] = false,
 	["disableUI"] = false,
+	["mouseOnJump"] = true,
+	["nameplateShowFriendlyNPCs"] = true,
+	["stickRadialType"] = 2,
 	["interactCache"] = true,
-	["CP_T2"] = "CP_TR1",
-	["interactWith"] = "CP_R_DOWN",
 	["nameplateShowFriends"] = true,
-	["raidCursorDirect"] = false,
+	["mouseInvertPitch"] = false,
+	["interactWith"] = "CP_R_DOWN",
+	["type"] = "XBOX",
 	["mouseInvertYaw"] = false,
-	["id"] = "132051870566629748",
+	["raidCursorDirect"] = false,
+	["id"] = "132051902156275897",
 	["calibration"] = {
 		["CP_L_RIGHT"] = "F2",
 		["CP_R_LEFT"] = "F12",
 		["CP_L_UP"] = "F1",
 		["CP_T1"] = "F7",
-		["CP_T2"] = "F8",
+		["CP_L_LEFT"] = "F4",
 		["CP_L_DOWN"] = "F3",
 		["CP_X_LEFT"] = "F6",
-		["CP_L_LEFT"] = "F4",
-		["CP_R_UP"] = "F9",
 		["CP_R_RIGHT"] = "F10",
+		["CP_R_UP"] = "F9",
+		["CP_T2"] = "F8",
 		["CP_X_RIGHT"] = "F5",
 		["CP_R_DOWN"] = "F11",
 	},
-	["disableHints"] = false,
+	["disableSmartMouse"] = false,
 	["CP_M2"] = "CP_TR2",
 	["autoInteract"] = false,
 	["UIdisableHoldRepeat"] = false,
 	["CP_T1"] = "CP_TL1",
-	["disableSmartMouse"] = false,
+	["disableHints"] = false,
 	["autoSellJunk"] = true,
-	["type"] = "XBOX",
-	["mouseInvertPitch"] = false,
-	["nameplateShowFriendlyNPCs"] = true,
+	["CP_T2"] = "CP_TR1",
+	["autoExtra"] = true,
+	["alwaysHighlight"] = 2,
 }
 ConsolePortCharacterSettings = {
 	["Umbrick (Protection) Tichondrius"] = {
 		["Type"] = "XBOX",
 		["Bar"] = {
-			["showbuttons"] = true,
-			["mousewheel"] = true,
-			["showline"] = true,
+			["expRGB"] = {
+				1, -- [1]
+				0.831372549019608, -- [2]
+				0.650980392156863, -- [3]
+				1, -- [4]
+			},
+			["hideIcons"] = false,
+			["scale"] = 1.19999990463257,
+			["watchbars"] = true,
+			["blendart"] = false,
 			["lock"] = true,
-			["scale"] = 1.6,
+			["tintRGB"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rainbow"] = false,
 			["layout"] = {
 				["CP_L_RIGHT"] = {
 					["size"] = 64,
@@ -104,6 +119,33 @@ ConsolePortCharacterSettings = {
 					},
 					["dir"] = "up",
 				},
+				["CP_T3"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						396, -- [2]
+						16, -- [3]
+					},
+					["dir"] = "down",
+				},
+				["CP_R_UP"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-240, -- [2]
+						100, -- [3]
+					},
+					["dir"] = "up",
+				},
+				["CP_T1"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						456, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "right",
+				},
 				["CP_L_LEFT"] = {
 					["size"] = 64,
 					["point"] = {
@@ -122,14 +164,14 @@ ConsolePortCharacterSettings = {
 					},
 					["dir"] = "down",
 				},
-				["CP_T1"] = {
+				["CP_T2"] = {
 					["size"] = 64,
 					["point"] = {
-						"LEFT", -- [1]
-						456, -- [2]
+						"RIGHT", -- [1]
+						-456, -- [2]
 						56, -- [3]
 					},
-					["dir"] = "right",
+					["dir"] = "left",
 				},
 				["CP_R_RIGHT"] = {
 					["size"] = 64,
@@ -139,33 +181,6 @@ ConsolePortCharacterSettings = {
 						56, -- [3]
 					},
 					["dir"] = "right",
-				},
-				["CP_R_UP"] = {
-					["size"] = 64,
-					["point"] = {
-						"RIGHT", -- [1]
-						-240, -- [2]
-						100, -- [3]
-					},
-					["dir"] = "up",
-				},
-				["CP_T3"] = {
-					["size"] = 64,
-					["point"] = {
-						"LEFT", -- [1]
-						396, -- [2]
-						16, -- [3]
-					},
-					["dir"] = "down",
-				},
-				["CP_T2"] = {
-					["size"] = 64,
-					["point"] = {
-						"RIGHT", -- [1]
-						-456, -- [2]
-						56, -- [3]
-					},
-					["dir"] = "left",
 				},
 				["CP_R_DOWN"] = {
 					["size"] = 64,
@@ -177,17 +192,31 @@ ConsolePortCharacterSettings = {
 					["dir"] = "down",
 				},
 			},
-			["watchbars"] = true,
+			["mousewheel"] = true,
 			["width"] = 1100,
+			["showbuttons"] = true,
+			["smallart"] = false,
+			["showline"] = true,
+			["showart"] = false,
+			["classicBorders"] = false,
+			["hidewatchbars"] = false,
+			["swipeRGB"] = {
+				1, -- [1]
+				0.831372549019608, -- [2]
+				0.650980392156863, -- [3]
+				1, -- [4]
+			},
+			["artRGB"] = {
+				1, -- [1]
+				0.831372549019608, -- [2]
+				0.650980392156863, -- [3]
+				0.740969926118851, -- [4]
+			},
 		},
 		["Spec"] = 73,
 		["Class"] = "WARRIOR",
 		["BindingSet"] = {
-			["CP_L_RIGHT"] = {
-				[""] = "ACTIONBUTTON12",
-				["SHIFT-"] = "MULTIACTIONBAR2BUTTON3",
-				["CTRL-"] = "MULTIACTIONBAR2BUTTON7",
-				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON11",
+			["CP_T_L3"] = {
 			},
 			["CP_R_LEFT"] = {
 				[""] = "ACTIONBUTTON1",
@@ -201,10 +230,6 @@ ConsolePortCharacterSettings = {
 				["CTRL-"] = "TOGGLETALENTS",
 			},
 			["CP_T_R3"] = {
-				[""] = "CAMERAORSELECTORMOVE",
-			},
-			["CP_T_L3"] = {
-				[""] = "TURNORACTION",
 			},
 			["CP_L_UP"] = {
 				[""] = "MULTIACTIONBAR1BUTTON12",
@@ -212,23 +237,11 @@ ConsolePortCharacterSettings = {
 				["CTRL-"] = "MULTIACTIONBAR2BUTTON6",
 				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON10",
 			},
-			["CP_R_RIGHT"] = {
-				[""] = "ACTIONBUTTON3",
-				["SHIFT-"] = "ACTIONBUTTON8",
-				["CTRL-"] = "MULTIACTIONBAR1BUTTON3",
-				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON8",
-			},
-			["CP_L_DOWN"] = {
-				[""] = "ACTIONBUTTON11",
-				["SHIFT-"] = "MULTIACTIONBAR2BUTTON4",
-				["CTRL-"] = "MULTIACTIONBAR2BUTTON8",
-				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON12",
-			},
-			["CP_T2"] = {
-				[""] = "ACTIONBUTTON5",
-				["SHIFT-"] = "ACTIONBUTTON10",
-				["CTRL-"] = "MULTIACTIONBAR1BUTTON5",
-				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON10",
+			["CP_L_RIGHT"] = {
+				[""] = "ACTIONBUTTON12",
+				["SHIFT-"] = "MULTIACTIONBAR2BUTTON3",
+				["CTRL-"] = "MULTIACTIONBAR2BUTTON7",
+				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON11",
 			},
 			["CP_T1"] = {
 				[""] = "ACTIONBUTTON4",
@@ -236,23 +249,41 @@ ConsolePortCharacterSettings = {
 				["CTRL-"] = "MULTIACTIONBAR1BUTTON4",
 				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON9",
 			},
-			["CP_L_LEFT"] = {
-				[""] = "MULTIACTIONBAR1BUTTON11",
-				["SHIFT-"] = "MULTIACTIONBAR2BUTTON1",
-				["CTRL-"] = "MULTIACTIONBAR2BUTTON5",
-				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON9",
-			},
 			["CP_R_UP"] = {
 				[""] = "ACTIONBUTTON2",
 				["SHIFT-"] = "ACTIONBUTTON7",
 				["CTRL-"] = "MULTIACTIONBAR1BUTTON2",
 				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON7",
 			},
+			["CP_L_LEFT"] = {
+				[""] = "MULTIACTIONBAR1BUTTON11",
+				["SHIFT-"] = "MULTIACTIONBAR2BUTTON1",
+				["CTRL-"] = "MULTIACTIONBAR2BUTTON5",
+				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON9",
+			},
 			["CP_X_LEFT"] = {
 				[""] = "OPENALLBAGS",
 				["SHIFT-"] = "TOGGLEWORLDMAP",
 				["CTRL-"] = "CP_CAMZOOMOUT",
 				["CTRL-SHIFT-"] = "CP_CAMZOOMIN",
+			},
+			["CP_T2"] = {
+				[""] = "ACTIONBUTTON5",
+				["SHIFT-"] = "ACTIONBUTTON10",
+				["CTRL-"] = "MULTIACTIONBAR1BUTTON5",
+				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON10",
+			},
+			["CP_L_DOWN"] = {
+				[""] = "ACTIONBUTTON11",
+				["SHIFT-"] = "MULTIACTIONBAR2BUTTON4",
+				["CTRL-"] = "MULTIACTIONBAR2BUTTON8",
+				["CTRL-SHIFT-"] = "MULTIACTIONBAR2BUTTON12",
+			},
+			["CP_R_RIGHT"] = {
+				[""] = "ACTIONBUTTON3",
+				["SHIFT-"] = "ACTIONBUTTON8",
+				["CTRL-"] = "MULTIACTIONBAR1BUTTON3",
+				["CTRL-SHIFT-"] = "MULTIACTIONBAR1BUTTON8",
 			},
 			["CP_X_RIGHT"] = {
 				[""] = "TOGGLEGAMEMENU",
@@ -261,9 +292,9 @@ ConsolePortCharacterSettings = {
 				["CTRL-SHIFT-"] = "OPENCHAT",
 			},
 			["CP_R_DOWN"] = {
-				[""] = "JUMP",
-				["SHIFT-"] = "ACTIONBUTTON9",
-				["CTRL-"] = "EXTRAACTIONBUTTON1",
+				[""] = "MULTIACTIONBAR3BUTTON1",
+				["SHIFT-"] = "JUMP",
+				["CTRL-"] = "ACTIONBUTTON9",
 				["CTRL-SHIFT-"] = "CLICK ConsolePortUtilityToggle:LeftButton",
 			},
 		},

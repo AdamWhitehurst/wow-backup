@@ -1,6 +1,41 @@
+VER 3 0000000000000064 "/btwQuests" "1505932"
+/btwQuests
+END
 VER 3 0000000000000027 "AAP_MACRO" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/click ExtraActionButton1
+/use Dead Ringer
+END
+VER 3 0000000000000052 "Algan" "INV_MISC_QUESTIONMARK"
+/target "Lost ALgan"
+END
+VER 3 0000000000000050 "Clear Action Bar" "1100022"
+/run for i = 1,120 do PickupAction(i) ClearCursor() end
+END
+VER 3 0000000000000037 "Crystals" "1003587"
+/way Nazjatar 46.80 52.13 Prismatic Crystal
+/way Nazjatar 45.80 42.41 Prismatic Crystal
+/way Nazjatar 45.80 38.10 Prismatic Crystal
+/way Nazjatar 46.50 36.10 Prismatic Crystal
+/way Nazjatar 39.10 59.50 Prismatic Crystal
+/way Nazjatar 29.99 36.06 Prismatic
+END
+VER 3 0000000000000056 "Cult Adherent" "132093"
+/cleartarget
+/targetexact Cult Adherent
+/stopmacro [noexists]
+/run SetRaidTarget("target",5)
+END
+VER 3 0000000000000054 "Cult Fanatic" "132095"
+/cleartarget
+/targetexact Cult Fanatic
+/stopmacro [noexists]
+/run SetRaidTarget("target",2)
+END
+VER 3 0000000000000055 "Deformed Fanatic" "132094"
+/cleartarget
+/targetexact Deformed Fanatic
+/stopmacro [noexists]
+/run SetRaidTarget("target",3)
 END
 VER 3 0000000000000026 "Invite RUIN" "135886"
 /invite Archaosrex-Tichondrius
@@ -12,8 +47,49 @@ VER 3 0000000000000003 "Land & Sky Mount" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [noflyable] Swift Brewfest Ram; [flyable] golden Cloud Serpent
 END
+VER 3 0000000000000057 "Reanimated Adher" "132092"
+/cleartarget
+/targetexact Reanimated Adherent
+/stopmacro [noexists]
+/run SetRaidTarget("target",4)
+END
+VER 3 0000000000000053 "Reanimated Fanat" "132102"
+/cleartarget
+/targetexact Reanimated Fanatic
+/stopmacro [noexists]
+/run SetRaidTarget("target",1)
+END
+VER 3 0000000000000063 "Sit" "1778231"
+/sit
+END
+VER 3 0000000000000036 "Slimes" "970810"
+/way Nazjatar 32.76 39.53 Ravenous Slime 1
+/way Nazjatar 45.70 24.11 Ravenous Slime 2
+/way Nazjatar 54.90 48.70 Ravenous Slime 3
+/way Nazjatar 71.71 25.70 Ravenous Slime 4
+END
 VER 3 0000000000000023 "Sniper / Default" "134328"
 /run local p1,p2="Default","Sniper" if(TSM_API.GetActiveProfile() == p1) then p1=p2 end TSM_API.SetActiveProfile(p1) print("Switched to profile: "..p1)
+END
+VER 3 0000000000000058 "Speed" "132107"
+/script base = BASE_MOVEMENT_SPEED
+/script cur, run, fly, swim = GetUnitSpeed("player")
+/script ChatFrame1:AddMessage(string.format("Your current maximal speeds are: running %g%%, flying %g%%, swimming %g%%.", run/base*100, fly/base*100, swim/base*100))
+END
+VER 3 0000000000000031 "Starfish" "INV_MISC_QUESTIONMARK"
+END
+VER 3 0000000000000030 "Starfish" "INV_MISC_QUESTIONMARK"
+/way 36.27 22.81 Starfish
+/way 37.1 27.6 Starfish
+/way 38 14 Starfish
+/way 38.1 27.6 Starfish
+/way 38.2 14.2 Starfish
+/way 39.4 18.9 Starfish
+/way 39.8 22.2 Starfish
+/way 40.7 14.0 Starfish
+/way 43.6 19.9 Starfish
+/way 46.51 32.74 Starfish
+/way 48 39 Star
 END
 VER 3 000000000000000A "Steal Taunt" "132353"
 #showtooltip Provoke
@@ -28,18 +104,9 @@ VER 3 0000000000000005 "Target Aeonaxx" "134154"
 /focus
 /run if UnitName("Target") == "Windward Alpha" then PlaySoundKitID(9378); print(date(), UnitName("Target"), "Found"); SetRaidTarget("target",8); end
 END
-VER 3 000000000000002F "TSMMacro" "Achievement_Faction_GoldenLotus"
-/click TSMCancelAuctionBtn
-/click TSMDestroyBtn
-/click TSMShoppingBuyoutBtn
-/click TSMSniperBtn
+VER 3 0000000000000062 "TSMMacro" "Achievement_Faction_GoldenLotus"
 /click TSMAuctioningBtn
-/click TSMVendoringSellAllButton
-/click TSMCraftingBtn
 END
 VER 3 000000000000001C "Wave" "135823"
-/stopmacro [@mouseover,noexists]
-/target [@mouseover] mouseover
-/wave
-/targetlasttarget
+/wave [@mouseover]
 END

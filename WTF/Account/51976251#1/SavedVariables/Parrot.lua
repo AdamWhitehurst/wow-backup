@@ -4,6 +4,32 @@ ParrotDB = {
 		["CombatEvents"] = {
 			["profiles"] = {
 				["Default"] = {
+					["Outgoing"] = {
+						["Skill dodges"] = {
+							["color"] = "007bff",
+						},
+						["Skill parries"] = {
+							["color"] = "007bff",
+						},
+						["Melee parries"] = {
+							["color"] = "007bff",
+						},
+						["Skill blocks"] = {
+							["color"] = "007bff",
+						},
+						["Melee blocks"] = {
+							["color"] = "007bff",
+						},
+						["Skill misses"] = {
+							["color"] = "007bff",
+						},
+						["Melee dodges"] = {
+							["color"] = "007bff",
+						},
+						["Pet skill damage"] = {
+							["color"] = "007bff",
+						},
+					},
 					["dbver"] = 5,
 				},
 			},
@@ -19,14 +45,16 @@ ParrotDB = {
 				["Default"] = {
 					["areas"] = {
 						["Outgoing"] = {
-							["stickyDirection"] = "DOWN;LEFT",
-							["direction"] = "DOWN;RIGHT",
-							["yOffset"] = -30,
+							["direction"] = "UP;LEFT",
+							["stickySpeed"] = 8,
+							["xOffset"] = -350.411865234375,
+							["yOffset"] = -271.7777099609375,
+							["stickyDirection"] = "UP;CCW",
 							["iconSide"] = "LEFT",
-							["xOffset"] = 60,
+							["speed"] = 20,
 							["size"] = 260,
 							["animationStyle"] = "Parabola",
-							["stickyAnimationStyle"] = "Pow",
+							["stickyAnimationStyle"] = "Sprinkler",
 						},
 					},
 					["dbver"] = 2,
@@ -36,15 +64,13 @@ ParrotDB = {
 		["Display"] = {
 			["profiles"] = {
 				["Default"] = {
-					["fontSize"] = 10,
+					["stickyFont"] = "Sriracha",
 					["stickyFontOutline"] = "OUTLINE",
 					["iconsEnabled"] = false,
-					["font"] = "Anime Ace Italic",
+					["font"] = "Sriracha",
+					["stickyFontSize"] = 20,
 					["fontOutline"] = "OUTLINE",
-					["stickyFontShadow"] = false,
-					["stickyFontSize"] = 12,
-					["stickyFont"] = "Anime Ace Bold",
-					["fontShadow"] = false,
+					["fontSize"] = 16,
 				},
 			},
 		},
@@ -57,6 +83,8 @@ ParrotDB = {
 		},
 	},
 	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
 	},
 	["profiles"] = {

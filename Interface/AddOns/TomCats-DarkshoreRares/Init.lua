@@ -1,44 +1,35 @@
 local addon = select(2,...)
 local D = addon.TomCatsLibs.Data
-local PlayerFaction = UnitFactionGroup("player")
+addon.playerFaction = UnitFactionGroup("player")
+-- work-around to allow new neutral Pandaren characters to load the addon without throwing errors
+if addon.playerFaction == "Neutral" then addon.playerFaction = "Alliance" end
+function addon.split(inputstr, delimiter)
+    local t={}
+    delimiter = delimiter or "."
+    for str in string.gmatch(inputstr, "([^" .. delimiter .. "]+)") do
+        table.insert(t, str)
+    end
+    return t
+end
 addon.params = {
-    ["Vignette MapID"] = 62,
+    ["Vignette MapID"] = tonumber("62"),
     ["Map Name"] = "Darkshore",
     ["Timer Delay"] = 5,
-    ["Minimap Icon"] = "darnassus-icon",
-    ["Icon BGColor"] = {68/255,34/255,68/255,0.80 },
+    ["Minimap Icon"] = "Interface\\AddOns\\TomCats\\images\\darnassus-icon",
+    ["Icon BGColor"] = addon.split("0.267,0.133,0.267,0.8",","),
     ["Title Line 1"] = "Rares of Darkshore",
-    ["Title Line 2"] = "Warfront on Darkshore"
+    ["Title Line 2"] = ""
 }
-
--- If ACP is enabled, conditionally hook GetAddOnInfo to set the short name to be displayed in the ACP Group By Name control panel
-local _, _, _, ACP_ENABLED = GetAddOnInfo("ACP")
-if (ACP_ENABLED) then
-    local func = GetAddOnInfo
-    --noinspection GlobalCreationOutsideO
-    function GetAddOnInfo(indexOrName)
-        local addonInfo = { func(indexOrName) }
-        --TODO: Make compatible with other locales: Group By Name, and title value
-        if ((addonInfo[1] == addon.name) and (ACP_Data) and (ACP_Data.sorter == "Group By Name")) then
-            addonInfo[2] = "Rares of Darkshore / Warfront on Darkshore"
-        end
-        return unpack(addonInfo)
-    end
-end
-
 function addon.getLocalVars()
     return addon.TomCatsLibs.Data, addon.TomCatsLibs.Locales, addon.params
 end
-
-addon.playerFaction = UnitFactionGroup("player")
 if (addon.playerFaction == "Horde") then
     addon.enemyFaction, addon.embassyContinentMapID = "Alliance", 875
 else
     addon.enemyFaction, addon.embassyContinentMapID = "Horde", 876
 end
-
 function addon.getWarfrontPhase()
-    local contributionCollectorID = D.ContributionCollectorIDs[PlayerFaction]
+    local contributionCollectorID = D.ContributionCollectorIDs[addon.playerFaction]
     local state = C_ContributionCollector.GetState(contributionCollectorID)
     if (state <= 2) then
         return addon.enemyFaction
@@ -46,11 +37,4 @@ function addon.getWarfrontPhase()
         return addon.playerFaction
     end
 end
-
-addon.TomCatsLibs.Data["Map Canvases"] = {}
-local MapCanvasMixinOnEvent_ORIG = MapCanvasMixin.OnEvent
-
-function MapCanvasMixin:OnEvent(...)
-    MapCanvasMixinOnEvent_ORIG(self, ...)
-    addon.TomCatsLibs.Data["Map Canvases"][self] = true
-end
+addon.TomCatsLibs.Data["Map Canvases"] = { "WorldMapFrame", "BattlefieldMapFrame" }

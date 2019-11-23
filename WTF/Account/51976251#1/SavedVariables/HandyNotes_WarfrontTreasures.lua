@@ -1,28 +1,43 @@
 
 HandyNotes_WarfrontTreasuresDB = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["profiles"] = {
-		["Bramblebrow - Emerald Dream"] = {
-		},
 		["Magnr - Tichondrius"] = {
 		},
-		["Brungar - Tichondrius"] = {
-		},
-		["Mcpokesalot - Tichondrius"] = {
-		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsam - Tichondrius"] = {
 		},
 		["Zandro - Tichondrius"] = {
 		},
 		["Umbrick - Emerald Dream"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Brungar - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Mcpokesalot - Tichondrius"] = {
+		},
+		["Andalsa - Tichondrius"] = {
+		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
 		},
 	},
 }

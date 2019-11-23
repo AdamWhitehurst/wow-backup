@@ -148,6 +148,7 @@ local function modelsLoaded()
 	else
 		-- If there is no You model, play the read animation for the Me model.
 		playerModel:SetCustomIdleAnimationID(Storyline_API.ANIMATIONS.READING);
+		playerModel:ApplySpellVisualKit(29521, false)
 		Storyline_NPCFrameChat.bubbleTail:Hide();
 		playerModel:PlayIdleAnimation();
 	end
@@ -449,19 +450,6 @@ function Storyline_API.addon:OnEnable()
 		Storyline_Data = {};
 	end
 
-	-- Cleanup
-	local usedFields = {
-		"customscale",
-		"config",
-		"npc_blacklist",
-	};
-	for key, _ in pairs(Storyline_Data) do
-		if not tContains(usedFields, key) then
-			wipe(Storyline_Data[key]);
-			Storyline_Data[key] = nil;
-		end
-	end
-
 	if not Storyline_Data.customscale then
 		Storyline_Data.customscale = {};
 	end
@@ -646,6 +634,7 @@ function Storyline_API.addon:OnEnable()
 	mainFrame.chat.text:SetWidth(550);
 	Storyline_NPCFrameResizeButton.onResizeStop = function(width, height)
 		resizeChat();
+		Storyline_API.DynamicBackgroundsManager.resizeDynamicBackground();
 		Storyline_Data.config.width = width;
 		Storyline_Data.config.height = height;
 		Storyline_API.dialogs.scrollFrame.refreshMargins(width, height);

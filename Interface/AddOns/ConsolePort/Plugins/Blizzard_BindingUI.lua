@@ -5,14 +5,14 @@
 
 local _, db = ...
 
-db.PLUGINS['Blizzard_BindingUI'] = function(self)
+ConsolePort:AddPlugin('Blizzard_BindingUI', function(self)
 	local 	kbF, okayButton, popup = 
 			KeyBindingFrame, KeyBindingFrame.okayButton
 
 	local function OnAccept()
 		kbF:Hide()
 		ToggleFrame(GameMenuFrame)
-		ConsolePortConfig:OpenCategory('Binds')
+		ConsolePortOldConfig:OpenCategory('Binds')
 	end
 
 	local function OnAlt()
@@ -55,4 +55,4 @@ db.PLUGINS['Blizzard_BindingUI'] = function(self)
 			popup = nil
 		end
 	end)
-end
+end)

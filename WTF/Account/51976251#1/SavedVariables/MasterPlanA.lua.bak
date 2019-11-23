@@ -2,16 +2,20 @@
 MasterPlanAG = {
 	["Emerald Dream"] = {
 		["Bramblebrow"] = {
-			["faction"] = "Horde",
 			["class"] = "MONK",
+			["faction"] = "Horde",
 		},
 		["Umbrick"] = {
-			["faction"] = "Horde",
 			["class"] = "WARRIOR",
+			["faction"] = "Horde",
 		},
 	},
 	["Tichondrius"] = {
-		["Bjorgr"] = {
+		["Andallsa"] = {
+			["class"] = "ROGUE",
+			["faction"] = "Alliance",
+		},
+		["Brungar"] = {
 			["faction"] = "Alliance",
 			["class"] = "HUNTER",
 		},
@@ -23,32 +27,48 @@ MasterPlanAG = {
 			},
 			["faction"] = "Alliance",
 			["class"] = "MONK",
-			["curRes"] = 1377,
-			["lastCacheTime"] = 1560518357,
+			["curRes"] = 1901,
+			["lastCacheTime"] = 1572922833,
+		},
+		["Iscrackl"] = {
+			["class"] = "WARLOCK",
+			["faction"] = "Alliance",
+		},
+		["Mcpokesalot"] = {
+			["class"] = "ROGUE",
+			["faction"] = "Alliance",
+		},
+		["Andalsam"] = {
+			["class"] = "DRUID",
+			["faction"] = "Alliance",
+		},
+		["Madylad"] = {
+			["faction"] = "Alliance",
+			["class"] = "DEMONHUNTER",
+		},
+		["Stoakt"] = {
+			["class"] = "ROGUE",
+			["faction"] = "Alliance",
 		},
 		["Wharapi"] = {
-			["class"] = "DRUID",
 			["faction"] = "Horde",
-		},
-		["Brungar"] = {
-			["class"] = "HUNTER",
-			["faction"] = "Alliance",
+			["class"] = "DRUID",
 		},
 		["Umbrick"] = {
 			["class"] = "WARRIOR",
 			["faction"] = "Alliance",
 		},
 		["Magnr"] = {
+			["faction"] = "Alliance",
 			["class"] = "SHAMAN",
-			["faction"] = "Alliance",
 		},
-		["Iscrackl"] = {
-			["faction"] = "Alliance",
-			["class"] = "WARLOCK",
-		},
-		["Mcpokesalot"] = {
-			["faction"] = "Alliance",
+		["Andalsa"] = {
 			["class"] = "ROGUE",
+			["faction"] = "Alliance",
+		},
+		["Bjorgr"] = {
+			["class"] = "HUNTER",
+			["faction"] = "Alliance",
 		},
 	},
 }

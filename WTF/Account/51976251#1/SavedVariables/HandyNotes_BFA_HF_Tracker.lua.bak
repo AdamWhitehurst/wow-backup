@@ -10,28 +10,43 @@ HandyNotes_BFA_HF_TrackerDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["profiles"] = {
-		["Bramblebrow - Emerald Dream"] = {
-		},
 		["Magnr - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
-		},
-		["Mcpokesalot - Tichondrius"] = {
-		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsam - Tichondrius"] = {
 		},
 		["Zandro - Tichondrius"] = {
 		},
+		["Umbrick - Emerald Dream"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Andalsa - Tichondrius"] = {
+		},
+		["Mcpokesalot - Tichondrius"] = {
+		},
 		["Brungar - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
 		},
 	},
 }
@@ -110,12 +125,12 @@ NPC_Name_CacheDB = {
 		[137681] = "King Clickyclack",
 		[125250] = "Ancient Jawbreaker",
 		[136335] = "Enraged Krolusk",
-		[136304] = "Songstress Nahjeen",
+		[121242] = "Glompmaw",
 		[129005] = "King Kooba",
 		[128965] = "Uroku the Bound",
 		[135510] = "Azuresail the Ancient",
 		[126187] = "Corpse Bringer Yal'kar",
-		[122004] = "Umbra'jin",
+		[136304] = "Songstress Nahjeen",
 		[135939] = "Vinespeaker Ratha",
 		[136336] = "Scorpox",
 		[133812] = "Zanxib",
@@ -141,7 +156,7 @@ NPC_Name_CacheDB = {
 		[127776] = "Scaleclaw Broodmother",
 		[139988] = "Sandfang",
 		[136323] = "Fangcaller Xorreth",
-		[121242] = "Glompmaw",
+		[122004] = "Umbra'jin",
 		[128951] = "Nez'ara",
 		[135947] = "Strange Mushroom Ring",
 		[141239] = "Osca the Bloodied",

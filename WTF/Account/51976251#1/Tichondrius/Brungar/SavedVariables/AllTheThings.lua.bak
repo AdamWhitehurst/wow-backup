@@ -3,5 +3,3 @@ AllTheThingsSettingsPerCharacter = {
 	["Filters"] = {
 	},
 }
-AllTheThingsPCD = {
-}

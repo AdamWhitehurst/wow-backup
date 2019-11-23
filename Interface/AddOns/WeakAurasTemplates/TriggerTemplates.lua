@@ -1,3 +1,5 @@
+if WeakAuras.IsClassic() then return end
+
 -- Special layout for the New Aura Trigger template page
 
 local AceGUI = LibStub("AceGUI-3.0");
@@ -1322,7 +1324,7 @@ function WeakAuras.CreateTemplateView(frame)
     group:SetFullWidth(true);
     local subTypes = subTypesFor(item, newView.data.regionType);
     local subTypesButtons = {}
-    local firstButton = true;
+    local lastButton
     for k, subType in pairs(subTypes) do
       local button = AceGUI:Create("WeakAurasNewButton");
       subTypesButtons[k] = button;
@@ -1365,10 +1367,13 @@ function WeakAuras.CreateTemplateView(frame)
           WeakAuras.NewAura(newView.data, newView.data.regionType, newView.targetId);
         end
       end);
-      if newView.batchStep and firstButton then
+      if newView.batchStep then
         button.frame:LockHighlight();
         newView.choosenItemBatchSubType[item] = subType;
-        firstButton = false;
+        if lastButton then
+          lastButton.frame:UnlockHighlight();
+        end
+        lastButton = button
       end
       group:AddChild(button);
     end
@@ -1396,7 +1401,9 @@ function WeakAuras.CreateTemplateView(frame)
   -- Creates a button + flyout (if the button is selected) for one section
   local function createTriggerButtons(templates, selectedItem, fullWidth)
     for k, section in ipairs(templates) do
-      createTriggerButton(section, selectedItem, fullWidth);
+      if section.args and next(section.args) then
+        createTriggerButton(section, selectedItem, fullWidth);
+      end
     end
   end
 
@@ -1536,10 +1543,11 @@ function WeakAuras.CreateTemplateView(frame)
       local classSelector = createDropdown("class", WeakAuras.class_types);
       newViewScroll:AddChild(classSelector);
 
-      local specSelector = createDropdown("spec", WeakAuras.spec_types_specific[newView.class]);
-      newViewScroll:AddChild(specSelector);
-      newViewScroll:AddChild(createSpacer());
-
+      if not WeakAuras.IsClassic() then
+        local specSelector = createDropdown("spec", WeakAuras.spec_types_specific[newView.class]);
+        newViewScroll:AddChild(specSelector);
+        newViewScroll:AddChild(createSpacer());
+      end
       if (WeakAuras.triggerTemplates.class[newView.class] and WeakAuras.triggerTemplates.class[newView.class][newView.spec]) then
         createTriggerButtons(WeakAuras.triggerTemplates.class[newView.class][newView.spec], selectedItem);
       end
@@ -1550,20 +1558,22 @@ function WeakAuras.CreateTemplateView(frame)
       createTriggerButton(WeakAuras.triggerTemplates.general, selectedItem);
 
       -- Items
-      local itemHeader = AceGUI:Create("Heading");
-      itemHeader:SetFullWidth(true);
-      newViewScroll:AddChild(itemHeader);
-      local itemTypes = {};
-      for _, section in pairs(WeakAuras.triggerTemplates.items) do
-        tinsert(itemTypes, section.title);
-      end
-      newView.item = newView.item or 1;
-      local itemSelector = createDropdown("item", itemTypes);
-      newViewScroll:AddChild(itemSelector);
-      newViewScroll:AddChild(createSpacer());
-      if (WeakAuras.triggerTemplates.items[newView.item]) then
-        local group = createTriggerFlyout(WeakAuras.triggerTemplates.items[newView.item].args, true);
-        newViewScroll:AddChild(group);
+      if not WeakAuras.IsClassic() then
+        local itemHeader = AceGUI:Create("Heading");
+        itemHeader:SetFullWidth(true);
+        newViewScroll:AddChild(itemHeader);
+        local itemTypes = {};
+        for _, section in pairs(WeakAuras.triggerTemplates.items) do
+          tinsert(itemTypes, section.title);
+        end
+        newView.item = newView.item or 1;
+        local itemSelector = createDropdown("item", itemTypes);
+        newViewScroll:AddChild(itemSelector);
+        newViewScroll:AddChild(createSpacer());
+        if (WeakAuras.triggerTemplates.items[newView.item]) then
+          local group = createTriggerFlyout(WeakAuras.triggerTemplates.items[newView.item].args, true);
+          newViewScroll:AddChild(group);
+        end
       end
 
       -- Race
@@ -1721,8 +1731,13 @@ function WeakAuras.CreateTemplateView(frame)
       newView.choosenItemBatch = {};
     end
     newView.class = select(2, UnitClass("player"));
-    newView.spec = GetSpecialization() or 1;
+    if not WeakAuras.IsClassic() then
+      newView.spec = GetSpecialization() or 1;
+    else
+      newView.spec = "classic"
+    end
     newView.race = select(2, UnitRace('player'));
+
     createButtons();
   end
 

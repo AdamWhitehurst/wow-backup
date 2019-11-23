@@ -96,7 +96,7 @@ end
 ---------------------------------------------------------------
 function Cursor:SetTexture(texture)
 	local object = current and current.object
-	local newType = (object == 'EditBox' and self.IndicatorS) or (object == 'Slider' and self.ScrollGuide) or texture or self.Indicator
+	local newType = (object == 'EditBox' and self.IndicatorS) or (object == 'Slider' and self.Modifier) or texture or self.Indicator
 	if newType ~= self.type then
 		self.Button:SetTexture(newType)
 	end
@@ -300,17 +300,19 @@ SafeOnEnter[SpellButton1:GetScript('OnEnter')] = function(self)
 	end
 	GameTooltip:Show()
 end
-SafeOnEnter[QuestMapLogTitleButton_OnEnter] = function(self)
-	-- this replacement script runs itself, but handles a particular bug when the cursor is atop a quest button when the map is opened.
-	-- all data is not yet populated so difficultyHighlightColor can be nil, which isn't checked for in the default UI code.
-	if self.questLogIndex then
-		local _, level, _, isHeader, _, _, _, _, _, _, _, _, _, _, _, _, isScaling = GetQuestLogTitle(self.questLogIndex)
-		local _, difficultyHighlightColor = GetQuestDifficultyColor(level, isScaling)
-		if ( isHeader ) then
-			_, difficultyHighlightColor = QuestDifficultyColors["header"]
-		end
-		if difficultyHighlightColor then
-			QuestMapLogTitleButton_OnEnter(self)
+if QuestMapLogTitleButton_OnEnter then
+	SafeOnEnter[QuestMapLogTitleButton_OnEnter] = function(self)
+		-- this replacement script runs itself, but handles a particular bug when the cursor is atop a quest button when the map is opened.
+		-- all data is not yet populated so difficultyHighlightColor can be nil, which isn't checked for in the default UI code.
+		if self.questLogIndex then
+			local _, level, _, isHeader, _, _, _, _, _, _, _, _, _, _, _, _, isScaling = GetQuestLogTitle(self.questLogIndex)
+			local _, difficultyHighlightColor = GetQuestDifficultyColor(level, isScaling)
+			if ( isHeader ) then
+				_, difficultyHighlightColor = QuestDifficultyColors["header"]
+			end
+			if difficultyHighlightColor then
+				QuestMapLogTitleButton_OnEnter(self)
+			end
 		end
 	end
 end
@@ -346,20 +348,20 @@ local function TriggerOnLeave(node) TriggerScript(node, 'OnLeave', SafeOnLeave) 
 local Node = {
 	-- Compares distance between nodes for eligibility when filtering cached nodes
 	distance = {
-		[KEY.UP] 	= function(_, destY, horz, vert, _, thisY) return (vert > horz and destY > thisY) end;
-		[KEY.DOWN] 	= function(_, destY, horz, vert, _, thisY) return (vert > horz and destY < thisY) end;
-		[KEY.LEFT] 	= function(destX, _, horz, vert, thisX, _) return (vert < horz and destX < thisX) end;
+		[KEY.UP]    = function(_, destY, horz, vert, _, thisY) return (vert > horz and destY > thisY) end;
+		[KEY.DOWN]  = function(_, destY, horz, vert, _, thisY) return (vert > horz and destY < thisY) end;
+		[KEY.LEFT]  = function(destX, _, horz, vert, thisX, _) return (vert < horz and destX < thisX) end;
 		[KEY.RIGHT] = function(destX, _, horz, vert, thisX, _) return (vert < horz and destX > thisX) end;
 	};
 	-- Compares more generally to catch any nodes located in a given direction
 	direction = {
-		[KEY.UP] 	= function(_, destY, _, _, _, thisY) return (destY > thisY) end;
-		[KEY.DOWN] 	= function(_, destY, _, _, _, thisY) return (destY < thisY) end;
-		[KEY.LEFT] 	= function(destX, _, _, _, thisX, _) return (destX < thisX) end;
-		[KEY.RIGHT]	= function(destX, _, _, _, thisX, _) return (destX > thisX) end;
+		[KEY.UP]    = function(_, destY, _, _, _, thisY) return (destY > thisY) end;
+		[KEY.DOWN]  = function(_, destY, _, _, _, thisY) return (destY < thisY) end;
+		[KEY.LEFT]  = function(destX, _, _, _, thisX, _) return (destX < thisX) end;
+		[KEY.RIGHT] = function(destX, _, _, _, thisX, _) return (destX > thisX) end;
 	};
-	cache = {};	-- Temporary node cache when calculating cursor movement
-	scalar = 3; -- Plane scalar to improve intuitive node selection (offset manhattan in secondary plane)
+	cache = {}; -- Temporary node cache when calculating cursor movement
+	scalar = 3; -- Manhattan distance: scale primary plane to improve intuitive node selection
 }
 
 local rectIntersect, vec2Dlen, abs, huge = UIDoFramesIntersect, Vector2D_GetLength, math.abs, math.huge
@@ -386,36 +388,49 @@ function Node:IsInteractive(node, object)
 end
 
 function Node:IsRelevant(node)
-	return not node.ignoreNode and not node:IsForbidden() and node:IsVisible()
+	return node and not node.ignoreNode and not node:IsForbidden() and node:IsVisible()
 end
 
-function Node:IsDrawn(node, scrollFrame)
+function Node:IsTree(node)
+	return not node.ignoreChildren
+end
+
+function Node:GetSuperNode(super, node)
+	return node:IsObjectType('ScrollFrame') and node or super
+end
+
+function Node:IsDrawn(node, super)
 	local x, y = node:GetCenter()
 	if 	x and x <= MAX_WIDTH and x >= 0 and
 		y and y <= MAX_HEIGHT and y >= 0 then
-		if scrollFrame and scrollFrame:GetScrollChild() and not node:IsObjectType('Slider') then
-			return rectIntersect(node, scrollFrame) --or rectIntersect(node, scrollChild)
+		if super and super:GetScrollChild() and not node:IsObjectType('Slider') then
+			return rectIntersect(node, super) --or rectIntersect(node, scrollChild)
 		else
 			return true
 		end
 	end
 end
 
-function Node:Refresh(node, scrollFrame)
+function Node:CacheItem(node, object, super)
+	tinsert(self.cache, node.hasPriority and 1 or #self.cache + 1, {
+		node   = node;
+		object = object;
+		super  = super;
+	});
+end
+
+function Node:Scan(super, node, sibling, ...)
 	if self:IsRelevant(node) then
 		local object = node:GetObjectType()
-		if 	self:IsInteractive(node, object) and self:IsDrawn(node, scrollFrame) then
-			if node.hasPriority then
-				tinsert(self.cache, 1, {node = node, object = object, scrollFrame = scrollFrame})
-			else
-				self.cache[#self.cache + 1] = {node = node, object = object, scrollFrame = scrollFrame}
-			end
+		if self:IsInteractive(node, object) and self:IsDrawn(node, super) then
+			self:CacheItem(node, object, super)
 		end
-		if 	not node.ignoreChildren then
-			for i, child in ipairs({node:GetChildren()}) do
-				self:Refresh(child, node.GetScrollChild and node or scrollFrame)
-			end
+		if self:IsTree(node) then
+			self:Scan(self:GetSuperNode(super, node), node:GetChildren())
 		end
+	end
+	if sibling then
+		self:Scan(super, sibling, ...)
 	end
 end
 
@@ -423,9 +438,7 @@ function Node:RefreshAll()
 	if IsSafe() then
 		self:Clear()
 		ClearOverride(Cursor)
-		for frame in ConsolePort:GetFrameStack() do
-			self:Refresh(frame)
-		end
+		self:Scan(nil, ConsolePort:GetVisibleCursorFrames())
 		self:SetCurrent()
 	end
 end
@@ -508,7 +521,7 @@ function Node:GetScrollButtons(node)
 	end
 end
 
-function Node:Select(node, object, scrollFrame, state)
+function Node:Select(node, object, super, state)
 	local name = node.direction and node:GetName()
 	local override
 	if IsClickable[object] then
@@ -523,8 +536,8 @@ function Node:Select(node, object, scrollFrame, state)
 	-- If this node has a forbidden dropdown value, override macro instead.
 	local macro = DropDownMacros[node.value]
 
-	if scrollFrame and not scrollFrame.ignoreScroll and not IsShiftKeyDown() and not IsControlKeyDown() then
-		Scroll:To(node, scrollFrame)
+	if super and not super.ignoreScroll and not IsShiftKeyDown() and not IsControlKeyDown() then
+		Scroll:To(node, super)
 	end
 
 	if not Cursor.InsecureMode then
@@ -555,38 +568,31 @@ end
 function Node:SetCurrent()	
 	if old and old.node:IsVisible() and Node:IsDrawn(old.node) then
 		current = old
-	elseif ( not current and #self.cache > 0 ) or ( current and #self.cache > 0 and not current.node:IsVisible() ) then
-		local x, y, targetNode = Cursor:GetCenter()
+	elseif #self.cache > 0 and (not current or not current.node:IsVisible()) then
+		local x, y, targNode = Cursor:GetCenter()
 		if not x or not y then
-			targetNode = self.cache[1]
+			targNode = self.cache[1]
 		else
-			local targetDistance, targetParent, newDistance, newParent, swap, thisX, thisY
-			for i, this in ipairs(self.cache) do swap = false
+			local targDist, targPrio
+			for _, this in ipairs(self.cache) do
+				local thisX, thisY = this.node:GetCenter()
+				local thisDist = abs(x - thisX) + abs(y - thisY)
+				local thisPrio = this.node.hasPriority
 
-				thisX, thisY = this.node:GetCenter()
-				newDistance = abs( x - thisX ) + abs( y - thisY )
-				newParent = this.node:GetParent()
-				-- if no target node exists yet, just assign it
-				if not targetNode then
-					swap = true
-				elseif this.node.hasPriority and not targetNode.node.hasPriority then
-					targetNode = this
+				if thisPrio and not targPrio then
+					targNode = this
 					break
-				elseif not targetNode.node.hasPriority and newDistance < targetDistance then
-					swap = true
+				elseif not targNode or ( not targPrio and thisDist < targDist ) then
+					targNode = this
+					targDist = thisDist
+					targPrio = thisPrio
 				end
-				if swap then
-					targetNode = this
-					targetDistance = newDistance
-					targetParent = newParent
-				end
-
 			end
 		end
-		current = targetNode
+		current = targNode
 	end
 	if current and current ~= old then
-		self:Select(current.node, current.object, current.scrollFrame, KEY.STATE_UP)
+		self:Select(current.node, current.object, current.super, KEY.STATE_UP)
 	end
 end
 
@@ -594,14 +600,14 @@ end
 -- Scroll management
 ---------------------------------------------------------------
 function Scroll:Offset(elapsed)
-	for scrollFrame, target in pairs(self.Active) do
-		local currHorz, currVert = scrollFrame:GetHorizontalScroll(), scrollFrame:GetVerticalScroll()
-		local maxHorz, maxVert = scrollFrame:GetHorizontalScrollRange(), scrollFrame:GetVerticalScrollRange()
+	for super, target in pairs(self.Active) do
+		local currHorz, currVert = super:GetHorizontalScroll(), super:GetVerticalScroll()
+		local maxHorz, maxVert = super:GetHorizontalScrollRange(), super:GetVerticalScrollRange()
 		-- close enough, stop scrolling and set to target
 		if ( abs(currHorz - target.horz) < 2 ) and ( abs(currVert - target.vert) < 2 ) then
-			scrollFrame:SetVerticalScroll(target.vert)
-			scrollFrame:SetHorizontalScroll(target.horz)
-			self.Active[scrollFrame] = nil
+			super:SetVerticalScroll(target.vert)
+			super:SetHorizontalScroll(target.horz)
+			self.Active[super] = nil
 			return
 		end
 		local deltaX, deltaY = ( currHorz > target.horz and -1 or 1 ), ( currVert > target.vert and -1 or 1 )
@@ -610,23 +616,23 @@ function Scroll:Offset(elapsed)
 
 	--	print(currHorz, target.horz, newX)
 
-		scrollFrame:SetVerticalScroll(newY < 0 and 0 or newY > maxVert and maxVert or newY)
-		scrollFrame:SetHorizontalScroll(newX < 0 and 0 or newX > maxHorz and maxHorz or newX)
+		super:SetVerticalScroll(newY < 0 and 0 or newY > maxVert and maxVert or newY)
+		super:SetHorizontalScroll(newX < 0 and 0 or newX > maxHorz and maxHorz or newX)
 	end
 	if not next(self.Active) then
 		self:SetScript("OnUpdate", nil)
 	end
 end
 
-function Scroll:To(node, scrollFrame)
+function Scroll:To(node, super)
 	local nodeX, nodeY = node:GetCenter()
-	local scrollX, scrollY = scrollFrame:GetCenter()
+	local scrollX, scrollY = super:GetCenter()
 	if nodeY and scrollY then
 
 		-- make sure this isn't a hybrid scroll frame
-		if scrollFrame:GetScript("OnLoad") ~= hybridScroll then
-			local currHorz, currVert = scrollFrame:GetHorizontalScroll(), scrollFrame:GetVerticalScroll()
-			local maxHorz, maxVert = scrollFrame:GetHorizontalScrollRange(), scrollFrame:GetVerticalScrollRange()
+		if super:GetScript("OnLoad") ~= hybridScroll then
+			local currHorz, currVert = super:GetHorizontalScroll(), super:GetVerticalScroll()
+			local maxHorz, maxVert = super:GetHorizontalScrollRange(), super:GetVerticalScrollRange()
 
 			local newVert = currVert + (scrollY - nodeY)
 			local newHorz = 0
@@ -638,7 +644,7 @@ function Scroll:To(node, scrollFrame)
 				self.Active = {}
 			end
 
-			self.Active[scrollFrame] = {
+			self.Active[super] = {
 				vert = newVert < 0 and 0 or newVert > maxVert and maxVert or newVert,
 				horz = newHorz < 0 and 0 or newHorz > maxHorz and maxHorz or newHorz,
 			}
@@ -772,7 +778,7 @@ function Cursor:MODIFIER_STATE_CHANGED()
 		if 	current and
 			(self.Scroll == M1 and IsShiftKeyDown()) or
 			(self.Scroll == M2 and IsControlKeyDown()) then
-			self:SetTexture(self.ScrollGuide)
+			self:SetTexture(self.Modifier)
 		else
 			self:SetTexture()
 		end
@@ -848,7 +854,7 @@ function ConsolePort:UIControl(key, state)
 	end
 	local node = current and current.node
 	if node then
-		Node:Select(node, current.object, current.scrollFrame, state)
+		Node:Select(node, current.object, current.super, state)
 		if state == KEY.STATE_DOWN or state == nil then
 			Cursor:SetPosition(node)
 		end
@@ -860,21 +866,20 @@ end
 -- UIControl: Rebinding functions for cursor
 ---------------------------------------------------------------
 local function GetInterfaceButtons()
-	return {
+	return ipairs({
 		CP_L_UP,
 		CP_L_DOWN,
 		CP_L_RIGHT,
 		CP_L_LEFT,
-		_G[db.Mouse.Cursor.Special],
-	}
+		_G[db('Mouse/Cursor/Special')],
+	})
 end
 
 function ConsolePort:SetButtonOverride(enabled)
 	if enabled then
-		local buttons = GetInterfaceButtons()
-		for i, button in ipairs(buttons) do
-			Override:Click(self, button.name, button:GetName(), "LeftButton")
-			button:SetAttribute("type", "UIControl")
+		for _, button in GetInterfaceButtons() do
+			Override:Click(self, button.name, button:GetName(), 'LeftButton')
+			button:SetAttribute('type', 'UIControl')
 		end
 	else
 		self:ClearCursor()
@@ -896,24 +901,25 @@ function ConsolePort:SetupCursor()
 		return
 	end
 
-	Cursor.Special 		= db.Mouse.Cursor.Special
+	local cS = db('Mouse/Cursor/Special')
+	local cL = db('Mouse/Cursor/Left')
+	local cR = db('Mouse/Cursor/Right')
+
+	Cursor.Special 		= cS
 	Cursor.SpecialClick = _G[Cursor.Special]
-	Cursor.SpecialAction = Cursor.SpecialClick.command
+	Cursor.SpecialAction = Cursor.SpecialClick and Cursor.SpecialClick.command
 
-	Cursor.Override = {
-		LeftButton 	= db.Mouse.Cursor.Left,
-		RightButton = db.Mouse.Cursor.Right,
-	}
+	Cursor.Override = {LeftButton = cL, RightButton = cR}
 
-	Cursor.Indicator 	= TEXTURE[db.Mouse.Cursor.Left]
-	Cursor.IndicatorR 	= TEXTURE[db.Mouse.Cursor.Right]
-	Cursor.IndicatorS 	= TEXTURE[db.Mouse.Cursor.Special]
+	Cursor.Indicator  = TEXTURE[cL]
+	Cursor.IndicatorR = TEXTURE[cR]
+	Cursor.IndicatorS = TEXTURE[cS]
 
-	Cursor.Scroll 		= db.Mouse.Cursor.Scroll
-	Cursor.ScrollGuide 	= Cursor.Scroll == M1 and TEXTURE.CP_M1 or TEXTURE.CP_M2
+	Cursor.Scroll     = db('Mouse/Cursor/Scroll')
+	Cursor.Modifier   = Cursor.Scroll == M1 and TEXTURE.CP_M1 or TEXTURE.CP_M2
 
-	Cursor:SetScript("OnHide", Cursor.OnHide)
-	Cursor:SetScript("OnUpdate", Cursor.OnUpdate)
+	Cursor:SetScript('OnHide', Cursor.OnHide)
+	Cursor:SetScript('OnUpdate', Cursor.OnUpdate)
 end
 ---------------------------------------------------------------
 do
@@ -934,9 +940,9 @@ do
 	end
 
 	-- Convenience references to animations
-	Cursor.Translate 	= Cursor.MoveAndScale.Translate
-	Cursor.Enlarge 		= Cursor.MoveAndScale.Enlarge
-	Cursor.Shrink 		= Cursor.MoveAndScale.Shrink
+	Cursor.Translate = Cursor.MoveAndScale.Translate
+	Cursor.Enlarge   = Cursor.MoveAndScale.Enlarge
+	Cursor.Shrink    = Cursor.MoveAndScale.Shrink
 end
 ---------------------------------------------------------------
 
@@ -956,5 +962,5 @@ end
 StepL.delta = -1
 StepR.delta = 1
 
-StepL:SetScript("OnClick", StepOnClick)
-StepR:SetScript("OnClick", StepOnClick)
+StepL:SetScript('OnClick', StepOnClick)
+StepR:SetScript('OnClick', StepOnClick)

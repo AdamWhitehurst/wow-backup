@@ -578,6 +578,12 @@ function Storyline_API.playNext(targetModel)
 	end
 end
 
+local function isQuestCampaignQuest(questId)
+	-- Special quest with sealed background
+	local questID = GetQuestID()
+	return SEAL_QUESTS[questID] ~= nil or (C_CampaignInfo.IsCampaignQuest(questID) and not EXCEPTION_QUESTS[questID])
+end
+
 local specialFrameBackgroundTransitionator = Ellyb.Transitionator();
 local function fadeInSpecialFrameBackground(value)
 	frameSpecialAtlas:SetAlpha(value);
@@ -610,6 +616,27 @@ local function displaySpecialDetails()
 		frameBackground:SetAlpha(0)
 	end
 end
+
+local function displaySpecialBackgrounds()
+	-- Do not display zone dynamic backgrounds for campaign quests
+	if isQuestCampaignQuest(GetQuestID()) then return end
+
+	if not Storyline_Data.config.dynamicBackgrounds then
+		Storyline_API.hideDynamicBackground()
+		Storyline_NPCFrameBG:Show()
+		return
+	end
+	local dynamicBackground = Storyline_API.DynamicBackgroundsManager.getCustomBackgroundForPlayer()
+
+	if dynamicBackground then
+		Storyline_API.DynamicBackgroundsManager.setDynamicBackground(dynamicBackground)
+		Storyline_NPCFrameBG:Hide()
+	else
+		Storyline_API.DynamicBackgroundsManager.hideDynamicBackground()
+		Storyline_NPCFrameBG:Show()
+	end
+end
+Storyline_API.displaySpecialBackgrounds = displaySpecialBackgrounds
 
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 -- INIT
@@ -722,6 +749,13 @@ function Storyline_API.initEventsStructure()
 					else
 						Storyline_NPCFrameChatNextText:SetText(loc("SL_CONTINUE"));
 					end
+
+					local rewards = Rewards.getRewards();
+					-- If we have rewards to choose, show tutorial
+					if  tsize(rewards[Rewards.BUCKET_TYPES.CHOICE]) > 0 then
+						Storyline_API.Tutorials.trigger("RewardChoice");
+					end
+
 				elseif GetNumQuestChoices() == 1 then
 					GetQuestReward(1);
 					autoEquip(GetQuestItemLink("choice", 1));
@@ -745,7 +779,7 @@ function Storyline_API.initEventsStructure()
 				local firstChoice, bucketType, index = Dialogs.getFirstChoice(Dialogs.EVENT_TYPES.GOSSIP_SHOW);
 
 				if firstChoice and Dialogs.getDialogChoiceSelectorForEventType(Dialogs.EVENT_TYPES.GOSSIP_SHOW, bucketType) then
-					debug(("GOSSIP_SHOW – Finish method : Using selector method found for bucket type %s at index %s."):format(bucketType, index));
+					debug(("GOSSIP_SHOW – Finish method : Using selector method found for bucket type %s at index %s."):format(tostring(bucketType), tostring(index)));
 					Dialogs.getDialogChoiceSelectorForEventType(Dialogs.EVENT_TYPES.GOSSIP_SHOW, bucketType)(index);
 				else
 					debug("GOSSIP_SHOW – Finish method : No valid options found, fallback to closing dialog.");
@@ -815,6 +849,7 @@ function Storyline_API.initEventsStructure()
 				end
 			end
 
+			displaySpecialBackgrounds()
 			if event == "QUEST_DETAIL" or event == "QUEST_COMPLETE" then
 				displaySpecialDetails();
 			end
@@ -877,4 +912,34 @@ function Storyline_API.initEventsStructure()
 
 	Storyline_NPCFrameObjectivesContent:SetScript("OnMouseDown", goBackOnRightClick);
 	Storyline_NPCFrameRewards.Content:SetScript("OnMouseDown", goBackOnRightClick);
+
+	--- Tutorials
+
+	Storyline_API.Tutorials.register("RewardChoice", {
+		{
+			text = loc("TUTORIAL_REWARD_CHOICES"):format(
+				Ellyb.System:FormatKeyboardShortcut(Ellyb.System.MODIFIERS.CTRL, Ellyb.System.CLICKS.CLICK),
+				Ellyb.System:FormatKeyboardShortcut(Ellyb.System.MODIFIERS.SHIFT, Ellyb.System.CLICKS.CLICK)
+			),
+			point = 'LEFT',
+			relPoint = 'RIGHT',
+			anchor = Storyline_NPCFrameRewards.Content,
+			x = 15
+		}
+	});
+
+	Storyline_API.Tutorials.register("ScrollingDialogs", {
+		{
+			text = Storyline_API.locale.getText("TUTORIAL_DIALOG_SCROLL"),
+			point = 'TOP',
+			relPoint = 'BOTTOM',
+			shineRight = 10,
+			shineLeft = -10,
+			shineTop = 6,
+			shineBottom = -15,
+			y = -20,
+			anchor = Storyline_DialogChoicesScrollFrame,
+			shine = Storyline_DialogChoicesScrollFrame
+		}
+	});
 end

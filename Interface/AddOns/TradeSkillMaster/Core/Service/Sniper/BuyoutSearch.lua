@@ -43,19 +43,12 @@ function private.ScanThread(auctionScan)
 	return true
 end
 
-function private.ScanFilter(row)
-	local itemBuyout = row:GetField("itemBuyout")
+function private.ScanFilter(itemString, itemBuyout)
 	if itemBuyout == 0 then
 		return true
 	end
 
-	local itemString = row:GetField("itemString")
-	local _, operationSettings = TSM.Operations.GetFirstOperationByItem("Sniper", itemString)
-	if not operationSettings then
-		return true
-	end
-
-	local maxPrice = TSMAPI_FOUR.CustomPrice.GetValue(operationSettings.belowPrice, itemString)
+	local maxPrice = TSM.Operations.Sniper.GetBelowPrice(itemString)
 	if not maxPrice or itemBuyout > maxPrice then
 		return true
 	end
@@ -64,10 +57,5 @@ function private.ScanFilter(row)
 end
 
 function private.MarketValueFunction(row)
-	local itemString = row:GetField("itemString")
-	local _, operationSettings = TSM.Operations.GetFirstOperationByItem("Sniper", itemString)
-	if not operationSettings then
-		return nil
-	end
-	return TSMAPI_FOUR.CustomPrice.GetValue(operationSettings.belowPrice, itemString)
+	return TSM.Operations.Sniper.GetBelowPrice(row:GetField("itemString"))
 end

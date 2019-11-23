@@ -1,0 +1,12 @@
+tag edfd50ed3dc95242d508d41e7058c4ec5477ea61 v0.2
+Author:	Petr Grabovoy <varren@gmail.com>
+Date:	Fri Aug 24 21:54:15 2018 +0300
+
+Alliance quests added
+
+commit ec3fecfc371ae263d4c1c0bacfd749327b31b1bd
+Author: Petr Grabovoy <varren@gmail.com>
+Date:   Fri Aug 24 21:53:47 2018 +0300
+
+    alliance quests added
+

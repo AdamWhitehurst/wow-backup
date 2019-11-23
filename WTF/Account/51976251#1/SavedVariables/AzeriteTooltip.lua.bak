@@ -1,0 +1,10 @@
+
+AzeriteTooltipDB = {
+	["profileKeys"] = {
+		["Zandro - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

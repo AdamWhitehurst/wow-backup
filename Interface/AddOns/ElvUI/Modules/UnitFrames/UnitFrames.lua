@@ -13,14 +13,13 @@ local strfind, gsub, format = strfind, gsub, format
 local CompactRaidFrameManager_GetSetting = CompactRaidFrameManager_GetSetting
 local CompactRaidFrameManager_SetSetting = CompactRaidFrameManager_SetSetting
 local CompactRaidFrameManager_UpdateShown = CompactRaidFrameManager_UpdateShown
-local SetCVar = SetCVar
 local CreateFrame = CreateFrame
 local GetInstanceInfo = GetInstanceInfo
 local hooksecurefunc = hooksecurefunc
 local InCombatLockdown = InCombatLockdown
 local IsAddOnLoaded = IsAddOnLoaded
-local IsInInstance = IsInInstance
 local RegisterStateDriver = RegisterStateDriver
+local SetCVar = SetCVar
 local UnitFrame_OnEnter = UnitFrame_OnEnter
 local UnitFrame_OnLeave = UnitFrame_OnLeave
 local UnregisterAttributeDriver = UnregisterAttributeDriver
@@ -99,6 +98,11 @@ UF.headerGroupBy = {
 	end,
 	['ROLE'] = function(header)
 		header:SetAttribute("groupingOrder", "TANK,HEALER,DAMAGER,NONE")
+		header:SetAttribute('sortMethod', 'NAME')
+		header:SetAttribute("groupBy", 'ASSIGNEDROLE')
+	end,
+	['ROLE2'] = function(header)
+		header:SetAttribute("groupingOrder", "TANK,DAMAGER,HEALER,NONE")
 		header:SetAttribute('sortMethod', 'NAME')
 		header:SetAttribute("groupBy", 'ASSIGNEDROLE')
 	end,
@@ -321,7 +325,8 @@ function UF:GetAuraAnchorFrame(frame, attachTo, isConflict)
 	if isConflict or attachTo == 'FRAME' then
 		return frame
 	elseif attachTo == 'TRINKET' then
-		if select(2, IsInInstance()) == "arena" then
+		local _, instanceType = GetInstanceInfo()
+		if instanceType == "arena" then
 			return frame.Trinket
 		else
 			return frame.PVPSpecIcon
@@ -372,13 +377,11 @@ function UF:UpdateColors()
 	ElvUF.colors.selection[1] = E:SetColorTable(ElvUF.colors.selection[1], db.selection[1])
 	ElvUF.colors.selection[2] = E:SetColorTable(ElvUF.colors.selection[2], db.selection[2])
 	ElvUF.colors.selection[3] = E:SetColorTable(ElvUF.colors.selection[3], db.selection[3])
-	ElvUF.colors.selection[4] = E:SetColorTable(ElvUF.colors.selection[4], db.selection[4])
 	ElvUF.colors.selection[5] = E:SetColorTable(ElvUF.colors.selection[5], db.selection[5])
 	ElvUF.colors.selection[6] = E:SetColorTable(ElvUF.colors.selection[6], db.selection[6])
 	ElvUF.colors.selection[7] = E:SetColorTable(ElvUF.colors.selection[7], db.selection[7])
 	ElvUF.colors.selection[8] = E:SetColorTable(ElvUF.colors.selection[8], db.selection[8])
 	ElvUF.colors.selection[9] = E:SetColorTable(ElvUF.colors.selection[9], db.selection[9])
-	ElvUF.colors.selection[12] = E:SetColorTable(ElvUF.colors.selection[12], db.selection[12])
 	ElvUF.colors.selection[13] = E:SetColorTable(ElvUF.colors.selection[13], db.selection[13])
 
 	if not ElvUF.colors.ComboPoints then ElvUF.colors.ComboPoints = {} end
@@ -439,17 +442,32 @@ end
 function UF:Update_StatusBars()
 	local statusBarTexture = LSM:Fetch("statusbar", self.db.statusbar)
 	for statusbar in pairs(UF.statusbars) do
-		if statusbar and statusbar:IsObjectType('StatusBar') and not statusbar.isTransparent then
-			statusbar:SetStatusBarTexture(statusBarTexture)
-			if statusbar.texture then statusbar.texture = statusBarTexture end --Update .texture on oUF Power element
-		elseif statusbar and statusbar:IsObjectType('Texture') then
-			statusbar:SetTexture(statusBarTexture)
+		if statusbar then
+			local useBlank = statusbar.isTransparent
+			if statusbar.parent then useBlank = statusbar.parent.isTransparent end
+			if statusbar:IsObjectType('StatusBar') then
+				if not useBlank then
+					statusbar:SetStatusBarTexture(statusBarTexture)
+					if statusbar.texture then statusbar.texture = statusBarTexture end --Update .texture on oUF Power element
+				end
+			elseif statusbar:IsObjectType('Texture') then
+				statusbar:SetTexture(statusBarTexture)
+			end
+
+			UF:Update_StatusBar(statusbar.bg or statusbar.BG, (not useBlank and statusBarTexture) or E.media.blankTex)
 		end
 	end
 end
 
-function UF:Update_StatusBar(bar)
-	bar:SetStatusBarTexture(LSM:Fetch("statusbar", self.db.statusbar))
+function UF:Update_StatusBar(statusbar, texture)
+	if not statusbar then return end
+	if not texture then texture = LSM:Fetch("statusbar", self.db.statusbar) end
+
+	if statusbar:IsObjectType('StatusBar') then
+		statusbar:SetStatusBarTexture(texture)
+	elseif statusbar:IsObjectType('Texture') then
+		statusbar:SetTexture(texture)
+	end
 end
 
 function UF:Update_FontString(object)
@@ -851,12 +869,10 @@ function UF:CreateAndUpdateHeaderGroup(group, groupFilter, template, headerUpdat
 	local raidFilter = UF.db.smartRaidFilter
 	local numGroups = db.numGroups
 	if(raidFilter and numGroups and (self[group] and not self[group].blockVisibilityChanges)) then
-		local inInstance, instanceType = IsInInstance()
-		if(inInstance and (instanceType == 'raid' or instanceType == 'pvp')) then
-			local _, _, _, _, maxPlayers, _, _, instanceMapID = GetInstanceInfo()
-
-			if UF.instanceMapIDs[instanceMapID] then
-				maxPlayers = UF.instanceMapIDs[instanceMapID]
+		local _, instanceType, _, _, maxPlayers, _, _, instanceID = GetInstanceInfo()
+		if instanceType == 'raid' or instanceType == 'pvp' then
+			if UF.instanceMapIDs[instanceID] then
+				maxPlayers = UF.instanceMapIDs[instanceID]
 			end
 
 			if maxPlayers > 0 then
@@ -1026,19 +1042,18 @@ function UF:LoadUnits()
 end
 
 function UF:RegisterRaidDebuffIndicator()
-	local _, instanceType = IsInInstance();
 	local ORD = ns.oUF_RaidDebuffs or _G.oUF_RaidDebuffs
 	if ORD then
 		ORD:ResetDebuffData()
 
-		local instance = E.global.unitframe.raidDebuffIndicator.instanceFilter
-		local other = E.global.unitframe.raidDebuffIndicator.otherFilter
-		local instanceSpells = ((E.global.unitframe.aurafilters[instance] and E.global.unitframe.aurafilters[instance].spells) or E.global.unitframe.aurafilters.RaidDebuffs.spells)
-		local otherSpells = ((E.global.unitframe.aurafilters[other] and E.global.unitframe.aurafilters[other].spells) or E.global.unitframe.aurafilters.CCDebuffs.spells)
-
+		local _, instanceType = GetInstanceInfo()
 		if instanceType == "party" or instanceType == "raid" then
+			local instance = E.global.unitframe.raidDebuffIndicator.instanceFilter
+			local instanceSpells = ((E.global.unitframe.aurafilters[instance] and E.global.unitframe.aurafilters[instance].spells) or E.global.unitframe.aurafilters.RaidDebuffs.spells)
 			ORD:RegisterDebuffs(instanceSpells)
 		else
+			local other = E.global.unitframe.raidDebuffIndicator.otherFilter
+			local otherSpells = ((E.global.unitframe.aurafilters[other] and E.global.unitframe.aurafilters[other].spells) or E.global.unitframe.aurafilters.CCDebuffs.spells)
 			ORD:RegisterDebuffs(otherSpells)
 		end
 	end
@@ -1107,7 +1122,12 @@ end
 local hiddenParent = CreateFrame("Frame", nil, _G.UIParent)
 hiddenParent:SetAllPoints()
 hiddenParent:Hide()
-local HandleFrame = function(baseName)
+
+local function insecureOnShow(self)
+	self:Hide()
+end
+
+local HandleFrame = function(baseName, doNotReparent)
 	local frame
 	if (type(baseName) == 'string') then
 		frame = _G[baseName]
@@ -1119,8 +1139,9 @@ local HandleFrame = function(baseName)
 		frame:UnregisterAllEvents()
 		frame:Hide()
 
-		-- Keep frame hidden without causing taint
-		frame:SetParent(hiddenParent)
+		if(not doNotReparent) then
+			frame:SetParent(hiddenParent)
+		end
 
 		local health = frame.healthBar or frame.healthbar
 		if (health) then
@@ -1212,7 +1233,12 @@ function ElvUF:DisableBlizzard(unit)
 	elseif (unit:match('nameplate%d+$')) then
 		local frame = C_NamePlate_GetNamePlateForUnit(unit)
 		if (frame and frame.UnitFrame) then
-			HandleFrame(frame.UnitFrame)
+			if(not frame.UnitFrame.isHooked) then
+				frame.UnitFrame:HookScript('OnShow', insecureOnShow)
+				frame.UnitFrame.isHooked = true
+			end
+
+			HandleFrame(frame.UnitFrame, true)
 		end
 	end
 end
@@ -1224,15 +1250,15 @@ function UF:ADDON_LOADED(_, addon)
 	self:UnregisterEvent("ADDON_LOADED");
 end
 
-local hasEnteredWorld = false
-function UF:PLAYER_ENTERING_WORLD()
-	if not hasEnteredWorld then
-		--We only want to run Update_AllFrames once when we first log in or /reload
-		UF:Update_AllFrames()
-		hasEnteredWorld = true
-	else
-		local _, instanceType = IsInInstance()
-		if instanceType ~= "none" then
+do
+	local hasEnteredWorld = false
+	function UF:PLAYER_ENTERING_WORLD()
+		local _, instanceType = GetInstanceInfo()
+		if not hasEnteredWorld then
+			--We only want to run Update_AllFrames once when we first log in or /reload
+			UF:Update_AllFrames()
+			hasEnteredWorld = true
+		elseif instanceType ~= "none" then
 			--We need to update headers when we zone into an instance
 			UF:UpdateAllHeaders()
 		end
@@ -1322,26 +1348,84 @@ function UF:MergeUnitSettings(fromUnit, toUnit, isGroupUnit)
 	self:Update_AllFrames()
 end
 
-local function updateColor(self, r, g, b)
-	if not self.isTransparent then return end
-	if self.backdrop then
-		local _, _, _, a = E:GetBackdropColor(self.backdrop)
-		self.backdrop:SetBackdropColor(r * 0.58, g * 0.58, b * 0.58, a)
-	elseif self:GetParent().template then
-		local _, _, _, a = E:GetBackdropColor(self:GetParent())
-		self:GetParent():SetBackdropColor(r * 0.58, g * 0.58, b * 0.58, a)
+function UF:UpdateBackdropTextureColor(r, g, b)
+	local m = 0.35
+	local n = self.isTransparent and (m * 2) or m
+
+	if self.invertColors then
+		local nn = n;n=m;m=nn
 	end
 
-	if self.bg and self.bg:IsObjectType('Texture') and not self.bg.multiplier then
-		self.bg:SetColorTexture(r * 0.35, g * 0.35, b * 0.35)
+	if self.isTransparent then
+		if self.backdrop then
+			local _, _, _, a = E:GetBackdropColor(self.backdrop)
+			self.backdrop:SetBackdropColor(r * n, g * n, b * n, a)
+		else
+			local parent = self:GetParent()
+			if parent and parent.template then
+				local _, _, _, a = E:GetBackdropColor(parent)
+				parent:SetBackdropColor(r * n, g * n, b * n, a)
+			end
+		end
+	end
+
+	local bg = self.bg or self.BG
+	if bg and bg:IsObjectType('Texture') and not bg.multiplier then
+		if self.custom_backdrop then
+			bg:SetVertexColor(self.custom_backdrop.r, self.custom_backdrop.g, self.custom_backdrop.b)
+		else
+			bg:SetVertexColor(r * m, g * m, b * m)
+		end
 	end
 end
 
-function UF:ToggleTransparentStatusBar(isTransparent, statusBar, backdropTex, adjustBackdropPoints, invertBackdropTex, reverseFill)
+function UF:UpdatePredictionStatusBar(prediction, parent, name)
+	if not (prediction and parent) then return end
+	local texture = (not parent.isTransparent and parent:GetStatusBarTexture():GetTexture()) or E.media.blankTex
+	if name == "Health" then
+		UF:Update_StatusBar(prediction.myBar, texture)
+		UF:Update_StatusBar(prediction.otherBar, texture)
+		UF:Update_StatusBar(prediction.absorbBar, texture)
+		UF:Update_StatusBar(prediction.healAbsorbBar, texture)
+		UF:Update_StatusBar(prediction.overAbsorb, texture)
+		UF:Update_StatusBar(prediction.overHealAbsorb, texture)
+	elseif name == "Power" then
+		UF:Update_StatusBar(prediction.mainBar, texture)
+	end
+end
+
+function UF:SetStatusBarBackdropPoints(statusBar, statusBarTex, backdropTex, statusBarOrientation, reverseFill)
+	backdropTex:ClearAllPoints()
+	if statusBarOrientation == 'VERTICAL' then
+		backdropTex:Point("TOPLEFT", statusBar, "TOPLEFT")
+		backdropTex:Point("BOTTOMLEFT", statusBarTex, "TOPLEFT")
+		backdropTex:Point("BOTTOMRIGHT", statusBarTex, "TOPRIGHT")
+	else
+		if reverseFill then
+			backdropTex:Point("TOPRIGHT", statusBarTex, "TOPLEFT")
+			backdropTex:Point("BOTTOMRIGHT", statusBarTex, "BOTTOMLEFT")
+			backdropTex:Point("BOTTOMLEFT", statusBar, "BOTTOMLEFT")
+		else
+			backdropTex:Point("TOPLEFT", statusBarTex, "TOPRIGHT")
+			backdropTex:Point("BOTTOMLEFT", statusBarTex, "BOTTOMRIGHT")
+			backdropTex:Point("BOTTOMRIGHT", statusBar, "BOTTOMRIGHT")
+		end
+	end
+end
+
+function UF:ToggleTransparentStatusBar(isTransparent, statusBar, backdropTex, adjustBackdropPoints, invertColors, reverseFill)
 	statusBar.isTransparent = isTransparent
+	statusBar.invertColors = invertColors
+	statusBar.backdropTex = backdropTex
 
 	local statusBarTex = statusBar:GetStatusBarTexture()
 	local statusBarOrientation = statusBar:GetOrientation()
+
+	if not statusBar.hookedColor then
+		hooksecurefunc(statusBar, "SetStatusBarColor", UF.UpdateBackdropTextureColor)
+		statusBar.hookedColor = true
+	end
+
 	if isTransparent then
 		if statusBar.backdrop then
 			statusBar.backdrop:SetTemplate("Transparent", nil, nil, nil, true)
@@ -1350,71 +1434,26 @@ function UF:ToggleTransparentStatusBar(isTransparent, statusBar, backdropTex, ad
 		end
 
 		statusBar:SetStatusBarTexture(0, 0, 0, 0)
+		UF:Update_StatusBar(statusBar.bg or statusBar.BG, E.media.blankTex)
+
 		if statusBar.texture then statusBar.texture = statusBar:GetStatusBarTexture() end --Needed for Power element
 
-		backdropTex:ClearAllPoints()
-		if statusBarOrientation == 'VERTICAL' then
-			backdropTex:Point("TOPLEFT", statusBar, "TOPLEFT")
-			backdropTex:Point("BOTTOMLEFT", statusBarTex, "TOPLEFT")
-			backdropTex:Point("BOTTOMRIGHT", statusBarTex, "TOPRIGHT")
-		else
-			if reverseFill then
-				backdropTex:Point("TOPRIGHT", statusBarTex, "TOPLEFT")
-				backdropTex:Point("BOTTOMRIGHT", statusBarTex, "BOTTOMLEFT")
-				backdropTex:Point("BOTTOMLEFT", statusBar, "BOTTOMLEFT")
-			else
-				backdropTex:Point("TOPLEFT", statusBarTex, "TOPRIGHT")
-				backdropTex:Point("BOTTOMLEFT", statusBarTex, "BOTTOMRIGHT")
-				backdropTex:Point("BOTTOMRIGHT", statusBar, "BOTTOMRIGHT")
-			end
-		end
-
-		if invertBackdropTex then
-			backdropTex:Show()
-		end
-
-		if not invertBackdropTex and not statusBar.hookedColor then
-			hooksecurefunc(statusBar, "SetStatusBarColor", updateColor)
-			statusBar.hookedColor = true
-		end
-
-		if backdropTex.multiplier then
-			backdropTex.multiplier = 0.25
-		end
+		UF:SetStatusBarBackdropPoints(statusBar, statusBarTex, backdropTex, statusBarOrientation, reverseFill)
 	else
 		if statusBar.backdrop then
 			statusBar.backdrop:SetTemplate(nil, nil, nil, not statusBar.PostCastStart and self.thinBorders, true)
 		elseif statusBar:GetParent().template then
 			statusBar:GetParent():SetTemplate(nil, nil, nil, self.thinBorders, true)
 		end
-		statusBar:SetStatusBarTexture(LSM:Fetch("statusbar", self.db.statusbar))
+
+		local texture = LSM:Fetch("statusbar", self.db.statusbar)
+		statusBar:SetStatusBarTexture(texture)
+		UF:Update_StatusBar(statusBar.bg or statusBar.BG, texture)
+
 		if statusBar.texture then statusBar.texture = statusBar:GetStatusBarTexture() end
 
 		if adjustBackdropPoints then
-			backdropTex:ClearAllPoints()
-			if statusBarOrientation == 'VERTICAL' then
-				backdropTex:Point("TOPLEFT", statusBar, "TOPLEFT")
-				backdropTex:Point("BOTTOMLEFT", statusBarTex, "TOPLEFT")
-				backdropTex:Point("BOTTOMRIGHT", statusBarTex, "TOPRIGHT")
-			else
-				if reverseFill then
-					backdropTex:Point("TOPRIGHT", statusBarTex, "TOPLEFT")
-					backdropTex:Point("BOTTOMRIGHT", statusBarTex, "BOTTOMLEFT")
-					backdropTex:Point("BOTTOMLEFT", statusBar, "BOTTOMLEFT")
-				else
-					backdropTex:Point("TOPLEFT", statusBarTex, "TOPRIGHT")
-					backdropTex:Point("BOTTOMLEFT", statusBarTex, "BOTTOMRIGHT")
-					backdropTex:Point("BOTTOMRIGHT", statusBar, "BOTTOMRIGHT")
-				end
-			end
-		end
-
-		if invertBackdropTex then
-			backdropTex:Hide()
-		end
-
-		if backdropTex.multiplier then
-			backdropTex.multiplier = 0.25
+			UF:SetStatusBarBackdropPoints(statusBar, statusBarTex, backdropTex, statusBarOrientation, reverseFill)
 		end
 	end
 end
@@ -1480,8 +1519,4 @@ function UF:Initialize()
 	self:UpdateRangeCheckSpells()
 end
 
-local function InitializeCallback()
-	UF:Initialize()
-end
-
-E:RegisterInitialModule(UF:GetName(), InitializeCallback)
+E:RegisterInitialModule(UF:GetName())

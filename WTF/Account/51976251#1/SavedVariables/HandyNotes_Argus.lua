@@ -1,14 +1,25 @@
 
-HandyNotesArgusDB = {
+HandyNotes_ArgusDB = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Brungar - Tichondrius"] = "Default",
-		["Umbrick - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["profiles"] = {
-		["Default"] = {
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Andalsa - Tichondrius"] = {
+		},
+		["Andalsam - Tichondrius"] = {
+		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
 		},
 	},
 }

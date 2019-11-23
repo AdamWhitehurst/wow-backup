@@ -6,13 +6,12 @@ local _G = _G
 local unpack = unpack
 local select = select
 local pairs = pairs
+local rad = math.rad
 --WoW API / Variables
 local CreateFrame = CreateFrame
 local GetItemInfo = GetItemInfo
 local GetItemQualityColor = GetItemQualityColor
 local hooksecurefunc = hooksecurefunc
-
-local rad = math.rad
 
 local function HandleButton(btn, ...)
 	S:HandleButton(btn, ...)
@@ -20,7 +19,6 @@ local function HandleButton(btn, ...)
 		btn:GetFontString():SetTextColor(1, 1, 1)
 	end
 end
-
 
 local function SkinDungeons()
 	local b1 = _G.EncounterJournalInstanceSelectScrollFrameScrollChildInstanceButton1
@@ -108,7 +106,6 @@ local function HandleTabs(tab)
 	tab.SetPoint = E.noop
 end
 
-
 local function SkinAbilitiesInfo()
 	local index = 1
 	local header = _G["EncounterJournalInfoHeader"..index]
@@ -189,7 +186,7 @@ local function LoadSkin()
 	EJ.navBar.backdrop:Point("TOPLEFT", -2, 0)
 	EJ.navBar.backdrop:Point("BOTTOMRIGHT")
 	HandleButton(EJ.navBar.home, true)
-
+	EJ.navBar.home.xoffset = 1
 
 	S:HandleEditBox(EJ.searchBox)
 	EJ.searchBox:ClearAllPoints()
@@ -258,7 +255,6 @@ local function LoadSkin()
 	EncounterInfo.difficulty:StripTextures()
 	EncounterInfo.reset:StripTextures()
 
-
 	--buttons
 	EncounterInfo.difficulty:ClearAllPoints()
 	EncounterInfo.difficulty:Point("BOTTOMRIGHT", _G.EncounterJournalEncounterFrameInfoBG, "TOPRIGHT", -1, 5)
@@ -276,7 +272,6 @@ local function LoadSkin()
 	EncounterInfo.reset:Point("TOPRIGHT", EncounterInfo.difficulty, "TOPLEFT", -10, 0)
 	_G.EncounterJournalEncounterFrameInfoResetButtonTexture:SetTexture("Interface\\EncounterJournal\\UI-EncounterJournalTextures")
 	_G.EncounterJournalEncounterFrameInfoResetButtonTexture:SetTexCoord(0.90625000, 0.94726563, 0.00097656, 0.02050781)
-
 
 	S:HandleScrollBar(EncounterInfo.bossesScroll.ScrollBar, 6)
 	S:HandleScrollBar(_G.EncounterJournalEncounterFrameInstanceFrameLoreScrollFrameScrollBar)
@@ -332,7 +327,6 @@ local function LoadSkin()
 		end
 	end)
 
-
 	-- Loot buttons
 	local items = _G.EncounterJournal.encounter.info.lootScroll.buttons
 	for i = 1, #items do
@@ -373,7 +367,6 @@ local function LoadSkin()
 			item.slot:SetTextColor(1, 1, 1)
 			item.armorType:SetTextColor(1, 1, 1)
 		end
-
 
 		if i == 1 then
 			item:ClearAllPoints()
@@ -512,7 +505,6 @@ local function LoadSkin()
 	local parch = _G.EncounterJournal.LootJournal:GetRegions()
 	_G.EncounterJournal.LootJournal.backdrop:SetOutside(parch)
 
-
 	HandleButton(_G.EncounterJournal.LootJournal.ItemSetsFrame.ClassButton, true)
 	hooksecurefunc(_G.EncounterJournal.LootJournal.ItemSetsFrame, "ConfigureItemButton", ItemSetsFrame)
 
@@ -557,7 +549,6 @@ local function LoadSkin()
 
 		parch:Kill()
 	end
-
 end
 
 S:AddCallbackForAddon('Blizzard_EncounterJournal', "EncounterJournal", LoadSkin)

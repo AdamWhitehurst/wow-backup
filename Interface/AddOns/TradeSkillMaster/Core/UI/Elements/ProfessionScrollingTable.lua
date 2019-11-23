@@ -13,12 +13,11 @@
 
 local _, TSM = ...
 local L = TSM.L
-local ProfessionScrollingTable = TSMAPI_FOUR.Class.DefineClass("ProfessionScrollingTable", TSM.UI.ScrollingTable)
+local ProfessionScrollingTable = TSM.Include("LibTSMClass").DefineClass("ProfessionScrollingTable", TSM.UI.ScrollingTable)
 TSM.UI.ProfessionScrollingTable = ProfessionScrollingTable
 local private = {
 	rowFrameLookup = {},
 	queryProfessionScrollingTableLookup = {},
-	categoryInfoTemp = {},
 	categoryInfoCache = {
 		parent = {},
 		numIndents = {},
@@ -199,7 +198,7 @@ function ProfessionScrollingTable._GetTableRow(self, isHeader)
 end
 
 function ProfessionScrollingTable._UpdateData(self)
-	local currentCategoryPath = TSMAPI_FOUR.Util.AcquireTempTable()
+	local currentCategoryPath = TSM.TempTable.Acquire()
 	local foundSelection = false
 	-- populate the ScrollList data
 	wipe(self._data)
@@ -207,7 +206,7 @@ function ProfessionScrollingTable._UpdateData(self)
 	for _, spellId, categoryId in self._query:Iterator() do
 		if categoryId ~= currentCategoryPath[#currentCategoryPath] then
 			-- this is a new category
-			local newCategoryPath = TSMAPI_FOUR.Util.AcquireTempTable()
+			local newCategoryPath = TSM.TempTable.Acquire()
 			local currentCategoryId = categoryId
 			while currentCategoryId do
 				tinsert(newCategoryPath, 1, currentCategoryId)
@@ -222,7 +221,7 @@ function ProfessionScrollingTable._UpdateData(self)
 					end
 				end
 			end
-			TSMAPI_FOUR.Util.ReleaseTempTable(currentCategoryPath)
+			TSM.TempTable.Release(currentCategoryPath)
 			currentCategoryPath = newCategoryPath
 		end
 		foundSelection = foundSelection or spellId == self:GetSelection()
@@ -231,7 +230,7 @@ function ProfessionScrollingTable._UpdateData(self)
 			self._isSpellId[spellId] = true
 		end
 	end
-	TSMAPI_FOUR.Util.ReleaseTempTable(currentCategoryPath)
+	TSM.TempTable.Release(currentCategoryPath)
 	if not foundSelection then
 		self:SetSelection()
 	end
@@ -294,12 +293,10 @@ end
 function private.PopulateCategoryInfoCache(categoryId)
 	-- numIndents always gets set, so use that to know whether or not this category is already cached
 	if not private.categoryInfoCache.numIndents[categoryId] then
-		C_TradeSkillUI.GetCategoryInfo(categoryId, private.categoryInfoTemp)
-		private.categoryInfoCache.parent[categoryId] = private.categoryInfoTemp.numIndents ~= 0 and private.categoryInfoTemp.parentCategoryID or nil
-		private.categoryInfoCache.numIndents[categoryId] = private.categoryInfoTemp.numIndents
-		private.categoryInfoCache.name[categoryId] = private.categoryInfoTemp.name
-		assert(private.categoryInfoCache.numIndents[categoryId])
-		wipe(private.categoryInfoTemp)
+		local name, numIndents, parentCategoryId = TSM.Crafting.ProfessionUtil.GetCategoryInfo(categoryId)
+		private.categoryInfoCache.name[categoryId] = name
+		private.categoryInfoCache.numIndents[categoryId] = numIndents
+		private.categoryInfoCache.parent[categoryId] = parentCategoryId
 	end
 end
 
@@ -326,9 +323,9 @@ function private.GetNameCellText(self, data)
 	if self._isSpellId[data] then
 		local name = TSM.Crafting.ProfessionScanner.GetNameBySpellId(data)
 		local color = nil
-		if C_TradeSkillUI.IsTradeSkillGuild() then
+		if TSM.Crafting.ProfessionUtil.IsGuildProfession() then
 			color = RECIPE_COLORS.easy
-		elseif C_TradeSkillUI.IsNPCCrafting() then
+		elseif TSM.Crafting.ProfessionUtil.IsNPCProfession() then
 			color = RECIPE_COLORS.nodifficulty
 		else
 			local difficulty = TSM.Crafting.ProfessionScanner.GetDifficultyBySpellId(data)

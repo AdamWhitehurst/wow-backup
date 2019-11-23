@@ -38,11 +38,11 @@ function TourGuideFrameMixin:OnLoad()
     }
     self.portrait:SetTexture("Interface\\AddOns\\TomCats-ChildrensWeek\\images\\cw-icon")
     self.portrait:SetTexCoord(0, 1, 0, 1)
-    PortraitFrameTemplate_SetTitle(self, "TomCat's Tours: Children's Week");
+    self:SetTitle("TomCat's Tours: Children's Week");
 end
 
 function TourGuideFrameMixin:OnShow()
-    if ("1.0.5" ~= AP["lastVersionSeen"]) then
-        AP["lastVersionSeen"] = "1.0.5"
+    if ("1.0.6" ~= AP["lastVersionSeen"]) then
+        AP["lastVersionSeen"] = "1.0.6"
     end
 end

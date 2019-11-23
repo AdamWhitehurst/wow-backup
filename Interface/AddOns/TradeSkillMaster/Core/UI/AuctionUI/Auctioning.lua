@@ -27,11 +27,6 @@ local DEFAULT_TAB_GROUP_CONTEXT = {
 }
 -- TODO: these should eventually go in the saved variables
 private.dividedContainerContext = {}
-local AUCTION_DURATIONS = {
-	AUCTION_DURATION_ONE,
-	AUCTION_DURATION_TWO,
-	AUCTION_DURATION_THREE,
-}
 
 
 
@@ -406,7 +401,7 @@ function private.GetAuctioningScanFrame()
 						:SetStyle("fontHeight", 12)
 						:SetStyle("openFont", TSM.UI.Fonts.RobotoMedium)
 						:SetStyle("openFontHeight", 12)
-						:SetItems(AUCTION_DURATIONS)
+						:SetItems(TSM.CONST.AUCTION_DURATIONS)
 						:SetScript("OnSelectionChanged", private.DurationOnSelectionChanged)
 					)
 				)
@@ -761,7 +756,7 @@ function private.BidBuyoutTextOnValueChanged(text, value)
 end
 
 function private.DurationOnSelectionChanged(dropdown, value)
-	local postTime = TSMAPI_FOUR.Util.GetDistinctTableKey(AUCTION_DURATIONS, value)
+	local postTime = TSM.Table.GetDistinctKey(TSM.CONST.AUCTION_DURATIONS, value)
 	private.fsm:ProcessEvent("EV_POST_DETAIL_CHANGED", "postTime", postTime)
 end
 
@@ -783,10 +778,10 @@ function private.FSMCreate()
 		scanProgressText = L["Starting Scan..."],
 	}
 	private.scanQuery = fsmContext.db:NewQuery()
-	TSMAPI_FOUR.Event.Register("AUCTION_HOUSE_CLOSED", function()
+	TSM.Event.Register("AUCTION_HOUSE_CLOSED", function()
 		private.fsm:ProcessEvent("EV_AUCTION_HOUSE_CLOSED")
 	end)
-	TSMAPI_FOUR.Event.Register("CHAT_MSG_SYSTEM", function(_, msg)
+	TSM.Event.Register("CHAT_MSG_SYSTEM", function(_, msg)
 		if msg == ERR_AUCTION_STARTED then
 			private.fsm:ProcessEvent("EV_AUCTION_POST_CONFIRM", true)
 		elseif msg == ERR_AUCTION_REMOVED then
@@ -805,7 +800,7 @@ function private.FSMCreate()
 		[ERR_AUCTION_BAG] = false,
 		[ERR_NOT_ENOUGH_MONEY] = false,
 	}
-	TSMAPI_FOUR.Event.Register("UI_ERROR_MESSAGE", function(_, _, msg)
+	TSM.Event.Register("UI_ERROR_MESSAGE", function(_, _, msg)
 		if POST_ERR_MSGS[msg] ~= nil then
 			private.fsm:ProcessEvent("EV_AUCTION_POST_CONFIRM", false, POST_ERR_MSGS[msg])
 		end
@@ -843,17 +838,7 @@ function private.FSMCreate()
 			ClearCursor()
 		end
 
-		local postTime = detailsHeader2:GetElement("duration.dropdown"):GetSelection()
-		if postTime == AUCTION_DURATION_ONE then
-			postTime = 1
-		elseif postTime == AUCTION_DURATION_TWO then
-			postTime = 2
-		elseif postTime == AUCTION_DURATION_THREE then
-			postTime = 3
-		else
-			error("Invalid post time")
-		end
-
+		local postTime = TSM.Table.GetDistinctKey(TSM.CONST.AUCTION_DURATIONS, detailsHeader2:GetElement("duration.dropdown"):GetSelection())
 		local bid = TSM.Money.FromString(detailsHeader1:GetElement("bid.text"):GetText())
 		local buyout = TSM.Money.FromString(detailsHeader1:GetElement("buyout.text"):GetText())
 		local stackSize = tonumber(currentRow:GetField("stackSize"))
@@ -931,7 +916,7 @@ function private.FSMCreate()
 					:Draw()
 				detailsHeader2:GetElement("duration.dropdown")
 					:SetDisabled(false)
-					:SetSelection(AUCTION_DURATIONS[currentRow:GetField("postTime")])
+					:SetSelection(TSM.CONST.AUCTION_DURATIONS[currentRow:GetField("postTime")])
 					:Draw()
 
 				if context.itemString ~= itemString then
@@ -1101,11 +1086,11 @@ function private.FSMCreate()
 			:AddTransition("ST_INIT")
 			:AddEvent("EV_SCAN_PROGRESS_UPDATE", TSMAPI_FOUR.FSM.SimpleTransitionEventHandler("ST_UPDATING_SCAN_PROGRESS"))
 			:AddEvent("EV_SCAN_COMPLETE", function(context)
-				TSMAPI_FOUR.Sound.PlaySound(TSM.db.global.auctioningOptions.scanCompleteSound)
+				TSM.Sound.PlaySound(TSM.db.global.auctioningOptions.scanCompleteSound)
 				return "ST_RESULTS"
 			end)
 			:AddEvent("EV_STOP_BUTTON_CLICKED", function(context)
-				TSMAPI_FOUR.Sound.PlaySound(TSM.db.global.auctioningOptions.scanCompleteSound)
+				TSM.Sound.PlaySound(TSM.db.global.auctioningOptions.scanCompleteSound)
 				return "ST_RESULTS"
 			end)
 		)
@@ -1223,7 +1208,7 @@ function private.FSMCreate()
 		:AddState(TSMAPI_FOUR.FSM.NewState("ST_DONE")
 			:SetOnEnter(function(context)
 				GetOwnerAuctionItems()
-				TSMAPI_FOUR.Sound.PlaySound(TSM.db.global.auctioningOptions.confirmCompleteSound)
+				TSM.Sound.PlaySound(TSM.db.global.auctioningOptions.confirmCompleteSound)
 				UpdateScanFrame(context)
 			end)
 			:AddTransition("ST_INIT")

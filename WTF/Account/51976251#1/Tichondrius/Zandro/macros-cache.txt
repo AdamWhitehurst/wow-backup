@@ -8,9 +8,23 @@ VER 3 0100000000000001 "Chi" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [talent:1/2] Chi Wave; [talent:1/3] Chi Burst;
 END
+VER 3 0100000000000006 "expel claw" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast 
+END
 VER 3 0100000000000002 "Fist" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /Cast Fist of the White Tiger
+END
+VER 3 0100000000000005 "Reverse Harm Sel" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopmacro [channeling:Fists of Fury]
+/stopcasting [channeling:Crackling Jade Lightning]
+/cast [talent:3/2] Fist of the White Tiger; [talent:3/3] Energizing Elixir; [@targettarget,exists,noharm] Reverse Harm; [@player] Reverse Harm
+END
+VER 3 0100000000000007 "Self RoP" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@player] Ring of Peace
 END
 VER 3 0100000000000003 "Vivify" "INV_MISC_QUESTIONMARK"
 #showtooltip

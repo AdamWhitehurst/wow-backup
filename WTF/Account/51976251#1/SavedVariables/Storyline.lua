@@ -1,40 +1,41 @@
 
 Storyline_Data = {
 	["config"] = {
+		["dynamicBackgrounds"] = true,
 		["disableInInstances"] = false,
-		["textSpeedFactor"] = 0.5,
+		["textSpeedFactor"] = 0,
 		["useLayoutEngine"] = false,
 		["QuestTitle"] = {
-			["Font"] = "Anime Ace Bold",
 			["Size"] = 15,
+			["Font"] = "Anime Ace Bold",
 		},
 		["locale"] = "enUS",
 		["DialogText"] = {
+			["Size"] = 24,
 			["Font"] = "Sriracha",
-			["Size"] = 20,
 		},
 		["disableInDMF"] = false,
 		["useKeyboard"] = true,
 		["NPCName"] = {
-			["Font"] = "Anime Ace",
 			["Size"] = 16,
+			["Font"] = "Anime Ace",
 		},
 		["forceGossip"] = false,
-		["width"] = 940.79931640625,
-		["debug"] = false,
-		["autoEquip"] = false,
+		["width"] = 1146.783325195313,
+		["NextAction"] = {
+			["Size"] = 14,
+			["Font"] = "Sriracha",
+		},
+		["hideOriginalFrames"] = true,
+		["lockFrame"] = true,
+		["height"] = 745.3701171875,
 		["DialogOptions"] = {
 			["Outline"] = "",
 			["Font"] = "Sriracha",
-			["Size"] = 15,
+			["Size"] = 18,
 		},
-		["height"] = 630.825439453125,
-		["lockFrame"] = true,
-		["hideOriginalFrames"] = true,
-		["NextAction"] = {
-			["Font"] = "Sriracha",
-			["Size"] = 13,
-		},
+		["autoEquip"] = false,
+		["debug"] = false,
 	},
 	["customscale"] = {
 		["personal"] = {

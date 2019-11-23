@@ -1,8 +1,8 @@
-## Interface: 80100
+## Interface: 80200
 ## Title: TomCat's Tours: Rares of Arathi Highlands (Warfront on Stromgarde)
 ## Author: TomCat
 ## X-Website: http://www.everythingwarcraft.com
-## Version: 1.2.7
+## Version: 1.3.10
 ## DefaultState: enabled
 ## SavedVariablesPerCharacter: TomCats_ArathiHighlandsRares_Character
 ## OptionalDeps: TomCats,HandyNotes

@@ -1,4 +1,4 @@
-if GetLocale() ~= "frFR" then return end
+﻿if GetLocale() ~= "frFR" then return end
 if not DBM_GUI_Translations then DBM_GUI_Translations = {} end
 local L = DBM_GUI_Translations
 
@@ -106,7 +106,6 @@ L.ShowGuildMessages 		= "Afficher les messages engagement/victoire/défaite en g
 L.ShowRecoveryMessage 		= "Afficher les messages de récupération des timers dans la fenêtre de chat"
 L.WhisperMessages			= "Options des chuchotements"
 L.AutoRespond 				= "Répondre automatiquement aux chuchotements pendant les combats"
-L.EnableStatus 				= "Répondre aux chuchotements de 'statut'"
 L.WhisperStats 				= "Inclure les victoires/défaites dans les réponses"
 L.DisableStatusWhisper 		= "Désactiver les chuchotements de statut pour le groupe entier (requiert Chef de groupe). S'appplique seulement aux raids normaux/heroïques/mythiques et aux donjons défis/mythiques."
 

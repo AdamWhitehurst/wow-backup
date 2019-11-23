@@ -4,7 +4,6 @@ D["Creatures by Vignette GUID"] = { }
 local creaturesByVignetteGUID = D["Creatures by Vignette GUID"]
 D["Creatures by Vignette ID"] = { }
 local creaturesByVignetteID = D["Creatures by Vignette ID"]
-
 local vignetteTemplate = {
     hasTooltip = true,
     inFogOfWar = false,
@@ -13,7 +12,6 @@ local vignetteTemplate = {
     rewardQuestID = 0,
     type = 0,
 }
-
 function addon.addOrUpdateVignetteInfo(creature)
     if (creature["Vignette ID"]) then
         if (not creaturesByVignetteID[creature["Vignette ID"]]) then
@@ -52,17 +50,15 @@ function addon.addOrUpdateVignetteInfo(creature)
         creature["Vignette Info"] = vignetteInfo
     end
 end
-
 for _, creature in pairs(D.Creatures.records) do
     addon.addOrUpdateVignetteInfo(creature)
 end
-
 local function CreaturesVignetteInfo_AfterUpdate()
-    for mapcanvas in pairs(D["Map Canvases"]) do
-        if (mapcanvas:GetMapID() == P["Vignette MapID"]) then
+    for _, mapcanvasName in pairs(D["Map Canvases"]) do
+        local mapcanvas = _G[mapcanvasName]
+        if (mapcanvas and mapcanvas:GetMapID() == P["Vignette MapID"]) then
             mapcanvas:OnEvent("VIGNETTES_UPDATED")
         end
     end
 end
-
 D["Creatures"]:SetAfterUpdate("Vignette Info", CreaturesVignetteInfo_AfterUpdate)

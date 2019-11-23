@@ -2,6 +2,11 @@ if GetLocale() ~= "koKR" then return end
 local L
 
 -----------------------
+-- Grand Empress Shek'zara --
+-----------------------
+L= DBM:GetModLocalization(2378)
+
+-----------------------
 -- T'zane --
 -----------------------
 L= DBM:GetModLocalization(2139)
@@ -54,3 +59,12 @@ L= DBM:GetModLocalization(2362)
 -- Wekemara --
 -----------------------
 L= DBM:GetModLocalization(2363)
+
+---------
+--Warfront: Arathi--
+---------
+L = DBM:GetModLocalization("WarfrontArathi")
+
+L:SetGeneralLocalization({
+	name =	"격전지: 아라시"
+})

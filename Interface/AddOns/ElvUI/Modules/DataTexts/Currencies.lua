@@ -3,8 +3,7 @@ local DT = E:GetModule('DataTexts')
 
 --Lua functions
 local _G = _G
-local select, pairs = select, pairs
-local format = string.format
+local format, select, pairs = format, select, pairs
 --WoW API / Variables
 local GetCurrencyInfo = GetCurrencyInfo
 local GetMoney = GetMoney
@@ -24,6 +23,7 @@ local Currencies = {
 	["HONORBOUND_SERVICE_MEDAL"] = {ID = 1716, NAME = GetCurrencyInfo(1716), ICON = format(iconString, select(3, GetCurrencyInfo(1716)))},
 	["7TH_LEGION_SERVICE_MEDAL"] = {ID = 1717, NAME = GetCurrencyInfo(1717), ICON = format(iconString, select(3, GetCurrencyInfo(1717)))},
 	["TITAN_RESIDUUM"] = {ID = 1718, NAME = GetCurrencyInfo(1718), ICON = format(iconString, select(3, GetCurrencyInfo(1718)))},
+	["PRISMATIC_MANAPEARL"] = {ID = 1721, NAME = GetCurrencyInfo(1721), ICON = format(iconString, select(3, GetCurrencyInfo(1721)))},
 	-- Other
 	["DARKMOON_PRIZE_TICKET"] = {ID = 515, NAME = GetCurrencyInfo(515), ICON = format(iconString, select(3, GetCurrencyInfo(515)))},
 }
@@ -76,6 +76,7 @@ local function OnEnter(self)
 		DT.tooltip:AddDoubleLine(Currencies.HONORBOUND_SERVICE_MEDAL.NAME, select(2, GetCurrencyInfo(Currencies.HONORBOUND_SERVICE_MEDAL.ID)), 1, 1, 1)
 	end
 	DT.tooltip:AddDoubleLine(Currencies.TITAN_RESIDUUM.NAME, select(2, GetCurrencyInfo(Currencies.TITAN_RESIDUUM.ID)), 1, 1, 1)
+	DT.tooltip:AddDoubleLine(Currencies.PRISMATIC_MANAPEARL.NAME, select(2, GetCurrencyInfo(Currencies.PRISMATIC_MANAPEARL.ID)), 1, 1, 1)
 	DT.tooltip:AddLine(' ')
 
 	DT.tooltip:AddLine(OTHER)

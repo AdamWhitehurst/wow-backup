@@ -23,7 +23,7 @@ local UnitPowerMax = UnitPowerMax
 local UnitPowerType = UnitPowerType
 
 -- These variables will be left-over when disabled if they were used (for reuse later if they become re-enabled):
----- Fader.anim, Fader.HoverHooked, Fader.TargetHooked
+---- Fader.HoverHooked, Fader.TargetHooked
 
 local E -- ElvUI engine defined in ClearTimers
 local MIN_ALPHA, MAX_ALPHA = .35, 1
@@ -44,25 +44,11 @@ local function ClearTimers(element)
 	end
 end
 
-local function FadeOut(anim, frame, timeToFade, startAlpha, endAlpha)
-	anim.timeToFade = timeToFade
-	anim.startAlpha = startAlpha
-	anim.endAlpha = endAlpha
-
-	E:UIFrameFade(frame, anim)
-end
-
 local function ToggleAlpha(self, element, endAlpha)
 	element:ClearTimers()
 
 	if element.Smooth then
-		if not element.anim then
-			element.anim = { mode = 'OUT' }
-		else
-			element.anim.fadeTimer = nil
-		end
-
-		FadeOut(element.anim, self, element.Smooth, self:GetAlpha(), endAlpha)
+		E:UIFrameFadeOut(self, element.Smooth, self:GetAlpha(), endAlpha)
 	else
 		self:SetAlpha(endAlpha)
 	end
@@ -103,7 +89,7 @@ local function Update(self, _, unit)
 		(element.Health and UnitHealth(unit) < UnitHealthMax(unit)) or
 		(element.Power and (PowerTypesFull[powerType] and UnitPower(unit) < UnitPowerMax(unit))) or
 		(element.Vehicle and UnitHasVehicleUI(unit)) or
-		(element.Hover and (GetMouseFocus() == self))
+		(element.Hover and GetMouseFocus() == (self.__faderobject or self))
 	then
 		ToggleAlpha(self, element, element.MaxAlpha)
 	else
@@ -120,24 +106,24 @@ local function ForceUpdate(element)
 	return Update(element.__owner, "ForceUpdate", element.__owner.unit)
 end
 
-local timer = 0
-local function onRangeUpdate(_, elapsed)
-	timer = timer + elapsed
+local function onRangeUpdate(frame, elapsed)
+	frame.timer = (frame.timer or 0) + elapsed
 
-	if timer >= .20 then
+	if frame.timer >= .20 then
 		for _, object in next, onRangeObjects do
-			if object:IsShown() then
+			if object:IsVisible() then
 				object.Fader:ForceUpdate()
 			end
 		end
 
-		timer = 0
+		frame.timer = 0
 	end
 end
 
 local function HoverScript(self)
-	if self.Fader and self.Fader.HoverHooked == 1 then
-		self.Fader:ForceUpdate()
+	local Fader = self.__faderelement or self.Fader
+	if Fader and Fader.HoverHooked == 1 then
+		Fader:ForceUpdate()
 	end
 end
 
@@ -181,8 +167,9 @@ local options = {
 	Hover = {
 		enable = function(self)
 			if not self.Fader.HoverHooked then
-				self:HookScript('OnEnter', HoverScript)
-				self:HookScript('OnLeave', HoverScript)
+				local Frame = self.__faderobject or self
+				Frame:HookScript('OnEnter', HoverScript)
+				Frame:HookScript('OnLeave', HoverScript)
 			end
 
 			self.Fader.HoverHooked = 1 -- on state
@@ -197,8 +184,9 @@ local options = {
 		enable = function(self)
 			self:RegisterEvent('PLAYER_REGEN_ENABLED', Update, true)
 			self:RegisterEvent('PLAYER_REGEN_DISABLED', Update, true)
+			self:RegisterEvent('UNIT_FLAGS', Update)
 		end,
-		events = {'PLAYER_REGEN_ENABLED','PLAYER_REGEN_DISABLED'}
+		events = {'PLAYER_REGEN_ENABLED','PLAYER_REGEN_DISABLED','UNIT_FLAGS'}
 	},
 	Target = { --[[ UnitTarget, PlayerTarget ]]
 		enable = function(self)
@@ -295,6 +283,11 @@ local function SetOption(element, opt, state)
 		element[opt] = state
 
 		if state then
+			if type(state) == 'table' then
+				state.__faderelement = element
+				element.__owner.__faderobject = state
+			end
+
 			if options[option].enable then
 				options[option].enable(element.__owner, state)
 			end

@@ -10,7 +10,6 @@ local _G = _G
 local CreateFrame = CreateFrame
 local GetInstanceInfo = GetInstanceInfo
 local InCombatLockdown = InCombatLockdown
-local IsInInstance = IsInInstance
 local RegisterStateDriver = RegisterStateDriver
 local UnregisterStateDriver = UnregisterStateDriver
 -- GLOBALS: ElvUF_Raid
@@ -52,6 +51,7 @@ function UF:Construct_RaidFrames()
 	self.ReadyCheckIndicator = UF:Construct_ReadyCheckIcon(self)
 	self.HealthPrediction = UF:Construct_HealComm(self)
 	self.Fader = UF:Construct_Fader()
+	self.Cutaway = UF:Construct_Cutaway(self)
 
 	self.customTexts = {}
 	self.InfoPanel = UF:Construct_InfoPanel(self)
@@ -73,12 +73,10 @@ function UF:RaidSmartVisibility(event)
 
 	if not InCombatLockdown() then
 		self.isInstanceForced = nil
-		local inInstance, instanceType = IsInInstance()
-		if(inInstance and (instanceType == 'raid' or instanceType == 'pvp')) then
-			local _, _, _, _, maxPlayers, _, _, instanceMapID = GetInstanceInfo()
-
-			if UF.instanceMapIDs[instanceMapID] then
-				maxPlayers = UF.instanceMapIDs[instanceMapID]
+		local _, instanceType, _, _, maxPlayers, _, _, instanceID = GetInstanceInfo()
+		if instanceType == 'raid' or instanceType == 'pvp' then
+			if UF.instanceMapIDs[instanceID] then
+				maxPlayers = UF.instanceMapIDs[instanceID]
 			end
 
 			UnregisterStateDriver(self, "visibility")
@@ -239,6 +237,9 @@ function UF:Update_RaidFrames(frame, db)
 
 	-- PhaseIndicator
 	UF:Configure_PhaseIcon(frame)
+
+	--Cutaway
+	UF:Configure_Cutaway(frame)
 
 	frame:UpdateAllElements("ElvUI_UpdateAllElements")
 end

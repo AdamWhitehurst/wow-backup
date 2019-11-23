@@ -21,30 +21,31 @@ ConsolePortSettings = {
 	["UIdropDownFix"] = true,
 	["unitHotkeyPool"] = "player$;party%d$;raid%d+$",
 	["forceController"] = "XBOX",
-	["alwaysHighlight"] = 2,
 	["CP_M1"] = "CP_TL2",
 	["TargetNearestUseNew"] = false,
+	["alwaysHighlight"] = 2,
 	["autoExtra"] = true,
-	["mouseOnJump"] = true,
 	["nameplateShowFriendlyNPCs"] = true,
+	["mouseOnJump"] = true,
+	["CP_T2"] = "CP_TR1",
 	["mouseInvertPitch"] = false,
-	["type"] = "XBOX",
+	["disableHints"] = false,
 	["interactWith"] = "CP_R_DOWN",
 	["nameplateShowFriends"] = true,
-	["mouseInvertYaw"] = false,
 	["raidCursorDirect"] = false,
-	["id"] = "132051870566629748",
+	["mouseInvertYaw"] = false,
+	["id"] = "132051902156275897",
 	["calibration"] = {
 		["CP_L_RIGHT"] = "F2",
 		["CP_R_LEFT"] = "F12",
 		["CP_L_UP"] = "F1",
 		["CP_X_LEFT"] = "F6",
-		["CP_R_RIGHT"] = "F10",
+		["CP_T2"] = "F8",
 		["CP_R_UP"] = "F9",
 		["CP_T1"] = "F7",
-		["CP_T2"] = "F8",
-		["CP_L_DOWN"] = "F3",
 		["CP_L_LEFT"] = "F4",
+		["CP_L_DOWN"] = "F3",
+		["CP_R_RIGHT"] = "F10",
 		["CP_X_RIGHT"] = "F5",
 		["CP_R_DOWN"] = "F11",
 	},
@@ -53,10 +54,10 @@ ConsolePortSettings = {
 	["autoInteract"] = false,
 	["UIdisableHoldRepeat"] = false,
 	["CP_T1"] = "CP_TL1",
-	["disableHints"] = false,
+	["type"] = "XBOX",
 	["autoSellJunk"] = true,
-	["CP_T2"] = "CP_TR1",
 	["interactCache"] = true,
+	["stickRadialType"] = 2,
 	["disableUI"] = false,
 }
 ConsolePortCharacterSettings = {
@@ -278,20 +279,20 @@ ConsolePortCharacterSettings = {
 			},
 			["mousewheel"] = true,
 			["width"] = 1100,
-			["swipeRGB"] = {
-				1, -- [1]
-				0.831372549019608, -- [2]
-				0.650980392156863, -- [3]
-				1, -- [4]
-			},
-			["smallart"] = false,
-			["showline"] = true,
-			["showart"] = false,
 			["artRGB"] = {
 				1, -- [1]
 				0.831372549019608, -- [2]
 				0.650980392156863, -- [3]
 				0.740969926118851, -- [4]
+			},
+			["smallart"] = false,
+			["showline"] = true,
+			["showart"] = false,
+			["swipeRGB"] = {
+				1, -- [1]
+				0.831372549019608, -- [2]
+				0.650980392156863, -- [3]
+				1, -- [4]
 			},
 			["hidewatchbars"] = false,
 			["classicBorders"] = false,

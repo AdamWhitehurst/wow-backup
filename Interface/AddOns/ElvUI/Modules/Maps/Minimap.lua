@@ -4,7 +4,7 @@ local M = E:GetModule('Minimap')
 --Lua functions
 local _G = _G
 local tinsert = tinsert
-local strsub = strsub
+local utf8sub = string.utf8sub
 --WoW API / Variables
 local CloseAllWindows = CloseAllWindows
 local CloseMenus = CloseMenus
@@ -26,7 +26,6 @@ local ToggleFriendsFrame = ToggleFriendsFrame
 local ToggleGuildFrame = ToggleGuildFrame
 local ToggleHelpFrame = ToggleHelpFrame
 local ToggleLFDParentFrame = ToggleLFDParentFrame
-local C_Timer_After = C_Timer.After
 -- GLOBALS: GetMinimapShape
 
 --Create the new minimap tracking dropdown frame and initialize it
@@ -149,6 +148,7 @@ function M:Minimap_OnMouseDown(btn)
 	menuFrame:Hide()
 	local position = self:GetPoint()
 	if btn == "MiddleButton" or (btn == "RightButton" and IsShiftKeyDown()) then
+		if InCombatLockdown() then _G.UIErrorsFrame:AddMessage(E.InfoColor.._G.ERR_NOT_IN_COMBAT) return end
 		if position:match("LEFT") then
 			E:DropDown(menuList, menuFrame)
 		else
@@ -171,7 +171,7 @@ end
 
 function M:Update_ZoneText()
 	if E.db.general.minimap.locationText == 'HIDE' or not E.private.general.minimap.enable then return; end
-	_G.Minimap.location:SetText(strsub(GetMinimapZoneText(),1,46))
+	_G.Minimap.location:SetText(utf8sub(GetMinimapZoneText(),1,46))
 	_G.Minimap.location:SetTextColor(M:GetLocTextColor())
 	_G.Minimap.location:FontTemplate(E.Libs.LSM:Fetch("font", E.db.general.minimap.locationFont), E.db.general.minimap.locationFontSize, E.db.general.minimap.locationFontOutline)
 end
@@ -199,7 +199,7 @@ end
 local function SetupZoomReset()
 	if E.db.general.minimap.resetZoom.enable and not isResetting then
 		isResetting = true
-		C_Timer_After(E.db.general.minimap.resetZoom.time, ResetZoom)
+		E:Delay(E.db.general.minimap.resetZoom.time, ResetZoom)
 	end
 end
 hooksecurefunc(_G.Minimap, "SetZoom", SetupZoomReset)
@@ -404,7 +404,7 @@ function M:Initialize()
 	self:UpdateSettings()
 
 	if not E.private.general.minimap.enable then
-		_G.Minimap:SetMaskTexture('Textures\\MinimapMask')
+		_G.Minimap:SetMaskTexture(186178) -- textures/minimapmask.blp
 		return
 	end
 
@@ -496,8 +496,4 @@ function M:Initialize()
 	self:UpdateSettings()
 end
 
-local function InitializeCallback()
-	M:Initialize()
-end
-
-E:RegisterInitialModule(M:GetName(), InitializeCallback)
+E:RegisterInitialModule(M:GetName())

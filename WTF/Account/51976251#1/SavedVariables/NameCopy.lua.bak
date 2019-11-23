@@ -1,0 +1,2 @@
+
+NameCopyTooltipTextBool = true

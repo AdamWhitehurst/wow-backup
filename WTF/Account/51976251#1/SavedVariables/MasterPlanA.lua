@@ -2,38 +2,26 @@
 MasterPlanAG = {
 	["Emerald Dream"] = {
 		["Bramblebrow"] = {
-			["class"] = "MONK",
 			["faction"] = "Horde",
+			["class"] = "MONK",
 		},
 		["Umbrick"] = {
-			["class"] = "WARRIOR",
 			["faction"] = "Horde",
+			["class"] = "WARRIOR",
 		},
 	},
 	["Tichondrius"] = {
-		["Mcpokesalot"] = {
+		["Andallsa"] = {
+			["faction"] = "Alliance",
 			["class"] = "ROGUE",
+		},
+		["Brungar"] = {
+			["class"] = "HUNTER",
 			["faction"] = "Alliance",
 		},
 		["Iscrackl"] = {
+			["faction"] = "Alliance",
 			["class"] = "WARLOCK",
-			["faction"] = "Alliance",
-		},
-		["Brungar"] = {
-			["faction"] = "Alliance",
-			["class"] = "HUNTER",
-		},
-		["Wharapi"] = {
-			["faction"] = "Horde",
-			["class"] = "DRUID",
-		},
-		["Umbrick"] = {
-			["class"] = "WARRIOR",
-			["faction"] = "Alliance",
-		},
-		["Magnr"] = {
-			["faction"] = "Alliance",
-			["class"] = "SHAMAN",
 		},
 		["Zandro"] = {
 			["summary"] = {
@@ -43,12 +31,44 @@ MasterPlanAG = {
 			},
 			["faction"] = "Alliance",
 			["class"] = "MONK",
-			["curRes"] = 1377,
-			["lastCacheTime"] = 1560518357,
+			["curRes"] = 1901,
+			["lastCacheTime"] = 1572922833,
+		},
+		["Mcpokesalot"] = {
+			["faction"] = "Alliance",
+			["class"] = "ROGUE",
+		},
+		["Andalsa"] = {
+			["class"] = "ROGUE",
+			["faction"] = "Alliance",
+		},
+		["Madylad"] = {
+			["class"] = "DEMONHUNTER",
+			["faction"] = "Alliance",
+		},
+		["Stoakt"] = {
+			["faction"] = "Alliance",
+			["class"] = "ROGUE",
+		},
+		["Wharapi"] = {
+			["class"] = "DRUID",
+			["faction"] = "Horde",
+		},
+		["Umbrick"] = {
+			["faction"] = "Alliance",
+			["class"] = "WARRIOR",
+		},
+		["Magnr"] = {
+			["class"] = "SHAMAN",
+			["faction"] = "Alliance",
+		},
+		["Andalsam"] = {
+			["faction"] = "Alliance",
+			["class"] = "DRUID",
 		},
 		["Bjorgr"] = {
-			["class"] = "HUNTER",
 			["faction"] = "Alliance",
+			["class"] = "HUNTER",
 		},
 	},
 }

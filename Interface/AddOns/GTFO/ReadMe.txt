@@ -1413,3 +1413,58 @@ Change Log:
 
 4.48.2
 * Added Battle for Azeroth spells (world)
+
+4.48.3
+* Updated for patch 8.2
+* Added Battle for Azeroth spells (world)
+
+4.48.4
+* Added Battle for Azeroth spells (world)
+* Added BFA spells for Operation: Mechagon
+* Added BFA spells for The Eternal Palace
+
+4.48.5
+* Added BFA spells for Operation: Mechagon
+
+4.48.6
+* Added Battle for Azeroth spells (world)
+* Added BFA spells for Operation: Mechagon
+
+4.48.7
+* Added Battle for Azeroth spells (world)
+* Added BFA spells for The Eternal Palace
+
+4.48.8
+* Added Battle for Azeroth spells (world)
+* Added BFA spells for The Eternal Palace
+
+4.48.9
+* Added BFA spells for The Eternal Palace
+
+4.48.10
+* Added Battle for Azeroth spells (world)
+
+4.49
+* Updated for WoW Classic 1.13.2
+* Added Battle for Azeroth spells (world)
+* Added BFA spells for The Eternal Palace
+
+4.49.1
+* Updated ToC for WoW Classic 1.13.2
+
+4.49.2
+* Fixed LUA issues with WoW Classic
+
+4.49.3
+* Added BFA spells for The Eternal Palace
+
+4.50
+* Fixed issues that prevented GTFO from working in WoW Classic
+
+4.50.1
+* Fixed Classic spells (duplicates)
+
+4.51
+* Merged Classic and Retail versions since Twitch Client will sometimes wrongfully install the wrong addon
+* Added Battle for Azeroth spells (world)
+

@@ -40,7 +40,6 @@ local UnitClass = UnitClass
 local UnitClassification = UnitClassification
 local UnitCreatureType = UnitCreatureType
 local UnitExists = UnitExists
-local UnitFactionGroup = UnitFactionGroup
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitGUID = UnitGUID
 local UnitHasVehicleUI = UnitHasVehicleUI
@@ -90,18 +89,12 @@ local classification = {
 function TT:GameTooltip_SetDefaultAnchor(tt, parent)
 	if tt:IsForbidden() then return end
 	if E.private.tooltip.enable ~= true then return end
-	if not self.db.visibility then return; end
+	if not self.db.visibility then return end
+	if tt:GetAnchorType() ~= "ANCHOR_NONE" then return end
 
-	if(tt:GetAnchorType() ~= "ANCHOR_NONE") then return end
 	if InCombatLockdown() and self.db.visibility.combat then
 		local modifier = self.db.visibility.combatOverride
-		if (not(
-				(modifier == 'SHIFT' and IsShiftKeyDown())
-				or
-				(modifier == 'CTRL' and IsControlKeyDown())
-				or
-				(modifier == 'ALT' and IsAltKeyDown())
-		)) then
+		if not ((modifier == 'SHIFT' and IsShiftKeyDown()) or (modifier == 'CTRL' and IsControlKeyDown()) or (modifier == 'ALT' and IsAltKeyDown())) then
 			tt:Hide()
 			return
 		end
@@ -204,12 +197,18 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 	local color
 	if UnitIsPlayer(unit) then
 		local localeClass, class = UnitClass(unit)
+		if not localeClass or not class then return end
+
 		local name, realm = UnitName(unit)
 		local guildName, guildRankName, _, guildRealm = GetGuildInfo(unit)
 		local pvpName = UnitPVPName(unit)
-		local relationship = UnitRealmRelationship(unit);
-		if not localeClass or not class then return; end
+		local relationship = UnitRealmRelationship(unit)
+
 		color = _G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[class] or _G.RAID_CLASS_COLORS[class]
+
+		if not color then
+			color = _G.RAID_CLASS_COLORS.PRIEST
+		end
 
 		if self.db.playerTitles and pvpName then
 			name = pvpName
@@ -240,9 +239,9 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 			end
 
 			if self.db.guildRanks then
-				_G.GameTooltipTextLeft2:SetText(("<|cff00ff10%s|r> [|cff00ff10%s|r]"):format(guildName, guildRankName))
+				_G.GameTooltipTextLeft2:SetFormattedText("<|cff00ff10%s|r> [|cff00ff10%s|r]", guildName, guildRankName)
 			else
-				_G.GameTooltipTextLeft2:SetText(("<|cff00ff10%s|r>"):format(guildName))
+				_G.GameTooltipTextLeft2:SetFormattedText("<|cff00ff10%s|r>", guildName)
 			end
 
 			lineOffset = 3
@@ -252,10 +251,8 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 		if levelLine then
 			local diffColor = GetCreatureDifficultyColor(level)
 			local race, englishRace = UnitRace(unit)
-			local _, factionGroup = UnitFactionGroup(unit)
-			if(factionGroup and englishRace == "Pandaren") then
-				race = factionGroup.." "..race
-			end
+			local _, localizedFaction = E:GetUnitBattlefieldFaction(unit)
+			if localizedFaction and englishRace == "Pandaren" then race = localizedFaction.." "..race end
 			levelLine:SetFormattedText("|cff%02x%02x%02x%s|r %s |c%s%s|r", diffColor.r * 255, diffColor.g * 255, diffColor.b * 255, level > 0 and level or "??", race or '', color.colorStr, localeClass)
 		end
 
@@ -265,7 +262,7 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 				if role == "HEALER" then
 					role, r, g, b = L["Healer"], 0, 1, .59
 				elseif role == "TANK" then
-					role, r, g, b = TANK, .16, .31, .61
+					role, r, g, b = _G.TANK, .16, .31, .61
 				elseif role == "DAMAGER" then
 					role, r, g, b = L["DPS"], .77, .12, .24
 				end
@@ -285,6 +282,10 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 			else
 				color = _G.FACTION_BAR_COLORS[unitReaction]
 			end
+		end
+
+		if not color then
+			color = _G.RAID_CLASS_COLORS.PRIEST
 		end
 
 		local levelLine = self:GetLevelLine(tt, 2)
@@ -322,7 +323,7 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 		end
 	end
 
-	return color or _G.RAID_CLASS_COLORS.PRIEST
+	return color
 end
 
 local inspectGUIDCache = {}
@@ -330,13 +331,14 @@ local inspectColorFallback = {1,1,1}
 function TT:PopulateInspectGUIDCache(unitGUID, itemLevel)
 	local specName = self:GetSpecializationInfo('mouseover')
 	if specName and itemLevel then
-		local unitColor = inspectGUIDCache[unitGUID].unitColor
+		local inspectCache = inspectGUIDCache[unitGUID]
+		if inspectCache then
+			inspectCache.time = GetTime()
+			inspectCache.itemLevel = itemLevel
+			inspectCache.specName = specName
+		end
 
-		inspectGUIDCache[unitGUID].time = GetTime()
-		inspectGUIDCache[unitGUID].itemLevel = itemLevel
-		inspectGUIDCache[unitGUID].specName = specName
-
-		GameTooltip:AddDoubleLine(_G.SPECIALIZATION..":", specName, nil, nil, nil, unpack(unitColor or inspectColorFallback))
+		GameTooltip:AddDoubleLine(_G.SPECIALIZATION..":", specName, nil, nil, nil, unpack((inspectCache and inspectCache.unitColor) or inspectColorFallback))
 		GameTooltip:AddDoubleLine(L["Item Level:"], itemLevel, nil, nil, nil, 1, 1, 1)
 		GameTooltip:Show()
 	end
@@ -645,7 +647,7 @@ function TT:GameTooltip_ShowStatusBar(tt)
 end
 
 function TT:CheckBackdropColor(tt)
-	if (not tt) or tt:IsForbidden() then return end
+	if not tt or tt:IsForbidden() then return end
 
 	local r, g, b = E:GetBackdropColor(tt)
 	if r and g and b then
@@ -659,7 +661,7 @@ function TT:CheckBackdropColor(tt)
 end
 
 function TT:SetStyle(tt)
-	if not tt or tt:IsForbidden() then return end
+	if not tt or (tt == E.ScanTooltip or tt.IsEmbedded) or tt:IsForbidden() then return end
 	tt:SetTemplate("Transparent", nil, true) --ignore updates
 
 	local r, g, b = E:GetBackdropColor(tt)
@@ -677,7 +679,7 @@ function TT:MODIFIER_STATE_CHANGED(_, key)
 end
 
 function TT:SetUnitAura(tt, unit, index, filter)
-	if tt:IsForbidden() then return end
+	if not tt or tt:IsForbidden() then return end
 	local _, _, _, _, _, _, caster, _, _, id = UnitAura(unit, index, filter)
 
 	if id then
@@ -760,6 +762,12 @@ function TT:SetTooltipFonts()
 			_G["GameTooltipMoneyFrame"..i.."SilverButtonText"]:FontTemplate(font, textSize, fontOutline)
 			_G["GameTooltipMoneyFrame"..i.."CopperButtonText"]:FontTemplate(font, textSize, fontOutline)
 		end
+	end
+
+	-- Ignore header font size on DatatextTooltip
+	if _G.DatatextTooltip then
+		_G.DatatextTooltipTextLeft1:FontTemplate(font, textSize, fontOutline)
+		_G.DatatextTooltipTextRight1:FontTemplate(font, textSize, fontOutline)
 	end
 
 	--These show when you compare items ("Currently Equipped", name of item, item level)
@@ -855,8 +863,4 @@ function TT:Initialize()
 	keybindFrame = ElvUI_KeyBinder
 end
 
-local function InitializeCallback()
-	TT:Initialize()
-end
-
-E:RegisterModule(TT:GetName(), InitializeCallback)
+E:RegisterModule(TT:GetName())

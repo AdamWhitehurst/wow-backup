@@ -42,3 +42,7 @@ Details_DataStorage: enabled
 Details_TinyThreat: enabled
 Details_Vanguard: enabled
 MaxCam: disabled
+WeakAurasCompanion: enabled
+Blizzard_CUFProfiles: enabled
+Blizzard_CompactRaidFrames: enabled
+Blizzard_ObjectiveTracker: enabled

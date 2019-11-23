@@ -1,3 +1,19 @@
+10/05/2019 version 4.9.13
+- Fix for unwrapping pets
+
+09/26/2019 version 4.9.12
+- Clicking the "alert" toast when you uncage a pet will search for the pet in Rematch.
+- toc updated for 8.2.5 client
+
+08/10/2019 version 4.9.11
+- Added Postmaster Malown to Stratholme targets.
+- Removed random backline pets from Stratholme targets.
+- Removed debug 'Showing' text when Rematch shown with right combination of options.
+- Fix for missing icons at the top of notes, ability card and win record card.
+
+06/26/2019 version 4.9.10
+- toc updated for 8.2 client.
+
 06/15/2019 version 4.9.9
 - Added Stratholme, Mechagon and Nazjatar to the target menus for 8.2 clients.
 - Added option 'Show Import Button' in Toolbar Options, to add an import button to the toolbar to more easily import teams without opening any menus.

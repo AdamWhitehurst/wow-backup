@@ -1,0 +1,5 @@
+VER 3 0100000000000001 "ss+slth" "INV_MISC_QUESTIONMARK"
+#showtooltip Shadowstep
+/cast [nostealth] Stealth;
+/cast Shadowstep;
+END

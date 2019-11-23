@@ -2,11 +2,8 @@ local addon = select(2,...)
 --noinspection UnusedDef
 local lib = addon.TomCatsLibs.Arrows
 local Colors = addon.TomCatsLibs.Colors
-
 local imagePath = "Interface\\AddOns\\TomCats-HallowsEnd\\libs\\TomCatsLibs\\images\\"
-
 local frame = CreateFrame("Frame", nil, nil)
-
 local function refreshArrow(self)
     local target = self:GetAttribute("target")
     if (target) then
@@ -31,7 +28,6 @@ local function refreshArrow(self)
         end
     end
 end
-
 local arrowMetatable = {
     __index = CreateFromMixins(
         getmetatable(frame)["__index"],
@@ -50,19 +46,15 @@ local arrowMetatable = {
             GetObjectType = function() return "TomCatsLib-Arrow" end }
     )
 }
-
 function lib:CreateArrow(colorOrR, g, b)
     local frame = CreateFrame("Frame", nil, Minimap)
     setmetatable(frame,arrowMetatable)
-
     frame:Hide()
     frame:SetSize(34,34)
     frame:SetPoint("CENTER", Minimap, "CENTER",0,0)
     frame:SetFrameStrata("MEDIUM")
-
     local overlay = frame:CreateTexture(nil, "OVERLAY");
     overlay:SetAllPoints(frame);
-
     if (type(colorOrR) == "number") then
         overlay:SetColorTexture(colorOrR, g, b, 1);
     else

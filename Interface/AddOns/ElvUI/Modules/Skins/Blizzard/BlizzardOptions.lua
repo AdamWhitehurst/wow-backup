@@ -318,6 +318,29 @@ local function LoadSkin()
 	_G.InterfaceOptionsFrameTab2:Point('TOPLEFT', _G.InterfaceOptionsFrameTab1, 'TOPRIGHT', 1, 0)
 	_G.InterfaceOptionsSocialPanel.EnableTwitter.Logo:SetAtlas("WoWShare-TwitterLogo")
 
+	--Create New Raid Profle
+	local newProfileDialog = _G.CompactUnitFrameProfilesNewProfileDialog
+	if newProfileDialog then
+		newProfileDialog:SetTemplate('Transparent')
+
+		S:HandleDropDownBox(_G.CompactUnitFrameProfilesNewProfileDialogBaseProfileSelector)
+		S:HandleButton(_G.CompactUnitFrameProfilesNewProfileDialogCreateButton)
+		S:HandleButton(_G.CompactUnitFrameProfilesNewProfileDialogCancelButton)
+
+		if newProfileDialog.editBox then
+			S:HandleEditBox(newProfileDialog.editBox)
+			newProfileDialog.editBox:Size(210, 25)
+		end
+	end
+
+	--Delete Raid Profile
+	local deleteProfileDialog = _G.CompactUnitFrameProfilesDeleteProfileDialog
+	if deleteProfileDialog then
+		deleteProfileDialog:SetTemplate('Transparent')
+		S:HandleButton(_G.CompactUnitFrameProfilesDeleteProfileDialogDeleteButton)
+		S:HandleButton(_G.CompactUnitFrameProfilesDeleteProfileDialogCancelButton)
+	end
+
 	-- Toggle Test Audio Button - Wow 8.0
 	S:HandleButton(_G.AudioOptionsVoicePanel.TestInputDevice.ToggleTest)
 

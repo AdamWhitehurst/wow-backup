@@ -44,10 +44,7 @@ function UF:Configure_ClassBar(frame, cur)
 	--We don't want to modify the original frame.CLASSBAR_WIDTH value, as it bugs out when the classbar gains more buttons
 	local CLASSBAR_WIDTH = frame.CLASSBAR_WIDTH
 
-	local color = self.db.colors.classResources.bgColor
-	bars.backdrop:SetBackdropColor(color.r, color.g, color.b)
-
-	color = E.db.unitframe.colors.borderColor
+	local color = E.db.unitframe.colors.borderColor
 	bars.backdrop:SetBackdropBorderColor(color.r, color.g, color.b)
 
 	if frame.USE_MINI_CLASSBAR and not frame.CLASSBAR_DETACHED then
@@ -79,9 +76,6 @@ function UF:Configure_ClassBar(frame, cur)
 			bars[i].backdrop:Hide()
 
 			if i <= frame.MAX_CLASS_BAR then
-				bars[i].backdrop:SetBackdropColor(color.r, color.g, color.b)
-
-				color = E.db.unitframe.colors.borderColor
 				bars[i].backdrop:SetBackdropBorderColor(color.r, color.g, color.b)
 
 				bars[i]:Height(bars:GetHeight())
@@ -357,9 +351,14 @@ function UF:UpdateClassBar(current, maxBars, hasMaxChanged)
 		UF:Configure_ClassBar(frame, current)
 	end
 
+	local custom_backdrop = UF.db.colors.customclasspowerbackdrop and UF.db.colors.classpower_backdrop
 	for i=1, #self do
-		local r, g, b = self[i]:GetStatusBarColor()
-		self[i].bg:SetVertexColor(r * .35, g * .35, b * .35)
+		if custom_backdrop then
+			self[i].bg:SetVertexColor(custom_backdrop.r, custom_backdrop.g, custom_backdrop.b)
+		else
+			local r, g, b = self[i]:GetStatusBarColor()
+			self[i].bg:SetVertexColor(r * .35, g * .35, b * .35)
+		end
 
 		if maxBars and (i <= maxBars) then
 			self[i].bg:Show()
@@ -374,8 +373,11 @@ end
 -------------------------------------------------------------
 local function PostUpdateRunes(self)
 	local useRunes = not UnitHasVehicleUI('player')
-	self:SetShown(useRunes)
-	UF.PostVisibilityRunes(self, useRunes)
+	if useRunes then
+		self:Show()
+	else
+		self:Hide()
+	end
 end
 
 function UF:Construct_DeathKnightResourceBar(frame)
@@ -385,9 +387,9 @@ function UF:Construct_DeathKnightResourceBar(frame)
 
 	for i = 1, UF.classMaxResourceBar[E.myclass] do
 		runes[i] = CreateFrame("StatusBar", frame:GetName().."RuneButton"..i, runes)
-		UF.statusbars[runes[i]] = true
 		runes[i]:SetStatusBarTexture(E.media.blankTex)
 		runes[i]:GetStatusBarTexture():SetHorizTile(false)
+		UF.statusbars[runes[i]] = true
 
 		runes[i]:CreateBackdrop(nil, nil, nil, self.thinBorders, true)
 		runes[i].backdrop:SetParent(runes)
@@ -406,6 +408,8 @@ function UF:Construct_DeathKnightResourceBar(frame)
 	return runes
 end
 
+-- Keep it for now. Maybe obsolete!
+--[[
 function UF:PostVisibilityRunes(enabled)
 	local frame = self.origParent or self:GetParent()
 
@@ -416,7 +420,14 @@ function UF:PostVisibilityRunes(enabled)
 		frame.ClassBar = "ClassPower"
 		frame.MAX_CLASS_BAR = MAX_COMBO_POINTS
 	end
-end
+
+	local custom_backdrop = UF.db.colors.customclasspowerbackdrop and UF.db.colors.classpower_backdrop
+	if custom_backdrop then
+		for i=1, #self do
+			self[i].bg:SetVertexColor(custom_backdrop.r, custom_backdrop.g, custom_backdrop.b)
+		end
+	end
+end]]
 
 -------------------------------------------------------------
 -- ALTERNATIVE MANA BAR
@@ -428,8 +439,8 @@ function UF:Construct_AdditionalPowerBar(frame)
 	additionalPower.PostUpdate = UF.PostUpdateAdditionalPower
 	additionalPower.PostUpdateVisibility = UF.PostVisibilityAdditionalPower
 	additionalPower:CreateBackdrop(nil, nil, nil, self.thinBorders, true)
-	UF.statusbars[additionalPower] = true
 	additionalPower:SetStatusBarTexture(E.media.blankTex)
+	UF.statusbars[additionalPower] = true
 
 	additionalPower.bg = additionalPower:CreateTexture(nil, "BORDER")
 	additionalPower.bg:SetAllPoints(additionalPower)
@@ -499,6 +510,12 @@ function UF:PostUpdateAdditionalPower(_, MIN, MAX, event)
 		else --Text disabled
 			self.text:SetText('')
 		end
+
+		local custom_backdrop = UF.db.colors.customclasspowerbackdrop and UF.db.colors.classpower_backdrop
+		if custom_backdrop then
+			self.bg:SetVertexColor(custom_backdrop.r, custom_backdrop.g, custom_backdrop.b)
+		end
+
 		self:Show()
 	else --Bar disabled
 		self.text:SetText('')
@@ -530,10 +547,10 @@ end
 -----------------------------------------------------------
 function UF:Construct_Stagger(frame)
 	local stagger = CreateFrame("Statusbar", nil, frame)
-	UF.statusbars[stagger] = true
 	stagger:CreateBackdrop(nil,nil, nil, self.thinBorders, true)
 	stagger.PostUpdate = UF.PostUpdateStagger
 	stagger.PostUpdateVisibility = UF.PostUpdateVisibilityStagger
+	UF.statusbars[stagger] = true
 
 	stagger:SetScript("OnShow", ToggleResourceBar)
 	stagger:SetScript("OnHide", ToggleResourceBar)

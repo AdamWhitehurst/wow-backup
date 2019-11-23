@@ -1,8 +1,8 @@
-## Interface: 80100
+## Interface: 80200
 ## Title: TomCat's Tours: The Hivemind
 ## Author: TomCat
 ## X-Website: http://www.everythingwarcraft.com
-## Version: 0.1.4
+## Version: 0.1.6
 ## DefaultState: enabled
 ## SavedVariablesPerCharacter: TomCats_Hivemind_Character
 ## OptionalDeps: TomCats
