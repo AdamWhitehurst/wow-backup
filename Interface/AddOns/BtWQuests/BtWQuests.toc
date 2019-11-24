@@ -1,6 +1,6 @@
 ## Interface: 80205
 ## Title: BtWQuests
-## Version: 1.51
+## Version: 1.54
 ## Notes: 
 ## Author: Breen
 ## SavedVariables: BtWQuests_Characters

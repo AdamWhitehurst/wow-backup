@@ -46,7 +46,7 @@ ConsolePortUI_Loot: disabled
 ConsolePortUI_Menu: disabled
 Coordinates: enabled
 CopyPasta: enabled
-Details: disabled
+Details: enabled
 Details_EncounterDetails: disabled
 Details_RaidCheck: disabled
 Details_DataStorage: disabled
@@ -305,3 +305,8 @@ LibQTip-1.0: enabled
 BtWQuestsBattleForAzerothPrologue: enabled
 ConsolePortUI: disabled
 ConsolePortUI_NPC: disabled
+LibWindow-1.1: enabled
+NickTag-1.0: enabled
+LibItemUpgradeInfo-1.0: enabled
+LibGroupInSpecT-1.1: enabled
+LibGraph-2.0: enabled

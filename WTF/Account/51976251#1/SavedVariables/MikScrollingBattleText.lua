@@ -17,6 +17,7 @@ MSBTProfiles_SavedVars = {
 					["scrollArea"] = "Static",
 				},
 				["NOTIFICATION_MONEY"] = {
+					["fontSize"] = 23,
 					["soundFile"] = "Retro2: SFX_188",
 				},
 				["INCOMING_SPELL_PARRY"] = {
@@ -70,6 +71,7 @@ MSBTProfiles_SavedVars = {
 					["scrollArea"] = "Custom1",
 				},
 				["NOTIFICATION_LOOT"] = {
+					["fontSize"] = 23,
 					["soundFile"] = "Retro1: SFX_68",
 				},
 				["NOTIFICATION_MONSTER_EMOTE"] = {
@@ -112,6 +114,7 @@ MSBTProfiles_SavedVars = {
 				},
 				["NOTIFICATION_CURRENCY"] = {
 					["soundFile"] = "Retro2: SFX_190",
+					["fontSize"] = 23,
 				},
 				["NOTIFICATION_CHI_CHANGE"] = {
 					["disabled"] = true,
@@ -132,8 +135,6 @@ MSBTProfiles_SavedVars = {
 					["mainEvents"] = "PARTY_KILL{recipientUnitType;;eq;;1024;;recipientAffiliation;;eq;;4026531840}",
 				},
 			},
-			["enableBlizzardHealing"] = false,
-			["normalFontName"] = "Sriracha",
 			["scrollAreas"] = {
 				["Notification"] = {
 					["stickyTextAlignIndex"] = 1,
@@ -185,6 +186,8 @@ MSBTProfiles_SavedVars = {
 					["stickyAnimationStyle"] = "Static",
 				},
 			},
+			["normalFontName"] = "Sriracha",
+			["enableBlizzardHealing"] = false,
 			["normalFontSize"] = 14,
 		},
 	},

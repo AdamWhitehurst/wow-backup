@@ -6,13 +6,13 @@ HandyNotes_WarfrontTreasuresDB = {
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["profiles"] = {
 		["Magnr - Tichondrius"] = {
@@ -25,19 +25,19 @@ HandyNotes_WarfrontTreasuresDB = {
 		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Brungar - Tichondrius"] = {
-		},
-		["Madylad - Tichondrius"] = {
-		},
-		["Stoakt - Tichondrius"] = {
-		},
-		["Mcpokesalot - Tichondrius"] = {
-		},
-		["Andalsa - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
+		},
+		["Mcpokesalot - Tichondrius"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Brungar - Tichondrius"] = {
 		},
 	},
 }

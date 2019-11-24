@@ -7,7 +7,7 @@ local side = 1
 local currentPosition
 local arrow
 -- todo: Activate only during hallow's end
-tcl.Events.RegisterEvent("PLAYER_LOGIN", addon)
+-- tcl.Events.RegisterEvent("PLAYER_LOGIN", addon)
 local function announceRoute()
     if (tour and #tour > 0) then
         print("|cffff0000[|cfff48cbaTomCat|cffff0000] yells: Next stop on the tour is |cffffffff" .. C_Map.GetMapInfo(tour[1]["Map ID"]).name .. "|cffff0000. All aboard!")
@@ -168,7 +168,7 @@ if (TomCats and TomCats.Register) then
     TomCats:Register(
         {
             name = "Hallow's End",
-            version = "1.3.3"
+            version = "1.3.4"
         }
     )
 end

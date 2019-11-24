@@ -39,8 +39,8 @@ MasterPlanAG = {
 			["class"] = "ROGUE",
 		},
 		["Andalsa"] = {
-			["class"] = "ROGUE",
 			["faction"] = "Alliance",
+			["class"] = "ROGUE",
 		},
 		["Madylad"] = {
 			["class"] = "DEMONHUNTER",
@@ -63,12 +63,14 @@ MasterPlanAG = {
 			["faction"] = "Alliance",
 		},
 		["Andalsam"] = {
-			["faction"] = "Alliance",
 			["class"] = "DRUID",
+			["faction"] = "Alliance",
 		},
 		["Bjorgr"] = {
 			["faction"] = "Alliance",
 			["class"] = "HUNTER",
 		},
+	},
+	["IgnoreRewards"] = {
 	},
 }

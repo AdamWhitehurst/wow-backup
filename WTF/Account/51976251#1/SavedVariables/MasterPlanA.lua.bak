@@ -10,6 +10,8 @@ MasterPlanAG = {
 			["faction"] = "Horde",
 		},
 	},
+	["IgnoreRewards"] = {
+	},
 	["Tichondrius"] = {
 		["Andallsa"] = {
 			["class"] = "ROGUE",
@@ -39,8 +41,8 @@ MasterPlanAG = {
 			["faction"] = "Alliance",
 		},
 		["Andalsam"] = {
-			["class"] = "DRUID",
 			["faction"] = "Alliance",
+			["class"] = "DRUID",
 		},
 		["Madylad"] = {
 			["faction"] = "Alliance",

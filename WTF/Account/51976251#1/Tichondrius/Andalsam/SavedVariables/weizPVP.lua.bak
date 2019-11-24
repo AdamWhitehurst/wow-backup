@@ -8,11 +8,10 @@ weizPVPOptions = {
 			["Options"] = {
 				["Addon"] = {
 					["Version"] = "1.81.1",
-					["VersionNumber"] = 1802.1,
 					["VersionSplashSeen"] = true,
+					["VersionNumber"] = 1802.1,
 				},
 				["Window"] = {
-					["Pinned"] = true,
 					["Collapsed"] = true,
 				},
 				["StealthAlert"] = {

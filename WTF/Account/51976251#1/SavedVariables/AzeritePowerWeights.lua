@@ -696,13 +696,14 @@ AzeritePowerWeightsDB = {
 				},
 				["rolePowers"] = true,
 				["defensivePowers"] = true,
+				["debug"] = false,
 				["scaleByAzeriteEmpowered"] = false,
 				["onlyOwnClassDefaults"] = true,
-				["debug"] = false,
 				["professionPowers"] = false,
-				["showOnlyUpgrades"] = false,
 				["onlyOwnClassCustoms"] = false,
+				["showOnlyUpgrades"] = false,
 				["outlineScores"] = true,
+				["preferBiSMarjor"] = true,
 			},
 			["Andalsa"] = {
 				["specScales"] = {

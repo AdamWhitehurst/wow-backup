@@ -52,6 +52,7 @@ MADB = {
 						["area"] = "left",
 					},
 					["scale"] = 1.839707732200623,
+					["orgScale"] = 1,
 					["pos"] = {
 						"TOPLEFT", -- [1]
 						"UIParent", -- [2]
@@ -59,7 +60,6 @@ MADB = {
 						20, -- [4]
 						-20, -- [5]
 					},
-					["orgScale"] = 1,
 				},
 				["GossipFrame"] = {
 					["orgPos"] = {
@@ -76,8 +76,8 @@ MADB = {
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["playSound"] = false,
-	["noBags"] = false,
 	["tooltips"] = true,
+	["noBags"] = false,
+	["playSound"] = false,
+	["closeGUIOnEscape"] = false,
 }

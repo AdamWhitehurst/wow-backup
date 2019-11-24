@@ -18,6 +18,7 @@ MSBTProfiles_SavedVars = {
 				},
 				["NOTIFICATION_MONEY"] = {
 					["soundFile"] = "Retro2: SFX_188",
+					["fontSize"] = 23,
 				},
 				["INCOMING_SPELL_PARRY"] = {
 					["colorG"] = 0.4274509803921568,
@@ -71,6 +72,7 @@ MSBTProfiles_SavedVars = {
 				},
 				["NOTIFICATION_LOOT"] = {
 					["soundFile"] = "Retro1: SFX_68",
+					["fontSize"] = 23,
 				},
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
@@ -110,6 +112,7 @@ MSBTProfiles_SavedVars = {
 					["scrollArea"] = "Notification",
 				},
 				["NOTIFICATION_CURRENCY"] = {
+					["fontSize"] = 23,
 					["soundFile"] = "Retro2: SFX_190",
 				},
 				["INCOMING_PARRY"] = {
@@ -125,8 +128,6 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["normalFontSize"] = 14,
-			["enableBlizzardHealing"] = false,
-			["normalFontName"] = "Sriracha",
 			["scrollAreas"] = {
 				["Notification"] = {
 					["stickyTextAlignIndex"] = 1,
@@ -178,6 +179,8 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["normalFontName"] = "Sriracha",
+			["enableBlizzardHealing"] = false,
 			["triggers"] = {
 				["Custom1"] = {
 					["message"] = "Killing Blow Player",

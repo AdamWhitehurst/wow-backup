@@ -5,12 +5,12 @@ HandyNotes_LegionClassOrderHallsDB = {
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
 		["Andalsam - Tichondrius"] = {
@@ -21,17 +21,17 @@ HandyNotes_LegionClassOrderHallsDB = {
 		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Stoakt - Tichondrius"] = {
-		},
-		["Madylad - Tichondrius"] = {
-		},
-		["Umbrick - Tichondrius"] = {
-		},
-		["Andalsa - Tichondrius"] = {
+		["Brungar - Tichondrius"] = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},
-		["Brungar - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
+		},
+		["Umbrick - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Stoakt - Tichondrius"] = {
 		},
 	},
 }

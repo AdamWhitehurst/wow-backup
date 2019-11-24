@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 920,
+	["session"] = 932,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -532,35 +532,27 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [69]
 		{
-			["message"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: attempt to index a nil value",
-			["time"] = "2019/11/16 14:49:06",
-			["locals"] = "self = <table> {\n Update_AssistHeader = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Assist.lua:53\n modules = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:147\n RaidRoleUpdate = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidRoleIcons.lua:46\n Construct_PowerBar = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Power.lua:14\n arena1 = ElvUF_Arena1 {\n }\n Construct_Buffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Auras.lua:17\n Construct_PowerPrediction = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\PowerPrediction.lua:8\n Configure_RaidDebuffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidDebuffs.lua:31\n UpdateNameSettings = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Name.lua:15\n ADDON_LOADED = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:1247\n FrameGlow_CheckMouseover = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:290\n ApplyUnitFrameEnhancements = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\modules\\unitframes\\construct_elements.lua:112\n db = <table> {\n }\n Update_TankFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Tank.lua:78\n SetEnabledState = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:424\n Hook = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceHook-3.0\\AceHook-3.0.lua:274\n instanceMapIDs = <table> {\n }\n SetStatusBarBackdropPoints = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:1397\n Raid40SmartVisibility = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Raid40.lua:66\n FrameGlow_SetGlowColor = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:180\n Construct_BossFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Boss.lua:15\n UnregisterAllEvents = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:174\n Construct_RaidDebuffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidDebuffs.lua:9\n PostUpdate_PhaseIcon = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\PhaseIndicator.lua:14\n assist = ElvUF_Assist {\n }\n Update_ArenaFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Arena.lua:117\n Construct_RaidpetFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\RaidPets.lua:16\n groupPrototype = <table> {\n }\n Construct_InfoPanel = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\InfoPanel.lua:7\n Configure_HealthBar = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Health.lua:66\n GetName = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:279\n classMaxResourceBar = <table> {\n }\n name = \"ElvUI_UnitFrames\"\n SetAlpha_HealComm = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\HealPrediction.lua:16\n Disable = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:314\n Construct_FocusFrame = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Units\\Focus.lua:12\n FrameGlow_ElementHook = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:27\n Update_TargetTargetTargetFrame = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Units\\TargetTargetTarget.lua:35\n PostCastStop = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\CastBar.lua:444\n Unhook = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceHook-3.0\\AceHook-3.0.lua:418\n Construct_Cutaway = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Cutaway.lua:6\n ClearChildPoints = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:347\n Configure_Read",
-			["stack"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: in function `?'\n...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0-17.lua:55: in function <...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
-			["session"] = 874,
-			["counter"] = 1,
-		}, -- [70]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Narcissus' tried to call the protected function 'UNKNOWN()'.",
 			["time"] = "2019/11/16 15:02:11",
 			["locals"] = "Skipped (In Encounter)",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: ?\n[C]: in function `SetCVar'\nInterface\\SharedXML\\Util.lua:1522: in function <Interface\\SharedXML\\Util.lua:1518>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `SetCVar'\nInterface\\AddOns\\Narcissus\\Main.lua:4059: in function <Interface\\AddOns\\Narcissus\\Main.lua:4056>\nInterface\\AddOns\\Narcissus\\Main.lua:4771: in function <Interface\\AddOns\\Narcissus\\Main.lua:4757>\n[C]: in function `Click'\nInterface\\AddOns\\Narcissus\\Main.lua:5146: in function <Interface\\AddOns\\Narcissus\\Main.lua:5123>\n[C]: in function `SetUIVisibility'\n[string \"TOGGLEUI\"]:4: in function <[string \"TOGGLEUI\"]:1>",
 			["session"] = 874,
 			["counter"] = 1,
-		}, -- [71]
+		}, -- [70]
 		{
 			["message"] = "[string \"--[==[ Error in 'Stagger Tick ':'custom tex...\"]:3: attempt to perform arithmetic on local 'value' (a nil value)",
 			["time"] = "2019/11/02 18:59:12",
 			["stack"] = "[C]: in function `xpcall'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.15.5.lua:5838: in function `RunCustomTextFunc'\nInterface\\AddOns\\WeakAuras\\RegionTypes\\Text.lua:190: in function `FrameTick'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:536: in function <...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528>",
 			["session"] = 877,
 			["counter"] = 173,
-		}, -- [72]
+		}, -- [71]
 		{
 			["message"] = "[string \"--[==[ Error in 'Stagger Amount':'custom te...\"]:4: attempt to compare number with nil",
 			["time"] = "2019/11/02 18:59:12",
 			["stack"] = "[C]: in function `xpcall'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.15.5.lua:5838: in function `RunCustomTextFunc'\nInterface\\AddOns\\WeakAuras\\RegionTypes\\Text.lua:190: in function `FrameTick'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:536: in function <...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528>",
 			["session"] = 877,
 			["counter"] = 124,
-		}, -- [73]
+		}, -- [72]
 		{
 			["message"] = "...s_PandariaTreasures\\HandyNotes_PandariaTreasures-1.06.lua:81: GetAchievementCriteriaInfo(achievementID, criteriaIndex [,countHidden]), criteria not found",
 			["time"] = "2019/09/10 17:26:51",
@@ -568,13 +560,13 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `GetAchievementCriteriaInfo'\n...s_PandariaTreasures\\HandyNotes_PandariaTreasures-1.06.lua:81: in main chunk",
 			["session"] = 907,
 			["counter"] = 14,
-		}, -- [74]
+		}, -- [73]
 		{
 			["message"] = "(null)",
 			["session"] = 907,
 			["time"] = "2019/09/10 17:26:57",
 			["counter"] = 45,
-		}, -- [75]
+		}, -- [74]
 		{
 			["message"] = "Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:2269: attempt to get length of local 'rows' (a nil value)",
 			["time"] = "2019/09/24 18:29:18",
@@ -582,7 +574,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:2269: in function `wlSeenWorldQuests'\nInterface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:4651: in function <Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:4625>",
 			["session"] = 909,
 			["counter"] = 14,
-		}, -- [76]
+		}, -- [75]
 		{
 			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:170: Usage: GetItemInfo(itemID|\"name\"|\"itemlink\")",
 			["time"] = "2019/11/22 18:23:10",
@@ -590,63 +582,63 @@ BugGrabberDB = {
 			["stack"] = "[C]: ?\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:170: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:152>\n[C]: in function `ContainerFrame_Update'\nInterface\\FrameXML\\ContainerFrame.lua:282: in function `ContainerFrame_OnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: in function `Show'\nInterface\\FrameXML\\ContainerFrame.lua:1022: in function `ContainerFrame_GenerateFrame'\nInterface\\FrameXML\\ContainerFrame.lua:313: in function `OpenBag'\nInterface\\FrameXML\\ContainerFrame.lua:1547: in function `ToggleAllBags'\n[string \"OPENALLBAGS\"]:1: in function <[string \"OPENALLBAGS\"]:1>",
 			["session"] = 915,
 			["counter"] = 8,
-		}, -- [77]
+		}, -- [76]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Core\\Toolkit.lua:208: BackpackTokenFrameToken1Icon:SetPoint(): BackpackTokenFrameToken1Count is dependent on this",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\ElvUI\\Core\\Toolkit.lua:208: in function `Point'\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:130: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:109>\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:264: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:141>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 917,
 			["counter"] = 20,
-		}, -- [78]
+		}, -- [77]
 		{
 			["message"] = "...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:381: attempt to index field 'UpgradeLevelHelpBox' (a nil value)",
 			["time"] = "2019/09/26 20:46:08",
 			["stack"] = "...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:381: in function <...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:53>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1248: in function `CallLoadedAddon'\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1267: in function `?'\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[C]: ?\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:448: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:614: in function `CollectionsJournal_LoadUI'\nInterface\\FrameXML\\UIParent.lua:954: in function `SetCollectionsJournalShown'\nInterface\\FrameXML\\UIParent.lua:948: in function `ToggleCollectionsJournal'\n[string \"TOGGLECOLLECTIONSPETJOURNAL\"]:1: in function <[string \"TOGGLECOLLECTIONSPETJOURNAL\"]:1>",
 			["session"] = 918,
 			["counter"] = 42,
-		}, -- [79]
+		}, -- [78]
 		{
 			["message"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:766: Usage: hooksecurefunc([table,] \"function\", hookfunc)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "[C]: ?\n...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:766: in function <...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:734>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [80]
+		}, -- [79]
 		{
 			["message"] = "...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character-Character.lua:495: attempt to index field 'HelpTipBox' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character-Character.lua:495: in function <...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character.lua:269>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [81]
+		}, -- [80]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:296: attempt to index local 'frame' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:296: in function `HandleScrollBar'\n...face\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Friends-Friends.lua:56: in function <...face\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Friends.lua:53>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [82]
+		}, -- [81]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:690: attempt to index local 'f' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:690: in function `HandleCloseButton'\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:365: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:38>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [83]
+		}, -- [82]
 		{
 			["message"] = "...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:311: attempt to index field 'QuestNPCModel' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:311: in function <...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:62>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 135,
-		}, -- [84]
+		}, -- [83]
 		{
 			["message"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent-Talent.lua:350: attempt to index field 'HelpBox' (a nil value)",
 			["time"] = "2019/09/25 19:40:34",
 			["stack"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent-Talent.lua:350: in function <...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent.lua:19>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1248: in function `CallLoadedAddon'\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1267: in function `?'\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[C]: ?\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:448: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:527: in function <Interface\\FrameXML\\UIParent.lua:526>\n[C]: in function `TalentFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:759: in function `ToggleTalentFrame'\n[string \"TOGGLETALENTS\"]:1: in function <[string \"TOGGLETALENTS\"]:1>",
 			["session"] = 920,
 			["counter"] = 42,
-		}, -- [85]
+		}, -- [84]
 		{
 			["message"] = "Interface\\SharedXML\\Util.lua:159: bad argument #1 to 'ipairs' (table expected, got nil)",
 			["time"] = "2019/11/23 11:17:42",
@@ -654,6 +646,54 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `ipairs'\nInterface\\SharedXML\\Util.lua:159: in function `tIndexOf'\nInterface\\SharedXML\\Util.lua:167: in function <Interface\\SharedXML\\Util.lua:166>\nInterface\\AddOns\\Grail\\Grail-105.lua:9273: in function `QuestsInMap'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:1406: in function `_ClassifyQuestsInMap'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:1849: in function `_ForcePanelMapArea'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:4371: in function `UpdateQuestCaches'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:938: in function `?'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:2492: in function `_OnEvent'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:4387: in function <Interface\\AddOns\\Wholly\\Wholly.lua:4387>",
 			["session"] = 920,
 			["counter"] = 8145,
+		}, -- [85]
+		{
+			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT'",
+			["time"] = "2019/11/23 15:02:17",
+			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6781: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
+			["session"] = 924,
+			["counter"] = 1,
 		}, -- [86]
+		{
+			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT_DESC'",
+			["time"] = "2019/11/23 15:02:17",
+			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6799: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
+			["session"] = 924,
+			["counter"] = 1,
+		}, -- [87]
+		{
+			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:169: Usage: GetItemInfo(itemID|\"name\"|\"itemlink\")",
+			["time"] = "2019/11/23 15:03:50",
+			["locals"] = "(*temporary) = nil\n",
+			["stack"] = "[C]: ?\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:169: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:151>\n[C]: in function `ContainerFrame_Update'\nInterface\\FrameXML\\ContainerFrame.lua:282: in function `ContainerFrame_OnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: ?\n[C]: in function `Show'\nInterface\\FrameXML\\ContainerFrame.lua:1022: in function `ContainerFrame_GenerateFrame'\nInterface\\FrameXML\\ContainerFrame.lua:313: in function `OpenBag'\nInterface\\FrameXML\\ContainerFrame.lua:1602: in function `OpenAllBags'\n...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:183: in function <...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:182>\n(tail call): ?\n(tail call): ?\n...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:123: in function <...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:111>\n(tail call): ?\n...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:97: in function <...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:83>\n(tail call): ?\n...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:105: in function `pendingCallback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:161: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:128>",
+			["session"] = 925,
+			["counter"] = 4,
+		}, -- [88]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\Blizzard\\Load_Skins.xml",
+			["session"] = 929,
+			["time"] = "2019/11/23 17:31:29",
+			["counter"] = 2,
+		}, -- [89]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\Classic\\Load_Skins.xml",
+			["session"] = 929,
+			["time"] = "2019/11/23 17:31:29",
+			["counter"] = 4,
+		}, -- [90]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\Retail\\Load_Skins.xml",
+			["session"] = 929,
+			["time"] = "2019/11/23 17:31:29",
+			["counter"] = 4,
+		}, -- [91]
+		{
+			["message"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: attempt to index a nil value",
+			["time"] = "2019/11/16 14:49:06",
+			["locals"] = "self = <table> {\n Update_AssistHeader = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Assist.lua:53\n modules = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:147\n RaidRoleUpdate = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidRoleIcons.lua:46\n Construct_PowerBar = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Power.lua:14\n arena1 = ElvUF_Arena1 {\n }\n Construct_Buffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Auras.lua:17\n Construct_PowerPrediction = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\PowerPrediction.lua:8\n Configure_RaidDebuffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidDebuffs.lua:31\n UpdateNameSettings = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Name.lua:15\n ADDON_LOADED = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:1247\n FrameGlow_CheckMouseover = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:290\n ApplyUnitFrameEnhancements = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\modules\\unitframes\\construct_elements.lua:112\n db = <table> {\n }\n Update_TankFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Tank.lua:78\n SetEnabledState = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:424\n Hook = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceHook-3.0\\AceHook-3.0.lua:274\n instanceMapIDs = <table> {\n }\n SetStatusBarBackdropPoints = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:1397\n Raid40SmartVisibility = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Raid40.lua:66\n FrameGlow_SetGlowColor = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:180\n Construct_BossFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Boss.lua:15\n UnregisterAllEvents = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:174\n Construct_RaidDebuffs = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\RaidDebuffs.lua:9\n PostUpdate_PhaseIcon = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\PhaseIndicator.lua:14\n assist = ElvUF_Assist {\n }\n Update_ArenaFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Arena.lua:117\n Construct_RaidpetFrames = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\RaidPets.lua:16\n groupPrototype = <table> {\n }\n Construct_InfoPanel = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\InfoPanel.lua:7\n Configure_HealthBar = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Health.lua:66\n GetName = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:279\n classMaxResourceBar = <table> {\n }\n name = \"ElvUI_UnitFrames\"\n SetAlpha_HealComm = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\HealPrediction.lua:16\n Disable = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:314\n Construct_FocusFrame = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Units\\Focus.lua:12\n FrameGlow_ElementHook = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\FrameGlow.lua:27\n Update_TargetTargetTargetFrame = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Units\\TargetTargetTarget.lua:35\n PostCastStop = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\CastBar.lua:444\n Unhook = <function> defined @Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceHook-3.0\\AceHook-3.0.lua:418\n Construct_Cutaway = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Elements\\Cutaway.lua:6\n ClearChildPoints = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\UnitFrames.lua:347\n Configure_Read",
+			["stack"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: in function `?'\n...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0-17.lua:55: in function <...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
+			["session"] = 929,
+			["counter"] = 3,
+		}, -- [92]
 	},
 }

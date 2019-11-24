@@ -2,23 +2,17 @@
 PasteDB = {
 	["profileKeys"] = {
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
 		["Bramblebrow - Emerald Dream"] = {
 			["loaded"] = true,
 		},
-		["Stoakt - Tichondrius"] = {
-			["loaded"] = true,
-		},
-		["Andallsa - Tichondrius"] = {
-			["loaded"] = true,
-		},
-		["Andalsa - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
 			["loaded"] = true,
 		},
 		["Zandro - Tichondrius"] = {
@@ -28,7 +22,13 @@ PasteDB = {
 			["pos"] = {
 			},
 		},
-		["Umbrick - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
+			["loaded"] = true,
+		},
+		["Andallsa - Tichondrius"] = {
+			["loaded"] = true,
+		},
+		["Stoakt - Tichondrius"] = {
 			["loaded"] = true,
 		},
 	},

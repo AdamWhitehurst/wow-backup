@@ -626,6 +626,21 @@ KillingBlow_Enhanced_DB = {
 			["SessionType"] = "pvp",
 			["StartTime"] = "2019-10-24T02:56:24Z",
 		}, -- [57]
+		{
+			["SessionType"] = "pvp",
+			["StartTime"] = "2019-11-23T23:06:52Z",
+			["EndTime"] = "2019-11-23T23:26:05Z",
+		}, -- [58]
+		{
+			["2019-11-23T23:52:44Z"] = "Siofon-Vashj",
+			["2019-11-23T23:48:32Z"] = "Twinklit-Darrowmere",
+			["StartTime"] = "2019-11-23T23:31:50Z",
+			["2019-11-24T00:05:23Z"] = "Gardeniá-Kil'jaeden",
+			["SessionType"] = "pvp",
+			["2019-11-23T23:56:55Z"] = "Dillimore-Mug'thol",
+			["EndTime"] = "2019-11-24T00:06:28Z",
+			["2019-11-24T00:00:55Z"] = "Hungorr-BleedingHollow",
+		}, -- [59]
 	},
 	["Andalsa"] = {
 		{
@@ -651,5 +666,16 @@ KillingBlow_Enhanced_DB = {
 			["StartTime"] = "2019-11-22T01:43:03Z",
 			["EndTime"] = "2019-11-22T01:58:44Z",
 		}, -- [5]
+		{
+			["SessionType"] = "pvp",
+			["StartTime"] = "2019-11-23T22:01:43Z",
+			["2019-11-23T22:14:28Z"] = "Grimwyrd-Turalyon",
+			["EndTime"] = "2019-11-23T22:25:39Z",
+		}, -- [6]
+		{
+			["SessionType"] = "pvp",
+			["StartTime"] = "2019-11-23T22:34:30Z",
+			["EndTime"] = "2019-11-23T22:53:35Z",
+		}, -- [7]
 	},
 }

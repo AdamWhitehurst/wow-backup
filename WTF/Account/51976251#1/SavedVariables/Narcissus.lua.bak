@@ -19,7 +19,7 @@ NarcissusDB = {
 	["GemManager"] = true,
 	["FadeButton"] = false,
 	["DefaultLayout"] = 2,
-	["GlobalScale"] = 1,
+	["AuotoColorTheme"] = true,
 	["DressingRoom"] = true,
 	["SplashVersion"] = 10060,
 	["ShowMinimapButton"] = false,
@@ -27,7 +27,7 @@ NarcissusDB = {
 		["HideTexts"] = true,
 	},
 	["CameraOrbit"] = true,
-	["AuotoColorTheme"] = true,
+	["GlobalScale"] = 1,
 	["Tutorials"] = {
 		["PlayerModelLayerButton"] = true,
 		["GroupPhoto"] = true,
