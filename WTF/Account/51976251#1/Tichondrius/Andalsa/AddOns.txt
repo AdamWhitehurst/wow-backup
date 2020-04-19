@@ -175,7 +175,7 @@ MoveAnything: disabled
 MSBTOptions: enabled
 NameCopy: disabled
 NPCScan: disabled
-OPie: disabled
+OPie: enabled
 Parrot: disabled
 Paste: disabled
 PetJournalEnhanced: enabled

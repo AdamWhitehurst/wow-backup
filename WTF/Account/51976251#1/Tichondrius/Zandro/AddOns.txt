@@ -319,3 +319,4 @@ LibSink-2.0: enabled
 LibTextDump-1.0: enabled
 LibToast-1.0: enabled
 totalRP3_Debug: enabled
+WeakAurasArchive: enabled

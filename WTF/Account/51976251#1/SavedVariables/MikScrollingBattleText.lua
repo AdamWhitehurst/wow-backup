@@ -169,10 +169,10 @@ MSBTProfiles_SavedVars = {
 					["direction"] = "Up",
 					["name"] = "Center",
 					["offsetX"] = -18,
-					["stickyBehavior"] = "Jiggle",
+					["behavior"] = "CurvedLeft",
 					["offsetY"] = -165,
 					["animationStyle"] = "Parabola",
-					["behavior"] = "CurvedLeft",
+					["stickyBehavior"] = "Jiggle",
 				},
 				["Outgoing"] = {
 					["direction"] = "Alternate",

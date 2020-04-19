@@ -1,1 +1,2 @@
 OPie_Classic: disabled
+OPie: enabled

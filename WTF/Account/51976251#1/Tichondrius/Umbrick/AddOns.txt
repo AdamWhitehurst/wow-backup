@@ -273,7 +273,7 @@ MoveAnything: disabled
 MSBTOptions: enabled
 NameCopy: disabled
 NPCScan: disabled
-OPie: disabled
+OPie: enabled
 Paste: disabled
 RetroGameSounds1: disabled
 RetroGameSounds2: disabled

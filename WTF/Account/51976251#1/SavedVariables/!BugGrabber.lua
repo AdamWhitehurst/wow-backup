@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 932,
+	["session"] = 970,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -518,19 +518,12 @@ BugGrabberDB = {
 			["counter"] = 4,
 		}, -- [67]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'DialogKey' tried to call the protected function 'UIParent:EnableMouseWheel()'.",
-			["time"] = "2019/10/31 18:57:50",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `EnableMouseWheel'\nInterface\\AddOns\\DialogKey\\main.lua:522: in function `func'\n...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0-17.lua:57: in function <...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
-			["session"] = 872,
-			["counter"] = 6,
-		}, -- [68]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'weizPVP' tried to call the protected function 'MainMenuBar:SetPoint()'.",
 			["time"] = "2019/11/15 18:39:48",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetPoint'\nInterface\\FrameXML\\UIParent.lua:3024: in function `UIParentManageFramePositions'\nInterface\\FrameXML\\UIParent.lua:2400: in function <Interface\\FrameXML\\UIParent.lua:2387>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:3196: in function <Interface\\FrameXML\\UIParent.lua:3194>\n[C]: ?\n[C]: in function `UIParent_ManageFramePositions'\nInterface\\FrameXML\\ExtraActionBar.lua:17: in function <Interface\\FrameXML\\ExtraActionBar.lua:10>\n[C]: in function `ExtraActionBar_Update'\nInterface\\FrameXML\\ActionBarController.lua:88: in function <Interface\\FrameXML\\ActionBarController.lua:51>",
 			["session"] = 872,
 			["counter"] = 1,
-		}, -- [69]
+		}, -- [68]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Narcissus' tried to call the protected function 'UNKNOWN()'.",
 			["time"] = "2019/11/16 15:02:11",
@@ -538,21 +531,21 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: ?\n[C]: in function `SetCVar'\nInterface\\SharedXML\\Util.lua:1522: in function <Interface\\SharedXML\\Util.lua:1518>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `SetCVar'\nInterface\\AddOns\\Narcissus\\Main.lua:4059: in function <Interface\\AddOns\\Narcissus\\Main.lua:4056>\nInterface\\AddOns\\Narcissus\\Main.lua:4771: in function <Interface\\AddOns\\Narcissus\\Main.lua:4757>\n[C]: in function `Click'\nInterface\\AddOns\\Narcissus\\Main.lua:5146: in function <Interface\\AddOns\\Narcissus\\Main.lua:5123>\n[C]: in function `SetUIVisibility'\n[string \"TOGGLEUI\"]:4: in function <[string \"TOGGLEUI\"]:1>",
 			["session"] = 874,
 			["counter"] = 1,
-		}, -- [70]
+		}, -- [69]
 		{
 			["message"] = "[string \"--[==[ Error in 'Stagger Tick ':'custom tex...\"]:3: attempt to perform arithmetic on local 'value' (a nil value)",
 			["time"] = "2019/11/02 18:59:12",
 			["stack"] = "[C]: in function `xpcall'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.15.5.lua:5838: in function `RunCustomTextFunc'\nInterface\\AddOns\\WeakAuras\\RegionTypes\\Text.lua:190: in function `FrameTick'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:536: in function <...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528>",
 			["session"] = 877,
 			["counter"] = 173,
-		}, -- [71]
+		}, -- [70]
 		{
 			["message"] = "[string \"--[==[ Error in 'Stagger Amount':'custom te...\"]:4: attempt to compare number with nil",
 			["time"] = "2019/11/02 18:59:12",
 			["stack"] = "[C]: in function `xpcall'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.15.5.lua:5838: in function `RunCustomTextFunc'\nInterface\\AddOns\\WeakAuras\\RegionTypes\\Text.lua:190: in function `FrameTick'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:536: in function <...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528>",
 			["session"] = 877,
 			["counter"] = 124,
-		}, -- [72]
+		}, -- [71]
 		{
 			["message"] = "...s_PandariaTreasures\\HandyNotes_PandariaTreasures-1.06.lua:81: GetAchievementCriteriaInfo(achievementID, criteriaIndex [,countHidden]), criteria not found",
 			["time"] = "2019/09/10 17:26:51",
@@ -560,13 +553,13 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `GetAchievementCriteriaInfo'\n...s_PandariaTreasures\\HandyNotes_PandariaTreasures-1.06.lua:81: in main chunk",
 			["session"] = 907,
 			["counter"] = 14,
-		}, -- [73]
+		}, -- [72]
 		{
 			["message"] = "(null)",
 			["session"] = 907,
 			["time"] = "2019/09/10 17:26:57",
 			["counter"] = 45,
-		}, -- [74]
+		}, -- [73]
 		{
 			["message"] = "Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:2269: attempt to get length of local 'rows' (a nil value)",
 			["time"] = "2019/09/24 18:29:18",
@@ -574,7 +567,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:2269: in function `wlSeenWorldQuests'\nInterface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:4651: in function <Interface\\AddOns\\+Wowhead_Looter\\Wowhead_Looter.lua:4625>",
 			["session"] = 909,
 			["counter"] = 14,
-		}, -- [75]
+		}, -- [74]
 		{
 			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:170: Usage: GetItemInfo(itemID|\"name\"|\"itemlink\")",
 			["time"] = "2019/11/22 18:23:10",
@@ -582,63 +575,63 @@ BugGrabberDB = {
 			["stack"] = "[C]: ?\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:170: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:152>\n[C]: in function `ContainerFrame_Update'\nInterface\\FrameXML\\ContainerFrame.lua:282: in function `ContainerFrame_OnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: in function `Show'\nInterface\\FrameXML\\ContainerFrame.lua:1022: in function `ContainerFrame_GenerateFrame'\nInterface\\FrameXML\\ContainerFrame.lua:313: in function `OpenBag'\nInterface\\FrameXML\\ContainerFrame.lua:1547: in function `ToggleAllBags'\n[string \"OPENALLBAGS\"]:1: in function <[string \"OPENALLBAGS\"]:1>",
 			["session"] = 915,
 			["counter"] = 8,
-		}, -- [76]
+		}, -- [75]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Core\\Toolkit.lua:208: BackpackTokenFrameToken1Icon:SetPoint(): BackpackTokenFrameToken1Count is dependent on this",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\ElvUI\\Core\\Toolkit.lua:208: in function `Point'\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:130: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:109>\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:264: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:141>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 917,
 			["counter"] = 20,
-		}, -- [77]
+		}, -- [76]
 		{
 			["message"] = "...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:381: attempt to index field 'UpgradeLevelHelpBox' (a nil value)",
 			["time"] = "2019/09/26 20:46:08",
 			["stack"] = "...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:381: in function <...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Collectables.lua:53>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1248: in function `CallLoadedAddon'\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1267: in function `?'\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[C]: ?\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:448: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:614: in function `CollectionsJournal_LoadUI'\nInterface\\FrameXML\\UIParent.lua:954: in function `SetCollectionsJournalShown'\nInterface\\FrameXML\\UIParent.lua:948: in function `ToggleCollectionsJournal'\n[string \"TOGGLECOLLECTIONSPETJOURNAL\"]:1: in function <[string \"TOGGLECOLLECTIONSPETJOURNAL\"]:1>",
 			["session"] = 918,
 			["counter"] = 42,
-		}, -- [78]
+		}, -- [77]
 		{
 			["message"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:766: Usage: hooksecurefunc([table,] \"function\", hookfunc)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "[C]: ?\n...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:766: in function <...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Alerts.lua:734>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [79]
+		}, -- [78]
 		{
 			["message"] = "...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character-Character.lua:495: attempt to index field 'HelpTipBox' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character-Character.lua:495: in function <...ce\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Character.lua:269>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [80]
+		}, -- [79]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:296: attempt to index local 'frame' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:296: in function `HandleScrollBar'\n...face\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Friends-Friends.lua:56: in function <...face\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Friends.lua:53>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [81]
+		}, -- [80]
 		{
 			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:690: attempt to index local 'f' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:690: in function `HandleCloseButton'\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:365: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:38>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 137,
-		}, -- [82]
+		}, -- [81]
 		{
 			["message"] = "...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:311: attempt to index field 'QuestNPCModel' (a nil value)",
 			["time"] = "2019/09/24 18:29:25",
 			["stack"] = "...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:311: in function <...erface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Quest.lua:62>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1321: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1307>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1228: in function `CallLoadFunc'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1243: in function `CallLoadedModule'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1269: in function `InitializeModules'\nInterface\\AddOns\\ElvUI\\Core\\Core.lua:1484: in function `Initialize'\nInterface\\AddOns\\ElvUI\\init.lua:205: in function <Interface\\AddOns\\ElvUI\\init.lua:204>",
 			["session"] = 920,
 			["counter"] = 135,
-		}, -- [83]
+		}, -- [82]
 		{
 			["message"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent-Talent.lua:350: attempt to index field 'HelpBox' (a nil value)",
 			["time"] = "2019/09/25 19:40:34",
 			["stack"] = "...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent-Talent.lua:350: in function <...rface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Talent.lua:19>\n[C]: ?\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1248: in function `CallLoadedAddon'\nInterface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1267: in function `?'\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...edia-3.0\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...s\\ElvUI\\Libraries\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[C]: ?\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:448: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:527: in function <Interface\\FrameXML\\UIParent.lua:526>\n[C]: in function `TalentFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:759: in function `ToggleTalentFrame'\n[string \"TOGGLETALENTS\"]:1: in function <[string \"TOGGLETALENTS\"]:1>",
 			["session"] = 920,
 			["counter"] = 42,
-		}, -- [84]
+		}, -- [83]
 		{
 			["message"] = "Interface\\SharedXML\\Util.lua:159: bad argument #1 to 'ipairs' (table expected, got nil)",
 			["time"] = "2019/11/23 11:17:42",
@@ -646,21 +639,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `ipairs'\nInterface\\SharedXML\\Util.lua:159: in function `tIndexOf'\nInterface\\SharedXML\\Util.lua:167: in function <Interface\\SharedXML\\Util.lua:166>\nInterface\\AddOns\\Grail\\Grail-105.lua:9273: in function `QuestsInMap'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:1406: in function `_ClassifyQuestsInMap'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:1849: in function `_ForcePanelMapArea'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:4371: in function `UpdateQuestCaches'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:938: in function `?'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:2492: in function `_OnEvent'\nInterface\\AddOns\\Wholly\\Wholly-075.lua:4387: in function <Interface\\AddOns\\Wholly\\Wholly.lua:4387>",
 			["session"] = 920,
 			["counter"] = 8145,
-		}, -- [85]
-		{
-			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT'",
-			["time"] = "2019/11/23 15:02:17",
-			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6781: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
-			["session"] = 924,
-			["counter"] = 1,
-		}, -- [86]
-		{
-			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT_DESC'",
-			["time"] = "2019/11/23 15:02:17",
-			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6799: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
-			["session"] = 924,
-			["counter"] = 1,
-		}, -- [87]
+		}, -- [84]
 		{
 			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:169: Usage: GetItemInfo(itemID|\"name\"|\"itemlink\")",
 			["time"] = "2019/11/23 15:03:50",
@@ -668,25 +647,25 @@ BugGrabberDB = {
 			["stack"] = "[C]: ?\n...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:169: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Bags.lua:151>\n[C]: in function `ContainerFrame_Update'\nInterface\\FrameXML\\ContainerFrame.lua:282: in function `ContainerFrame_OnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: ?\n[C]: in function `Show'\nInterface\\FrameXML\\ContainerFrame.lua:1022: in function `ContainerFrame_GenerateFrame'\nInterface\\FrameXML\\ContainerFrame.lua:313: in function `OpenBag'\nInterface\\FrameXML\\ContainerFrame.lua:1602: in function `OpenAllBags'\n...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:183: in function <...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:182>\n(tail call): ?\n(tail call): ?\n...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:123: in function <...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:111>\n(tail call): ?\n...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:97: in function <...terface\\AddOns\\TradeSkillMaster\\Core\\Lib\\FSM\\FSM.lua:83>\n(tail call): ?\n...e\\AddOns\\TradeSkillMaster\\Core\\UI\\MailingUI\\Core.lua:105: in function `pendingCallback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:161: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:128>",
 			["session"] = 925,
 			["counter"] = 4,
-		}, -- [88]
+		}, -- [85]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\Blizzard\\Load_Skins.xml",
 			["session"] = 929,
 			["time"] = "2019/11/23 17:31:29",
 			["counter"] = 2,
-		}, -- [89]
+		}, -- [86]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\Classic\\Load_Skins.xml",
 			["session"] = 929,
 			["time"] = "2019/11/23 17:31:29",
 			["counter"] = 4,
-		}, -- [90]
+		}, -- [87]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\Retail\\Load_Skins.xml",
 			["session"] = 929,
 			["time"] = "2019/11/23 17:31:29",
 			["counter"] = 4,
-		}, -- [91]
+		}, -- [88]
 		{
 			["message"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: attempt to index a nil value",
 			["time"] = "2019/11/16 14:49:06",
@@ -694,6 +673,153 @@ BugGrabberDB = {
 			["stack"] = "...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:44: in function `?'\n...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0-17.lua:55: in function <...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
 			["session"] = 929,
 			["counter"] = 3,
+		}, -- [89]
+		{
+			["message"] = "...ddOns\\ElvUI_Enhanced\\modules\\maps\\minimapbuttons.lua:272: attempt to index upvalue 'minimapButtonBar' (a nil value)",
+			["time"] = "2019/11/24 09:56:23",
+			["stack"] = "...ddOns\\ElvUI_Enhanced\\modules\\maps\\minimapbuttons.lua:272: in function `UpdateLayout'\nInterface\\AddOns\\ElvUI_Enhanced\\config\\options-Options.lua:294: in function <Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:294>\n[C]: ?\n...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0-78.lua:51: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:49>\n...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0-78.lua:875: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:696>\n...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0-78.lua:932: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:915>\n[C]: ?\n...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-40.lua:72: in function <...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0.lua:70>\n...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-40.lua:290: in function `Fire'\n...eBar\\libs\\AceGUI-3.0-40\\widgets\\AceGUIWidget-Slider.lua:69: in function <...eBar\\libs\\AceGUI-3.0\\widgets\\AceGUIWidget-Slider.lua:60>",
+			["session"] = 937,
+			["counter"] = 15,
+		}, -- [90]
+		{
+			["message"] = "Interface\\AddOns\\ElvUI\\Core\\Math.lua:388: attempt to perform arithmetic on a nil value",
+			["time"] = "2019/11/24 13:33:59",
+			["locals"] = "self = <table> {\n GetTimeInfo = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:342\n mylevel = 120\n Bags = <table> {\n }\n privateVars = <table> {\n }\n HandleCommandBar = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:188\n CancelTimer = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:147\n FormatMoney = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:396\n ExitVehicleShowFrames = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:478\n HelloKittyToggle = <function> defined @Interface\\AddOns\\ElvUI\\Core\\AprilFools.lua:351\n UpdateUnitFrames = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:875\n CopyTable = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:516\n DispelClasses = <table> {\n }\n SetMoversPositions = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Movers.lua:480\n ScheduleTimer = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:94\n PriestColors = <table> {\n }\n UpdateDB = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:842\n SetupTheme = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Install.lua:166\n media = <table> {\n }\n UnlocalizedClassName = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:61\n data = <table> {\n }\n EnableBlizzardAddOns = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Commands.lua:215\n UIScale = <function> defined @Interface\\AddOns\\ElvUI\\Core\\PixelPerfect.lua:26\n db = <table> {\n }\n FramesOverlap = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:118\n SetEnabledState = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:424\n Hook = <function> defined @Interface\\AddOns\\DynamicCam\\Libs\\AceHook-3.0\\AceHook-3.0.lua:274\n Options = <table> {\n }\n UpdateLayout = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:893\n Layout = <table> {\n }\n PluginInstaller = <table> {\n }\n PixelBestSize = <function> defined @Interface\\AddOns\\ElvUI\\Core\\PixelPerfect.lua:67\n UnregisterEventForObject = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:1178\n Distributor = <table> {\n }\n SendPluginVersionCheck = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\LibElvUIPlugin-1.0\\LibElvUIPlugin-1.0.lua:147\n HiddenFrame = <unnamed> {\n }\n Media = <table> {\n }\n PositionGameMenuButton = <function> defined @Interface\\AddOns\\ElvUI\\init.lua:209\n ScanTooltipTextures = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:72\n SafeGetPoint = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Toolkit.lua:21\n UIFrameFade = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Animation.lua:211\n BadDispels = <table> {\n }\n TimeIndicatorColors = <table> {\n }\n StaticPopup_IsLastDisplayedFrame = <function> defined @Interface\\AddOns\\ElvUI\\Core\\StaticPopups.lua:594\n StaticPopup_CreateSecureButton = <function> defined @Interface\\AddOns\\ElvUI\\Core\\StaticPopups.lua:1156\n Truncate = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:98\n UpdateBackdropColors = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:440\n TimeThreshold = 3\n ToggleMoveMode = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Config.lua:58\n RemoveTableDuplicates = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:553\n name = \"ElvUI\"\n WorldMap = <table> {\n }\n MinimapHeight = 300\n Disable = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:314\n DF = <table> {\n }\n SlideOut = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Animation.lua:146\n isMacClient = false\n Print = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:195\n Install = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Install.lua:716\n UnregisterObjectForVehicleLock = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:449\n LockedCVars = <table> {\n }\n EscapeString = <function> defined @Interface\\AddOns\\ElvUI\\init.lua:125\n TimeFormats = <table> {\n }\n ObjectEventFrame = <unnamed> {\n }\n GetNazjatarBodyguardXP = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:203\n InversePoints = <table> {\n }\n Cooldown_StopTimer = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Cooldowns.lua:101",
+			["stack"] = "Interface\\AddOns\\ElvUI\\Core\\Math.lua:388: in function `GetDistance'\n...lvUI_Enhanced\\modules\\unitframes\\update_elements.lua:49: in function `?'\n...dOns\\ChocolateBar\\libs\\AceTimer-3.0\\AceTimer-3.0-17.lua:55: in function <...dOns\\ChocolateBar\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
+			["session"] = 946,
+			["counter"] = 1,
+		}, -- [91]
+		{
+			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT_DESC'",
+			["time"] = "2019/11/23 15:02:17",
+			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6799: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
+			["session"] = 949,
+			["counter"] = 3,
 		}, -- [92]
+		{
+			["message"] = "...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:635: script ran too long",
+			["time"] = "2019/11/24 14:57:26",
+			["locals"] = "self = <table> {\n DeleteRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _IsIndex = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _bulkInsertContext = <table> {\n }\n _fieldTypeLookup = <table> {\n }\n _smartMapReaderLookup = <table> {\n }\n _fieldOffsetLookup = <table> {\n }\n _smartMapInputLookup = <table> {\n }\n _newRowTempInUse = false\n _GetRowData = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _multiFieldIndexFields = <table> {\n }\n GetUniqueRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _data = <table> {\n }\n _uuidToDataOffsetLookup = <table> {\n }\n _uuids = <table> {\n }\n _indexLists = <table> {\n }\n _newRowTemp = <table> {\n }\n _queuedQueryUpdate = false\n BulkInsertNewRowFast8 = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n Truncate = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _smartMapInputFields = <table> {\n }\n NewRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _UUIDIterator = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _GetIndexListIndexRange = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _queryUpdatesPaused = 2\n _indexOrUniqueFields = <table> {\n }\n BulkInsertStart = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _UpdateRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _numStoredFields = 13\n TruncateAndBulkInsertStart = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n HasUniqueRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n FieldIterator = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n BulkInsertEnd = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _uniques = <table> {\n }\n SetUniqueRowField = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _GetIndexAndUniqueList = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n GetNumRows = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n GetRawData = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _GetIndexListInsertIndex = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _GetRowIndexValue = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n BulkInsertNewRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _RegisterQuery = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n DeleteRowByUUID = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _IsSmartMapField = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n BulkInsertNewRowFast6 = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n RawIterator = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _queries = <table> {\n }\n _GetFieldType = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n SetQueryUpdatesPaused = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n GetUniqueRowField = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _RemoveQuery = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\L",
+			["stack"] = "...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:635: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:634>\n(tail call): ?\n...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:333: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:327>\n(tail call): ?\n...erface\\AddOns\\TradeSkillMaster\\Core\\Lib\\ItemInfo.lua:660: in function `pendingCallback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:161: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:128>",
+			["session"] = 951,
+			["counter"] = 1,
+		}, -- [93]
+		{
+			["message"] = "...\\AddOns\\TradeSkillMaster\\Core\\Lib\\Inventory\\Core.lua:416: script ran too long",
+			["time"] = "2019/11/24 14:57:28",
+			["locals"] = "field = \"guildQuantity\"\nquery = <table> {\n _NewClause = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _sortValueCache = <table> {\n }\n End = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _GetResultRowData = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n Matches = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n ResetSelect = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _MarkResultStale = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n ResetVirtualFields = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n Select = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _Release = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n And = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _rootClause = <table> {\n }\n UUIDIterator = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _Acquire = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n GetFirstResult = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n LessThanOrEqual = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n GreaterThan = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _IndexValueHelper = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _genericSortWrapper = <function> defined @Interface\\AddOns\\TradeSkillMaster\\Core\\Lib\\Database\\DatabaseQuery.lua:53\n InnerJoin = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n LeftJoin = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n SumOfProduct = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _iterDistinctUsed = <table> {\n }\n _autoRelease = false\n OrderBy = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _tempResultRow = <table> {\n }\n Count = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _isIterating = true\n _resultDependencies = <table> {\n }\n _virtualFieldType = <table> {\n }\n IsNil = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _CreateResultRow = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _virtualFieldArgField = <table> {\n }\n _virtualFieldFunc = <table> {\n }\n GetResultRowByUUID = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n HashEqual = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _resultRowLookup = <table> {\n }\n _joinDBs = <table> {\n }\n IteratorAndRelease = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n SetUpdateCallback = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _resultIsStale = false\n _singleSortWrapper = <function> defined @Interface\\AddOns\\TradeSkillMaster\\Core\\Lib\\Database\\DatabaseQuery.lua:56\n Or = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _joinFields = <table> {\n }\n _result = <table> {\n }\n GetFirstResultAndRelease = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n _select = <table> {\n }\n ResetJoins = <function> defined @Interface\\AddOns\\TradeSkillMaster\\External\\LibTSMClass\\LibTSMClass.lua:189\n Distinct = <function> defined @Interface\\AddOns",
+			["stack"] = "...\\AddOns\\TradeSkillMaster\\Core\\Lib\\Inventory\\Core.lua:416: in function `WipeQuantity'\n...\\AddOns\\TradeSkillMaster\\Core\\Lib\\Inventory\\Core.lua:106: in function `OnGuildLoaded'\n...radeSkillMaster\\Core\\Lib\\Inventory\\GuildTracking.lua:127: in function `pendingCallback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:161: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:128>",
+			["session"] = 951,
+			["counter"] = 1,
+		}, -- [94]
+		{
+			["message"] = "AceLocale-3.0-6: Details: Missing entry for 'STRING_OPTIONS_TEXT_LTRANSLIT'",
+			["time"] = "2019/11/23 15:02:17",
+			["stack"] = "Interface\\AddOns\\Details\\gumps\\janela_options.lua:6781: in function `?'\nInterface\\AddOns\\Details\\gumps\\janela_options.lua:11290: in function `OpenOptionsWindow'\nInterface\\AddOns\\Details\\gumps\\janela_principal.lua:9420: in function <Interface\\AddOns\\Details\\gumps\\janela_principal.lua:9410>\n[C]: in function `pcall'\nInterface\\AddOns\\Details\\Libs\\DF\\fw.lua:2665: in function `CoreDispatch'\nInterface\\AddOns\\Details\\Libs\\DF\\button.lua:887: in function <Interface\\AddOns\\Details\\Libs\\DF\\button.lua:800>",
+			["session"] = 951,
+			["counter"] = 4,
+		}, -- [95]
+		{
+			["message"] = "...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:358: assertion failed!",
+			["time"] = "2019/11/24 14:57:26",
+			["locals"] = "(*temporary) = false\n",
+			["stack"] = "[C]: in function `assert'\n...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:358: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:357>\n(tail call): ?\n...erface\\AddOns\\TradeSkillMaster\\Core\\Lib\\ItemInfo.lua:656: in function `pendingCallback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:161: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Delay.lua:128>",
+			["session"] = 951,
+			["counter"] = 36768,
+		}, -- [96]
+		{
+			["message"] = "...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:725: assertion failed!",
+			["time"] = "2019/11/24 15:58:50",
+			["locals"] = "(*temporary) = false\n",
+			["stack"] = "[C]: in function `assert'\n...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:725: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:718>\n(tail call): ?\n...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:237: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:233>\n(tail call): ?\n...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:591: in function <...dOns\\TradeSkillMaster\\Core\\Lib\\Database\\Database.lua:571>\n(tail call): ?\n...AddOns\\TradeSkillMaster\\Core\\Service\\Groups\\Core.lua:159: in function `RebuildDatabase'\n...ns\\TradeSkillMaster\\Core\\Service\\Operations\\Core.lua:304: in function `OnProfileUpdated'\n...erface\\AddOns\\TradeSkillMaster\\Core\\Lib\\Settings-Settings.lua:416: in function `SetProfile'\n...terface\\AddOns\\TradeSkillMaster\\TradeSkillMaster-v4.8.20.lua:633: in function `OnDisable'\nInterface\\AddOns\\TradeSkillMaster\\Core\\Lib\\Addon.lua:238: in function `OnDisableHelper'\nInterface\\AddOns\\TradeSkillMaster\\Core\\Lib\\Addon.lua:67: in function `callback'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:88: in function `ProcessEvent'\n...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:104: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:96>",
+			["session"] = 951,
+			["counter"] = 1,
+		}, -- [97]
+		{
+			["message"] = "Interface\\AddOns\\ElvUI_Enhanced\\config\\options-Options.lua:582: attempt to index field 'individualUnits' (a nil value)",
+			["time"] = "2020/04/13 14:11:42",
+			["locals"] = "self = <table> {\n SetDefaultModuleLibraries = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:367\n Enable = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:294\n NewModule = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:235\n EnableModule = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:332\n modules = <table> {\n }\n GetModule = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:210\n IterateEmbeds = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:442\n defaultModuleLibraries = <table> {\n }\n WatchFrame = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:701\n MiscOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:394\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:409\n GetOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:771\n MapOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:258\n name = \"ElvUI_EnhancedOptions\"\n Initialize = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:834\n IsEnabled = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:451\n orderedModules = <table> {\n }\n DisableModule = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:350\n RegisterMessage = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:90\n UnregisterMessage = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:153\n IncompatibleAddOn2 = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:811\n baseName = \"ElvUI_Enhanced\"\n CheckIncompatible = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:819\n IsModule = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:217\n EquipmentOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:85\n SetDefaultModuleState = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:387\n IncompatibleAddOn = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:800\n UnitFramesOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:538\n SetEnabledState = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:424\n TooltipOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:529\n enabledState = true\n RaidMarkerOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:460\n RegisterEvent = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:90\n UnregisterAllMessages = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:174\n NameplateOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:445\n UnregisterAllEvents = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:174\n DataTextOptions = <function> defined @Interface\\AddOns\\ElvUI_Enhanced\\config\\options.lua:43\n IterateModules = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:437\n defaultModuleState = true\n SendMessage = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:59\n GetName = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:279\n moduleName = \"EnhancedOptions\"\n UnregisterEvent = <function> defined @Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:153\n Disable = <function> defined @Interface\\AddOns\\ChocolateBar\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:314\n}\nUF = <table> {\n Update_AssistHeader = <function> defined @Interface\\AddOns\\ElvUI\\Modules\\unitframes\\Groups\\Assist.lua:53\n AuraWat",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI_Enhanced\\config\\options-Options.lua\"]:582: in function `UnitFramesOptions'\n[string \"@Interface\\AddOns\\ElvUI_Enhanced\\config\\options-Options.lua\"]:779: in function `callback'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\LibElvUIPlugin-1.0\\LibElvUIPlugin-1.0-31.lua\"]:167: in function <...\\Libraries\\LibElvUIPlugin-1.0\\LibElvUIPlugin-1.0.lua:161>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:348: in function `ToggleOptionsUI'\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:195: in function <Interface\\AddOns\\ElvUI\\init.lua:194>",
+			["session"] = 967,
+			["counter"] = 1,
+		}, -- [98]
+		{
+			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:448: doesnt exist!",
+			["time"] = "2020/04/13 14:16:45",
+			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:448: in function `HandleDropDownBox'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Communities-Communities.lua\"]:210: in function <...\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Communities.lua:78>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1305: in function `CallLoadedAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1324: in function `?'\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...dOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:457: in function `UIParentLoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:707: in function <Interface\\FrameXML\\UIParent.lua:706>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `Communities_LoadUI'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:973: in function `ToggleCommunitiesFrame'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:828: in function `ToggleGuildFrame'\n[string \"TOGGLEGUILDTAB\"]:1: in function <[string \"TOGGLEGUILDTAB\"]:1>",
+			["session"] = 967,
+			["counter"] = 1,
+		}, -- [99]
+		{
+			["message"] = "...\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Achievement-Achievement Announce.lua:309: attempt to index field 'searchPreview' (a nil value)",
+			["time"] = "2020/03/07 17:06:13",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Achievement-Achievement Announce.lua\"]:309: in function <...\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Achievement.lua:142>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1305: in function `CallLoadedAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1324: in function `?'\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...dOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:457: in function `UIParentLoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:576: in function `AchievementFrame_LoadUI'\n[string \"@Interface\\FrameXML\\AlertFrames.lua\"]:479: in function <Interface\\FrameXML\\AlertFrames.lua:460>",
+			["session"] = 968,
+			["counter"] = 2,
+		}, -- [100]
+		{
+			["message"] = "...ace\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Calendar.lua:39: attempt to index field 'CalendarEventPickerTitleFrameBackgroundLeft' (a nil value)",
+			["time"] = "2020/03/07 17:35:55",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Calendar.lua\"]:39: in function <...ace\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Calendar.lua:13>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1305: in function `CallLoadedAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1324: in function `?'\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...ack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\BugSack\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...dOns\\ChocolateBar\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:457: in function `UIParentLoadAddOn'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:588: in function `Calendar_LoadUI'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:797: in function `ToggleCalendar'\n[string \"@Interface\\FrameXML\\GameTime.lua\"]:241: in function <Interface\\FrameXML\\GameTime.lua:230>",
+			["session"] = 968,
+			["counter"] = 2,
+		}, -- [101]
+		{
+			["message"] = "Interface\\AddOns\\TomTom\\TomTom-v80300-1.1.2.lua:949: bad argument #5 to 'format' (string expected, got nil)",
+			["time"] = "2020/03/07 17:40:18",
+			["locals"] = "(*temporary) = \"|cffffff78TomTom:|r Added a waypoint (%s%s%s) in %s\"\n(*temporary) = \"My Corpse\"\n(*temporary) = \" - \"\n(*temporary) = \"64.92, 46.93\"\n(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
+			["stack"] = "[string \"=[C]\"]: in function `format'\n[string \"@Interface\\AddOns\\TomTom\\TomTom-v80300-1.1.2.lua\"]:949: in function `AddWaypoint'\n[string \"@Interface\\AddOns\\TomTom\\TomTom_Corpse.lua\"]:61: in function <Interface\\AddOns\\TomTom\\TomTom_Corpse.lua:59>\n[string \"@Interface\\AddOns\\TomTom\\TomTom_Corpse.lua\"]:79: in function <Interface\\AddOns\\TomTom\\TomTom_Corpse.lua:71>",
+			["session"] = 968,
+			["counter"] = 5,
+		}, -- [102]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'DialogKey' tried to call the protected function 'UIParent:EnableMouseWheel()'.",
+			["time"] = "2019/10/31 18:57:50",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `EnableMouseWheel'\nInterface\\AddOns\\DialogKey\\main.lua:522: in function `func'\n...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0-17.lua:57: in function <...s\\AddOnSkins\\Libs\\Ace3\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
+			["session"] = 968,
+			["counter"] = 11,
+		}, -- [103]
+		{
+			["message"] = "Interface\\FrameXML\\HelpTip.lua:236: attempt to index local 'info' (a nil value)",
+			["time"] = "2020/04/13 15:21:19",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n GetAlignment = <function> defined @Interface\\FrameXML\\HelpTip.lua:292\n BG = TopBg {\n }\n Matches = <function> defined @Interface\\FrameXML\\HelpTip.lua:429\n OnUpdate = <function> defined @Interface\\FrameXML\\HelpTip.lua:248\n ApplyText = <function> defined @Interface\\FrameXML\\HelpTip.lua:371\n GlowTop = TopGlowTop {\n }\n ShadowTop = TopShadowTop {\n }\n ShadowTopLeft = TopShadowTopLeft {\n }\n GlowTopLeft = TopGlowTopLeft {\n }\n RotateArrow = <function> defined @Interface\\FrameXML\\HelpTip.lua:390\n GlowBottomRight = TopGlowBottomRight {\n }\n GlowBottomLeft = TopGlowBottomLeft {\n }\n GlowBottom = TopGlowBottom {\n }\n Close = <function> defined @Interface\\FrameXML\\HelpTip.lua:243\n Acknowledge = <function> defined @Interface\\FrameXML\\HelpTip.lua:404\n closed = false\n acknowledged = false\n Arrow = <unnamed> {\n }\n OkayButton = <unnamed> {\n }\n CloseButton = <unnamed> {\n }\n Text = <unnamed> {\n }\n GlowRight = TopGlowRight {\n }\n ShadowLeft = TopShadowLeft {\n }\n ShadowRight = TopShadowRight {\n }\n ShadowBottom = TopShadowBottom {\n }\n AnchorAndRotate = <function> defined @Interface\\FrameXML\\HelpTip.lua:301\n Init = <function> defined @Interface\\FrameXML\\HelpTip.lua:267\n OnHide = <function> defined @Interface\\FrameXML\\HelpTip.lua:234\n Layout = <function> defined @Interface\\FrameXML\\HelpTip.lua:339\n ShadowBottomRight = TopShadowBottomRight {\n }\n ShadowTopRight = TopShadowTopRight {\n }\n GetTargetPoint = <function> defined @Interface\\FrameXML\\HelpTip.lua:288\n GlowTopRight = TopGlowTopRight {\n }\n ShadowBottomLeft = TopShadowBottomLeft {\n }\n GetButtonInfo = <function> defined @Interface\\FrameXML\\HelpTip.lua:296\n GlowLeft = TopGlowLeft {\n }\n AnchorArrow = <function> defined @Interface\\FrameXML\\HelpTip.lua:383\n OnLoad = <function> defined @Interface\\FrameXML\\HelpTip.lua:227\n Reset = <function> defined @Interface\\FrameXML\\HelpTip.lua:416\n}\ninfo = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'info' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\FrameXML\\HelpTip.lua\"]:236: in function <Interface\\FrameXML\\HelpTip.lua:234>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2739: in function `SetUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2584: in function `ShowUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2452: in function <Interface\\FrameXML\\UIParent.lua:2448>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:3306: in function `ShowUIPanel'\n[string \"@Interface\\FrameXML\\QuestLogOwnerMixin.lua\"]:103: in function `SetDisplayState'\n[string \"@Interface\\FrameXML\\QuestLogOwnerMixin.lua\"]:85: in function `HandleUserActionOpenQuestLog'\n[string \"@Interface\\AddOns\\Blizzard_WorldMap\\Blizzard_WorldMap.lua\"]:440: in function `OpenQuestLog'\n[string \"@Interface\\FrameXML\\QuestMapFrame.lua\"]:630: in function `QuestMapFrame_OpenToQuestDetails'\n[string \"@Interface\\AddOns\\Blizzard_ObjectiveTracker\\Blizzard_QuestObjectiveTracker.lua\"]:84: in function `OnBlockHeaderClick'\n[string \"@Interface\\AddOns\\Blizzard_ObjectiveTracker\\Blizzard_ObjectiveTracker.lua\"]:535: in function <...zzard_ObjectiveTracker\\Blizzard_ObjectiveTracker.lua:533>",
+			["session"] = 968,
+			["counter"] = 2,
+		}, -- [104]
+		{
+			["message"] = "Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:386: attempt to index local 'frame' (a nil value)",
+			["time"] = "2020/03/07 17:03:35",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:386: in function `HandleMaxMinFrame'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\DressingRoom.lua\"]:21: in function <...AddOns\\ElvUI\\Modules\\skins\\Blizzard\\DressingRoom.lua:6>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1378: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1364>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1235: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1250: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1276: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1487: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:223: in function <Interface\\AddOns\\ElvUI\\init.lua:222>",
+			["session"] = 970,
+			["counter"] = 7,
+		}, -- [105]
+		{
+			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Help.lua:35: attempt to index local 'HelpFrameHeader' (a nil value)",
+			["time"] = "2020/03/07 17:03:35",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Help.lua\"]:35: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Help.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1378: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1364>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1235: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1250: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1276: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1487: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:223: in function <Interface\\AddOns\\ElvUI\\init.lua:222>",
+			["session"] = 970,
+			["counter"] = 7,
+		}, -- [106]
+		{
+			["message"] = "...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:136: attempt to index field 'GameMenuFrameHeader' (a nil value)",
+			["time"] = "2020/03/07 17:03:35",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua\"]:136: in function <...terface\\AddOns\\ElvUI\\Modules\\skins\\Blizzard\\Misc.lua:38>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua\"]:1378: in function <Interface\\AddOns\\ElvUI\\Modules\\skins\\Skins.lua:1364>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1235: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1250: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1276: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1487: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:223: in function <Interface\\AddOns\\ElvUI\\init.lua:222>",
+			["session"] = 970,
+			["counter"] = 7,
+		}, -- [107]
+		{
+			["message"] = "...erface\\AddOns\\ElvUI\\Modules\\blizzard\\ColorPicker.lua:157: attempt to index field 'ColorPickerFrameHeader' (a nil value)",
+			["time"] = "2020/03/07 17:03:35",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Modules\\blizzard\\ColorPicker.lua\"]:157: in function `EnhanceColorPicker'\n[string \"@Interface\\AddOns\\ElvUI\\Modules\\blizzard\\Blizzard.lua\"]:12: in function <Interface\\AddOns\\ElvUI\\Modules\\blizzard\\Blizzard.lua:9>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1235: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1250: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1276: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Core.lua\"]:1487: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\init.lua\"]:223: in function <Interface\\AddOns\\ElvUI\\init.lua:222>",
+			["session"] = 970,
+			["counter"] = 7,
+		}, -- [108]
+		{
+			["message"] = "Error loading Interface\\AddOns\\TradeSkillMaster_AppHelper\\AppData.lua",
+			["time"] = "2020/03/07 17:03:51",
+			["session"] = 970,
+			["counter"] = 21,
+		}, -- [109]
 	},
 }

@@ -2,9 +2,11 @@
 DialogKeyDB = {
 	["profileKeys"] = {
 		["Andalsa - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
 	},
 	["global"] = {

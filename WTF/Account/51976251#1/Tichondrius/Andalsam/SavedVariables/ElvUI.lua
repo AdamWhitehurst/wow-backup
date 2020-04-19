@@ -1,94 +1,28 @@
 
 ElvCharacterDB = {
 	["ChatEditHistory"] = {
-		"/p ~30", -- [1]
-		"/p We're holding", -- [2]
-		"/p coming for IBGY :D", -- [3]
-		"/p okay i think were stabilizing", -- [4]
-		"/p WTF my res didnt pop :;(", -- [5]
-		"/p yeah", -- [6]
-		"/p Where you guys at", -- [7]
-		"/p Weird I didnt get the tp toy on this char", -- [8]
-		"/p Onward!", -- [9]
-		"/p lol these horde", -- [10]
+		"/p yeah", -- [1]
+		"/p Weird I didnt get the tp toy on this char", -- [2]
+		"/p lol these horde", -- [3]
+		"/p smh alli true big brain", -- [4]
+		"/p D:", -- [5]
+		"/i thx", -- [6]
+		"/p wow haha how many times did that go back and forth", -- [7]
+		"/p Hey gj guys", -- [8]
+		"/p coming for IBGY :D", -- [9]
+		"/p Where you guys at", -- [10]
 		"/p sometimes they just run in to die", -- [11]
-		"/p smh alli true big brain", -- [12]
-		"/p hows base?", -- [13]
-		"/p D:", -- [14]
-		"/i you healers are OP", -- [15]
-		"/i thx", -- [16]
+		"/i you healers are OP", -- [12]
+		"/p me too, I'll be on later tho", -- [13]
+		"/p WTF my res didnt pop :;(", -- [14]
+		"/p hows base?", -- [15]
+		"/p ~30", -- [16]
 		"/wave", -- [17]
-		"/p wow haha how many times did that go back and forth", -- [18]
-		"/p me too, I'll be on later tho", -- [19]
-		"/p Hey gj guys", -- [20]
+		"/p Onward!", -- [18]
+		"/m", -- [19]
+		"lol", -- [20]
 	},
 	["ChatHistoryLog"] = {
-		{
-			"i did", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			876, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574551588,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [1]
-		{
-			":clap:", -- [1]
-			"Andalsam-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Andalsam-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			877, -- [11]
-			"Player-11-0B7CAAD4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Andalsam|r",
-			[51] = 1574551595,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [2]
-		{
-			"lol", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			878, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574551599,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [3]
 		{
 			"Heheh", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -110,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551616,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [4]
+		}, -- [1]
 		{
 			"im up to 75", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -132,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551619,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [5]
+		}, -- [2]
 		{
 			"103 with 102 ilvl", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -154,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574551621,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [6]
+		}, -- [3]
 		{
 			"2 lvls already", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -176,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551626,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [7]
+		}, -- [4]
 		{
 			"yeah this bg is soooo fast", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -198,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574551633,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [8]
+		}, -- [5]
 		{
 			"Woah when do you get your mastery passive skill", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -220,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551643,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [9]
+		}, -- [6]
 		{
 			"78", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -242,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551662,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [10]
+		}, -- [7]
 		{
 			":o", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -264,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551667,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [11]
+		}, -- [8]
 		{
 			"so closee", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -286,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551672,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [12]
+		}, -- [9]
 		{
 			"Dude the powerspike hnggg", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -308,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551682,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [13]
+		}, -- [10]
 		{
 			"Okay I can do one more before I gotta cook", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -330,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551708,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [14]
+		}, -- [11]
 		{
 			":D", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -352,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551710,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [15]
+		}, -- [12]
 		{
 			"sounds good", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -374,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551716,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [16]
+		}, -- [13]
 		{
 			"Its too bad you guys havent needed to queue with guildies since AV is a thing right now", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -396,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551759,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [17]
+		}, -- [14]
 		{
 			"The guildies are nice, and they love heals and tanks so", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -418,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551772,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [18]
+		}, -- [15]
 		{
 			"But once you ding 120, you should watch for battle for nazjatar", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -440,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551789,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [19]
+		}, -- [16]
 		{
 			"Oooo and check out Mechagon :o thats a fun zone", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -462,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551832,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [20]
+		}, -- [17]
 		{
 			"I'll keep that in mind :D", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -484,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551882,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [21]
+		}, -- [18]
 		{
 			"nooo lol the guild just started a Korraks group too xD", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -506,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551935,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [22]
+		}, -- [19]
 		{
 			"That wouldve been a win for sure", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -528,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551946,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [23]
+		}, -- [20]
 		{
 			"haha", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -550,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574551950,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [24]
+		}, -- [21]
 		{
 			"winning makes levels even faster", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -572,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574551959,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [25]
+		}, -- [22]
 		{
 			"oops", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -594,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551960,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [26]
+		}, -- [23]
 		{
 			"Yeah", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -616,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551966,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [27]
+		}, -- [24]
 		{
 			"oh hey justice, I also got james into the guild too", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -638,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574551977,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [28]
+		}, -- [25]
 		{
 			"haha that's aweesome", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -660,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574551992,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [29]
+		}, -- [26]
 		{
 			"I'm excited to play with him", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -682,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574552002,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [30]
+		}, -- [27]
 		{
 			"Right? Yeah he likes arenas, which is something Ive never tried before", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -704,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552023,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [31]
+		}, -- [28]
 		{
 			"ultimate pvp", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -726,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552029,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [32]
+		}, -- [29]
 		{
 			"keep me alive at gy please thanks :)", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -748,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552107,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [33]
+		}, -- [30]
 		{
 			"nah", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -770,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552120,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [34]
+		}, -- [31]
 		{
 			"keep me alive", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -792,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552125,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [35]
+		}, -- [32]
 		{
 			"jk pallys more imp", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -814,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552144,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [36]
+		}, -- [33]
 		{
 			"hey guys", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -836,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552181,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [37]
+		}, -- [34]
 		{
 			"btw i don't believe in mushrooms", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -858,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552185,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [38]
+		}, -- [35]
 		{
 			"Uhm what? lmao", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -880,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552200,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [39]
+		}, -- [36]
 		{
 			"lets hit iceblood", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -902,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552207,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [40]
+		}, -- [37]
 		{
 			"west", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -924,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552217,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [41]
+		}, -- [38]
 		{
 			"omw", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -946,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552224,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [42]
+		}, -- [39]
 		{
 			"really need help ", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -968,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552257,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [43]
+		}, -- [40]
 		{
 			"Ugh died all the way north", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -990,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552267,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [44]
+		}, -- [41]
 		{
 			"yep you stuck", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1012,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552279,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [45]
+		}, -- [42]
 		{
 			"Imma hafta defend", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1034,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552282,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [46]
+		}, -- [43]
 		{
 			"big group", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1056,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552289,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [47]
+		}, -- [44]
 		{
 			"ima just run past lol", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1078,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552323,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [48]
+		}, -- [45]
 		{
 			"They have D in IBT. Stealthed druid", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1100,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552347,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [49]
+		}, -- [46]
 		{
 			"Interrupted Kaltrois-Cenarius's |cff71d5ff|Hspell:5143:0|h[Arcane Missiles]|h|r!", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1122,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552367,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [50]
+		}, -- [47]
 		{
 			"We're holding here", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1144,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552386,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [51]
+		}, -- [48]
 		{
 			"And they're pushing SHGY hard", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1166,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552399,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [52]
+		}, -- [49]
 		{
 			"Gonna see whats up at base", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1188,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552403,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [53]
+		}, -- [50]
 		{
 			"nah they good", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1210,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552419,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [54]
+		}, -- [51]
 		{
 			"oh god big push", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1232,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552446,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [55]
+		}, -- [52]
 		{
 			"~30", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1254,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552453,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [56]
+		}, -- [53]
 		{
 			"we loosing iceblood graveyard", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1276,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552484,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [57]
+		}, -- [54]
 		{
 			"we gon loose", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1298,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552486,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [58]
+		}, -- [55]
 		{
 			"Guys... IBGY...", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1320,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552501,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [59]
+		}, -- [56]
 		{
 			"Or you lose your southern GY", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1342,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552513,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [60]
+		}, -- [57]
 		{
 			"We're holding", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1364,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552518,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [61]
+		}, -- [58]
 		{
 			"they already have it tapped", -- [1]
 			"Past-Sen'jin", -- [2]
@@ -1386,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Past-Sen'jin|r",
 			[51] = 1574552528,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [62]
+		}, -- [59]
 		{
 			"sigh", -- [1]
 			"Jadelynette-Lothar", -- [2]
@@ -1408,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Jadelynette-Lothar|r",
 			[51] = 1574552539,
 			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		}, -- [63]
+		}, -- [60]
 		{
 			"sigh", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1430,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552539,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [64]
+		}, -- [61]
 		{
 			"Interrupted Amorialein-WyrmrestAccord's |cff71d5ff|Hspell:191837:0|h[Essence Font]|h|r!", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1452,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552540,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [65]
+		}, -- [62]
 		{
 			"go right from gy and let them have it and get ibgy back", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -1474,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574552560,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [66]
+		}, -- [63]
 		{
 			"They have 10+ there now... cuz they lost SHGY", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1496,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552586,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [67]
+		}, -- [64]
 		{
 			"coming for IBGY :D", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1518,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552604,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [68]
+		}, -- [65]
 		{
 			"start all over again", -- [1]
 			"Valinara-Nemesis", -- [2]
@@ -1540,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecValinara-Nemesis|r",
 			[51] = 1574552614,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [69]
+		}, -- [66]
 		{
 			"Oh... we capped SFGY...", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1562,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574552633,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [70]
+		}, -- [67]
 		{
 			"okay i think were stabilizing", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1584,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552684,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [71]
+		}, -- [68]
 		{
 			"this gon be longer game", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1606,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552695,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [72]
+		}, -- [69]
 		{
 			"WTF my res didnt pop :;(", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1628,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552698,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [73]
+		}, -- [70]
 		{
 			"yeah", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1650,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552704,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [74]
+		}, -- [71]
 		{
 			"INCOMING IBT", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -1672,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574552757,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [75]
+		}, -- [72]
 		{
 			"i am hoping i craft |cff1eff00|Hitem:72104::::::::112:70::::::|h[Living Steel]|h|r or something on this server for passive income ", -- [1]
 			"Askenef-WyrmrestAccord", -- [2]
@@ -1694,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Askenef-WyrmrestAccord|r",
 			[51] = 1574552803,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [76]
+		}, -- [73]
 		{
 			"wrong chat", -- [1]
 			"Askenef-WyrmrestAccord", -- [2]
@@ -1716,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Askenef-WyrmrestAccord|r",
 			[51] = 1574552808,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [77]
+		}, -- [74]
 		{
 			"ha", -- [1]
 			"Askenef-WyrmrestAccord", -- [2]
@@ -1738,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Askenef-WyrmrestAccord|r",
 			[51] = 1574552812,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [78]
+		}, -- [75]
 		{
 			"Where you guys at", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1760,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552837,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [79]
+		}, -- [76]
 		{
 			"turning in supplies", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1782,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552845,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [80]
+		}, -- [77]
 		{
 			"for turtling games like this", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1804,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552871,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [81]
+		}, -- [78]
 		{
 			"come back every once ina  while an tturn in supplies", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1826,7 +1760,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552877,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [82]
+		}, -- [79]
 		{
 			"makes our troops stronger", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1848,7 +1782,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574552880,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [83]
+		}, -- [80]
 		{
 			"Weird I didnt get the tp toy on this char", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1870,7 +1804,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574552934,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [84]
+		}, -- [81]
 		{
 			"That poor rogue should have worn her brown pants...", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -1892,7 +1826,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574553034,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [85]
+		}, -- [82]
 		{
 			"Onward!", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1914,7 +1848,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553070,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [86]
+		}, -- [83]
 		{
 			"SHGY needs help", -- [1]
 			"Riyven-Feathermoon", -- [2]
@@ -1936,7 +1870,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Riyven-Feathermoon|r",
 			[51] = 1574553133,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [87]
+		}, -- [84]
 		{
 			"Capping: Stonehearth Graveyard - 2:45 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -1958,7 +1892,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553143,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [88]
+		}, -- [85]
 		{
 			"Interrupted Zumalley-SistersofElune's |cff71d5ff|Hspell:203286:0|h[Greater Pyroblast]|h|r!", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -1980,7 +1914,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553170,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [89]
+		}, -- [86]
 		{
 			"lol these horde", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2002,7 +1936,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553215,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [90]
+		}, -- [87]
 		{
 			"sometimes they just run in to die", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2024,7 +1958,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553221,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [91]
+		}, -- [88]
 		{
 			"smh alli true big brain", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2046,7 +1980,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553234,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [92]
+		}, -- [89]
 		{
 			"2 rogues in DB now", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -2068,7 +2002,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574553241,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [93]
+		}, -- [90]
 		{
 			"Capping: Icewing Bunker - 3:07 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2090,7 +2024,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553260,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [94]
+		}, -- [91]
 		{
 			"Capping: Dun Baldar South Bunker - 3:29 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2112,7 +2046,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553261,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [95]
+		}, -- [92]
 		{
 			"Capping: Iceblood Graveyard - 1:08 (Alliance)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2134,7 +2068,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553347,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [96]
+		}, -- [93]
 		{
 			"Capping: Iceblood Tower - 2:31 (Alliance)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2156,7 +2090,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553348,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [97]
+		}, -- [94]
 		{
 			"Capping: Tower Point - 3:11 (Alliance)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2178,7 +2112,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553349,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [98]
+		}, -- [95]
 		{
 			"Capping: Icewing Bunker - 1:36 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2200,7 +2134,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553350,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [99]
+		}, -- [96]
 		{
 			"Capping: Stormpike Graveyard - 3:30 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2222,7 +2156,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553351,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [100]
+		}, -- [97]
 		{
 			"They're in DB in force now", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -2244,7 +2178,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574553434,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [101]
+		}, -- [98]
 		{
 			"ok there here", -- [1]
 			"Jaxhamrhealz-Elune", -- [2]
@@ -2266,7 +2200,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Jaxhamrhealz-Elune|r",
 			[51] = 1574553459,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [102]
+		}, -- [99]
 		{
 			"hows base?", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2288,7 +2222,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553478,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [103]
+		}, -- [100]
 		{
 			"Capping: Iceblood Tower - 0:14 (Alliance)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2310,7 +2244,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553485,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [104]
+		}, -- [101]
 		{
 			"oh i need to hit it up", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2332,7 +2266,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574553490,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [105]
+		}, -- [102]
 		{
 			"doing that real quick", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2354,7 +2288,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574553493,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [106]
+		}, -- [103]
 		{
 			"they are in the base sooooo", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2376,7 +2310,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574553513,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [107]
+		}, -- [104]
 		{
 			"we might be in trouble", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2398,7 +2332,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574553515,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [108]
+		}, -- [105]
 		{
 			"D:", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2420,7 +2354,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553524,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [109]
+		}, -- [106]
 		{
 			"you healers are OP", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2442,7 +2376,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553692,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [110]
+		}, -- [107]
 		{
 			"thx", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2464,7 +2398,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574553703,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [111]
+		}, -- [108]
 		{
 			"Capping: Dun Baldar South Bunker - 0:49 (Horde)", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2486,7 +2420,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553755,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [112]
+		}, -- [109]
 		{
 			"whats the hordes progress on our base?", -- [1]
 			"Andorein-MoonGuard", -- [2]
@@ -2508,7 +2442,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Andorein-MoonGuard|r",
 			[51] = 1574553870,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [113]
+		}, -- [110]
 		{
 			"check your map lol", -- [1]
 			"Failure-Khaz'goroth", -- [2]
@@ -2530,7 +2464,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Failure-Khaz'goroth|r",
 			[51] = 1574553896,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [114]
+		}, -- [111]
 		{
 			"we lost", -- [1]
 			"Failure-Khaz'goroth", -- [2]
@@ -2552,7 +2486,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Failure-Khaz'goroth|r",
 			[51] = 1574553897,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [115]
+		}, -- [112]
 		{
 			"They're on Vann", -- [1]
 			"Barkbite-Medivh", -- [2]
@@ -2574,7 +2508,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Barkbite-Medivh|r",
 			[51] = 1574553905,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [116]
+		}, -- [113]
 		{
 			"our O was a tad weak", -- [1]
 			"Riyven-Feathermoon", -- [2]
@@ -2596,7 +2530,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Riyven-Feathermoon|r",
 			[51] = 1574553914,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [117]
+		}, -- [114]
 		{
 			"just waiting for thrm to finish our boss", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2618,7 +2552,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553914,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [118]
+		}, -- [115]
 		{
 			"boss is 75%", -- [1]
 			"Askenef-WyrmrestAccord", -- [2]
@@ -2640,7 +2574,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Askenef-WyrmrestAccord|r",
 			[51] = 1574553924,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [119]
+		}, -- [116]
 		{
 			"need to go around not fight at gy", -- [1]
 			"Korshell-BlackwaterRaiders", -- [2]
@@ -2662,7 +2596,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKorshell-BlackwaterRaiders|r",
 			[51] = 1574553950,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [120]
+		}, -- [117]
 		{
 			"alright guys im off for a bit", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2684,7 +2618,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574553999,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [121]
+		}, -- [118]
 		{
 			"was fun", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2706,7 +2640,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574554000,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [122]
+		}, -- [119]
 		{
 			"wow haha how many times did that go back and forth", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2728,7 +2662,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574554005,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [123]
+		}, -- [120]
 		{
 			"hit me up if you want more :)", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2750,7 +2684,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574554008,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [124]
+		}, -- [121]
 		{
 			"me too, I'll be on later tho", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2772,7 +2706,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574554018,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [125]
+		}, -- [122]
 		{
 			"Hey gj guys", -- [1]
 			"Andalsam-Tichondrius", -- [2]
@@ -2794,7 +2728,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Andalsam|r",
 			[51] = 1574554028,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [126]
+		}, -- [123]
 		{
 			"see ya guys gg", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2816,6 +2750,72 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574554033,
 			[50] = "CHAT_MSG_PARTY",
+		}, -- [124]
+		{
+			"kk", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			88, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574630850,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [125]
+		{
+			"i was afk I spilt the beans lol", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			89, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574630866,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [126]
+		{
+			"lol", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			90, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574630899,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 		}, -- [127]
 	},
 }

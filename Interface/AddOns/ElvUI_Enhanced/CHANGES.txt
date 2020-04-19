@@ -1,12 +1,12 @@
-tag f5d842236ad2ca7a730cb1d3cd955e7b94364f90 3.4.0
-Author:	Feraldin <nickbock@hoarder.bocky.nl>
-Date:	Wed Oct 2 17:07:45 2019 +0200
+tag fe7e6ae49852857fcb7e3725b5290e7e866a4a51 3.4.5
+Author:	Bocky <nick@bocky.nl>
+Date:	Sat Mar 28 15:43:28 2020 +0100
 
-Patch update
+Progression update
 
-commit e5fc353c679b412c590f55eec13e108a8e23ce67
+commit a89e5dfdd982a5ccb4189d20483cdaf34c4260b7
 Author: Nick <git@bockmeulen.nl>
-Date:   Wed Oct 2 17:07:05 2019 +0200
+Date:   Sat Mar 28 15:32:09 2020 +0100
 
-    patch update
+    Progression update
 

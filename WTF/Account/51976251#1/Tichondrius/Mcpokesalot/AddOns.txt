@@ -29,3 +29,4 @@ HandyNotes_TimelessIsleChests: enabled
 HandyNotes_TimelessTreasures: enabled
 WeakAuras: disabled
 OPie_Classic: disabled
+OPie: enabled

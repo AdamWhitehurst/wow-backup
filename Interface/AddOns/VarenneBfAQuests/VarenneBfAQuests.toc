@@ -1,8 +1,0 @@
-## Interface: 80000
-## Title: VarenneBfAQuests
-## Author: Varren@Azuregos-RU
-## Version: 0.1
-## SavedVariables: VarenneBfAQuests_Settings
-## Dependencies: ViragDevTool
-
-VarenneBfAQuests.lua

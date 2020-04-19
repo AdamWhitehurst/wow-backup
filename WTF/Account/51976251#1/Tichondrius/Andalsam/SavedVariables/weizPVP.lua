@@ -8,28 +8,29 @@ weizPVPOptions = {
 			["Options"] = {
 				["Addon"] = {
 					["Version"] = "1.81.1",
-					["VersionNumber"] = 1802.1,
 					["VersionSplashSeen"] = true,
+					["VersionNumber"] = 1802.1,
 				},
 				["Window"] = {
+					["Pinned"] = true,
 					["Collapsed"] = true,
 				},
 				["StealthAlert"] = {
 					["SoundFile"] = "weizPVP: Beep 2",
 				},
 				["Frames"] = {
-					["Point"] = "BOTTOMRIGHT",
+					["Point"] = "TOPLEFT",
 					["Width"] = 399.6100463867188,
-					["Y"] = 119.8435287475586,
-					["X"] = -3.556396484375,
+					["Y"] = -6.7117919921875,
+					["X"] = 131.3527679443359,
 					["Header"] = {
-						["Point"] = "BOTTOMRIGHT",
+						["Point"] = "TOPLEFT",
 						["Width"] = 399.6100463867188,
-						["Y"] = 252.8435363769531,
+						["Y"] = 0,
 						["Height"] = 26.00003623962402,
-						["X"] = -3.556396484375,
+						["X"] = 131.3527679443359,
 					},
-					["Height"] = 133,
+					["Height"] = 132.9999694824219,
 				},
 				["AudioAlerts"] = {
 					["DetectedPlayerSound"] = true,

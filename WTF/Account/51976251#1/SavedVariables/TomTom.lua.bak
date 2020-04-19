@@ -13,22 +13,23 @@ TomTomDB = {
 		["Mcpokesalot - Tichondrius"] = "Default",
 		["Iscrackl - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
-		["Brungar - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
 		["Lonalber - Emerald Dream"] = "Default",
 		["Magnr - Tichondrius"] = "Default",
 		["Andalsa - Tichondrius"] = "Default",
 		["Byanir - Emerald Dream"] = "Default",
 		["Tirdailough - Tichondrius"] = "Default",
 		["Curaney - Tichondrius"] = "Default",
-		["Byanir - Moon Guard"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
+		["Harwapa - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
 		["Bjorgr - Tichondrius"] = "Default",
 		["Grandh - Tichondrius"] = "Default",
-		["Umbrick - Tichondrius"] = "Default",
-		["Harwapa - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Byanir - Moon Guard"] = "Default",
 		["Madylad - Tichondrius"] = "Default",
-		["Stoakt - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -66,22 +67,23 @@ TomTomWaypointsM = {
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
 		["Iscrackl - Tichondrius"] = "Iscrackl - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
 		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
 		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
 		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
-		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
-		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
+		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
 		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
 		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
-		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
@@ -98,9 +100,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -130,9 +132,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -156,7 +158,9 @@ TomTomWaypointsM = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},
-		["Brungar - Tichondrius"] = {
+		["Umbrick - Emerald Dream"] = {
+		},
+		["Stoakt - Tichondrius"] = {
 		},
 		["Lonalber - Emerald Dream"] = {
 		},
@@ -170,9 +174,9 @@ TomTomWaypointsM = {
 		},
 		["Curaney - Tichondrius"] = {
 		},
-		["Byanir - Moon Guard"] = {
+		["Harwapa - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Umbrick - Tichondrius"] = {
 		},
 		["Mininimi - Moon Guard"] = {
 		},
@@ -180,13 +184,13 @@ TomTomWaypointsM = {
 		},
 		["Grandh - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Arndoss - Tichondrius"] = {
 		},
-		["Harwapa - Tichondrius"] = {
+		["Byanir - Moon Guard"] = {
 		},
 		["Madylad - Tichondrius"] = {
 		},
-		["Stoakt - Tichondrius"] = {
+		["Brungar - Tichondrius"] = {
 		},
 	},
 }

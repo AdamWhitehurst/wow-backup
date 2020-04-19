@@ -7,6 +7,9 @@ HHTD_SavedVariables = {
 		["Zandro - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
+		["Andalsa - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
 		["Bramblebrow - Emerald Dream"] = {
 			["settingsMigrated"] = false,
 		},
@@ -19,7 +22,7 @@ HHTD_SavedVariables = {
 		["Andallsa - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Andalsa - Tichondrius"] = {
+		["Arndoss - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Stoakt - Tichondrius"] = {
@@ -40,20 +43,21 @@ HHTD_SavedVariables = {
 		["NPH"] = {
 		},
 	},
-	["global"] = {
-		["settingsMigrated"] = false,
-		["oldNameEnableState"] = 0,
-	},
 	["profileKeys"] = {
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
 		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+	},
+	["global"] = {
+		["settingsMigrated"] = false,
+		["oldNameEnableState"] = 0,
 	},
 }

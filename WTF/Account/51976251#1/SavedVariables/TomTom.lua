@@ -13,22 +13,23 @@ TomTomDB = {
 		["Mcpokesalot - Tichondrius"] = "Default",
 		["Iscrackl - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
-		["Stoakt - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
+		["Umbrick - Emerald Dream"] = "Default",
 		["Lonalber - Emerald Dream"] = "Default",
 		["Magnr - Tichondrius"] = "Default",
-		["Andalsa - Tichondrius"] = "Default",
+		["Byanir - Moon Guard"] = "Default",
 		["Byanir - Emerald Dream"] = "Default",
 		["Tirdailough - Tichondrius"] = "Default",
 		["Curaney - Tichondrius"] = "Default",
 		["Harwapa - Tichondrius"] = "Default",
-		["Umbrick - Tichondrius"] = "Default",
+		["Grandh - Tichondrius"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
 		["Bjorgr - Tichondrius"] = "Default",
-		["Grandh - Tichondrius"] = "Default",
-		["Umbrick - Emerald Dream"] = "Default",
-		["Byanir - Moon Guard"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
 		["Madylad - Tichondrius"] = "Default",
-		["Brungar - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -66,22 +67,23 @@ TomTomWaypointsM = {
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
 		["Iscrackl - Tichondrius"] = "Iscrackl - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
 		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
 		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
 		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
 		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
 		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
-		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
-		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
-		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 	},
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
@@ -98,9 +100,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -130,9 +132,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -156,13 +158,15 @@ TomTomWaypointsM = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},
-		["Stoakt - Tichondrius"] = {
+		["Brungar - Tichondrius"] = {
+		},
+		["Umbrick - Emerald Dream"] = {
 		},
 		["Lonalber - Emerald Dream"] = {
 		},
 		["Magnr - Tichondrius"] = {
 		},
-		["Andalsa - Tichondrius"] = {
+		["Byanir - Moon Guard"] = {
 		},
 		["Byanir - Emerald Dream"] = {
 		},
@@ -172,21 +176,21 @@ TomTomWaypointsM = {
 		},
 		["Harwapa - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Grandh - Tichondrius"] = {
 		},
 		["Mininimi - Moon Guard"] = {
 		},
 		["Bjorgr - Tichondrius"] = {
 		},
-		["Grandh - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
 		},
-		["Umbrick - Emerald Dream"] = {
+		["Arndoss - Tichondrius"] = {
 		},
-		["Byanir - Moon Guard"] = {
+		["Andalsa - Tichondrius"] = {
 		},
 		["Madylad - Tichondrius"] = {
 		},
-		["Brungar - Tichondrius"] = {
+		["Stoakt - Tichondrius"] = {
 		},
 	},
 }

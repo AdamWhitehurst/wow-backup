@@ -1,13 +1,10 @@
-lightweight tag e1cc1bc1773dc917d4d17a7db082327ee031c1c8 v8.2.5.7227.140
+lightweight tag 149986e6cc374a575ae3fc49813a2d6b9122aa16 DetailsRetail.8.3.0.7282.140
 Author:	Tercio Jose <terciob19@hotmail.com>
-Date:	Sat Nov 9 19:15:28 2019 -0300
+Date:	Sat Mar 14 13:40:14 2020 -0300
 
-commit e1cc1bc1773dc917d4d17a7db082327ee031c1c8
+commit 149986e6cc374a575ae3fc49813a2d6b9122aa16
 Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Sat Nov 9 19:15:28 2019 -0300
+Date:   Sat Mar 14 13:40:14 2020 -0300
 
-    Colection of small fixes
-    
-    - Fixed plugins showing Out od Date.
-    - Framework update to .161 version.
+    Removed the leftover print plus framework updates
 

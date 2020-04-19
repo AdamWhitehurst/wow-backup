@@ -1,14 +1,10 @@
-lightweight tag 6b533c243d2676c61b30743e4854a10ee8cb732f v3.3.3
-Author:	zanony <zanony@jsommer.at>
-Date:	Mon Sep 2 21:40:47 2019 +0200
+lightweight tag 3e0c51c28fa0f19b515cdec9fbe43929e1c13982 v3.3.5
+Author:	GitHub <noreply@github.com>
+Date:	Sat Feb 8 05:04:52 2020 +0100
 
-commit 6b533c243d2676c61b30743e4854a10ee8cb732f
-Author: zanony <zanony@jsommer.at>
-Date:   Mon Sep 2 21:40:47 2019 +0200
+commit 3e0c51c28fa0f19b515cdec9fbe43929e1c13982
+Author: Jessica <zanony@jsommer.at>
+Date:   Sat Feb 8 05:04:52 2020 +0100
 
-    fix launchers
-    
-    --add an option to change the color of labels
-    --fix no text for launchers
-    --reset default gap to 7
+    Update ChocolateBar.toc
 

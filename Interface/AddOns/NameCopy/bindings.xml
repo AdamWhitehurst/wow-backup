@@ -1,5 +1,0 @@
-<Bindings>
-    <Binding name="NAMECOPY" header="NAMECOPY" category="ADDONS">
-        NAME_COPY_ITEM()
-    </Binding>
-</Bindings>

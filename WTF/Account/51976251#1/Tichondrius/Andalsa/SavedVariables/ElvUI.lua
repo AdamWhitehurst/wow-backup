@@ -1,1326 +1,28 @@
 
 ElvCharacterDB = {
 	["ChatEditHistory"] = {
-		"/i ^", -- [1]
-		"/i What was that about losing ICB GY?", -- [2]
-		"/p where do we go now?", -- [3]
-		"/p lol I dont think Ive even seen Korrak yet", -- [4]
-		"/p Going", -- [5]
-		"/p man at least the bgs arent super long", -- [6]
-		"/p :o", -- [7]
-		"/p I hope neither of you have a DPS meter", -- [8]
-		"/p lel", -- [9]
-		"/p o.o", -- [10]
-		"/p Heheh oh well I feel like Im figuring out rogue", -- [11]
-		"/p Another?", -- [12]
-		"/p one sec", -- [13]
-		"/p Adam#3081", -- [14]
-		"/p yeah or 110%", -- [15]
-		"/p oh", -- [16]
-		"/p Is that the one that costs ~4k?", -- [17]
-		"/p Did I send you some gold for that Justice?", -- [18]
-		"/p >:( I said i would", -- [19]
-		"/p brb", -- [20]
+		"/p brb", -- [1]
+		"/p o.o", -- [2]
+		"/p man at least the bgs arent super long", -- [3]
+		"/p Adam#3081", -- [4]
+		"AIght drop that party", -- [5]
+		"/p yeah or 110%", -- [6]
+		"/p oh", -- [7]
+		"/p Did I send you some gold for that Justice?", -- [8]
+		"nice! Lets group up", -- [9]
+		"/p >:( I said i would", -- [10]
+		"/m", -- [11]
+		"/p Heheh oh well I feel like Im figuring out rogue", -- [12]
+		"/p I hope neither of you have a DPS meter", -- [13]
+		"Wait a sec, I havet hos \"summon linked friend btn....\"", -- [14]
+		"Oh shit this could let me get you into a dungeon lmao", -- [15]
+		"I can summon you since your are my recruit a friend", -- [16]
+		"I have to try this, gonna hop back to my monk and try to summon you to Violet hold", -- [17]
+		"/way 67.9 76.9", -- [18]
+		"/opie", -- [19]
+		"/ec", -- [20]
 	},
 	["ChatHistoryLog"] = {
-		{
-			"not worth it till 120 tho", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1905, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549052,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [1]
-		{
-			"i cant", -- [1]
-			"Dårkmåjjic-Nazgrel", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Dårkmåjjic-Nazgrel", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1908, -- [11]
-			"Player-1184-086B624E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecDårkmåjjic-Nazgrel|r",
-			[51] = 1574549054,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [2]
-		{
-			"gives you 400 ilvl weapon", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1913, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549062,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [3]
-		{
-			"how about 15-20?", -- [1]
-			"Bruceleetm-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1916, -- [11]
-			"Player-11-066F7B3F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Bruceleetm|r",
-			[51] = 1574549068,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [4]
-		{
-			"just cc those elites at IBgy", -- [1]
-			"Hadoopin-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Hadoopin-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1918, -- [11]
-			"Player-11-0A51985D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeHadoopin|r",
-			[51] = 1574549069,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [5]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13770:Player-11-0B8E9836:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Power Creep]|h|r!", -- [1]
-			"Serìously-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Serìously-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1925, -- [11]
-			"Player-11-0B8E9836", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Serìously|r",
-			[51] = 1574549081,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [6]
-		{
-			"^", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1926, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549082,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [7]
-		{
-			"push hard for horde towers", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1937, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549102,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [8]
-		{
-			"dammit", -- [1]
-			"Sarayah-Nesingwary", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sarayah-Nesingwary", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1938, -- [11]
-			"Player-1184-0B870FBA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Sarayah-Nesingwary|r",
-			[51] = 1574549104,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [9]
-		{
-			"asap", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1939, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549104,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [10]
-		{
-			"get that south bunker back i[m watching north bunker", -- [1]
-			"Tooreah-Kilrogg", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Tooreah-Kilrogg", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1940, -- [11]
-			"Player-4-02236BC0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Tooreah-Kilrogg|r",
-			[51] = 1574549104,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [11]
-		{
-			"come southhhhhh", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1942, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549106,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [12]
-		{
-			"There's two rogues there", -- [1]
-			"Neshalivan-WyrmrestAccord", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Neshalivan-WyrmrestAccord", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1947, -- [11]
-			"Player-1171-08A8374B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecNeshalivan-WyrmrestAccord|r",
-			[51] = 1574549111,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [13]
-		{
-			"Going", -- [1]
-			"Andalsa-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Andalsa-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1951, -- [11]
-			"Player-11-0B922830", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Andalsa|r",
-			[51] = 1574549117,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [14]
-		{
-			"I can't take them both", -- [1]
-			"Neshalivan-WyrmrestAccord", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Neshalivan-WyrmrestAccord", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1953, -- [11]
-			"Player-1171-08A8374B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecNeshalivan-WyrmrestAccord|r",
-			[51] = 1574549119,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [15]
-		{
-			"holy christ stop fighting npcs in horde base you can go around", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1966, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549130,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [16]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:486:Player-11-07687ABD:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Halls of Lightning]|h|r!", -- [1]
-			"Politepanda-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Politepanda-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1996, -- [11]
-			"Player-11-07687ABD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff006fdcPolitepanda|r",
-			[51] = 1574549153,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [17]
-		{
-			"just run past npcs", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1998, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549166,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [18]
-		{
-			"2222211212", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2006, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549185,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [19]
-		{
-			"sorry", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2009, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549188,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [20]
-		{
-			"nice", -- [1]
-			"Calyse-LaughingSkull", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Calyse-LaughingSkull", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2010, -- [11]
-			"Player-101-0396CE59", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Calyse-LaughingSkull|r",
-			[51] = 1574549190,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [21]
-		{
-			"please make your way up", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2012, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549193,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [22]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:485:Player-11-0B8E400C:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Halls of Stone]|h|r!", -- [1]
-			"Illexya-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Illexya-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2020, -- [11]
-			"Player-11-0B8E400C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Illexya|r",
-			[51] = 1574549205,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [23]
-		{
-			"skip the lower level", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2033, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549231,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [24]
-		{
-			"QUIT FOCUSING NPCS", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2034, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549234,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [25]
-		{
-			"YOU CAN GO AROUND", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2037, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549236,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [26]
-		{
-			"lol gg", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2038, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549242,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [27]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13925:Player-11-0B8A7500:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[The Fourth War]|h|r!", -- [1]
-			"Atomicblue-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Atomicblue-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2041, -- [11]
-			"Player-11-0B8A7500", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Atomicblue|r",
-			[51] = 1574549246,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [28]
-		{
-			"its okay we lost already", -- [1]
-			"Yrelia-Silvermoon", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Yrelia-Silvermoon", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2042, -- [11]
-			"Player-86-080A7057", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
-			[51] = 1574549247,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [29]
-		{
-			"that guy is pissed about it lol", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2044, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549249,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [30]
-		{
-			"can you go around npc's?", -- [1]
-			"Jetri-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jetri-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2053, -- [11]
-			"Player-5-0B2AD1BC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cJetri-Proudmoore|r",
-			[51] = 1574549263,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [31]
-		{
-			"no", -- [1]
-			"Calyse-LaughingSkull", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Calyse-LaughingSkull", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2054, -- [11]
-			"Player-101-0396CE59", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Calyse-LaughingSkull|r",
-			[51] = 1574549271,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [32]
-		{
-			"oooh ok, just asking for a friend", -- [1]
-			"Jetri-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jetri-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2055, -- [11]
-			"Player-5-0B2AD1BC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cJetri-Proudmoore|r",
-			[51] = 1574549281,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [33]
-		{
-			"lol", -- [1]
-			"Jetri-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jetri-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2056, -- [11]
-			"Player-5-0B2AD1BC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cJetri-Proudmoore|r",
-			[51] = 1574549282,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [34]
-		{
-			"lol", -- [1]
-			"Howlbane-Ner'zhul", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Howlbane-Ner'zhul", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2058, -- [11]
-			"Player-128-0688CEBD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cHowlbane-Ner'zhul|r",
-			[51] = 1574549286,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [35]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12831:Player-11-0B4947A6:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Freehold]|h|r!", -- [1]
-			"Jethor-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jethor-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2064, -- [11]
-			"Player-11-0B4947A6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Jethor|r",
-			[51] = 1574549298,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [36]
-		{
-			"i mean, you can cause people keep going up the main road when theres a path to the right of the entrance", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2071, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549317,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [37]
-		{
-			"Yes, just go thru the little patch on the right", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2077, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549330,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [38]
-		{
-			"i think we lost", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2078, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549330,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [39]
-		{
-			"aid station is gone :(", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2080, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549335,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [40]
-		{
-			"instead of main road like a moron", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2081, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549336,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [41]
-		{
-			"Capping: Dun Baldar North Bunker - 0:42 (Horde)", -- [1]
-			"Herne-Shadowsong", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Herne-Shadowsong", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2083, -- [11]
-			"Player-85-087CA664", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Herne-Shadowsong|r",
-			[51] = 1574549345,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [42]
-		{
-			"man at least the bgs arent super long", -- [1]
-			"Andalsa-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Andalsa-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2086, -- [11]
-			"Player-11-0B922830", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Andalsa|r",
-			[51] = 1574549350,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [43]
-		{
-			"why does alliance try to out zerg the horde?", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2088, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549352,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [44]
-		{
-			"but you cant go through them need to fight them", -- [1]
-			"Calyse-LaughingSkull", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Calyse-LaughingSkull", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2089, -- [11]
-			"Player-101-0396CE59", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Calyse-LaughingSkull|r",
-			[51] = 1574549354,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [45]
-		{
-			"we can't", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2093, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549355,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [46]
-		{
-			"we gotta defend a little", -- [1]
-			"Nayalia-Proudmoore", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Nayalia-Proudmoore", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2097, -- [11]
-			"Player-5-077CE6B5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeNayalia-Proudmoore|r",
-			[51] = 1574549358,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [47]
-		{
-			"calling people names makes them more likely to not do as you say", -- [1]
-			"Krillidan-Kil'jaeden", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Krillidan-Kil'jaeden", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2099, -- [11]
-			"Player-9-0A4391D9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
-			[51] = 1574549360,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [48]
-		{
-			"they can be", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2102, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549372,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [49]
-		{
-			"it doesnt matter at this point", -- [1]
-			"Bernhardt-Shandris", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bernhardt-Shandris", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2103, -- [11]
-			"Player-117-08138856", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeBernhardt-Shandris|r",
-			[51] = 1574549373,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [50]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12910:Player-11-09C96E49:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Honor Level 125]|h|r!", -- [1]
-			"Swayybb-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Swayybb-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2106, -- [11]
-			"Player-11-09C96E49", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Swayybb|r",
-			[51] = 1574549378,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [51]
-		{
-			"last week they were like 4 hours avg", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2108, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549379,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [52]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:10849:Player-11-06AA20C7:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Grand Magistrix Elisande]|h|r!", -- [1]
-			"Megazarak-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Megazarak-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2112, -- [11]
-			"Player-11-06AA20C7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Megazarak|r",
-			[51] = 1574549383,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [53]
-		{
-			":o", -- [1]
-			"Andalsa-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Andalsa-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2120, -- [11]
-			"Player-11-0B922830", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Andalsa|r",
-			[51] = 1574549387,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [54]
-		{
-			"gg", -- [1]
-			"Yrelia-Silvermoon", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Yrelia-Silvermoon", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2125, -- [11]
-			"Player-86-080A7057", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
-			[51] = 1574549391,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [55]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12556:Player-11-0B8E9836:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Explore Tiragarde Sound]|h|r!", -- [1]
-			"Serìously-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Serìously-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2126, -- [11]
-			"Player-11-0B8E9836", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Serìously|r",
-			[51] = 1574549394,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [56]
-		{
-			"but alliance got tired of turtling i suppose", -- [1]
-			"Sherrizah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sherrizah-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2129, -- [11]
-			"Player-11-0B905DB5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Sherrizah|r",
-			[51] = 1574549398,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [57]
-		{
-			"keep going", -- [1]
-			"Howlbane-Ner'zhul", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Howlbane-Ner'zhul", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2131, -- [11]
-			"Player-128-0688CEBD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cHowlbane-Ner'zhul|r",
-			[51] = 1574549408,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [58]
-		{
-			"they are already on boss so", -- [1]
-			"Yrelia-Silvermoon", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Yrelia-Silvermoon", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2132, -- [11]
-			"Player-86-080A7057", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
-			[51] = 1574549419,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [59]
 		{
 			"we cant wait for these towers", -- [1]
 			"Yrelia-Silvermoon", -- [2]
@@ -1342,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
 			[51] = 1574549425,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [60]
+		}, -- [1]
 		{
 			"van is at 100%", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1364,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549454,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [61]
+		}, -- [2]
 		{
 			"\\", -- [1]
 			"Yrelia-Silvermoon", -- [2]
@@ -1386,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
 			[51] = 1574549465,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [62]
+		}, -- [3]
 		{
 			"we still have a chance", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1408,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549482,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [63]
+		}, -- [4]
 		{
 			"still at 199", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1430,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549491,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [64]
+		}, -- [5]
 		{
 			"kill mulfort", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -1452,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549492,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [65]
+		}, -- [6]
 		{
 			"100*", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1474,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549493,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [66]
+		}, -- [7]
 		{
 			"he heals shit", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -1496,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549495,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [67]
+		}, -- [8]
 		{
 			"van still 100", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1518,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549508,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [68]
+		}, -- [9]
 		{
 			"I hope neither of you have a DPS meter", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -1540,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549514,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [69]
+		}, -- [10]
 		{
 			"lel", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -1562,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549520,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [70]
+		}, -- [11]
 		{
 			"lol ", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1584,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549528,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [71]
+		}, -- [12]
 		{
 			"too bad i doo", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1606,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549529,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [72]
+		}, -- [13]
 		{
 			"o.o", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -1628,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549535,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [73]
+		}, -- [14]
 		{
 			"Capping: Alliance Boss - 94.6%", -- [1]
 			"Herne-Shadowsong", -- [2]
@@ -1650,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Herne-Shadowsong|r",
 			[51] = 1574549542,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [74]
+		}, -- [15]
 		{
 			"gg", -- [1]
 			"Yrelia-Silvermoon", -- [2]
@@ -1672,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Yrelia-Silvermoon|r",
 			[51] = 1574549557,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [75]
+		}, -- [16]
 		{
 			"I've been lost lmao", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -1694,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549558,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [76]
+		}, -- [17]
 		{
 			"we need to pull now", -- [1]
 			"Repyutayshun-Silvermoon", -- [2]
@@ -1716,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Repyutayshun-Silvermoon|r",
 			[51] = 1574549558,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [77]
+		}, -- [18]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:10839:Player-11-06AA20C7:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Betrayer's Rise]|h|r!", -- [1]
 			"Megazarak-Tichondrius", -- [2]
@@ -1738,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Megazarak|r",
 			[51] = 1574549565,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [78]
+		}, -- [19]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:10850:Player-11-06AA20C7:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Gul'dan]|h|r!", -- [1]
 			"Megazarak-Tichondrius", -- [2]
@@ -1760,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cffc31d39Megazarak|r",
 			[51] = 1574549565,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [79]
+		}, -- [20]
 		{
 			"impossible", -- [1]
 			"Nayalia-Proudmoore", -- [2]
@@ -1782,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeNayalia-Proudmoore|r",
 			[51] = 1574549565,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [80]
+		}, -- [21]
 		{
 			"kill mulfort ffs", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -1804,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549568,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [81]
+		}, -- [22]
 		{
 			"yeah if you get stuck north you cant go nowhere", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1826,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549574,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [82]
+		}, -- [23]
 		{
 			"once he is dead we can do whatever", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -1848,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549577,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [83]
+		}, -- [24]
 		{
 			"just fucking pull", -- [1]
 			"Iluvtospooge-Nesingwary", -- [2]
@@ -1870,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Iluvtospooge-Nesingwary|r",
 			[51] = 1574549580,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [84]
+		}, -- [25]
 		{
 			"it seems realy hard to get in to a mech 0 run", -- [1]
 			"Typhôid-Tichondrius", -- [2]
@@ -1892,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecTyphôid|r",
 			[51] = 1574549582,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [85]
+		}, -- [26]
 		{
 			"van is at 53", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1914,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549586,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [86]
+		}, -- [27]
 		{
 			"Capping: Alliance Boss - 42.0%", -- [1]
 			"Herne-Shadowsong", -- [2]
@@ -1936,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Herne-Shadowsong|r",
 			[51] = 1574549586,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [87]
+		}, -- [28]
 		{
 			"30", -- [1]
 			"Bernhardt-Shandris", -- [2]
@@ -1958,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cfffefefeBernhardt-Shandris|r",
 			[51] = 1574549592,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [88]
+		}, -- [29]
 		{
 			"its ok they about to win", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -1980,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549592,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [89]
+		}, -- [30]
 		{
 			"ok", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -2002,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549592,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [90]
+		}, -- [31]
 		{
 			"now", -- [1]
 			"Krillidan-Kil'jaeden", -- [2]
@@ -2024,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecKrillidan-Kil'jaeden|r",
 			[51] = 1574549595,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [91]
+		}, -- [32]
 		{
 			"gg", -- [1]
 			"Herne-Shadowsong", -- [2]
@@ -2046,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Herne-Shadowsong|r",
 			[51] = 1574549598,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [92]
+		}, -- [33]
 		{
 			"y'all need to install capping", -- [1]
 			"Herne-Shadowsong", -- [2]
@@ -2068,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Herne-Shadowsong|r",
 			[51] = 1574549611,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [93]
+		}, -- [34]
 		{
 			"Heheh oh well I feel like Im figuring out rogue", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2090,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549629,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [94]
+		}, -- [35]
 		{
 			"Another?", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2112,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549650,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [95]
+		}, -- [36]
 		{
 			"do you have 100% ground speed dontius", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2134,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549651,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [96]
+		}, -- [37]
 		{
 			"i am up for it", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2156,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549661,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [97]
+		}, -- [38]
 		{
 			"I'm down", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2178,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549677,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [98]
+		}, -- [39]
 		{
 			"whats your name on discord adam", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2200,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549742,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [99]
+		}, -- [40]
 		{
 			"one sec", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2222,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549767,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [100]
+		}, -- [41]
 		{
 			"Adam#3081", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2244,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549779,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [101]
+		}, -- [42]
 		{
 			"i haven't bought any mounts, I'vve just been using travel form, is that 100%?", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2266,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549785,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [102]
+		}, -- [43]
 		{
 			"no", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2288,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549799,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [103]
+		}, -- [44]
 		{
 			"yeah or 110%", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2310,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549804,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [104]
+		}, -- [45]
 		{
 			"but you don't need to buy mount", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2332,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549804,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [105]
+		}, -- [46]
 		{
 			"just train", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2354,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549806,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [106]
+		}, -- [47]
 		{
 			"Didn't tjink so lol", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2376,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549808,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [107]
+		}, -- [48]
 		{
 			"oh", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2398,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549813,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [108]
+		}, -- [49]
 		{
 			"there is a trainer in stormwind", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2420,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549814,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [109]
+		}, -- [50]
 		{
 			"I'm headed there", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2442,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549834,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [110]
+		}, -- [51]
 		{
 			"Is that the one that costs ~4k?", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2464,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549847,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [111]
+		}, -- [52]
 		{
 			"no", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2486,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549850,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [112]
+		}, -- [53]
 		{
 			"thats fast flying", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2508,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549853,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [113]
+		}, -- [54]
 		{
 			"come to flight person", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2530,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549873,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [114]
+		}, -- [55]
 		{
 			"there is trainer there", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2552,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549875,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [115]
+		}, -- [56]
 		{
 			"Did I send you some gold for that Justice?", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2574,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549877,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [116]
+		}, -- [57]
 		{
 			"are you trained up now", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2596,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549933,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [117]
+		}, -- [58]
 		{
 			"=", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2618,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549941,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [118]
+		}, -- [59]
 		{
 			"artisan riding?", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2640,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549947,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [119]
+		}, -- [60]
 		{
 			"ye", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2662,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549950,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [120]
+		}, -- [61]
 		{
 			"i think", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2684,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549953,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [121]
+		}, -- [62]
 		{
 			"eh just get max i can spot gold if needed", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2706,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549960,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [122]
+		}, -- [63]
 		{
 			"adam gave me gold so i can keep the giving going", -- [1]
 			"Sherrizah-Tichondrius", -- [2]
@@ -2728,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Sherrizah|r",
 			[51] = 1574549971,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [123]
+		}, -- [64]
 		{
 			"I don't have the gold I don't think", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2750,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549971,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [124]
+		}, -- [65]
 		{
 			">:( I said i would", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2772,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549980,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [125]
+		}, -- [66]
 		{
 			"brb", -- [1]
 			"Andalsa-Tichondrius", -- [2]
@@ -2794,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Andalsa|r",
 			[51] = 1574549992,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [126]
+		}, -- [67]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:892:Player-11-0B8E6927:1:11:23:19:4294967295:4294967295:4294967295:4294967295|h[The Right Stuff]|h|r!", -- [1]
 			"Dontius-Tichondrius", -- [2]
@@ -2815,6 +1517,1304 @@ ElvCharacterDB = {
 			false, -- [17]
 			[52] = "|cfffe7b09Dontius|r",
 			[51] = 1574549995,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [68]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13504:Player-11-0B8929A9:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Heritage of the Kul Tirans]|h|r!", -- [1]
+			"Kíngßane-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kíngßane-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			10, -- [11]
+			"Player-11-0B8929A9", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff006fdcKíngßane|r",
+			[51] = 1574616133,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [69]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12997:Player-11-0A5A5C4F:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[The Pride of Kul Tiras]|h|r!", -- [1]
+			"Extermynions-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Extermynions-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			34, -- [11]
+			"Player-11-0A5A5C4F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Extermynions|r",
+			[51] = 1574628714,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [70]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:11183:Player-11-0B9179CF:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Keystone Initiate]|h|r!", -- [1]
+			"Loneshot-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Loneshot-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			39, -- [11]
+			"Player-11-0B9179CF", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Loneshot|r",
+			[51] = 1574628751,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [71]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:660:Player-11-0B792A9E:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[The Arcatraz]|h|r!", -- [1]
+			"Elfge-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Elfge-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			41, -- [11]
+			"Player-11-0B792A9E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Elfge|r",
+			[51] = 1574628835,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [72]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:1177:Player-11-0B9179CF:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Loneshot-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Loneshot-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			46, -- [11]
+			"Player-11-0B9179CF", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Loneshot|r",
+			[51] = 1574629033,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [73]
+		{
+			"How much does |cff1eff00|Hitem:167738::::::::120:265::::::|h[Gilded Seaweave]|h|r go for on the Auction House?", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			49, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629082,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [74]
+		{
+			"i just put min up gor 24g per", -- [1]
+			"Alfhild-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			51, -- [11]
+			"Player-11-0A765F72", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Alfhild|r",
+			[51] = 1574629107,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [75]
+		{
+			"but ive eseen it go up to 36", -- [1]
+			"Alfhild-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			52, -- [11]
+			"Player-11-0A765F72", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Alfhild|r",
+			[51] = 1574629120,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [76]
+		{
+			"Wow that's alot!", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			53, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629139,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [77]
+		{
+			"Damn 24g per ", -- [1]
+			"Shiitstaiins-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			55, -- [11]
+			"Player-11-0B8CEC17", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Shiitstaiins|r",
+			[51] = 1574629165,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [78]
+		{
+			"sum1 put them for like 1g each earlier i bought all of it and sold it for 20x the cost XD", -- [1]
+			"Alfhild-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			56, -- [11]
+			"Player-11-0A765F72", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Alfhild|r",
+			[51] = 1574629176,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [79]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:10790:Player-11-09AAB4FF:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Vrykul Story, Bro]|h|r!", -- [1]
+			"Arconos-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Arconos-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			57, -- [11]
+			"Player-11-09AAB4FF", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArconos|r",
+			[51] = 1574629185,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [80]
+		{
+			"Man I can farm that and Get alot of Wow Tokens", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			58, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629221,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [81]
+		{
+			"Man farming |cff1eff00|Hitem:167738::::::::120:265::::::|h[Gilded Seaweave]|h|r would pay more then McDonald's", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			62, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629310,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [82]
+		{
+			"I have like 1400 of those too lol that's gonna be good money ", -- [1]
+			"Shiitstaiins-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			65, -- [11]
+			"Player-11-0B8CEC17", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Shiitstaiins|r",
+			[51] = 1574629334,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [83]
+		{
+			"just remeber if you flod the market price is gunna drop hella low", -- [1]
+			"Alfhild-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			68, -- [11]
+			"Player-11-0A765F72", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Alfhild|r",
+			[51] = 1574629383,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [84]
+		{
+			"I only throw a few at a time ", -- [1]
+			"Shiitstaiins-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			70, -- [11]
+			"Player-11-0B8CEC17", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Shiitstaiins|r",
+			[51] = 1574629405,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [85]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12572:Player-11-0B8F60B0:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[War Supplied]|h|r!", -- [1]
+			"Dummyythicc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dummyythicc-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			71, -- [11]
+			"Player-11-0B8F60B0", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa9d271Dummyythicc|r",
+			[51] = 1574629423,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [86]
+		{
+			"anyone up fgor m8 atal", -- [1]
+			"Dookydemon-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			74, -- [11]
+			"Player-11-0B8D4914", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Dookydemon|r",
+			[51] = 1574629447,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [87]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:636:Player-11-0B8B2964:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Razorfen Downs]|h|r!", -- [1]
+			"Bacaonator-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Bacaonator-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			75, -- [11]
+			"Player-11-0B8B2964", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Bacaonator|r",
+			[51] = 1574629461,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [88]
+		{
+			"@Alliance  - BATTLE FOR NAZJATAR - LISTED: RUIN BATTLE FOR NAZJATAR - Custom PVP Group Finder - Main Lobby Discord: https://discordapp.com/invite/ruin  - Honor - Conquest - MANAPEARLS FOR ALL - Mounts - Standards - Achievement: https://twitch.tv/RuinTV", -- [1]
+			"Archaosrex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			77, -- [11]
+			"Player-11-09ECC000", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cArchaosrex|r",
+			[51] = 1574629485,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [89]
+		{
+			"I have to Pay Rent so this going to be Fun :)", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			78, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629492,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [90]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13099:Player-11-0B932434:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Molten Cay]|h|r!", -- [1]
+			"Antizonex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Antizonex-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			79, -- [11]
+			"Player-11-0B932434", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Antizonex|r",
+			[51] = 1574629494,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [91]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13100:Player-11-0B932434:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Molten Cay]|h|r!", -- [1]
+			"Antizonex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Antizonex-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			80, -- [11]
+			"Player-11-0B932434", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Antizonex|r",
+			[51] = 1574629494,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [92]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13101:Player-11-0B932434:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Molten Cay]|h|r!", -- [1]
+			"Antizonex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Antizonex-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			81, -- [11]
+			"Player-11-0B932434", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Antizonex|r",
+			[51] = 1574629494,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [93]
+		{
+			"damn those landlords wanting their damn rent", -- [1]
+			"Dawnuh-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			83, -- [11]
+			"Player-11-0B8FACB2", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Dawnuh|r",
+			[51] = 1574629530,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [94]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13123:Player-11-0B932434:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[My Dubs]|h|r!", -- [1]
+			"Antizonex-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Antizonex-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			84, -- [11]
+			"Player-11-0B932434", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Antizonex|r",
+			[51] = 1574629544,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [95]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:1189:Player-11-0B8CEC17:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[To Hellfire and Back]|h|r!", -- [1]
+			"Shiitstaiins-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shiitstaiins-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			93, -- [11]
+			"Player-11-0B8CEC17", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Shiitstaiins|r",
+			[51] = 1574629642,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [96]
+		{
+			"Thank God I bought that 6 Month Deal with the Blue Dragon that Cost Under $80 so I can Farm Wow Tokens covert them to Plush-es or Pop Funko and Sell it to the Pawn Shop to Pay Rent", -- [1]
+			"Battlewarloc-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			99, -- [11]
+			"Player-11-0B71C445", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecBattlewarloc|r",
+			[51] = 1574629704,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [97]
+		{
+			"do what now >.>", -- [1]
+			"Dookydemon-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			100, -- [11]
+			"Player-11-0B8D4914", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Dookydemon|r",
+			[51] = 1574629755,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [98]
+		{
+			"Lmao", -- [1]
+			"Shiitstaiins-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			102, -- [11]
+			"Player-11-0B8CEC17", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Shiitstaiins|r",
+			[51] = 1574629767,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [99]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13701:Player-11-06F91201:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Battlefield Brawler]|h|r!", -- [1]
+			"Zelina-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Zelina-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			103, -- [11]
+			"Player-11-06F91201", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Zelina|r",
+			[51] = 1574629778,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [100]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:245:Player-11-0B8FACB2:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[That Takes Class]|h|r!", -- [1]
+			"Dawnuh-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dawnuh-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			108, -- [11]
+			"Player-11-0B8FACB2", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Dawnuh|r",
+			[51] = 1574629834,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [101]
+		{
+			"I need to find my mic", -- [1]
+			"|Kq6|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			127, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "SilencedFate",
+			[51] = 1574629890,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [102]
+		{
+			"I have one somewhere", -- [1]
+			"|Kq6|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			130, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "SilencedFate",
+			[51] = 1574629894,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [103]
+		{
+			"I just got back from getting food", -- [1]
+			"|Kq6|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			133, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "SilencedFate",
+			[51] = 1574629901,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [104]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13701:Player-11-0B405B3D:1:11:24:19:4294967295:4294967295:4294967295:4294967295|h[Battlefield Brawler]|h|r!", -- [1]
+			"Demepti-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Demepti-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			134, -- [11]
+			"Player-11-0B405B3D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8686ecDemepti|r",
+			[51] = 1574629909,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [105]
+		{
+			"nice! Lets group up", -- [1]
+			"|Kq6|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			135, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "SilencedFate",
+			[51] = 1574629922,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [106]
+		{
+			"AIght drop that party", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			164, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631451,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [107]
+		{
+			"Wait a sec, I havet hos \"summon linked friend btn....\"", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			169, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631498,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [108]
+		{
+			"what? lol", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			170, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631531,
+			[50] = "CHAT_MSG_BN_WHISPER",
+		}, -- [109]
+		{
+			"Oh shit this could let me get you into a dungeon lmao", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			171, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631543,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [110]
+		{
+			"|cffffff00Mezzamere is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Nazjatar", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Nazjatar", -- [9]
+			0, -- [10]
+			173, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1574631551,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [111]
+		{
+			"I can summon you since your are my recruit a friend", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			174, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631553,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [112]
+		{
+			"I have to try this, gonna hop back to my monk and try to summon you to Violet hold", -- [1]
+			"|Kq9|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			175, -- [11]
+			false, -- [12]
+			7, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09SilencedFate|r",
+			[51] = 1574631570,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+		}, -- [113]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:10692:Player-11-0B922D93:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Fashionista: Shoulder]|h|r!", -- [1]
+			"Shartspray-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shartspray-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			20, -- [11]
+			"Player-11-0B922D93", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeShartspray|r",
+			[51] = 1575211065,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [114]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6019:Player-11-0B907D41:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Come One, Come All!]|h|r!", -- [1]
+			"Arlaran-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Arlaran-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			39, -- [11]
+			"Player-11-0B907D41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Arlaran|r",
+			[51] = 1575211462,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [115]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:13759:Player-11-00A22D82:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Battle-Scarred: Bladesman Inowari]|h|r!", -- [1]
+			"Jaclh-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Jaclh-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			44, -- [11]
+			"Player-11-00A22D82", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Jaclh|r",
+			[51] = 1575211972,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [116]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:10746:Player-11-0B56F393:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Forged for Battle]|h|r!", -- [1]
+			"Ambrix-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Ambrix-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			46, -- [11]
+			"Player-11-0B56F393", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Ambrix|r",
+			[51] = 1575212070,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [117]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:8921:Player-11-0B922D93:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Welcome to Draenor]|h|r!", -- [1]
+			"Shartspray-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shartspray-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			47, -- [11]
+			"Player-11-0B922D93", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeShartspray|r",
+			[51] = 1575212084,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [118]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:5180:Player-11-0B919A53:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Breaking the Sound Barrier]|h|r!", -- [1]
+			"Balghor-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Balghor-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			68, -- [11]
+			"Player-11-0B919A53", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff006fdcBalghor|r",
+			[51] = 1575212554,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [119]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:6971:Player-11-0B8D91A0:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[I've Got the Power]|h|r!", -- [1]
+			"Lemmi-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lemmi-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			70, -- [11]
+			"Player-11-0B8D91A0", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3ec5e9Lemmi|r",
+			[51] = 1575212736,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [120]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:975:Player-11-0B29A87B:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[200 Daily Quests Completed]|h|r!", -- [1]
+			"Savageenergy-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Savageenergy-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			85, -- [11]
+			"Player-11-0B29A87B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffe7b09Savageenergy|r",
+			[51] = 1575213285,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [121]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12918:Player-11-0B9179ED:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Have a Heart]|h|r!", -- [1]
+			"Vathrax-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vathrax-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			96, -- [11]
+			"Player-11-0B9179ED", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff38bb9Vathrax|r",
+			[51] = 1575213542,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [122]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:686:Player-11-0ADADAD8:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Molten Core]|h|r!", -- [1]
+			"Maievcita-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Maievcita-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9, -- [11]
+			"Player-11-0ADADAD8", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc59a6cMaievcita|r",
+			[51] = 1575215429,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [123]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:9585:Player-11-0B922D93:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Proving Yourself: Silver Healer]|h|r!", -- [1]
+			"Shartspray-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shartspray-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			21, -- [11]
+			"Player-11-0B922D93", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeShartspray|r",
+			[51] = 1575215608,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [124]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:515:Player-11-0B8F5999:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[500 Honorable Kills]|h|r!", -- [1]
+			"Kraive-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kraive-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			30, -- [11]
+			"Player-11-0B8F5999", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Kraive|r",
+			[51] = 1575215907,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [125]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12506:Player-11-0A6A9DAC:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: The Temple of Sethraliss]|h|r!", -- [1]
+			"Paleos-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Paleos-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			8, -- [11]
+			"Player-11-0A6A9DAC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa22fc8Paleos|r",
+			[51] = 1575216623,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [126]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:9586:Player-11-0B922D93:1:12:1:19:4294967295:4294967295:4294967295:4294967295|h[Proving Yourself: Gold Healer]|h|r!", -- [1]
+			"Shartspray-Tichondrius", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shartspray-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			20, -- [11]
+			"Player-11-0B922D93", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffefefeShartspray|r",
+			[51] = 1575216768,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [127]
 	},

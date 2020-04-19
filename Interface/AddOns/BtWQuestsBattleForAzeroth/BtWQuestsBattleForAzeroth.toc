@@ -1,10 +1,15 @@
-## Interface: 80205
+## Interface: 80300
 ## Title: BtWQuests: Battle for Azeroth
-## Version: 41
+## Version: 46
 ## Notes: Battle for Azeroth quest data for BtWQuests
 ## Author: Breen
 ## Dependencies: BtWQuests
 ## OptionalDeps: BtWQuestsBattleForAzerothPrologue
+## LoadOnDemand: 1
+## X-BtWQuests: Battle for Azeroth
+## X-BtWQuests-Expansion: 7
+## X-BtWQuests-AutoLoad: 1
+## X-Part-Of: BtWQuests
 
 Defines.lua
 
@@ -56,7 +61,7 @@ Objects.ruRU.lua
 Objects.zhCN.lua
 Objects.zhTW.lua
 
-Index.lua
+Index.enUS.lua
 Index.deDE.lua
 Index.esES.lua
 Index.esMX.lua
@@ -69,6 +74,7 @@ Index.zhCN.lua
 Index.zhTW.lua
 
 Introduction.lua
+VisionsOfNZoth.lua
 TheHeartForge.lua
 Nazjatar.lua
 MechagonIsland.lua

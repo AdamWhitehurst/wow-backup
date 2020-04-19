@@ -307,7 +307,7 @@ L["STRING_MAXIMUM"] = "最大"
 L["STRING_MAXIMUM_SHORT"] = "最大"
 L["STRING_MEDIA"] = "媒体"
 L["STRING_MELEE"] = "近战"
-L["STRING_MEMORY_ALERT_BUTTON"] = "我明白了"
+L["STRING_MEMORY_ALERT_BUTTON"] = "我知道了"
 L["STRING_MEMORY_ALERT_TEXT1"] = "Details!使用了大量的内存，但是|cFFFF8800与流行的认知相反|r，插件的内存占用|cFFFF8800不会影响|r任何游戏表现和FPS。"
 L["STRING_MEMORY_ALERT_TEXT2"] = "所以，如果你看到Details!使用大量内存，不要惊慌 :D！|cFFFF8800一切正常！|r，已使用内存的一部分也会|cFFFF8800用于生成缓存|r，使插件运行更加流畅。"
 L["STRING_MEMORY_ALERT_TEXT3"] = "但是，如果你想知道|cFFFF8800哪个插件占用较多内存|r或会导致游戏帧数降低，可以安装这个插件：“|cFFFFFF00AddOns Cpu Usage|r”。"
@@ -566,15 +566,15 @@ L["STRING_OPTIONS_COMBAT_ALPHA_1"] = "无"
 L["STRING_OPTIONS_COMBAT_ALPHA_2"] = "战斗中"
 L["STRING_OPTIONS_COMBAT_ALPHA_3"] = "脱离战斗"
 L["STRING_OPTIONS_COMBAT_ALPHA_4"] = "当退出队伍"
-L["STRING_OPTIONS_COMBAT_ALPHA_5"] = "当不在战斗中"
-L["STRING_OPTIONS_COMBAT_ALPHA_6"] = "当在战斗中"
+L["STRING_OPTIONS_COMBAT_ALPHA_5"] = "当不在副本中"
+L["STRING_OPTIONS_COMBAT_ALPHA_6"] = "当在副本中"
 L["STRING_OPTIONS_COMBAT_ALPHA_7"] = "团队副本测试"
-L["STRING_OPTIONS_COMBAT_ALPHA_DESC"] = [=[选择怎样的战斗影响窗口透明度。
+L["STRING_OPTIONS_COMBAT_ALPHA_DESC"] = [=[选择战斗状态如何影响窗口透明度。
 |cFFFFFF00没变化|r：不修改透明度。
-|cFFFFFF00当在战斗|r：当角色进入战斗时，所选的透明度将应用于窗口
-|cFFFFFF00脱离战斗|r：只要角色不在战斗中，就会应用alpha.
-|cFFFFFF00当退出队伍|r：当您不在队伍或团队中时，该窗口将采用所选的alpha.
-|cFFFFFF00重要|r：此选项会覆盖由“自动透明度”功能决定的Alpha.]=]
+|cFFFFFF00当在战斗|r：当角色进入战斗时，所选的Alpha将应用于窗口
+|cFFFFFF00脱离战斗|r：只要角色不在战斗中，就会应用此Alpha.
+|cFFFFFF00当退出队伍|r：当您不在队伍或团队中时，该窗口将采用所选的Alpha.
+|cFFFFFF00重要|r：此选项会覆盖由“自动透明度”功能设定的Alpha.]=]
 L["STRING_OPTIONS_COMBATTWEEKS"] = "战斗微调"
 L["STRING_OPTIONS_COMBATTWEEKS_DESC"] = "设定Details!如何调整一些战斗数据的细节。"
 L["STRING_OPTIONS_CONFIRM_ERASE"] = "要删除数据吗？"
@@ -775,22 +775,22 @@ L["STRING_OPTIONS_NICKNAME_DESC"] = [=[为您设置一个昵称。
 L["STRING_OPTIONS_OPEN_ROWTEXT_EDITOR"] = "行文字编辑器"
 L["STRING_OPTIONS_OPEN_TEXT_EDITOR"] = "打开文本编辑器"
 L["STRING_OPTIONS_OVERALL_ALL"] = "所有片段"
-L["STRING_OPTIONS_OVERALL_ALL_DESC"] = "所有片段被添加到总体数据。"
+L["STRING_OPTIONS_OVERALL_ALL_DESC"] = "所有片段会被添加到总体数据。"
 L["STRING_OPTIONS_OVERALL_ANCHOR"] = "总体数据:"
-L["STRING_OPTIONS_OVERALL_DUNGEONBOSS"] = "地下城 Bosses"
-L["STRING_OPTIONS_OVERALL_DUNGEONBOSS_DESC"] = "地下城boss片段被添加到总体数据。"
+L["STRING_OPTIONS_OVERALL_DUNGEONBOSS"] = "地下城首领"
+L["STRING_OPTIONS_OVERALL_DUNGEONBOSS_DESC"] = "地下城首领片段会被添加到总体数据。"
 L["STRING_OPTIONS_OVERALL_DUNGEONCLEAN"] = "地下城小怪"
 L["STRING_OPTIONS_OVERALL_DUNGEONCLEAN_DESC"] = "地下城清理小怪片段被添加到总体数据"
-L["STRING_OPTIONS_OVERALL_LOGOFF"] = "清除注销"
-L["STRING_OPTIONS_OVERALL_LOGOFF_DESC"] = "当启用时，总体数据将自动被清除当你退到角色界面。"
+L["STRING_OPTIONS_OVERALL_LOGOFF"] = "退出时清除"
+L["STRING_OPTIONS_OVERALL_LOGOFF_DESC"] = "启用后，返回角色界面或者退出游戏时，将清除总体数据。"
 L["STRING_OPTIONS_OVERALL_MYTHICPLUS"] = "大秘境开始时清除"
-L["STRING_OPTIONS_OVERALL_MYTHICPLUS_DESC"] = "启用后，当一个新的大秘境开始时，整个数据都将被自动清除。"
-L["STRING_OPTIONS_OVERALL_NEWBOSS"] = "新BOSS时清除"
-L["STRING_OPTIONS_OVERALL_NEWBOSS_DESC"] = "当启用时，总数据时将自动被清除当遭遇不同的地下城首领。"
-L["STRING_OPTIONS_OVERALL_RAIDBOSS"] = "地下城首领"
-L["STRING_OPTIONS_OVERALL_RAIDBOSS_DESC"] = "地下城首领片段被添加到总体数据。"
+L["STRING_OPTIONS_OVERALL_MYTHICPLUS_DESC"] = "启用后，开始新的史诗钥石地下城时，将清除总体数据。"
+L["STRING_OPTIONS_OVERALL_NEWBOSS"] = "新团本首领时清除"
+L["STRING_OPTIONS_OVERALL_NEWBOSS_DESC"] = "启用后，遭遇不同的团队副本首领时，将清除总体数据。"
+L["STRING_OPTIONS_OVERALL_RAIDBOSS"] = "团队副本首领"
+L["STRING_OPTIONS_OVERALL_RAIDBOSS_DESC"] = "团队副本首领片段会被添加到总体数据。"
 L["STRING_OPTIONS_OVERALL_RAIDCLEAN"] = "团队副本小怪"
-L["STRING_OPTIONS_OVERALL_RAIDCLEAN_DESC"] = "地下城清理小怪片段被添加到总体数据。"
+L["STRING_OPTIONS_OVERALL_RAIDCLEAN_DESC"] = "团队副本小怪片段会被添加到总体数据。"
 L["STRING_OPTIONS_PANIMODE"] = "应急模式"
 L["STRING_OPTIONS_PANIMODE_DESC"] = "如果启用并且掉线（例如，通过断开连接）并且正在BOSS战斗中，则所有段都将被删除，这会使注销过程更快"
 L["STRING_OPTIONS_PDW_ANCHOR"] = "玩家详细信息窗口:"
@@ -1062,6 +1062,8 @@ L["STRING_OPTIONS_TEXT_LOUTILINE"] = "文本阴影"
 L["STRING_OPTIONS_TEXT_LOUTILINE_DESC"] = "启用或禁用左边文字的下划线。"
 L["STRING_OPTIONS_TEXT_LPOSITION"] = "显示数字"
 L["STRING_OPTIONS_TEXT_LPOSITION_DESC"] = "显示位置编号在玩家的名字左边。"
+L["STRING_OPTIONS_TEXT_LTRANSLIT"] = "转写"
+L["STRING_OPTIONS_TEXT_LTRANSLIT_DESC"] = "将俄文字符转写为更易懂的英文字符。"
 L["STRING_OPTIONS_TEXT_RIGHT_ANCHOR"] = "右文本："
 L["STRING_OPTIONS_TEXT_ROUTILINE_DESC"] = "启用或禁用右边文字的下划线。"
 L["STRING_OPTIONS_TEXT_ROWICONS_ANCHOR"] = "图标："
@@ -1435,7 +1437,7 @@ L["STRING_TOP_TO_BOTTOM"] = "从高到低"
 L["STRING_TOTAL"] = "总"
 L["STRING_TRANSLATE_LANGUAGE"] = "帮助翻译Details!"
 L["STRING_TUTORIAL_FULLY_DELETE_WINDOW"] = "你关闭了一个窗口，你可以随时重新打开它。完全删除一个窗口请前往 选项 -> 窗口：一般设置 -> 删除。"
-L["STRING_TUTORIAL_OVERALL1"] = "调整设置面板的总体数据设置 > PvE/PvP"
+L["STRING_TUTORIAL_OVERALL1"] = "在一般设置 > 战斗里调整总体数据设置。总体数据在离开战斗后才会更新，使用自订里的\"动态总体伤害\"可实时更新。"
 L["STRING_UNKNOW"] = "未知"
 L["STRING_UNKNOWSPELL"] = "未知法术"
 L["STRING_UNLOCK"] = [=[取消组合窗口
@@ -1448,9 +1450,9 @@ L["STRING_VOIDZONE_TOOLTIP"] = "伤害和时间："
 L["STRING_WAITPLUGIN"] = [=[等待
 插件]=]
 L["STRING_WAVE"] = "波"
-L["STRING_WELCOME_1"] = [=[|cFFFFFFFF欢迎使用Details!快速安装向导
-|r本指南将帮助你一些重要的配置。
-您可以在任何时候跳过这只是点击“跳过”按钮。]=]
+L["STRING_WELCOME_1"] = [=[|cFFFFFFFF欢迎使用Details!快速安装向导|r
+本指南将帮你设置一些重要选项。
+可使用右下角的箭头翻页。]=]
 L["STRING_WELCOME_11"] = "如果你改变主意，你可以随时再通过选项面板中修改"
 L["STRING_WELCOME_12"] = "选择更新速度和动画。 此外，如果你的电脑有2GB或更少的内存RAM，它可能要减少和段的数量。"
 L["STRING_WELCOME_13"] = ""

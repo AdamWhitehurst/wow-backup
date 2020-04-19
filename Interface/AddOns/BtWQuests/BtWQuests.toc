@@ -1,10 +1,10 @@
-## Interface: 80205
+## Interface: 80300
 ## Title: BtWQuests
-## Version: 1.54
+## Version: 1.62
 ## Notes: 
 ## Author: Breen
 ## SavedVariables: BtWQuests_Characters
-## SavedVariablesPerCharacter: BtWQuests_Settings
+## SavedVariablesPerCharacter: BtWQuests_Settings BtWQuests_AutoLoad
 
 Defines.lua
 BtWQuestsCharacters.lua
@@ -25,4 +25,6 @@ Localization.zhTW.lua
 BtWQuestsTemplates.xml
 BtWQuests.xml
 BtWQuestsQuestDataProvider.xml
+BtWQuestsGuideDataProvider.xml
 BtWQuestsMinimapButton.xml
+LibMapPinHandler.lua

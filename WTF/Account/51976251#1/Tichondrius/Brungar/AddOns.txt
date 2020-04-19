@@ -55,3 +55,4 @@ HandyNotes_TimelessTreasures: enabled
 Tukui: enabled
 WeakAuras: disabled
 OPie_Classic: disabled
+OPie: enabled

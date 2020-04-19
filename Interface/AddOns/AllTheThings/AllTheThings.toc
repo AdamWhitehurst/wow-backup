@@ -1,12 +1,12 @@
 ## Author: Crieve-Sargeras
-## Interface: 80205
+## Interface: 80300
 ## X-Curse-Project-ID: 267285
 ## Title: AllTheThings
 ## Name: AllTheThings
 ## SavedVariables: AllTheThingsSettings, AllTheThingsAD, AllTheThingsAuctionData, AllTheThingsDebugData, AllTheThingsHarvestItems
 ## SavedVariablesPerCharacter: AllTheThingsSettingsPerCharacter
 ## Notes: Addon for Tracking Collections & Account Completion
-## Version: 1.9.9c
+## Version: 2.0.3
 lib\LibStub\LibStub.lua
 lib\CallbackHandler-1.0\CallbackHandler-1.0.lua
 lib\LibDataBroker-1.1\LibDataBroker-1.1.lua

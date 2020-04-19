@@ -7,13 +7,13 @@ HHTD_SavedVariables = {
 		["Zandro - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Bramblebrow - Emerald Dream"] = {
+		["Brungar - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Andalsa - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Wharapi - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
-		["Brungar - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Madylad - Tichondrius"] = {
@@ -22,7 +22,10 @@ HHTD_SavedVariables = {
 		["Stoakt - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Andalsa - Tichondrius"] = {
+		["Arndoss - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Bramblebrow - Emerald Dream"] = {
 			["settingsMigrated"] = false,
 		},
 		["Andallsa - Tichondrius"] = {
@@ -32,21 +35,22 @@ HHTD_SavedVariables = {
 			["settingsMigrated"] = false,
 		},
 	},
-	["profileKeys"] = {
-		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
-	},
 	["global"] = {
 		["settingsMigrated"] = false,
 		["oldNameEnableState"] = 0,
+	},
+	["profileKeys"] = {
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["namespaces"] = {
 		["Announcer"] = {

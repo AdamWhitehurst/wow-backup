@@ -252,3 +252,4 @@ Blizzard_ObjectiveTracker: enabled
 LibWho-2.0: enabled
 Bartender4: disabled
 OPie_Classic: disabled
+OPie: enabled

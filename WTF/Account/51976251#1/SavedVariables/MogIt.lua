@@ -4,12 +4,13 @@ MogItDB = {
 		["version"] = "3.9.0",
 	},
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Wharapi - Tichondrius"] = "Default",
-		["Andalsa - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
 	},
@@ -39,29 +40,29 @@ MogItDB = {
 				["Tabard"] = "Tabard",
 				["Legs"] = "Legs",
 				["Back"] = "Back",
-				["Warglaives"] = "Warglaives",
+				["2H-axe"] = "Two-Handed Axes",
 				["Shirt"] = "Shirt",
 				["Dagger"] = "Daggers",
 				["Hands"] = "Hands",
 				["Wrist"] = "Wrist",
 				["Polearm"] = "Polearms",
 				["2H-sword"] = "Two-Handed Swords",
-				["2H-axe"] = "Two-Handed Axes",
-				["2H-mace"] = "Two-Handed Maces",
+				["Warglaives"] = "Warglaives",
+				["ArtifactLegion"] = "Legion Artifacts",
 				["1H-mace"] = "One-Handed Maces",
 				["Head"] = "Head",
 				["Holdable"] = "Held In Off-hand",
 				["1H-sword"] = "One-Handed Swords",
 				["Crossbow"] = "Crossbows",
-				["Feet"] = "Feet",
+				["Staff"] = "Staves",
 				["Chest"] = "Chest",
 				["Gun"] = "Guns",
 				["1H-axe"] = "One-Handed Axes",
 				["Bow"] = "Bows",
 				["Shield"] = "Shields",
-				["Staff"] = "Staves",
+				["Feet"] = "Feet",
 				["Shoulder"] = "Shoulder",
-				["ArtifactLegion"] = "Legion Artifacts",
+				["2H-mace"] = "Two-Handed Maces",
 			},
 			["dressupPreview"] = true,
 			["rows"] = 3,
@@ -74,27 +75,20 @@ MogItDB = {
 }
 MogItWishlist = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["global"] = {
-		["version"] = 80205,
+		["version"] = 80300,
 	},
 	["profiles"] = {
-		["Bramblebrow - Emerald Dream"] = {
-		},
-		["Wharapi - Tichondrius"] = {
-		},
-		["Andalsa - Tichondrius"] = {
-		},
-		["Madylad - Tichondrius"] = {
-		},
 		["Andalsam - Tichondrius"] = {
 			["items"] = {
 				"item:168879:0::::::::::4:1:3524", -- [1]
@@ -104,11 +98,11 @@ MogItWishlist = {
 					["items"] = {
 						["ChestSlot"] = "item:152124:0::::::::::0:1:3524",
 						["FeetSlot"] = "item:124249:0",
-						["LegsSlot"] = "item:65313:0::::::::::0:1:3524",
-						["HeadSlot"] = "item:152681:0::::::::::0:1:3524",
 						["WaistSlot"] = "item:50069:0",
-						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
 						["ShoulderSlot"] = "item:115544:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:65313:0::::::::::0:1:3524",
+						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
+						["HeadSlot"] = "item:152681:0::::::::::0:1:3524",
 					},
 					["name"] = "Bear",
 					["alternateItems"] = {
@@ -129,9 +123,9 @@ MogItWishlist = {
 						["MainHandSlot"] = "item:128202:0::::::::::0:1:3524",
 						["SecondaryHandSlot"] = "item:18463:0::::::::::0:1:3524",
 						["FeetSlot"] = "item:163942:0::::::::::0:1:3524",
-						["HandsSlot"] = "item:112812:0::::::::::0:1:3524",
 						["WaistSlot"] = "item:169926:0::::::::::0:1:3524",
 						["LegsSlot"] = "item:115230:0::::::::::0:1:3524",
+						["HandsSlot"] = "item:112812:0::::::::::0:1:3524",
 						["HeadSlot"] = "item:112382:0::::::::::4:1:3524",
 						["BackSlot"] = "item:134111:0::::::::::0:1:3524",
 					},
@@ -140,6 +134,16 @@ MogItWishlist = {
 					},
 				}, -- [1]
 			},
+		},
+		["Andalsa - Tichondrius"] = {
+		},
+		["Wharapi - Tichondrius"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
+		},
+		["Arndoss - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},

@@ -16,11 +16,14 @@ VER 3 0100000000000002 "Fist" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /Cast Fist of the White Tiger
 END
+VER 3 0100000000000008 "King Krush" "2125377"
+/target King Krush
+END
 VER 3 0100000000000005 "Reverse Harm Sel" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /stopmacro [channeling:Fists of Fury]
 /stopcasting [channeling:Crackling Jade Lightning]
-/cast [talent:3/2] Fist of the White Tiger; [talent:3/3] Energizing Elixir; [@targettarget,exists,noharm] Reverse Harm; [@player] Reverse Harm
+/cast [talent:3/2] Fist of the White Tiger; [talent:3/3] Energizing Elixir;
 END
 VER 3 0100000000000007 "Self RoP" "INV_MISC_QUESTIONMARK"
 #showtooltip

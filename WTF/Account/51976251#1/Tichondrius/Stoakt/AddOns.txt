@@ -28,3 +28,4 @@ HandyNotes_WarfrontRares: disabled
 Ace3: enabled
 WeakAuras: disabled
 OPie_Classic: disabled
+OPie: enabled

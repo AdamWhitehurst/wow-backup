@@ -7,6 +7,7 @@ weizPVPOptions = {
 		["Zandro - Tichondrius"] = {
 			["Options"] = {
 				["Addon"] = {
+					["EnabledInBattlegrounds"] = false,
 					["Version"] = "1.81.0",
 					["VersionNumber"] = 1802,
 					["VersionSplashSeen"] = true,
@@ -15,18 +16,21 @@ weizPVPOptions = {
 					["Collapsed"] = true,
 				},
 				["Frames"] = {
-					["Point"] = "BOTTOMRIGHT",
+					["Point"] = "TOPLEFT",
 					["Width"] = 399.4078674316406,
-					["Y"] = 24.73468017578125,
-					["X"] = -3.555419921875,
+					["Y"] = -6.82080078125,
+					["X"] = 126.8116607666016,
 					["Header"] = {
-						["Point"] = "BOTTOMRIGHT",
+						["Point"] = "TOPLEFT",
 						["Width"] = 399.4078674316406,
-						["Y"] = 252.7346954345703,
+						["Y"] = 0,
 						["Height"] = 25.99996185302734,
-						["X"] = -3.555419921875,
+						["X"] = 126.8116760253906,
 					},
-					["Height"] = 228,
+					["Height"] = 227.9999847412109,
+				},
+				["LDB"] = {
+					["minimap"] = false,
 				},
 				["StealthAlert"] = {
 					["SoundFile"] = "Cartoon Walking",

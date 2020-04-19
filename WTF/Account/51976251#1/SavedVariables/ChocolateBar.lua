@@ -1,36 +1,48 @@
 
 ChocolateBarDB = {
-	["addonVersion"] = "v3.3.3",
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Wharapi - Tichondrius"] = "Default",
-		["Andalsa - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
 	},
+	["addonVersion"] = "v3.3.5",
 	["profiles"] = {
 		["Default"] = {
-			["fontSize"] = 15,
-			["iconSize"] = 1,
+			["fontSize"] = 20,
+			["iconSize"] = 0.8,
 			["background"] = {
 				["tile"] = false,
 				["color"] = {
-					["a"] = 0.6584511995315552,
-					["r"] = 0.0784313725490196,
-					["g"] = 0.07450980392156863,
-					["b"] = 0.08235294117647059,
+					["a"] = 1,
+					["b"] = 0.09411764705882353,
+					["g"] = 0.09411764705882353,
+					["r"] = 0.09411764705882353,
 				},
 				["textureName"] = "Minimalist",
-				["tileSize"] = 256,
-				["texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\Minimalist",
+				["tileSize"] = 21,
+				["borderColor"] = {
+					["a"] = 0.2992967963218689,
+					["r"] = 0.09411764705882353,
+					["g"] = 0.09411764705882353,
+					["b"] = 0.09411764705882353,
+				},
+				["texture"] = "Interface\\AddOns\\ElvUI\\Media\\Textures\\Minimalist.tga",
 			},
-			["forceColor"] = false,
+			["moduleOptions"] = {
+				["MoreChocolate"] = {
+				},
+			},
 			["objSettings"] = {
-				["TRP3 — Character status (IC/OOC)"] = {
+				["Leatrix_Plus"] = {
+					["showText"] = false,
 					["barName"] = "ChocolateBar1",
+					["align"] = "right",
 				},
 				["CopyPasta"] = {
 					["showText"] = false,
@@ -50,40 +62,32 @@ ChocolateBarDB = {
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["BagnonLauncher"] = {
-					["showText"] = false,
+				["weizPVP"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["DBM"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Leatrix_Plus"] = {
-					["showText"] = false,
+				["TRP3 — Character status (IC/OOC)"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["BugSack"] = {
 					["barName"] = "ChocolateBar1",
 				},
-				["Total RP 3"] = {
-					["showText"] = false,
+				["DetailsStreamer"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["Rematch"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Parrot"] = {
-					["showText"] = false,
+				["Wholly Coordinates"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
-				["FarmHud"] = {
+				["Parrot"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
@@ -101,8 +105,10 @@ ChocolateBarDB = {
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["NPCScan"] = {
+				["BtWQuests"] = {
+					["showText"] = false,
 					["barName"] = "ChocolateBar1",
+					["align"] = "right",
 				},
 				["PetLeash"] = {
 					["showText"] = false,
@@ -120,10 +126,8 @@ ChocolateBarDB = {
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Bartender4"] = {
-					["showText"] = false,
+				["NPCScan"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["GatherMate2"] = {
 					["showText"] = false,
@@ -133,29 +137,35 @@ ChocolateBarDB = {
 				["TRP3 — Player status (AFK/DND)"] = {
 					["barName"] = "ChocolateBar1",
 				},
-				["BtWQuests"] = {
+				["Bartender4"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Wholly Coordinates"] = {
+				["FarmHud"] = {
+					["showText"] = false,
 					["barName"] = "ChocolateBar1",
+					["align"] = "right",
 				},
 				["MogIt"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["DetailsStreamer"] = {
+				["Total RP 3"] = {
+					["showText"] = false,
 					["barName"] = "ChocolateBar1",
+					["align"] = "right",
 				},
 				["Paste"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["weizPVP"] = {
+				["BagnonLauncher"] = {
+					["showText"] = false,
 					["barName"] = "ChocolateBar1",
+					["align"] = "right",
 				},
 				["Masque"] = {
 					["showText"] = false,
@@ -163,27 +173,23 @@ ChocolateBarDB = {
 					["align"] = "right",
 				},
 			},
-			["desaturated"] = false,
-			["fixedStrata"] = true,
-			["moduleOptions"] = {
-				["MoreChocolate"] = {
-				},
-			},
-			["fontPath"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Sriracha.ttf",
 			["gap"] = 6,
-			["textOffset"] = 2,
-			["height"] = 23,
-			["fontName"] = "Sriracha",
+			["fixedStrata"] = true,
 			["labelColor"] = {
-				["r"] = 0.4627450980392157,
 				["g"] = 1,
-				["b"] = 0.6784313725490196,
+				["b"] = 1,
 			},
+			["forceColor"] = false,
+			["desaturated"] = false,
+			["textOffset"] = 2,
+			["height"] = 28,
+			["fontName"] = "Sriracha",
+			["fontPath"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Sriracha.ttf",
 			["textColor"] = {
 				["a"] = 1,
-				["b"] = 1,
-				["g"] = 1,
 				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
 			},
 		},
 	},
