@@ -17,8 +17,8 @@ MSBTProfiles_SavedVars = {
 					["scrollArea"] = "Static",
 				},
 				["NOTIFICATION_MONEY"] = {
-					["fontSize"] = 23,
 					["soundFile"] = "Retro2: SFX_188",
+					["fontSize"] = 23,
 				},
 				["INCOMING_SPELL_PARRY"] = {
 					["colorG"] = 0.4274509803921568,
@@ -56,9 +56,9 @@ MSBTProfiles_SavedVars = {
 					["colorG"] = 0.4274509803921568,
 					["colorR"] = 0.3843137254901961,
 				},
-				["NOTIFICATION_REP_GAIN"] = {
-					["alwaysSticky"] = true,
-					["soundFile"] = "Retro1: SFX_36",
+				["INCOMING_SPELL_BLOCK"] = {
+					["colorG"] = 0.4274509803921568,
+					["colorR"] = 0.3843137254901961,
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Kaching",
@@ -71,8 +71,8 @@ MSBTProfiles_SavedVars = {
 					["scrollArea"] = "Custom1",
 				},
 				["NOTIFICATION_LOOT"] = {
-					["fontSize"] = 23,
 					["soundFile"] = "Retro1: SFX_68",
+					["fontSize"] = 23,
 				},
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
@@ -81,9 +81,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_COMBAT_LEAVE"] = {
 					["message"] = "[COMBAT LEFT]",
 				},
-				["INCOMING_PARRY"] = {
-					["colorG"] = 0.3333333333333333,
-					["colorR"] = 0.2078431372549019,
+				["NOTIFICATION_CHI_CHANGE"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_HONOR_GAIN"] = {
 					["soundFile"] = "Retro1: SFX_36",
@@ -97,8 +96,9 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 					["scrollArea"] = "Notification",
 				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
-					["scrollArea"] = "Notification",
+				["NOTIFICATION_SKILL_GAIN"] = {
+					["alwaysSticky"] = true,
+					["soundFile"] = "Retro1: SFX_34",
 				},
 				["INCOMING_DODGE"] = {
 					["colorG"] = 0.3333333333333333,
@@ -108,33 +108,26 @@ MSBTProfiles_SavedVars = {
 					["colorG"] = 0.4274509803921568,
 					["colorR"] = 0.3843137254901961,
 				},
-				["NOTIFICATION_SKILL_GAIN"] = {
-					["alwaysSticky"] = true,
-					["soundFile"] = "Retro1: SFX_34",
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["scrollArea"] = "Notification",
 				},
 				["NOTIFICATION_CURRENCY"] = {
-					["soundFile"] = "Retro2: SFX_190",
 					["fontSize"] = 23,
+					["soundFile"] = "Retro2: SFX_190",
 				},
-				["NOTIFICATION_CHI_CHANGE"] = {
-					["disabled"] = true,
+				["INCOMING_PARRY"] = {
+					["colorG"] = 0.3333333333333333,
+					["colorR"] = 0.2078431372549019,
 				},
 				["NOTIFICATION_CHI_FULL"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_SPELL_BLOCK"] = {
-					["colorG"] = 0.4274509803921568,
-					["colorR"] = 0.3843137254901961,
-				},
-			},
-			["triggers"] = {
-				["Custom1"] = {
-					["message"] = "Killing Blow Player",
-					["fontSize"] = 26,
+				["NOTIFICATION_REP_GAIN"] = {
 					["alwaysSticky"] = true,
-					["mainEvents"] = "PARTY_KILL{recipientUnitType;;eq;;1024;;recipientAffiliation;;eq;;4026531840}",
+					["soundFile"] = "Retro1: SFX_36",
 				},
 			},
+			["normalFontSize"] = 14,
 			["scrollAreas"] = {
 				["Notification"] = {
 					["stickyTextAlignIndex"] = 1,
@@ -142,37 +135,10 @@ MSBTProfiles_SavedVars = {
 					["stickyDirection"] = "Up",
 					["scrollWidth"] = 10,
 					["offsetX"] = -480,
-					["scrollHeight"] = 250,
+					["direction"] = "Up",
 					["offsetY"] = -636,
 					["textAlignIndex"] = 1,
-					["direction"] = "Up",
-				},
-				["Incoming"] = {
-					["offsetY"] = -177,
-					["offsetX"] = -421,
-					["disabled"] = true,
-				},
-				["Static"] = {
-					["direction"] = "Alternate",
-					["stickyBehavior"] = "Jiggle",
-					["skillIconsDisabled"] = true,
-					["stickyDirection"] = "Up",
-					["scrollHeight"] = 120,
-					["offsetX"] = -400,
-					["scrollWidth"] = 800,
-					["offsetY"] = -170,
-					["animationStyle"] = "Angled",
-					["behavior"] = "AngleUp",
-				},
-				["Custom1"] = {
-					["stickyDirection"] = "Up",
-					["direction"] = "Up",
-					["name"] = "Center",
-					["offsetX"] = -18,
-					["behavior"] = "CurvedLeft",
-					["offsetY"] = -165,
-					["animationStyle"] = "Parabola",
-					["stickyBehavior"] = "Jiggle",
+					["scrollHeight"] = 250,
 				},
 				["Outgoing"] = {
 					["direction"] = "Alternate",
@@ -185,10 +151,44 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Angled",
 					["stickyAnimationStyle"] = "Static",
 				},
+				["Static"] = {
+					["direction"] = "Alternate",
+					["stickyBehavior"] = "Jiggle",
+					["skillIconsDisabled"] = true,
+					["stickyDirection"] = "Up",
+					["scrollHeight"] = 120,
+					["offsetX"] = -400,
+					["behavior"] = "AngleUp",
+					["offsetY"] = -170,
+					["animationStyle"] = "Angled",
+					["scrollWidth"] = 800,
+				},
+				["Custom1"] = {
+					["stickyDirection"] = "Up",
+					["direction"] = "Up",
+					["name"] = "Center",
+					["stickyBehavior"] = "Jiggle",
+					["behavior"] = "CurvedLeft",
+					["offsetY"] = -165,
+					["animationStyle"] = "Parabola",
+					["offsetX"] = -18,
+				},
+				["Incoming"] = {
+					["offsetY"] = -177,
+					["offsetX"] = -421,
+					["disabled"] = true,
+				},
 			},
 			["normalFontName"] = "Sriracha",
 			["enableBlizzardHealing"] = false,
-			["normalFontSize"] = 14,
+			["triggers"] = {
+				["Custom1"] = {
+					["message"] = "Killing Blow Player",
+					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["mainEvents"] = "PARTY_KILL{recipientUnitType;;eq;;1024;;recipientAffiliation;;eq;;4026531840}",
+				},
+			},
 		},
 	},
 }

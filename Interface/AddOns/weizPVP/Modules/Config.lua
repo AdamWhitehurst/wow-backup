@@ -2,32 +2,19 @@
 --|> CONFIG
 --: Slash Commands and Interface Options
 -------------------------------------------------------------------------------
---|> UPVALUE GLOBALS
--------------------------------------------------------------------------------
-local weizPVP = weizPVP
+--> Namespace
+local ADDON_NAME, NS = ...
+--> Upvalues
 local GetCVarDefault = GetCVarDefault
-local LibStub = LibStub
-local InterfaceOptionsFrameAddOnsListScrollBar = InterfaceOptionsFrameAddOnsListScrollBar
 local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
 local wipe = wipe
-local SetCVar = SetCVar
-local _
-
--------------------------------------------------------------------------------
---|> LIBS
--------------------------------------------------------------------------------
-local AceConfig = LibStub("AceConfig-3.0")
+--> Libs
 local SM = LibStub("LibSharedMedia-3.0")
 local sounds = SM:List("sound")
 
+--|> ACE3 SLASH COMMANDS TABLE
 -------------------------------------------------------------------------------
---|> SLASH COMMANDS
--------------------------------------------------------------------------------
-local halt = false
-local Smax
---=> Commands Option Table
--------------------------------------------------------------------------------
-weizPVP.SlashCommands = {
+NS.SlashCommands = {
     name = "Slash Commands",
     order = -3,
     type = "group",
@@ -43,10 +30,10 @@ weizPVP.SlashCommands = {
             desc = "Opens the configuration menu.",
             type = "execute",
             func = function()
-                InterfaceOptionsFrame_OpenToCategory("weiz|cffffa012PVP|r")
-                _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
+                InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
+                local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
                 InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax)
-                InterfaceOptionsFrame_OpenToCategory("weiz|cffffa012PVP|r")
+                InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- run again (wow bug workaround)
             end,
             guiHidden = true,
             order = 2
@@ -57,8 +44,8 @@ weizPVP.SlashCommands = {
             type = "execute",
             order = 3,
             func = function()
-                weizPVP:SetWindowVisible(true)
-                weizPVP.Options.Window.Visible = true
+                NS.SetWindowVisible(true)
+                NS.Options.Window.Visible = true
             end,
             dialogHidden = true
         },
@@ -68,8 +55,8 @@ weizPVP.SlashCommands = {
             type = "execute",
             order = 4,
             func = function()
-                weizPVP:SetWindowVisible(false)
-                weizPVP.Options.Window.Visible = false
+                NS.SetWindowVisible(false)
+                NS.Options.Window.Visible = false
             end,
             dialogHidden = true
         },
@@ -79,7 +66,7 @@ weizPVP.SlashCommands = {
             type = "execute",
             order = 5,
             func = function()
-                weizPVP:SetWindowLocked(not weizPVP.Options.Window.Locked)
+                NS.SetWindowLocked(not NS.Options.Window.Locked)
             end,
             dialogHidden = true
         },
@@ -89,12 +76,10 @@ weizPVP.SlashCommands = {
             type = "execute",
             order = 6,
             func = function()
-                if weizPVP.Options.Window.Locked then
-                    weizPVP:PrintAddonMessage(
-                        "Window is currently |cffff3838LOCKED|r. Window can only be pinned after being unlocked."
-                    )
+                if NS.Options.Window.Locked then
+                    NS.PrintAddonMessage("Window is currently |cffff3838LOCKED|r. Window can only be pinned after being unlocked.")
                 else
-                    weizPVP:SetWindowPin(not weizPVP.Options.Window.Pinned)
+                    NS.SetWindowPin(not NS.Options.Window.Pinned)
                 end
             end,
             dialogHidden = true
@@ -105,318 +90,280 @@ weizPVP.SlashCommands = {
             type = "execute",
             order = 7,
             func = function()
-                if weizPVP.Options.Crosshair.Enabled == false then
-                    weizPVP.Options.Crosshair.Enabled = true
-                    weizPVP:EnableCrosshair()
-                    weizPVP:PrintAddonMessage("Crosshairs are |cff37ff37ENABLED|r.")
+                if NS.Options.Crosshair.Enabled == false then
+                    NS.Options.Crosshair.Enabled = true
+                    NS.Crosshair.Enable()
+                    NS.PrintAddonMessage("Crosshairs are |cff37ff37ENABLED|r.")
                 else
-                    weizPVP.Options.Crosshair.Enabled = false
-                    weizPVP:DisableCrosshair()
-                    weizPVP:PrintAddonMessage("Crosshairs are |cffff3838DISABLED|r.")
+                    NS.Options.Crosshair.Enabled = false
+                    NS.Crosshair.Disable()
+                    NS.PrintAddonMessage("Crosshairs are |cffff3838DISABLED|r.")
                 end
             end,
             dialogHidden = true
         },
-        --> HALT
-        halt = {
-            name = "Halts all event processing.",
-            desc = "Stops any additional processing from taking place related to data gathering and player detection.",
+        pb = {
+            name = "Player Browser",
+            desc = "Toggle the Player Browser",
             type = "execute",
             order = 8,
             func = function()
-                if halt == false then
-                    halt = true
-                    weizPVP:UnregisterEvent("NAME_PLATE_UNIT_ADDED", "NameplateAdded")
-                    weizPVP:UnregisterEvent("NAME_PLATE_UNIT_REMOVED", "NameplateRemoved")
-                    weizPVP:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED", "CombatLogEvent")
-                    weizPVP:UnregisterEvent("PLAYER_TARGET_CHANGED", "PlayerTargetEvent")
-                    weizPVP:UnregisterEvent("UPDATE_MOUSEOVER_UNIT", "PlayerMouseoverEvent")
-                    weizPVP:UnregisterEvent("UNIT_HEALTH", "UnitHealthEvent")
-                    weizPVP:UnregisterEvent("PLAYER_LOGIN", "UpdateDisplayData")
-                    weizPVP:PrintAddonMessage("|cffff3838EVENT PROCESSING HALTED:|r Run '/wpvp halt' again to resume.")
+                if NS.PlayerBrowser:IsShown() then
+                    NS.PlayerBrowser:Hide()
                 else
-                    if halt == true then
-                        halt = false
-                        weizPVP:RegisterEvent("NAME_PLATE_UNIT_ADDED", "NameplateAdded")
-                        weizPVP:RegisterEvent("NAME_PLATE_UNIT_REMOVED", "NameplateRemoved")
-                        weizPVP:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED", "CombatLogEvent")
-                        weizPVP:RegisterEvent("PLAYER_TARGET_CHANGED", "PlayerTargetEvent")
-                        weizPVP:RegisterEvent("UPDATE_MOUSEOVER_UNIT", "PlayerMouseoverEvent")
-                        weizPVP:RegisterEvent("UNIT_HEALTH", "UnitHealthEvent")
-                        weizPVP:RegisterEvent("PLAYER_LOGIN", "UpdateDisplayData")
-                        weizPVP:PrintAddonMessage("|cff37ff37EVENT PROCESSING RESUMED.|r")
-                    end
+                    NS.PlayerBrowser:Show()
                 end
             end,
-            cmdHidden = true
+            dialogHidden = true
         },
-        --> DEBUG: Detects and manages ALL player characters; not just enemies.
+        --!! HIDDEN OPTIONS !!-----------------------------------------------------------------------------------------
         debug = {
             name = "DEBUG",
             desc = "Toggles DEBUG mode where ALL players of any factions are accepted as valid.",
             type = "execute",
             order = 60,
             func = function()
-                if weizPVP.Options.DEBUG == true then
-                    weizPVP.Options.DEBUG = false
-                    weizPVP:ClearListData()
-                    weizPVP:PrintAddonMessage(
-                        "|TInterface\\Addons\\weizPVP\\Media\\Icons\\Pack\\toolbox.tga:0|t - |cff37ff37DISABLED|r"
-                    )
-                    weizPVP:SetStatusBarMessage("|cff37ff37> DEBUG MODE DISABLED <|r", true, 3)
+                if NS.Options.DEBUG == true then
+                    NS.Options.DEBUG = false
+                    weizPVP.NS = nil
+                    NS.ClearListData()
+                    NS.PrintAddonMessage("|TInterface\\Addons\\weizPVP\\Media\\Icons\\toolbox.tga:0|t - |cff37ff37DISABLED|r")
+                    NS.SetStatusBarMessage("|cff37ff37> DEBUG MODE DISABLED <|r", true, 3)
                 else
-                    weizPVP.Options.DEBUG = true
-                    weizPVP:PrintAddonMessage(
-                        "|TInterface\\Addons\\weizPVP\\Media\\Icons\\Pack\\toolbox.tga:0|t - |cffff3838ENABLED|r"
-                    )
-                    weizPVP:SetStatusBarMessage("|cffff3838>|r DEBUG MODE: |cffff3838ACTIVE <|r", true, 3)
+                    NS.Options.DEBUG = true
+                    weizPVP.NS = NS
+                    NS.PrintAddonMessage("|TInterface\\Addons\\weizPVP\\Media\\Icons\\toolbox.tga:0|t - |cffff3838ENABLED|r")
+                    NS.SetStatusBarMessage("|cffff3838>|r DEBUG MODE: |cffff3838ACTIVE <|r", true, 3)
                 end
             end,
             cmdHidden = true
         },
         --> RESETALL: Wipes EVERYTHING
         resetall = {
+            cmdHidden = true,
             name = "Reset All",
             desc = "Resets all settings and wipes player data",
             type = "execute",
             order = 61,
             func = function()
-                weizPVP:ResetAll()
-            end,
-            cmdHidden = true
+                NS.ResetAll()
+            end
         },
         --> RESET OPTIONS
         resetoptions = {
+            cmdHidden = true,
             name = "Reset Options",
             desc = "Resets all Options but doesn't change player data at all",
             type = "execute",
             order = 63,
             func = function()
-                weizPVP:ResetOptions()
-            end,
-            cmdHidden = true
+                NS.ResetOptions()
+            end
         },
         --> RESET PLAYER DB
         resetplayers = {
+            cmdHidden = true,
             name = "Reset Player DB",
             desc = "Wipes the player database. Options remain untouched.",
             type = "execute",
             order = 64,
             func = function()
-                weizPVP:ClearListData()
-                if weizPVP.PlayerDB then
-                    wipe(weizPVP.PlayerDB)
-                end
-                weizPVP.globalDB.PlayerDB = {}
-            end,
-            cmdHidden = true
+                NS.ResetPlayerDB()
+            end
         }
-        -- !! END HIDDEN COMMANDS =====================================================
     }
 }
 
---=> Register Slash Commands
+LibStub("AceConfig-3.0"):RegisterOptionsTable(ADDON_NAME .. " Commands", NS.SlashCommands, {"wpvp", "weizpvp"}) -- Register Slash Commands
+
+--|> INTERFACE OPTIONS: ACE3 OPTIONS TABLE
 -------------------------------------------------------------------------------
-AceConfig:RegisterOptionsTable("weizPVP.SlashCommands", weizPVP.SlashCommands, {"wpvp", "weizpvp"})
--------------------------------------------------------------------------------
---|> LOCAL FUNCTIONS
--------------------------------------------------------------------------------
+local tipsText =
+    [[
+  |cff00ff75Toggle Options|r: |cff42dcf4Right-Click|r  the minimap icon
+  |cff00ff75Show/Hide Window|r: |cff42dcf4Left-Click|r the minimap icon
+  |cff00ff75Pin/Unpin the Window|r: |cff42dcf4Right-Click|r title/header bar of the main window
+  |cff00ff75Lock/Uplock the Window|r: |cff42dcf4Ctrl+Right-Click|r title/header bar of the main window
+  ]]
+local commandsText =
+    [[
+  |cffbbbbbb(Commands can be executed with either|r |cff42dcf4/wpvp|r |cffbbbbbbor|r |cff42dcf4/weizpvp|r|cffbbbbbb)|r
+
+  |cff00ff75Show Window|r:  |cff42dcf4/wpvp show|r
+  |cff00ff75Hide Window|r:  |cff42dcf4/wpvp hide|r
+  |cff00ff75Toggle Lock Window|r:  |cff42dcf4/wpvp lock|r
+  |cff00ff75Toggle Pin Window|r:  |cff42dcf4/wpvp pin|r
+
+  |cffff0000RESET ALL WEIZPVP SETTINGS AND OPTIONS|r:  |cff42dcf4/wpvp resetall|r
+  |cffbbbbbb(Only use if you're noticing a lot of issue - it may fix some things)|r
+  ]]
+local kosHelpText =
+    [[
+  **  |cffbbbbbbFeatures are limited for now; more in development|r  **
+
+  |cff42dcf4Add or Remove player from KOS List : |r
+  |cffffffffRight click the player's unit frame (traget, focus, etc)
+  The same method can be done from the weizPVP's player list.|r
+  ]]
+local kosHelpTextAbout =
+    [[
+  |cff42dcf4How to Add or Remove player from the KOS List : |r
+  |cffffffff - Right click the player's unit frame (traget, focus, etc)
+  - Right click the player from the weizPVP lost of detected players|r
+  ]]
+local knowIssuesText =
+    [[
+    - Occasional errors related to dropdown menus can occur and will be resolved.
+    - Role icons and estimation need updates and at time can flicker between 2 roles
+    - If the Crosshair is not working, make sure enemy player nameplates are enabled.
+  ]]
+
+--> Validate option input
 local ValidateNumeric = function(_, val)
     if val ~= nil and val ~= "" and not tonumber(val) then
         return false
     end
     return true
 end
--------------------------------------------------------------------------------
---|> INTERFACE OPTIONS: WOW GUI MENU
--------------------------------------------------------------------------------
---=> Options Table
--------------------------------------------------------------------------------
-local tips =
-    [[
-Toggle Options: |cff42dcf4Right Click|r  the minimap icon
-Show/Hide Window: |cff42dcf4Shift + Right Click|r the minimap icon
-Pin/Unpin the Window: |cff42dcf4Right Click|r title bar to toggle.
-Lock/Uplock the Window: |cff42dcf4Ctrl + Right Click|r title bar to toggle.
-]]
-local commands =
-    [[
-Show Window:  |cff42dcf4/wpvp show|r
-Hide Window:  |cff42dcf4/wpvp hide|r
-Toggle Lock Window:  |cff42dcf4/wpvp lock|r
-Toggle Pin Window:  |cff42dcf4/wpvp pin|r
-]]
 
-weizPVP.OptionsTable = {
-    name = "weizPVP  |cffffffff/|r  v" .. weizPVP.Addon.VERSION,
+NS.OptionsTable = {
+    name = ADDON_NAME .. " |cffffffff-|r  v" .. _G.weizPVP.Addon_Version,
     type = "group",
     args = {
-        --> Overview Group
-        -------------------------------------------
-        overview = {
-            name = "Tips & Commands",
+        --> General
+        general = {
+            name = "|cffFFA200General|r",
             type = "group",
             order = 1,
             args = {
-                introOverview = {
-                    name = "|cffffa012TIPS & COMMANDS|r \n",
-                    type = "header",
-                    order = 1,
-                    width = "full"
-                },
-                --> Window Tips
-                -------------------------------------------
-                windowTipsHeader = {
-                    name = "|cffffa012Window Tips:|r",
-                    type = "description",
-                    fontSize = "large",
-                    width = "full",
-                    order = 2
-                },
-                windowTips = {
-                    type = "description",
-                    name = tips,
-                    width = "full",
-                    order = 3
-                },
-                --> Commands
-                -------------------------------------------
-                commandsHeader = {
-                    name = "|cffffa012Commands:|r",
-                    type = "description",
-                    fontSize = "large",
-                    width = "full",
-                    order = 4
-                },
-                commands = {
-                    type = "description",
-                    name = commands,
-                    width = "full",
-                    order = 5
-                }
-            }
-        },
-        --> General Options Group
-        -------------------------------------------
-        general = {
-            name = "General",
-            type = "group",
-            order = 2,
-            args = {
                 introGeneral = {
-                    name = " |cffffa012GENERAL|r",
+                    name = " |cffFFA200General|r",
                     type = "header",
                     order = 1,
                     width = "full"
                 },
-                --> General Options
-                -------------------------------------------
+                --> Options
                 minimapIcon = {
-                    name = "Show minimap icon",
-                    desc = "Show or hide the minimap icon.",
+                    name = "Minimap Icon",
+                    desc = "Show or hide the weizPVP Minimap Icon.",
                     type = "toggle",
                     width = "full",
                     order = 2,
                     get = function()
-                        return weizPVP.Options.LDB.minimap
+                        return NS.Options.LDB.minimap
                     end,
                     set = function(_, value)
                         if value == true then
-                            LibStub("LibDBIcon-1.0"):Show("weizPVP")
+                            LibStub("LibDBIcon-1.0"):Show(ADDON_NAME)
                         else
-                            LibStub("LibDBIcon-1.0"):Hide("weizPVP")
+                            LibStub("LibDBIcon-1.0"):Hide(ADDON_NAME)
                         end
-                        weizPVP.Options.LDB.minimap = value
+                        NS.Options.LDB.minimap = value
                     end
                 },
                 EnableBGs = {
-                    name = " Enabled in BGs",
+                    name = " Enable in Battlegrounds",
                     desc = "Enable weizPVP in Battlegrounds.",
                     type = "toggle",
                     order = 3,
                     width = "full",
                     get = function()
-                        return weizPVP.Options.Addon.EnabledInBattlegrounds
+                        return NS.Options.Addon.EnabledInBattlegrounds
                     end,
                     set = function(_, value)
                         --> Double check that we were already disabled. If so, initialize addon again.
-                        weizPVP.Options.Addon.EnabledInBattlegrounds = value
-                        weizPVP.GetPVPZone()
+                        NS.Options.Addon.EnabledInBattlegrounds = value
+                        NS.GetPVPZone()
                     end
                 },
                 EnableArenas = {
-                    name = " Enabled in Arenas",
+                    name = " Enable in Arenas",
                     desc = "Enable weizPVP in Arenas.",
                     type = "toggle",
                     order = 4,
                     width = "full",
                     get = function()
-                        return weizPVP.Options.Addon.EnabledInArena
+                        return NS.Options.Addon.EnabledInArena
                     end,
                     set = function(_, value)
                         --> Double check that we were already disabled. If so, initialize addon again.
-                        weizPVP.Options.Addon.EnabledInArena = value
-                        weizPVP.GetPVPZone()
+                        NS.Options.Addon.EnabledInArena = value
+                        NS.GetPVPZone()
                     end
                 }
             }
         },
-        --> Alerts Group
-        -------------------------------------------
+        --> Alerts - #00f7ff
         alerts = {
-            name = "Alerts",
+            name = "|cff00f7ffAlerts|r",
             type = "group",
             order = 4,
             args = {
                 introAlerts = {
-                    name = " |cffffa012ALERTS & NOTIFICATIONS|r",
+                    name = " |cff00f7ffAlerts & Notifications|r",
                     type = "header",
                     order = 1,
                     width = "full"
                 },
                 --> New player detected
-                -------------------------------------------
+
                 AlertDetectedSection = {
-                    name = "\n |cffffa012On New Player Detection|r",
+                    name = "\n |cffffa012New Player Detected|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
                     order = 2
                 },
                 AlertDetectedPlayer = {
-                    name = " New Player Detected: Audio Alert",
+                    name = " New Player Detected - Audio Alert",
                     desc = "Play's an alert when a new player is added to the enemy list." ..
                         "Plays the audio until it ends; doesnt not overlap with multiple detections.",
                     type = "toggle",
                     width = "full",
                     order = 3,
                     get = function()
-                        return weizPVP.Options.AudioAlerts.DetectedPlayerSound
+                        return NS.Options.AudioAlerts.DetectedPlayerSound
                     end,
                     set = function(_, value)
-                        weizPVP.Options.AudioAlerts.DetectedPlayerSound = value
+                        NS.Options.AudioAlerts.DetectedPlayerSound = value
+                    end
+                },
+                AlertDetectedBGDisbled = {
+                    name = "   Disable in Battlegrounds",
+                    desc = "Disables the new player audio alert while in battlegrounds",
+                    type = "toggle",
+                    width = "full",
+                    order = 4,
+                    get = function()
+                        return NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled
+                    end,
+                    set = function(_, value)
+                        NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled = value
+                    end,
+                    disabled = function()
+                        return not NS.Options.AudioAlerts.DetectedPlayerSound
                     end
                 },
                 AlertDetectedPlayerSoundFile = {
                     type = "select",
-                    name = " New Player Alert Sound",
+                    name = " New Player Detected Sound",
                     desc = "The audio file that plays on detection of a new player.",
                     values = sounds,
                     width = "full",
-                    order = 4,
+                    order = 10,
                     get = function()
                         for i, v in next, sounds do
-                            if v == weizPVP.Options.AudioAlerts.DetectedPlayerSoundFile then
+                            if v == NS.Options.AudioAlerts.DetectedPlayerSoundFile then
                                 return i
                             end
                         end
                     end,
                     set = function(_, value)
-                        weizPVP.Options.AudioAlerts.DetectedPlayerSoundFile = sounds[value]
+                        NS.Options.AudioAlerts.DetectedPlayerSoundFile = sounds[value]
                     end,
                     itemControl = "DDI-Sound",
                     disabled = function()
-                        return not weizPVP.Options.AudioAlerts.DetectedPlayerSound
+                        return not NS.Options.AudioAlerts.DetectedPlayerSound
                     end
                 },
                 --> Stealth
@@ -434,10 +381,10 @@ weizPVP.OptionsTable = {
                     width = "full",
                     order = 6,
                     get = function()
-                        return weizPVP.Options.StealthAlert.Enabled
+                        return NS.Options.StealthAlert.Enabled
                     end,
                     set = function(_, value)
-                        weizPVP.Options.StealthAlert.Enabled = value
+                        NS.Options.StealthAlert.Enabled = value
                     end
                 },
                 StealthAlertSoundEnabled = {
@@ -447,13 +394,13 @@ weizPVP.OptionsTable = {
                     width = "full",
                     order = 7,
                     get = function()
-                        return weizPVP.Options.StealthAlert.EnableSound
+                        return NS.Options.StealthAlert.EnableSound
                     end,
                     set = function(_, value)
-                        weizPVP.Options.StealthAlert.EnableSound = value
+                        NS.Options.StealthAlert.EnableSound = value
                     end,
                     disabled = function()
-                        return not weizPVP.Options.StealthAlert.Enabled
+                        return not NS.Options.StealthAlert.Enabled
                     end
                 },
                 StealthAlertSoundFile = {
@@ -465,20 +412,17 @@ weizPVP.OptionsTable = {
                     order = 8,
                     get = function()
                         for i, v in next, sounds do
-                            if v == weizPVP.Options.StealthAlert.SoundFile then
+                            if v == NS.Options.StealthAlert.SoundFile then
                                 return i
                             end
                         end
                     end,
                     set = function(_, value)
-                        weizPVP.Options.StealthAlert.SoundFile = sounds[value]
+                        NS.Options.StealthAlert.SoundFile = sounds[value]
                     end,
                     itemControl = "DDI-Sound",
                     disabled = function()
-                        if
-                            weizPVP.Options.StealthAlert.EnableSound == false or
-                                weizPVP.Options.StealthAlert.Enabled == false
-                         then
+                        if NS.Options.StealthAlert.EnableSound == false or NS.Options.StealthAlert.Enabled == false then
                             return true
                         else
                             return false
@@ -500,118 +444,254 @@ weizPVP.OptionsTable = {
                     width = "full",
                     order = 10,
                     get = function()
-                        return weizPVP.Options.Alerts.PhasingChat
+                        return NS.Options.Alerts.PhasingChat
                     end,
                     set = function(_, value)
-                        weizPVP.Options.Alerts.PhasingChat = value
+                        NS.Options.Alerts.PhasingChat = value
                     end
                 }
             }
         },
-        --> Crosshair Group
-        -------------------------------------------
-        crosshair = {
-            name = "Crosshair",
+        --> KOS - #ff2050
+        kos = {
+            name = "|cffff2050Kill On Sight (KOS)|r",
             type = "group",
             order = 5,
             args = {
-                intro = {
-                    name = "|cffffa012CROSSHAIR|r",
+                introKOS = {
+                    name = " |cffff2050Kill On Sight (KOS)|r",
                     type = "header",
                     order = 1,
                     width = "full"
                 },
-                --> Crosshair Options
-                -------------------------------------------
-                Enabled = {
-                    name = " Enable Crosshairs",
-                    desc = "Toggles the Crosshairs on/off",
+                --> New player detected
+                AudioAlert = {
+                    name = " Play sound on detection",
+                    desc = "Play's a sound when a player on the KOS list has been found.",
                     type = "toggle",
                     width = "full",
                     order = 2,
                     get = function()
-                        return weizPVP.Options.Crosshair.Enabled
+                        return NS.Options.KOS.AudioAlert
+                    end,
+                    set = function(_, value)
+                        NS.Options.KOS.AudioAlert = value
+                    end
+                },
+                AudioAlertFile = {
+                    type = "select",
+                    name = " Detection Sound",
+                    desc = "The sound that plays when a player on the KOS list is detected.",
+                    values = sounds,
+                    width = "full",
+                    order = 3,
+                    get = function()
+                        for i, v in next, sounds do
+                            if v == NS.Options.KOS.AudioAlertFile then
+                                return i
+                            end
+                        end
+                    end,
+                    set = function(_, value)
+                        NS.Options.KOS.AudioAlertFile = sounds[value]
+                    end,
+                    itemControl = "DDI-Sound",
+                    disabled = function()
+                        return not NS.Options.KOS.AudioAlert
+                    end
+                },
+                ChatOutput = {
+                    type = "toggle",
+                    name = " Chat alert",
+                    desc = "Outputs a message to your chat frame when a player from the KOS list is first found (only you will see this)",
+                    width = "full",
+                    order = 5,
+                    get = function()
+                        return NS.Options.KOS.ChatAlert
+                    end,
+                    set = function(_, value)
+                        NS.Options.KOS.ChatAlert = value
+                    end
+                },
+                TaskbarAlert = {
+                    type = "toggle",
+                    name = " Flash the taskbar icon on KOS detect",
+                    desc = "Flashes the WoW application icon on your taskbar/dock when a KOS target is detected. Useful for when WoW is minimized, using multiple monitors, etc.",
+                    width = "full",
+                    order = 6,
+                    get = function()
+                        return NS.Options.KOS.TaskbarAlert
+                    end,
+                    set = function(_, value)
+                        NS.Options.KOS.TaskbarAlert = value
+                    end
+                },
+                helpHeader = {
+                    name = " \n |cffffa012Help|r",
+                    type = "description",
+                    fontSize = "large",
+                    width = "full",
+                    order = 7
+                },
+                help = {
+                    type = "description",
+                    name = kosHelpText,
+                    width = "full",
+                    order = 8
+                }
+            }
+        },
+        --> Crosshair - #ff7c29
+        crosshair = {
+            name = "|cffff7c29Crosshair|r",
+            type = "group",
+            order = 6,
+            args = {
+                intro = {
+                    name = "|cffff7c29Crosshair|r",
+                    type = "header",
+                    order = 1,
+                    width = "full"
+                },
+                --> Options
+                Enabled = {
+                    name = " Enable Crosshair",
+                    desc = "Toggles the Crosshair on/off",
+                    type = "toggle",
+                    width = "full",
+                    order = 2,
+                    get = function()
+                        return NS.Options.Crosshair.Enabled
                     end,
                     set = function(_, value)
                         if value == true then
-                            weizPVP.Options.Crosshair.Enabled = true
-                            weizPVP:EnableCrosshair()
+                            NS.Options.Crosshair.Enabled = true
+                            NS.Crosshair.Enable()
                         else
-                            weizPVP.Options.Crosshair.Enabled = false
-                            weizPVP:DisableCrosshair()
+                            NS.Options.Crosshair.Enabled = false
+                            NS.Crosshair.Disable()
                         end
                     end
                 },
-                RotatingArows = {
-                    name = " Rotating Arrows",
-                    desc = "Enable rotation of the arrows around the crosshair.",
+                ShowRange = {
+                    name = " Show Range Text",
+                    desc = "Show the estimated range of the target while the crosshair is active. Text fades away under 30 yards.",
                     type = "toggle",
                     width = "full",
-                    order = 4,
+                    order = 10,
                     get = function()
-                        return weizPVP.Options.Crosshair.RotatingArrows
+                        return NS.Options.Crosshair.ShowRange
                     end,
                     set = function(_, value)
                         if value == true then
-                            weizPVP.Options.Crosshair.RotatingArrows = true
-                            weizPVP.Crosshair.FourArrows.ag:Play()
+                            NS.Options.Crosshair.ShowRange = true
+                            _G.weizPVP_CrosshairFrame.RangeText:Show()
+                            NS.Crosshair.Enable()
                         else
-                            weizPVP.Options.Crosshair.RotatingArrows = false
-                            weizPVP.Crosshair.FourArrows.ag:Stop()
+                            NS.Options.Crosshair.ShowRange = false
+                            _G.weizPVP_CrosshairFrame.RangeText:Hide()
+                            NS.Crosshair.Enable()
                         end
                     end,
                     disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
+                        return not NS.Options.Crosshair.Enabled
                     end
                 },
-                NewTarget1FX = {
-                    name = " New Target FX",
-                    desc = "Shows additional visuals when selecting a new target.",
+                --> GUILD AND NAME TEXT
+                NameEnabled = {
+                    name = " Enable Name Text",
+                    desc = "Toggles the the target's name being shown on the Crosshair.",
                     type = "toggle",
                     width = "full",
-                    order = 4,
+                    order = 11,
                     get = function()
-                        return weizPVP.Options.Crosshair.FX.NewTarget1
+                        return NS.Options.Crosshair.NameEnabled
                     end,
                     set = function(_, value)
-                        if value == true then
-                            weizPVP.Options.Crosshair.FX.NewTarget1 = true
-                        else
-                            weizPVP.Options.Crosshair.FX.NewTarget1 = false
-                        end
+                        NS.Options.Crosshair.NameEnabled = value
+                        NS.Crosshair.Reset()
+                        NS.Crosshair.NewTarget()
                     end,
                     disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
+                        return not NS.Options.Crosshair.Enabled
+                    end
+                },
+                GuildEnabled = {
+                    name = " Enable Guild Text",
+                    desc = "Toggles the the target's guild being shown on the Crosshair.",
+                    type = "toggle",
+                    width = "full",
+                    order = 12,
+                    get = function()
+                        return NS.Options.Crosshair.GuildEnabled
+                    end,
+                    set = function(_, value)
+                        NS.Options.Crosshair.GuildEnabled = value
+                        NS.Crosshair.Reset()
+                        NS.Crosshair.NewTarget()
+                    end,
+                    disabled = function()
+                        return not NS.Options.Crosshair.Enabled
                     end
                 },
                 Alpha = {
                     name = " Alpha Multiplier",
-                    desc = "Adjust the Alpha multiplier of the Crosshair and all Crosshair elements",
+                    desc = "Adjust Crosshair Alpha. 0 = transparent, 1.0 = max opacity/visability",
                     type = "range",
-                    min = 0.1,
+                    min = 0,
                     max = 1,
                     width = "full",
                     validate = ValidateNumeric,
-                    step = 0.1,
-                    order = 5,
+                    step = 0.05,
+                    order = 20,
                     get = function()
-                        if type(weizPVP.Options.Crosshair.Alpha) == "number" then
-                            return weizPVP.Options.Crosshair.Alpha
+                        if type(NS.Options.Crosshair.Alpha) == "number" then
+                            return NS.Options.Crosshair.Alpha
                         else
                             return 1
                         end
                     end,
                     set = function(_, value)
-                        if type(weizPVP.Options.Crosshair.Alpha) == "number" then
-                            weizPVP.Options.Crosshair.Alpha = value
-                            weizPVP:CrosshairsSetAlpha(value)
+                        if type(NS.Options.Crosshair.Alpha) == "number" then
+                            NS.Options.Crosshair.Alpha = value
+                            NS.Crosshair.SetAlpha()
                         else
-                            weizPVP.Options.Crosshair.Alpha = 1
-                            weizPVP:CrosshairsSetAlpha(1)
+                            NS.Options.Crosshair.Alpha = 1
+                            NS.Crosshair.SetAlpha()
                         end
                     end,
                     disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
+                        return not NS.Options.Crosshair.Enabled
+                    end
+                },
+                Scale = {
+                    name = " Scale",
+                    desc = "Adjust the Scale of the Crosshair",
+                    type = "range",
+                    min = 0.1,
+                    max = 4,
+                    width = "full",
+                    validate = ValidateNumeric,
+                    step = 0.1,
+                    order = 21,
+                    get = function()
+                        if type(NS.Options.Crosshair.Scale) == "number" then
+                            return NS.Options.Crosshair.Scale
+                        else
+                            return 1
+                        end
+                    end,
+                    set = function(_, value)
+                        if type(NS.Options.Crosshair.Scale) == "number" then
+                            NS.Options.Crosshair.Scale = value
+                            NS.Crosshair.SetScale(value)
+                        else
+                            NS.Options.Crosshair.Scale = 1
+                            NS.Crosshair.SetScale(1)
+                        end
+                    end,
+                    disabled = function()
+                        return not NS.Options.Crosshair.Enabled
                     end
                 },
                 LineThickness = {
@@ -622,243 +702,269 @@ weizPVP.OptionsTable = {
                     max = 12,
                     width = "full",
                     step = 1,
-                    order = 6,
+                    order = 22,
                     get = function()
-                        return weizPVP.Options.Crosshair.LineThickness
+                        return NS.Options.Crosshair.LineThickness
                     end,
                     set = function(_, value)
-                        weizPVP.Options.Crosshair.LineThickness = value
-                        weizPVP:ChangeLineThickness(value)
+                        NS.Options.Crosshair.LineThickness = value
+                        NS.Crosshair.SetLineThickness(value)
                     end,
                     disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
+                        return not NS.Options.Crosshair.Enabled
                     end
                 },
-                --> BOUNTY
-                -------------------------------------------
-                BountyHeader = {
-                    name = "\n|cffffa012Bounty Options:|r",
-                    type = "description",
-                    fontSize = "large",
-                    width = "full",
-                    order = 11
-                },
-                BountyEnabled = {
-                    name = " Enable Bounty Overlay",
-                    desc = "Toggles the overlay indicator for players with the Bounty Hunted debuff.",
-                    type = "toggle",
-                    width = "full",
-                    order = 12,
-                    get = function()
-                        return weizPVP.Options.Crosshair.ShowBountyOverlay
-                    end,
-                    set = function(_, value)
-                        if value == true then
-                            weizPVP.Options.Crosshair.ShowBountyOverlay = true
-                            weizPVP:EnableCrosshair()
-                        else
-                            weizPVP.Options.Crosshair.ShowBountyOverlay = false
-                            weizPVP:EnableCrosshair()
-                        end
-                    end,
-                    disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
-                    end
-                },
-                --> GUILD AND TEXT
-                -------------------------------------------
-                NameAndGuildTextHeader = {
-                    name = "\n|cffffa012Name and Guild Text:|r",
-                    type = "description",
-                    fontSize = "large",
-                    width = "full",
-                    order = 13
-                },
-                NameEnabled = {
-                    name = " Enable Name Text",
-                    desc = "Toggles the the target's name being shown on the Crosshair.",
-                    type = "toggle",
-                    width = "full",
-                    order = 14,
-                    get = function()
-                        return weizPVP.Options.Crosshair.NameEnabled
-                    end,
-                    set = function(_, value)
-                        if value == true then
-                            weizPVP.Options.Crosshair.NameEnabled = true
-                        else
-                            weizPVP.Options.Crosshair.NameEnabled = false
-                        end
-                    end,
-                    disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
-                    end
-                },
-                GuildEnabled = {
-                    name = " Enable Guild Text",
-                    desc = "Toggles the the target's guild being shown on the Crosshair.",
-                    type = "toggle",
-                    width = "full",
-                    order = 15,
-                    get = function()
-                        return weizPVP.Options.Crosshair.GuildEnabled
-                    end,
-                    set = function(_, value)
-                        if value == true then
-                            weizPVP.Options.Crosshair.GuildEnabled = true
-                        else
-                            weizPVP.Options.Crosshair.GuildEnabled = false
-                        end
-                    end,
-                    disabled = function()
-                        return not weizPVP.Options.Crosshair.Enabled
-                    end
-                },
-                --> Crosshair Tips
-                -------------------------------------------
-                TipsHeader = {
+                --> CVars
+                CVarHeader = {
                     name = "\n|cffffa012Nameplate CVars:|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
-                    order = 16
+                    order = 25
                 },
-                Tips = {
-                    type = "description",
-                    name = "Use these options to apply optimal or default nameplate settings. \n" ..
-                        "Other addons may change these values. If the crosshairs start acting up, try re-applying. \n",
-                    order = 17
-                },
-                ApplyCVars = {
-                    type = "execute",
-                    name = "Apply Optimal Nameplate CVar values",
+                nameplateTargetRadialPosition = {
+                    type = "toggle",
+                    name = "|cff42dcf4nameplateTargetRadialPosition|r (|cff37ff37Enabled is recommended|r)",
+                    desc = "When target is off screen, position its nameplate radially around sides and bottom",
                     width = "full",
-                    order = 18,
-                    func = function()
-                        SetCVar("nameplateMaxDistance", 100)
-                        SetCVar("nameplateTargetRadialPosition", 1)
-                        SetCVar("nameplateMaxScale", 1)
-                        SetCVar("nameplateMinScale", 0.8)
-                        SetCVar("nameplateSelectedScale", 1)
-                        SetCVar("nameplateOtherTopInset", 0.1)
-                        SetCVar("nameplateOtherBottomInset", 0.1)
-                        SetCVar("nameplateLargeTopInset", 0.1)
-                        SetCVar("nameplateLargeBottomInset", 0.15)
+                    order = 27,
+                    get = function()
+                        return GetCVar("nameplateTargetRadialPosition") == "1" and true or false
+                    end,
+                    set = function(_, value)
+                        if value then
+                            SetCVar("nameplateTargetRadialPosition", "1")
+                        else
+                            SetCVar("nameplateTargetRadialPosition", "0")
+                        end
+                    end
+                },
+                nameplateTargetBehindMaxDistance = {
+                    type = "range",
+                    name = "|cff42dcf4nameplateTargetBehindMaxDistance|r |cffffffff(|r|cff37ff3760 is recommended|r|cffffffff)|r",
+                    desc = "The max distance to show the target nameplate when the target is behind the camera.",
+                    width = "full",
+                    min = 15,
+                    max = 60,
+                    validate = ValidateNumeric,
+                    step = 1,
+                    order = 28,
+                    get = function()
+                        return tonumber(GetCVar("nameplateTargetBehindMaxDistance"))
+                    end,
+                    set = function(_, value)
+                        SetCVar("nameplateTargetBehindMaxDistance", tostring(value))
                     end
                 },
                 ResetCVars = {
                     type = "execute",
-                    name = "Set Nameplate CVars to DEFAULT values",
+                    name = "Reset the above CVars to default values",
+                    desc = "The CVars nameplateTargetRadialPosition, nameplateTargetBehindMaxDistance, and nameplateMaxDistance will be reset to default",
                     width = "full",
-                    order = 19,
+                    order = 40,
                     func = function()
-                        SetCVar("nameplateMaxDistance", GetCVarDefault("nameplateMaxDistance"))
                         SetCVar("nameplateTargetRadialPosition", GetCVarDefault("nameplateTargetRadialPosition"))
-                        SetCVar("nameplateMaxScale", GetCVarDefault("nameplateMaxScale"))
-                        SetCVar("nameplateMinScale", GetCVarDefault("nameplateMinScale"))
-                        SetCVar("nameplateSelectedScale", GetCVarDefault("nameplateSelectedScale"))
-                        SetCVar("nameplateOtherTopInset", GetCVarDefault("nameplateOtherTopInset"))
-                        SetCVar("nameplateOtherBottomInset", GetCVarDefault("nameplateOtherBottomInset"))
-                        SetCVar("nameplateLargeTopInset", GetCVarDefault("nameplateLargeTopInset"))
-                        SetCVar("nameplateLargeBottomInset", GetCVarDefault("nameplateLargeBottomInset"))
+                        SetCVar("nameplateTargetBehindMaxDistance", GetCVarDefault("nameplateTargetBehindMaxDistance"))
+                        NS.PrintAddonMessage("|cff27e817CVars reset|r :")
                     end
                 }
             }
         },
-        --> BETA Group
-        -------------------------------------------
-        beta = {
-            name = "|cffffa012BETA|r",
+        --> Help - #ffffff
+        about = {
+            name = "|cffffffffHelp|r",
             type = "group",
-            order = 6,
+            order = 7,
             args = {
-                introBeta = {
-                    name = " |cff42dcf4BETA|r \n",
+                intro = {
+                    name = "|cffffffffHelp|r",
                     type = "header",
                     order = 1,
                     width = "full"
                 },
-                descBeta = {
-                    name = "The options in this section are |cFFF4564Dexperimental|r." ..
-                        "\n|cFFF4564DEnabling these options may give errors " ..
-                            "and trigger bugs that effect other parts of the addon.|r",
-                    type = "description",
-                    order = 2,
-                    width = "full"
-                },
-                introLagMode = {
-                    name = "\n |cffffa012LagMode|r",
+                --> commands
+                commandsHeader = {
+                    name = "|cffffa012Commands|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
+                    order = 2
+                },
+                commands = {
+                    type = "description",
+                    fontSize = "medium",
+                    name = commandsText,
+                    width = "full",
                     order = 3
                 },
-                descLagMode = {
-                    name = "Disables some data gathering functions resulting in less CPU usage." ..
-                        "\n \n |cffffa012*|r This also means that there will be less updates for things like determining roles." ..
-                            "\n \n |cffffa012*|r Health and death updates are the main priority. \n",
+                --> tips
+                tipsHeader = {
+                    name = "|cffffa012Tips|r",
                     type = "description",
-                    order = 4,
-                    width = "full"
-                },
-                --> LagMode
-                -------------------------------------------
-                LagModeEnable = {
-                    name = "LagMode: Enable",
-                    desc = "Enable LagMode, which will dynamically adjust this addon's processing & CPU usage based on your curren FPS.",
-                    type = "toggle",
-                    order = 5,
+                    fontSize = "large",
                     width = "full",
-                    get = function()
-                        return weizPVP.Options.LagMode.Enabled
-                    end,
-                    set = function(_, value)
-                        weizPVP.Options.LagMode.Enabled = value
-                        if value == true then
-                            weizPVP.Addon.LagModeActive = false
-                        end
-                    end
+                    order = 4
                 },
-                LagModeFPSThreshold = {
-                    name = "LagMode: FPS Threshold",
-                    desc = "LagMode will only be activated when below this 'Frames Per Second' threshold.",
-                    type = "range",
-                    min = 10,
-                    max = 60,
+                tips = {
+                    type = "description",
+                    fontSize = "medium",
+                    name = tipsText,
                     width = "full",
-                    step = 1,
-                    order = 6,
-                    get = function()
-                        return weizPVP.Options.LagMode.FPSThreshold
-                    end,
-                    set = function(_, value)
-                        weizPVP.Options.LagMode.FPSThreshold = value
-                    end,
-                    disabled = function()
-                        return not weizPVP.Options.LagMode.Enabled
-                    end
+                    order = 5
                 },
-                LagModeHalt = {
-                    name = "LagMode: Emergency Halt (@10 FPS)",
-                    desc = "When enabled, all data processing will be halted when dropping below 10 frames per second. \n" ..
-                        "When back above 10 fps, normal operation will continue.",
-                    type = "toggle",
-                    order = 7,
+                --> kos
+                kosheader = {
+                    name = "|cffffa012KOS|r",
+                    type = "description",
+                    fontSize = "large",
                     width = "full",
-                    get = function()
-                        return weizPVP.Options.LagMode.HaltEnabled
-                    end,
-                    set = function(_, value)
-                        weizPVP.Options.LagMode.HaltEnabled = value
-                    end,
-                    disabled = function()
-                        return not weizPVP.Options.LagMode.Enabled
-                    end
+                    order = 6
+                },
+                koshelp = {
+                    type = "description",
+                    fontSize = "medium",
+                    name = kosHelpTextAbout,
+                    width = "full",
+                    order = 7
+                },
+                --> knownIssues
+                issuesHeader = {
+                    name = "\n|cffffa012Known Issues|r",
+                    type = "description",
+                    fontSize = "large",
+                    width = "full",
+                    order = 8
+                },
+                issueText = {
+                    type = "description",
+                    fontSize = "medium",
+                    name = knowIssuesText,
+                    width = "full",
+                    order = 9
                 }
             }
         }
     }
 }
 
-LibStub("AceConfig-3.0"):RegisterOptionsTable("weizPVP.OptionsTable", weizPVP.OptionsTable)
-LibStub("AceConfigDialog-3.0"):AddToBlizOptions("weizPVP.OptionsTable", "weiz|cffffa012PVP|r")
+LibStub("AceConfig-3.0"):RegisterOptionsTable(ADDON_NAME, NS.OptionsTable)
+LibStub("AceConfigDialog-3.0"):AddToBlizOptions(ADDON_NAME, ADDON_NAME)
+
+--|> CONFIG FUNCTIONS
+-------------------------------------------------------------------------------
+--> RESET ALL
+local Realod_UI = C_UI.Reload
+function NS.ResetAll()
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESETALL")
+end
+--> RESET OPTIONS
+function NS.ResetOptions()
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESETOPTIONS")
+end
+--> RESET PLAYER DB
+function NS.ResetPlayerDB()
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESETPLAYERDB")
+end
+
+--> TOGGLE OPTIONS
+function NS.ToggleOptions()
+    if InterfaceOptionsFrame:IsShown() then
+        InterfaceOptionsFrame:Hide()
+    else
+        InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- open options to ADDON_NAME
+        local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues() -- Get scrollbar min/max
+        InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax) -- Set scrollbar to max (top)
+        InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- open options again (wow bug workaround)
+    end
+end
+
+--> VERSION UPGRADE CHECK
+function NS.VersionUpgradeCheck()
+    if not _G._weizpvp_addon then -- check for major upgrade (pre-1.9.0)
+        _G._weizpvp_addon = {
+            Database_Version = weizPVP.Database_Version,
+            Addon_Version = weizPVP.Addon_Version
+        }
+        NS.globalDB.global = {}
+        NS.databaseReset = true
+    end
+end
+
+--|> STATIC POPUPS
+-------------------------------------------------------------------------------
+--> Reset All Popup
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESETALL"] = {
+    text = "Are you sure you want to reset all weizPVP settings and wipe its player data?\n|cffff0000This will reload your UI.|r",
+    button1 = YES,
+    button2 = NO,
+    OnAccept = function()
+        wipe(NS.charDB)
+        wipe(NS.globalDB)
+        wipe(NS.Options)
+        wipe(NS.PlayerDB)
+        wipe(NS.KosList)
+        Realod_UI()
+    end,
+    timeout = 0,
+    whileDead = 1,
+    hideOnEscape = 1,
+    showAlert = 1,
+    OnShow = function(self)
+        self:SetFrameStrata("FULLSCREEN_DIALOG")
+        self:SetFrameLevel(99)
+    end
+}
+--> Reset Options
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESETOPTIONS"] = {
+    text = "Are you sure you want to reset the weizPVP options & settings?\n|cffff0000This will reload your UI.|r",
+    button1 = YES,
+    button2 = NO,
+    OnAccept = function()
+        wipe(NS.charDB.Options)
+        wipe(NS.Options)
+        Realod_UI()
+    end,
+    timeout = 0,
+    whileDead = 1,
+    hideOnEscape = 1,
+    showAlert = 1,
+    OnShow = function(self)
+        self:SetFrameStrata("FULLSCREEN_DIALOG")
+        self:SetFrameLevel(99)
+    end
+}
+--> Reset Player Databsae
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESETPLAYERDB"] = {
+    text = "Are you sure you want to wipe weizPVP's player database?",
+    button1 = YES,
+    button2 = NO,
+    OnAccept = function()
+        wipe(NS.globalDB)
+        wipe(NS.PlayerDB)
+        NS.ClearListData()
+    end,
+    timeout = 0,
+    whileDead = 1,
+    hideOnEscape = 1,
+    showAlert = 1,
+    OnShow = function(self)
+        self:SetFrameStrata("FULLSCREEN_DIALOG")
+        self:SetFrameLevel(99)
+    end
+}
+--> Version Update - Options and DB reset
+StaticPopupDialogs["WEIZPVP_UPGRADE_DB_RESET"] = {
+    text = "|cffFFA200weizPVP's options and data have been reset!|r\n|cffaaaaaa(Details in chat)|r",
+    button1 = OKAY,
+    button2 = nil,
+    OnAccept = function()
+    end,
+    timeout = 0,
+    whileDead = 1,
+    hideOnEscape = 1,
+    showAlert = 1,
+    OnShow = function(self)
+        self:SetFrameStrata("FULLSCREEN_DIALOG")
+        self:SetFrameLevel(99)
+    end
+}

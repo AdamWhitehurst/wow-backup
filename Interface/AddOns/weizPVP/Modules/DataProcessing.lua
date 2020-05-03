@@ -2,112 +2,85 @@
 --|> DATA PROCESSING
 --: Functions that help acquire and manage data involving the PlayerDB
 -------------------------------------------------------------------------------
---|> UPVALUE GLOBALS
+--|> Upvalue Globals
 -------------------------------------------------------------------------------
-local weizPVP = weizPVP
-local UnitIsEnemy = UnitIsEnemy
-local UnitIsPlayer = UnitIsPlayer
-local GetUnitName = GetUnitName
+local _, NS = ...
+local UnitName = UnitName
 local GetGuildInfo = GetGuildInfo
-local UnitClass = UnitClass
-local UnitRace = UnitRace
-local UnitLevel = UnitLevel
-local UnitIsDeadOrGhost = UnitIsDeadOrGhost
 local GetTime = GetTime
-local UnitHealth = UnitHealth
-local UnitHealthMax = UnitHealthMax
-local UnitGUID = UnitGUID
-local UnitOnTaxi = UnitOnTaxi
-local wipe = wipe
-local _
 
--------------------------------------------------------------------------------
---|> GLOBAL FUNCTIONS
--------------------------------------------------------------------------------
---=> UpdatePlayerActiveCache
--->  Updates data in the PlayerActiveCache and then calls
---> Sends data off the Lists to be processed
-
+--> UpdatePlayerActiveCache
+--:  Updates data in the PlayerActiveCache and then calls
+--: Sends data off the Lists to be processed
 -----------------------------------------------------------------------
-function weizPVP:UpdatePlayerActiveCache(name, health, stealth, dead, role, GUID)
+function NS.UpdatePlayerActiveCache(name, health, stealth, dead, role, GUID)
     --> Verify GUIDexists
     if not GUID then
         return
     end
-
     local newPlayerOnList
-
-    --> Check for player already in cache
-    if weizPVP.PlayerActiveCache[GUID] then
+    --: Check for player already in cache
+    if NS.PlayerActiveCache[GUID] then
         newPlayerOnList = false
     else
-        weizPVP.PlayerActiveCache[GUID] = {}
+        NS.PlayerActiveCache[GUID] = {}
         newPlayerOnList = true
     end
-
-    --> Update PlayerCache info
-    -----------------------------------------
+    --: Update PlayerCache info
     if newPlayerOnList then
-        weizPVP.PlayerActiveCache[GUID].GUID = GUID
+        NS.PlayerActiveCache[GUID].GUID = GUID
         --> NAME
         if name then
-            weizPVP.PlayerActiveCache[GUID].Name = name
-        elseif weizPVP.PlayerDB[name].Name then
-            weizPVP.PlayerActiveCache[GUID].Name = weizPVP.PlayerDB[name].Name
+            NS.PlayerActiveCache[GUID].Name = name
+        elseif NS.PlayerDB[name].Name then
+            NS.PlayerActiveCache[GUID].Name = NS.PlayerDB[name].Name
         end
-
         --> LEVEL
-        weizPVP.PlayerActiveCache[GUID].Estimated = weizPVP.PlayerDB[name].Estimated
-        if weizPVP.PlayerDB[name].Level then
-            weizPVP.PlayerActiveCache[GUID].Level = weizPVP.PlayerDB[name].Level
-        elseif weizPVP.PlayerDB[name].Level then
-            weizPVP.PlayerActiveCache[GUID].Level = 0
-            weizPVP.PlayerDB[name].Level = 0
+        if NS.PlayerDB[name].Level then
+            NS.PlayerActiveCache[GUID].Level = NS.PlayerDB[name].Level
+            NS.PlayerActiveCache[GUID].Estimated = NS.PlayerDB[name].Estimated
+        else -- no level found
+            NS.PlayerActiveCache[GUID].Level = 0
+            NS.PlayerActiveCache[GUID].Estimated = true
+            NS.PlayerDB[name].Level = 0
+            NS.PlayerDB[name].Estimated = true
         end
-
         --> CLASS
-        if weizPVP.PlayerDB[name].Class then
-            weizPVP.PlayerActiveCache[GUID].Class = weizPVP.PlayerDB[name].Class
+        if NS.PlayerDB[name].Class then
+            NS.PlayerActiveCache[GUID].Class = NS.PlayerDB[name].Class
         end
-
         --> GUILD
-        if weizPVP.PlayerDB[name].Guild then
-            weizPVP.PlayerActiveCache[GUID].Guild = weizPVP.PlayerDB[name].Guild
+        if NS.PlayerDB[name].Guild then
+            NS.PlayerActiveCache[GUID].Guild = NS.PlayerDB[name].Guild
         end
-
         --> HEALTH
         if health ~= nil then
-            weizPVP.PlayerActiveCache[GUID].Health = health
-        elseif weizPVP.PlayerActiveCache[GUID].Health == nil then
-            weizPVP.PlayerActiveCache[GUID].Health = 100
+            NS.PlayerActiveCache[GUID].Health = health
+        elseif NS.PlayerActiveCache[GUID].Health == nil then
+            NS.PlayerActiveCache[GUID].Health = 100
         end
-
         --> STEALTH
         if stealth ~= nil then
-            weizPVP.PlayerActiveCache[GUID].Stealth = stealth
+            NS.PlayerActiveCache[GUID].Stealth = stealth
         end
-
         --> DEAD
         if dead ~= nil then
-            weizPVP.PlayerActiveCache[GUID].Dead = dead
+            NS.PlayerActiveCache[GUID].Dead = dead
             if dead == true then
-                weizPVP.PlayerActiveCache[GUID].Health = 0
+                NS.PlayerActiveCache[GUID].Health = 0
             end
         end
-
         --> ROLE
         if role ~= nil then
-            weizPVP.PlayerActiveCache[GUID].Role = role
-            weizPVP.PlayerDB[name].Role = role
+            NS.PlayerActiveCache[GUID].Role = role
+            NS.PlayerDB[name].Role = role
         end
     end
-
     --> Add player Data to lists
-    weizPVP:AddPlayerDataToNearby(GUID, newPlayerOnList)
+    NS.AddPlayerDataToNearby(GUID, newPlayerOnList)
 end
 
 --> Static Role Assignment
----------------------------------------------------------------------
 local function RoleAssign(class)
     if class == "ROGUE" or class == "MAGE" or class == "WARLOCK" or class == "HUNTER" then
         return "DAMAGER"
@@ -115,20 +88,19 @@ local function RoleAssign(class)
     return nil
 end
 
---=> GET UNIT DATA
------------------------------------------------------------------------
---> Gets data for events with a UNITID, such as 'target' or 'nameplate'
-
+--> GET UNIT DATA
+-- Gets data for events with a UNITID, such as 'target' or 'nameplate'
 local UnitDataThrottle = 2
-function weizPVP:GetUnitData(unit)
-    --> Confirm Unit is a player that is an enemy or attackable
-    if (UnitIsEnemy("player", unit) or weizPVP.Options.DEBUG) and UnitIsPlayer(unit) then
+function NS.GetUnitData(unit)
+    if (not unit) or (not UnitExists(unit)) then -- unit check
+        return
+    end
+    if NS.IsUnitValidForTracking(unit) then -- Valid player?
         local timestamp = GetTime()
-        local name = GetUnitName(unit, true)
+        local name = NS.GetUnitName(unit)
         local GUID = UnitGUID(unit) or nil
-
-        --> Unit has valid name and GUID
-        if name and GUID and name ~= "Unknown" then
+        -- Unit has valid name and GUID
+        if name and GUID then
             local guild = GetGuildInfo(unit)
             local class
             _, class = UnitClass(unit)
@@ -138,82 +110,97 @@ function weizPVP:GetUnitData(unit)
             local Dead = UnitIsDeadOrGhost(unit) or nil
             local Health = (UnitHealth(unit) / UnitHealthMax(unit) * 100) or nil
             local OnTaxi = UnitOnTaxi(unit)
-
-            --> New DB Player?
-            if not weizPVP.PlayerDB[name] then
-                weizPVP.PlayerDB[name] = {}
-                weizPVP.PlayerDB[name].Estimated = false
-                weizPVP.PlayerDB[name].Name = name
-                weizPVP.PlayerDB[name].Guild = guild
-                weizPVP.PlayerDB[name].Class = class
+            -- New DB Player?
+            if not NS.PlayerDB[name] then
+                NS.PlayerDB[name] = {}
+                NS.PlayerDB[name].Estimated = false
+                NS.PlayerDB[name].Name = name
+                NS.PlayerDB[name].Guild = guild
+                NS.PlayerDB[name].Class = class
                 if role ~= nil then
-                    weizPVP.PlayerDB[name].Role = role
+                    NS.PlayerDB[name].Role = role
                 end
-                weizPVP.PlayerDB[name].Level = level
-                weizPVP.PlayerDB[name].Race = race
-                weizPVP.PlayerDB[name].Timestamp = timestamp
+                NS.PlayerDB[name].Level = level
+                NS.PlayerDB[name].Race = race
+                NS.PlayerDB[name].Timestamp = timestamp
             end
-
-            --> New Cache Player
-            if weizPVP.PlayerDB[name].Estimated == true or (weizPVP.PlayerDB[name].Timestamp + UnitDataThrottle < timestamp) then
-                if not weizPVP.NearbyList[name] then --> Check if player is new to cache/list
-                    --> Player new to cache; get data
-                    weizPVP.PlayerDB[name].Estimated = false
-                    weizPVP.PlayerDB[name].Guild = guild
-                    weizPVP.PlayerDB[name].Race = race
-                    weizPVP.PlayerDB[name].Level = level
+            -- New Cache Player
+            if NS.PlayerDB[name].Estimated == true or (NS.PlayerDB[name].Timestamp + UnitDataThrottle < timestamp) then
+                if not NS.NearbyList[name] then -- Check if player is new to cache/list
+                    -- Player new to cache; get data
+                    NS.PlayerDB[name].Estimated = false
+                    NS.PlayerDB[name].Guild = guild
+                    NS.PlayerDB[name].Race = race
+                    NS.PlayerDB[name].Level = level
                     if role ~= nil then
-                        weizPVP.PlayerDB[name].Role = role
+                        NS.PlayerDB[name].Role = role
                     end
-                    weizPVP.PlayerDB[name].Timestamp = timestamp
-                    --> fp check
-                    if weizPVP.PlayersOnBars[GUID] and weizPVP.PlayerActiveCache[GUID] then
-                        if OnTaxi and not weizPVP.PlayerActiveCache[GUID].OnTaxi then
-                            weizPVP.PlayerActiveCache[GUID].OnTaxi = true
-                        elseif not OnTaxi and weizPVP.PlayerActiveCache[GUID].OnTaxi == true then
-                            weizPVP.PlayerActiveCache[GUID].OnTaxi = false
+                    NS.PlayerDB[name].Timestamp = timestamp
+                    -- Active visible player
+                    if NS.PlayersOnBars[GUID] and NS.PlayerActiveCache[GUID] then
+                        if OnTaxi and not NS.PlayerActiveCache[GUID].OnTaxi then
+                            NS.PlayerActiveCache[GUID].OnTaxi = true
+                        elseif not OnTaxi and NS.PlayerActiveCache[GUID].OnTaxi == true then
+                            NS.PlayerActiveCache[GUID].OnTaxi = false
+                        end
+                        if UnitCanAttack("player", unit) then
+                            NS.PlayerActiveCache[GUID].Unattackable = nil
+                        else
+                            NS.PlayerActiveCache[GUID].Unattackable = true
                         end
                     end
-                    --> Update player data on bars
-                    weizPVP:UpdatePlayerActiveCache(name, Health, nil, Dead, role, GUID)
+                    -- Update player data on bars
+                    NS.UpdatePlayerActiveCache(name, Health, false, Dead, role, GUID)
                     return
                 end
             end
-
-            weizPVP.PlayerDB[name].Estimated = false
-            weizPVP.PlayerDB[name].Timestamp = timestamp
-            if weizPVP.PlayersOnBars[GUID] and weizPVP.PlayerActiveCache[GUID] then
-                if OnTaxi and not weizPVP.PlayerActiveCache[GUID].OnTaxi == true then
-                    weizPVP.PlayerActiveCache[GUID].OnTaxi = true
-                elseif not OnTaxi and weizPVP.PlayerActiveCache[GUID].OnTaxi == true then
-                    weizPVP.PlayerActiveCache[GUID].OnTaxi = false
+            NS.PlayerDB[name].Estimated = false
+            NS.PlayerDB[name].Timestamp = timestamp
+            if NS.PlayersOnBars[GUID] and NS.PlayerActiveCache[GUID] then
+                if OnTaxi and not NS.PlayerActiveCache[GUID].OnTaxi == true then
+                    NS.PlayerActiveCache[GUID].OnTaxi = true
+                elseif not OnTaxi and NS.PlayerActiveCache[GUID].OnTaxi == true then
+                    NS.PlayerActiveCache[GUID].OnTaxi = false
                 end
             end
-
-            weizPVP:UpdatePlayerActiveCache(name, Health, nil, Dead, role, GUID)
+            NS.UpdatePlayerActiveCache(name, Health, nil, Dead, role, GUID)
             return
         end
     end
 end
 
---> Clear List Data
--------------------------------------------------------------------------------
-function weizPVP:ClearListData()
-    wipe(weizPVP.CurrentList)
-    wipe(weizPVP.CurrentNameplates)
-    wipe(weizPVP.NearbyList)
-    wipe(weizPVP.ActiveList)
-    wipe(weizPVP.InactiveList)
-    wipe(weizPVP.ActiveDeadList)
-    wipe(weizPVP.InactiveDeadList)
-    wipe(weizPVP.PlayersOnBars)
-    wipe(weizPVP.PlayerActiveCache)
-    weizPVP.NearbyListSize = 0
-    weizPVP:SortNearbyList()
-    weizPVP:RefreshCurrentList()
-    weizPVP.ManageBarsDisplayed()
-    weizPVP:UpdateNearbyCount()
-    weizPVP.TargetedIcon:Hide()
-    --> Refresh Target
-    weizPVP:PlayerTargetEvent()
+--> Is Unit Valid For Tracking
+function NS.IsUnitValidForTracking(unit)
+    if (not unit) or (not UnitIsPlayer(unit)) then -- input check
+        return false
+    end
+    if string.find(GetUnitName(unit), "Unknown") then
+        return false
+    end
+    if (UnitCanAttack("player", unit) or UnitIsEnemy("player", unit) or NS.Options.DEBUG) then -- attackable player check
+        if not string.find(UnitGUID(unit), "Player") then -- player GUID check
+            return false
+        end
+        return true -- VALID
+    end
+    return false
+end
+
+--> weizPVP's GetUnitName()
+--: Returns "playerName-realmName" for all players
+local gsub = gsub
+function NS.GetUnitName(unit)
+    if not unit then -- check for unit
+        return
+    end
+    local name, realm = UnitName(unit, true) -- check for unit name
+    if not name then
+        return nil
+    end
+    if not realm then -- same realm
+        return name .. "-" .. NS.PlayerRealm -- name + player's realm
+    else -- different server
+        realm = gsub(realm, "[%s%-]", "") --strip
+        return name .. "-" .. realm
+    end
 end

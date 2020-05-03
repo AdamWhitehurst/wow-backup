@@ -24,6 +24,8 @@ local Currencies = {
 	["7TH_LEGION_SERVICE_MEDAL"] = {ID = 1717, NAME = GetCurrencyInfo(1717), ICON = format(iconString, select(3, GetCurrencyInfo(1717)))},
 	["TITAN_RESIDUUM"] = {ID = 1718, NAME = GetCurrencyInfo(1718), ICON = format(iconString, select(3, GetCurrencyInfo(1718)))},
 	["PRISMATIC_MANAPEARL"] = {ID = 1721, NAME = GetCurrencyInfo(1721), ICON = format(iconString, select(3, GetCurrencyInfo(1721)))},
+	["CORRUPTED_MEMENTOS"] = {ID = 1719, NAME = GetCurrencyInfo(1719), ICON = format(iconString, select(3, GetCurrencyInfo(1719)))},
+	["COALESCING_VISIONS"] = {ID = 1755, NAME = GetCurrencyInfo(1755), ICON = format(iconString, select(3, GetCurrencyInfo(1755)))},
 	-- Other
 	["DARKMOON_PRIZE_TICKET"] = {ID = 515, NAME = GetCurrencyInfo(515), ICON = format(iconString, select(3, GetCurrencyInfo(515)))},
 }
@@ -77,6 +79,8 @@ local function OnEnter(self)
 	end
 	DT.tooltip:AddDoubleLine(Currencies.TITAN_RESIDUUM.NAME, select(2, GetCurrencyInfo(Currencies.TITAN_RESIDUUM.ID)), 1, 1, 1)
 	DT.tooltip:AddDoubleLine(Currencies.PRISMATIC_MANAPEARL.NAME, select(2, GetCurrencyInfo(Currencies.PRISMATIC_MANAPEARL.ID)), 1, 1, 1)
+	DT.tooltip:AddDoubleLine(Currencies.CORRUPTED_MEMENTOS.NAME, select(2, GetCurrencyInfo(Currencies.CORRUPTED_MEMENTOS.ID)), 1, 1, 1)
+	DT.tooltip:AddDoubleLine(Currencies.COALESCING_VISIONS.NAME, select(2, GetCurrencyInfo(Currencies.COALESCING_VISIONS.ID)), 1, 1, 1)
 	DT.tooltip:AddLine(' ')
 
 	DT.tooltip:AddLine(OTHER)

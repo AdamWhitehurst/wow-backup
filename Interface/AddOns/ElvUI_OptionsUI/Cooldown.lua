@@ -28,11 +28,6 @@ local function group(order, db, label)
 			E:UpdateCooldownSettings(db);
 		end,
 		args = {
-			header = {
-				order = 1,
-				type = "header",
-				name = label,
-			},
 			reverse = {
 				type = "toggle",
 				order = 2,
@@ -116,11 +111,6 @@ local function group(order, db, label)
 						order = 3,
 						type = "header",
 						name = L["Threshold Colors"]
-					},
-					spacer2 = {
-						order = 4,
-						type = "description",
-						name = " "
 					},
 					expiringColor = {
 						type = 'color',
@@ -252,11 +242,6 @@ local function group(order, db, label)
 						desc = L["This will override the global cooldown settings."],
 						disabled = E.noop,
 					},
-					spacer1 = {
-						order = 2,
-						type = "description",
-						name = " "
-					},
 					fontSize = {
 						order = 3,
 						type = 'range',
@@ -302,11 +287,14 @@ local function group(order, db, label)
 	end
 
 	if db == 'auras' then
-		-- even though the top auras can support hiding the text don't allow this to be a setting to prevent confusion
+		-- even though the top auras can support hiding the text, don't allow this to be a setting to prevent confusion
 		E.Options.args.cooldown.args[db].args.reverse = nil
 
 		-- this text is different so just hide this option for top auras
 		E.Options.args.cooldown.args[db].args.hideBlizzard = nil
+
+		-- this is basically creates a second way to change font, we only really need one
+		E.Options.args.cooldown.args[db].args.fontGroup = nil
 	end
 end
 

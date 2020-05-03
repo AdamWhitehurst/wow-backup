@@ -46,8 +46,7 @@ local function filterPriority(auraType, unit, value, remove, movehere, friendSta
 	end
 	local filter =
 		E.db.nameplates.units[unit] and E.db.nameplates.units[unit][auraType] and
-		E.db.nameplates.units[unit][auraType].filters and
-		E.db.nameplates.units[unit][auraType].filters.priority
+		E.db.nameplates.units[unit][auraType].priority
 	if not filter then
 		return
 	end
@@ -66,7 +65,7 @@ local function filterPriority(auraType, unit, value, remove, movehere, friendSta
 		end
 		tremove(tbl, sm)
 		tinsert(tbl, sv, movehere)
-		E.db.nameplates.units[unit][auraType].filters.priority = tconcat(tbl, ",")
+		E.db.nameplates.units[unit][auraType].priority = tconcat(tbl, ",")
 	elseif found and friendState then
 		local realValue = strmatch(value, "^Friendly:([^,]*)") or strmatch(value, "^Enemy:([^,]*)") or value
 		local friend = filterMatch(filter, E:EscapeString("Friendly:" .. realValue))
@@ -92,13 +91,13 @@ local function filterPriority(auraType, unit, value, remove, movehere, friendSta
 				end
 				tinsert(tbl, sv, state)
 				tremove(tbl, sv + 1)
-				E.db.nameplates.units[unit][auraType].filters.priority = tconcat(tbl, ",")
+				E.db.nameplates.units[unit][auraType].priority = tconcat(tbl, ",")
 			end
 		end
 	elseif found and remove then
-		E.db.nameplates.units[unit][auraType].filters.priority = gsub(filter, found, "")
+		E.db.nameplates.units[unit][auraType].priority = gsub(filter, found, "")
 	elseif not found and not remove then
-		E.db.nameplates.units[unit][auraType].filters.priority = (filter == "" and value) or (filter .. "," .. value)
+		E.db.nameplates.units[unit][auraType].priority = (filter == "" and value) or (filter .. "," .. value)
 	end
 end
 
@@ -369,11 +368,7 @@ local function UpdateTalentSection()
 				}
 				order = order + 1
 			end
-			E.Options.args.nameplate.args.filters.args.triggers.args.talent.args.tiers.args["spacer" .. i] = {
-				order = order,
-				type = "description",
-				name = " "
-			}
+
 			order = order + 1
 		end
 	end
@@ -724,11 +719,6 @@ local function UpdateFilterGroup()
 		E.Options.args.nameplate.args.filters.args.triggers = nil
 	end
 	if selectedNameplateFilter and E.global.nameplate.filters[selectedNameplateFilter] then
-		E.Options.args.nameplate.args.filters.args.header = {
-			order = 4,
-			type = "header",
-			name = selectedNameplateFilter
-		}
 		E.Options.args.nameplate.args.filters.args.triggers = {
 			type = "group",
 			name = L["Triggers"],
@@ -800,11 +790,6 @@ local function UpdateFilterGroup()
 						UpdateInstanceDifficulty()
 						NP:ConfigureAll()
 					end
-				},
-				spacer1 = {
-					order = 3,
-					type = "description",
-					name = " "
 				},
 				names = {
 					name = L["Name"],
@@ -1393,11 +1378,6 @@ local function UpdateFilterGroup()
 								return not E.global.nameplate.filters[selectedNameplateFilter].triggers.healthThreshold
 							end
 						},
-						spacer1 = {
-							order = 3,
-							type = "description",
-							name = " "
-						},
 						underHealthThreshold = {
 							order = 4,
 							type = "range",
@@ -1462,11 +1442,6 @@ local function UpdateFilterGroup()
 							disabled = function()
 								return not E.global.nameplate.filters[selectedNameplateFilter].triggers.powerThreshold
 							end
-						},
-						spacer1 = {
-							order = 3,
-							type = "description",
-							name = " "
 						},
 						underPowerThreshold = {
 							order = 4,
@@ -1564,11 +1539,6 @@ local function UpdateFilterGroup()
 									order = 4,
 									type = "toggle"
 								},
-								spacer1 = {
-									order = 5,
-									type = "description",
-									name = " "
-								},
 								LeftShift = {
 									name = L["Left Shift"],
 									order = 6,
@@ -1583,11 +1553,6 @@ local function UpdateFilterGroup()
 									name = L["Left Control"],
 									order = 8,
 									type = "toggle"
-								},
-								spacer2 = {
-									order = 9,
-									type = "description",
-									name = " "
 								},
 								RightShift = {
 									name = L["Right Shift"],
@@ -2553,7 +2518,7 @@ local function UpdateFilterGroup()
 									type = "toggle",
 									order = 10,
 									name = L["Use Subzone Names"],
-									desc = L["If enabled, the style filter will only activate when you are in one of the subzones specified in Add Suzbone Name."],
+									desc = L["If enabled, the style filter will only activate when you are in one of the subzones specified in Add Subzone Name."],
 									customWidth = 200,
 								},
 								subZoneNames = {
@@ -2628,11 +2593,6 @@ local function UpdateFilterGroup()
 										NP:ConfigureAll()
 										E:Print(format(L["Added Instance ID: %s"], instanceName.." ("..instanceID..")"))
 									end
-								},
-								spacer1 = {
-									order = 5,
-									type = "description",
-									name = " "
 								},
 								zoneName = {
 									order = 6,
@@ -2785,11 +2745,6 @@ local function UpdateFilterGroup()
 						return E.global.nameplate.filters[selectedNameplateFilter].actions.hide
 					end
 				},
-				spacer1 = {
-					order = 4,
-					type = "description",
-					name = " "
-				},
 				scale = {
 					order = 5,
 					type = "range",
@@ -2860,11 +2815,6 @@ local function UpdateFilterGroup()
 								NP:ConfigureAll()
 							end
 						},
-						spacer1 = {
-							order = 3,
-							type = "description",
-							name = " "
-						},
 						power = {
 							name = L["Power"],
 							order = 4,
@@ -2888,11 +2838,6 @@ local function UpdateFilterGroup()
 								NP:ConfigureAll()
 							end
 						},
-						spacer2 = {
-							order = 6,
-							type = "description",
-							name = " "
-						},
 						border = {
 							name = L["Border"],
 							order = 7,
@@ -2915,11 +2860,6 @@ local function UpdateFilterGroup()
 								t.r, t.g, t.b, t.a = r, g, b, a
 								NP:ConfigureAll()
 							end
-						},
-						spacer3 = {
-							order = 9,
-							type = "description",
-							name = " "
 						},
 						name = {
 							name = L["Name"],
@@ -3095,7 +3035,7 @@ local function GetUnitSettings(unit, name)
 		type = "group",
 		order = ORDER,
 		name = name,
-		childGroups = "tab",
+		childGroups = "tree",
 		get = function(info)
 			return E.db.nameplates.units[unit][info[#info]]
 		end,
@@ -3164,13 +3104,7 @@ local function GetUnitSettings(unit, name)
 					NP:SetCVars()
 					NP:ConfigureAll()
 				end,
-				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["General"]
-					}
-				}
+				args = {}
 			},
 			healthGroup = {
 				order = 2,
@@ -3184,11 +3118,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Health"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -3346,11 +3275,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Power"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -3544,11 +3468,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Cast Bar"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -3563,7 +3482,7 @@ local function GetUnitSettings(unit, name)
 					sourceInterruptClassColor = {
 						order = 3,
 						type = "toggle",
-						name = L["Show Interrupt Source in Class Color"],
+						name = L["Class Color Source"],
 						disabled = function()
 							return not E.db.nameplates.units[unit].castbar.sourceInterrupt
 						end
@@ -3793,11 +3712,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Buffs"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -3990,10 +3904,10 @@ local function GetUnitSettings(unit, name)
 						type = "group",
 						guiInline = true,
 						get = function(info)
-							return E.db.nameplates.units[unit].buffs.filters[info[#info]]
+							return E.db.nameplates.units[unit].buffs[info[#info]]
 						end,
 						set = function(info, value)
-							E.db.nameplates.units[unit].buffs.filters[info[#info]] = value
+							E.db.nameplates.units[unit].buffs[info[#info]] = value
 							NP:ConfigureAll()
 						end,
 						args = {
@@ -4023,11 +3937,6 @@ local function GetUnitSettings(unit, name)
 								func = function()
 									ACD:SelectGroup("ElvUI", "filters")
 								end
-							},
-							spacer1 = {
-								order = 4,
-								type = "description",
-								name = " "
 							},
 							specialFilters = {
 								order = 5,
@@ -4076,7 +3985,7 @@ local function GetUnitSettings(unit, name)
 								desc = L["Reset filter priority to the default state."],
 								type = "execute",
 								func = function()
-									E.db.nameplates.units[unit].buffs.filters.priority = P.nameplates.units[unit].buffs.filters.priority
+									E.db.nameplates.units[unit].buffs.priority = P.nameplates.units[unit].buffs.priority
 									NP:ConfigureAll()
 								end
 							},
@@ -4101,24 +4010,22 @@ local function GetUnitSettings(unit, name)
 								end,
 								stateSwitchGetText = function(_, TEXT)
 									local friend, enemy = strmatch(TEXT, "^Friendly:([^,]*)"), strmatch(TEXT, "^Enemy:([^,]*)")
-									local text = friend or enemy or TEXT
+									local text, blockB, blockS, blockT = friend or enemy or TEXT
 									local SF, localized = E.global.unitframe.specialFilters[text], L[text]
-									local blockText = SF and localized and strmatch(text, "^block") and gsub(localized, "^%[.-]%s?", "")
-									local filterText = (blockText and format("|cFF999999%s|r %s", _G.BLOCK, blockText)) or localized or text
-									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or
-										(enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or
-										filterText
+									if SF and localized and text:match("^block") then blockB, blockS, blockT = localized:match("^%[(.-)](%s?)(.+)") end
+									local filterText = (blockB and format("|cFF999999%s|r%s%s", blockB, blockS, blockT)) or localized or text
+									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or (enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or filterText
 								end,
 								stateSwitchOnClick = function()
 									filterPriority("buffs", unit, carryFilterFrom, nil, nil, true)
 								end,
 								values = function()
-									local str = E.db.nameplates.units[unit].buffs.filters.priority
+									local str = E.db.nameplates.units[unit].buffs.priority
 									if str == "" then return {} end
 									return {strsplit(",", str)}
 								end,
 								get = function(_, value)
-									local str = E.db.nameplates.units[unit].buffs.filters.priority
+									local str = E.db.nameplates.units[unit].buffs.priority
 									if str == "" then return end
 									local tbl = {strsplit(",", str)}
 									return tbl[value]
@@ -4150,11 +4057,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Debuffs"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -4346,10 +4248,10 @@ local function GetUnitSettings(unit, name)
 						order = 13,
 						type = "group",
 						get = function(info)
-							return E.db.nameplates.units[unit].debuffs.filters[info[#info]]
+							return E.db.nameplates.units[unit].debuffs[info[#info]]
 						end,
 						set = function(info, value)
-							E.db.nameplates.units[unit].debuffs.filters[info[#info]] = value
+							E.db.nameplates.units[unit].debuffs[info[#info]] = value
 							NP:ConfigureAll()
 						end,
 						guiInline = true,
@@ -4380,11 +4282,6 @@ local function GetUnitSettings(unit, name)
 								func = function()
 									ACD:SelectGroup("ElvUI", "filters")
 								end
-							},
-							spacer1 = {
-								order = 4,
-								type = "description",
-								name = " "
 							},
 							specialFilters = {
 								order = 5,
@@ -4433,7 +4330,7 @@ local function GetUnitSettings(unit, name)
 								desc = L["Reset filter priority to the default state."],
 								type = "execute",
 								func = function()
-									E.db.nameplates.units[unit].debuffs.filters.priority = P.nameplates.units[unit].debuffs.filters.priority
+									E.db.nameplates.units[unit].debuffs.priority = P.nameplates.units[unit].debuffs.priority
 									NP:ConfigureAll()
 								end
 							},
@@ -4458,24 +4355,22 @@ local function GetUnitSettings(unit, name)
 								end,
 								stateSwitchGetText = function(_, TEXT)
 									local friend, enemy = strmatch(TEXT, "^Friendly:([^,]*)"), strmatch(TEXT, "^Enemy:([^,]*)")
-									local text = friend or enemy or TEXT
+									local text, blockB, blockS, blockT = friend or enemy or TEXT
 									local SF, localized = E.global.unitframe.specialFilters[text], L[text]
-									local blockText = SF and localized and strmatch(text, "^block") and gsub(localized, "^%[.-]%s?", "")
-									local filterText = (blockText and format("|cFF999999%s|r %s", _G.BLOCK, blockText)) or localized or text
-									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or
-										(enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or
-										filterText
+									if SF and localized and text:match("^block") then blockB, blockS, blockT = localized:match("^%[(.-)](%s?)(.+)") end
+									local filterText = (blockB and format("|cFF999999%s|r%s%s", blockB, blockS, blockT)) or localized or text
+									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or (enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or filterText
 								end,
 								stateSwitchOnClick = function(info)
 									filterPriority("debuffs", unit, carryFilterFrom, nil, nil, true)
 								end,
 								values = function()
-									local str = E.db.nameplates.units[unit].debuffs.filters.priority
+									local str = E.db.nameplates.units[unit].debuffs.priority
 									if str == "" then return {} end
 									return {strsplit(",", str)}
 								end,
 								get = function(info, value)
-									local str = E.db.nameplates.units[unit].debuffs.filters.priority
+									local str = E.db.nameplates.units[unit].debuffs.priority
 									if str == "" then return end
 									local tbl = {strsplit(",", str)}
 									return tbl[value]
@@ -4507,11 +4402,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Portrait"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -4575,11 +4465,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["LEVEL"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -4678,11 +4563,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Name"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -4782,11 +4662,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["PvP Indicator"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -4848,11 +4723,6 @@ local function GetUnitSettings(unit, name)
 					NP:ConfigureAll()
 				end,
 				args = {
-					header = {
-						order = 0,
-						type = "header",
-						name = L["Raid Icon"]
-					},
 					enable = {
 						order = 1,
 						name = L["Enable"],
@@ -5065,6 +4935,12 @@ local function GetUnitSettings(unit, name)
 			name = L["Healer Icon"],
 			desc = L["Display a healer icon over known healers inside battlegrounds or arenas."]
 		}
+		group.args.general.args.markTanks = {
+			type = "toggle",
+			order = 103,
+			name = L["Tank Icon"],
+			desc = L["Display a tank icon over known tanks inside battlegrounds or arenas."]
+		}
 		group.args.healthGroup.args.useClassColor = {
 			order = 10,
 			type = "toggle",
@@ -5083,11 +4959,6 @@ local function GetUnitSettings(unit, name)
 				NP:ConfigureAll()
 			end,
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["Elite Icon"]
-				},
 				enable = {
 					order = 1,
 					name = L["Enable"],
@@ -5110,8 +4981,10 @@ local function GetUnitSettings(unit, name)
 						["TOPLEFT"] = "TOPLEFT",
 						["BOTTOMLEFT"] = "BOTTOMLEFT",
 						["TOPRIGHT"] = "TOPRIGHT",
-						["BOTTOMRIGHT"] = "BOTTOMRIGHT"
-					}
+						["BOTTOMRIGHT"] = "BOTTOMRIGHT",
+						["LEFT"] = "LEFT",
+						["RIGHT"] = "RIGHT",
+					},
 				},
 				xOffset = {
 					order = 4,
@@ -5144,11 +5017,6 @@ local function GetUnitSettings(unit, name)
 				NP:ConfigureAll()
 			end,
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["Quest Icon"]
-				},
 				enable = {
 					type = "toggle",
 					order = 1,
@@ -5252,16 +5120,16 @@ local function GetUnitSettings(unit, name)
 			name = L["Show Title"],
 			desc = L["Title will only appear if Name Only is enabled or triggered in a Style Filter."]
 		}
-		if unit == "FRIENDLY_NPC" then
-			group.args.nazjatarFollowerXP = {
+		if unit == "FRIENDLY_NPC" or unit == "ENEMY_NPC" then
+			group.args.widgetXPBar = {
 				order = 14,
 				type = "group",
-				name = L["Nazjatar Follower XP"],
+				name = L["Follower XP"],
 				get = function(info)
-					return E.db.nameplates.units[unit].nazjatarFollowerXP[info[#info]]
+					return E.db.nameplates.units[unit].widgetXPBar[info[#info]]
 				end,
 				set = function(info, value)
-					E.db.nameplates.units[unit].nazjatarFollowerXP[info[#info]] = value
+					E.db.nameplates.units[unit].widgetXPBar[info[#info]] = value
 					NP:ConfigureAll()
 				end,
 				args = {
@@ -5278,7 +5146,7 @@ local function GetUnitSettings(unit, name)
 						max = 100,
 						step = 1,
 						disabled = function()
-							return not E.db.nameplates.units[unit].nazjatarFollowerXP.enable
+							return not E.db.nameplates.units[unit].widgetXPBar.enable
 						end
 					},
 					color = {
@@ -5287,14 +5155,14 @@ local function GetUnitSettings(unit, name)
 						name = L["COLOR"],
 						hasAlpha = false,
 						disabled = function()
-							return not E.db.nameplates.units[unit].nazjatarFollowerXP.enable
+							return not E.db.nameplates.units[unit].widgetXPBar.enable
 						end,
 						get = function(info)
-							local t = E.db.nameplates.units[unit].nazjatarFollowerXP.color
+							local t = E.db.nameplates.units[unit].widgetXPBar.color
 							return t.r, t.g, t.b
 						end,
 						set = function(info, r, g, b)
-							local t = E.db.nameplates.units[unit].nazjatarFollowerXP.color
+							local t = E.db.nameplates.units[unit].widgetXPBar.color
 							t.r, t.g, t.b = r, g, b
 							NP:ConfigureAll()
 						end
@@ -5319,11 +5187,6 @@ local function GetUnitSettings(unit, name)
 				NP:ConfigureAll()
 			end,
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["PvP Classification Indicator"]
-				},
 				enable = {
 					order = 1,
 					name = L["Enable"],
@@ -5383,11 +5246,6 @@ local function GetUnitSettings(unit, name)
 				NP:ConfigureAll()
 			end,
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["Name"]
-				},
 				enable = {
 					order = 1,
 					name = L["Enable"],
@@ -5508,14 +5366,22 @@ E.Options.args.nameplate = {
 		generalGroup = {
 			order = 25,
 			type = "group",
-			name = L["General Options"],
+			name = L["General"],
 			childGroups = "tab",
 			disabled = function()
 				return not E.NamePlates.Initialized
 			end,
 			args = {
-				resetcvars = {
+				resetFilters = {
 					order = 1,
+					name = L["Reset Aura Filters"],
+					type = "execute",
+					func = function()
+						E:StaticPopup_Show("RESET_NP_AF") --reset nameplate aurafilters
+					end
+				},
+				resetcvars = {
+					order = 2,
 					type = "execute",
 					name = L["Reset CVars"],
 					desc = L["Reset Nameplate CVars to the ElvUI recommended defaults."],
@@ -5523,14 +5389,6 @@ E.Options.args.nameplate = {
 						NP:CVarReset()
 					end,
 					confirm = true
-				},
-				resetFilters = {
-					order = 2,
-					name = L["Reset Aura Filters"],
-					type = "execute",
-					func = function()
-						E:StaticPopup_Show("RESET_NP_AF") --reset nameplate aurafilters
-					end
 				},
 				general = {
 					order = 10,
@@ -5592,15 +5450,6 @@ E.Options.args.nameplate = {
 							name = L["StatusBar Texture"],
 							values = _G.AceGUIWidgetLSMlists.statusbar
 						},
-						loadDistance = {
-							order = 6,
-							type = "range",
-							name = L["Load Distance"],
-							desc = L["Only load nameplates for units within this range."],
-							min = 10,
-							max = 100,
-							step = 1
-						},
 						overlapV = {
 							order = 7,
 							type = "range",
@@ -5631,8 +5480,19 @@ E.Options.args.nameplate = {
 								SetCVar("nameplateOverlapH", value)
 							end
 						},
-						otherAtBase = {
+						lowHealthThreshold = {
 							order = 9,
+							name = L["Low Health Threshold"],
+							desc = L["Make the unitframe glow yellow when it is below this percent of health, it will glow red when the health value is half of this value."],
+							type = "range",
+							isPercent = true,
+							min = 0,
+							softMax = 0.5,
+							max = 0.8,
+							step = 0.01
+						},
+						otherAtBase = {
+							order = 10,
 							type = "toggle",
 							name = L["Nameplate At Base"],
 							desc = L["Position other Nameplates at the base, rather than overhead."],
@@ -5643,36 +5503,19 @@ E.Options.args.nameplate = {
 								SetCVar("nameplateOtherAtBase", value and 2 or 0)
 							end
 						},
-						lowHealthThreshold = {
-							order = 10,
-							name = L["Low Health Threshold"],
-							desc = L["Make the unitframe glow yellow when it is below this percent of health, it will glow red when the health value is half of this value."],
-							type = "range",
-							isPercent = true,
-							min = 0,
-							softMax = 0.5,
-							max = 0.8,
-							step = 0.01
-						},
-						spacer1 = {
-							order = 11,
-							type = "description",
-							name = " ",
-							width = "full"
-						},
 						highlight = {
-							order = 12,
+							order = 11,
 							type = "toggle",
 							name = L["Hover Highlight"]
 						},
 						fadeIn = {
-							order = 13,
+							order = 12,
 							type = "toggle",
 							name = L["Alpha Fading"]
 						},
 						smoothbars = {
 							type = "toggle",
-							order = 14,
+							order = 13,
 							name = L["Smooth Bars"],
 							desc = L["Bars will transition smoothly."],
 							set = function(info, value)
@@ -5681,7 +5524,7 @@ E.Options.args.nameplate = {
 							end
 						},
 						clampToScreen = {
-							order = 15,
+							order = 14,
 							type = "toggle",
 							name = L["Clamp Nameplates"],
 							desc = L["Clamp nameplates to the top of the screen when outside of view."]
@@ -5857,8 +5700,83 @@ E.Options.args.nameplate = {
 								}
 							}
 						},
-						clickThrough = {
+						effectiveGroup = {
 							order = 51,
+							type = "group",
+							childGroups = "tab",
+							name = L["Effective Updates"],
+							args = {
+								warning = {
+									order = 0,
+									type = "description",
+									fontSize = 'medium',
+									name = L["|cffFF0000Warning:|r This causes updates to happen at a fraction of a second."].."\n"..
+									L["Enabling this has the potential to make updates faster, though setting a speed value that is too high may cause it to actually run slower than the default scheme, which use Blizzard events only with no update loops provided."]
+								},
+								effectiveHealth = {
+									order = 1,
+									type = "toggle",
+									name = L["Health"],
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+								effectivePower = {
+									order = 2,
+									type = "toggle",
+									name = L["Power"],
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+								effectiveAura = {
+									order = 3,
+									type = "toggle",
+									name = L["Aura"],
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+								spacer1 = {
+									order = 4,
+									type = "description",
+									name = " ",
+									width = "full"
+								},
+								effectiveHealthSpeed = {
+									order = 5,
+									name = L["Health Speed"],
+									type = "range",
+									min = 0.1,
+									max = 0.5,
+									step = 0.05,
+									disabled = function() return not E.global.nameplate.effectiveHealth end,
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+								effectivePowerSpeed = {
+									order = 6,
+									name = L["Power Speed"],
+									type = "range",
+									min = 0.1,
+									max = 0.5,
+									step = 0.05,
+									disabled = function() return not E.global.nameplate.effectivePower end,
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+								effectiveAuraSpeed = {
+									order = 7,
+									name = L["Aura Speed"],
+									type = "range",
+									min = 0.1,
+									max = 0.5,
+									step = 0.05,
+									disabled = function() return not E.global.nameplate.effectiveAura end,
+									get = function(info) return E.global.nameplate[info[#info]] end,
+									set = function(info, value) E.global.nameplate[info[#info]] = value; NP:ConfigureAll() end
+								},
+							},
+						},
+						clickThrough = {
+							order = 52,
 							type = "group",
 							childGroups = "tab",
 							name = L["Click Through"],
@@ -5896,7 +5814,7 @@ E.Options.args.nameplate = {
 							}
 						},
 						clickableRange = {
-							order = 52,
+							order = 53,
 							type = "group",
 							childGroups = "tab",
 							name = L["Clickable Size"],
@@ -6003,7 +5921,7 @@ E.Options.args.nameplate = {
 							}
 						},
 						cutaway = {
-							order = 53,
+							order = 54,
 							type = 'group',
 							childGroups = "tab",
 							name = L["Cutaway Bars"],
@@ -6109,7 +6027,7 @@ E.Options.args.nameplate = {
 							}
 						},
 						threatGroup = {
-							order = 54,
+							order = 55,
 							type = "group",
 							name = L["Threat"],
 							childGroups = "tabs",
@@ -6575,6 +6493,11 @@ E.Options.args.nameplate = {
 									order = 10,
 									name = L["RUNIC_POWER"],
 									type = "color"
+								},
+								ALT_POWER = {
+									order = 11,
+									name = L["Swapped Alt Power"],
+									type = 'color'
 								}
 							}
 						},
@@ -6614,16 +6537,6 @@ E.Options.args.nameplate = {
 									order = 4,
 									name = L["RUNES"]
 								},
-								spacer1 = {
-									order = 5,
-									type = "description",
-									name = " "
-								},
-								spacer2 = {
-									order = 20,
-									type = "description",
-									name = " "
-								}
 							}
 						}
 					}

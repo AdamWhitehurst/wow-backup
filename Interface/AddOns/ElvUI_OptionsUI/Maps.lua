@@ -2,9 +2,6 @@ local E, _, V, P, G = unpack(ElvUI); --Import: Engine, Locales, PrivateDB, Profi
 local C, L = unpack(select(2, ...))
 local WM = E:GetModule('WorldMap')
 local MM = E:GetModule('Minimap')
-local AB = E:GetModule('ActionBars')
-
-local SetCVar = SetCVar
 
 -- GLOBALS: WORLD_MAP_MIN_ALPHA
 
@@ -19,11 +16,6 @@ E.Options.args.maps = {
 			type = "group",
 			name = L["WORLD_MAP"],
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["WORLD_MAP"],
-				},
 				generalGroup = {
 					order = 1,
 					type = "group",
@@ -59,7 +51,6 @@ E.Options.args.maps = {
 							get = function(info) return E.global.general.fadeMapWhenMoving end,
 							set = function(info, value)
 								E.global.general.fadeMapWhenMoving = value;
-								SetCVar("mapFade", value and 1 or 0)
 							end,
 						},
 						mapAlphaWhenMoving = {
@@ -89,11 +80,6 @@ E.Options.args.maps = {
 						},
 					},
 				},
-				spacer = {
-					order = 2,
-					type = "description",
-					name = "\n"
-				},
 				coordinatesGroup = {
 					order = 3,
 					type = "group",
@@ -107,11 +93,6 @@ E.Options.args.maps = {
 							desc = L["Puts coordinates on the world map."],
 							get = function(info) return E.global.general.WorldMapCoordinates.enable end,
 							set = function(info, value) E.global.general.WorldMapCoordinates.enable = value; E:StaticPopup_Show("GLOBAL_RL") end,
-						},
-						spacer = {
-							order = 2,
-							type = "description",
-							name = " "
 						},
 						position = {
 							order = 3,
@@ -158,11 +139,6 @@ E.Options.args.maps = {
 			get = function(info) return E.db.general.minimap[info[#info]] end,
 			childGroups = "tab",
 			args = {
-				header = {
-					order = 0,
-					type = "header",
-					name = L["MINIMAP_LABEL"],
-				},
 				generalGroup = {
 					order = 1,
 					type = "group",
@@ -182,7 +158,7 @@ E.Options.args.maps = {
 							type = "range",
 							name = L["Size"],
 							desc = L["Adjust the size of the minimap."],
-							min = 120, max = 500, step = 1,
+							min = 40, max = 500, step = 1,
 							get = function(info) return E.db.general.minimap[info[#info]] end,
 							set = function(info, value) E.db.general.minimap[info[#info]] = value; MM:UpdateSettings() end,
 							disabled = function() return not E.private.general.minimap.enable end,
@@ -566,63 +542,6 @@ E.Options.args.maps = {
 									name = L["yOffset"],
 									min = -50, max = 50, step = 1,
 									disabled = function() return not E.private.general.minimap.enable end,
-								},
-							},
-						},
-						vehicleLeave = {
-							order = 7,
-							type = "group",
-							name = L["Vehicle Exit"],
-							get = function(info) return E.db.general.minimap.icons.vehicleLeave[info[#info]] end,
-							set = function(info, value) E.db.general.minimap.icons.vehicleLeave[info[#info]] = value; AB:UpdateVehicleLeave() end,
-							args = {
-								hide = {
-									order = 1,
-									type = "toggle",
-									name = L["Hide"],
-								},
-								spacer = {
-									order = 2,
-									type = "description",
-									name = "",
-									width = "full"
-								},
-								position = {
-									order = 3,
-									type = "select",
-									name = L["Position"],
-									disabled = function() return E.db.general.minimap.icons.vehicleLeave.hide end,
-									values = {
-										["LEFT"] = L["Left"],
-										["RIGHT"] = L["Right"],
-										["TOP"] = L["Top"],
-										["BOTTOM"] = L["Bottom"],
-										["TOPLEFT"] = L["Top Left"],
-										["TOPRIGHT"] = L["Top Right"],
-										["BOTTOMLEFT"] = L["Bottom Left"],
-										["BOTTOMRIGHT"] = L["Bottom Right"],
-									},
-								},
-								scale = {
-									order = 4,
-									type = "range",
-									name = L["Scale"],
-									min = 0.5, max = 2, step = 0.05,
-									disabled = function() return E.db.general.minimap.icons.vehicleLeave.hide end,
-								},
-								xOffset = {
-									order = 5,
-									type = "range",
-									name = L["xOffset"],
-									min = -50, max = 50, step = 1,
-									disabled = function() return E.db.general.minimap.icons.vehicleLeave.hide end,
-								},
-								yOffset = {
-									order = 6,
-									type = "range",
-									name = L["yOffset"],
-									min = -50, max = 50, step = 1,
-									disabled = function() return E.db.general.minimap.icons.vehicleLeave.hide end,
 								},
 							},
 						},

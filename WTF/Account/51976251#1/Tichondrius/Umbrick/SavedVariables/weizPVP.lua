@@ -1,35 +1,30 @@
 
-weizPVPOptions = {
+_weizpvp_chardb = {
 	["profileKeys"] = {
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Umbrick - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
-		["Umbrick - Tichondrius"] = {
+		["Default"] = {
 			["Options"] = {
-				["Addon"] = {
-					["Version"] = "1.81.0",
-					["VersionSplashSeen"] = true,
-					["VersionNumber"] = 1802,
-				},
-				["Window"] = {
-					["Pinned"] = true,
-					["Collapsed"] = true,
-				},
 				["Frames"] = {
-					["Point"] = "BOTTOMLEFT",
-					["Width"] = 248.9682464599609,
-					["Y"] = 46.10040664672852,
-					["X"] = 5.054039001464844,
+					["Point"] = "TOPLEFT",
+					["Width"] = 251.0000152587891,
+					["Y"] = -27,
+					["X"] = 3.870402097702026,
 					["Header"] = {
-						["Point"] = "BOTTOMLEFT",
-						["Width"] = 248.9682464599609,
-						["Y"] = 255.1004180908203,
-						["Height"] = 25.99999809265137,
-						["X"] = 5.054039001464844,
+						["Point"] = "TOPLEFT",
+						["Width"] = 251.0000152587891,
+						["Y"] = -1,
+						["Height"] = 26.00003623962402,
+						["X"] = 3.870402097702026,
 					},
-					["Height"] = 209,
+					["Height"] = 228.9999847412109,
 				},
 			},
 		},
 	},
+}
+_weizpvp_addon = {
+	["Database_Version"] = 3,
+	["Addon_Version"] = "1.9.0.2",
 }

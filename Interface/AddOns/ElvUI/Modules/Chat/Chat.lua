@@ -6,7 +6,7 @@ local LSM = E.Libs.LSM
 --Lua functions
 local _G = _G
 local gsub, strfind, gmatch, format = gsub, strfind, gmatch, format
-local ipairs, wipe, time, difftime = ipairs, wipe, time, difftime
+local ipairs, sort, wipe, time, difftime = ipairs, sort, wipe, time, difftime
 local pairs, unpack, select, tostring, pcall, next, tonumber, type = pairs, unpack, select, tostring, pcall, next, tonumber, type
 local strlower, strsub, strlen, strupper, strtrim, strmatch = strlower, strsub, strlen, strupper, strtrim, strmatch
 local tinsert, tremove, tconcat = tinsert, tremove, table.concat
@@ -18,6 +18,7 @@ local BNet_GetValidatedCharacterName = BNet_GetValidatedCharacterName
 local BNGetNumFriendInvites = BNGetNumFriendInvites
 local BNGetNumFriends = BNGetNumFriends
 local Chat_GetChatCategory = Chat_GetChatCategory
+local Chat_ShouldColorChatByClass = Chat_ShouldColorChatByClass
 local ChatEdit_ActivateChat = ChatEdit_ActivateChat
 local ChatEdit_ChooseBoxForSend = ChatEdit_ChooseBoxForSend
 local ChatEdit_ParseText = ChatEdit_ParseText
@@ -25,6 +26,7 @@ local ChatEdit_SetLastTellTarget = ChatEdit_SetLastTellTarget
 local ChatFrame_CanChatGroupPerformExpressionExpansion = ChatFrame_CanChatGroupPerformExpressionExpansion
 local ChatFrame_ConfigEventHandler = ChatFrame_ConfigEventHandler
 local ChatFrame_GetMobileEmbeddedTexture = ChatFrame_GetMobileEmbeddedTexture
+local ChatFrame_ResolvePrefixedChannelName = ChatFrame_ResolvePrefixedChannelName
 local ChatFrame_SendTell = ChatFrame_SendTell
 local ChatFrame_SystemEventHandler = ChatFrame_SystemEventHandler
 local ChatHistory_GetAccessID = ChatHistory_GetAccessID
@@ -42,6 +44,7 @@ local FlashClientIcon = FlashClientIcon
 local FloatingChatFrame_OnEvent = FloatingChatFrame_OnEvent
 local GetAchievementInfo = GetAchievementInfo
 local GetAchievementInfoFromHyperlink = GetAchievementInfoFromHyperlink
+local GetBNPlayerCommunityLink = GetBNPlayerCommunityLink
 local GetBNPlayerLink = GetBNPlayerLink
 local GetChannelName = GetChannelName
 local GetCursorPosition = GetCursorPosition
@@ -51,12 +54,12 @@ local GetInstanceInfo = GetInstanceInfo
 local GetItemInfoFromHyperlink = GetItemInfoFromHyperlink
 local GetMouseFocus = GetMouseFocus
 local GetNumGroupMembers = GetNumGroupMembers
+local GetPlayerCommunityLink = GetPlayerCommunityLink
 local GetPlayerInfoByGUID = GetPlayerInfoByGUID
 local GetPlayerLink = GetPlayerLink
 local GetRaidRosterInfo = GetRaidRosterInfo
-local GetTime = GetTime
+local GetTime, GMError = GetTime, GMError
 local GMChatFrame_IsGM = GMChatFrame_IsGM
-local GMError = GMError
 local hooksecurefunc = hooksecurefunc
 local InCombatLockdown = InCombatLockdown
 local IsAltKeyDown = IsAltKeyDown
@@ -68,10 +71,10 @@ local PlaySoundFile = PlaySoundFile
 local RemoveExtraSpaces = RemoveExtraSpaces
 local RemoveNewlines = RemoveNewlines
 local ScrollFrameTemplate_OnMouseWheel = ScrollFrameTemplate_OnMouseWheel
-local ShowUIPanel, HideUIPanel = ShowUIPanel, HideUIPanel
 local Social_GetShareAchievementLink = Social_GetShareAchievementLink
 local Social_GetShareItemLink = Social_GetShareItemLink
 local SocialQueueUtil_GetQueueName = SocialQueueUtil_GetQueueName
+local SocialQueueUtil_GetRelationshipInfo = SocialQueueUtil_GetRelationshipInfo
 local StaticPopup_Visible = StaticPopup_Visible
 local ToggleFrame = ToggleFrame
 local ToggleQuickJoinPanel = ToggleQuickJoinPanel
@@ -79,8 +82,12 @@ local UnitExists, UnitIsUnit = UnitExists, UnitIsUnit
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitName = UnitName
 local UnitRealmRelationship = UnitRealmRelationship
+local Voice_GetVoiceChannelNotificationColor = Voice_GetVoiceChannelNotificationColor
 
-local BNET_CLIENT_WOW = BNET_CLIENT_WOW
+local C_BattleNet_GetAccountInfoByID = C_BattleNet.GetAccountInfoByID
+local C_BattleNet_GetFriendAccountInfo = C_BattleNet.GetFriendAccountInfo
+local C_BattleNet_GetFriendGameAccountInfo = C_BattleNet.GetFriendGameAccountInfo
+local C_BattleNet_GetFriendNumGameAccounts = C_BattleNet.GetFriendNumGameAccounts
 local C_Club_GetInfoFromLastCommunityChatLine = C_Club.GetInfoFromLastCommunityChatLine
 local C_LFGList_GetActivityInfo = C_LFGList.GetActivityInfo
 local C_LFGList_GetSearchResultInfo = C_LFGList.GetSearchResultInfo
@@ -90,27 +97,19 @@ local C_SocialQueue_GetGroupMembers = C_SocialQueue.GetGroupMembers
 local C_SocialQueue_GetGroupQueues = C_SocialQueue.GetGroupQueues
 local C_VoiceChat_GetMemberName = C_VoiceChat.GetMemberName
 local C_VoiceChat_SetPortraitTexture = C_VoiceChat.SetPortraitTexture
-local Chat_ShouldColorChatByClass = Chat_ShouldColorChatByClass
-local ChatFrame_ResolvePrefixedChannelName = ChatFrame_ResolvePrefixedChannelName
-local GetBNPlayerCommunityLink = GetBNPlayerCommunityLink
-local GetPlayerCommunityLink = GetPlayerCommunityLink
+local SOUNDKIT_TELL_MESSAGE = SOUNDKIT.TELL_MESSAGE
+
+local SOCIAL_QUEUE_QUEUED_FOR = gsub(SOCIAL_QUEUE_QUEUED_FOR, ':%s?$', '') --some language have `:` on end
 local LE_REALM_RELATION_SAME = LE_REALM_RELATION_SAME
+local BNET_CLIENT_WOW = BNET_CLIENT_WOW
 local LFG_LIST_AND_MORE = LFG_LIST_AND_MORE
 local NUM_CHAT_WINDOWS = NUM_CHAT_WINDOWS
-local SOCIAL_QUEUE_QUEUED_FOR = gsub(SOCIAL_QUEUE_QUEUED_FOR, ':%s?$', '') --some language have `:` on end
-local SocialQueueUtil_GetRelationshipInfo = SocialQueueUtil_GetRelationshipInfo
-local SOUNDKIT = SOUNDKIT
 local UNKNOWN = UNKNOWN
-local Voice_GetVoiceChannelNotificationColor = Voice_GetVoiceChannelNotificationColor
-local C_BattleNet_GetFriendAccountInfo = C_BattleNet.GetFriendAccountInfo
-local C_BattleNet_GetFriendNumGameAccounts = C_BattleNet.GetFriendNumGameAccounts
-local C_BattleNet_GetFriendGameAccountInfo = C_BattleNet.GetFriendGameAccountInfo
-local C_BattleNet_GetAccountInfoByID = C_BattleNet.GetAccountInfoByID
 -- GLOBALS: ElvCharacterDB
 
-local msgList, msgCount, msgTime = {}, {}, {}
 local CreatedFrames = 0
 local lfgRoles = {}
+local throttle = {}
 
 local PLAYER_REALM = gsub(E.myrealm,'[%s%-]','')
 local PLAYER_NAME = E.myname.."-"..PLAYER_REALM
@@ -128,16 +127,18 @@ local DEFAULT_STRINGS = {
 }
 
 local hyperlinkTypes = {
-	['item'] = true,
-	['spell'] = true,
-	['unit'] = true,
-	['quest'] = true,
-	['enchant'] = true,
 	['achievement'] = true,
-	['instancelock'] = true,
-	['talent'] = true,
+	['apower'] = true,
+	['currency'] = true,
+	['enchant'] = true,
 	['glyph'] = true,
-	["currency"] = true,
+	['instancelock'] = true,
+	['item'] = true,
+	['keystone'] = true,
+	['quest'] = true,
+	['spell'] = true,
+	['talent'] = true,
+	['unit'] = true
 }
 
 local tabTexs = {
@@ -177,46 +178,70 @@ local specialChatIcons
 do --this can save some main file locals
 	local x, y = ':16:16',':13:25'
 
-	--local ElvMelon	= E:TextureString(E.Media.ChatLogos.ElvMelon,y)
-	--local ElvRainbow	= E:TextureString(E.Media.ChatLogos.ElvRainbow,y)
-	local ElvRed		= E:TextureString(E.Media.ChatLogos.ElvRed,y)
-	local ElvOrange		= E:TextureString(E.Media.ChatLogos.ElvOrange,y)
-	local ElvYellow		= E:TextureString(E.Media.ChatLogos.ElvYellow,y)
-	local ElvGreen		= E:TextureString(E.Media.ChatLogos.ElvGreen,y)
 	local ElvBlue		= E:TextureString(E.Media.ChatLogos.ElvBlue,y)
-	local ElvPurple		= E:TextureString(E.Media.ChatLogos.ElvPurple,y)
+	local ElvGreen		= E:TextureString(E.Media.ChatLogos.ElvGreen,y)
+	local ElvMelon		= E:TextureString(E.Media.ChatLogos.ElvMelon,y)
+	local ElvOrange		= E:TextureString(E.Media.ChatLogos.ElvOrange,y)
 	local ElvPink		= E:TextureString(E.Media.ChatLogos.ElvPink,y)
+	local ElvPurple		= E:TextureString(E.Media.ChatLogos.ElvPurple,y)
+	local ElvRed		= E:TextureString(E.Media.ChatLogos.ElvRed,y)
+	local ElvYellow		= E:TextureString(E.Media.ChatLogos.ElvYellow,y)
 	local Bathrobe		= E:TextureString(E.Media.ChatLogos.Bathrobe,x)
 	local MrHankey		= E:TextureString(E.Media.ChatLogos.MrHankey,x)
 	local Rainbow		= E:TextureString(E.Media.ChatLogos.Rainbow,x)
+	local Hibiscus		= E:TextureString(E.Media.ChatLogos.Hibiscus,x)
+	local Clover		= E:TextureString(E.Media.ChatLogos.Clover,x)
+	local Burger		= E:TextureString(E.Media.ChatLogos.Burger,x)
+	local Lion			= E:TextureString(E.Media.ChatLogos.Lion,x)
 
-	local a, b, c = 0, false, {ElvRed, ElvOrange, ElvYellow, ElvGreen, ElvBlue, ElvPurple, ElvPink}
-	local itsSimpy = function() a = a - (b and 1 or -1) if (b and a == 1 or a == 0) or a == #c then b = not b end return c[a] end
+	--[[ Simpys Things
+		-- new icon color every message, in order then reversed back, repeating of course
+		local a, b, c = 0, false, {ElvRed, ElvOrange, ElvYellow, ElvGreen, ElvBlue, ElvPurple, ElvPink}
+		(a = a - (b and 1 or -1) if (b and a == 1 or a == 0) or a == #c then b = not b end return c[a])
+	]]
 
-	local classNihilist = {
-		DEATHKNIGHT	= ElvRed,
-		DEMONHUNTER	= ElvPurple,
-		DRUID		= ElvOrange,
-		HUNTER		= ElvGreen,
-		MAGE		= ElvBlue,
-		MONK		= ElvGreen,
-		PALADIN		= ElvPink,
-		PRIEST		= ElvPink,
-		ROGUE		= ElvYellow,
-		SHAMAN		= ElvBlue,
-		WARLOCK		= ElvPurple,
-		WARRIOR		= ElvOrange
-	}
+	local itsElv, itsMis, itsMel, itsSimpyA, itsSimpyH
+	do	--Simpy Chaos
+		--super cute text coloring function that ignores hyperlinks and keywords
+		local e, f, g = {'|%x+%[?|H.-|h.-|h]?|r', '|H.-|h.-|h', '|[TA].-|[ta]', '|c.-|r'}, {}, {}
+		local prettify = function(t,...) return gsub(gsub(E:TextGradient(gsub(gsub(t,'%%%%','\27'),'\124\124','\26'),...),'\27','%%%%'),'\26','||') end
+		local protectText = function(t, u, v) local w = E:EscapeString(v) local r, s = strfind(u, w) while f[r] do r, s = strfind(u, w, s) end tinsert(g, r) f[r] = w return gsub(t, w, '\24') end
+		local specialText = function(t,...) local u = t for _, w in ipairs(e) do for k in gmatch(t, w) do t = protectText(t, u, k) end end t = prettify(t,...)
+			if next(g) then if #g > 1 then sort(g) end for n in gmatch(t, '\24') do local _, v = next(g) t = gsub(t, n, f[v], 1) tremove(g, 1) f[v] = nil end end return t
+		end
 
-	local itsNihilist = function(class)
-		return classNihilist[class]
+		--Watermelon: 909090 (Light Slate Grey), FA6687 (Light Coral) x2, 73FA9B (Pale Green)
+		local SimpyColors = function(t) return specialText(t, 0.45,0.45,0.45, 0.98,0.4,0.53, 0.98,0.4,0.53, 0.45,0.98,0.45) end
+		--Detroit Lions Colors: Honolulu Blue to Silver [Elv: I stoles it @Simpy]
+		local ElvColors = function(t) return specialText(t, 0,0.42,0.69, 0.61,0.61,0.61) end
+		--Rainbow (8 Colors: 253,62,68, 254,152,73, 255,222,75, 109,253,101, 84,196,252, 163,93,250, 198,121,251, 254,129,193)
+		local MisColors = function(t) return specialText(t, 0.99,0.24,0.26, 0.99,0.59,0.28, 1.00,0.87,0.29, 0.42,0.99,0.39, 0.32,0.76,0.98, 0.63,0.36,0.98, 0.77,0.47,0.98, 0.99,0.50,0.75) end
+		--Light Spring: '50dad3','56e580','d8da33','dfa455','ee8879','f972d1','b855df','50dad3'
+		local MelColors = function(t) return specialText(t, 0.31,0.85,0.82, 0.33,0.89,0.50, 0.84,0.85,0.20, 0.87,0.64,0.33, 0.93,0.53,0.47, 0.97,0.44,0.81, 0.72,0.33,0.87, 0.31,0.85,0.82) end
+
+		itsSimpyH = function() return Burger..ElvMelon, SimpyColors end
+		itsSimpyA = function() return Lion..ElvMelon, SimpyColors end
+		itsMel = function() return Hibiscus, MelColors end
+		itsElv = function() return ElvBlue, ElvColors end
+		itsMis = function() return Rainbow, MisColors end
+	end
+
+	local itsTheFlyestNihilist = function(class)
+		return E:TextureString(E.Media.ChatLogos["Fox"..class],x)
 	end
 
 	specialChatIcons = {
 		-- Elv
-		["Illidelv-Area52"]		= ElvBlue,
-		["Elvz-Kil'jaeden"]		= ElvBlue,
-		["Elv-Spirestone"]		= ElvBlue,
+		["Elv-Spirestone"]			= itsElv,
+		["Elvz-Spirestone"]			= itsElv,
+		["Fleshlite-Spirestone"]	= itsElv,
+		["Elvidan-Spirestone"]		= itsElv,
+		["Elvilas-Spirestone"]		= itsElv,
+		["Fraku-Spirestone"]		= itsElv,
+		["Jarvix-Spirestone"]		= itsElv,
+		["Watermelon-Spirestone"]	= itsElv,
+		["Zinxbe-Spirestone"]		= itsElv,
+		["Whorlock-Spirestone"]		= itsElv,
 		-- Blazeflack
 		["Blazii-Silvermoon"]	= ElvBlue, -- Priest
 		["Chazii-Silvermoon"]	= ElvBlue, -- Shaman
@@ -229,36 +254,55 @@ do --this can save some main file locals
 		["Tierone-Spirestone"]	= "Dr. ",
 		["Tirain-Spirestone"]	= MrHankey,
 		["Sinth-Spirestone"]	= MrHankey,
+		["Tee-Spirestone"]		= MrHankey,
 		-- Mis (NOTE: I will forever have the picture you accidently shared of the manikin wearing a strapon burned in my brain)
-		["Misdîrect-Spirestone"]	= Rainbow,
-		["Misoracle-Spirestone"]	= Rainbow,
-		["MisLight-Spirestone"]		= Rainbow,
-		["MisDivine-Spirestone"]	= Rainbow,
-		["MisLust-Spirestone"]		= Rainbow,
-		["MisMayhem-Spirestone"]	= Rainbow,
-		["Mismonk-Spirestone"]		= Rainbow,
-		["Misillidan-Spirestone"]	= Rainbow,
-		["Mispel-Spirestone"]		= Rainbow,
-		["Misdecay-Spirestone"]		= Rainbow,
-		--NihilisticPandemonium
-		["Perrinna-WyrmrestAccord"]		= itsNihilist("WARLOCK"),
-		["Sagome-WyrmrestAccord"]		= itsNihilist("MONK"),
-		["Onaguda-WyrmrestAccord"]		= itsNihilist("DRUID"),
-		["Haelini-WyrmrestAccord"]		= itsNihilist("PRIEST"),
-		["Nenalia-WyrmrestAccord"]		= itsNihilist("MAGE"),
-		["Alailais-WyrmestAccord"]		= itsNihilist("DEMONHUNTER"),
-		["Muiride-WyrmestAccord"]		= itsNihilist("DEATHKNIGHT"),
-		["Monelia-WyrmrestAccord"]		= itsNihilist("PALADIN"),
-		["Huanyue-WyrmrestAccord"]		= itsNihilist("SHAMAN"),
-		["Galiseda-WyrmestAccord"]		= itsNihilist("ROGUE"),
-		["Naldydi-WyrmrestAccord"]		= itsNihilist("HUNTER"),
-		["Caylasena-WyrmestAccord"]		= itsNihilist("WARRIOR"),
-		["Elaedarel-WyrmrestAccord"]	= itsNihilist("WARLOCK"),
-		["Alydrer-WyrmrestAccord"]		= itsNihilist("WARLOCK"),
-		["Issia-WyrmrestAccord"]		= itsNihilist("PRIEST"),
-		["Leitara-WyrmrestAccord"]		= itsNihilist("WARRIOR"),
-		["Cherlyth-WyrmrestAccord"]		= itsNihilist("DRUID"),
-		["Tokashami-WyrmrestAccord"]	= itsNihilist("SHAMAN"),
+		["Misdîrect-Spirestone"]	= itsMis,
+		["Misoracle-Spirestone"]	= itsMis,
+		["MisLight-Spirestone"]		= itsMis,
+		["MisDivine-Spirestone"]	= itsMis,
+		["MisMayhem-Spirestone"]	= itsMis,
+		["Mismonk-Spirestone"]		= itsMis,
+		["Misillidan-Spirestone"]	= itsMis,
+		["Mispel-Spirestone"]		= itsMis,
+		["Misdecay-Spirestone"]		= itsMis,
+		["Mislust-Spirestone"] 		= itsMis,
+		-- Luckyone
+		["Luckyone-LaughingSkull"]      = Clover,
+		["Luckypriest-LaughingSkull"]	= Clover,
+		["Luckymonkas-Blackrock"]   	= Clover,
+		["Luckysabers-Blackrock"]   	= Clover,
+		["Luckydemon-Blackrock"]    	= Clover,
+		["Luckymage-Blackrock"]	    	= Clover,
+		["Luckyshaman-Blackrock"]   	= Clover,
+		["Luckylockx-Blackrock"]    	= Clover,
+		["Luckybow-Blackrock"]	    	= Clover,
+		["Luckypepega-Blackrock"]   	= Clover,
+		["Luckypoggers-Blackrock"]  	= Clover,
+		["Luckyclap-Blackrock"]	    	= Clover,
+		-- NihilisticPandemonium
+		["Dirishia-WyrmrestAccord"]		= itsTheFlyestNihilist("Warlock"),
+		["Xanikani-WyrmrestAccord"]		= itsTheFlyestNihilist("Mage"),
+		["Rikanza-WyrmrestAccord"]		= itsTheFlyestNihilist("Monk"),
+		["Onaguda-WyrmrestAccord"]		= itsTheFlyestNihilist("Druid"),
+		["Cerishia-WyrmrestAccord"]		= itsTheFlyestNihilist("Priest"),
+		["Vellilara-WyrmestAccord"]		= itsTheFlyestNihilist("DemonHunter"),
+		["Sayalia-WyrmestAccord"]		= itsTheFlyestNihilist("DeathKnight"),
+		["Pakasta-WyrmrestAccord"]		= itsTheFlyestNihilist("Paladin"),
+		["Orlyrala-WyrmrestAccord"]		= itsTheFlyestNihilist("Shaman"),
+		["Scerila-WyrmestAccord"]		= itsTheFlyestNihilist("Rogue"),
+		["Ralaniki-WyrmrestAccord"]		= itsTheFlyestNihilist("Hunter"),
+		["Moyanza-WyrmestAccord"]		= itsTheFlyestNihilist("Warrior"),
+		["Erasaya-WyrmrestAccord"]		= itsTheFlyestNihilist("DeathKnight"),
+		["Linabla-WyrmrestAccord"]		= itsTheFlyestNihilist("Druid"),
+		["Dirikoa-WyrmrestAccord"]		= itsTheFlyestNihilist("Hunter"),
+		["Elaedarel-WyrmrestAccord"]	= itsTheFlyestNihilist("Warlock"),
+		["Alydrer-WyrmrestAccord"]		= itsTheFlyestNihilist("Warlock"),
+		["Issia-WyrmrestAccord"]		= itsTheFlyestNihilist("Priest"),
+		["Leitara-WyrmrestAccord"]		= itsTheFlyestNihilist("Warrior"),
+		["Cherlyth-WyrmrestAccord"]		= itsTheFlyestNihilist("Druid"),
+		["Tokashami-WyrmrestAccord"]	= itsTheFlyestNihilist("Shaman"),
+		["Millop-WyrmrestAccord"]		= itsTheFlyestNihilist("Hunter"),
+		["Aeondalew-WyrmrestAccord"]	= itsTheFlyestNihilist("DeathKnight"),
 		-- Merathilis
 		["Asragoth-Shattrath"]			= ElvPurple,	-- [Alliance] Warlock
 		["Brítt-Shattrath"] 			= ElvBlue,		-- [Alliance] Warrior
@@ -266,32 +310,43 @@ do --this can save some main file locals
 		["Jazira-Shattrath"]			= ElvBlue,		-- [Alliance] Priest
 		["Jústice-Shattrath"]			= ElvYellow,	-- [Alliance] Rogue
 		["Maithilis-Shattrath"]			= ElvGreen,		-- [Alliance] Monk
-		["Mattdemôn-Shattrath"]			= itsSimpy,		-- [Alliance] DH	(NOTE: not really Simpy; IMPOSTER lol)
+		["Mattdemôn-Shattrath"]			= ElvPurple,	-- [Alliance] DH
 		["Melisendra-Shattrath"]		= ElvBlue,		-- [Alliance] Mage
 		["Merathilis-Shattrath"]		= ElvOrange,	-- [Alliance] Druid
 		["Merathilîs-Shattrath"]		= ElvBlue,		-- [Alliance] Shaman
 		-- Simpy
-		["Arieva-Cenarius"]				= itsSimpy, -- Hunter
-		["Buddercup-Cenarius"]			= itsSimpy, -- Rogue
-		["Cutepally-Cenarius"]			= itsSimpy, -- Paladin
-		["Ezek-Cenarius"]				= itsSimpy, -- DK
-		["Glice-Cenarius"]				= itsSimpy, -- Warrior
-		["Kalline-Cenarius"]			= itsSimpy, -- Shaman
-		["Puttietat-Cenarius"]			= itsSimpy, -- Druid
-		["Simpy-Cenarius"]				= itsSimpy, -- Warlock
-		["Twigly-Cenarius"]				= itsSimpy, -- Monk
-		["Imsobeefy-Cenarius"]			= itsSimpy, -- [Horde] Shaman
-		["Imsocheesy-Cenarius"]			= itsSimpy, -- [Horde] Priest
-		["Imsojelly-Cenarius"]			= itsSimpy, -- [Horde] DK
-		["Imsojuicy-Cenarius"]			= itsSimpy, -- [Horde] Druid
-		["Imsopeachy-Cenarius"]			= itsSimpy, -- [Horde] DH
-		["Imsosalty-Cenarius"]			= itsSimpy, -- [Horde] Paladin
-		["Imsospicy-Cenarius"]			= itsSimpy, -- [Horde] Mage
-		["Bunne-CenarionCircle"]		= itsSimpy, -- [RP] Warrior
-		["Loppie-CenarionCircle"]		= itsSimpy, -- [RP] Hunter
-		["Loppybunny-CenarionCircle"]	= itsSimpy, -- [RP] Mage
-		["Rubee-CenarionCircle"]		= itsSimpy, -- [RP] DH
-		["Wennie-CenarionCircle"]		= itsSimpy, -- [RP] Priest
+		["Arieva-Cenarius"]				= itsSimpyA, -- Hunter
+		["Buddercup-Cenarius"]			= itsSimpyA, -- Rogue
+		["Cutepally-Cenarius"]			= itsSimpyA, -- Paladin
+		["Ezek-Cenarius"]				= itsSimpyA, -- DK
+		["Glice-Cenarius"]				= itsSimpyA, -- Warrior
+		["Kalline-Cenarius"]			= itsSimpyA, -- Shaman
+		["Puttietat-Cenarius"]			= itsSimpyA, -- Druid
+		["Simpy-Cenarius"]				= itsSimpyA, -- Warlock
+		["Twigly-Cenarius"]				= itsSimpyA, -- Monk
+		["Imsobeefy-Cenarius"]			= itsSimpyH, -- [Horde] Shaman
+		["Imsocheesy-Cenarius"]			= itsSimpyH, -- [Horde] Priest
+		["Imsojelly-Cenarius"]			= itsSimpyH, -- [Horde] DK
+		["Imsojuicy-Cenarius"]			= itsSimpyH, -- [Horde] Druid
+		["Imsopeachy-Cenarius"]			= itsSimpyH, -- [Horde] DH
+		["Imsosalty-Cenarius"]			= itsSimpyH, -- [Horde] Paladin
+		["Imsospicy-Cenarius"]			= itsSimpyH, -- [Horde] Mage
+		["Bunne-CenarionCircle"]		= itsSimpyA, -- [RP] Warrior
+		["Loppie-CenarionCircle"]		= itsSimpyA, -- [RP] Hunter
+		["Loppybunny-CenarionCircle"]	= itsSimpyA, -- [RP] Mage
+		["Rubee-CenarionCircle"]		= itsSimpyA, -- [RP] DH
+		["Wennie-CenarionCircle"]		= itsSimpyA, -- [RP] Priest
+		-- Melbelle (Simpys Bestie)
+		["Deathchaser-Bladefist"]		= itsMel, -- DH
+		["Melbelle-Bladefist"]			= itsMel, -- Hunter
+		["Alykins-Cenarius"]			= itsMel, -- DH
+		["Alyosha-Cenarius"]			= itsMel, -- Warrior
+		["Alytotes-Cenarius"]			= itsMel, -- Shaman
+		["Autymnflower-Cenarius"]		= itsMel, -- Shaman
+		["Celesteia-Cenarius"]			= itsMel, -- Paladin
+		["Chaosfire-Cenarius"]			= itsMel, -- Warlock
+		["Melbelle-Cenarius"]			= itsMel, -- Druid
+		["Spãrkles-Cenarius"]			= itsMel, -- Mage
 	}
 end
 
@@ -477,6 +532,7 @@ function CH:StyleChat(frame)
 				ChatEdit_ParseText(editBox, 0)
 			end
 		end
+
 		editbox.characterCount:SetText((255 - strlen(text)))
 	end
 
@@ -545,12 +601,6 @@ function CH:StyleChat(frame)
 
 	for _, text in pairs(ElvCharacterDB.ChatEditHistory) do
 		editbox:AddHistoryLine(text)
-	end
-
-	if id ~= 2 then --Don't add timestamps to combat log, they don't work.
-		--This usually taints, but LibChatAnims should make sure it doesn't.
-		frame.OldAddMessage = frame.AddMessage
-		frame.AddMessage = CH.AddMessage
 	end
 
 	--copy chat button
@@ -634,7 +684,7 @@ do
 	end
 	removeIconFromLine = function(text)
 		text = gsub(text, "|TInterface\\TargetingFrame\\UI%-RaidTargetingIcon_(%d+):0|t", raidIconFunc) --converts raid icons into {star} etc, if possible.
-		text = gsub(text, "(%s?)(|?)|T.-|t(%s?)", stripTextureFunc) --strip any other texture out but keep a single space from the side(s).
+		text = gsub(text, "(%s?)(|?)|[TA].-|[ta](%s?)", stripTextureFunc) --strip any other texture out but keep a single space from the side(s).
 		text = gsub(text, "(|?)|H(.-)|h(.-)|h", hyperLinkFunc) --strip hyperlink data only keeping the actual text.
 		return text
 	end
@@ -836,7 +886,7 @@ function CH:PositionChat(override)
 		local id = chat:GetID()
 		local tab = _G[format("ChatFrame%sTab", i)]
 		local isDocked = chat.isDocked
-		tab.isDocked = chat.isDocked
+		tab.isDocked = isDocked
 		tab.owner = chat
 
 		if id > NUM_CHAT_WINDOWS then
@@ -1068,33 +1118,26 @@ function CH:OnHyperlinkEnter(frame, refString)
 	if InCombatLockdown() then return; end
 	local linkToken = strmatch(refString, "^([^:]+)")
 	if hyperlinkTypes[linkToken] then
-		ShowUIPanel(_G.GameTooltip)
 		_G.GameTooltip:SetOwner(frame, "ANCHOR_CURSOR")
 		_G.GameTooltip:SetHyperlink(refString)
-		hyperLinkEntered = frame
 		_G.GameTooltip:Show()
+		hyperLinkEntered = frame
 	end
 end
 
-function CH:OnHyperlinkLeave() -- frame, refString
-	-- local linkToken = refString:match("^([^:]+)")
-	-- if hyperlinkTypes[linkToken] then
-		-- HideUIPanel(GameTooltip)
-		-- hyperLinkEntered = nil
-	-- end
-
+function CH:OnHyperlinkLeave()
 	if hyperLinkEntered then
-		HideUIPanel(_G.GameTooltip)
 		hyperLinkEntered = nil
+		_G.GameTooltip:Hide()
 	end
 end
 
--- function CH:OnMessageScrollChanged(frame)
-	-- if hyperLinkEntered == frame then
-		-- HideUIPanel(GameTooltip)
-		-- hyperLinkEntered = false
-	-- end
--- end
+function CH:OnMouseWheel(frame)
+	if hyperLinkEntered == frame then
+		hyperLinkEntered = false
+		_G.GameTooltip:Hide()
+	end
+end
 
 function CH:EnableHyperlink()
 	for _, frameName in pairs(_G.CHAT_FRAMES) do
@@ -1102,7 +1145,7 @@ function CH:EnableHyperlink()
 		if (not self.hooks or not self.hooks[frame] or not self.hooks[frame].OnHyperlinkEnter) then
 			self:HookScript(frame, 'OnHyperlinkEnter')
 			self:HookScript(frame, 'OnHyperlinkLeave')
-			-- self:HookScript(frame, 'OnMessageScrollChanged')
+			self:HookScript(frame, 'OnMouseWheel')
 		end
 	end
 end
@@ -1113,15 +1156,13 @@ function CH:DisableHyperlink()
 		if self.hooks and self.hooks[frame] and self.hooks[frame].OnHyperlinkEnter then
 			self:Unhook(frame, 'OnHyperlinkEnter')
 			self:Unhook(frame, 'OnHyperlinkLeave')
-			-- self:Unhook(frame, 'OnMessageScrollChanged')
+			self:Unhook(frame, 'OnMouseWheel')
 		end
 	end
 end
 
 function CH:DisableChatThrottle()
-	wipe(msgList)
-	wipe(msgCount)
-	wipe(msgTime)
+	wipe(throttle)
 end
 
 function CH:ShortChannel()
@@ -1149,8 +1190,9 @@ function CH:GetBNFirstToonClassColor(id)
 			if numGameAccounts and numGameAccounts > 0 then
 				for y = 1, numGameAccounts do
 					local gameAccountInfo = C_BattleNet_GetFriendGameAccountInfo(i, y)
-					if gameAccountInfo and (gameAccountInfo.clientProgram == BNET_CLIENT_WOW) and gameAccountInfo.className and gameAccountInfo.className ~= '' then
-						return gameAccountInfo.className --return the first toon's class
+					local className = gameAccountInfo and gameAccountInfo.className
+					if (className and className ~= '') and (gameAccountInfo.clientProgram == BNET_CLIENT_WOW) then
+						return className --return the first toon's class
 					end
 				end
 			end
@@ -1601,7 +1643,13 @@ function CH:ChatFrame_MessageEventHandler(frame, event, arg1, arg2, arg3, arg4, 
 
 			-- Player Flags
 			local pflag, chatIcon, pluginChatIcon = "", specialChatIcons[playerName], CH:GetPluginIcon(playerName)
-			if type(chatIcon) == 'function' then chatIcon = chatIcon() end
+			if type(chatIcon) == 'function' then
+				local icon, prettify = chatIcon()
+				if prettify and not CH:MessageIsProtected(message) then
+					message = prettify(message)
+				end
+				chatIcon = icon or ''
+			end
 
 			if arg6 ~= "" then -- Blizzard Flags
 				if arg6 == "GM" or arg6 == "DEV" then -- Blizzard Icon, this was sent by a GM or Dev.
@@ -1675,7 +1723,7 @@ function CH:ChatFrame_MessageEventHandler(frame, event, arg1, arg2, arg3, arg4, 
 			--BN_WHISPER FIXME
 			ChatEdit_SetLastTellTarget(arg2, chatType)
 			if ( frame.tellTimer and (GetTime() > frame.tellTimer) ) then
-				PlaySound(SOUNDKIT.TELL_MESSAGE)
+				PlaySound(SOUNDKIT_TELL_MESSAGE)
 			end
 			frame.tellTimer = GetTime() + _G.CHAT_TELL_ALERT_TIME
 			--FCF_FlashTab(frame)
@@ -1700,8 +1748,8 @@ function CH:ChatFrame_ConfigEventHandler(...)
 	return ChatFrame_ConfigEventHandler(...)
 end
 
-function CH:ChatFrame_SystemEventHandler(...)
-	return ChatFrame_SystemEventHandler(...)
+function CH:ChatFrame_SystemEventHandler(frame, event, message, ...)
+	return ChatFrame_SystemEventHandler(frame, event, message, ...)
 end
 
 function CH:ChatFrame_OnEvent(...)
@@ -1732,13 +1780,19 @@ function CH:SetupChat()
 		frame:SetTimeVisible(100)
 		frame:SetFading(self.db.fade)
 
-		if not frame.scriptsSet then
-			frame:SetScript("OnMouseWheel", ChatFrame_OnMouseScroll)
+		if id ~= 2 and not frame.OldAddMessage then
+			--Don't add timestamps to combat log, they don't work.
+			--This usually taints, but LibChatAnims should make sure it doesn't.
+			frame.OldAddMessage = frame.AddMessage
+			frame.AddMessage = CH.AddMessage
+		end
 
+		if not frame.scriptsSet then
 			if id ~= 2 then
 				frame:SetScript("OnEvent", FloatingChatFrameOnEvent)
 			end
 
+			frame:SetScript("OnMouseWheel", ChatFrame_OnMouseScroll)
 			hooksecurefunc(frame, "SetScript", function(f, script, func)
 				if script == "OnMouseWheel" and func ~= ChatFrame_OnMouseScroll then
 					f:SetScript(script, ChatFrame_OnMouseScroll)
@@ -1753,7 +1807,6 @@ function CH:SetupChat()
 	end
 
 	_G.GeneralDockManager:SetParent(_G.LeftChatPanel)
-	-- self:ScheduleRepeatingTimer('PositionChat', 1)
 	self:PositionChat(true)
 
 	if not self.HookSecured then
@@ -1763,72 +1816,56 @@ function CH:SetupChat()
 end
 
 local function PrepareMessage(author, message)
-	return strupper(author)..message
+	if author and author ~= '' and message and message ~= '' then
+		return strupper(author) .. message
+	end
 end
 
-function CH:ChatThrottleHandler(_, arg1, arg2) -- event, arg1, arg2
-	if arg2 ~= "" then
-		local message = PrepareMessage(arg2, arg1)
-		if msgList[message] == nil then
-			msgList[message] = true
-			msgCount[message] = 1
-			msgTime[message] = time()
-		else
-			msgCount[message] = msgCount[message] + 1
+function CH:ChatThrottleHandler(arg1, arg2, when)
+	local msg = PrepareMessage(arg1, arg2)
+	if msg then
+		for message, object in pairs(throttle) do
+			if difftime(when, object.time) >= CH.db.throttleInterval then
+				throttle[message] = nil
+			end
 		end
+
+		if not throttle[msg] then
+			throttle[msg] = {time = time(), count = 1}
+		else
+			throttle[msg].count = throttle[msg].count + 1
+		end
+	end
+end
+
+function CH:ChatThrottleBlockFlag(author, message, when)
+	local msg = (author ~= PLAYER_NAME) and (CH.db.throttleInterval ~= 0) and PrepareMessage(author, message)
+	local object = msg and throttle[msg]
+
+	return object and object.time and object.count and object.count > 1 and (difftime(when, object.time) <= CH.db.throttleInterval), object
+end
+
+function CH:ChatThrottleIntervalHandler(event, message, author, ...)
+	local blockFlag, blockObject = CH:ChatThrottleBlockFlag(author, message, time())
+
+	if blockFlag then
+		return true
+	else
+		if blockObject then blockObject.time = time() end
+		return CH.FindURL(self, event, message, author, ...)
 	end
 end
 
 function CH:CHAT_MSG_CHANNEL(event, message, author, ...)
-	local blockFlag = false
-	local msg = PrepareMessage(author, message)
-
-	-- ignore player messages
-	if author == PLAYER_NAME then return CH.FindURL(self, event, message, author, ...) end
-	if msgList[msg] and CH.db.throttleInterval ~= 0 then
-		if difftime(time(), msgTime[msg]) <= CH.db.throttleInterval then
-			blockFlag = true
-		end
-	end
-
-	if blockFlag then
-		return true
-	else
-		if CH.db.throttleInterval ~= 0 then
-			msgTime[msg] = time()
-		end
-
-		return CH.FindURL(self, event, message, author, ...)
-	end
+	return CH:ChatThrottleIntervalHandler(event, message, author, ...)
 end
 
 function CH:CHAT_MSG_YELL(event, message, author, ...)
-	local blockFlag = false
-	local msg = PrepareMessage(author, message)
-
-	if msg == nil then return CH.FindURL(self, event, message, author, ...) end
-
-	-- ignore player messages
-	if author == PLAYER_NAME then return CH.FindURL(self, event, message, author, ...) end
-	if msgList[msg] and msgCount[msg] > 1 and CH.db.throttleInterval ~= 0 then
-		if difftime(time(), msgTime[msg]) <= CH.db.throttleInterval then
-			blockFlag = true
-		end
-	end
-
-	if blockFlag then
-		return true
-	else
-		if CH.db.throttleInterval ~= 0 then
-			msgTime[msg] = time()
-		end
-
-		return CH.FindURL(self, event, message, author, ...)
-	end
+	return CH:ChatThrottleIntervalHandler(event, message, author, ...)
 end
 
 function CH:CHAT_MSG_SAY(event, message, author, ...)
-	return CH.FindURL(self, event, message, author, ...)
+	return CH:ChatThrottleIntervalHandler(event, message, author, ...)
 end
 
 function CH:ThrottleSound()
@@ -2019,7 +2056,7 @@ function CH:UpdateFading()
 end
 
 function CH:DisplayChatHistory()
-	local data, d = ElvCharacterDB.ChatHistoryLog
+	local data = ElvCharacterDB.ChatHistoryLog
 	if not (data and next(data)) then return end
 
 	if not GetPlayerInfoByGUID(E.myguid) then
@@ -2030,7 +2067,7 @@ function CH:DisplayChatHistory()
 	CH.SoundTimer = true
 	for _, chat in pairs(_G.CHAT_FRAMES) do
 		for i=1, #data do
-			d = data[i]
+			local d = data[i]
 			if type(d) == 'table' then
 				for _, messageType in pairs(_G[chat].messageTypeList) do
 					if gsub(strsub(d[50],10),'_INFORM','') == messageType then
@@ -2072,20 +2109,20 @@ function CH:DelayGuildMOTD()
 end
 
 function CH:SaveChatHistory(event, ...)
-	if not self.db.chatHistory then return end
-	local data = ElvCharacterDB.ChatHistoryLog
-
-	if self.db.throttleInterval ~= 0 and (event == 'CHAT_MSG_SAY' or event == 'CHAT_MSG_YELL' or event == 'CHAT_MSG_CHANNEL') then
-		self:ChatThrottleHandler(event, ...)
-
+	if CH.db.throttleInterval ~= 0 and (event == 'CHAT_MSG_SAY' or event == 'CHAT_MSG_YELL' or event == 'CHAT_MSG_CHANNEL') then
 		local message, author = ...
-		local msg = PrepareMessage(author, message)
-		if author ~= PLAYER_NAME and msgList[msg] then
-			if difftime(time(), msgTime[msg]) <= CH.db.throttleInterval then
-				return
-			end
+		local when = time()
+
+		CH:ChatThrottleHandler(author, message, when)
+
+		if CH:ChatThrottleBlockFlag(author, message, when) then
+			return
 		end
 	end
+
+	if not CH.db.chatHistory then return end
+	local data = ElvCharacterDB.ChatHistoryLog
+	if not data then return end
 
 	local tempHistory = {}
 	for i = 1, select('#', ...) do
@@ -2231,10 +2268,10 @@ function CH:SocialQueueEvent(_, guid, numAddedItems) -- event, guid, numAddedIte
 	local isLFGList = firstQueue and firstQueue.queueData and firstQueue.queueData.queueType == 'lfglist'
 
 	if isLFGList and firstQueue and firstQueue.eligible then
-		local searchResultInfo, activityID, name, leaderName, fullName, isLeader
+		local activityID, name, leaderName, fullName, isLeader
 
 		if firstQueue.queueData.lfgListID then
-			searchResultInfo = C_LFGList_GetSearchResultInfo(firstQueue.queueData.lfgListID)
+			local searchResultInfo = C_LFGList_GetSearchResultInfo(firstQueue.queueData.lfgListID)
 			if searchResultInfo then
 				activityID, name, leaderName = searchResultInfo.activityID, searchResultInfo.name, searchResultInfo.leaderName
 				isLeader = self:SocialQueueIsLeader(playerName, leaderName)
@@ -2251,10 +2288,10 @@ function CH:SocialQueueEvent(_, guid, numAddedItems) -- event, guid, numAddedIte
 			self:SocialQueueMessage(guid, format('%s %s: |cff00CCFF%s|r', coloredName, (isLeader and L["is looking for members"]) or L["joined a group"], fullName or UNKNOWN))
 		end
 	elseif firstQueue then
-		local output, outputCount, queueCount, queueName = '', '', 0
+		local output, outputCount, queueCount = '', '', 0
 		for _, queue in pairs(queues) do
 			if type(queue) == 'table' and queue.eligible then
-				queueName = (queue.queueData and SocialQueueUtil_GetQueueName(queue.queueData)) or ''
+				local queueName = (queue.queueData and SocialQueueUtil_GetQueueName(queue.queueData)) or ''
 				if queueName ~= '' then
 					if output == '' then
 						output = gsub(queueName, '\n.+','') -- grab only the first queue name
@@ -2266,9 +2303,7 @@ function CH:SocialQueueEvent(_, guid, numAddedItems) -- event, guid, numAddedIte
 			end
 		end
 		if output ~= '' then
-			if queueCount > 0 then
-				outputCount = format(LFG_LIST_AND_MORE, queueCount)
-			end
+			if queueCount > 0 then outputCount = format(LFG_LIST_AND_MORE, queueCount) end
 			self:SocialQueueMessage(guid, format('%s %s: |cff00CCFF%s|r %s', coloredName, SOCIAL_QUEUE_QUEUED_FOR, output, outputCount))
 		end
 	end
@@ -2430,9 +2465,9 @@ function CH:HandleChatVoiceIcons()
 			Skins:HandleButton(button, nil, nil, nil, true)
 
 			if index == 1 then
-				button:SetPoint('BOTTOMRIGHT', _G.LeftChatTab, 'BOTTOMRIGHT', 3, -3) -- This also change the position for new chat tabs 0.o
+				button:Point('BOTTOMRIGHT', _G.LeftChatTab, 'BOTTOMRIGHT', 3, -3) -- This also change the position for new chat tabs 0.o
 			else
-				button:SetPoint("RIGHT", channelButtons[index-1], "LEFT")
+				button:Point("RIGHT", channelButtons[index-1], "LEFT")
 			end
 		end
 

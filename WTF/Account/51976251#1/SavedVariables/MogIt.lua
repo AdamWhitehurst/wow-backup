@@ -1,18 +1,19 @@
 
 MogItDB = {
-	["global"] = {
-		["version"] = "3.9.0",
-	},
 	["profileKeys"] = {
 		["Andalsam - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
 		["Andalsa - Tichondrius"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Arndoss - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
+	},
+	["global"] = {
+		["version"] = "3.9.0",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -20,53 +21,54 @@ MogItDB = {
 			["previewProps"] = {
 				{
 					["y"] = -1.777868986129761,
-					["h"] = 1251.370361328125,
+					["h"] = 1245.444580078125,
 					["point"] = "RIGHT",
-					["w"] = 1111.296508789063,
+					["w"] = 942.9996948242188,
 					["x"] = -77.83282470703125,
 				}, -- [1]
 				{
 					["y"] = 0,
-					["x"] = 0,
 					["h"] = 385.0000610351563,
+					["x"] = 0,
 				}, -- [2]
 			},
 			["gridHeight"] = 1217.778564453125,
 			["y"] = 0,
-			["x"] = 0,
+			["x"] = -1.447256445884705,
 			["slotLabels"] = {
 				["Waist"] = "Waist",
 				["Fist"] = "Fist Weapons",
 				["Tabard"] = "Tabard",
 				["Legs"] = "Legs",
 				["Back"] = "Back",
-				["2H-axe"] = "Two-Handed Axes",
+				["2H-mace"] = "Two-Handed Maces",
 				["Shirt"] = "Shirt",
 				["Dagger"] = "Daggers",
 				["Hands"] = "Hands",
 				["Wrist"] = "Wrist",
 				["Polearm"] = "Polearms",
 				["2H-sword"] = "Two-Handed Swords",
-				["Warglaives"] = "Warglaives",
+				["2H-axe"] = "Two-Handed Axes",
 				["ArtifactLegion"] = "Legion Artifacts",
 				["1H-mace"] = "One-Handed Maces",
 				["Head"] = "Head",
 				["Holdable"] = "Held In Off-hand",
 				["1H-sword"] = "One-Handed Swords",
-				["Crossbow"] = "Crossbows",
+				["Feet"] = "Feet",
 				["Staff"] = "Staves",
 				["Chest"] = "Chest",
-				["Gun"] = "Guns",
-				["1H-axe"] = "One-Handed Axes",
-				["Bow"] = "Bows",
 				["Shield"] = "Shields",
-				["Feet"] = "Feet",
+				["Bow"] = "Bows",
+				["1H-axe"] = "One-Handed Axes",
+				["Gun"] = "Guns",
+				["Crossbow"] = "Crossbows",
 				["Shoulder"] = "Shoulder",
-				["2H-mace"] = "Two-Handed Maces",
+				["Warglaives"] = "Warglaives",
 			},
 			["dressupPreview"] = true,
 			["rows"] = 3,
 			["columns"] = 2,
+			["point"] = "TOPRIGHT",
 			["gridWidth"] = 1082.370483398438,
 			["previewUIPanel"] = true,
 			["singlePreview"] = true,
@@ -74,19 +76,20 @@ MogItDB = {
 	},
 }
 MogItWishlist = {
+	["global"] = {
+		["version"] = 80300,
+	},
 	["profileKeys"] = {
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
-	},
-	["global"] = {
-		["version"] = 80300,
 	},
 	["profiles"] = {
 		["Andalsam - Tichondrius"] = {
@@ -98,11 +101,11 @@ MogItWishlist = {
 					["items"] = {
 						["ChestSlot"] = "item:152124:0::::::::::0:1:3524",
 						["FeetSlot"] = "item:124249:0",
-						["WaistSlot"] = "item:50069:0",
-						["ShoulderSlot"] = "item:115544:0::::::::::0:1:3524",
-						["LegsSlot"] = "item:65313:0::::::::::0:1:3524",
-						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
 						["HeadSlot"] = "item:152681:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:115544:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:50069:0",
+						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:65313:0::::::::::0:1:3524",
 					},
 					["name"] = "Bear",
 					["alternateItems"] = {
@@ -123,11 +126,11 @@ MogItWishlist = {
 						["MainHandSlot"] = "item:128202:0::::::::::0:1:3524",
 						["SecondaryHandSlot"] = "item:18463:0::::::::::0:1:3524",
 						["FeetSlot"] = "item:163942:0::::::::::0:1:3524",
-						["WaistSlot"] = "item:169926:0::::::::::0:1:3524",
-						["LegsSlot"] = "item:115230:0::::::::::0:1:3524",
-						["HandsSlot"] = "item:112812:0::::::::::0:1:3524",
-						["HeadSlot"] = "item:112382:0::::::::::4:1:3524",
 						["BackSlot"] = "item:134111:0::::::::::0:1:3524",
+						["HeadSlot"] = "item:112382:0::::::::::4:1:3524",
+						["WaistSlot"] = "item:169926:0::::::::::0:1:3524",
+						["HandsSlot"] = "item:112812:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:115230:0::::::::::0:1:3524",
 					},
 					["name"] = "Fel Monk",
 					["alternateItems"] = {
@@ -139,13 +142,57 @@ MogItWishlist = {
 		},
 		["Wharapi - Tichondrius"] = {
 		},
-		["Bramblebrow - Emerald Dream"] = {
+		["Sparkwizz - Tichondrius"] = {
+			["sets"] = {
+				{
+					["items"] = {
+						["ChestSlot"] = "item:109896:0::::::::::2:1:3524",
+						["HeadSlot"] = "item:127320:0::::::::::0:1:3524",
+						["BackSlot"] = "item:166671:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:128300:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:124917:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:126112:0::::::::::0:1:3524",
+					},
+					["name"] = "Sparkwizz",
+					["alternateItems"] = {
+					},
+				}, -- [1]
+				{
+					["items"] = {
+						["ChestSlot"] = "item:34650:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:126112:0::::::::::0:1:3524",
+						["HeadSlot"] = "item:126111:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:146760:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:126113:0::::::::::0:1:3524",
+						["BackSlot"] = "item:166671:0::::::::::0:1:3524",
+					},
+					["name"] = "Sparkwizz2",
+					["alternateItems"] = {
+					},
+				}, -- [2]
+				{
+					["items"] = {
+						["ChestSlot"] = "item:147067:0::::::::::5:1:3524",
+						["BackSlot"] = "item:159230:0::::::::::0:1:3524",
+						["LegsSlot"] = "item:159451:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:139232:0::::::::::4:1:3524",
+						["WaistSlot"] = "item:140912:0::::::::::4:1:3524",
+						["MainHandSlot"] = "item:28367:0::::::::::0:1:3524",
+						["HeadSlot"] = "item:124915:0::::::::::0:1:3524",
+					},
+					["name"] = "Sparkwizz3",
+					["alternateItems"] = {
+					},
+				}, -- [3]
+			},
+		},
+		["Andallsa - Tichondrius"] = {
 		},
 		["Arndoss - Tichondrius"] = {
 		},
-		["Madylad - Tichondrius"] = {
+		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Andallsa - Tichondrius"] = {
+		["Madylad - Tichondrius"] = {
 		},
 		["Umbrick - Tichondrius"] = {
 		},

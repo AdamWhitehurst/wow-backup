@@ -162,9 +162,9 @@ function NP:Update_Highlight(nameplate)
 			nameplate:EnableElement("Highlight")
 		end
 
-		if db.health.enable and not (db.nameOnly or nameplate.NameOnlyChanged) then
+		if db.health.enable and not (db.nameOnly or NP:StyleFilterCheckChanges(nameplate, 'NameOnly')) then
 			nameplate.Highlight.texture:SetColorTexture(1, 1, 1, 0.25)
-			nameplate.Highlight.texture:SetAllPoints(nameplate.FlashTexture)
+			nameplate.Highlight.texture:SetAllPoints(nameplate.HealthFlashTexture)
 			nameplate.Highlight.texture:SetAlpha(0.75)
 		else
 			nameplate.Highlight.texture:SetTexture(E.Media.Textures.Spark)
@@ -176,26 +176,32 @@ function NP:Update_Highlight(nameplate)
 	end
 end
 
-function NP:Construct_HealerSpecs(nameplate)
-	local texture = nameplate:CreateTexture(nameplate:GetDebugName() .. "HealerSpecs", "OVERLAY")
+function NP:Construct_PVPRole(nameplate)
+	local texture = nameplate:CreateTexture(nameplate:GetDebugName() .. "PVPRole", "OVERLAY")
 	texture:Size(40, 40)
-	texture:SetTexture(E.Media.Textures.Healer)
+	texture.HealerTexture = E.Media.Textures.Healer
+	texture.TankTexture = E.Media.Textures.Tank
+	texture:SetTexture(texture.HealerTexture)
+
 	texture:Hide()
 
 	return texture
 end
 
-function NP:Update_HealerSpecs(nameplate)
+function NP:Update_PVPRole(nameplate)
 	local db = NP.db.units[nameplate.frameType]
 
-	if (nameplate.frameType == "FRIENDLY_PLAYER" or nameplate.frameType == "ENEMY_PLAYER") and db.markHealers then
-		if not nameplate:IsElementEnabled("HealerSpecs") then
-			nameplate:EnableElement("HealerSpecs")
+	if (nameplate.frameType == "FRIENDLY_PLAYER" or nameplate.frameType == "ENEMY_PLAYER") and (db.markHealers or db.markTanks) then
+		if not nameplate:IsElementEnabled("PVPRole") then
+			nameplate:EnableElement("PVPRole")
 		end
 
-		nameplate.HealerSpecs:Point("RIGHT", nameplate.Health, "LEFT", -6, 0)
-	elseif nameplate:IsElementEnabled("HealerSpecs") then
-		nameplate:DisableElement("HealerSpecs")
+		nameplate.PVPRole.ShowHealers = db.markHealers
+		nameplate.PVPRole.ShowTanks = db.markTanks
+
+		nameplate.PVPRole:Point("RIGHT", nameplate.Health, "LEFT", -6, 0)
+	elseif nameplate:IsElementEnabled("PVPRole") then
+		nameplate:DisableElement("PVPRole")
 	end
 end
 
@@ -237,13 +243,13 @@ function NP:Construct_Cutaway(nameplate)
 
 	Cutaway.Health = nameplate.Health.ClipFrame:CreateTexture(nameplate:GetDebugName() .. "CutawayHealth")
 	local healthTexture = nameplate.Health:GetStatusBarTexture()
-	Cutaway.Health:SetPoint("TOPLEFT", healthTexture, "TOPRIGHT")
-	Cutaway.Health:SetPoint("BOTTOMLEFT", healthTexture, "BOTTOMRIGHT")
+	Cutaway.Health:Point("TOPLEFT", healthTexture, "TOPRIGHT")
+	Cutaway.Health:Point("BOTTOMLEFT", healthTexture, "BOTTOMRIGHT")
 
 	Cutaway.Power = nameplate.Power.ClipFrame:CreateTexture(nameplate:GetDebugName() .. "CutawayPower")
 	local powerTexture = nameplate.Power:GetStatusBarTexture()
-	Cutaway.Power:SetPoint("TOPLEFT", powerTexture, "TOPRIGHT")
-	Cutaway.Power:SetPoint("BOTTOMLEFT", powerTexture, "BOTTOMRIGHT")
+	Cutaway.Power:Point("TOPLEFT", powerTexture, "TOPRIGHT")
+	Cutaway.Power:Point("BOTTOMLEFT", powerTexture, "BOTTOMRIGHT")
 
 	return Cutaway
 end
@@ -275,38 +281,46 @@ function NP:Update_Cutaway(nameplate)
 	end
 end
 
-function NP:Construct_NazjatarFollowerXP(nameplate)
-	local NazjatarFollowerXP = CreateFrame("StatusBar", nameplate:GetDebugName() .. "NazjatarFollowerXP", nameplate)
+function NP:Construct_WidgetXPBar(nameplate)
+	local WidgetXPBar = CreateFrame("StatusBar", nameplate:GetDebugName() .. "WidgetXPBar", nameplate)
+	WidgetXPBar:SetFrameStrata(nameplate:GetFrameStrata())
+	WidgetXPBar:SetFrameLevel(5)
+	WidgetXPBar:SetStatusBarTexture(E.Libs.LSM:Fetch("statusbar", NP.db.statusbar))
+	WidgetXPBar:CreateBackdrop("Transparent")
 
-	NazjatarFollowerXP:SetFrameStrata(nameplate:GetFrameStrata())
-	NazjatarFollowerXP:SetFrameLevel(5)
-	NazjatarFollowerXP:CreateBackdrop("Transparent")
-	NazjatarFollowerXP:SetStatusBarTexture(E.Libs.LSM:Fetch("statusbar", NP.db.statusbar))
+	WidgetXPBar.Rank = NP:Construct_TagText(nameplate.RaisedElement)
+	WidgetXPBar.ProgressText = NP:Construct_TagText(nameplate.RaisedElement)
 
-	NP.StatusBars[NazjatarFollowerXP] = true
+	NP.StatusBars[WidgetXPBar] = true
 
-	return NazjatarFollowerXP
+	return WidgetXPBar
 end
 
-function NP:Update_NazjatarFollowerXP(nameplate)
+function NP:Update_WidgetXPBar(nameplate)
 	local db = NP.db.units[nameplate.frameType]
-	if not db.nazjatarFollowerXP or not db.nazjatarFollowerXP.enable then
-		if nameplate:IsElementEnabled("NazjatarFollowerXP") then
-			nameplate:DisableElement("NazjatarFollowerXP")
+	if not db.widgetXPBar or not db.widgetXPBar.enable then
+		if nameplate:IsElementEnabled("WidgetXPBar") then
+			nameplate:DisableElement("WidgetXPBar")
 		end
 	else
-		if not nameplate:IsElementEnabled("NazjatarFollowerXP") then
-			nameplate:EnableElement("NazjatarFollowerXP")
+		if not nameplate:IsElementEnabled("WidgetXPBar") then
+			nameplate:EnableElement("WidgetXPBar")
 		end
 
-		nameplate.NazjatarFollowerXP:SetHeight(10)
-		nameplate.NazjatarFollowerXP:SetPoint("TOPLEFT", nameplate.Castbar, "BOTTOMLEFT", 0, db.nazjatarFollowerXP.yOffset)
-		nameplate.NazjatarFollowerXP:SetPoint("TOPRIGHT", nameplate.Castbar, "BOTTOMRIGHT", 0, db.nazjatarFollowerXP.yOffset)
+		local bar = nameplate.WidgetXPBar
+		bar:ClearAllPoints()
+		bar:Point("TOPLEFT", nameplate, "BOTTOMLEFT", 0, db.widgetXPBar.yOffset)
+		bar:Point("TOPRIGHT", nameplate, "BOTTOMRIGHT", 0, db.widgetXPBar.yOffset)
+		bar:Height(10)
 
-		local color = db.nazjatarFollowerXP.color
-		nameplate.NazjatarFollowerXP:SetStatusBarColor(color.r, color.g, color.b)
-		nameplate.NazjatarFollowerXP.Rank:SetPoint("RIGHT", nameplate.NazjatarFollowerXP, "LEFT", -4, 0)
-		nameplate.NazjatarFollowerXP.ProgressText:SetPoint("CENTER", nameplate.NazjatarFollowerXP, "CENTER")
-		nameplate.NazjatarFollowerXP:ForceUpdate()
+		bar.Rank:ClearAllPoints()
+		bar.Rank:Point("RIGHT", bar, "LEFT", -4, 0)
+		bar.ProgressText:ClearAllPoints()
+		bar.ProgressText:Point("CENTER", bar, "CENTER")
+
+		local color = db.widgetXPBar.color
+		bar:SetStatusBarColor(color.r, color.g, color.b)
+
+		bar:ForceUpdate()
 	end
 end

@@ -12,6 +12,7 @@ local assert, type, pcall, xpcall, next, print = assert, type, pcall, xpcall, ne
 local CreateFrame = CreateFrame
 local GetCVar = GetCVar
 local GetCVarBool = GetCVarBool
+local GetSpellInfo = GetSpellInfo
 local GetNumGroupMembers = GetNumGroupMembers
 local GetSpecialization = GetSpecialization
 local hooksecurefunc = hooksecurefunc
@@ -51,6 +52,7 @@ local LSM = E.Libs.LSM
 --Constants
 E.noop = function() end
 E.title = format('|cfffe7b2c%s |r', 'ElvUI')
+E.version = tonumber(GetAddOnMetadata('ElvUI', 'Version'))
 E.myfaction, E.myLocalizedFaction = UnitFactionGroup('player')
 E.mylevel = UnitLevel('player')
 E.myLocalizedClass, E.myclass, E.myClassID = UnitClass('player')
@@ -58,15 +60,16 @@ E.myLocalizedRace, E.myrace = UnitRace('player')
 E.myname = UnitName('player')
 E.myrealm = GetRealmName()
 E.myspec = GetSpecialization()
-E.version = GetAddOnMetadata('ElvUI', 'Version')
 E.wowpatch, E.wowbuild = GetBuildInfo()
 E.wowbuild = tonumber(E.wowbuild)
-E.IsRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
-E.resolution = ({GetScreenResolutions()})[GetCurrentResolution()] or GetCVar('gxWindowedResolution') --only used for now in our install.lua line 779
-E.screenwidth, E.screenheight = GetPhysicalScreenSize()
 E.isMacClient = IsMacClient()
+E.IsRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
+E.screenwidth, E.screenheight = GetPhysicalScreenSize()
+E.resolution = format('%dx%d', E.screenwidth, E.screenheight)
 E.NewSign = '|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:14:14|t' -- not used by ElvUI yet, but plugins like BenikUI and MerathilisUI use it.
+E.TexturePath = 'Interface\\AddOns\\ElvUI\\Media\\Textures\\' -- for plugins?
 E.InfoColor = '|cfffe7b2c'
+E.UserList = {}
 
 -- oUF Defines
 E.oUF.Tags.Vars.E = E
@@ -778,9 +781,10 @@ do
 		if event == 'CHAT_MSG_ADDON' then
 			if sender == myName then return end
 			if prefix == 'ELVUI_VERSIONCHK' then
-				local msg, ver = tonumber(message), tonumber(E.version)
+				local msg, ver = tonumber(message), E.version
 				local inCombat = InCombatLockdown()
 
+				E.UserList[gsub(sender, '%-'..myRealm,'')] = msg
 				if ver ~= G.general.version then
 					if not E.shownUpdatedWhileRunningPopup and not inCombat then
 						E:StaticPopup_Show('ELVUI_UPDATED_WHILE_RUNNING', nil, nil, {mismatch = ver > G.general.version})
@@ -924,7 +928,7 @@ function E:UpdateNamePlates(skipCallback)
 end
 
 function E:UpdateTooltip()
-	-- for plugins :3
+	Tooltip:SetTooltipFonts()
 end
 
 function E:UpdateBags(skipCallback)
@@ -994,7 +998,6 @@ function E:UpdateMisc(skipCallback)
 	Threat:UpdatePosition()
 
 	Totems:PositionAndSize()
-	Totems:ToggleEnable()
 
 	if not skipCallback then
 		E.callbacks:Fire('StaggeredUpdate')
@@ -1010,7 +1013,8 @@ function E:UpdateEnd()
 
 	E:SetMoversClampedToScreen(true) -- Go back to using clamp after resizing has taken place.
 
-	if (E.installSetup ~= true) and (E.private.install_complete == nil or (E.private.install_complete and type(E.private.install_complete) == 'boolean') or (E.private.install_complete and type(tonumber(E.private.install_complete)) == 'number' and tonumber(E.private.install_complete) <= 3.83)) then
+	local iver = E.private.install_complete
+	if (E.installSetup ~= true) and (not iver or ((type(iver) == 'boolean') or (type(tonumber(iver)) == 'number' and tonumber(iver) <= 3.83))) then
 		E.installSetup = nil
 		E:Install()
 	end
@@ -1062,6 +1066,9 @@ do
 			end
 			if E.private.chat.enable then
 				tinsert(staggerTable, 'UpdateChat')
+			end
+			if E.private.tooltip.enable then
+				tinsert(staggerTable, 'UpdateTooltip')
 			end
 			tinsert(staggerTable, 'UpdateDataBars')
 			tinsert(staggerTable, 'UpdateDataTexts')
@@ -1277,6 +1284,22 @@ function E:InitializeModules()
 	end
 end
 
+local function buffwatchConvert(spell)
+	if spell.sizeOverride then spell.sizeOverride = nil end
+	if spell.size then spell.size = nil end
+
+	if not spell.sizeOffset then
+		spell.sizeOffset = 0
+	end
+
+	if spell.styleOverride then
+		spell.style = spell.styleOverride
+		spell.styleOverride = nil
+	elseif not spell.style then
+		spell.style = 'coloredIcon'
+	end
+end
+
 function E:DBConversions()
 	--Fix issue where UIScale was incorrectly stored as string
 	E.global.general.UIScale = tonumber(E.global.general.UIScale)
@@ -1316,8 +1339,7 @@ function E:DBConversions()
 			E.db.unitframe.OORAlpha = nil
 		end
 
-		local rangeCheckUnits = { 'target', 'targettarget', 'targettargettarget', 'focus', 'focustarget', 'pet', 'pettarget', 'boss', 'arena', 'party', 'raid', 'raid40', 'raidpet', 'tank', 'assist' }
-		for _, unit in pairs(rangeCheckUnits) do
+		for _, unit in ipairs({'target','targettarget','targettargettarget','focus','focustarget','pet','pettarget','boss','arena','party','raid','raid40','raidpet','tank','assist'}) do
 			if E.db.unitframe.units[unit].rangeCheck ~= nil then
 				local enabled = E.db.unitframe.units[unit].rangeCheck
 				E.db.unitframe.units[unit].fader.enable = enabled
@@ -1342,6 +1364,11 @@ function E:DBConversions()
 		E.db.auras.fontSize = nil
 	end
 
+	--Remove stale font settings from Cooldown system for top auras
+	if E.db.auras.cooldown.fonts then
+		E.db.auras.cooldown.fonts = nil
+	end
+
 	--Convert Nameplate Aura Duration to new Cooldown system
 	if E.db.nameplates.durationFont then
 		E.db.nameplates.cooldown.fonts.font = E.db.nameplates.durationFont
@@ -1362,6 +1389,23 @@ function E:DBConversions()
 		E.db.nameplates.units.TARGET.nonTargetTransparency = nil
 	end
 
+	--Removed additional table in nameplate filters cause it was basically useless
+	for _, unit in ipairs({'PLAYER','FRIENDLY_PLAYER','ENEMY_PLAYER','FRIENDLY_NPC','ENEMY_NPC'}) do
+		if E.db.nameplates.units[unit].buffs and E.db.nameplates.units[unit].buffs.filters ~= nil then
+			E.db.nameplates.units[unit].buffs.minDuration = E.db.nameplates.units[unit].buffs.filters.minDuration or P.nameplates.units[unit].buffs.minDuration
+			E.db.nameplates.units[unit].buffs.maxDuration = E.db.nameplates.units[unit].buffs.filters.maxDuration or P.nameplates.units[unit].buffs.maxDuration
+			E.db.nameplates.units[unit].buffs.priority = E.db.nameplates.units[unit].buffs.filters.priority or P.nameplates.units[unit].buffs.priority
+			E.db.nameplates.units[unit].buffs.filters = nil
+		end
+		if E.db.nameplates.units[unit].debuffs and E.db.nameplates.units[unit].debuffs.filters ~= nil then
+			E.db.nameplates.units[unit].debuffs.minDuration = E.db.nameplates.units[unit].debuffs.filters.minDuration or P.nameplates.units[unit].debuffs.minDuration
+			E.db.nameplates.units[unit].debuffs.maxDuration = E.db.nameplates.units[unit].debuffs.filters.maxDuration or P.nameplates.units[unit].debuffs.maxDuration
+			E.db.nameplates.units[unit].debuffs.priority = E.db.nameplates.units[unit].debuffs.filters.priority or P.nameplates.units[unit].debuffs.priority
+			E.db.nameplates.units[unit].debuffs.filters = nil
+		end
+	end
+
+	--Moved target scale to a style filter
 	if E.db.nameplates.units.TARGET.scale ~= nil then
 		E.global.nameplate.filters.ElvUI_Target.actions.scale = E.db.nameplates.units.TARGET.scale
 		E.db.nameplates.units.TARGET.scale = nil
@@ -1387,8 +1431,7 @@ function E:DBConversions()
 	end
 
 	--Heal Prediction is now a table instead of a bool
-	local healPredictionUnits = {'player','target','focus','pet','arena','party','raid','raid40','raidpet'}
-	for _, unit in pairs(healPredictionUnits) do
+	for _, unit in ipairs({'player','target','focus','pet','arena','party','raid','raid40','raidpet'}) do
 		if type(E.db.unitframe.units[unit].healPrediction) ~= 'table' then
 			local enabled = E.db.unitframe.units[unit].healPrediction
 			E.db.unitframe.units[unit].healPrediction = {}
@@ -1452,6 +1495,45 @@ function E:DBConversions()
 		E.db.nameplates.visibility.enemy.minions = E.db.nameplates.units.ENEMY_PLAYER.minions or E.db.nameplates.units.ENEMY_NPC.minions
 		E.db.nameplates.units.ENEMY_PLAYER.minions = nil
 		E.db.nameplates.units.ENEMY_NPC.minions = nil
+	end
+
+	-- removed override stuff from aurawatch
+	for _, spells in pairs(E.global.unitframe.buffwatch) do
+		for _, spell in pairs(spells) do
+			buffwatchConvert(spell)
+		end
+	end
+	for _, spell in pairs(E.db.unitframe.filters.buffwatch) do
+		buffwatchConvert(spell)
+	end
+
+	-- fix aurabars colors
+	local auraBarColors = E.global.unitframe.AuraBarColors
+	for spell, info in pairs(auraBarColors) do
+		if type(spell) == 'string' then
+			local spellID = select(7, GetSpellInfo(spell))
+			if spellID and not auraBarColors[spellID] then
+				auraBarColors[spellID] = info
+				auraBarColors[spell] = nil
+				spell = spellID
+			end
+		end
+
+		if type(info) == 'boolean' then
+			auraBarColors[spell] = { color = { r = 1, g = 1, b = 1 }, enable = info }
+		elseif type(info) == 'table' then
+			if info.r or info.g or info.b then
+				auraBarColors[spell] = { color = { r = info.r or 1, g = info.g or 1, b = info.b or 1 }, enable = true }
+			elseif info.color then -- azil created a void hole, delete it -x-
+				if info.color.color then info.color.color = nil end
+				if info.color.enable then info.color.enable = nil end
+				if info.color.a then info.color.a = nil end -- alpha isnt supported by this
+			end
+		end
+	end
+
+	if E.db.unitframe.colors.debuffHighlight.blendMode == 'MOD' then
+		E.db.unitframe.colors.debuffHighlight.blendMode = P.unitframe.colors.debuffHighlight.blendMode
 	end
 end
 

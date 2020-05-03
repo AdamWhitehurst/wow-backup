@@ -25,11 +25,11 @@ TradeSkillMaster_AppHelper: enabled
 Details: enabled
 Details_3DModelsPaths: disabled
 Details_DataStorage: enabled
-Details_EncounterDetails: disabled
+Details_EncounterDetails: enabled
 Details_RaidCheck: enabled
-Details_Streamer: disabled
-Details_TinyThreat: disabled
-Details_Vanguard: disabled
+Details_Streamer: enabled
+Details_TinyThreat: enabled
+Details_Vanguard: enabled
 Bagnon: disabled
 Storyline: disabled
 Immersion: enabled
@@ -41,7 +41,7 @@ Azeroth Auto Pilot: disabled
 CandyBuckets: enabled
 Clique: disabled
 CensusPlus: disabled
-ElvUI_ExtraActionBars: enabled
+ElvUI_ExtraActionBars: disabled
 ElvUI_AuraBarsMovers: disabled
 HandyNotes_WarfrontTreasures: disabled
 HandyNotes_WarfrontRares: disabled
@@ -128,7 +128,7 @@ BtWQuestsBattleForAzeroth: enabled
 BugSack: enabled
 cargBags_Nivaya: disabled
 ChampionCommander: enabled
-ChocolateBar: enabled
+ChocolateBar: disabled
 ConsolePortBar: disabled
 ConsolePortAdvanced: disabled
 ConsolePortHelp: disabled
@@ -291,7 +291,7 @@ DBM-Brawlers: enabled
 DBM-CrucibleofStorms: enabled
 DBM-DMF: enabled
 DBM-Party-BfA: enabled
-DBM-Nyalotha: disabled
+DBM-Nyalotha: enabled
 DBM-EternalPalace: enabled
 DBM-Uldir: enabled
 DBM-WorldEvents: enabled
@@ -320,3 +320,8 @@ LibTextDump-1.0: enabled
 LibToast-1.0: enabled
 totalRP3_Debug: enabled
 WeakAurasArchive: enabled
+BtWQuestsLegion: enabled
+WorldQuestTracker: enabled
+ElvUI_CastBarOverlay: disabled
+ElvUI_EverySecondCounts: disabled
+ElvUI_CustomTweaks: disabled

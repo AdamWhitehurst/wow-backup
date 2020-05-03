@@ -56,14 +56,14 @@ function E:CollectEssenceInfo(index, lineText, slotInfo)
 	local step = 1
 	local essence = slotInfo.essences[step]
 	if essence and next(essence) and (strfind(lineText, ITEM_SPELL_TRIGGER_ONEQUIP, nil, true) and strfind(lineText, ESSENCE_DESCRIPTION, nil, true)) then
-		for i = 4, 2, -1 do
+		for i = 5, 2, -1 do
 			local line = _G['ElvUI_ScanTooltipTextLeft'..index - i]
 			local text = line and line:GetText()
 
 			if text and (not strmatch(text, '^[ +]')) and essence and next(essence) then
 				local r, g, b = line:GetTextColor()
 
-				essence[4] = E:RGBToHex(r, g, b, '')
+				essence[4] = E:RGBToHex(r, g, b)
 				essence[5] = text
 
 				step = step + 1

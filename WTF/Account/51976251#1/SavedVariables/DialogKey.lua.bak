@@ -2,12 +2,13 @@
 DialogKeyDB = {
 	["profileKeys"] = {
 		["Andalsa - Tichondrius"] = "Default",
-		["Arndoss - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
-		["Andalsam - Tichondrius"] = "Default",
-		["Andallsa - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
 	},
 	["global"] = {
 		["shownBindWarning"] = true,

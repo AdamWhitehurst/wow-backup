@@ -1,4 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file='Patch.lua'/>
 	<Script file='Core.lua'/>
 	<Script file='Math.lua'/>
 	<Script file='API.lua'/>
@@ -22,5 +23,5 @@
 	<Script file='Cooldowns.lua'/>
 	<Script file='MapInfo.lua'/>
 	<Script file='ModuleCopy.lua'/>
-	<Script file="Tags.lua"/>
+	<Script file='Tags.lua'/>
 </Ui>

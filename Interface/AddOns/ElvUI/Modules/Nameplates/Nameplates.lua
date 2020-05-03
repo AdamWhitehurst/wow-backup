@@ -123,7 +123,6 @@ function NP:SetCVars()
 		SetCVar("nameplateOtherBottomInset", -1)
 	end
 
-	SetCVar("nameplateMaxDistance", NP.db.loadDistance)
 	SetCVar("nameplateMotion", NP.db.motionType == "STACKED" and 1 or 0)
 
 	SetCVar("NameplatePersonalShowAlways", NP.db.units.PLAYER.visibility.showAlways and 1 or 0)
@@ -277,11 +276,9 @@ function NP:StylePlate(nameplate)
 	nameplate.ClassPower = NP:Construct_ClassPower(nameplate)
 	nameplate.PvPIndicator = NP:Construct_PvPIndicator(nameplate.RaisedElement) -- Horde / Alliance / HonorInfo
 	nameplate.PvPClassificationIndicator = NP:Construct_PvPClassificationIndicator(nameplate.RaisedElement) -- Cart / Flag / Orb / Assassin Bounty
-	nameplate.HealerSpecs = NP:Construct_HealerSpecs(nameplate.RaisedElement)
+	nameplate.PVPRole = NP:Construct_PVPRole(nameplate.RaisedElement)
 	nameplate.Cutaway = NP:Construct_Cutaway(nameplate)
-	nameplate.NazjatarFollowerXP = NP:Construct_NazjatarFollowerXP(nameplate)
-	nameplate.NazjatarFollowerXP.Rank = NP:Construct_TagText(nameplate.RaisedElement)
-	nameplate.NazjatarFollowerXP.ProgressText = NP:Construct_TagText(nameplate.RaisedElement)
+	nameplate.WidgetXPBar = NP:Construct_WidgetXPBar(nameplate)
 
 	NP:Construct_Auras(nameplate)
 
@@ -299,9 +296,15 @@ end
 function NP:UpdatePlate(nameplate)
 	NP:Update_Tags(nameplate)
 	NP:Update_Highlight(nameplate)
+	NP:Update_RaidTargetIndicator(nameplate)
+	NP:Update_PVPRole(nameplate)
+	NP:Update_QuestIcons(nameplate)
+	NP:Update_WidgetXPBar(nameplate)
 
-	if (nameplate.VisibilityChanged or nameplate.NameOnlyChanged) or (not NP.db.units[nameplate.frameType].enable) or NP.db.units[nameplate.frameType].nameOnly then
-		NP:DisablePlate(nameplate, nameplate.NameOnlyChanged or (NP.db.units[nameplate.frameType].nameOnly and not nameplate.VisibilityChanged))
+	local SF_NameOnly = NP:StyleFilterCheckChanges(nameplate, 'NameOnly')
+	local SF_Visibility = NP:StyleFilterCheckChanges(nameplate, 'Visibility')
+	if SF_Visibility or SF_NameOnly or NP.db.units[nameplate.frameType].nameOnly or not NP.db.units[nameplate.frameType].enable then
+		NP:DisablePlate(nameplate, SF_NameOnly or (NP.db.units[nameplate.frameType].nameOnly and not SF_Visibility))
 	else
 		NP:Update_Health(nameplate)
 		NP:Update_HealthPrediction(nameplate)
@@ -310,16 +313,12 @@ function NP:UpdatePlate(nameplate)
 		NP:Update_ClassPower(nameplate)
 		NP:Update_Auras(nameplate, true)
 		NP:Update_ClassificationIndicator(nameplate)
-		NP:Update_QuestIcons(nameplate)
 		NP:Update_Portrait(nameplate)
 		NP:Update_PvPIndicator(nameplate) -- Horde / Alliance / HonorInfo
 		NP:Update_PvPClassificationIndicator(nameplate) -- Cart / Flag / Orb / Assassin Bounty
 		NP:Update_TargetIndicator(nameplate)
 		NP:Update_ThreatIndicator(nameplate)
-		NP:Update_RaidTargetIndicator(nameplate)
-		NP:Update_HealerSpecs(nameplate)
 		NP:Update_Cutaway(nameplate)
-		NP:Update_NazjatarFollowerXP(nameplate)
 
 		if E.myclass == "DEATHKNIGHT" then
 			NP:Update_Runes(nameplate)
@@ -346,12 +345,11 @@ function NP:DisablePlate(nameplate, nameOnly)
 	if nameplate:IsElementEnabled("ClassificationIndicator") then nameplate:DisableElement("ClassificationIndicator") end
 	if nameplate:IsElementEnabled("Castbar") then nameplate:DisableElement("Castbar") end
 	if nameplate:IsElementEnabled("Portrait") then nameplate:DisableElement("Portrait") end
-	if nameplate:IsElementEnabled("QuestIcons") then nameplate:DisableElement("QuestIcons") end
 	if nameplate:IsElementEnabled("ThreatIndicator") then nameplate:DisableElement("ThreatIndicator") end
+	if nameplate:IsElementEnabled("TargetIndicator") then nameplate:DisableElement("TargetIndicator") end
 	if nameplate:IsElementEnabled("ClassPower") then nameplate:DisableElement("ClassPower") end
 	if nameplate:IsElementEnabled("PvPIndicator") then nameplate:DisableElement("PvPIndicator") end
 	if nameplate:IsElementEnabled("PvPClassificationIndicator") then nameplate:DisableElement("PvPClassificationIndicator") end
-	if nameplate:IsElementEnabled("HealerSpecs") then nameplate:DisableElement("HealerSpecs") end
 	if nameplate:IsElementEnabled("Auras") then nameplate:DisableElement("Auras") end
 
 	if E.myclass == "DEATHKNIGHT" and nameplate:IsElementEnabled("Runes") then
@@ -374,19 +372,31 @@ function NP:DisablePlate(nameplate, nameOnly)
 		nameplate.Name:Show()
 		nameplate.Name:ClearAllPoints()
 		nameplate.Name:Point("CENTER", nameplate, "CENTER", 0, 0)
+
+		nameplate.RaidTargetIndicator:ClearAllPoints()
+		nameplate.RaidTargetIndicator:Point("BOTTOM", nameplate, "TOP", 0, 0)
+
+		nameplate.PVPRole:ClearAllPoints()
+		nameplate.PVPRole:Point("RIGHT", nameplate.Name, "LEFT", -6, 0)
+
+		nameplate.QuestIcons:ClearAllPoints()
+		nameplate.QuestIcons:Point("LEFT", nameplate.Name, "RIGHT", 6, 0)
+
 		if NP.db.units[nameplate.frameType].showTitle then
 			nameplate.Title:Show()
 			nameplate.Title:ClearAllPoints()
 			nameplate.Title:Point("TOP", nameplate.Name, "BOTTOM", 0, -2)
 		end
-	elseif nameplate:IsElementEnabled("Highlight") then
-		nameplate:DisableElement("Hightlight")
+	else
+		if nameplate:IsElementEnabled("QuestIcons") then nameplate:DisableElement("QuestIcons") end
+		if nameplate:IsElementEnabled("Highlight") then nameplate:DisableElement("Hightlight") end
+		if nameplate:IsElementEnabled("PVPRole") then nameplate:DisableElement("PVPRole") end
 	end
 end
 
 function NP:SetupTarget(nameplate, removed)
 	local TCP = _G.ElvNP_TargetClassPower
-	local nameOnly = nameplate and (nameplate.NameOnlyChanged or NP.db.units[nameplate.frameType].nameOnly)
+	local nameOnly = nameplate and (NP:StyleFilterCheckChanges(nameplate, 'NameOnly') or NP.db.units[nameplate.frameType].nameOnly)
 	TCP.realPlate = (NP.db.units.TARGET.classpower.enable and not (removed or nameOnly) and nameplate) or nil
 
 	local moveToPlate = TCP.realPlate or TCP
@@ -428,8 +438,9 @@ function NP:SetNamePlateEnemyClickThrough()
 end
 
 function NP:Update_StatusBars()
-	for StatusBar in pairs(NP.StatusBars) do
-		StatusBar:SetStatusBarTexture(E.LSM:Fetch("statusbar", NP.db.statusbar) or E.media.normTex)
+	for bar in pairs(NP.StatusBars) do
+		local SF_HealthTexture = NP:StyleFilterCheckChanges(bar:GetParent(), 'HealthTexture')
+		if not SF_HealthTexture then bar:SetStatusBarTexture(E.LSM:Fetch("statusbar", NP.db.statusbar) or E.media.normTex) end
 	end
 end
 
@@ -552,7 +563,9 @@ function NP:NamePlateCallBack(nameplate, event, unit)
 
 		unit = unit or nameplate.unit
 
-		nameplate.blizzPlate = nameplate:GetParent().UnitFrame
+		local blizzPlate = nameplate:GetParent().UnitFrame
+		nameplate.blizzPlate = blizzPlate
+		nameplate.widget = blizzPlate.WidgetContainer
 		nameplate.className, nameplate.classFile, nameplate.classID = UnitClass(unit)
 		nameplate.classification = UnitClassification(unit)
 		nameplate.creatureType = UnitCreatureType(unit)

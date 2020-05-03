@@ -1,0 +1,71 @@
+
+DriftPoints = {
+	["WorldMapFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "BOTTOM",
+		["relativePoint"] = "BOTTOM",
+		["yOfs"] = 150.8206787109375,
+		["xOfs"] = -200.2051239013672,
+	},
+	["PlayerTalentFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["yOfs"] = 116.0512466430664,
+		["xOfs"] = -2.756466865539551,
+	},
+	["ArtifactFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "BOTTOMLEFT",
+		["relativePoint"] = "BOTTOMLEFT",
+		["yOfs"] = 66.29066467285156,
+		["xOfs"] = -0,
+	},
+	["WardrobeFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "TOP",
+		["relativePoint"] = "TOP",
+		["yOfs"] = -96.30769348144531,
+		["xOfs"] = -118.5257034301758,
+	},
+	["PVEFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["yOfs"] = 132.7694702148438,
+		["xOfs"] = -11.01272392272949,
+	},
+	["TalkingHeadFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["yOfs"] = 162.6262817382813,
+		["xOfs"] = 6.870229721069336,
+	},
+	["CollectionsJournal"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["yOfs"] = 88.62390899658203,
+		["xOfs"] = -209.0472564697266,
+	},
+	["ColorPickerFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+		["yOfs"] = 57.4362907409668,
+		["xOfs"] = 34.18821716308594,
+	},
+	["TaxiFrame"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "TOP",
+		["relativePoint"] = "TOP",
+		["yOfs"] = -90.83771514892578,
+		["xOfs"] = -92.692138671875,
+	},
+}
+DriftOptions = {
+	["dragKeyFunc"] = nil --[[ skipped inline function ]],
+	["framesAreLocked"] = false,
+	["dragKey"] = 1,
+}

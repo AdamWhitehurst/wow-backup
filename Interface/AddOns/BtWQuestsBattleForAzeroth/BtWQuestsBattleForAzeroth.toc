@@ -1,6 +1,6 @@
 ## Interface: 80300
 ## Title: BtWQuests: Battle for Azeroth
-## Version: 46
+## Version: 47
 ## Notes: Battle for Azeroth quest data for BtWQuests
 ## Author: Breen
 ## Dependencies: BtWQuests
@@ -8,6 +8,7 @@
 ## LoadOnDemand: 1
 ## X-BtWQuests: Battle for Azeroth
 ## X-BtWQuests-Expansion: 7
+## X-BtWQuests-Expansion-Image: UI-Expansion 0 0.90625 0 0.8125
 ## X-BtWQuests-AutoLoad: 1
 ## X-Part-Of: BtWQuests
 

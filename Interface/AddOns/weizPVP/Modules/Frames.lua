@@ -2,128 +2,101 @@
 --|> FRAMES
 --: Creates and updates the addon frames and widgets
 -------------------------------------------------------------------------------
---|> UPVALUE GLOBALS
+--|> Upvalue Globals
 -------------------------------------------------------------------------------
-local weizPVP = weizPVP
+local _, NS = ...
+local UIFrameFlash = UIFrameFlash
 local InCombatLockdown = InCombatLockdown
 local IsControlKeyDown = IsControlKeyDown
-local CreateFrame = CreateFrame
-local UIFrameFlash = UIFrameFlash
 local unpack = unpack
 
--------------------------------------------------------------------------------
 --|> LIBS
 -------------------------------------------------------------------------------
 local SM = LibStub:GetLibrary("LibSharedMedia-3.0")
 
--------------------------------------------------------------------------------
---|> GLOBAL FUNCTIONS
--------------------------------------------------------------------------------
 --> Adjust Scroll Offset
--------------------------------------------------------------------------------
 local offset = 0
-function weizPVP.AdustScrollOffset(self, value)
+local function AdustScrollOffset(value)
     if not InCombatLockdown() then
-        local vertScroll = weizPVP.ScrollFrame:GetVerticalScroll()
-        local RowHeight = weizPVP.Options.Bars.RowHeight + weizPVP.Options.Bars.VerticalSpacing
-        local offsetMax = weizPVP.ListFrame:GetHeight() - weizPVP.ScrollFrame:GetHeight()
+        local vertScroll = NS.ScrollFrame:GetVerticalScroll()
+        local RowHeight = NS.Options.Bars.RowHeight + NS.Options.Bars.VerticalSpacing
+        local offsetMax = NS.ListFrame:GetHeight() - NS.ScrollFrame:GetHeight()
         if value > 0 then
             offset = vertScroll - (RowHeight)
         else
             offset = vertScroll + (RowHeight)
         end
         if offset < 0 then
-            weizPVP.ScrollFrame:SetVerticalScroll(0)
+            NS.ScrollFrame:SetVerticalScroll(0)
         elseif offset > offsetMax then
-            weizPVP.ScrollFrame:SetVerticalScroll(offsetMax)
+            NS.ScrollFrame:SetVerticalScroll(offsetMax)
         else
-            weizPVP.ScrollFrame:SetVerticalScroll(offset)
+            NS.ScrollFrame:SetVerticalScroll(offset)
         end
     end
 end
 
---> AlignFrameToPixels
------------------------------------------------------------------------
-function weizPVP:AlignFrameToPixels(frame)
-    if not InCombatLockdown() then
-        local effectiveScale = frame:GetEffectiveScale()
-        local x, y = frame:GetCenter()
-        if x and y then
-            x, y = x * effectiveScale, y * effectiveScale
-            local fScale = frame:GetScale() or 1
-            x, y = x / fScale, y / fScale
-            frame:SetPoint("CENTER", nil, "BOTTOMLEFT", weizPVP.ScaleCoords(x, y))
-        end
-    end
-end
-
--------------------------------------------------------------------------------
---|> CREATE CORE FRAME
--------------------------------------------------------------------------------
-function weizPVP:CreateCoreFrames()
-    --> CoreFrame
-    -----------------------------------------------------------------------
-    weizPVP.CoreFrame = weizPVP.CoreFrame or CreateFrame("Frame", "weizPVP.CoreFrame", UIParent)
-    weizPVP.CoreFrame:SetClampedToScreen(true)
-    weizPVP.CoreFrame:SetFrameLevel(100)
-    weizPVP.CoreFrame:SetFrameStrata("MEDIUM")
-    weizPVP.CoreFrame:SetPoint("CENTER", UIParent)
-    weizPVP.CoreFrame:SetSize(251, 247)
-    weizPVP.CoreFrame:SetMovable(true)
-    weizPVP.CoreFrame:EnableMouse(true)
-    weizPVP.CoreFrame:SetDontSavePosition(true)
-    weizPVP.CoreFrame:SetBackdrop(
+--> CREATE CORE FRAME
+function NS.CreateCoreFrames()
+    -- CoreFrame
+    NS.CoreFrame = NS.CoreFrame or CreateFrame("Frame", "weizPVP.CoreFrame", UIParent)
+    NS.CoreFrame:SetClampedToScreen(true)
+    NS.CoreFrame:SetFrameLevel(100)
+    NS.CoreFrame:SetFrameStrata("MEDIUM")
+    NS.CoreFrame:SetPoint("CENTER", UIParent)
+    NS.CoreFrame:SetSize(256, 256)
+    NS.CoreFrame:SetMovable(true)
+    NS.CoreFrame:EnableMouse(true)
+    NS.CoreFrame:SetDontSavePosition(true)
+    NS.CoreFrame:SetBackdrop(
         {
-            bgFile = SM:Fetch("background", weizPVP.Options.Frames.BackgroundTexture),
+            bgFile = SM:Fetch("background", NS.Options.Frames.BackgroundTexture),
             tile = false
         }
     )
-    weizPVP.CoreFrame:SetBackdropColor(unpack(weizPVP.Options.Frames.BackgroundColor))
-    weizPVP.CoreFrame:SetResizable(true)
-    weizPVP.CoreFrame:SetMinResize(180, weizPVP.Options.Bars.RowHeight)
-    weizPVP.CoreFrame:SetMaxResize(500, weizPVP.Options.Frames.List.Height)
-    weizPVP.CoreFrame:Show()
+    NS.CoreFrame:SetBackdropColor(unpack(NS.Options.Frames.BackgroundColor))
+    NS.CoreFrame:SetResizable(true)
+    NS.CoreFrame:SetMinResize(180, NS.Options.Bars.RowHeight)
+    NS.CoreFrame:SetMaxResize(500, NS.Options.Frames.List.Height)
+    NS.CoreFrame:Show()
 
-    --> weizPVP.ScrollFrame
-    --: The frame that is a child of weizPVP.CoreFrame that will be scolling with content
-    -----------------------------------------------------------------------
-    weizPVP.ScrollFrame = weizPVP.ScrollFrame or CreateFrame("ScrollFrame", "weizPVP.ScrollFrame", weizPVP.CoreFrame)
-    weizPVP.ScrollFrame:EnableMouseWheel(true)
-    weizPVP.ScrollFrame:SetClipsChildren(true)
-    weizPVP.ScrollFrame:SetPoint("TOPLEFT", weizPVP.CoreFrame, "TOPLEFT", weizPVP.Options.Frames.BorderSize, 0)
-    weizPVP.ScrollFrame:SetPoint("BOTTOMRIGHT", weizPVP.CoreFrame, "BOTTOMRIGHT", (-1 * weizPVP.Options.Frames.BorderSize), 0)
+    --> NS.ScrollFrame
+    --: The frame that is a child of NS.CoreFrame that will be scolling with content
+    NS.ScrollFrame = NS.ScrollFrame or CreateFrame("ScrollFrame", "weizPVP.ScrollFrame", NS.CoreFrame)
+    NS.ScrollFrame:EnableMouseWheel(true)
+    NS.ScrollFrame:SetClipsChildren(true)
+    NS.ScrollFrame:SetPoint("TOPLEFT", NS.CoreFrame, "TOPLEFT", NS.Options.Frames.BorderSize, 0)
+    NS.ScrollFrame:SetPoint("BOTTOMRIGHT", NS.CoreFrame, "BOTTOMRIGHT", (-1 * NS.Options.Frames.BorderSize), 0)
 
     --> ScrollFrame: MOUSEWHEEL
-    weizPVP.ScrollFrame:SetScript(
+    NS.ScrollFrame:SetScript(
         "OnMouseWheel",
         function(_, value)
-            weizPVP.AdustScrollOffset(self, value)
+            AdustScrollOffset(value)
         end
     )
 
     --> ListFrame
-    --: The frame that is a child of weizPVP.CoreFrame that will be scolling with content
-    -----------------------------------------------------------------------
-    weizPVP.ListFrame = weizPVP.ListFrame or CreateFrame("Frame", "weizPVP.ListFrame", weizPVP.ScrollFrame)
-    weizPVP.ListFrame:SetPoint("CENTER", weizPVP.ScrollFrame, "CENTER", 0, 1)
-    weizPVP.ListFrame:SetPoint("TOP", weizPVP.CoreFrame, "BOTTOM", 0, 1)
-    weizPVP.ListFrame:SetHeight(weizPVP.Options.Frames.List.Height)
-    weizPVP.ListFrame:SetWidth(weizPVP.ScrollFrame:GetWidth() - weizPVP.Options.Frames.BorderSize)
-    weizPVP.ScrollFrame:SetScrollChild(weizPVP.ListFrame)
+    --: The frame that is a child of NS.CoreFrame that will be scolling with content
+    NS.ListFrame = NS.ListFrame or CreateFrame("Frame", "weizPVP.ListFrame", NS.ScrollFrame)
+    NS.ListFrame:SetPoint("CENTER", NS.ScrollFrame, "CENTER", 0, 1)
+    NS.ListFrame:SetPoint("TOP", NS.CoreFrame, "BOTTOM", 0, 1)
+    NS.ListFrame:SetHeight(NS.Options.Frames.List.Height)
+    NS.ListFrame:SetWidth(NS.ScrollFrame:GetWidth() - NS.Options.Frames.BorderSize)
+    NS.ScrollFrame:SetScrollChild(NS.ListFrame)
 
     --> HeaderFrame
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame = weizPVP.HeaderFrame or CreateFrame("Frame", "weizPVP.HeaderFrame", UIParent)
-    weizPVP.HeaderFrame:SetClampedToScreen(true)
-    weizPVP.HeaderFrame:SetFrameStrata("MEDIUM")
-    weizPVP.HeaderFrame:SetHeight(weizPVP.Options.Frames.Header.Height)
-    weizPVP.HeaderFrame:SetPoint("BOTTOMLEFT", weizPVP.CoreFrame, "TOPLEFT")
-    weizPVP.HeaderFrame:SetPoint("BOTTOMRIGHT", weizPVP.CoreFrame, "TOPRIGHT")
-    weizPVP.HeaderFrame:SetDontSavePosition(true)
-    weizPVP.HeaderFrame:SetFrameLevel(400)
-    weizPVP.HeaderFrame:RegisterForDrag("LeftButton")
-    weizPVP.HeaderFrame:EnableMouse(true)
-    weizPVP.HeaderFrame:SetBackdrop(
+    NS.HeaderFrame = NS.HeaderFrame or CreateFrame("Frame", "weizPVP.HeaderFrame", UIParent)
+    NS.HeaderFrame:SetClampedToScreen(true)
+    NS.HeaderFrame:SetFrameStrata("MEDIUM")
+    NS.HeaderFrame:SetHeight(NS.Options.Frames.Header.Height)
+    NS.HeaderFrame:SetPoint("BOTTOMLEFT", NS.CoreFrame, "TOPLEFT")
+    NS.HeaderFrame:SetPoint("BOTTOMRIGHT", NS.CoreFrame, "TOPRIGHT")
+    NS.HeaderFrame:SetDontSavePosition(true)
+    NS.HeaderFrame:SetFrameLevel(400)
+    NS.HeaderFrame:RegisterForDrag("LeftButton")
+    NS.HeaderFrame:EnableMouse(true)
+    NS.HeaderFrame:SetBackdrop(
         {
             bgFile = SM:Fetch("background", "weizPVP: #FFFFFF"),
             tile = false,
@@ -132,80 +105,82 @@ function weizPVP:CreateCoreFrames()
             insets = {left = 0, right = 0, top = 0, bottom = 0}
         }
     )
-    weizPVP.HeaderFrame:SetBackdropColor(unpack(weizPVP.Options.Frames.Header.BackgroundColor))
-    weizPVP.HeaderFrame:SetBackdropBorderColor(0, 0, 0, 1)
+    NS.HeaderFrame:SetBackdropColor(unpack(NS.Options.Frames.Header.BackgroundColor))
+    NS.HeaderFrame:SetBackdropBorderColor(0, 0, 0, 1)
     --> HeaderFrame.Highlight
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame.Highlight = weizPVP.HeaderFrame.Highlight or CreateFrame("Frame", "weizPVP:HeaderFrame.Highlight", weizPVP.HeaderFrame)
+    NS.HeaderFrame.Highlight = NS.HeaderFrame.Highlight or CreateFrame("Frame", "weizPVP:HeaderFrame.Highlight", NS.HeaderFrame)
 
-    --> HeaderFrame.Text
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame.Title1 = weizPVP.HeaderFrame.Title1 or weizPVP.HeaderFrame:CreateFontString(nil, "MEDIUM", nil)
-    weizPVP.HeaderFrame.Title1:SetPoint("LEFT", weizPVP.HeaderFrame, "LEFT", 8, 0)
-    weizPVP.HeaderFrame.Title1:SetFont(SM:Fetch("font", weizPVP.Options.Frames.Header.Font), weizPVP.Options.Frames.Header.FontSize, weizPVP.Options.Frames.Header.FontOutline)
-    weizPVP.HeaderFrame.Title1:SetJustifyH("LEFT")
-    weizPVP.HeaderFrame.Title1:SetDrawLayer("OVERLAY")
-    weizPVP.HeaderFrame.Title1:SetText("|cffffffffNEARBY|r|cff888888:|r ")
-    --> HeaderFrame.Text
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame.TitleVar = weizPVP.HeaderFrame.TitleVar or weizPVP.HeaderFrame:CreateFontString(nil, "MEDIUM", nil)
-    weizPVP.HeaderFrame.TitleVar:SetPoint("LEFT", weizPVP.HeaderFrame.Title1, "RIGHT", 0, 0)
-    weizPVP.HeaderFrame.TitleVar:SetFont(SM:Fetch("font", weizPVP.Options.Frames.Header.Font), weizPVP.Options.Frames.Header.FontSize, weizPVP.Options.Frames.Header.FontOutline)
-    weizPVP.HeaderFrame.TitleVar:SetJustifyH("LEFT")
-    weizPVP.HeaderFrame.TitleVar:SetDrawLayer("OVERLAY")
-    weizPVP.HeaderFrame.TitleVar:SetText("|cFF26FF540|r")
+    --> HeaderFrame.Title
+    NS.HeaderFrame.Title1 = NS.HeaderFrame.Title1 or NS.HeaderFrame:CreateFontString(nil, "ARTWORK", nil)
+    NS.HeaderFrame.Title1:SetPoint("LEFT", NS.HeaderFrame, "LEFT", 8, 0)
+    NS.HeaderFrame.Title1:SetFont(
+        SM:Fetch("font", NS.Options.Frames.Header.Font),
+        NS.Options.Frames.Header.FontSize,
+        NS.Options.Frames.Header.FontOutline
+    )
+    NS.HeaderFrame.Title1:SetJustifyH("LEFT")
+    NS.HeaderFrame.Title1:SetDrawLayer("OVERLAY")
+    NS.HeaderFrame.Title1:SetText("|cffffffffNEARBY|r|cff888888:|r ")
+    --> HeaderFrame.TitleVar
+    NS.HeaderFrame.TitleVar = NS.HeaderFrame.TitleVar or NS.HeaderFrame:CreateFontString(nil, "ARTWORK", nil)
+    NS.HeaderFrame.TitleVar:SetPoint("LEFT", NS.HeaderFrame.Title1, "RIGHT", 0, 0)
+    NS.HeaderFrame.TitleVar:SetFont(
+        SM:Fetch("font", NS.Options.Frames.Header.Font),
+        NS.Options.Frames.Header.FontSize,
+        NS.Options.Frames.Header.FontOutline
+    )
+    NS.HeaderFrame.TitleVar:SetJustifyH("LEFT")
+    NS.HeaderFrame.TitleVar:SetDrawLayer("OVERLAY")
+    NS.HeaderFrame.TitleVar:SetText("|cFF26FF540|r")
 
     --> HeaderFrame: ON MOUSE DOWN
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame:SetScript(
+    NS.HeaderFrame:SetScript(
         "OnMouseDown",
         function(_, button)
             GameTooltip:Hide()
             GameTooltip:ClearLines()
             if button == "LeftButton" then
-                if weizPVP.Options.Window.Locked == true then --> WINDOW LOCKED; It will not move.
-                    weizPVP:SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
-                    UIFrameFlash(weizPVP.HeaderFrame.Highlight, 0.1, 0.6, 0.7)
-                elseif weizPVP.Options.Window.Pinned == true then --> WINDOW PINNED; Clicking doesnt help.
-                    weizPVP:SetStatusBarMessage("Window is |cFFF4564DPINNED|r", true, 3)
-                    UIFrameFlash(weizPVP.HeaderFrame.Highlight, 0.1, 0.6, 0.7)
+                if NS.Options.Window.Locked == true then --> LOCKED WARNING
+                    NS.SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
+                    UIFrameFlash(NS.HeaderFrame.Highlight, 0.1, 0.6, 0.7)
+                elseif NS.Options.Window.Pinned == true then --> PINNED WARNING
+                    NS.SetStatusBarMessage("Window is |cFFF4564DPINNED|r", true, 3)
+                    UIFrameFlash(NS.HeaderFrame.Highlight, 0.1, 0.6, 0.7)
                 else
-                    weizPVP.CoreFrame:StartMoving()
-                    weizPVP.CoreFrame:SetClampRectInsets(0, 0, weizPVP.Options.Frames.Header.Height + 1, -1 * (weizPVP.Options.Frames.Footer.Height))
-                    weizPVP.CoreFrame.isMoving = true
+                    NS.CoreFrame:StartMoving()
+                    NS.CoreFrame:SetClampRectInsets(0, 0, NS.Options.Frames.Header.Height + 1, -1 * (NS.Options.Frames.Footer.Height))
+                    NS.CoreFrame.isMoving = true
                 end
             elseif button == "RightButton" then
                 if IsControlKeyDown() then
-                    weizPVP:SetWindowLocked(not weizPVP.Options.Window.Locked)
-                elseif weizPVP.Options.Window.Locked == true then
-                    weizPVP:SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
+                    NS.SetWindowLocked(not NS.Options.Window.Locked)
+                elseif NS.Options.Window.Locked == true then
+                    NS.SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
                 else
-                    weizPVP:SetWindowPin(not weizPVP.Options.Window.Pinned)
+                    NS.SetWindowPin(not NS.Options.Window.Pinned)
                 end
             end
         end
     )
 
     --> HeaderFrame: ON MOUSE UP
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame:SetScript(
+    NS.HeaderFrame:SetScript(
         "OnMouseUp",
         function(_, button)
             if button == "LeftButton" then
-                weizPVP.CoreFrame:StopMovingOrSizing()
-                weizPVP.CoreFrame.isMoving = false
-                weizPVP:SaveCoreFramePosition()
-
-                if weizPVP.Options.Window.Locked == true then
-                    GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+                NS.CoreFrame:StopMovingOrSizing()
+                NS.CoreFrame.isMoving = false
+                NS.SaveCoreFramePosition()
+                if NS.Options.Window.Locked == true then
+                    GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                     GameTooltip:SetText("Ctrl + Right Click to unlock")
                     GameTooltip:Show()
-                elseif weizPVP.Options.Window.Pinned == true then
-                    GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+                elseif NS.Options.Window.Pinned == true then
+                    GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                     GameTooltip:SetText("Right Click to unpin")
                     GameTooltip:Show()
                 else
-                    GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+                    GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                     GameTooltip:AddLine("Right Click to pin.")
                     GameTooltip:AddLine("Ctrl + Right Click to Lock.")
                     GameTooltip:Show()
@@ -214,20 +189,19 @@ function weizPVP:CreateCoreFrames()
         end
     )
     --> HeaderFrame: ON MOUSE UP
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame:SetScript(
+    NS.HeaderFrame:SetScript(
         "OnEnter",
         function()
-            if weizPVP.Options.Window.Locked == true then
-                GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+            if NS.Options.Window.Locked == true then
+                GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                 GameTooltip:SetText("Ctrl + Right Click to unlock")
                 GameTooltip:Show()
-            elseif weizPVP.Options.Window.Pinned == true then
-                GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+            elseif NS.Options.Window.Pinned == true then
+                GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                 GameTooltip:SetText("Right Click to unpin")
                 GameTooltip:Show()
             else
-                GameTooltip:SetOwner(weizPVP.HeaderFrame, "ANCHOR_TOPLEFT")
+                GameTooltip:SetOwner(NS.HeaderFrame, "ANCHOR_TOPLEFT")
                 GameTooltip:AddLine("Right Click to pin.")
                 GameTooltip:AddLine("Ctrl + Right Click to Lock.")
                 GameTooltip:Show()
@@ -235,8 +209,7 @@ function weizPVP:CreateCoreFrames()
         end
     )
     --> HeaderFrame: ON MOUSE UP
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame:SetScript(
+    NS.HeaderFrame:SetScript(
         "OnLeave",
         function()
             GameTooltip:Hide()
@@ -245,27 +218,24 @@ function weizPVP:CreateCoreFrames()
     )
 
     --> OuterIconsFrame
-    -----------------------------------------------------------------------
-    weizPVP.OuterIconsFrame = weizPVP.OuterIconsFrame or CreateFrame("Frame", "weizPVP.OuterIconsFrame", weizPVP.HeaderFrame)
-    weizPVP.OuterIconsFrame:SetPoint("TOPLEFT", weizPVP.ScrollFrame, "TOPLEFT", -24, 0)
-    weizPVP.OuterIconsFrame:SetPoint("BOTTOMRIGHT", weizPVP.ScrollFrame, "BOTTOMRIGHT", 0, 0)
-    weizPVP.OuterIconsFrame:SetClipsChildren(true)
+    NS.OuterIconsFrame = NS.OuterIconsFrame or CreateFrame("Frame", "weizPVP.OuterIconsFrame", NS.HeaderFrame)
+    NS.OuterIconsFrame:SetPoint("TOPLEFT", NS.ScrollFrame, "TOPLEFT", -24, 0)
+    NS.OuterIconsFrame:SetPoint("BOTTOMRIGHT", NS.ScrollFrame, "BOTTOMRIGHT", 0, 0)
+    NS.OuterIconsFrame:SetClipsChildren(true)
 
     --> Create Header Buttons
-    -----------------------------------------------------------------------
-    weizPVP:CreateHeaderButtons()
+    NS.CreateHeaderButtons()
 
     --> StatusBar: SETTINGS
-    -----------------------------------------------------------------------
-    weizPVP.StatusBar = weizPVP.StatusBar or CreateFrame("Frame", "weizPVP.StatusBar", weizPVP.HeaderFrame)
-    weizPVP.StatusBar:SetClampedToScreen(true)
-    weizPVP.StatusBar:SetFrameStrata("MEDIUM")
-    weizPVP.StatusBar:SetFrameLevel(100)
-    weizPVP.StatusBar:SetPoint("TOPLEFT", weizPVP.CoreFrame, "BOTTOMLEFT", 0, 0)
-    weizPVP.StatusBar:SetPoint("TOPRIGHT", weizPVP.CoreFrame, "BOTTOMRIGHT", 0, 0)
-    weizPVP.StatusBar:EnableMouse(false)
-    weizPVP.StatusBar:SetHeight(weizPVP.Options.Frames.Footer.Height)
-    weizPVP.StatusBar:SetBackdrop(
+    NS.StatusBar = NS.StatusBar or CreateFrame("Frame", "weizPVP.StatusBar", NS.HeaderFrame)
+    NS.StatusBar:SetClampedToScreen(true)
+    NS.StatusBar:SetFrameStrata("MEDIUM")
+    NS.StatusBar:SetFrameLevel(100)
+    NS.StatusBar:SetPoint("TOPLEFT", NS.CoreFrame, "BOTTOMLEFT", 0, 0)
+    NS.StatusBar:SetPoint("TOPRIGHT", NS.CoreFrame, "BOTTOMRIGHT", 0, 0)
+    NS.StatusBar:EnableMouse(false)
+    NS.StatusBar:SetHeight(NS.Options.Frames.Footer.Height)
+    NS.StatusBar:SetBackdrop(
         {
             bgFile = SM:Fetch("background", "weizPVP: #FFFFFF"),
             tile = false,
@@ -275,197 +245,184 @@ function weizPVP:CreateCoreFrames()
         }
     )
 
-    weizPVP.StatusBar:SetBackdropColor(unpack(weizPVP.Options.Frames.Header.BackgroundColor))
-    weizPVP.StatusBar:SetBackdropBorderColor(0, 0, 0, 1)
-    weizPVP.StatusBar:SetScale(1)
+    NS.StatusBar:SetBackdropColor(unpack(NS.Options.Frames.Header.BackgroundColor))
+    NS.StatusBar:SetBackdropBorderColor(0, 0, 0, 1)
+    NS.StatusBar:SetScale(1)
 
     --> StatusBar.Clip
-    -----------------------------------------------------------------------
-    weizPVP.StatusBar.Clip = weizPVP.StatusBar.Clip or CreateFrame("Frame", "weizPVP.StatusBar.Clip", weizPVP.StatusBar)
-    weizPVP.StatusBar.Clip:SetPoint("RIGHT", weizPVP.StatusBar, "RIGHT")
-    weizPVP.StatusBar.Clip:SetPoint("LEFT", weizPVP.StatusBar, "LEFT")
-    weizPVP.StatusBar.Clip:SetPoint("TOP", weizPVP.StatusBar, "TOP", 0, 0)
-    weizPVP.StatusBar.Clip:SetHeight(16)
-    weizPVP.StatusBar.Clip:SetClampedToScreen(true)
-    weizPVP.StatusBar.Clip:SetClipsChildren(true)
+    NS.StatusBar.Clip = NS.StatusBar.Clip or CreateFrame("Frame", "weizPVP.StatusBar.Clip", NS.StatusBar)
+    NS.StatusBar.Clip:SetPoint("RIGHT", NS.StatusBar, "RIGHT")
+    NS.StatusBar.Clip:SetPoint("LEFT", NS.StatusBar, "LEFT")
+    NS.StatusBar.Clip:SetPoint("TOP", NS.StatusBar, "TOP", 0, 0)
+    NS.StatusBar.Clip:SetHeight(16)
+    NS.StatusBar.Clip:SetClampedToScreen(true)
+    NS.StatusBar.Clip:SetClipsChildren(true)
     --> StatusBar.Text
-    -----------------------------------------------------------------------
-    weizPVP.StatusBar.Title1 = weizPVP.StatusBar:CreateFontString("weizPVP.StatusBar.Text", "ARTWORK", nil)
-    -- weizPVP.StatusBar.Title1 = weizPVP.StatusBar.Clip:CreateFontString("weizPVP.StatusBar.Text", "ARTWORK", nil)
-    weizPVP.StatusBar.Title1:SetPoint("TOPLEFT", weizPVP.StatusBar.Clip, "TOPLEFT", 0, 4)
-    weizPVP.StatusBar.Title1:SetPoint("BOTTOMRIGHT", weizPVP.StatusBar.Clip, "BOTTOMRIGHT", 0, 0)
-    weizPVP.StatusBar.Title1:SetFont(SM:Fetch("font", weizPVP.Options.Frames.Footer.Font), weizPVP.Options.Frames.Footer.FontSize, weizPVP.Options.Frames.Footer.FontOutline)
-    weizPVP.StatusBar.Title1:SetJustifyH("LEFT")
-    weizPVP.StatusBar.Title1:SetShadowOffset(1, -1)
-    weizPVP.StatusBar.Title1:SetParent(weizPVP.StatusBar.Clip)
+    NS.StatusBar.Title1 = NS.StatusBar:CreateFontString("weizPVP.StatusBar.Text", "ARTWORK", nil)
+    NS.StatusBar.Title1:SetPoint("TOPLEFT", NS.StatusBar.Clip, "TOPLEFT", 0, 4)
+    NS.StatusBar.Title1:SetPoint("BOTTOMRIGHT", NS.StatusBar.Clip, "BOTTOMRIGHT", 0, 0)
+    NS.StatusBar.Title1:SetFont(
+        SM:Fetch("font", NS.Options.Frames.Footer.Font),
+        NS.Options.Frames.Footer.FontSize,
+        NS.Options.Frames.Footer.FontOutline
+    )
+    NS.StatusBar.Title1:SetJustifyH("LEFT")
+    NS.StatusBar.Title1:SetShadowOffset(1, -1)
+    NS.StatusBar.Title1:SetParent(NS.StatusBar.Clip)
 
     --> HeaderFrame Highlight
-    -----------------------------------------------------------------------
-    weizPVP.HeaderFrame.Highlight = weizPVP.HeaderFrame.Highlight or CreateFrame("Frame", "weizPVP:HeaderFrame.Highlight", weizPVP.HeaderFrame)
-    weizPVP.HeaderFrame.Highlight:SetPoint("TOPRIGHT", weizPVP.HeaderFrame, "TOPRIGHT", -1, -1)
-    weizPVP.HeaderFrame.Highlight:SetPoint("BOTTOMLEFT", weizPVP.HeaderFrame, "BOTTOMLEFT", 1, 1)
-    weizPVP.HeaderFrame.Highlight:SetFrameStrata("MEDIUM")
-    weizPVP.HeaderFrame.Highlight:SetFrameLevel(401)
-    weizPVP.HeaderFrame.Highlight:SetBackdrop(
+    NS.HeaderFrame.Highlight = NS.HeaderFrame.Highlight or CreateFrame("Frame", "weizPVP:HeaderFrame.Highlight", NS.HeaderFrame)
+    NS.HeaderFrame.Highlight:SetPoint("TOPRIGHT", NS.HeaderFrame, "TOPRIGHT", -1, -1)
+    NS.HeaderFrame.Highlight:SetPoint("BOTTOMLEFT", NS.HeaderFrame, "BOTTOMLEFT", 1, 1)
+    NS.HeaderFrame.Highlight:SetFrameStrata("MEDIUM")
+    NS.HeaderFrame.Highlight:SetFrameLevel(401)
+    NS.HeaderFrame.Highlight:SetBackdrop(
         {
             bgFile = SM:Fetch("background", "weizPVP: Bar-BG"),
             tile = false
         }
     )
-    weizPVP.HeaderFrame.Highlight:SetBackdropColor(1, 0.2, 0.2, 0.6)
-    weizPVP.HeaderFrame.Highlight:EnableMouse(false)
-    -- weizPVP.HeaderFrame.Highlight:Show()
-    weizPVP.HeaderFrame.Highlight:SetAlpha(0)
+    NS.HeaderFrame.Highlight:SetBackdropColor(1, 0.2, 0.2, 0.6)
+    NS.HeaderFrame.Highlight:EnableMouse(false)
+    NS.HeaderFrame.Highlight:SetAlpha(0)
 
     --> Create Resize Grip button
-    -----------------------------------------------------------------------
-    weizPVP:CreateResizeGrip()
+    NS.CreateResizeGrip()
 
     --> Set Scale
-    -----------------------------------------------------------------------
-    if weizPVP.Options.Frames.Scale then
-        weizPVP.CoreFrame:SetScale(weizPVP.Options.Frames.Scale)
-        weizPVP.HeaderFrame:SetScale(weizPVP.Options.Frames.Scale)
+    if NS.Options.Frames.Scale then
+        NS.CoreFrame:SetScale(NS.Options.Frames.Scale)
+        NS.HeaderFrame:SetScale(NS.Options.Frames.Scale)
     end
 end
 
------------------------------------------------------------------------
 --> Save Core Position
------------------------------------------------------------------------
-function weizPVP:SaveCoreFramePosition()
-    local x, y, w, h, s, point = weizPVP:GetFramePosition(weizPVP.CoreFrame)
-    weizPVP.Options.Frames.X = x
-    weizPVP.Options.Frames.Y = y
-    weizPVP.Options.Frames.Width = w
-    weizPVP.Options.Frames.Height = h
-    weizPVP.Options.Frames.Point = point
-    weizPVP.Options.Frames.Scale = s
-    local x2, y2, w2, h2, s2, point2 = weizPVP:GetFramePosition(weizPVP.HeaderFrame)
-    weizPVP.Options.Frames.Header.X = x2
-    weizPVP.Options.Frames.Header.Y = y2
-    weizPVP.Options.Frames.Header.Width = w2
-    weizPVP.Options.Frames.Header.Height = h2
-    weizPVP.Options.Frames.Header.Point = point2
-    weizPVP.Options.Frames.Header.Scale = s2
-    weizPVP.HeaderFrame:ClearAllPoints()
-    weizPVP.HeaderFrame:SetPoint("BOTTOM", weizPVP.CoreFrame, "TOP")
-    weizPVP.HeaderFrame:SetPoint("LEFT", weizPVP.CoreFrame, "LEFT")
-    weizPVP.HeaderFrame:SetPoint("RIGHT", weizPVP.CoreFrame, "RIGHT")
+function NS.SaveCoreFramePosition()
+    local x, y, w, h, s, point = NS.GetFramePosition(NS.CoreFrame)
+    NS.Options.Frames.X = x
+    NS.Options.Frames.Y = y
+    NS.Options.Frames.Width = w
+    NS.Options.Frames.Height = h
+    NS.Options.Frames.Point = point
+    NS.Options.Frames.Scale = s
+    local x2, y2, w2, h2, s2, point2 = NS.GetFramePosition(NS.HeaderFrame)
+    NS.Options.Frames.Header.X = x2
+    NS.Options.Frames.Header.Y = y2
+    NS.Options.Frames.Header.Width = w2
+    NS.Options.Frames.Header.Height = h2
+    NS.Options.Frames.Header.Point = point2
+    NS.Options.Frames.Header.Scale = s2
+    NS.HeaderFrame:ClearAllPoints()
+    NS.HeaderFrame:SetPoint("BOTTOM", NS.CoreFrame, "TOP")
+    NS.HeaderFrame:SetPoint("LEFT", NS.CoreFrame, "LEFT")
+    NS.HeaderFrame:SetPoint("RIGHT", NS.CoreFrame, "RIGHT")
 end
 
------------------------------------------------------------------------
 --> Set Core Position
------------------------------------------------------------------------
-function weizPVP:SetCoreFramePosition()
+function NS.SetCoreFramePosition()
     local settings = {}
-    settings.xC = weizPVP.Options.Frames.X
-    settings.yC = weizPVP.Options.Frames.Y
-    settings.wC = weizPVP.Options.Frames.Width
-    settings.hC = weizPVP.Options.Frames.Height
-    settings.pointC = weizPVP.Options.Frames.Point or "CENTER"
-    settings.sC = weizPVP.Options.Frames.Scale
-    weizPVP.CoreFrame:ClearAllPoints()
-    weizPVP.CoreFrame:SetPoint(settings.pointC, UIParent, settings.pointC, settings.xC, settings.yC)
-    weizPVP.CoreFrame:SetHeight(settings.hC)
-    weizPVP.CoreFrame:SetWidth(settings.wC)
-    settings.xH = weizPVP.Options.Frames.Header.X
-    settings.yH = weizPVP.Options.Frames.Header.Y
-    settings.wH = weizPVP.Options.Frames.Header.Width
-    settings.hH = weizPVP.Options.Frames.Header.Height
-    settings.pointH = weizPVP.Options.Frames.Header.Point or "CENTER"
-    settings.sH = weizPVP.Options.Frames.Header.Scale
-    weizPVP.HeaderFrame:ClearAllPoints()
-    weizPVP.HeaderFrame:SetHeight(settings.hH)
-    weizPVP.HeaderFrame:SetPoint("BOTTOM", weizPVP.CoreFrame, "TOP")
-    weizPVP.HeaderFrame:SetPoint("LEFT", weizPVP.CoreFrame, "LEFT")
-    weizPVP.HeaderFrame:SetPoint("RIGHT", weizPVP.CoreFrame, "RIGHT")
+    settings.xC = NS.Options.Frames.X
+    settings.yC = NS.Options.Frames.Y
+    settings.wC = NS.Options.Frames.Width
+    settings.hC = NS.Options.Frames.Height
+    settings.pointC = NS.Options.Frames.Point or "CENTER"
+    settings.sC = NS.Options.Frames.Scale
+    NS.CoreFrame:ClearAllPoints()
+    NS.CoreFrame:SetPoint(settings.pointC, UIParent, settings.pointC, settings.xC, settings.yC)
+    NS.CoreFrame:SetHeight(settings.hC)
+    NS.CoreFrame:SetWidth(settings.wC)
+    settings.xH = NS.Options.Frames.Header.X
+    settings.yH = NS.Options.Frames.Header.Y
+    settings.wH = NS.Options.Frames.Header.Width
+    settings.hH = NS.Options.Frames.Header.Height
+    settings.pointH = NS.Options.Frames.Header.Point or "CENTER"
+    settings.sH = NS.Options.Frames.Header.Scale
+    NS.HeaderFrame:ClearAllPoints()
+    NS.HeaderFrame:SetHeight(settings.hH)
+    NS.HeaderFrame:SetPoint("BOTTOM", NS.CoreFrame, "TOP")
+    NS.HeaderFrame:SetPoint("LEFT", NS.CoreFrame, "LEFT")
+    NS.HeaderFrame:SetPoint("RIGHT", NS.CoreFrame, "RIGHT")
 end
 
------------------------------------------------------------------------
 --> Window: Set Locked
------------------------------------------------------------------------
-function weizPVP:SetWindowLocked(value)
+function NS.SetWindowLocked(value)
     if value == nil then
         return
     end
     if not InCombatLockdown() then
-        weizPVP.Options.Window.Locked = value
-
+        NS.Options.Window.Locked = value
         if value == true then
-            weizPVP.CoreFrame:SetMovable(false)
-            weizPVP.HeaderFrame:SetMovable(false)
-            weizPVP.Options.Window.Locked = true
-            weizPVP:SetStatusBarMessage("Window is now |cffff3838LOCKED|r", true, 3)
+            NS.CoreFrame:SetMovable(false)
+            NS.HeaderFrame:SetMovable(false)
+            NS.Options.Window.Locked = true
+            NS.SetStatusBarMessage("Window is now |cffff3838LOCKED|r", true, 3)
         else
-            weizPVP.CoreFrame:SetMovable(true)
-            weizPVP.HeaderFrame:SetMovable(true)
-            weizPVP.Options.Window.Locked = false
-            weizPVP.Options.Window.Pinned = false
-            weizPVP:SetStatusBarMessage("Window is now |cff37ff37UNLOCKED|r", true, 3)
+            NS.CoreFrame:SetMovable(true)
+            NS.HeaderFrame:SetMovable(true)
+            NS.Options.Window.Locked = false
+            NS.Options.Window.Pinned = false
+            NS.SetStatusBarMessage("Window is now |cff37ff37UNLOCKED|r", true, 3)
         end
     end
 end
 
 --> Window: Set Pin
------------------------------------------------------------------------
-function weizPVP:SetWindowPin(value)
+function NS.SetWindowPin(value)
     if value == nil then
         return
     end
-    weizPVP.Options.Window.Pinned = value
-    weizPVP.HeaderFrame:SetMovable(not value)
+    NS.Options.Window.Pinned = value
+    NS.HeaderFrame:SetMovable(not value)
     if value == true then
-        weizPVP:SetStatusBarMessage("Window is now |cFFF4564DPINNED|r", true, 3)
+        NS.SetStatusBarMessage("Window is now |cFFF4564DPINNED|r", true, 3)
     elseif value == false then
-        weizPVP:SetStatusBarMessage("Window is now |cff42dcf4UNPINNED|r", true, 3)
+        NS.SetStatusBarMessage("Window is now |cff42dcf4UNPINNED|r", true, 3)
     end
     return
 end
 
 --> Window: Set Visible
------------------------------------------------------------------------
-function weizPVP:SetWindowVisible(value)
+function NS.SetWindowVisible(value)
     local newValue = value
     if value == nil then
-        if weizPVP.Options.Window.Visible == true then
+        if NS.Options.Window.Visible == true then
             newValue = false
         else
             newValue = true
         end
     end
     if not InCombatLockdown() then
-        weizPVP.Options.Window.Visible = newValue
+        NS.Options.Window.Visible = newValue
         if newValue == true then
-            weizPVP.HeaderFrame:Show()
-            if weizPVP.Options.Window.Collapsed == false then
-                weizPVP.CoreFrame:Show()
-                weizPVP.StatusBar:Show()
+            NS.HeaderFrame:Show()
+            if NS.Options.Window.Collapsed == false then
+                NS.CoreFrame:Show()
+                NS.StatusBar:Show()
             else
-                weizPVP.CoreFrame:Hide()
-                weizPVP.StatusBar:Hide()
+                NS.CoreFrame:Hide()
+                NS.StatusBar:Hide()
             end
         else
-            weizPVP.HeaderFrame:Hide()
-            weizPVP.CoreFrame:Hide()
-            weizPVP.StatusBar:Hide()
+            NS.HeaderFrame:Hide()
+            NS.CoreFrame:Hide()
+            NS.StatusBar:Hide()
         end
     end
 end
 --> Window: ApplyVisible
------------------------------------------------------------------------
-function weizPVP.SetWindowSettings()
+function NS.SetWindowSettings()
     if not InCombatLockdown() then
-        if weizPVP.Options.Window.Visible == true then
-            weizPVP.HeaderFrame:Show()
-            if weizPVP.Options.Window.Collapsed == false then
-                weizPVP.MaxFrame()
+        if NS.Options.Window.Visible == true then
+            NS.HeaderFrame:Show()
+            if NS.Options.Window.Collapsed == false then
+                NS.MaxFrame()
             else
-                weizPVP.MinFrame()
+                NS.MinFrame()
             end
         else
-            weizPVP.HeaderFrame:Hide()
-            weizPVP.CoreFrame:Hide()
-            weizPVP.StatusBar:Hide()
+            NS.HeaderFrame:Hide()
+            NS.CoreFrame:Hide()
+            NS.StatusBar:Hide()
         end
     end
 end

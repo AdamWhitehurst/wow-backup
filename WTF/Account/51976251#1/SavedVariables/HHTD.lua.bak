@@ -4,34 +4,37 @@ HHTD_SavedVariables = {
 		["Andalsam - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Zandro - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
-		["Andalsa - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
-		["Bramblebrow - Emerald Dream"] = {
-			["settingsMigrated"] = false,
-		},
-		["Wharapi - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
 		["Umbrick - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Zandro - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Andallsa - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Arndoss - Tichondrius"] = {
+		["Andalsa - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Wharapi - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Bramblebrow - Emerald Dream"] = {
 			["settingsMigrated"] = false,
 		},
 		["Stoakt - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Madylad - Tichondrius"] = {
+		["Arndoss - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Brungar - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Madylad - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Sparkwizz - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 	},
@@ -45,16 +48,17 @@ HHTD_SavedVariables = {
 	},
 	["profileKeys"] = {
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
 	},
 	["global"] = {
 		["settingsMigrated"] = false,

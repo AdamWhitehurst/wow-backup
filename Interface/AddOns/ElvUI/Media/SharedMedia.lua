@@ -9,21 +9,12 @@ end
 E.Media = {
 	Fonts = {
 		ActionMan = M..[[Fonts\ActionMan.ttf]],
-		ContinuumMedium = M..[[Fonts\Sriracha.ttf]],
+		ContinuumMedium = M..[[Fonts\ContinuumMedium.ttf]],
 		DieDieDie = M..[[Fonts\DieDieDie.ttf]],
-		Expressway = M..[[Fonts\Sriracha.ttf]],
+		Expressway = M..[[Fonts\Expressway.ttf]],
 		Homespun = M..[[Fonts\Homespun.ttf]],
 		Invisible = M..[[Fonts\Invisible.ttf]],
-		PTSansNarrow = M..[[Fonts\Sriracha.ttf]],
-		AnimeAce = M..[[Fonts\AnimeAce_Regular.ttf]],
-		AnimeAceBold = M..[[Fonts\AnimeAce_Bold.ttf]],
-		AnimeAceItalic = M..[[Fonts\AnimeAce_Italic.ttf]],
-		ComickBook = M..[[Fonts\ComickBook.ttf]],
-		ComickBookCaps = M..[[Fonts\ComickBook_Caps.ttf]],
-		HappyMonkey = M..[[Fonts\HappyMonkey.ttf]],
-		PatrickHand = M..[[Fonts\PatrickHand.ttf]],
-		PatrickHandSC = M..[[Fonts\PatrickHandSC.ttf]],
-		Sriracha = M..[[Fonts\Sriracha.ttf]]
+		PTSansNarrow = M..[[Fonts\Sriracha.ttf]]
 	},
 	Sounds = {
 		AwwCrap = M..[[Sounds\AwwCrap.ogg]],
@@ -83,12 +74,34 @@ E.Media = {
 		ElvPurple = M..[[ChatLogos\ElvPurple.tga]],
 		ElvYellow = M..[[ChatLogos\ElvYellow.tga]],
 		ElvRed = M..[[ChatLogos\ElvRed.tga]],
+		---
 		Bathrobe = M..[[ChatLogos\Bathrobe.tga]],
 		HelloKitty = M..[[ChatLogos\HelloKitty.tga]],
 		Illuminati = M..[[ChatLogos\Illuminati.tga]],
 		MrHankey = M..[[ChatLogos\MrHankey.tga]],
 		Rainbow = M..[[ChatLogos\Rainbow.tga]],
-		TyroneBiggums = M..[[ChatLogos\TyroneBiggums.tga]]
+		TyroneBiggums = M..[[ChatLogos\TyroneBiggums.tga]],
+		---
+		Burger = M..[[ChatLogos\Burger.tga]],
+		Clover = M..[[ChatLogos\Clover.tga]],
+		Cupcake = M..[[ChatLogos\Cupcake.tga]],
+		Hibiscus = M..[[ChatLogos\Hibiscus.tga]],
+		Lion = M..[[ChatLogos\Lion.tga]],
+		Skull = M..[[ChatLogos\Skull.tga]],
+		Unicorn = M..[[ChatLogos\Unicorn.tga]],
+		---
+		FoxDeathKnight = M..[[ChatLogos\FoxDeathKnight.tga]],
+		FoxDemonHunter = M..[[ChatLogos\FoxDemonHunter.tga]],
+		FoxDruid = M..[[ChatLogos\FoxDruid.tga]],
+		FoxHunter = M..[[ChatLogos\FoxHunter.tga]],
+		FoxMage = M..[[ChatLogos\FoxMage.tga]],
+		FoxMonk = M..[[ChatLogos\FoxMonk.tga]],
+		FoxPaladin = M..[[ChatLogos\FoxPaladin.tga]],
+		FoxPriest = M..[[ChatLogos\FoxPriest.tga]],
+		FoxRogue = M..[[ChatLogos\FoxRogue.tga]],
+		FoxShaman = M..[[ChatLogos\FoxShaman.tga]],
+		FoxWarlock = M..[[ChatLogos\FoxWarlock.tga]],
+		FoxWarrior = M..[[ChatLogos\FoxWarrior.tga]],
 	},
 	Textures = {
 		Arrow = M..[[Textures\Arrow.tga]],
@@ -97,7 +110,7 @@ E.Media = {
 		BagNewItemGlow = M..[[Textures\BagNewItemGlow.tga]],
 		BagQuestIcon = M..[[Textures\BagQuestIcon.tga]],
 		Black8x8 = M..[[Textures\Black8x8.tga]],
-		White8x8 = [[Interface\BUTTONS\WHITE8X8]], -- not elvui
+		White8x8 = M..[[Textures\White8x8.tga]],
 		BagUpgradeIcon = M..[[Textures\BagUpgradeIcon.tga]],
 		BubbleTex = M..[[Textures\BubbleTex.tga]],
 		ChatEmojis = M..[[Textures\ChatEmojis]],
@@ -114,6 +127,7 @@ E.Media = {
 		Highlight = M..[[Textures\Highlight.tga]],
 		Leader = M..[[Textures\Leader.tga]],
 		Logo = M..[[Textures\Logo.tga]],
+		LogoSmall = M..[[Textures\LogoSmall.tga]],
 		Mail = M..[[Textures\Mail.tga]],
 		Melli = M..[[Textures\Melli.tga]],
 		Minimalist = M..[[Textures\Minimalist.tga]],
@@ -145,16 +159,8 @@ LSM:Register('font','Die Die Die!',E.Media.Fonts.DieDieDie)
 LSM:Register('font','Action Man',E.Media.Fonts.ActionMan)
 LSM:Register('font','Expressway',E.Media.Fonts.Expressway,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 LSM:Register('font','PT Sans Narrow',E.Media.Fonts.PTSansNarrow,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
+LSM:Register('font','Sriracha',E.Media.Fonts.PTSansNarrow,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
 LSM:Register('font','Homespun',E.Media.Fonts.Homespun,LSM.LOCALE_BIT_ruRU+LSM.LOCALE_BIT_western)
-LSM:Register('font','Anime Ace',E.Media.Fonts.AnimeAce)
-LSM:Register('font','Anime Ace Bold',E.Media.Fonts.AnimeAceBold)
-LSM:Register('font','Anime Ace Italic',E.Media.Fonts.AnimeAceItalic)
-LSM:Register('font','Comick Book Caps',E.Media.Fonts.ComickBookCaps)
-LSM:Register('font','Comick Book',E.Media.Fonts.ComickBook)
-LSM:Register('font','Happy Monkey',E.Media.Fonts.HappyMonkey)
-LSM:Register('font','Patrick Hand',E.Media.Fonts.PatrickHand)
-LSM:Register('font','Patrick Hand SC',E.Media.Fonts.PatrickHandSC)
-LSM:Register('font','Sriracha',E.Media.Fonts.Sriracha)
 LSM:Register('sound','Awww Crap',E.Media.Sounds.AwwCrap)
 LSM:Register('sound','BBQ Ass',E.Media.Sounds.BbqAss)
 LSM:Register('sound','Big Yankie Devil',E.Media.Sounds.YankieBangBang)

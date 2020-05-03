@@ -12,12 +12,12 @@ OneRing_Config = {
 				["Travel"] = "BUTTON5",
 			},
 			["RingOptions"] = {
-				["Travel#RingScale"] = 1.200000047683716,
+				["Travel#XTScaleSpeed"] = 4,
 				["Travel#MISpinOnHide"] = false,
-				["Travel#XTRotationPeriod"] = 1,
+				["Travel#RingScale"] = 1.200000047683716,
 				["Travel#XTPointerSpeed"] = 4,
 				["Travel#XTZoomTime"] = 0.1000000014901161,
-				["Travel#XTScaleSpeed"] = 4,
+				["Travel#XTRotationPeriod"] = 1,
 			},
 		},
 	},
@@ -26,24 +26,29 @@ OneRing_Config = {
 			["Travel"] = {
 				{
 					"mount", -- [1]
+					131, -- [2]
+					["sliceToken"] = "ABue4XcPmHr",
+				}, -- [1]
+				{
+					"mount", -- [1]
 					1240, -- [2]
 					["sliceToken"] = "ABuehIbqj3i",
-				}, -- [1]
+				}, -- [2]
 				{
 					"mount", -- [1]
 					271, -- [2]
 					["sliceToken"] = "ABuehIbqj3u",
-				}, -- [2]
+				}, -- [3]
 				{
 					"macro", -- [1]
 					"/btwQuests", -- [2]
 					["sliceToken"] = "ABuehIbqj3y",
-				}, -- [3]
+				}, -- [4]
 				{
 					"mount", -- [1]
 					1260, -- [2]
 					["sliceToken"] = "ABueh9qCyXe",
-				}, -- [4]
+				}, -- [5]
 				["name"] = "General",
 				["save"] = true,
 				["hotkey"] = "BUTTON5",

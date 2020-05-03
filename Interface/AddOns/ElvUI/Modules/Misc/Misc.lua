@@ -31,7 +31,6 @@ local IsInGroup = IsInGroup
 local IsInRaid = IsInRaid
 local IsPartyLFG = IsPartyLFG
 local IsShiftKeyDown = IsShiftKeyDown
-local LeaveParty = LeaveParty
 local RaidNotice_AddMessage = RaidNotice_AddMessage
 local RepairAllItems = RepairAllItems
 local SendChatMessage = SendChatMessage
@@ -43,31 +42,35 @@ local UnitGUID = UnitGUID
 local UnitInRaid = UnitInRaid
 local UnitName = UnitName
 local IsInGuild = IsInGuild
+local PlaySound = PlaySound
 
+local C_PartyInfo_LeaveParty = C_PartyInfo.LeaveParty
 local C_BattleNet_GetGameAccountInfoByGUID = C_BattleNet.GetGameAccountInfoByGUID
 local CombatLogGetCurrentEventInfo = CombatLogGetCurrentEventInfo
 local LE_GAME_ERR_GUILD_NOT_ENOUGH_MONEY = LE_GAME_ERR_GUILD_NOT_ENOUGH_MONEY
 local LE_GAME_ERR_NOT_ENOUGH_MONEY = LE_GAME_ERR_NOT_ENOUGH_MONEY
 local MAX_PARTY_MEMBERS = MAX_PARTY_MEMBERS
-local UIErrorsFrame = UIErrorsFrame
 
-local INTERRUPT_MSG = INTERRUPTED.." %s's \124cff71d5ff\124Hspell:%d:0\124h[%s]\124h\124r!"
+local BOOST_THANKSFORPLAYING_SMALLER = SOUNDKIT.UI_70_BOOST_THANKSFORPLAYING_SMALLER
+local INTERRUPT_MSG = L["Interrupted %s's \124cff71d5ff\124Hspell:%d:0\124h[%s]\124h\124r!"]
 
 function M:ErrorFrameToggle(event)
 	if not E.db.general.hideErrorFrame then return end
 	if event == 'PLAYER_REGEN_DISABLED' then
-		UIErrorsFrame:UnregisterEvent('UI_ERROR_MESSAGE')
+		_G.UIErrorsFrame:UnregisterEvent('UI_ERROR_MESSAGE')
 	else
-		UIErrorsFrame:RegisterEvent('UI_ERROR_MESSAGE')
+		_G.UIErrorsFrame:RegisterEvent('UI_ERROR_MESSAGE')
 	end
 end
 
 function M:COMBAT_LOG_EVENT_UNFILTERED()
-	local inGroup, inRaid, inPartyLFG = IsInGroup(), IsInRaid(), IsPartyLFG()
-	if not inGroup then return end -- not in group, exit.
+	local inGroup = IsInGroup()
+	if not inGroup then return end
 
-	local _, event, _, sourceGUID, _, _, _, _, destName, _, _, _, _, _, spellID, spellName = CombatLogGetCurrentEventInfo()
-	if not (event == "SPELL_INTERRUPT" and (sourceGUID == E.myguid or sourceGUID == UnitGUID('pet'))) then return end -- No announce-able interrupt from player or pet, exit.
+	local _, event, _, sourceGUID, _, _, _, destGUID, destName, _, _, _, _, _, spellID, spellName = CombatLogGetCurrentEventInfo()
+	local announce = event == "SPELL_INTERRUPT" and (sourceGUID == E.myguid or sourceGUID == UnitGUID('pet')) and destGUID ~= E.myguid
+	if not announce then return end -- No announce-able interrupt from player or pet, exit.
+	local inRaid, inPartyLFG = IsInRaid(), IsPartyLFG()
 
 	--Skirmish/non-rated arenas need to use INSTANCE_CHAT but IsPartyLFG() returns "false"
 	local _, instanceType = GetInstanceInfo()
@@ -80,18 +83,18 @@ function M:COMBAT_LOG_EVENT_UNFILTERED()
 		inRaid = false --IsInRaid() returns true for arenas and they should not be considered a raid
 	end
 
-	local interruptAnnounce, msg = E.db.general.interruptAnnounce, format(INTERRUPT_MSG, destName, spellID, spellName)
-	if interruptAnnounce == "PARTY" then
+	local channel, msg = E.db.general.interruptAnnounce, format(INTERRUPT_MSG, destName, spellID, spellName)
+	if channel == "PARTY" then
 		SendChatMessage(msg, inPartyLFG and "INSTANCE_CHAT" or "PARTY")
-	elseif interruptAnnounce == "RAID" then
+	elseif channel == "RAID" then
 		SendChatMessage(msg, inPartyLFG and "INSTANCE_CHAT" or (inRaid and "RAID" or "PARTY"))
-	elseif interruptAnnounce == "RAID_ONLY" and inRaid then
+	elseif channel == "RAID_ONLY" and inRaid then
 		SendChatMessage(msg, inPartyLFG and "INSTANCE_CHAT" or "RAID")
-	elseif interruptAnnounce == "SAY" and instanceType ~= 'none' then
+	elseif channel == "SAY" and instanceType ~= 'none' then
 		SendChatMessage(msg, "SAY")
-	elseif interruptAnnounce == "YELL" and instanceType ~= 'none' then
+	elseif channel == "YELL" and instanceType ~= 'none' then
 		SendChatMessage(msg, "YELL")
-	elseif interruptAnnounce == "EMOTE" then
+	elseif channel == "EMOTE" then
 		SendChatMessage(msg, "EMOTE")
 	end
 end
@@ -176,7 +179,8 @@ function M:DisbandRaidGroup()
 			end
 		end
 	end
-	LeaveParty()
+
+	C_PartyInfo_LeaveParty()
 end
 
 function M:PVPMessageEnhancement(_, msg)
@@ -248,30 +252,31 @@ function M:SetupChallengeTimer()
 	hooksecurefunc("Scenario_ChallengeMode_ShowBlock", ChallengeModeTimer_Update)
 end]]
 
+function M:RESURRECT_REQUEST()
+	if E.db.general.resurrectSound then
+		PlaySound(BOOST_THANKSFORPLAYING_SMALLER, 'Master')
+	end
+end
+
 function M:ADDON_LOADED(_, addon)
 	if addon == "Blizzard_InspectUI" then
 		M:SetupInspectPageInfo()
-
-		--[[if IsAddOnLoaded("Blizzard_ObjectiveTracker") then
-			self:UnregisterEvent("ADDON_LOADED")
-		end]]
 	--[[elseif addon == "Blizzard_ObjectiveTracker" then
-		M:SetupChallengeTimer()
-
-		if IsAddOnLoaded("Blizzard_InspectUI") then
-			self:UnregisterEvent("ADDON_LOADED")
-		end	]]
+		M:SetupChallengeTimer()]]
 	end
 end
 
 function M:QUEST_COMPLETE()
 	if not E.db.general.questRewardMostValueIcon then return end
 
+	local firstItem = _G.QuestInfoRewardsFrameQuestInfoItem1
+	if not firstItem then return end
+
 	local bestValue, bestItem = 0
 	local numQuests = GetNumQuestChoices()
 
 	if not self.QuestRewardGoldIconFrame then
-		local frame = CreateFrame("Frame", nil, _G.QuestInfoRewardsFrameQuestInfoItem1)
+		local frame = CreateFrame("Frame", nil, firstItem)
 		frame:SetFrameStrata("HIGH")
 		frame:Size(20)
 		frame.Icon = frame:CreateTexture(nil, "OVERLAY")
@@ -300,7 +305,7 @@ function M:QUEST_COMPLETE()
 
 	if bestItem then
 		local btn = _G['QuestInfoRewardsFrameQuestInfoItem'..bestItem]
-		if btn.type == 'choice' then
+		if btn and btn.type == 'choice' then
 			self.QuestRewardGoldIconFrame:ClearAllPoints()
 			self.QuestRewardGoldIconFrame:Point("TOPRIGHT", btn, "TOPRIGHT", -2, -2)
 			self.QuestRewardGoldIconFrame:Show()
@@ -316,9 +321,9 @@ function M:Initialize()
 	self:LoadLoot()
 	self:ToggleItemLevelInfo(true)
 	self:RegisterEvent('MERCHANT_SHOW')
+	self:RegisterEvent('RESURRECT_REQUEST')
 	self:RegisterEvent('PLAYER_REGEN_DISABLED', 'ErrorFrameToggle')
 	self:RegisterEvent('PLAYER_REGEN_ENABLED', 'ErrorFrameToggle')
-	if E.db.general.interruptAnnounce ~= "NONE" then self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED") end
 	self:RegisterEvent('CHAT_MSG_BG_SYSTEM_HORDE', 'PVPMessageEnhancement')
 	self:RegisterEvent('CHAT_MSG_BG_SYSTEM_ALLIANCE', 'PVPMessageEnhancement')
 	self:RegisterEvent('CHAT_MSG_BG_SYSTEM_NEUTRAL', 'PVPMessageEnhancement')
@@ -326,26 +331,23 @@ function M:Initialize()
 	self:RegisterEvent('GROUP_ROSTER_UPDATE', 'AutoInvite')
 	self:RegisterEvent('CVAR_UPDATE', 'ForceCVars')
 	self:RegisterEvent('PLAYER_ENTERING_WORLD')
-	self:RegisterEvent("QUEST_COMPLETE")
+	self:RegisterEvent('QUEST_COMPLETE')
 
-	--local blizzTracker = IsAddOnLoaded("Blizzard_ObjectiveTracker")
-	local inspectUI = IsAddOnLoaded("Blizzard_InspectUI")
+	if E.db.general.interruptAnnounce ~= 'NONE' then
+		self:RegisterEvent('COMBAT_LOG_EVENT_UNFILTERED')
+	end
 
-	if inspectUI then
+	if IsAddOnLoaded('Blizzard_InspectUI') then
 		M:SetupInspectPageInfo()
+	else
+		self:RegisterEvent('ADDON_LOADED')
 	end
 
-	--[[if blizzTracker then
+	--[[if IsAddOnLoaded('Blizzard_ObjectiveTracker') then
 		M:SetupChallengeTimer()
-	end
-
-	if not blizzTracker or not inspectUI then
-		self:RegisterEvent("ADDON_LOADED")
+	else
+		self:RegisterEvent('ADDON_LOADED')
 	end]]
-
-	if not inspectUI then
-		self:RegisterEvent("ADDON_LOADED")
-	end
 end
 
 E:RegisterModule(M:GetName())

@@ -6,11 +6,9 @@ local _G = _G
 local strfind = strfind
 --WoW API / Variables
 local CreateFrame = CreateFrame
-local SetCVar = SetCVar
 local SetUIPanelAttribute = SetUIPanelAttribute
-local MOUSE_LABEL = MOUSE_LABEL:gsub("|T.-|t","")
+local MOUSE_LABEL = MOUSE_LABEL:gsub("|[TA].-|[ta]","")
 local PLAYER = PLAYER
-local GetCVarBool = GetCVarBool
 local hooksecurefunc = hooksecurefunc
 local IsPlayerMoving = IsPlayerMoving
 local PlayerMovementFrameFader = PlayerMovementFrameFader
@@ -199,7 +197,7 @@ function M:Initialize()
 	local WorldMapFrame = _G.WorldMapFrame
 	if E.global.general.WorldMapCoordinates.enable then
 		local CoordsHolder = CreateFrame('Frame', 'CoordsHolder', WorldMapFrame)
-		CoordsHolder:SetFrameLevel(WorldMapFrame.BorderFrame:GetFrameLevel() + 2)
+		CoordsHolder:SetFrameLevel(WorldMapFrame.BorderFrame:GetFrameLevel() + 10)
 		CoordsHolder:SetFrameStrata(WorldMapFrame.BorderFrame:GetFrameStrata())
 		CoordsHolder.playerCoords = CoordsHolder:CreateFontString(nil, 'OVERLAY')
 		CoordsHolder.mouseCoords = CoordsHolder:CreateFontString(nil, 'OVERLAY')

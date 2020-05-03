@@ -5,6 +5,7 @@ PetJournalEnhancedDB = {
 		},
 	},
 	["profileKeys"] = {
+		["Sparkwizz - Tichondrius"] = "Default",
 		["Magnr - Tichondrius"] = "Default",
 		["Brungar - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",

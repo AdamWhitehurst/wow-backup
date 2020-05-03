@@ -1,35 +1,14 @@
 
-weizPVPOptions = {
+_weizpvp_chardb = {
 	["profileKeys"] = {
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Andalsa - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
-		["Andalsa - Tichondrius"] = {
-			["Options"] = {
-				["Addon"] = {
-					["Version"] = "1.81.1",
-					["VersionNumber"] = 1802.1,
-					["VersionSplashSeen"] = true,
-				},
-				["Window"] = {
-					["Pinned"] = true,
-					["Collapsed"] = true,
-				},
-				["Frames"] = {
-					["Point"] = "TOPLEFT",
-					["Width"] = 399.0946350097656,
-					["Y"] = -13.259521484375,
-					["X"] = 147.2750549316406,
-					["Header"] = {
-						["Point"] = "TOPLEFT",
-						["Width"] = 399.0946350097656,
-						["Y"] = 0,
-						["Height"] = 25.99996185302734,
-						["X"] = 147.2750701904297,
-					},
-					["Height"] = 227.9999847412109,
-				},
-			},
+		["Default"] = {
 		},
 	},
+}
+_weizpvp_addon = {
+	["Database_Version"] = 3,
+	["Addon_Version"] = "1.9.0.2",
 }

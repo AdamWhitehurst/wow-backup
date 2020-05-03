@@ -111,8 +111,8 @@ local function HandleAffixIcons(self)
 	end
 end
 
-local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.lfg ~= true then return end
+function S:LookingForGroupFrames()
+	if not (E.private.skins.blizzard.enable and E.private.skins.blizzard.lfg) then return end
 
 
 	local PVEFrame = _G.PVEFrame
@@ -702,10 +702,9 @@ local function LoadSkin()
 	-- Tutorial
 	S:HandleCloseButton(_G.PremadeGroupsPvETutorialAlert.CloseButton)
 end
-S:AddCallback("LFG", LoadSkin)
 
-local function LoadSecondarySkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.lfg ~= true then return end
+function S:Blizzard_ChallengesUI()
+	if not (E.private.skins.blizzard.enable and E.private.skins.blizzard.lfg) then return end
 
 	local ChallengesFrame = _G.ChallengesFrame
 	ChallengesFrame:DisableDrawLayer("BACKGROUND")
@@ -747,7 +746,7 @@ local function LoadSecondarySkin()
 	local NoticeFrame = _G.ChallengesFrame.SeasonChangeNoticeFrame
 	S:HandleButton(NoticeFrame.Leave)
 	NoticeFrame:StripTextures()
-	NoticeFrame:CreateBackdrop("Overlay")
+	NoticeFrame:CreateBackdrop()
 	NoticeFrame:SetFrameLevel(5)
 	NoticeFrame.NewSeason:SetTextColor(1, .8, 0)
 	NoticeFrame.NewSeason:SetShadowOffset(1, -1)
@@ -758,9 +757,17 @@ local function LoadSecondarySkin()
 	NoticeFrame.SeasonDescription3:SetTextColor(1, .8, 0)
 	NoticeFrame.SeasonDescription3:SetShadowOffset(1, -1)
 
-	local affix = _G.ChallengesFrame.SeasonChangeNoticeFrame.Affix
-	affix:StripTextures()
-	S:HandleIcon(affix.Portrait)
+	local affix = NoticeFrame.Affix
+	affix.AffixBorder:Hide()
+	affix.Portrait:SetTexCoord(unpack(E.TexCoords))
+
+	hooksecurefunc(affix, "SetUp", function(self, affixID)
+		local _, _, texture = C_ChallengeMode_GetAffixInfo(affixID)
+		if texture then
+			affix.Portrait:SetTexture(texture)
+		end
+	end)
 end
 
-S:AddCallbackForAddon("Blizzard_ChallengesUI", "Challenges", LoadSecondarySkin)
+S:AddCallback('LookingForGroupFrames')
+S:AddCallbackForAddon('Blizzard_ChallengesUI')

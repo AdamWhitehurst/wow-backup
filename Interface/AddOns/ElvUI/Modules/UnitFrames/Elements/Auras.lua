@@ -4,8 +4,9 @@ local LSM = E.Libs.LSM
 
 --Lua functions
 local _G = _G
-local unpack, strfind, format, strsplit, sort, ceil = unpack, strfind, format, strsplit, sort, ceil
-local huge = math.huge
+local sort, ceil, huge = sort, ceil, math.huge
+local select, unpack, format = select, unpack, format
+local strfind, strsplit, strmatch = strfind, strsplit, strmatch
 --WoW API / Variables
 local CreateFrame = CreateFrame
 local IsShiftKeyDown = IsShiftKeyDown
@@ -63,6 +64,7 @@ function UF:Construct_AuraIcon(button)
 	button:SetTemplate(nil, nil, nil, UF.thinBorders, true)
 
 	button.cd:SetReverse(true)
+	button.cd:SetDrawEdge(false)
 	button.cd:SetInside(button, offset, offset)
 
 	button.icon:SetInside(button, offset, offset)
@@ -106,16 +108,14 @@ function UF:EnableDisable_Auras(frame)
 		if not frame:IsElementEnabled('Auras') then
 			frame:EnableElement('Auras')
 		end
+
+		frame:SetAuraUpdateMethod(E.global.unitframe.effectiveAura)
+		frame:SetAuraUpdateSpeed(E.global.unitframe.effectiveAuraSpeed)
 	else
 		if frame:IsElementEnabled('Auras') then
 			frame:DisableElement('Auras')
 		end
 	end
-end
-
-local function ReverseUpdate(frame)
-	UF:Configure_Auras(frame, "Debuffs")
-	UF:Configure_Auras(frame, "Buffs")
 end
 
 function UF:UpdateAuraCooldownPosition(button)
@@ -131,29 +131,114 @@ function UF:UpdateAuraCooldownPosition(button)
 	button.needsUpdateCooldownPosition = nil
 end
 
-function UF:Configure_Auras(frame, auraType)
+function UF:Configure_AllAuras(frame)
+	if not frame.VARIABLES_SET then return end
+
+	if frame.Buffs then frame.Buffs:ClearAllPoints() end
+	if frame.Debuffs then frame.Debuffs:ClearAllPoints() end
+
+	UF:Configure_Auras(frame, 'Buffs')
+	UF:Configure_Auras(frame, 'Debuffs')
+end
+
+function UF:Configure_Auras(frame, which)
 	if not frame.VARIABLES_SET then return end
 
 	local db = frame.db
-	local auras = frame[auraType]
-	auraType = auraType:lower()
+	local auras = frame[which]
+	local auraType = which:lower()
 	auras.db = db[auraType]
 
+	local position = db.smartAuraPosition
+	if position == "BUFFS_ON_DEBUFFS" then
+		if db.debuffs.attachTo == "BUFFS" then
+			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
+			db.debuffs.attachTo = "FRAME"
+			frame.Debuffs.attachTo = frame
+			frame.Debuffs:ClearAllPoints()
+			frame.Debuffs:Point(frame.Debuffs.initialAnchor, frame.Debuffs.attachTo, frame.Debuffs.anchorPoint, frame.Debuffs.xOffset, frame.Debuffs.yOffset)
+		end
+		db.buffs.attachTo = "DEBUFFS"
+		frame.Buffs.attachTo = frame.Debuffs
+		frame.Buffs.PostUpdate = nil
+		frame.Debuffs.PostUpdate = UF.UpdateBuffsHeaderPosition
+	elseif position == "DEBUFFS_ON_BUFFS" then
+		if db.buffs.attachTo == "DEBUFFS" then
+			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
+			db.buffs.attachTo = "FRAME"
+			frame.Buffs.attachTo = frame
+			frame.Buffs:ClearAllPoints()
+			frame.Buffs:Point(frame.Buffs.initialAnchor, frame.Buffs.attachTo, frame.Buffs.anchorPoint, frame.Buffs.xOffset, frame.Buffs.yOffset)
+		end
+		db.debuffs.attachTo = "BUFFS"
+		frame.Debuffs.attachTo = frame.Buffs
+		frame.Buffs.PostUpdate = UF.UpdateDebuffsHeaderPosition
+		frame.Debuffs.PostUpdate = nil
+	elseif position == "FLUID_BUFFS_ON_DEBUFFS" then
+		if db.debuffs.attachTo == "BUFFS" then
+			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
+			db.debuffs.attachTo = "FRAME"
+			frame.Debuffs.attachTo = frame
+			frame.Debuffs:ClearAllPoints()
+			frame.Debuffs:Point(frame.Debuffs.initialAnchor, frame.Debuffs.attachTo, frame.Debuffs.anchorPoint, frame.Debuffs.xOffset, frame.Debuffs.yOffset)
+		end
+		db.buffs.attachTo = "DEBUFFS"
+		frame.Buffs.attachTo = frame.Debuffs
+		frame.Buffs.PostUpdate = UF.UpdateBuffsHeight
+		frame.Debuffs.PostUpdate = UF.UpdateBuffsPositionAndDebuffHeight
+	elseif position == "FLUID_DEBUFFS_ON_BUFFS" then
+		if db.buffs.attachTo == "DEBUFFS" then
+			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
+			db.buffs.attachTo = "FRAME"
+			frame.Buffs.attachTo = frame
+			frame.Buffs:ClearAllPoints()
+			frame.Buffs:Point(frame.Buffs.initialAnchor, frame.Buffs.attachTo, frame.Buffs.anchorPoint, frame.Buffs.xOffset, frame.Buffs.yOffset)
+		end
+		db.debuffs.attachTo = "BUFFS"
+		frame.Debuffs.attachTo = frame.Buffs
+		frame.Buffs.PostUpdate = UF.UpdateDebuffsPositionAndBuffHeight
+		frame.Debuffs.PostUpdate = UF.UpdateDebuffsHeight
+	else
+		frame.Buffs.PostUpdate = nil
+		frame.Debuffs.PostUpdate = nil
+	end
+
+	if db.debuffs.attachTo == 'BUFFS' and db.buffs.attachTo == 'DEBUFFS' then
+		E:Print(format(L["%s frame has a conflicting anchor point. Forcing the Buffs to be attached to the main unitframe."], E:StringTitle(frame:GetName())))
+		db.buffs.attachTo = 'FRAME'
+	end
+
 	local rows = auras.db.numrows
-	auras.forceShow = frame.forceShowAuras
+	auras.spacing = auras.db.spacing
 	auras.num = auras.db.perrow * rows
 	auras.size = auras.db.sizeOverride ~= 0 and auras.db.sizeOverride or ((((auras:GetWidth() - (auras.spacing*(auras.num/rows - 1))) / auras.num)) * rows)
+	auras.forceShow = frame.forceShowAuras
 	auras.disableMouse = auras.db.clickThrough
+	auras.anchorPoint = auras.db.anchorPoint
+	auras.initialAnchor = E.InversePoints[auras.anchorPoint]
+	auras.attachTo = self:GetAuraAnchorFrame(frame, auras.db.attachTo)
+	auras["growth-y"] = strfind(auras.anchorPoint, 'TOP') and 'UP' or 'DOWN'
+	auras["growth-x"] = auras.anchorPoint == 'LEFT' and 'LEFT' or  auras.anchorPoint == 'RIGHT' and 'RIGHT' or (strfind(auras.anchorPoint, 'LEFT') and 'RIGHT' or 'LEFT')
+
+	local x, y = E:GetXYOffset(auras.anchorPoint, frame.SPACING) --Use frame.SPACING override since it may be different from E.Spacing due to forced thin borders
+	if auras.attachTo == "FRAME" then
+		y = 0
+	elseif auras.attachTo == "HEALTH" or auras.attachTo == "POWER" then
+		x = E:GetXYOffset(auras.anchorPoint, -frame.BORDER)
+		y = select(2, E:GetXYOffset(auras.anchorPoint, (frame.BORDER + frame.SPACING)))
+	else
+		x = 0
+	end
+	auras.xOffset = x + auras.db.xOffset
+	auras.yOffset = y + auras.db.yOffset
 
 	if auras.db.sizeOverride and auras.db.sizeOverride > 0 then
-		auras:Width(auras.db.perrow * auras.db.sizeOverride)
+		auras:Width(auras.db.perrow * auras.db.sizeOverride + ((auras.db.perrow - 1) * auras.spacing))
 	else
 		local totalWidth = frame.UNIT_WIDTH - frame.SPACING*2
-		if frame.USE_POWERBAR_OFFSET then
-			if not (auras.db.attachTo == "POWER" and frame.ORIENTATION == "MIDDLE") then
-				local powerOffset = ((frame.ORIENTATION == "MIDDLE" and 2 or 1) * frame.POWERBAR_OFFSET)
-				totalWidth = totalWidth - powerOffset
-			end
+		if frame.USE_POWERBAR_OFFSET and not (auras.attachTo == "POWER" and frame.ORIENTATION == "MIDDLE") then
+			local powerOffset = ((frame.ORIENTATION == "MIDDLE" and 2 or 1) * frame.POWERBAR_OFFSET)
+			totalWidth = totalWidth - powerOffset
 		end
 		auras:Width(totalWidth)
 	end
@@ -169,91 +254,14 @@ function UF:Configure_Auras(frame, auraType)
 		index = index + 1
 	end
 
-	local attachTo = self:GetAuraAnchorFrame(frame, auras.db.attachTo, db.debuffs.attachTo == 'BUFFS' and db.buffs.attachTo == 'DEBUFFS')
-	local x, y = E:GetXYOffset(auras.db.anchorPoint, frame.SPACING) --Use frame.SPACING override since it may be different from E.Spacing due to forced thin borders
-
-	if auras.db.attachTo == "FRAME" then
-		y = 0
-	elseif auras.db.attachTo == "HEALTH" or auras.db.attachTo == "POWER" then
-		local newX = E:GetXYOffset(auras.db.anchorPoint, -frame.BORDER)
-		local _, newY = E:GetXYOffset(auras.db.anchorPoint, (frame.BORDER + frame.SPACING))
-		x = newX
-		y = newY
-	else
-		x = 0
-	end
-
-	if (auraType == "buffs" and frame.Debuffs.attachTo and frame.Debuffs.attachTo == frame.Buffs and auras.db.attachTo == "DEBUFFS") then
-		--Update Debuffs first, as we would otherwise get conflicting anchor points
-		--This is usually only an issue on profile change
-		ReverseUpdate(frame)
-		return
-	end
-
 	auras:ClearAllPoints()
-	auras:Point(E.InversePoints[auras.db.anchorPoint], attachTo, auras.db.anchorPoint, x + auras.db.xOffset, y + auras.db.yOffset)
+	auras:Point(auras.initialAnchor, auras.attachTo, auras.anchorPoint, auras.xOffset, auras.yOffset)
 	auras:Height(auras.size * rows)
-	auras["growth-y"] = strfind(auras.db.anchorPoint, 'TOP') and 'UP' or 'DOWN'
-	auras["growth-x"] = auras.db.anchorPoint == 'LEFT' and 'LEFT' or  auras.db.anchorPoint == 'RIGHT' and 'RIGHT' or (strfind(auras.db.anchorPoint, 'LEFT') and 'RIGHT' or 'LEFT')
-	auras.initialAnchor = E.InversePoints[auras.db.anchorPoint]
-
-	--These are needed for SmartAuraPosition
-	auras.attachTo = attachTo
-	auras.point = E.InversePoints[auras.db.anchorPoint]
-	auras.anchorPoint = auras.db.anchorPoint
-	auras.xOffset = x + auras.db.xOffset
-	auras.yOffset = y + auras.db.yOffset
 
 	if auras.db.enable then
 		auras:Show()
 	else
 		auras:Hide()
-	end
-
-	local position = db.smartAuraPosition
-	if position == "BUFFS_ON_DEBUFFS" then
-		if db.debuffs.attachTo == "BUFFS" then
-			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
-			db.debuffs.attachTo = "FRAME"
-			frame.Debuffs.attachTo = frame
-		end
-		db.buffs.attachTo = "DEBUFFS"
-		frame.Buffs.attachTo = frame.Debuffs
-		frame.Buffs.PostUpdate = nil
-		frame.Debuffs.PostUpdate = UF.UpdateBuffsHeaderPosition
-	elseif position == "DEBUFFS_ON_BUFFS" then
-		if db.buffs.attachTo == "DEBUFFS" then
-			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
-			db.buffs.attachTo = "FRAME"
-			frame.Buffs.attachTo = frame
-		end
-		db.debuffs.attachTo = "BUFFS"
-		frame.Debuffs.attachTo = frame.Buffs
-		frame.Buffs.PostUpdate = UF.UpdateDebuffsHeaderPosition
-		frame.Debuffs.PostUpdate = nil
-	elseif position == "FLUID_BUFFS_ON_DEBUFFS" then
-		if db.debuffs.attachTo == "BUFFS" then
-			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
-			db.debuffs.attachTo = "FRAME"
-			frame.Debuffs.attachTo = frame
-		end
-		db.buffs.attachTo = "DEBUFFS"
-		frame.Buffs.attachTo = frame.Debuffs
-		frame.Buffs.PostUpdate = UF.UpdateBuffsHeight
-		frame.Debuffs.PostUpdate = UF.UpdateBuffsPositionAndDebuffHeight
-	elseif position == "FLUID_DEBUFFS_ON_BUFFS" then
-		if db.buffs.attachTo == "DEBUFFS" then
-			E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
-			db.buffs.attachTo = "FRAME"
-			frame.Buffs.attachTo = frame
-		end
-		db.debuffs.attachTo = "BUFFS"
-		frame.Debuffs.attachTo = frame.Buffs
-		frame.Buffs.PostUpdate = UF.UpdateDebuffsPositionAndBuffHeight
-		frame.Debuffs.PostUpdate = UF.UpdateDebuffsHeight
-	else
-		frame.Buffs.PostUpdate = nil
-		frame.Debuffs.PostUpdate = nil
 	end
 end
 
@@ -433,7 +441,7 @@ function UF:AuraFilter(unit, button, name, _, count, debuffType, duration, expir
 	if not name then return end -- checking for an aura that is not there, pass nil to break while loop
 
 	local db = button.db or self.db
-	if not db then return true elseif db.filters then db = db.filters end
+	if not db then return true end
 
 	local isPlayer = (caster == 'player' or caster == 'vehicle')
 	local isFriend = unit and UnitIsFriend('player', unit) and not UnitCanAttack('player', unit)
@@ -452,10 +460,10 @@ function UF:AuraFilter(unit, button, name, _, count, debuffType, duration, expir
 	button.priority = 0
 
 	local noDuration = (not duration or duration == 0)
-	local allowDuration = noDuration or (duration and (duration > 0) and (db.maxDuration == 0 or duration <= db.maxDuration) and (db.minDuration == 0 or duration >= db.minDuration))
+	local allowDuration = noDuration or (duration and duration > 0 and (not db.maxDuration or db.maxDuration == 0 or duration <= db.maxDuration) and (not db.minDuration or db.minDuration == 0 or duration >= db.minDuration))
 	local filterCheck, spellPriority
 
-	if db.priority ~= '' then
+	if db.priority and db.priority ~= '' then
 		local isUnit = unit and caster and UnitIsUnit(unit, caster)
 		local canDispell = (self.type == 'buffs' and isStealable) or (self.type == 'debuffs' and debuffType and E:IsDispellableByMe(debuffType))
 		filterCheck, spellPriority = UF:CheckFilter(name, caster, spellID, isFriend, isPlayer, isUnit, isBossDebuff, allowDuration, noDuration, canDispell, casterIsPlayer, strsplit(',', db.priority))
@@ -475,10 +483,10 @@ function UF:UpdateBuffsHeaderPosition()
 
 	if numDebuffs == 0 then
 		buffs:ClearAllPoints()
-		buffs:Point(debuffs.point, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
+		buffs:Point(debuffs.initialAnchor, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
 	else
 		buffs:ClearAllPoints()
-		buffs:Point(buffs.point, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
+		buffs:Point(buffs.initialAnchor, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
 	end
 end
 
@@ -490,10 +498,10 @@ function UF:UpdateDebuffsHeaderPosition()
 
 	if numBuffs == 0 then
 		debuffs:ClearAllPoints()
-		debuffs:Point(buffs.point, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
+		debuffs:Point(buffs.initialAnchor, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
 	else
 		debuffs:ClearAllPoints()
-		debuffs:Point(debuffs.point, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
+		debuffs:Point(debuffs.initialAnchor, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
 	end
 end
 
@@ -506,10 +514,10 @@ function UF:UpdateBuffsPositionAndDebuffHeight()
 
 	if numDebuffs == 0 then
 		buffs:ClearAllPoints()
-		buffs:Point(debuffs.point, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
+		buffs:Point(debuffs.initialAnchor, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
 	else
 		buffs:ClearAllPoints()
-		buffs:Point(buffs.point, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
+		buffs:Point(buffs.initialAnchor, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
 	end
 
 	if numDebuffs > 0 then
@@ -529,10 +537,10 @@ function UF:UpdateDebuffsPositionAndBuffHeight()
 
 	if numBuffs == 0 then
 		debuffs:ClearAllPoints()
-		debuffs:Point(buffs.point, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
+		debuffs:Point(buffs.initialAnchor, buffs.attachTo, buffs.anchorPoint, buffs.xOffset, buffs.yOffset)
 	else
 		debuffs:ClearAllPoints()
-		debuffs:Point(debuffs.point, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
+		debuffs:Point(debuffs.initialAnchor, debuffs.attachTo, debuffs.anchorPoint, debuffs.xOffset, debuffs.yOffset)
 	end
 
 	if numBuffs > 0 then

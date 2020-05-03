@@ -1,0 +1,8 @@
+
+BtWQuests_Settings = {
+}
+BtWQuests_AutoLoad = {
+	["BtWQuestsMistsOfPandaria"] = false,
+	["BtWQuestsLegion"] = true,
+	["BtWQuestsBattleForAzeroth"] = false,
+}

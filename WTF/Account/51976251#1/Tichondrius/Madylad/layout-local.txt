@@ -2,8 +2,8 @@ Version: 1
 Frame: ObjectiveTrackerFrame
 FrameLevel: 1
 Anchor: TOPRIGHT
-X: -5
-Y: -30
+X: -3
+Y: 0
 W: 235
 H: 660
 Frame: CharacterFrame
@@ -20,6 +20,13 @@ X: 20
 Y: -20
 W: 338
 H: 424
+Frame: ColorPickerFrame
+FrameLevel: 21
+Anchor: CENTER
+X: 0
+Y: 0
+W: 365
+H: 239
 Frame: AllTheThings-Window-Prime
 FrameLevel: 1
 Anchor: CENTER
@@ -97,10 +104,3 @@ X: 0
 Y: 0
 W: 300
 H: 300
-Frame: ColorPickerFrame
-FrameLevel: 21
-Anchor: CENTER
-X: 0
-Y: 0
-W: 405
-H: 239

@@ -2,57 +2,49 @@
 --|> LISTS
 --: Manages the lists of players shown
 -------------------------------------------------------------------------------
---|> UPVALUE GLOBALS
+--|> Upvalue Globals
 -------------------------------------------------------------------------------
-local weizPVP = weizPVP
-local InCombatLockdown, GetTime, RAID_CLASS_COLORS = InCombatLockdown, GetTime, RAID_CLASS_COLORS
-local pairs, strlen, gsub, tinsert, sort = pairs, strlen, gsub, tinsert, sort
-local C_Timer_After = C_Timer.After
+local _, NS = ...
+local RAID_CLASS_COLORS = RAID_CLASS_COLORS
 local CopyTable = CopyTable
-local PlaySoundFile = PlaySoundFile
-local wipe = wipe
+local InCombatLockdown, GetTime = InCombatLockdown, GetTime
+local pairs, strlen, gsub, tinsert, sort, wipe = pairs, strlen, gsub, tinsert, sort, wipe
+local C_Timer_After = C_Timer.After
+local XEN = XEN
 
--------------------------------------------------------------------------------
 --|> GLOBALS
 -------------------------------------------------------------------------------
-weizPVP.NearbyListSize = 0
-weizPVP.CurrentList = {}
-weizPVP.CurrentNameplates = {}
-weizPVP.NearbyList = {}
-weizPVP.ActiveList = {}
-weizPVP.InactiveList = {}
-weizPVP.ActiveDeadList = {}
-weizPVP.InactiveDeadList = {}
-weizPVP.PlayersOnBars = {}
+NS.NearbyListSize = 0
+NS.CurrentList = {}
+NS.CurrentNameplates = {}
+NS.NearbyList = {}
+NS.ActiveList = {}
+NS.InactiveList = {}
+NS.ActiveDeadList = {}
+NS.InactiveDeadList = {}
+NS.PlayersOnBars = {}
 
--------------------------------------------------------------------------------
 --|> LIBS
 -------------------------------------------------------------------------------
 local SM = LibStub("LibSharedMedia-3.0")
 
--------------------------------------------------------------------------------
 --|> FUNCTIONS
 -------------------------------------------------------------------------------
 --> Update Neaby Count
--------------------------------------------------------------------------------
-function weizPVP:UpdateNearbyCount()
+-- GREEN, GOLD, ORANGE, PINK, RED
+-- [0.4, 1, 0],[1, 0.74, 0],[1, 0.35, 0],[1, 0, 0.34],[1, 0, 0]
+local NearbyCountTopColorLimit = 100
+function NS.UpdateNearbyCount()
     --> Upate Global
-    weizPVP.NearbyCount = weizPVP.NearbyListSize
-
-    if weizPVP.NearbyCount > 0 then --> List Size is > 0
-        if weizPVP.NearbyCount > 50 then
-            weizPVP.HeaderFrame.TitleVar:SetText("|cFFff0000" .. weizPVP.NearbyCount .. "|r") --> 50+ (RED)
-        elseif weizPVP.NearbyCount > 40 then
-            weizPVP.HeaderFrame.TitleVar:SetText("|cFFff0056" .. weizPVP.NearbyCount .. "|r") --> 40+ (BRIGHT PINK)
-        elseif weizPVP.NearbyCount > 20 then
-            weizPVP.HeaderFrame.TitleVar:SetText("|cFFff5900" .. weizPVP.NearbyCount .. "|r") --> 20+ (ORANGE)
-        elseif weizPVP.NearbyCount > 10 then
-            weizPVP.HeaderFrame.TitleVar:SetText("|cFFFFBC00" .. weizPVP.NearbyCount .. "|r") --> 10+ (GOLD)
-        else
-            weizPVP.HeaderFrame.TitleVar:SetText("|cFFd1ff00" .. weizPVP.NearbyCount .. "|r") --> 1+ (LIME GREEM)
-        end
-    else --> List Size is 0
-        weizPVP.HeaderFrame.TitleVar:SetText("|cFF26FF540|r") --> 0 (GREEN)
+    NS.NearbyCount = NS.NearbyListSize
+    if NS.NearbyCount < 100 then
+        NS.HeaderFrame.TitleVar:SetText(
+            "|cff" ..
+                XEN.GetColorValueFromGradient((NS.NearbyCount / NearbyCountTopColorLimit), 0.4, 1, 0, 1, 0.74, 0, 1, 0.35, 0, 1, 0, 0.34, 1, 0, 0) ..
+                    NS.NearbyCount .. "|r"
+        )
+    else
+        NS.HeaderFrame.TitleVar:SetText("|cffff0000" .. NS.NearbyCount .. "|r")
     end
 end
 
@@ -60,15 +52,21 @@ end
 --> Manage Bars Displayed
 -------------------------------------------------------------------------------
 local listSize = 0
-function weizPVP.ManageBarsDisplayed()
-    listSize = weizPVP.NearbyListSize
-    for i = 1, weizPVP.Options.Bars.MaxNumBars do
+function NS.ManageBarsDisplayed()
+    listSize = NS.NearbyListSize
+    for i = 1, NS.Options.Bars.MaxNumBars do
         if i > listSize then
-            weizPVP.Bars[i]:SetAlpha(0)
-            weizPVP.Bars[i]:SetValue(100)
-            weizPVP.Bars[i].DEADIcon:Hide()
-            weizPVP.Bars[i].RoleIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga", false)
-            weizPVP.Bars[i].NameText:SetText("|cFFFFFFFF--|r")
+            NS.Bars[i]:SetAlpha(0)
+            NS.Bars[i]:SetValue(100)
+            NS.Bars[i].DEADIcon:Hide()
+            NS.Bars[i].RoleIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga", false)
+            NS.Bars[i].NameText:SetText("|cFFFFFFFF--|r")
+            NS.Buttons[i].Target = ""
+            NS.Bars[i].name = ""
+            NS.Bars[i].displayName = ""
+            if not InCombatLockdown() then
+                NS.Buttons[i]:SetAttribute("macrotext1", "")
+            end
         end
     end
 end
@@ -78,53 +76,57 @@ end
 --: Checks Active and Inactive lists for inactivity and move them accordingly
 --: Refreshed the list if we found expirations and Updates the NearbyCount
 -------------------------------------------------------------------------------
-
-function weizPVP:ManageListTimeouts()
+local ActiveListCount = 0
+function NS.ManageListTimeouts()
     local expired = false
     local removed = false
     local expiredCount = 0
     local i = 0
     local timestamp = GetTime()
-
-    for player in pairs(weizPVP.ActiveList) do
-        if (timestamp - weizPVP.ActiveList[player].TimeUpdated) > weizPVP.Options.Sorting.NearbyActiveTimeout and weizPVP.CurrentNameplates[player] == nil then
-            weizPVP.InactiveList[player] = weizPVP.ActiveList[player]
-            weizPVP.InactiveList[player].TimeAdded = timestamp + (i * 0.001)
-            weizPVP.ActiveList[player] = nil
-            expired = true
+    --> ACTIVE
+    for player in pairs(NS.ActiveList) do
+        if (timestamp - NS.ActiveList[player].TimeUpdated) > NS.Options.Sorting.NearbyActiveTimeout and NS.CurrentNameplates[player] == nil then
+            NS.InactiveList[player] = NS.ActiveList[player]
+            NS.InactiveList[player].TimeAdded = timestamp + (i * 0.001)
+            NS.ActiveList[player] = nil
             i = i + 1
+            expired = true
         end
     end
+    ActiveListCount = i
     i = 0
+    --> ACTIVE DEAD
     timestamp = GetTime()
-    for player in pairs(weizPVP.ActiveDeadList) do
-        if (timestamp - weizPVP.ActiveDeadList[player].TimeUpdated) > weizPVP.Options.Sorting.NearbyActiveTimeout then
-            weizPVP.InactiveDeadList[player] = weizPVP.ActiveDeadList[player]
-            weizPVP.InactiveDeadList[player].TimeAdded = timestamp + (i * 0.001)
-            weizPVP.ActiveDeadList[player] = nil
+    for player in pairs(NS.ActiveDeadList) do
+        if (timestamp - NS.ActiveDeadList[player].TimeUpdated) > NS.Options.Sorting.NearbyActiveTimeout then
+            NS.InactiveDeadList[player] = NS.ActiveDeadList[player]
+            NS.InactiveDeadList[player].TimeAdded = timestamp + (i * 0.001)
+            NS.ActiveDeadList[player] = nil
             expired = true
             i = i + 1
         end
     end
+    --> INACTIVE
     timestamp = GetTime()
-    for player in pairs(weizPVP.InactiveList) do
-        if (timestamp - weizPVP.InactiveList[player].TimeUpdated) > weizPVP.Options.Sorting.NearbyInactiveTimeout then
-            weizPVP.InactiveList[player] = nil
-            weizPVP.NearbyList[player] = nil
-            weizPVP.PlayerActiveCache[player] = nil
-            weizPVP.CurrentList[player] = nil
+    for player in pairs(NS.InactiveList) do
+        if (timestamp - NS.InactiveList[player].TimeUpdated) > NS.Options.Sorting.NearbyInactiveTimeout then
+            NS.InactiveList[player] = nil
+            NS.NearbyList[player] = nil
+            NS.PlayerActiveCache[player] = nil
+            NS.CurrentList[player] = nil
             expiredCount = expiredCount + 1
             expired = true
             removed = true
         end
     end
-
-    for player in pairs(weizPVP.InactiveDeadList) do
-        if (timestamp - weizPVP.InactiveDeadList[player].TimeUpdated) > weizPVP.Options.Sorting.NearbyInactiveTimeout then
-            weizPVP.InactiveDeadList[player] = nil
-            weizPVP.NearbyList[player] = nil
-            weizPVP.PlayerActiveCache[player] = nil
-            weizPVP.CurrentList[player] = nil
+    --> INACTIVE DEAD
+    timestamp = GetTime()
+    for player in pairs(NS.InactiveDeadList) do
+        if (timestamp - NS.InactiveDeadList[player].TimeUpdated) > NS.Options.Sorting.NearbyInactiveTimeout then
+            NS.InactiveDeadList[player] = nil
+            NS.NearbyList[player] = nil
+            NS.PlayerActiveCache[player] = nil
+            NS.CurrentList[player] = nil
             expiredCount = expiredCount + 1
             expired = true
             removed = true
@@ -132,14 +134,14 @@ function weizPVP:ManageListTimeouts()
     end
 
     if expired or removed then
-        weizPVP.NearbyListSize = weizPVP.NearbyListSize - expiredCount
-        weizPVP:SortNearbyList()
-        weizPVP:UpdateNearbyCount()
-        weizPVP:RefreshCurrentList()
+        NS.NearbyListSize = NS.NearbyListSize - expiredCount
+        NS.SortNearbyList()
+        NS.UpdateNearbyCount()
+        NS.RefreshCurrentList()
     end
 
     if removed then
-        weizPVP.ManageBarsDisplayed()
+        NS.ManageBarsDisplayed()
     end
 end
 
@@ -148,7 +150,7 @@ end
 -------------------------------------------------------------------------------
 local function FormatLevelString(Estimated, Level)
     local LevelText = ""
-    local playerLevel = weizPVP.Player.Level
+    local playerLevel = NS.Player.Level
     if Level then
         --> Known Level: Get colors based on difference
         if Level == 0 then --> 0
@@ -185,78 +187,80 @@ local roleIcons = {
     ["UNKNOWN"] = "Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga"
 }
 
--------------------------------------------------------------------------------
 --> Updates the player bar for the bar# specified
+local string_gsub = string.gsub
 local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estimated, Stealth, Dead, Role, GUID, Name)
-    local Bar = weizPVP.Bars[num]
-    local Button = weizPVP.Buttons[num]
-    if Button ~= nil and Bar ~= nil and GUID ~= nil then
-        --> Set target macro when not in combat
+    local Bar = NS.Bars[num]
+    local Button = NS.Buttons[num]
+    if Button and Bar and GUID then
+        -- update infos
+        Bar.displayName = string_gsub(Name, "-" .. NS.PlayerRealm, "")
+        Bar.name = Name
+        Bar.GUID = GUID
+        NS.PlayersOnBars[GUID] = num
+        -- Set target macro when not in combat
         if not InCombatLockdown() and player and Name then
-            Bar:SetAttribute("macrotext1", "/targetexact " .. Name)
-            Bar.Target = Name
+            Button:SetAttribute("type1", "macro")
+            Button:SetAttribute("macrotext1", "/targetexact " .. Bar.displayName)
+            Button.Target = Name
         end
         Button:SetAlpha(0.2)
         if Alpha and Alpha ~= 0 then
             Bar:SetAlpha(Alpha)
         else
-            Bar:SetAlpha(weizPVP.Options.Bars.AlphaDefault)
+            Bar:SetAlpha(NS.Options.Bars.AlphaDefault)
         end
-
-        --> NAME TEXT
-        local charname = gsub(Name, "-(.*)", "")
-        if strlen(Name) > strlen(charname) then
+        -- NAME TEXT
+        local charname = gsub(Bar.displayName, "-(.*)", "")
+        if strlen(Bar.displayName) > strlen(charname) then
             Bar.NameText:SetText(charname .. "|cFFFF00CC*|r")
         else
-            Bar.NameText:SetText(Name)
+            Bar.NameText:SetText(charname)
         end
-
-        if weizPVP.PlayerActiveCache[GUID].OnTaxi then
+        -- KOS CHECK
+        if NS.KosList[Name] then
+            Bar.KOSRibbon:Show()
+        else
+            Bar.KOSRibbon:Hide()
+        end
+        -- TAXI CHECK
+        if NS.PlayerActiveCache[GUID].OnTaxi then
             Bar.NameText:SetText("|TInterface\\MINIMAP\\TRACKING\\FlightMaster:0|t " .. Bar.NameText:GetText(Name))
         end
-
-        Bar.name = Name
-        Bar.GUID = GUID
-        weizPVP.PlayersOnBars[GUID] = num
-
-        -- --> Stealth
-        --!! NEEDS TO BE FIXED
-        -- if Stealth ~= nil and Stealth == true then
-        --     if strlen(Name) > strlen(charname) then
-        --         Bar.NameText:SetText("|cFFffc863" .. charname .. "|r |cFFFF00CC*|r")
-        --     else
-        --         Bar.NameText:SetText("|cFFffc863" .. Name .. "|r")
-        --     end
-        -- end
-
-        --> LEVEL
+        -- Stealth
+        -- TODO-> NEEDS TO BE IMPROVED
+        if Stealth and Stealth == true then
+            if strlen(Name) > strlen(charname) then
+                Bar.NameText:SetText("|cFFffc863" .. charname .. "|r |cFFFF00CC*|r")
+            else
+                Bar.NameText:SetText("|cFFffc863" .. Name .. "|r")
+            end
+        end
+        -- TODO : ADD ATTACK CHECK FOR UNFLAGGED PLAYERS
+        -- LEVEL
         Bar.LevelText:SetText(FormatLevelString(Estimated, Level))
-
-        --> CLASS + COLOR (BAR COLOR)
+        -- CLASS + COLOR (BAR COLOR)
         if Class and RAID_CLASS_COLORS[Class] then
             local classColor = RAID_CLASS_COLORS[Class]
             Bar:SetStatusBarColor(classColor.r - darkenValue, classColor.g - darkenValue, classColor.b - darkenValue, Alpha)
         end
         Bar.bg:SetVertexColor(0, 0, 0, 1)
-
-        --> HEALTH (BAR VALUE)
+        -- HEALTH (BAR VALUE)
         if Health ~= nil then
             Bar:SetValue(Health)
             PixelUtil.SetStatusBarValue(Bar, Health)
         end
-
-        --> ROLE
+        -- ROLE
         local adjustedRole
         if Role then
             adjustedRole = Role
-        elseif weizPVP.PlayerDB[Name].Role then
-            adjustedRole = weizPVP.PlayerDB[Name].Role
+        elseif NS.PlayerDB[Name].Role then
+            adjustedRole = NS.PlayerDB[Name].Role
         else
             adjustedRole = "UNKNOWN"
         end
         Bar.RoleIcon:SetTexture(roleIcons[adjustedRole])
-
-        --> DEAD ICON
+        -- DEAD ICON
         if Dead ~= nil then
             if Dead == true then
                 Bar.DEADIcon:Show()
@@ -265,8 +269,7 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
                 Bar.DEADIcon:Hide()
             end
         end
-
-        --> GUILD TEXT
+        -- GUILD TEXT
         -----------------------------------------------------------------
         guildTxtLength = Bar.LevelText:GetWidth() + Bar.NameText:GetWidth() + 28
         if Bar.DEADIcon:IsShown() then
@@ -277,25 +280,22 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
         Bar.GuildText:SetText(Guild)
         Bar.GuildText:SetWidth(guildTxtLength)
     else
-        Bar:SetAlpha(weizPVP.Options.Bars.AlphaDefault)
+        Bar:SetAlpha(NS.Options.Bars.AlphaDefault)
     end
 end
 
 --> Refresh One Bar
--------------------------------------------------------------------------------
-local row
-local Alpha
 local function RefreshOneBar(GUID, name)
     --> Get Row
-    row = weizPVP.PlayersOnBars[GUID]
+    local row = NS.PlayersOnBars[GUID]
 
     --> Alpha
-    Alpha = weizPVP.Options.Bars.AlphaDefault or 0.8
-    if weizPVP.InactiveList[GUID] or weizPVP.InactiveDeadList[GUID] then
-        Alpha = weizPVP.Options.Bars.AlphaInactive
+    local Alpha = NS.Options.Bars.AlphaDefault or 0.8
+    if NS.InactiveList[GUID] or NS.InactiveDeadList[GUID] then
+        Alpha = NS.Options.Bars.AlphaInactive
     end
-    if weizPVP.ActiveDeadList[GUID] then
-        Alpha = weizPVP.Options.Bars.AlphaDead
+    if NS.ActiveDeadList[GUID] then
+        Alpha = NS.Options.Bars.AlphaDead
     end
 
     --> Update Bar
@@ -304,129 +304,154 @@ local function RefreshOneBar(GUID, name)
             row,
             GUID,
             Alpha,
-            weizPVP.PlayerActiveCache[GUID].Health,
-            weizPVP.PlayerDB[name].Class,
-            weizPVP.PlayerDB[name].Guild,
-            weizPVP.PlayerDB[name].Level,
-            weizPVP.PlayerDB[name].Estimated,
-            weizPVP.PlayerActiveCache[GUID].Stealth,
-            weizPVP.PlayerActiveCache[GUID].Dead,
-            weizPVP.PlayerDB[name].Role,
+            NS.PlayerActiveCache[GUID].Health,
+            NS.PlayerDB[name].Class,
+            NS.PlayerDB[name].Guild,
+            NS.PlayerDB[name].Level,
+            NS.PlayerDB[name].Estimated,
+            NS.PlayerActiveCache[GUID].Stealth,
+            NS.PlayerActiveCache[GUID].Dead,
+            NS.PlayerDB[name].Role,
             GUID,
             name
         )
     end
 end
 
---> Update Player List
--------------------------------------------------------------------------------
-local reSortList
-local playerOnBar
+-- Update Player List
 local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
-    if not weizPVP.Options.Bars then
+    if not NS.Options.Bars then
         return
     end
-    reSortList = false
-    if weizPVP.NearbyListSize <= weizPVP.Options.Bars.MaxNumBars then
+    local reSortList = false
+    if NS.NearbyListSize <= NS.Options.Bars.MaxNumBars then
         if dead == true or newPlayerOnList == true then
             reSortList = true
         end
     else
-        if weizPVP.PlayersOnBars[GUID] ~= nil then
+        if NS.PlayersOnBars[GUID] ~= nil then
             if dead == true then
                 reSortList = true
             end
         end
     end
+    local playerOnBar = true
 
-    playerOnBar = true
-
-    if weizPVP.NearbyList[GUID] == nil then --> ADDING NEW PLAYER
+    --------------------------------------
+    -->> NEW PLAYER <<----
+    --------------------------------------
+    if NS.NearbyList[GUID] == nil or newPlayerOnList then --> ADDING NEW PLAYER
         playerOnBar = false
-        --> New Player added; play sound?
-        if weizPVP.Options.AudioAlerts.DetectedPlayerSound == true then
-            weizPVP.PlaySoundAlert(SM:Fetch("sound", weizPVP.Options.AudioAlerts.DetectedPlayerSoundFile))
+        reSortList = true
+
+        --> New Player added; play sound if on KOS list?
+        if NS.KosList[NS.PlayerActiveCache[GUID].Name] then
+            --> Audio Alert
+            if NS.Options.KOS.AudioAlert == true then
+                NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.KOS.AudioAlertFile), true)
+            elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then --> New Player added; play sound?
+                if not (NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled == true and NS.instanceInfo == "pvp") then
+                    NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.AudioAlerts.DetectedPlayerSoundFile))
+                end
+            end
+            --> Flash OS program icon (taskbar)
+            if NS.Options.KOS.TaskbarAlert == true then
+                FlashClientIcon()
+            end
+            --> Chat Alert
+            if NS.Options.KOS.ChatAlert == true then
+                local classColoredName =
+                    WrapTextInColorCode(NS.PlayerActiveCache[GUID].Name, select(4, GetClassColor(NS.PlayerActiveCache[GUID].Class)))
+                NS.PrintAddonMessage(
+                    "|TInterface\\Addons\\weizPVP\\Addons\\KOS\\Media\\kos_icon.tga:0|t " .. classColoredName .. " |cff8fdaffdetected!|r "
+                )
+            end
+        elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then --> NON-KOS PLAYER
+            if not (NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled == true and NS.instanceInfo == "pvp") then
+                NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.AudioAlerts.DetectedPlayerSoundFile))
+            end
         end
 
-        weizPVP.NearbyList[GUID] = {}
-        weizPVP.NearbyList[GUID].TimeUpdated = timeUpdate
-        weizPVP.NearbyList[GUID].TimeAdded = timeUpdate
+        NS.NearbyList[GUID] = {}
+        NS.NearbyList[GUID].TimeUpdated = timeUpdate
+        NS.NearbyList[GUID].TimeAdded = timeUpdate
 
         if dead == true then
-            weizPVP.ActiveDeadList[GUID] = weizPVP.ActiveDeadList[GUID] or {}
-            weizPVP.ActiveDeadList[GUID].TimeUpdated = timeUpdate
-            weizPVP.ActiveDeadList[GUID].TimeAdded = timeUpdate
+            NS.ActiveDeadList[GUID] = NS.ActiveDeadList[GUID] or {}
+            NS.ActiveDeadList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveDeadList[GUID].TimeAdded = timeUpdate
         else
-            weizPVP.ActiveList[GUID] = weizPVP.ActiveList[GUID] or {}
-            weizPVP.ActiveList[GUID].TimeAdded = timeUpdate
-            weizPVP.ActiveList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveList[GUID] = NS.ActiveList[GUID] or {}
+            NS.ActiveList[GUID].TimeAdded = timeUpdate
+            NS.ActiveList[GUID].TimeUpdated = timeUpdate
         end
-    elseif not weizPVP.ActiveList[GUID] and not weizPVP.ActiveDeadList[GUID] then --> EXISTING PLAYER; WAS INACTIVE
+    elseif not NS.ActiveList[GUID] and not NS.ActiveDeadList[GUID] then --> EXISTING PLAYER; WAS INACTIVE
         reSortList = true
         if dead then
-            weizPVP.ActiveDeadList[GUID] = weizPVP.InactiveDeadList[GUID] or {}
-            weizPVP.ActiveDeadList[GUID].TimeUpdated = timeUpdate
-            weizPVP.ActiveDeadList[GUID].TimeAdded = timeUpdate
-            weizPVP.NearbyList[GUID].TimeUpdated = timeUpdate
-            weizPVP.NearbyList[GUID].TimeAdded = timeUpdate
-            weizPVP.ActiveList[GUID] = nil
+            NS.ActiveDeadList[GUID] = NS.InactiveDeadList[GUID] or {}
+            NS.ActiveDeadList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveDeadList[GUID].TimeAdded = timeUpdate
+            NS.NearbyList[GUID].TimeUpdated = timeUpdate
+            NS.NearbyList[GUID].TimeAdded = timeUpdate
+            NS.ActiveList[GUID] = nil
         else
-            weizPVP.ActiveList[GUID] = weizPVP.InactiveList[GUID] or {}
-            weizPVP.ActiveList[GUID].TimeUpdated = timeUpdate
-            weizPVP.ActiveList[GUID].TimeAdded = timeUpdate
-            weizPVP.NearbyList[GUID].TimeUpdated = timeUpdate
-            weizPVP.NearbyList[GUID].TimeAdded = timeUpdate
-            weizPVP.ActiveDeadList[GUID] = nil
+            NS.ActiveList[GUID] = NS.InactiveList[GUID] or {}
+            NS.ActiveList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveList[GUID].TimeAdded = timeUpdate
+            NS.NearbyList[GUID].TimeUpdated = timeUpdate
+            NS.NearbyList[GUID].TimeAdded = timeUpdate
+            NS.ActiveDeadList[GUID] = nil
         end
 
-        weizPVP.InactiveList[GUID] = nil
-        weizPVP.InactiveDeadList[GUID] = nil
+        NS.InactiveList[GUID] = nil
+        NS.InactiveDeadList[GUID] = nil
     else --> EXISTING PLAYER; ACTIVE
         if dead then
-            weizPVP.ActiveDeadList[GUID] = weizPVP.ActiveDeadList[GUID] or {}
-            weizPVP.ActiveDeadList[GUID].TimeUpdated = timeUpdate
-            weizPVP.NearbyList[GUID].TimeUpdated = timeUpdate
-            weizPVP.ActiveList[GUID] = nil
+            NS.ActiveDeadList[GUID] = NS.ActiveDeadList[GUID] or {}
+            NS.ActiveDeadList[GUID].TimeUpdated = timeUpdate
+            NS.NearbyList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveList[GUID] = nil
         else
-            weizPVP.ActiveList[GUID] = weizPVP.ActiveList[GUID] or {}
-            weizPVP.ActiveList[GUID].TimeUpdated = timeUpdate
-            weizPVP.NearbyList[GUID].TimeUpdated = timeUpdate
-            weizPVP.ActiveDeadList[GUID] = nil
+            NS.ActiveList[GUID] = NS.ActiveList[GUID] or {}
+            NS.ActiveList[GUID].TimeUpdated = timeUpdate
+            NS.NearbyList[GUID].TimeUpdated = timeUpdate
+            NS.ActiveDeadList[GUID] = nil
         end
     end
 
-    if playerOnBar == false and weizPVP.NearbyListSize > weizPVP.Options.Bars.MaxNumBars then
-        return
+    if playerOnBar == false and ActiveListCount > NS.Options.Bars.MaxNumBars then
+        if not NS.KosList[NS.PlayerActiveCache[GUID].Name] then
+            return
+        else
+            reSortList = true
+            newPlayerOnList = true
+        end
     end
-
     --> Sort only if we moved the player from one sublist to another
     if reSortList == true then
-        weizPVP:SortNearbyList()
-        if weizPVP.PlayersOnBars[GUID] or newPlayerOnList then
-            weizPVP:RefreshCurrentList()
+        NS.SortNearbyList()
+        if NS.PlayersOnBars[GUID] or newPlayerOnList then
+            NS.RefreshCurrentList()
         end
     else
-        if weizPVP.PlayersOnBars[GUID] then
-            RefreshOneBar(GUID, weizPVP.PlayerActiveCache[GUID].Name)
+        if NS.PlayersOnBars[GUID] then
+            RefreshOneBar(GUID, NS.PlayerActiveCache[GUID].Name)
         end
     end
 end
 
 --> Add Player Data
---> Incoming player data from event
--------------------------------------------------------------------------------
 local lastTimestamp = GetTime()
-function weizPVP:AddPlayerDataToNearby(GUID, newPlayerOnList)
-    --> valid check
+function NS.AddPlayerDataToNearby(GUID, newPlayerOnList)
+    -- valid check
     if not GUID then
         return
     end
-
     local dead
-    if weizPVP.PlayerActiveCache[GUID] and weizPVP.PlayerActiveCache[GUID].Dead ~= nil then
-        dead = weizPVP.PlayerActiveCache[GUID].Dead
+    if NS.PlayerActiveCache[GUID] and NS.PlayerActiveCache[GUID].Dead ~= nil then
+        dead = NS.PlayerActiveCache[GUID].Dead
     else
-        weizPVP.PlayerActiveCache[GUID].Dead = false
+        NS.PlayerActiveCache[GUID].Dead = false
         dead = false
     end
     local currentTime = GetTime()
@@ -439,111 +464,103 @@ function weizPVP:AddPlayerDataToNearby(GUID, newPlayerOnList)
         timestamp = lastTimestamp
     end
     if newPlayerOnList then
-        weizPVP.NearbyListSize = weizPVP.NearbyListSize + 1
-        weizPVP:UpdateNearbyCount()
+        NS.NearbyListSize = NS.NearbyListSize + 1
+        NS.UpdateNearbyCount()
     end
     UpdatePlayerLists(GUID, timestamp, dead, newPlayerOnList)
 end
 
---> Refresh Current List
--------------------------------------------------------------------------------
-local playersOnBars
-local BarName
-function weizPVP:RefreshCurrentList()
-    playersOnBars = {}
+-- Refresh Current List
+function NS.RefreshCurrentList()
+    local playersOnBars = {}
     --> Refreshing all bars due to required sorting
-    for k, data in pairs(weizPVP.CurrentList) do
-        if k <= weizPVP.Options.Bars.MaxNumBars then
+    for k, data in pairs(NS.CurrentList) do
+        if k <= NS.Options.Bars.MaxNumBars then
             --> Update Alpha if needed
-            Alpha = weizPVP.Options.Bars.AlphaDefault
-            if weizPVP.InactiveList[data.player] or weizPVP.InactiveDeadList[data.player] then
-                Alpha = weizPVP.Options.Bars.AlphaInactive
+            local alpha = NS.Options.Bars.AlphaDefault
+            if NS.InactiveList[data.player] or NS.InactiveDeadList[data.player] then
+                alpha = NS.Options.Bars.AlphaInactive
             end
-            if weizPVP.ActiveDeadList[data.player] then
-                Alpha = weizPVP.Options.Bars.AlphaDead
+            if NS.ActiveDeadList[data.player] then
+                alpha = NS.Options.Bars.AlphaDead
             end
-            if weizPVP.PlayerActiveCache[data.player] and weizPVP.PlayerActiveCache[data.player] then
-                playersOnBars[weizPVP.PlayerActiveCache[data.player].GUID] = k
-                BarName = weizPVP.PlayerActiveCache[data.player].Name or nil
+            if NS.PlayerActiveCache[data.player] then
+                playersOnBars[NS.PlayerActiveCache[data.player].GUID] = k
+                local barName = NS.PlayerActiveCache[data.player].Name or nil
                 --> Update Bar
-                if weizPVP.PlayerDB[BarName] then
+                if NS.PlayerDB[barName] then
                     UpdateBar(
                         k,
                         data.player,
-                        Alpha,
-                        weizPVP.PlayerActiveCache[data.player].Health,
-                        weizPVP.PlayerDB[BarName].Class,
-                        weizPVP.PlayerDB[BarName].Guild,
-                        weizPVP.PlayerDB[BarName].Level,
-                        weizPVP.PlayerDB[BarName].Estimated,
-                        weizPVP.PlayerActiveCache[data.player].Stealth,
-                        weizPVP.PlayerActiveCache[data.player].Dead,
-                        weizPVP.PlayerDB[BarName].Role,
+                        alpha,
+                        NS.PlayerActiveCache[data.player].Health,
+                        NS.PlayerDB[barName].Class,
+                        NS.PlayerDB[barName].Guild,
+                        NS.PlayerDB[barName].Level,
+                        NS.PlayerDB[barName].Estimated,
+                        NS.PlayerActiveCache[data.player].Stealth,
+                        NS.PlayerActiveCache[data.player].Dead,
+                        NS.PlayerDB[barName].Role,
                         data.player,
-                        BarName
+                        barName
                     )
                 end
             end
         else
             if playersOnBars then
-                wipe(weizPVP.PlayersOnBars)
-                weizPVP.PlayersOnBars = CopyTable(playersOnBars)
+                wipe(NS.PlayersOnBars)
+                NS.PlayersOnBars = CopyTable(playersOnBars)
             end
             break
         end
     end
-    weizPVP:ChangeTargetIcon()
+    NS.ChangeTargetIcon()
 end
 
 --> Sort Nearby List
--------------------------------------------------------------------------------
-function weizPVP:SortNearbyList()
-    --=> Get player's into the right groups
-    --> ActiveList
+function NS.SortNearbyList()
+    -- Get player's into the right groups
+    -- ActiveList
     local active = {}
     local position
-    for player in pairs(weizPVP.ActiveList) do
-        if weizPVP.NearbyList[player] then
-            position = weizPVP.NearbyList[player].TimeAdded or nil
+    for player in pairs(NS.ActiveList) do
+        if NS.NearbyList[player] then
+            position = NS.NearbyList[player].TimeAdded or nil
             if position ~= nil then
                 tinsert(active, {player = player, time = position})
             end
         end
     end
-
-    --> ActiveDeadList
+    -- ActiveDeadList
     local activeDead = {}
-    for player in pairs(weizPVP.ActiveDeadList) do
-        if weizPVP.NearbyList[player] then
-            position = weizPVP.NearbyList[player].TimeAdded or nil
+    for player in pairs(NS.ActiveDeadList) do
+        if NS.NearbyList[player] then
+            position = NS.NearbyList[player].TimeAdded or nil
             if position ~= nil then
                 tinsert(activeDead, {player = player, time = position})
             end
         end
     end
-
-    --> InactiveDeadList
+    -- InactiveDeadList
     local inactiveDead = {}
-    for player in pairs(weizPVP.InactiveDeadList) do
-        if weizPVP.NearbyList[player] then
-            position = weizPVP.NearbyList[player].TimeAdded or nil
+    for player in pairs(NS.InactiveDeadList) do
+        if NS.NearbyList[player] then
+            position = NS.NearbyList[player].TimeAdded or nil
             if position ~= nil then
                 tinsert(inactiveDead, {player = player, time = position})
             end
         end
     end
-
-    --> InactiveList
+    -- InactiveList
     local inactive = {}
-    for player in pairs(weizPVP.InactiveList) do
-        if weizPVP.NearbyList[player] then
-            position = weizPVP.NearbyList[player].TimeAdded
+    for player in pairs(NS.InactiveList) do
+        if NS.NearbyList[player] then
+            position = NS.NearbyList[player].TimeAdded
             if position ~= nil then
                 tinsert(inactive, {player = player, time = position})
             end
         end
     end
-
     sort(
         active,
         function(a, b)
@@ -557,51 +574,72 @@ function weizPVP:SortNearbyList()
             return a.time < b.time
         end
     )
-
     sort(
         inactive,
         function(a, b)
             return a.time < b.time
         end
     )
-
     sort(
         inactiveDead,
         function(a, b)
             return a.time < b.time
         end
     )
-
     local list = {}
-
+    for player in pairs(active) do
+        if NS.PlayerActiveCache[active[player].player] then
+            if NS.KosList[NS.PlayerActiveCache[active[player].player].Name] then
+                tinsert(list, active[player])
+                active[player] = nil
+            end
+        end
+    end
     for player in pairs(active) do
         tinsert(list, active[player])
     end
-
     for player in pairs(activeDead) do
         tinsert(list, activeDead[player])
     end
-
     for player in pairs(inactive) do
         tinsert(list, inactive[player])
     end
     for player in pairs(inactiveDead) do
         tinsert(list, inactiveDead[player])
     end
-
-    weizPVP.CurrentList = list
+    NS.CurrentList = list
 end
 
 --> Play Sound Alert
--------------------------------------------------------------------------------
 local playSound = true
 local function EnableAlertSound()
     playSound = true
 end
-function weizPVP.PlaySoundAlert(url)
-    if playSound == true then
+function NS.PlaySoundAlert(url, now)
+    if playSound == true or now then
         PlaySoundFile(url)
         playSound = false
-        C_Timer_After(1, EnableAlertSound)
+        C_Timer_After(0.6, EnableAlertSound)
     end
+end
+
+--> Clear List Data
+function NS.ClearListData()
+    wipe(NS.CurrentList)
+    wipe(NS.CurrentNameplates)
+    wipe(NS.NearbyList)
+    wipe(NS.ActiveList)
+    wipe(NS.InactiveList)
+    wipe(NS.ActiveDeadList)
+    wipe(NS.InactiveDeadList)
+    wipe(NS.PlayersOnBars)
+    wipe(NS.PlayerActiveCache)
+    NS.NearbyListSize = 0
+    NS.SortNearbyList()
+    NS.RefreshCurrentList()
+    NS.ManageBarsDisplayed()
+    NS.UpdateNearbyCount()
+    NS.TargetedIcon:Hide()
+    --> Refresh Target
+    NS:PlayerTargetEvent()
 end

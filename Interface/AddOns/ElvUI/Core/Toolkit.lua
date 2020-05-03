@@ -41,22 +41,22 @@ function E:SetBackdrop(frame, giveBorder, bgFile, edgeSize, insetLeft, insetRigh
 	if not (giveBorder or bgFile) then return end
 
 	if insetLeft or insetRight or insetTop or insetBottom then
-		frame.pixelBorders.CENTER:SetPoint('TOPLEFT', frame, 'TOPLEFT', -insetLeft or 0, insetTop or 0)
-		frame.pixelBorders.CENTER:SetPoint('BOTTOMRIGHT', frame, 'BOTTOMRIGHT', insetRight or 0, -insetBottom or 0)
+		frame.pixelBorders.CENTER:Point('TOPLEFT', frame, 'TOPLEFT', -insetLeft or 0, insetTop or 0)
+		frame.pixelBorders.CENTER:Point('BOTTOMRIGHT', frame, 'BOTTOMRIGHT', insetRight or 0, -insetBottom or 0)
 	else
-		frame.pixelBorders.CENTER:SetPoint('TOPLEFT', frame)
-		frame.pixelBorders.CENTER:SetPoint('BOTTOMRIGHT', frame)
+		frame.pixelBorders.CENTER:Point('TOPLEFT', frame)
+		frame.pixelBorders.CENTER:Point('BOTTOMRIGHT', frame)
 	end
 
-	frame.pixelBorders.TOPLEFT:SetSize(edgeSize, edgeSize)
-	frame.pixelBorders.TOPRIGHT:SetSize(edgeSize, edgeSize)
-	frame.pixelBorders.BOTTOMLEFT:SetSize(edgeSize, edgeSize)
-	frame.pixelBorders.BOTTOMRIGHT:SetSize(edgeSize, edgeSize)
+	frame.pixelBorders.TOPLEFT:Size(edgeSize)
+	frame.pixelBorders.TOPRIGHT:Size(edgeSize)
+	frame.pixelBorders.BOTTOMLEFT:Size(edgeSize)
+	frame.pixelBorders.BOTTOMRIGHT:Size(edgeSize)
 
-	frame.pixelBorders.TOP:SetHeight(edgeSize)
-	frame.pixelBorders.BOTTOM:SetHeight(edgeSize)
-	frame.pixelBorders.LEFT:SetWidth(edgeSize)
-	frame.pixelBorders.RIGHT:SetWidth(edgeSize)
+	frame.pixelBorders.TOP:Height(edgeSize)
+	frame.pixelBorders.BOTTOM:Height(edgeSize)
+	frame.pixelBorders.LEFT:Width(edgeSize)
+	frame.pixelBorders.RIGHT:Width(edgeSize)
 end
 
 function E:GetBackdropColor(frame)
@@ -457,6 +457,7 @@ local function StyleButton(button, noHover, noPushed, noChecked)
 	if button.SetHighlightTexture and not button.hover and not noHover then
 		local hover = button:CreateTexture()
 		hover:SetInside()
+		hover:SetBlendMode('ADD')
 		hover:SetColorTexture(1, 1, 1, 0.3)
 		button:SetHighlightTexture(hover)
 		button.hover = hover
@@ -465,6 +466,7 @@ local function StyleButton(button, noHover, noPushed, noChecked)
 	if button.SetPushedTexture and not button.pushed and not noPushed then
 		local pushed = button:CreateTexture()
 		pushed:SetInside()
+		pushed:SetBlendMode('ADD')
 		pushed:SetColorTexture(0.9, 0.8, 0.1, 0.3)
 		button:SetPushedTexture(pushed)
 		button.pushed = pushed
@@ -473,6 +475,7 @@ local function StyleButton(button, noHover, noPushed, noChecked)
 	if button.SetCheckedTexture and not button.checked and not noChecked then
 		local checked = button:CreateTexture()
 		checked:SetInside()
+		checked:SetBlendMode('ADD')
 		checked:SetColorTexture(1, 1, 1, 0.3)
 		button:SetCheckedTexture(checked)
 		button.checked = checked

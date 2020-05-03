@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 --|> LDB
 -------------------------------------------------------------------------------
-local weizPVP = weizPVP
+local ADDON_NAME, NS = ...
 local InterfaceOptionsFrame = InterfaceOptionsFrame
 local addonName, _ = ...
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1", true)
@@ -19,53 +19,39 @@ local plugin =
     }
 )
 
-function plugin.OnClick(self, button)
+function plugin.OnClick(_, button)
     if button == "RightButton" then
-        if IsShiftKeyDown() then --> Shift-Left-Click: Toggle Options
-            if weizPVP.Options.Window.Visible == true then
-                weizPVP.Options.Window.Visible = false
-                weizPVP.SetWindowSettings()
-            else
-                weizPVP.Options.Window.Visible = true
-                weizPVP.SetWindowSettings()
-            end
+        -- RIGHT-CLICK = Toggle Interface Options
+        if InterfaceOptionsFrame:IsShown() then
+            InterfaceOptionsFrame:Hide()
         else
-            if InterfaceOptionsFrame:IsShown() then
-                InterfaceOptionsFrame:Hide()
-            else
-                InterfaceOptionsFrame_OpenToCategory("weiz|cffffa012PVP|r")
-                local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
-                InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax)
-                --> Running for 2nd time(blizz bug work around)
-                InterfaceOptionsFrame_OpenToCategory("weiz|cffffa012PVP|r")
-            end
+            InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
+            local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
+            InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax)
+            -- Run twice (blizz bug work around)
+            InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
         end
+    elseif button == "LeftButton" then
+        -- LEFT-CLICK = Toggle window
+        NS.Options.Window.Visible = not NS.Options.Window.Visible
+        NS.SetWindowSettings()
     end
 end
 
 hooksecurefunc(
-    weizPVP,
+    NS,
     "UpdateNearbyCount",
     function()
-        plugin.text = weizPVP.HeaderFrame.TitleVar:GetText()
+        plugin.text = NS.HeaderFrame.TitleVar:GetText()
         plugin.icon = "Interface\\AddOns\\weizPVP\\Media\\Icons\\weizpvp_minimap.tga"
     end
 )
 
-do
-    function plugin.OnTooltipShow(tip)
-        tip:AddDoubleLine("|cffffffffweiz|r|cffffa012PVP|r", weizPVP.HeaderFrame.TitleVar:GetText(), nil, nil, nil, 0.2, 1, 0.2)
-        if weizPVP.Options.LagMode.Enabled == true then
-            if weizPVP.Addon.LagModeActive == true then
-                tip:AddLine("|cffffffffLagMode:|r  |cFFF4564DACTIVE|r")
-            else
-                tip:AddLine("|cffffffffLagMode:|r  IDLE")
-            end
-        end
-        tip:AddLine(" ")
-        tip:AddDoubleLine("Right-Click", "|cff00ff05Toggle Options|r", nil, nil, nil, 0.2, 1, 0.2)
-        tip:AddDoubleLine("Shift-Right-Click", "|cff00ff05Toggle Window|r", nil, nil, nil, 0.2, 1, 0.2)
-    end
+function plugin.OnTooltipShow(tip)
+    tip:AddDoubleLine("|cffffffffweiz|r|cffffa012PVP|r", NS.HeaderFrame.TitleVar:GetText(), nil, nil, nil, 0.2, 1, 0.2)
+    tip:AddLine(" ")
+    tip:AddDoubleLine("Right-Click", "|cff00ff05Toggle Options|r", nil, nil, nil, 0.2, 1, 0.2)
+    tip:AddDoubleLine("Left-Click", "|cff00ff05Toggle Main Window|r", nil, nil, nil, 0.2, 1, 0.2)
 end
 
 local f = CreateFrame("Frame")
@@ -76,12 +62,12 @@ f:SetScript(
         if not icon then
             return
         end
-        icon:Register(addonName, plugin, weizPVP.Options.LDB)
+        icon:Register(addonName, plugin, NS.Options.LDB)
 
-        if weizPVP.Options.LDB.minimap == true then
-            LibStub("LibDBIcon-1.0"):Show("weizPVP")
+        if NS.Options.LDB.minimap == true then
+            LibStub("LibDBIcon-1.0"):Show(ADDON_NAME)
         else
-            LibStub("LibDBIcon-1.0"):Hide("weizPVP")
+            LibStub("LibDBIcon-1.0"):Hide(ADDON_NAME)
         end
     end
 )

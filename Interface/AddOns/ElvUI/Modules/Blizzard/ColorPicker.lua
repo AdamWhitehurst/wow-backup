@@ -1,5 +1,6 @@
 ------------------------------------------------------------------------------
 -- Credit to Jaslm, most of this code is his from the addon ColorPickerPlus.
+-- Modified and optimized by Simpy.
 ------------------------------------------------------------------------------
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local B = E:GetModule('Blizzard')
@@ -118,6 +119,10 @@ local function onColorSelect(frame, r, g, b)
 	_G.ColorSwatch:SetColorTexture(r, g, b)
 	UpdateColorTexts(r, g, b)
 
+	if r == 0 and g == 0 and b == 0 then
+		return
+	end
+
 	if not frame:IsVisible() then
 		delayCall()
 	elseif not delayFunc then
@@ -154,9 +159,11 @@ function B:EnhanceColorPicker()
 	_G.ColorPickerFrame:SetClampedToScreen(true)
 	_G.ColorPickerFrame:SetTemplate("Transparent")
 	_G.ColorPickerFrame.Border:Hide()
-	_G.ColorPickerFrameHeader:SetTexture()
-	_G.ColorPickerFrameHeader:ClearAllPoints()
-	_G.ColorPickerFrameHeader:Point("TOP", _G.ColorPickerFrame, 0, 0)
+
+	_G.ColorPickerFrame.Header:StripTextures()
+	_G.ColorPickerFrame.Header:ClearAllPoints()
+	_G.ColorPickerFrame.Header:Point("TOP", _G.ColorPickerFrame, 0, 0)
+
 	_G.ColorPickerCancelButton:ClearAllPoints()
 	_G.ColorPickerOkayButton:ClearAllPoints()
 	_G.ColorPickerCancelButton:Point("BOTTOMRIGHT", _G.ColorPickerFrame, "BOTTOMRIGHT", -6, 6)

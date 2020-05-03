@@ -2,15 +2,13 @@
 --|> Buttons
 --: Manages the butons on the frame that will perform certain functions
 -------------------------------------------------------------------------------
---|> UPVALUE GLOBALS
+--|> Upvalue Globals
 -------------------------------------------------------------------------------
-local weizPVP = weizPVP
+local _, NS = ...
 local UIFrameFadeIn = UIFrameFadeIn
 local UIFrameFadeOut = UIFrameFadeOut
 local floor = floor
-local C_Timer = C_Timer
 local C_Timer_After = C_Timer.After
-local UIParent = UIParent
 local GetTime = GetTime
 local InCombatLockdown = InCombatLockdown
 
@@ -27,26 +25,26 @@ local ClearButton
 
 --=> Minimize Frame
 -----------------------------------------------------------------------
-function weizPVP.MinFrame()
-    weizPVP.Options.Frames.Height = weizPVP.CoreFrame:GetHeight()
-    weizPVP.CoreFrame:Hide()
-    weizPVP.CoreFrame:SetClampedToScreen(false)
-    weizPVP.StatusBar:Hide()
-    weizPVP.StatusBar:SetClampedToScreen(false)
+function NS.MinFrame()
+    NS.Options.Frames.Height = NS.CoreFrame:GetHeight()
+    NS.CoreFrame:Hide()
+    NS.CoreFrame:SetClampedToScreen(false)
+    NS.StatusBar:Hide()
+    NS.StatusBar:SetClampedToScreen(false)
     DragBottomRight:Hide()
-    weizPVP.Options.Window.Collapsed = true
+    NS.Options.Window.Collapsed = true
 end
 
 --=> Mazimize/Restore Frame
 -----------------------------------------------------------------------
-function weizPVP.MaxFrame()
-    weizPVP.CoreFrame:SetClampedToScreen(true)
-    weizPVP.CoreFrame:SetHeight(weizPVP.Options.Frames.Height)
-    weizPVP.CoreFrame:Show()
-    weizPVP.StatusBar:SetClampedToScreen(true)
-    weizPVP.StatusBar:Show()
+function NS.MaxFrame()
+    NS.CoreFrame:SetClampedToScreen(true)
+    NS.CoreFrame:SetHeight(NS.Options.Frames.Height)
+    NS.CoreFrame:Show()
+    NS.StatusBar:SetClampedToScreen(true)
+    NS.StatusBar:Show()
     DragBottomRight:Show()
-    weizPVP.Options.Window.Collapsed = false
+    NS.Options.Window.Collapsed = false
 end
 
 --=> Snap to Bars
@@ -57,8 +55,8 @@ local rawCalc
 local barsInDisplay
 local function SnapHeightToBars()
     if not InCombatLockdown() then
-        frameHeight = weizPVP.CoreFrame:GetHeight()
-        rowHeight = weizPVP.Options.Bars.RowHeight + weizPVP.Options.Bars.VerticalSpacing
+        frameHeight = NS.CoreFrame:GetHeight()
+        rowHeight = NS.Options.Bars.RowHeight + NS.Options.Bars.VerticalSpacing
         rawCalc = frameHeight / rowHeight
         barsInDisplay = floor(frameHeight / rowHeight)
         if rawCalc - barsInDisplay >= .5 then
@@ -67,21 +65,20 @@ local function SnapHeightToBars()
         if barsInDisplay < 1 then
             barsInDisplay = 1
         end
-        weizPVP.CoreFrame:SetHeight(barsInDisplay * rowHeight)
-        weizPVP:AlignFrameToPixels(weizPVP.CoreFrame)
-        weizPVP:SaveCoreFramePosition()
+        NS.CoreFrame:SetHeight(barsInDisplay * rowHeight)
+        NS.SnapFrameToPixels(NS.CoreFrame)
+        NS.SaveCoreFramePosition()
     end
 end
 
 --=> Drag Bottom Right
 -------------------------------------------------------------------------------
 local lastTime = GetTime()
-local footerToSide
 local footerToBottom
 local lastTry = 0
 local timeBetweenChatMessage = 10
-function weizPVP:CreateResizeGrip()
-    DragBottomRight = DragBottomRight or CreateFrame("Button", "weizPVPResizeGripBottomRight", weizPVP.StatusBar)
+function NS.CreateResizeGrip()
+    DragBottomRight = DragBottomRight or CreateFrame("Button", "weizPVPResizeGripBottomRight", NS.StatusBar)
     DragBottomRight:SetFrameLevel(420)
     DragBottomRight:SetFrameStrata("MEDIUM")
     DragBottomRight:SetNormalTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\resizeGrip.tga")
@@ -90,34 +87,32 @@ function weizPVP:CreateResizeGrip()
     DragBottomRight:SetWidth(16)
     DragBottomRight:SetHeight(16)
     DragBottomRight:SetScale(1)
-    DragBottomRight:SetPoint("BOTTOMRIGHT", weizPVP.StatusBar, "BOTTOMRIGHT", -1, 1)
+    DragBottomRight:SetPoint("BOTTOMRIGHT", NS.StatusBar, "BOTTOMRIGHT", -1, 1)
     DragBottomRight:Show()
 
     --> DRAG RESIZE: OnMouseDown
     -----------------------------------
     DragBottomRight:SetScript(
         "OnMouseDown",
-        function(self, button)
-            if weizPVP.Options.Window.Locked == false and button == "LeftButton" then
-                weizPVP.CoreFrame.isResizing = true
-                weizPVP.CoreFrame:StopMovingOrSizing("TOP")
-                weizPVP.CoreFrame:StopMovingOrSizing("LEFT")
-                weizPVP.CoreFrame:StartSizing("BOTTOMRIGHT")
-                footerToSide = weizPVP.CoreFrame:GetWidth() + (UIParent:GetRight() - weizPVP.StatusBar:GetRight())
-                footerToBottom = weizPVP.CoreFrame:GetHeight() + (UIParent:GetBottom() + weizPVP.StatusBar:GetBottom())
+        function(_, button)
+            if NS.Options.Window.Locked == false and button == "LeftButton" then
+                NS.CoreFrame.isResizing = true
+                NS.CoreFrame:StopMovingOrSizing("TOP")
+                NS.CoreFrame:StopMovingOrSizing("LEFT")
+                NS.CoreFrame:StartSizing("BOTTOMRIGHT")
+                local footerToSide = NS.CoreFrame:GetWidth() + (UIParent:GetRight() - NS.StatusBar:GetRight())
+                footerToBottom = NS.CoreFrame:GetHeight() + (UIParent:GetBottom() + NS.StatusBar:GetBottom())
                 if footerToSide > 500 then
                     footerToSide = 500
                 end
-                if footerToBottom > weizPVP.Options.Frames.List.Height then
-                    footerToBottom = weizPVP.Options.Frames.List.Height
+                if footerToBottom > NS.Options.Frames.List.Height then
+                    footerToBottom = NS.Options.Frames.List.Height
                 end
-                weizPVP.CoreFrame:SetMaxResize(footerToSide, footerToBottom)
-            elseif weizPVP.Options.Window.Locked == true then
-                weizPVP:SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
+                NS.CoreFrame:SetMaxResize(footerToSide, footerToBottom)
+            elseif NS.Options.Window.Locked == true then
+                NS.SetStatusBarMessage("Window is |cffff3838LOCKED|r", true, 3)
                 if lastTry + timeBetweenChatMessage < GetTime() then
-                    weizPVP:PrintAddonMessage(
-                        "Window is |cffff3838LOCKED|r. Use Ctrl + Right click on the title bar to unlock it."
-                    )
+                    NS.PrintAddonMessage("Window is |cffff3838LOCKED|r. Use Ctrl + Right click on the title bar to unlock it.")
                     lastTry = GetTime()
                 end
             end
@@ -128,17 +123,17 @@ function weizPVP:CreateResizeGrip()
     -----------------------------------
     DragBottomRight:SetScript(
         "OnMouseUp",
-        function(self, button)
-            if weizPVP.Options.Window.Locked == false and button == "LeftButton" then
+        function(_, button)
+            if NS.Options.Window.Locked == false and button == "LeftButton" then
                 SnapHeightToBars()
-                weizPVP.CoreFrame:StopMovingOrSizing()
-                weizPVP.CoreFrame.isResizing = false
-                weizPVP.HeaderFrame:SetMovable(true)
-                if weizPVP.CoreFrame.isResizing == true and (button == "LeftButton") then
-                    weizPVP.CoreFrame:StopMovingOrSizing()
-                    weizPVP.CoreFrame.isResizing = false
+                NS.CoreFrame:StopMovingOrSizing()
+                NS.CoreFrame.isResizing = false
+                NS.HeaderFrame:SetMovable(true)
+                if NS.CoreFrame.isResizing == true and (button == "LeftButton") then
+                    NS.CoreFrame:StopMovingOrSizing()
+                    NS.CoreFrame.isResizing = false
                 end
-                weizPVP:RefreshCurrentList()
+                NS.RefreshCurrentList()
             end
         end
     )
@@ -146,9 +141,9 @@ function weizPVP:CreateResizeGrip()
     -----------------------------------
     DragBottomRight:SetScript(
         "OnUpdate",
-        function(self)
-            if weizPVP.CoreFrame.isResizing and GetTime() + 0.3 > lastTime then
-                weizPVP:RefreshCurrentList()
+        function(_)
+            if NS.CoreFrame.isResizing and GetTime() + 0.3 > lastTime then
+                NS.RefreshCurrentList()
                 lastTime = GetTime()
             end
         end
@@ -158,7 +153,7 @@ end
 --=> Show Arrow
 -------------------------------------------------------------------------------
 local function ShowArrow()
-    if weizPVP.Options.Window.Collapsed == true then
+    if NS.Options.Window.Collapsed == true then
         MinMaxButtonTexture:GetNormalTexture():SetRotation(3.14159)
     else
         MinMaxButtonTexture:GetNormalTexture():SetRotation(0)
@@ -171,17 +166,16 @@ end
 -------------------------------------------------------------------------------
 local ag
 local anim
-function weizPVP:CreateHeaderButtons()
+function NS.CreateHeaderButtons()
     --> MinMaxButtonTexture
     -------------------------------------------------------------------------------
-    MinMaxButtonTexture =
-        MinMaxButtonTexture or CreateFrame("Button", "weizPVP.HeaderFrame.MinMaxButtonTexture", weizPVP.HeaderFrame)
-    MinMaxButtonTexture:SetPoint("RIGHT", weizPVP.HeaderFrame, "RIGHT", 0, 0)
+    MinMaxButtonTexture = MinMaxButtonTexture or CreateFrame("Button", "weizPVP-HeaderFrame.MinMaxButtonTexture", NS.HeaderFrame)
+    MinMaxButtonTexture:SetPoint("RIGHT", NS.HeaderFrame, "RIGHT", 0, 0)
     MinMaxButtonTexture:SetSize(32, 32)
     MinMaxButtonTexture:SetNormalTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\arrow.tga")
     MinMaxButtonTexture:GetNormalTexture():SetVertexColor(0.8, 0.8, 0.8, 1)
 
-    MinMaxButton = CreateFrame("Button", "weizPVP.HeaderFrame.MinMaxButton", MinMaxButtonTexture)
+    MinMaxButton = CreateFrame("Button", "weizPVP-HeaderFrame.MinMaxButton", MinMaxButtonTexture)
     MinMaxButton:SetPoint("CENTER", MinMaxButtonTexture, "CENTER")
     MinMaxButton:SetSize(24, 24)
 
@@ -189,36 +183,36 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     MinMaxButton:SetScript(
         "OnMouseDown",
-        function(self, event)
+        function(_, event)
             if not InCombatLockdown() then
                 if event == "LeftButton" then
                     --> MINIZING
-                    if weizPVP.Options.Window.Collapsed == false then
-                        UIFrameFadeOut(weizPVP.CoreFrame, 0.2, 0, 1)
+                    if NS.Options.Window.Collapsed == false then
+                        UIFrameFadeOut(NS.CoreFrame, 0.2, 0, 1)
                         UIFrameFadeOut(MinMaxButtonTexture, 0.2, 1, 0.5)
-                        UIFrameFadeOut(weizPVP.StatusBar, 0.2, 0, 1)
+                        UIFrameFadeOut(NS.StatusBar, 0.2, 0, 1)
                         C_Timer_After(0.09, ShowArrow)
-                        C_Timer_After(0.1, weizPVP.MinFrame)
-                        weizPVP.CoreFrame:GetHeight(weizPVP.Options.Frames.Height)
-                        weizPVP.CoreFrame:Hide()
-                        weizPVP.StatusBar:Hide()
-                        weizPVP.OuterIconsFrame:Hide()
-                        weizPVP.Options.Window.Collapsed = true
+                        C_Timer_After(0.1, NS.MinFrame)
+                        NS.CoreFrame:GetHeight(NS.Options.Frames.Height)
+                        NS.CoreFrame:Hide()
+                        NS.StatusBar:Hide()
+                        NS.OuterIconsFrame:Hide()
+                        NS.Options.Window.Collapsed = true
                     else
                         --> RESTORING
-                        UIFrameFadeIn(weizPVP.CoreFrame, 0.2, 0, 1)
+                        UIFrameFadeIn(NS.CoreFrame, 0.2, 0, 1)
                         UIFrameFadeOut(MinMaxButtonTexture, 0.2, 1, 0.5)
-                        UIFrameFadeIn(weizPVP.StatusBar, 0.2, 0, 1)
+                        UIFrameFadeIn(NS.StatusBar, 0.2, 0, 1)
                         C_Timer_After(0.09, ShowArrow)
-                        C_Timer_After(0.1, weizPVP.MaxFrame)
-                        weizPVP.CoreFrame:SetHeight(weizPVP.Options.Frames.Height)
-                        weizPVP.CoreFrame:Show()
-                        weizPVP.StatusBar:Show()
-                        weizPVP.CoreFrame:SetHeight(weizPVP.Options.Frames.Height)
-                        weizPVP.StatusBar:SetHeight(weizPVP.Options.Frames.Footer.Height)
+                        C_Timer_After(0.1, NS.MaxFrame)
+                        NS.CoreFrame:SetHeight(NS.Options.Frames.Height)
+                        NS.CoreFrame:Show()
+                        NS.StatusBar:Show()
+                        NS.CoreFrame:SetHeight(NS.Options.Frames.Height)
+                        NS.StatusBar:SetHeight(NS.Options.Frames.Footer.Height)
                         DragBottomRight:Show()
-                        weizPVP.OuterIconsFrame:Show()
-                        weizPVP.Options.Window.Collapsed = false
+                        NS.OuterIconsFrame:Show()
+                        NS.Options.Window.Collapsed = false
                     end
                 end
             end
@@ -228,11 +222,11 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     MinMaxButton:SetScript(
         "OnEnter",
-        function(self, event)
+        function(self, _)
             MinMaxButtonTexture:SetNormalTexture([[Interface\Addons\weizPVP\Media\Icons\arrow.tga]])
             MinMaxButtonTexture:GetNormalTexture():SetVertexColor(1, 1, 1, 1)
             GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT")
-            if weizPVP.Options.Window.Collapsed == true then
+            if NS.Options.Window.Collapsed == true then
                 GameTooltip:SetText("Restore Window")
             else
                 GameTooltip:SetText("Minimize Window")
@@ -244,7 +238,7 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     MinMaxButton:SetScript(
         "OnLeave",
-        function(self, event)
+        function(_)
             MinMaxButtonTexture:SetNormalTexture([[Interface\Addons\weizPVP\Media\Icons\arrow.tga]])
             MinMaxButtonTexture:GetNormalTexture():SetVertexColor(0.8, 0.8, 0.8, 1)
             GameTooltip:Hide()
@@ -253,14 +247,14 @@ function weizPVP:CreateHeaderButtons()
 
     --> Clear List Button
     -------------------------------------------------------------------------------
-    ClearButtonTexture = ClearButtonTexture or CreateFrame("Button", "weizPVP.ClearButtonTexture", weizPVP.HeaderFrame)
+    ClearButtonTexture = ClearButtonTexture or CreateFrame("Button", "weizPVP-ClearButtonTexture", NS.HeaderFrame)
     ClearButtonTexture:SetPoint("RIGHT", MinMaxButton, "LEFT", 2, 0)
     ClearButtonTexture:SetSize(32, 32)
     ClearButtonTexture:SetAlpha(1)
     ClearButtonTexture:SetNormalTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\button_refresh.tga")
     ClearButtonTexture:GetNormalTexture():SetVertexColor(0.9, 0.6, 0)
 
-    ClearButton = CreateFrame("Button", "weizPVP.HeaderFrame.ClearButton", ClearButtonTexture)
+    ClearButton = CreateFrame("Button", "weizPVP-HeaderFrame.ClearButton", ClearButtonTexture)
     ClearButton:SetPoint("CENTER", ClearButtonTexture, "CENTER")
     ClearButton:SetSize(24, 24)
 
@@ -274,9 +268,9 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     ClearButton:SetScript(
         "OnMouseDown",
-        function(self, event)
+        function(_, event)
             if event == "LeftButton" then
-                weizPVP:ClearListData()
+                NS.ClearListData()
                 ag:Play()
             end
         end
@@ -285,7 +279,7 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     ClearButton:SetScript(
         "OnEnter",
-        function(self, event)
+        function(self, _)
             ClearButtonTexture:GetNormalTexture():SetVertexColor(1, 0.7, 0)
             GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT")
             GameTooltip:SetText("Clear List")
@@ -296,11 +290,11 @@ function weizPVP:CreateHeaderButtons()
     -----------------------------------
     ClearButton:SetScript(
         "OnLeave",
-        function(self, event)
+        function(_)
             ClearButtonTexture:GetNormalTexture():SetVertexColor(0.9, 0.6, 0)
             GameTooltip:Hide()
         end
     )
 
-    weizPVP.HeaderFrame.MinMaxButton = MinMaxButton
+    NS.HeaderFrame.MinMaxButton = MinMaxButton
 end

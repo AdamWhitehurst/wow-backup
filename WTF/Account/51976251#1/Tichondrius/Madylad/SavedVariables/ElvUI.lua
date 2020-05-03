@@ -12,292 +12,6 @@ ElvCharacterDB = {
 	},
 	["ChatHistoryLog"] = {
 		{
-			"Capping: Dun Baldar South Bunker - 0:44 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1139, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226361,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [1]
-		{
-			"GET THAT TOWERR", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1140, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226364,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [2]
-		{
-			"they have about 25 at ibgy", -- [1]
-			"Dancingdan-Sargeras", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Dancingdan-Sargeras", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1142, -- [11]
-			"Player-76-096E8AFA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff006fdcDancingdan-Sargeras|r",
-			[51] = 1575226372,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [3]
-		{
-			"Capping: Dun Baldar South Bunker - 0:11 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1150, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226394,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [4]
-		{
-			"Capping: Dun Baldar South Bunker - 0:10 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1151, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226394,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [5]
-		{
-			"Capping: Dun Baldar South Bunker - 0:10 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1152, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226394,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [6]
-		{
-			"Capping: Dun Baldar South Bunker - 10.0 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1153, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226394,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [7]
-		{
-			"Capping: Dun Baldar South Bunker - 9.8 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1155, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226395,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [8]
-		{
-			"Capping: Dun Baldar South Bunker - 9.7 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1156, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226395,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [9]
-		{
-			"Capping: Dun Baldar South Bunker - 9.5 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1157, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226395,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [10]
-		{
-			"Capping: Dun Baldar South Bunker - 9.3 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1158, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226395,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [11]
-		{
-			"Capping: Dun Baldar South Bunker - 9.2 (Horde)", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1159, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226395,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [12]
-		{
-			"wow", -- [1]
-			"Maidzz-Stormrage", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Maidzz-Stormrage", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1169, -- [11]
-			"Player-60-0C60A780", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
-			[51] = 1575226408,
-			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [13]
-		{
 			"Capping: Stonehearth Graveyard - 3:10 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
 			"", -- [3]
@@ -318,7 +32,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226483,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [14]
+		}, -- [1]
 		{
 			"Capping: Stonehearth Graveyard - 3:10 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -340,7 +54,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226483,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [15]
+		}, -- [2]
 		{
 			"greenpoison, whats at that gy", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -362,7 +76,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575226562,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [16]
+		}, -- [3]
 		{
 			"they win", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -384,7 +98,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226595,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [17]
+		}, -- [4]
 		{
 			"three rogues in norht", -- [1]
 			"Harmonija-Dalaran", -- [2]
@@ -406,7 +120,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Harmonija-Dalaran|r",
 			[51] = 1575226624,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [18]
+		}, -- [5]
 		{
 			"retake Icewing Bunker, then as a group, move South", -- [1]
 			"Shadoswift-Anvilmar", -- [2]
@@ -428,7 +142,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shadoswift-Anvilmar|r",
 			[51] = 1575226626,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [19]
+		}, -- [6]
 		{
 			"so who was the retard that brought the abom into tower point", -- [1]
 			"Lfheritage-Haomarush", -- [2]
@@ -450,7 +164,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lfheritage-Haomarush|r",
 			[51] = 1575226630,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [20]
+		}, -- [7]
 		{
 			"gg", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -472,7 +186,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226669,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [21]
+		}, -- [8]
 		{
 			"woop a level just by playing", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -494,7 +208,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226918,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [22]
+		}, -- [9]
 		{
 			"xD", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -516,7 +230,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226921,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [23]
+		}, -- [10]
 		{
 			"horde at the bridge. the end is near", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -538,7 +252,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575226974,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [24]
+		}, -- [11]
 		{
 			"Anyone know how long we have been in here for?\\", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -560,7 +274,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575226976,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [25]
+		}, -- [12]
 		{
 			"Interrupted Methshaman-Illidan's |cff71d5ff|Hspell:8004:0|h[Healing Surge]|h|r!", -- [1]
 			"Madylad-Tichondrius", -- [2]
@@ -582,7 +296,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Madylad|r",
 			[51] = 1575226991,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [26]
+		}, -- [13]
 		{
 			"lil more than an hour i think", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -604,7 +318,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575227003,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [27]
+		}, -- [14]
 		{
 			"dam", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -626,7 +340,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227010,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [28]
+		}, -- [15]
 		{
 			"blizz is a bich for these elites", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -648,7 +362,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227049,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [29]
+		}, -- [16]
 		{
 			"is it the end?", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -670,7 +384,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227096,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [30]
+		}, -- [17]
 		{
 			"not this one, this one is eternal", -- [1]
 			"Shadoswift-Anvilmar", -- [2]
@@ -692,7 +406,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shadoswift-Anvilmar|r",
 			[51] = 1575227128,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [31]
+		}, -- [18]
 		{
 			":yawn:", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -714,7 +428,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227176,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [32]
+		}, -- [19]
 		{
 			"tree summoners are going to be on the move soon", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -736,7 +450,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575227191,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [33]
+		}, -- [20]
 		{
 			"PROTECT SUMMONERS AT ALL COSTS", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -758,7 +472,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227197,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [34]
+		}, -- [21]
 		{
 			"ALL HANDS TO DB TO PROTECT SUMMONERS", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -780,7 +494,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227223,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [35]
+		}, -- [22]
 		{
 			"thats harder than a win", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -802,7 +516,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227233,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [36]
+		}, -- [23]
 		{
 			"it's our only chance at this point", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -824,7 +538,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227245,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [37]
+		}, -- [24]
 		{
 			"Interrupted Seasoned Irondeep Explorer's |cff71d5ff|Hspell:15242:0|h[Fireball]|h|r!", -- [1]
 			"Madylad-Tichondrius", -- [2]
@@ -846,7 +560,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Madylad|r",
 			[51] = 1575227250,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [38]
+		}, -- [25]
 		{
 			"welp", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -868,7 +582,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227353,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [39]
+		}, -- [26]
 		{
 			"there goes the last chance we had at making this not 2 hours long", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -890,7 +604,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227364,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [40]
+		}, -- [27]
 		{
 			"mark anotche afk", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -912,7 +626,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227387,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [41]
+		}, -- [28]
 		{
 			"or ...we could get ibgy", -- [1]
 			"Kereg-Moonrunner", -- [2]
@@ -934,7 +648,7 @@ ElvCharacterDB = {
 			[52] = "|cff006fdcKereg-Moonrunner|r",
 			[51] = 1575227402,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [42]
+		}, -- [29]
 		{
 			"need enough to kill elite and guards", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -956,7 +670,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227419,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [43]
+		}, -- [30]
 		{
 			"including horde", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -978,7 +692,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227424,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [44]
+		}, -- [31]
 		{
 			"group up", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1000,7 +714,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227430,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [45]
+		}, -- [32]
 		{
 			"theyre picking off stragglers now", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1022,7 +736,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227462,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [46]
+		}, -- [33]
 		{
 			"they are summoning lok", -- [1]
 			"Lfheritage-Haomarush", -- [2]
@@ -1044,7 +758,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lfheritage-Haomarush|r",
 			[51] = 1575227473,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [47]
+		}, -- [34]
 		{
 			"stop the lok summon", -- [1]
 			"Lfheritage-Haomarush", -- [2]
@@ -1066,7 +780,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Lfheritage-Haomarush|r",
 			[51] = 1575227527,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [48]
+		}, -- [35]
 		{
 			"theyre summonging!!!", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1088,7 +802,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227536,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [49]
+		}, -- [36]
 		{
 			"here", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1110,7 +824,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227546,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [50]
+		}, -- [37]
 		{
 			"it is", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1132,7 +846,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227548,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [51]
+		}, -- [38]
 		{
 			"welp we lose", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -1154,7 +868,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227552,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [52]
+		}, -- [39]
 		{
 			"murlocian speach?", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1176,7 +890,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575227559,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [53]
+		}, -- [40]
 		{
 			"shoulda guarded the fucking summoners", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -1198,7 +912,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227563,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [54]
+		}, -- [41]
 		{
 			"if you rez at csnowfall kill them1!!", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1220,7 +934,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227565,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [55]
+		}, -- [42]
 		{
 			"asap", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1242,7 +956,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227566,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [56]
+		}, -- [43]
 		{
 			"where are yall at withsummoners", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1264,7 +978,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227655,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [57]
+		}, -- [44]
 		{
 			"win or loose blitz it and see what happens?", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1286,7 +1000,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575227659,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [58]
+		}, -- [45]
 		{
 			"they died 10m ago", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -1308,7 +1022,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227710,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [59]
+		}, -- [46]
 		{
 			"nobody guarded them", -- [1]
 			"Aladdin-Exodar", -- [2]
@@ -1330,7 +1044,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Aladdin-Exodar|r",
 			[51] = 1575227717,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [60]
+		}, -- [47]
 		{
 			"why are like 10 of you at iwb", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1352,7 +1066,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227728,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [61]
+		}, -- [48]
 		{
 			"damn ive got 3 levels from this instance", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1374,7 +1088,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227745,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [62]
+		}, -- [49]
 		{
 			"just hit 119. may hit 20 soon lol", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1396,7 +1110,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227760,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [63]
+		}, -- [50]
 		{
 			"ice guy up", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1418,7 +1132,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227775,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [64]
+		}, -- [51]
 		{
 			"lets hit ibgy", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1440,7 +1154,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227778,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [65]
+		}, -- [52]
 		{
 			"rogues and druids sneak down and get west/east", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1462,7 +1176,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227802,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [66]
+		}, -- [53]
 		{
 			"defend gv", -- [1]
 			"Hanâni-Nemesis", -- [2]
@@ -1484,7 +1198,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Hanâni-Nemesis|r",
 			[51] = 1575227811,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [67]
+		}, -- [54]
 		{
 			"lokholar is inc", -- [1]
 			"Intwodeep-EmeraldDream", -- [2]
@@ -1506,7 +1220,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Intwodeep-EmeraldDream|r",
 			[51] = 1575227815,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [68]
+		}, -- [55]
 		{
 			"defend gv", -- [1]
 			"Hanâni-Nemesis", -- [2]
@@ -1528,7 +1242,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Hanâni-Nemesis|r",
 			[51] = 1575227816,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [69]
+		}, -- [56]
 		{
 			"hit their gys", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1550,7 +1264,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227832,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [70]
+		}, -- [57]
 		{
 			"so just zerg south to towers?", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1572,7 +1286,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575227902,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [71]
+		}, -- [58]
 		{
 			"go gog go", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1594,7 +1308,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575227945,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [72]
+		}, -- [59]
 		{
 			"Everyone gotten a level yet", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1616,7 +1330,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228001,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [73]
+		}, -- [60]
 		{
 			"2 actually", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1638,7 +1352,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228010,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [74]
+		}, -- [61]
 		{
 			"Im at 1 and a 1/2", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1660,7 +1374,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228021,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [75]
+		}, -- [62]
 		{
 			"Pull adds at ib", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1682,7 +1396,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228036,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [76]
+		}, -- [63]
 		{
 			"terrible part is neck grind", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1704,7 +1418,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228058,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [77]
+		}, -- [64]
 		{
 			"about 2hrs now no?", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1726,7 +1440,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228097,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [78]
+		}, -- [65]
 		{
 			"how do we summon giant frost dude", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1748,7 +1462,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228116,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [79]
+		}, -- [66]
 		{
 			"alliance has a tree", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1770,7 +1484,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228129,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [80]
+		}, -- [67]
 		{
 			"we had a tree they have frosty", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1792,7 +1506,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228132,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [81]
+		}, -- [68]
 		{
 			"turn in loads of |cffffffff|Hitem:17423::::::::119:71::::::|h[Storm Crystal]|h|r", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -1814,7 +1528,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228141,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [82]
+		}, -- [69]
 		{
 			"Lets get him then", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1836,7 +1550,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228151,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [83]
+		}, -- [70]
 		{
 			"shows we have been here a long time |cffffff00|Hquest:57300:-1:60:120:0|h[Soldier of Time]|h|r just popped", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1858,7 +1572,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228174,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [84]
+		}, -- [71]
 		{
 			"that means 2hrs no?", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1880,7 +1594,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228204,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [85]
+		}, -- [72]
 		{
 			"think so", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1902,7 +1616,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228212,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [86]
+		}, -- [73]
 		{
 			"Capping: Stormpike Graveyard - 0:28 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1924,7 +1638,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228229,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [87]
+		}, -- [74]
 		{
 			"Anyone got enough for tree", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1946,7 +1660,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228244,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [88]
+		}, -- [75]
 		{
 			"summoners already got killed", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -1968,7 +1682,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228253,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [89]
+		}, -- [76]
 		{
 			"someone summon a tree", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -1990,7 +1704,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228317,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [90]
+		}, -- [77]
 		{
 			"pls", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2012,7 +1726,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228318,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [91]
+		}, -- [78]
 		{
 			"tree summoners alreayd died", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -2034,7 +1748,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228328,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [92]
+		}, -- [79]
 		{
 			"???", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2056,7 +1770,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228336,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [93]
+		}, -- [80]
 		{
 			"Can we get another", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2078,7 +1792,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228340,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [94]
+		}, -- [81]
 		{
 			"not that i am aware of. maybe", -- [1]
 			"Ryell-Kilrogg", -- [2]
@@ -2100,7 +1814,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Ryell-Kilrogg|r",
 			[51] = 1575228359,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [95]
+		}, -- [82]
 		{
 			"cam we stop defending or them", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2122,7 +1836,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228412,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [96]
+		}, -- [83]
 		{
 			"like", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2144,7 +1858,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228413,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [97]
+		}, -- [84]
 		{
 			"go ham", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -2166,7 +1880,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228415,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [98]
+		}, -- [85]
 		{
 			"yall play like yall are scared to damage", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -2188,7 +1902,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228425,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [99]
+		}, -- [86]
 		{
 			"try to get those adds in the boss room", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -2210,7 +1924,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228458,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [100]
+		}, -- [87]
 		{
 			"Capping: Lokholar - 79.8%", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2232,7 +1946,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228461,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [101]
+		}, -- [88]
 		{
 			"Where is ice dood", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2254,7 +1968,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228474,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [102]
+		}, -- [89]
 		{
 			"mmm im 120", -- [1]
 			"Glascias-Korgath", -- [2]
@@ -2276,7 +1990,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cGlascias-Korgath|r",
 			[51] = 1575228524,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [103]
+		}, -- [90]
 		{
 			"Gaaaay", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2298,7 +2012,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228534,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [104]
+		}, -- [91]
 		{
 			"Capping: Stormpike Aid Station - 3:54 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2320,7 +2034,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228548,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [105]
+		}, -- [92]
 		{
 			"Capping: Stormpike Aid Station - 3:54 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2342,7 +2056,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228549,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [106]
+		}, -- [93]
 		{
 			"Capping: Stormpike Aid Station - 3:54 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2364,7 +2078,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228549,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [107]
+		}, -- [94]
 		{
 			"Capping: Stormpike Aid Station - 3:54 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2386,7 +2100,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228549,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [108]
+		}, -- [95]
 		{
 			"Capping: Stormpike Aid Station - 3:53 (Horde)", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2408,7 +2122,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228549,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [109]
+		}, -- [96]
 		{
 			"YES", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2430,7 +2144,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228550,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [110]
+		}, -- [97]
 		{
 			"YES", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2452,7 +2166,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228551,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [111]
+		}, -- [98]
 		{
 			"YES", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2474,7 +2188,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228552,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [112]
+		}, -- [99]
 		{
 			"OTYS", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2496,7 +2210,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228554,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [113]
+		}, -- [100]
 		{
 			"OVER", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2518,7 +2232,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228556,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [114]
+		}, -- [101]
 		{
 			"THANK", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2540,7 +2254,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228557,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [115]
+		}, -- [102]
 		{
 			"GOD", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2562,7 +2276,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228559,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [116]
+		}, -- [103]
 		{
 			"long gmae iguess?", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2584,7 +2298,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228565,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [117]
+		}, -- [104]
 		{
 			"i just joined", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2606,7 +2320,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228569,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [118]
+		}, -- [105]
 		{
 			"poogers", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2628,7 +2342,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228571,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [119]
+		}, -- [106]
 		{
 			"Ies been over 2 hrs", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2650,7 +2364,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228576,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [120]
+		}, -- [107]
 		{
 			"thats light work", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2672,7 +2386,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228583,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [121]
+		}, -- [108]
 		{
 			"had a 4 hour game last night", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2694,7 +2408,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228588,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [122]
+		}, -- [109]
 		{
 			"well like 3hours 35ish minutes", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2716,7 +2430,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228596,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [123]
+		}, -- [110]
 		{
 			"ally cant win but fuck they can defend", -- [1]
 			"Shauyssaelda-Agamaggan", -- [2]
@@ -2738,7 +2452,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Shauyssaelda-Agamaggan|r",
 			[51] = 1575228606,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [124]
+		}, -- [111]
 		{
 			"I just wanna take a shower then im good", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2760,7 +2474,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228619,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [125]
+		}, -- [112]
 		{
 			"also I think I figured out why on new AV why there are only 4k troops", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2782,7 +2496,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228689,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
-		}, -- [126]
+		}, -- [113]
 		{
 			"Or what ever", -- [1]
 			"Maidzz-Stormrage", -- [2]
@@ -2804,6 +2518,292 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Maidzz-Stormrage|r",
 			[51] = 1575228701,
 			[50] = "CHAT_MSG_INSTANCE_CHAT",
+		}, -- [114]
+		{
+			"L ", -- [1]
+			"Ithrathon-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Ithrathon-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			628, -- [11]
+			"Player-11-0BAFDAFC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Ithrathon|r",
+			[51] = 1587834324,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [115]
+		{
+			"WEEEEEE IM UGLY", -- [1]
+			"Kynnlanna-Bonechewer", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Kynnlanna-Bonechewer", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			629, -- [11]
+			"Player-1136-0842D064", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Kynnlanna-Bonechewer|r",
+			[51] = 1587834325,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [116]
+		{
+			"L DOGG RATH'IS DOGG OGG OGAR NUK", -- [1]
+			"Nadri-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Nadri-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			630, -- [11]
+			"Player-11-0BC4694B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Nadri|r",
+			[51] = 1587834330,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [117]
+		{
+			"A", -- [1]
+			"Massive-Maiev", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Massive-Maiev", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			631, -- [11]
+			"Player-119-08DBBF41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Massive-Maiev|r",
+			[51] = 1587834330,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [118]
+		{
+			"B", -- [1]
+			"Massive-Maiev", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Massive-Maiev", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			632, -- [11]
+			"Player-119-08DBBF41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Massive-Maiev|r",
+			[51] = 1587834334,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [119]
+		{
+			"C", -- [1]
+			"Massive-Maiev", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Massive-Maiev", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			633, -- [11]
+			"Player-119-08DBBF41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Massive-Maiev|r",
+			[51] = 1587834338,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [120]
+		{
+			"D", -- [1]
+			"Massive-Maiev", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Massive-Maiev", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			634, -- [11]
+			"Player-119-08DBBF41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Massive-Maiev|r",
+			[51] = 1587834341,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [121]
+		{
+			"O", -- [1]
+			"Nadri-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Nadri-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			635, -- [11]
+			"Player-11-0BC4694B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Nadri|r",
+			[51] = 1587834344,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [122]
+		{
+			"Z", -- [1]
+			"Kynnlanna-Bonechewer", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Kynnlanna-Bonechewer", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			638, -- [11]
+			"Player-1136-0842D064", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Kynnlanna-Bonechewer|r",
+			[51] = 1587834349,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [123]
+		{
+			"MOG", -- [1]
+			"Nadri-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Nadri-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			641, -- [11]
+			"Player-11-0BC4694B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Nadri|r",
+			[51] = 1587834353,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [124]
+		{
+			"NO ", -- [1]
+			"Massive-Maiev", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Massive-Maiev", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			643, -- [11]
+			"Player-119-08DBBF41", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffef367Massive-Maiev|r",
+			[51] = 1587834355,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [125]
+		{
+			"HEHE", -- [1]
+			"Kynnlanna-Bonechewer", -- [2]
+			"Common", -- [3]
+			"", -- [4]
+			"Kynnlanna-Bonechewer", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			645, -- [11]
+			"Player-1136-0842D064", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00fe95Kynnlanna-Bonechewer|r",
+			[51] = 1587834356,
+			[50] = "CHAT_MSG_YELL",
+		}, -- [126]
+		{
+			"L ", -- [1]
+			"Nadri-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Nadri-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			647, -- [11]
+			"Player-11-0BC4694B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc31d39Nadri|r",
+			[51] = 1587834360,
+			[50] = "CHAT_MSG_YELL",
 		}, -- [127]
 	},
 }

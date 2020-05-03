@@ -17,6 +17,7 @@ V.general = {
 	chatBubbleName = false,
 	pixelPerfect = true,
 	replaceBlizzFonts = true,
+	totemBar = true,
 	minimap = {
 		enable = true,
 		hideClassHallReport = false,
@@ -39,7 +40,8 @@ V.nameplates = {
 V.auras = {
 	enable = true,
 	disableBlizzard = true,
-
+	buffsHeader = true,
+	debuffsHeader = true,
 	masque = {
 		buffs = false,
 		debuffs = false,
@@ -141,6 +143,7 @@ V.skins = {
 		GMChat = true,
 		AzeriteEssence = true,
 		Tutorials = true,
+		ItemInteraction = true,
 	},
 }
 

@@ -1,0 +1,6 @@
+VER 3 0100000000000001 "Kick" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@focus] Mind Freeze
+/cast [@focus] leap
+/cast [@focus] gnaw
+END

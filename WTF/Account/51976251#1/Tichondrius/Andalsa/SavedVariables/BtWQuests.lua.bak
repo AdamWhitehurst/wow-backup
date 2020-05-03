@@ -4,3 +4,7 @@ BtWQuests_Settings = {
 	["categoryHeaders"] = false,
 	["showMapPins"] = true,
 }
+BtWQuests_AutoLoad = {
+	["BtWQuestsLegion"] = false,
+	["BtWQuestsBattleForAzeroth"] = true,
+}

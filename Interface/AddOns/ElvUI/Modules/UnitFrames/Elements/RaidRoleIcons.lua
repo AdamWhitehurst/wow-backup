@@ -1,7 +1,6 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
 
---Lua functions
 --WoW API / Variables
 local CreateFrame = CreateFrame
 
@@ -32,9 +31,9 @@ function UF:Configure_RaidRoleIcons(frame)
 
 		raidRoleFrameAnchor:ClearAllPoints()
 		if frame.db.raidRoleIcons.position == 'TOPLEFT' then
-			raidRoleFrameAnchor:Point('LEFT', frame, 'TOPLEFT', 2, 0)
+			raidRoleFrameAnchor:Point('LEFT', frame, 'TOPLEFT', frame.db.raidRoleIcons.xOffset, frame.db.raidRoleIcons.yOffset)
 		else
-			raidRoleFrameAnchor:Point('RIGHT', frame, 'TOPRIGHT', -2, 0)
+			raidRoleFrameAnchor:Point('RIGHT', frame, 'TOPRIGHT', -frame.db.raidRoleIcons.xOffset, frame.db.raidRoleIcons.yOffset)
 		end
 	elseif frame:IsElementEnabled('LeaderIndicator') then
 		raidRoleFrameAnchor:Hide()
@@ -60,13 +59,13 @@ function UF:RaidRoleUpdate()
 
 	if db and db.raidRoleIcons then
 		if isLeader and db.raidRoleIcons.position == 'TOPLEFT' then
-			leader:Point('LEFT', anchor, 'LEFT')
+			leader:Point('LEFT', anchor, 'LEFT', db.raidRoleIcons.xOffset, db.raidRoleIcons.yOffset)
 		elseif isLeader and db.raidRoleIcons.position == 'TOPRIGHT' then
-			leader:Point('RIGHT', anchor, 'RIGHT')
+			leader:Point('RIGHT', anchor, 'RIGHT', db.raidRoleIcons.xOffset, db.raidRoleIcons.yOffset)
 		elseif isAssist and db.raidRoleIcons.position == 'TOPLEFT' then
-			assistant:Point('LEFT', anchor, 'LEFT')
+			assistant:Point('LEFT', anchor, 'LEFT', db.raidRoleIcons.xOffset, db.raidRoleIcons.yOffset)
 		elseif isAssist and db.raidRoleIcons.position == 'TOPRIGHT' then
-			assistant:Point('RIGHT', anchor, 'RIGHT')
+			assistant:Point('RIGHT', anchor, 'RIGHT', db.raidRoleIcons.xOffset, db.raidRoleIcons.yOffset)
 		end
 	end
 end

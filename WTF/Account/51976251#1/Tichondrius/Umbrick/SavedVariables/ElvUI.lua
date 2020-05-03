@@ -3,1898 +3,28 @@ ElvCharacterDB = {
 	["CliqueDatatext"] = {
 	},
 	["ChatEditHistory"] = {
-		"/elvui", -- [1]
-		"/wa", -- [2]
-		"/tsm", -- [3]
-		"/kb", -- [4]
-		"/g grats grats grats", -- [5]
-		"/i 4 at dr", -- [6]
-		"/i 1 se", -- [7]
-		"/run for i = 1,120 do PickupAction(i) ClearCursor() end", -- [8]
-		"/ec", -- [9]
-		"/reloadui", -- [10]
-		"/g You lucky.... duck. lol!", -- [11]
-		"/g Woah hot damn! Nice one, Mallikus!!", -- [12]
-		"/g join the welcome lobby and theyll sort you out", -- [13]
-		"/g Welcome btw!", -- [14]
-		"Eyyy", -- [15]
-		"Whatchu up to?", -- [16]
-		"Dang 57!", -- [17]
-		"Youre almost halfway there!", -- [18]
-		"jk Are you dungeoning?", -- [19]
-		"Ooo isnt it on safe for $20", -- [20]
+		"/tsm", -- [1]
+		"/kb", -- [2]
+		"/g grats grats grats", -- [3]
+		"/i 4 at dr", -- [4]
+		"/i 1 se", -- [5]
+		"/run for i = 1,120 do PickupAction(i) ClearCursor() end", -- [6]
+		"/ec", -- [7]
+		"/reloadui", -- [8]
+		"/g You lucky.... duck. lol!", -- [9]
+		"/g Woah hot damn! Nice one, Mallikus!!", -- [10]
+		"/g join the welcome lobby and theyll sort you out", -- [11]
+		"/g Welcome btw!", -- [12]
+		"Eyyy", -- [13]
+		"Whatchu up to?", -- [14]
+		"Dang 57!", -- [15]
+		"Youre almost halfway there!", -- [16]
+		"jk Are you dungeoning?", -- [17]
+		"Ooo isnt it on safe for $20", -- [18]
+		"/m", -- [19]
+		"/wa", -- [20]
 	},
 	["ChatHistoryLog"] = {
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13189:Player-11-02EC8E25:1:7:14:19:4294967295:4294967295:4294967295:4294967295|h[The Second Rule of Brawler's Guild]|h|r!", -- [1]
-			"Roanapur-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Roanapur-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			64, -- [11]
-			"Player-11-02EC8E25", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Roanapur|r",
-			[51] = 1563150115,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [1]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:973:Player-11-0B747FBB:1:7:14:19:4294967295:4294967295:4294967295:4294967295|h[5 Daily Quests Completed]|h|r!", -- [1]
-			"Ambrevallet-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ambrevallet-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			100, -- [11]
-			"Player-11-0B747FBB", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Ambrevallet|r",
-			[51] = 1563150161,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [2]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:1561:Player-11-0A6BA7B2:1:7:14:19:4294967295:4294967295:4294967295:4294967295|h[1000 Fish]|h|r!", -- [1]
-			"Truffled-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Truffled-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			110, -- [11]
-			"Player-11-0A6BA7B2", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Truffled|r",
-			[51] = 1563150170,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [3]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13765:Player-11-0ABC2CA5:1:7:14:19:4294967295:4294967295:4294967295:4294967295|h[Subaquatic Support]|h|r!", -- [1]
-			"Blazarine-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Blazarine-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			192, -- [11]
-			"Player-11-0ABC2CA5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Blazarine|r",
-			[51] = 1563150259,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [4]
-		{
-			"i just heard they buffed arms like crazy", -- [1]
-			"Imunchthtbut-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			62, -- [11]
-			"Player-11-0A34E6BC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Imunchthtbut|r",
-			[51] = 1563233502,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [5]
-		{
-			"prot the only warrior spec (imo)", -- [1]
-			"Rdyplyrzero-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			104, -- [11]
-			"Player-11-0B202EC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Rdyplyrzero|r",
-			[51] = 1563233526,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [6]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12847:Player-11-0B769F0E:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Siege of Boralus]|h|r!", -- [1]
-			"Tîgersbløød-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Tîgersbløød-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			105, -- [11]
-			"Player-11-0B769F0E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Tîgersbløød|r",
-			[51] = 1563233527,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [7]
-		{
-			"he's right though fury is just a blast to play", -- [1]
-			"Abalynn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			106, -- [11]
-			"Player-11-0A0CD5BD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Abalynn|r",
-			[51] = 1563233529,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [8]
-		{
-			"fury is fun rotation, but prot is best experience", -- [1]
-			"Rdyplyrzero-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			121, -- [11]
-			"Player-11-0B202EC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Rdyplyrzero|r",
-			[51] = 1563233549,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [9]
-		{
-			"gameplaywise", -- [1]
-			"Rdyplyrzero-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			141, -- [11]
-			"Player-11-0B202EC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Rdyplyrzero|r",
-			[51] = 1563233554,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [10]
-		{
-			"best experience for finding a group haha", -- [1]
-			"Abalynn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			163, -- [11]
-			"Player-11-0A0CD5BD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Abalynn|r",
-			[51] = 1563233571,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [11]
-		{
-			"yea i have tank all the specs and warrior is where its at this epax", -- [1]
-			"Inflexible-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			187, -- [11]
-			"Player-11-0B7692A2", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cInflexible|r",
-			[51] = 1563233593,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [12]
-		{
-			"isnt prot rough for cleave tanking this expansion?", -- [1]
-			"Abalynn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			204, -- [11]
-			"Player-11-0A0CD5BD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Abalynn|r",
-			[51] = 1563233620,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [13]
-		{
-			"or has that been changed? i remember hearing people complain around bfa release", -- [1]
-			"Abalynn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			220, -- [11]
-			"Player-11-0A0CD5BD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Abalynn|r",
-			[51] = 1563233642,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [14]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13710:Player-11-09EE7B0D:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Sunken Ambitions]|h|r!", -- [1]
-			"Eclectus-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Eclectus-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			239, -- [11]
-			"Player-11-09EE7B0D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Eclectus|r",
-			[51] = 1563233668,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [15]
-		{
-			"a bit but its been been buffed a bit as well", -- [1]
-			"Inflexible-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			243, -- [11]
-			"Player-11-0B7692A2", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cInflexible|r",
-			[51] = 1563233672,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [16]
-		{
-			"prot tanking's just fun duude", -- [1]
-			"Rdyplyrzero-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			290, -- [11]
-			"Player-11-0B202EC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Rdyplyrzero|r",
-			[51] = 1563233718,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [17]
-		{
-			"i hear monk tanking is a blast - never done it though", -- [1]
-			"Abalynn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			308, -- [11]
-			"Player-11-0A0CD5BD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Abalynn|r",
-			[51] = 1563233742,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [18]
-		{
-			"- AIR DROP LOOT FARM - - WAR MODE - NAZJATAR-  Against Overwhelming Odds - 400-455 Gear - Tour of Duty - Airdrop Farm - Bounty Hunting - /whisper Archaosrex-Tichondrius INVITE for automatic invites. MAIN LOBBY DISCORD!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			338, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563233784,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [19]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:9:Player-11-0B77217A:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Level 40]|h|r!", -- [1]
-			"Glyndi-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Glyndi-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			353, -- [11]
-			"Player-11-0B77217A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff006fdcGlyndi|r",
-			[51] = 1563233799,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [20]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12582:Player-11-0B773074:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Come Sail Away]|h|r!", -- [1]
-			"Sukisuki-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sukisuki-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			423, -- [11]
-			"Player-11-0B773074", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Sukisuki|r",
-			[51] = 1563233869,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [21]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:889:Player-11-0B77217A:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Fast and Furious]|h|r!", -- [1]
-			"Glyndi-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Glyndi-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			427, -- [11]
-			"Player-11-0B77217A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff006fdcGlyndi|r",
-			[51] = 1563233873,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [22]
-		{
-			"- AIR DROP LOOT FARM - - WAR MODE - NAZJATAR-  Against Overwhelming Odds - 400-455 Gear - Tour of Duty - Airdrop Farm - Bounty Hunting - /whisper Archaosrex-Tichondrius INVITE for automatic invites. MAIN LOBBY DISCORD!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			437, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563233882,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [23]
-		{
-			"- WELCOME to RUIN! - Founded in 2004", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			584, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563233909,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [24]
-		{
-			"DISCORD based WAR MODE and progression raiding community! Active on 15 servers and Classic World of Warcraft. Learn More:  www.Ruinnation.com", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			585, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563233909,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [25]
-		{
-			"is there a way to salvage my gear?", -- [1]
-			"Greaterfury-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			725, -- [11]
-			"Player-11-0B6A45A5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Greaterfury|r",
-			[51] = 1563234102,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [26]
-		{
-			"if its bfa gear there is a salvage thing in boralus", -- [1]
-			"Gogreene-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			732, -- [11]
-			"Player-11-0A6EF88A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Gogreene|r",
-			[51] = 1563234138,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [27]
-		{
-			"outside that i thnk just disenchanting or whatever its called", -- [1]
-			"Gogreene-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			736, -- [11]
-			"Player-11-0A6EF88A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Gogreene|r",
-			[51] = 1563234150,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [28]
-		{
-			"ok thanks", -- [1]
-			"Greaterfury-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			739, -- [11]
-			"Player-11-0B6A45A5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Greaterfury|r",
-			[51] = 1563234167,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [29]
-		{
-			"thanks", -- [1]
-			"Hulkkonen-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			748, -- [11]
-			"Player-11-0B763C04", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecHulkkonen|r",
-			[51] = 1563234200,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [30]
-		{
-			"- WELCOME to RUIN! - Founded in 2004", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			750, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563234205,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [31]
-		{
-			"DISCORD based WAR MODE and progression raiding community! Active on 15 servers and Classic World of Warcraft. Learn More:  www.Ruinnation.com", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			751, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563234205,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [32]
-		{
-			"howdy thanks for invite", -- [1]
-			"Kimaraiya-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			754, -- [11]
-			"Player-11-0B76E4D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecKimaraiya|r",
-			[51] = 1563234229,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [33]
-		{
-			"good day", -- [1]
-			"Vanashlarus-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			755, -- [11]
-			"Player-11-0ABE343B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Vanashlarus|r",
-			[51] = 1563234235,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [34]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:10561:Player-11-09EB8ED6:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Honorable Medallion]|h|r!", -- [1]
-			"Fruitcake-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Fruitcake-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			765, -- [11]
-			"Player-11-09EB8ED6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Fruitcake|r",
-			[51] = 1563234278,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [35]
-		{
-			"lol I love tagging rares and then vanishing and watching the horde try not to kill it", -- [1]
-			"Kleptoh-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			766, -- [11]
-			"Player-11-07D9730C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Kleptoh|r",
-			[51] = 1563234285,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [36]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12741:Player-11-0A0A5036:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Giving a Scrap]|h|r!", -- [1]
-			"Ballonium-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ballonium-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			773, -- [11]
-			"Player-11-0A0A5036", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Ballonium|r",
-			[51] = 1563234325,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [37]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12076:Player-11-0B5C8329:1:7:15:19:4294967295:4294967295:4294967295:4294967295|h[Protector of the Argussian Reach]|h|r!", -- [1]
-			"Purus-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Purus-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			787, -- [11]
-			"Player-11-0B5C8329", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefePurus|r",
-			[51] = 1563234359,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [38]
-		{
-			"- NAZJATAR BATTLE - CAPTURE AND HOLD FLAGS TO GAIN ZONE CONTROL - WAR MODE - Conquest - Honor - Achievements - Mounts - Pendents - Flags - REWARDS FOR ALL! /whisper Archaosrex-Tichondrius INVITE for automatic invites MAIN LOBBY DISCORD!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			67, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407166,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [39]
-		{
-			"- WELCOME to RUIN! - Founded in 2004", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			110, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407201,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [40]
-		{
-			"DISCORD based WAR MODE and progression raiding community! Active on 15 servers and Classic World of Warcraft. Learn More:  www.Ruinnation.com", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			111, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407201,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [41]
-		{
-			"- RUIN DISCORD SERVER - ", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			112, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407201,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [42]
-		{
-			"- Visit: www.Ruinnation.com and click the Discord link.", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			113, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407201,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [43]
-		{
-			"- Log into Discord to be connected to 10,000+ players! - ", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			114, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407201,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [44]
-		{
-			"- Log into the Welcome lobby to get promoted and get perks!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			116, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407202,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [45]
-		{
-			"- Discord is a guild Requirement. ", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			117, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407202,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [46]
-		{
-			"- NAZJATAR BATTLE - CAPTURE AND HOLD FLAGS TO GAIN ZONE CONTROL - WAR MODE - Conquest - Honor - Achievements - Mounts - Pendents - Flags - REWARDS FOR ALL! /whisper Archaosrex-Tichondrius INVITE for automatic invites MAIN LOBBY DISCORD!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			124, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563407205,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [47]
-		{
-			"welcome ", -- [1]
-			"Manonn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			216, -- [11]
-			"Player-11-08371E13", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Manonn|r",
-			[51] = 1563407268,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [48]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:211:Player-11-0A0D83B6:1:7:17:19:4294967295:4294967295:4294967295:4294967295|h[Storm Glory]|h|r!", -- [1]
-			"Hairybanana-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Hairybanana-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			234, -- [11]
-			"Player-11-0A0D83B6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Hairybanana|r",
-			[51] = 1563407278,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [49]
-		{
-			"Welcome!!", -- [1]
-			"Tyresias-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			240, -- [11]
-			"Player-11-0B2693B9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Tyresias|r",
-			[51] = 1563407282,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [50]
-		{
-			"ty", -- [1]
-			"Myunah-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			249, -- [11]
-			"Player-11-0744BD7C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Myunah|r",
-			[51] = 1563407285,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [51]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:9408:Player-11-0B75FACE:1:7:17:19:4294967295:4294967295:4294967295:4294967295|h[Operation Counterattack]|h|r!", -- [1]
-			"Chyarm-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Chyarm-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			407, -- [11]
-			"Player-11-0B75FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cChyarm|r",
-			[51] = 1563407461,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [52]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:507:Player-11-0B77DFE3:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[1000 Quests Completed]|h|r!", -- [1]
-			"Podemon-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Podemon-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			355, -- [11]
-			"Player-11-0B77DFE3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Podemon|r",
-			[51] = 1563929570,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [53]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12888:Player-11-0AC37F61:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Strike Hard]|h|r!", -- [1]
-			"Attonh-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Attonh-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			391, -- [11]
-			"Player-11-0AC37F61", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00fe95Attonh|r",
-			[51] = 1563929797,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [54]
-		{
-			"DISCORD based WAR MODE and progression raiding community! Active on 15 servers and Classic World of Warcraft. Learn More:  www.Ruinnation.com", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			415, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563929873,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [55]
-		{
-			"- WELCOME to RUIN! - Founded in 2004", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			416, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563929873,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [56]
-		{
-			"We hope that you will make a long term home here! Please take full advantage of the guild Discord for finding Raid and PVP groups! Please let me know if you have any questions or need help finding groups!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			417, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563929873,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [57]
-		{
-			"- GROUP FINDING - ", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			418, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1563929873,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [58]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12840:Player-11-0B1FBAF9:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Tol Dagor]|h|r!", -- [1]
-			"Caiths-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Caiths-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			509, -- [11]
-			"Player-11-0B1FBAF9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffefefeCaiths|r",
-			[51] = 1563930022,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [59]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12497:Player-11-0B77DFE3:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Drust Do It.]|h|r!", -- [1]
-			"Podemon-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Podemon-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			596, -- [11]
-			"Player-11-0B77DFE3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Podemon|r",
-			[51] = 1563930133,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [60]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-0B6E9BAE:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
-			"Umbrick-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Umbrick-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			694, -- [11]
-			"Player-11-0B6E9BAE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cUmbrick|r",
-			[51] = 1563930297,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [61]
-		{
-			"sir if u need like someone to comunicate whit hispanic comunity let me know i can help", -- [1]
-			"Vzlasun-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			712, -- [11]
-			"Player-11-0B2757A4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Vzlasun|r",
-			[51] = 1563930319,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [62]
-		{
-			"i mean in translation and stuff", -- [1]
-			"Vzlasun-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			717, -- [11]
-			"Player-11-0B2757A4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3ec5e9Vzlasun|r",
-			[51] = 1563930331,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [63]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12496:Player-11-0B6C91AE:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Stormsong and Dance]|h|r!", -- [1]
-			"Srada-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Srada-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			720, -- [11]
-			"Player-11-0B6C91AE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa9d271Srada|r",
-			[51] = 1563930397,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [64]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13581:Player-11-0B773059:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Snowblossom Village]|h|r!", -- [1]
-			"Ragamaul-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ragamaul-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			722, -- [11]
-			"Player-11-0B773059", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Ragamaul|r",
-			[51] = 1563930404,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [65]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:154:Player-11-0B35E03C:1:7:23:19:4294967295:4294967295:4294967295:4294967295|h[Arathi Basin Victory]|h|r!", -- [1]
-			"Cptfrtbjorn-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Cptfrtbjorn-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			730, -- [11]
-			"Player-11-0B35E03C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cCptfrtbjorn|r",
-			[51] = 1563930486,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [66]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13623:Player-11-0B36C609:1:7:24:19:4294967295:4294967295:4294967295:4294967295|h[Fighting on Two Fronts]|h|r!", -- [1]
-			"Darkvalor-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Darkvalor-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1, -- [11]
-			"Player-11-0B36C609", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecDarkvalor|r",
-			[51] = 1564018127,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [67]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:4615:Player-11-0B7845DC:1:7:24:19:4294967295:4294967295:4294967295:4294967295|h[Flu Shot Shortage (25 player)]|h|r!", -- [1]
-			"Géñji-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Géñji-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			11, -- [11]
-			"Player-11-0B7845DC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Géñji|r",
-			[51] = 1564018196,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [68]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:4614:Player-11-0B7845DC:1:7:24:19:4294967295:4294967295:4294967295:4294967295|h[Dances with Oozes (25 player)]|h|r!", -- [1]
-			"Géñji-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Géñji-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			23, -- [11]
-			"Player-11-0B7845DC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa22fc8Géñji|r",
-			[51] = 1564018268,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [69]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12409:Player-11-0A293EAC:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Seething Shore Victory]|h|r!", -- [1]
-			"Jainê-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jainê-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3, -- [11]
-			"Player-11-0A293EAC", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8686ecJainê|r",
-			[51] = 1565115812,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [70]
-		{
-			"- WORLD BOSS - The Soulbinder - LISTED: RUIN Custom PVP Group Finder - Main Lobby Discord - Come Get Loot -", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			13, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1565115884,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [71]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:6980:Player-11-0B7126B7:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Temple of Kotmogu All-Star]|h|r!", -- [1]
-			"Gravekendal-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Gravekendal-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			14, -- [11]
-			"Player-11-0B7126B7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff38bb9Gravekendal|r",
-			[51] = 1565115885,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [72]
-		{
-			"- WORLD BOSS - The Soulbinder - LISTED: RUIN Custom PVP Group Finder - Main Lobby Discord - Come Get Loot -", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			107, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1565116144,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [73]
-		{
-			"- WORLD BOSS - The Soulbinder - LISTED: RUIN Custom PVP Group Finder - Main Lobby Discord - Come Get Loot -", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			109, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1565116186,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [74]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12559:Player-11-0B5451C0:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Explore Zuldazar]|h|r!", -- [1]
-			"Vurrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Vurrex-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			114, -- [11]
-			"Player-11-0B5451C0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffe7b09Vurrex|r",
-			[51] = 1565116218,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [75]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:6019:Player-11-0B7B0CD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Come One, Come All!]|h|r!", -- [1]
-			"Merzedes-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Merzedes-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			124, -- [11]
-			"Player-11-0B7B0CD1", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cMerzedes|r",
-			[51] = 1565116370,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [76]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:13558:Player-11-09ECC000:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Waveblade Ankoan]|h|r!", -- [1]
-			"Archaosrex-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Archaosrex-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			382, -- [11]
-			"Player-11-09ECC000", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cArchaosrex|r",
-			[51] = 1565116556,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [77]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:6022:Player-11-0B7B0CD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Quick Shot]|h|r!", -- [1]
-			"Merzedes-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Merzedes-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			407, -- [11]
-			"Player-11-0B7B0CD1", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc59a6cMerzedes|r",
-			[51] = 1565116739,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [78]
-		{
-			"guild, how can i go to mechanopolis?", -- [1]
-			"Anxietyx-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			419, -- [11]
-			"Player-11-0B7BDA5E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Anxietyx|r",
-			[51] = 1565116842,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [79]
-		{
-			"or naz'jatar?", -- [1]
-			"Anxietyx-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			422, -- [11]
-			"Player-11-0B7BDA5E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Anxietyx|r",
-			[51] = 1565116855,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [80]
-		{
-			"quest for it", -- [1]
-			"Rélèntless-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			423, -- [11]
-			"Player-11-0A499CE5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Rélèntless|r",
-			[51] = 1565116872,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [81]
-		{
-			"where?", -- [1]
-			"Anxietyx-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			424, -- [11]
-			"Player-11-0B7BDA5E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Anxietyx|r",
-			[51] = 1565116878,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [82]
-		{
-			"should be a war campagin", -- [1]
-			"Rélèntless-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			425, -- [11]
-			"Player-11-0A499CE5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffef367Rélèntless|r",
-			[51] = 1565116893,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [83]
-		{
-			"aaaa", -- [1]
-			"Anxietyx-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			426, -- [11]
-			"Player-11-0B7BDA5E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Anxietyx|r",
-			[51] = 1565116901,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [84]
-		{
-			":/", -- [1]
-			"Anxietyx-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			427, -- [11]
-			"Player-11-0B7BDA5E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc31d39Anxietyx|r",
-			[51] = 1565116902,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [85]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9142:Player-11-0A00A384:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Keeping It Rare]|h|r!", -- [1]
 			"Rodsoldier-Tichondrius", -- [2]
@@ -1916,7 +46,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Rodsoldier|r",
 			[51] = 1565116961,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [86]
+		}, -- [1]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4840:Player-11-0B775237:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Grim Batol]|h|r!", -- [1]
 			"Velaana-Tichondrius", -- [2]
@@ -1938,7 +68,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Velaana|r",
 			[51] = 1565117223,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [87]
+		}, -- [2]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5062:Player-11-0B775237:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Grim Batol]|h|r!", -- [1]
 			"Velaana-Tichondrius", -- [2]
@@ -1960,7 +90,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Velaana|r",
 			[51] = 1565117223,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [88]
+		}, -- [3]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12833:Player-11-09EFCDEB:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Freehold]|h|r!", -- [1]
 			"Mageodin-Tichondrius", -- [2]
@@ -1982,7 +112,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Mageodin|r",
 			[51] = 1565117361,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [89]
+		}, -- [4]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12832:Player-11-09EFCDEB:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Freehold]|h|r!", -- [1]
 			"Mageodin-Tichondrius", -- [2]
@@ -2004,7 +134,7 @@ ElvCharacterDB = {
 			[52] = "|cff3ec5e9Mageodin|r",
 			[51] = 1565117361,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [90]
+		}, -- [5]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12833:Player-11-0A5B48CB:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Freehold]|h|r!", -- [1]
 			"Softdagger-Tichondrius", -- [2]
@@ -2026,7 +156,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Softdagger|r",
 			[51] = 1565117361,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [91]
+		}, -- [6]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12832:Player-11-0A5B48CB:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Freehold]|h|r!", -- [1]
 			"Softdagger-Tichondrius", -- [2]
@@ -2048,7 +178,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Softdagger|r",
 			[51] = 1565117361,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [92]
+		}, -- [7]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13769:Player-11-0A124FD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Power Up]|h|r!", -- [1]
 			"Noldorin-Tichondrius", -- [2]
@@ -2070,7 +200,7 @@ ElvCharacterDB = {
 			[52] = "|cfffef367Noldorin|r",
 			[51] = 1565117429,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [93]
+		}, -- [8]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13712:Player-11-0B5434D5:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Explore Nazjatar]|h|r!", -- [1]
 			"Northernloon-Tichondrius", -- [2]
@@ -2092,7 +222,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Northernloon|r",
 			[51] = 1565117448,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [94]
+		}, -- [9]
 		{
 			"|cffffff00Old Town is under attack!|r", -- [1]
 			"", -- [2]
@@ -2114,7 +244,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1565117493,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [95]
+		}, -- [10]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13755:Player-11-0B329553:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Veteran: Farseer Ori]|h|r!", -- [1]
 			"Pilkington-Tichondrius", -- [2]
@@ -2136,7 +266,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Pilkington|r",
 			[51] = 1565117597,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [96]
+		}, -- [11]
 		{
 			"|cffffff00Old Town is under attack!|r", -- [1]
 			"", -- [2]
@@ -2158,7 +288,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1565117862,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [97]
+		}, -- [12]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4848:Player-11-0A00A384:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Lost City of the Tol'vir]|h|r!", -- [1]
 			"Rodsoldier-Tichondrius", -- [2]
@@ -2180,7 +310,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Rodsoldier|r",
 			[51] = 1565118042,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [98]
+		}, -- [13]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5066:Player-11-0A00A384:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Heroic: Lost City of the Tol'vir]|h|r!", -- [1]
 			"Rodsoldier-Tichondrius", -- [2]
@@ -2202,7 +332,7 @@ ElvCharacterDB = {
 			[52] = "|cffa9d271Rodsoldier|r",
 			[51] = 1565118042,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [99]
+		}, -- [14]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9755:Player-11-0B7B0CD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Darkmoon Race Enthusiast]|h|r!", -- [1]
 			"Merzedes-Tichondrius", -- [2]
@@ -2224,7 +354,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cMerzedes|r",
 			[51] = 1565118122,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [100]
+		}, -- [15]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9770:Player-11-0B7B0CD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Blast Off!]|h|r!", -- [1]
 			"Merzedes-Tichondrius", -- [2]
@@ -2246,7 +376,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cMerzedes|r",
 			[51] = 1565118250,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [101]
+		}, -- [16]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9769:Player-11-0B7B0CD1:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Rocketeer: Bronze]|h|r!", -- [1]
 			"Merzedes-Tichondrius", -- [2]
@@ -2268,7 +398,7 @@ ElvCharacterDB = {
 			[52] = "|cffc59a6cMerzedes|r",
 			[51] = 1565118250,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [102]
+		}, -- [17]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13704:Player-11-0B775237:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Nautical Battlefield Training]|h|r!", -- [1]
 			"Velaana-Tichondrius", -- [2]
@@ -2290,7 +420,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Velaana|r",
 			[51] = 1565118338,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [103]
+		}, -- [18]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:5255:Player-11-0A293EAC:1:8:6:19:4294967295:4294967295:4294967295:4294967295|h[Jugger Not]|h|r!", -- [1]
 			"Jainê-Tichondrius", -- [2]
@@ -2312,7 +442,7 @@ ElvCharacterDB = {
 			[52] = "|cff8686ecJainê|r",
 			[51] = 1565118380,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [104]
+		}, -- [19]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13516:Player-11-0B7027ED:1:8:20:19:4294967295:4294967295:4294967295:4294967295|h[Massive Tool]|h|r!", -- [1]
 			"Shindo-Tichondrius", -- [2]
@@ -2334,7 +464,7 @@ ElvCharacterDB = {
 			[52] = "|cffa22fc8Shindo|r",
 			[51] = 1566340694,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [105]
+		}, -- [20]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:12547:Player-11-0B85C692:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[Epic]|h|r!", -- [1]
 			"Zenchii-Tichondrius", -- [2]
@@ -2356,7 +486,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Zenchii|r",
 			[51] = 1568593953,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [106]
+		}, -- [21]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11998:Player-11-0AD3CC7B:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Kin'garoth]|h|r!", -- [1]
 			"Sentomaro-Tichondrius", -- [2]
@@ -2378,7 +508,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sentomaro|r",
 			[51] = 1568593956,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [107]
+		}, -- [22]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13297:Player-11-0B7EC967:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[War for the Shore]|h|r!", -- [1]
 			"Stumpform-Tichondrius", -- [2]
@@ -2400,7 +530,7 @@ ElvCharacterDB = {
 			[52] = "|cfffe7b09Stumpform|r",
 			[51] = 1568593956,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [108]
+		}, -- [23]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:13572:Player-11-0AD60CC1:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[The Heart Forge]|h|r!", -- [1]
 			"Zaddik-Tichondrius", -- [2]
@@ -2422,7 +552,7 @@ ElvCharacterDB = {
 			[52] = "|cfff38bb9Zaddik|r",
 			[51] = 1568593957,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [109]
+		}, -- [24]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:31:Player-11-0AD3CC7B:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[A Simple Re-Quest]|h|r!", -- [1]
 			"Sentomaro-Tichondrius", -- [2]
@@ -2444,7 +574,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sentomaro|r",
 			[51] = 1568594108,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [110]
+		}, -- [25]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:11999:Player-11-0AD3CC7B:1:9:15:19:4294967295:4294967295:4294967295:4294967295|h[Mythic: Varimathras]|h|r!", -- [1]
 			"Sentomaro-Tichondrius", -- [2]
@@ -2466,7 +596,7 @@ ElvCharacterDB = {
 			[52] = "|cff00fe95Sentomaro|r",
 			[51] = 1568594251,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [111]
+		}, -- [26]
 		{
 			"yo yo", -- [1]
 			"|Kq4|k", -- [2]
@@ -2489,7 +619,7 @@ ElvCharacterDB = {
 			[51] = 1573007437,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [112]
+		}, -- [27]
 		{
 			"Eyyy", -- [1]
 			"|Kq4|k", -- [2]
@@ -2512,7 +642,7 @@ ElvCharacterDB = {
 			[51] = 1573007453,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [113]
+		}, -- [28]
 		{
 			"Whatchu up to?", -- [1]
 			"|Kq4|k", -- [2]
@@ -2535,7 +665,7 @@ ElvCharacterDB = {
 			[51] = 1573007479,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [114]
+		}, -- [29]
 		{
 			"wife went to bed early. going to try to hit 60 tonight", -- [1]
 			"|Kq4|k", -- [2]
@@ -2558,7 +688,7 @@ ElvCharacterDB = {
 			[51] = 1573007492,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [115]
+		}, -- [30]
 		{
 			"Dang 57!", -- [1]
 			"|Kq4|k", -- [2]
@@ -2581,7 +711,7 @@ ElvCharacterDB = {
 			[51] = 1573007493,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [116]
+		}, -- [31]
 		{
 			"Youre almost halfway there!", -- [1]
 			"|Kq4|k", -- [2]
@@ -2604,7 +734,7 @@ ElvCharacterDB = {
 			[51] = 1573007506,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [117]
+		}, -- [32]
 		{
 			"jk Are you dungeoning?", -- [1]
 			"|Kq4|k", -- [2]
@@ -2627,7 +757,7 @@ ElvCharacterDB = {
 			[51] = 1573007519,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [118]
+		}, -- [33]
 		{
 			"lol", -- [1]
 			"|Kq4|k", -- [2]
@@ -2650,7 +780,7 @@ ElvCharacterDB = {
 			[51] = 1573007523,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [119]
+		}, -- [34]
 		{
 			"yeah", -- [1]
 			"|Kq4|k", -- [2]
@@ -2673,7 +803,7 @@ ElvCharacterDB = {
 			[51] = 1573007524,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [120]
+		}, -- [35]
 		{
 			"still need to buy bfa once i hit 110 though lol", -- [1]
 			"|Kq4|k", -- [2]
@@ -2696,7 +826,7 @@ ElvCharacterDB = {
 			[51] = 1573007532,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [121]
+		}, -- [36]
 		{
 			"Ooo isnt it on safe for $20", -- [1]
 			"|Kq4|k", -- [2]
@@ -2719,7 +849,7 @@ ElvCharacterDB = {
 			[51] = 1573007554,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "munkurious",
-		}, -- [122]
+		}, -- [37]
 		{
 			"o really ?", -- [1]
 			"|Kq4|k", -- [2]
@@ -2742,7 +872,7 @@ ElvCharacterDB = {
 			[51] = 1573007563,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [123]
+		}, -- [38]
 		{
 			"no 40", -- [1]
 			"|Kq4|k", -- [2]
@@ -2765,7 +895,7 @@ ElvCharacterDB = {
 			[51] = 1573007568,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [124]
+		}, -- [39]
 		{
 			"according to wow shop", -- [1]
 			"|Kq4|k", -- [2]
@@ -2788,7 +918,7 @@ ElvCharacterDB = {
 			[51] = 1573007585,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "munkurious",
-		}, -- [125]
+		}, -- [40]
 		{
 			"|cffffff00The Hanging Reef is under attack!|r", -- [1]
 			"", -- [2]
@@ -2810,7 +940,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1573007670,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [126]
+		}, -- [41]
 		{
 			"|cffffff00Mezzamere is under attack!|r", -- [1]
 			"", -- [2]
@@ -2831,6 +961,1876 @@ ElvCharacterDB = {
 			true, -- [17]
 			[52] = "",
 			[51] = 1573007675,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [42]
+		{
+			"just got shat on by one in 2s", -- [1]
+			"Badäxx-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Badäxx-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			22, -- [11]
+			"Player-11-0BC27639", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cBadäxx|r",
+			[51] = 1587696494,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [43]
+		{
+			"Any other priest randomly get Greater Heal back for like a second like 2hrs ago?", -- [1]
+			"Zyrious-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Zyrious-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			30, -- [11]
+			"Player-11-0B10068A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffefefeZyrious|r",
+			[51] = 1587697149,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [44]
+		{
+			"|cffff8000|Hitem:34334::::::::58:253:::1:3524:::|h[Thori'dal, the Stars' Fury]|h|r woot", -- [1]
+			"Gîzmø-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Gîzmø-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			40, -- [11]
+			"Player-11-0BB3C529", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Gîzmø|r",
+			[51] = 1587697236,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [45]
+		{
+			"nice", -- [1]
+			"Claraellwind-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Claraellwind-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			41, -- [11]
+			"Player-11-0BBEEDC6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffe7b09Claraellwind|r",
+			[51] = 1587697259,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [46]
+		{
+			"dont have to buy ammo anymore, nice", -- [1]
+			"Islaywhales-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Islaywhales-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			42, -- [11]
+			"Player-11-0B3A34DC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Islaywhales|r",
+			[51] = 1587697261,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [47]
+		{
+			"Yep, about 2hrs ago in Classic", -- [1]
+			"Iwrekzu-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Iwrekzu-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			43, -- [11]
+			"Player-11-0B9DF8FB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff8686ecIwrekzu|r",
+			[51] = 1587697266,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [48]
+		{
+			"Voice in the Deeps 100.00% ~(67.41, 34.58)", -- [1]
+			"Caerulean-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Nazjatar", -- [4]
+			"Caerulean-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Nazjatar", -- [9]
+			0, -- [10]
+			50, -- [11]
+			"Player-131-07C4DDA4", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Caerulean-Skywall|r",
+			[51] = 1587697447,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [49]
+		{
+			"48 46", -- [1]
+			"Falja-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Nazjatar", -- [4]
+			"Falja-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Nazjatar", -- [9]
+			0, -- [10]
+			89, -- [11]
+			"Player-131-0293E0FC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Falja-Skywall|r",
+			[51] = 1587697855,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [50]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			163, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587698306,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [51]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			236, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699143,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [52]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			239, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699429,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [53]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			240, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699493,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [54]
+		{
+			"|cffffff00Highmountain is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			241, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699536,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [55]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			242, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699567,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [56]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			243, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587699629,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [57]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			245, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587700038,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [58]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			246, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587700306,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [59]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			247, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587700368,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [60]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			1, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587782324,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [61]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			6, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587782440,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [62]
+		{
+			"|cffffff00Nightwatcher's Perch is under attack!|r", -- [1]
+			"", -- [2]
+			"", -- [3]
+			"3. LocalDefense - Highmountain", -- [4]
+			"", -- [5]
+			"", -- [6]
+			22, -- [7]
+			3, -- [8]
+			"LocalDefense - Highmountain", -- [9]
+			0, -- [10]
+			9, -- [11]
+			false, -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "",
+			[51] = 1587782515,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [63]
+		{
+			"legit 5 120s came and killed me at the wq an invasion of murlocs", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			16, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782613,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [64]
+		{
+			"lol i mean they're prob trash and only way they can pvp is by killing low levels", -- [1]
+			"Azzuru-Darkspear", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Azzuru-Darkspear", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			17, -- [11]
+			"Player-120-0475A271", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Azzuru-Darkspear|r",
+			[51] = 1587782621,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [65]
+		{
+			"same", -- [1]
+			"Sleeve-Vashj", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Sleeve-Vashj", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			18, -- [11]
+			"Player-7-0B378DA3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cSleeve-Vashj|r",
+			[51] = 1587782624,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [66]
+		{
+			"im so close to 120 ohmygod im halfway to 119 )':", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			19, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782639,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [67]
+		{
+			"o t hey're 1 shotting me from the qair.   just sitting there waiting", -- [1]
+			"Theimp-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Theimp-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			20, -- [11]
+			"Player-5-0BB7D60A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3ec5e9Theimp-Proudmoore|r",
+			[51] = 1587782641,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [68]
+		{
+			"theyre just flying and killing everyone i hate it sm", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			21, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782657,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [69]
+		{
+			"probably faster to hearth back to SW, turn warmode off, then come back", -- [1]
+			"Vivenna-Shadowsong", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Vivenna-Shadowsong", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			22, -- [11]
+			"Player-85-088ECA4D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff00fe95Vivenna-Shadowsong|r",
+			[51] = 1587782668,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [70]
+		{
+			"^", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			23, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782676,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [71]
+		{
+			"man i have horde on mal;ganis and were not THIS mean ", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			24, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782688,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [72]
+		{
+			"Horde on this server are straight human trash", -- [1]
+			"Irickvondees-Sen'jin", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Irickvondees-Sen'jin", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			25, -- [11]
+			"Player-1185-0BABF701", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Irickvondees-Sen'jin|r",
+			[51] = 1587782715,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [73]
+		{
+			"like ive not seen this much lowbie ganking since wrath ", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			26, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782738,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [74]
+		{
+			"i main all horde toons except this worgen and it makes me so ashamed smh", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			27, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782744,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [75]
+		{
+			"to be worgen?", -- [1]
+			"Mithx-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Mithx-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			28, -- [11]
+			"Player-5-0BC2C94C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff006fdcMithx-Proudmoore|r",
+			[51] = 1587782755,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [76]
+		{
+			"lmfao sure", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			29, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782763,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [77]
+		{
+			"lol", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			30, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782763,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [78]
+		{
+			"jk <3", -- [1]
+			"Mithx-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Mithx-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			31, -- [11]
+			"Player-5-0BC2C94C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff006fdcMithx-Proudmoore|r",
+			[51] = 1587782769,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [79]
+		{
+			"worgen are sick after the rework", -- [1]
+			"Magalov-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Magalov-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			32, -- [11]
+			"Player-5-0BC35CDB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff8686ecMagalov-Proudmoore|r",
+			[51] = 1587782769,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [80]
+		{
+			"they used to be trash", -- [1]
+			"Magalov-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Magalov-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			33, -- [11]
+			"Player-5-0BC35CDB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff8686ecMagalov-Proudmoore|r",
+			[51] = 1587782772,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [81]
+		{
+			"^^", -- [1]
+			"Agitha-Skywall", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Agitha-Skywall", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			34, -- [11]
+			"Player-131-08907233", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Agitha-Skywall|r",
+			[51] = 1587782778,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [82]
+		{
+			"lol, horde are so bad", -- [1]
+			"Beist-Tichondrius", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Beist-Tichondrius", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			35, -- [11]
+			"Player-11-0B5C2C8C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cBeist|r",
+			[51] = 1587782779,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [83]
+		{
+			"def the horde on this server ", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			36, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782788,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [84]
+		{
+			"what did they rework", -- [1]
+			"Mithx-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Mithx-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			37, -- [11]
+			"Player-5-0BC2C94C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff006fdcMithx-Proudmoore|r",
+			[51] = 1587782788,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [85]
+		{
+			"takes 5 of them to kill 1", -- [1]
+			"Beist-Tichondrius", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Beist-Tichondrius", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			38, -- [11]
+			"Player-11-0B5C2C8C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cBeist|r",
+			[51] = 1587782790,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [86]
+		{
+			"the model, how they move and look", -- [1]
+			"Magalov-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Magalov-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			39, -- [11]
+			"Player-5-0BC35CDB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff8686ecMagalov-Proudmoore|r",
+			[51] = 1587782799,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [87]
+		{
+			"on mal'ganis we just ignore the alliance questing unless its a call to arms day ", -- [1]
+			"Charlotti-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Charlotti-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			40, -- [11]
+			"Player-5-0A7CB096", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffef367Charlotti-Proudmoore|r",
+			[51] = 1587782800,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [88]
+		{
+			"oh sweet", -- [1]
+			"Mithx-Proudmoore", -- [2]
+			"", -- [3]
+			"1. General - Stormheim", -- [4]
+			"Mithx-Proudmoore", -- [5]
+			"", -- [6]
+			1, -- [7]
+			1, -- [8]
+			"General - Stormheim", -- [9]
+			0, -- [10]
+			41, -- [11]
+			"Player-5-0BC2C94C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff006fdcMithx-Proudmoore|r",
+			[51] = 1587782803,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [89]
+		{
+			"buying mage port to stormshield", -- [1]
+			"Xnn-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Xnn-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			45, -- [11]
+			"Player-11-0A6C5F75", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Xnn|r",
+			[51] = 1587783068,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [90]
+		{
+			"WTS |cff0070dd|Hitem:128319::::::::1:256::31::::|h[Void-Shrouded Satchel]|h|r gives |cff00ccff|Hitem:128318::::::::1:256::::::|h[Touch of the Void]|h|r PST", -- [1]
+			"Pauction-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pauction-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			46, -- [11]
+			"Player-11-0A32B607", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffefefePauction|r",
+			[51] = 1587783125,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [91]
+		{
+			"<Honor Before Glory> WARMODE 24/7 grouping for DAILIES / CASUAL / RATED PVP / KEYS++, a chill laid back experience with people of common mind, Pst for rules and inv. ", -- [1]
+			"Thrillerbark-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Thrillerbark-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			50, -- [11]
+			"Player-11-0B1F4EE7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cThrillerbark|r",
+			[51] = 1587783176,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [92]
+		{
+			"look at all the pumpkin heads", -- [1]
+			"Carbndioxide-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Carbndioxide-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			53, -- [11]
+			"Player-11-0BC3F01E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3ec5e9Carbndioxide|r",
+			[51] = 1587783201,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [93]
+		{
+			"fuck it, first person to guess my number 1-10 gets 5 free FH carries", -- [1]
+			"Havocurway-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Havocurway-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			55, -- [11]
+			"Player-11-0BA5AA2A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Havocurway|r",
+			[51] = 1587783448,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [94]
+		{
+			"bored", -- [1]
+			"Havocurway-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Havocurway-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			56, -- [11]
+			"Player-11-0BA5AA2A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Havocurway|r",
+			[51] = 1587783450,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [95]
+		{
+			"7", -- [1]
+			"Celtivftw-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Celtivftw-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			57, -- [11]
+			"Player-11-0A17F8DB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Celtivftw|r",
+			[51] = 1587783459,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [96]
+		{
+			"7", -- [1]
+			"Carbndioxide-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Carbndioxide-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			58, -- [11]
+			"Player-11-0BC3F01E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3ec5e9Carbndioxide|r",
+			[51] = 1587783459,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [97]
+		{
+			"ll", -- [1]
+			"Sheepdis-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Sheepdis-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			59, -- [11]
+			"Player-11-0735FD71", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3ec5e9Sheepdis|r",
+			[51] = 1587783460,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [98]
+		{
+			"3", -- [1]
+			"Stryzrr-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Stryzrr-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			60, -- [11]
+			"Player-11-0BBC975F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Stryzrr|r",
+			[51] = 1587783460,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [99]
+		{
+			"7", -- [1]
+			"Nedwarrent-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Nedwarrent-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			61, -- [11]
+			"Player-11-0BC396DD", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cNedwarrent|r",
+			[51] = 1587783462,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [100]
+		{
+			"5", -- [1]
+			"Crowshot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Crowshot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			62, -- [11]
+			"Player-11-06DFA0A9", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Crowshot|r",
+			[51] = 1587783463,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [101]
+		{
+			"12", -- [1]
+			"Holyblock-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Holyblock-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			63, -- [11]
+			"Player-11-0B62654F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Holyblock|r",
+			[51] = 1587783465,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [102]
+		{
+			"Selling Elementium Bars 35G Each(x200) Pyrium Bar 200G Each (x20) Hardened Elementium Bar 1050G Each ", -- [1]
+			"Smorepoptart-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Smorepoptart-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			64, -- [11]
+			"Player-11-0BBCF101", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Smorepoptart|r",
+			[51] = 1587783468,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [103]
+		{
+			"11", -- [1]
+			"Thagin-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Thagin-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			65, -- [11]
+			"Player-11-0B3CC006", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cThagin|r",
+			[51] = 1587783471,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [104]
+		{
+			"4", -- [1]
+			"Donchi-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Donchi-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			66, -- [11]
+			"Player-11-0B10288A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff00fe95Donchi|r",
+			[51] = 1587783473,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [105]
+		{
+			"2", -- [1]
+			"Nedwarrent-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Nedwarrent-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			67, -- [11]
+			"Player-11-0BC396DD", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cNedwarrent|r",
+			[51] = 1587783474,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [106]
+		{
+			"1", -- [1]
+			"Crowshot-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Crowshot-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			68, -- [11]
+			"Player-11-06DFA0A9", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Crowshot|r",
+			[51] = 1587783481,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [107]
+		{
+			"1.5", -- [1]
+			"Carbndioxide-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Carbndioxide-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			69, -- [11]
+			"Player-11-0BC3F01E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3ec5e9Carbndioxide|r",
+			[51] = 1587783482,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [108]
+		{
+			"was 3 guys", -- [1]
+			"Havocurway-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Havocurway-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			70, -- [11]
+			"Player-11-0BA5AA2A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Havocurway|r",
+			[51] = 1587783484,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [109]
+		{
+			"4", -- [1]
+			"Thagin-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Thagin-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			71, -- [11]
+			"Player-11-0B3CC006", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cThagin|r",
+			[51] = 1587783485,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [110]
+		{
+			"lol", -- [1]
+			"Havocurway-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Havocurway-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			72, -- [11]
+			"Player-11-0BA5AA2A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Havocurway|r",
+			[51] = 1587783487,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [111]
+		{
+			"3", -- [1]
+			"Celtivftw-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Celtivftw-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			73, -- [11]
+			"Player-11-0A17F8DB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Celtivftw|r",
+			[51] = 1587783492,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [112]
+		{
+			"5Head", -- [1]
+			"Stryzrr-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Stryzrr-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			74, -- [11]
+			"Player-11-0BBC975F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Stryzrr|r",
+			[51] = 1587783494,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [113]
+		{
+			"anyone jelly", -- [1]
+			"Pkrippêr-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pkrippêr-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3327, -- [11]
+			"Player-11-0BBD2F5C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc31d39Pkrippêr|r",
+			[51] = 1588043246,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [114]
+		{
+			"who fucks with Havok?", -- [1]
+			"Lóken-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Lóken-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3328, -- [11]
+			"Player-11-0B894FB6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cLóken|r",
+			[51] = 1588043263,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [115]
+		{
+			"i partied with them in 07", -- [1]
+			"ßashyourface-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"ßashyourface-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3329, -- [11]
+			"Player-11-09D06713", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cßashyourface|r",
+			[51] = 1588043276,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [116]
+		{
+			"ted nugent is a joke tbh", -- [1]
+			"Lurore-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Lurore-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3330, -- [11]
+			"Player-11-0BB9F850", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Lurore|r",
+			[51] = 1588043276,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [117]
+		{
+			"seen cheech n chong live at the cree resort", -- [1]
+			"Pkrippêr-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pkrippêr-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3331, -- [11]
+			"Player-11-0BBD2F5C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc31d39Pkrippêr|r",
+			[51] = 1588043281,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [118]
+		{
+			"didnt they put out a new album?", -- [1]
+			"ßashyourface-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"ßashyourface-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3332, -- [11]
+			"Player-11-09D06713", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cßashyourface|r",
+			[51] = 1588043288,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [119]
+		{
+			"best concert ive been was Nickleback", -- [1]
+			"Lunniz-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Lunniz-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3333, -- [11]
+			"Player-11-0B24EE46", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff38bb9Lunniz|r",
+			[51] = 1588043301,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [120]
+		{
+			"who?", -- [1]
+			"Lóken-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Lóken-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3334, -- [11]
+			"Player-11-0B894FB6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cLóken|r",
+			[51] = 1588043307,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [121]
+		{
+			"^ lmfao", -- [1]
+			"Willownya-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Willownya-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3335, -- [11]
+			"Player-11-0BB57511", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa22fc8Willownya|r",
+			[51] = 1588043309,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [122]
+		{
+			"he can play u under the table ", -- [1]
+			"Pkrippêr-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pkrippêr-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3336, -- [11]
+			"Player-11-0BBD2F5C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc31d39Pkrippêr|r",
+			[51] = 1588043312,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [123]
+		{
+			"the Mexican is the better of the two", -- [1]
+			"Dandogg-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Dandogg-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3337, -- [11]
+			"Player-11-0AC2F5CB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffa9d271Dandogg|r",
+			[51] = 1588043313,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [124]
+		{
+			"havok", -- [1]
+			"ßashyourface-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"ßashyourface-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3338, -- [11]
+			"Player-11-09D06713", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cßashyourface|r",
+			[51] = 1588043325,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [125]
+		{
+			"I CANT FIGURE OUT WHO THE FUCK ASKED", -- [1]
+			"Cryptwalkx-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Cryptwalkx-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3340, -- [11]
+			"Player-11-0BC1FC39", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc31d39Cryptwalkx|r",
+			[51] = 1588043334,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [126]
+		{
+			"its dropping on the 5th of may", -- [1]
+			"Lóken-Tichondrius", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Lóken-Tichondrius", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			3341, -- [11]
+			"Player-11-0B894FB6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc59a6cLóken|r",
+			[51] = 1588043337,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},

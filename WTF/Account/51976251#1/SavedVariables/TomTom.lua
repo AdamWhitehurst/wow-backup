@@ -9,27 +9,28 @@ TomTomDB = {
 		["Whitmoore - Emerald Dream"] = "Default",
 		["Bramblebrow - Emerald Dream"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
 		["Ayanir - Moon Guard"] = "Default",
 		["Mcpokesalot - Tichondrius"] = "Default",
 		["Iscrackl - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
-		["Brungar - Tichondrius"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
 		["Lonalber - Emerald Dream"] = "Default",
 		["Magnr - Tichondrius"] = "Default",
-		["Byanir - Moon Guard"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
 		["Byanir - Emerald Dream"] = "Default",
 		["Tirdailough - Tichondrius"] = "Default",
 		["Curaney - Tichondrius"] = "Default",
 		["Harwapa - Tichondrius"] = "Default",
-		["Grandh - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
 		["Bjorgr - Tichondrius"] = "Default",
-		["Umbrick - Tichondrius"] = "Default",
+		["Grandh - Tichondrius"] = "Default",
 		["Arndoss - Tichondrius"] = "Default",
-		["Andalsa - Tichondrius"] = "Default",
+		["Byanir - Moon Guard"] = "Default",
 		["Madylad - Tichondrius"] = "Default",
-		["Stoakt - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -63,27 +64,28 @@ TomTomWaypointsM = {
 		["Whitmoore - Emerald Dream"] = "Whitmoore - Emerald Dream",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
 		["Ayanir - Moon Guard"] = "Ayanir - Moon Guard",
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
 		["Iscrackl - Tichondrius"] = "Iscrackl - Tichondrius",
 		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
 		["Lonalber - Emerald Dream"] = "Lonalber - Emerald Dream",
 		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
-		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Byanir - Emerald Dream"] = "Byanir - Emerald Dream",
 		["Tirdailough - Tichondrius"] = "Tirdailough - Tichondrius",
 		["Curaney - Tichondrius"] = "Curaney - Tichondrius",
 		["Harwapa - Tichondrius"] = "Harwapa - Tichondrius",
-		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 		["Mininimi - Moon Guard"] = "Mininimi - Moon Guard",
 		["Bjorgr - Tichondrius"] = "Bjorgr - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Grandh - Tichondrius"] = "Grandh - Tichondrius",
 		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Byanir - Moon Guard"] = "Byanir - Moon Guard",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["profiles"] = {
 		["Vedrixa - Moon Guard"] = {
@@ -97,20 +99,21 @@ TomTomWaypointsM = {
 					0.452742547950213, -- [2]
 					0.7166946231604777, -- [3]
 					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-						},
-						["minimap"] = {
-						},
-						["world"] = {
-						},
-					},
+					["crazy"] = true,
 					["persistent"] = true,
 					["desc"] = "TomTom waypoint",
 					["silent"] = true,
 					["cleardistance"] = 10,
 					["title"] = "TomTom waypoint",
-					["crazy"] = true,
+					["from"] = "Anon",
+					["callbacks"] = {
+						["distance"] = {
+						},
+						["world"] = {
+						},
+						["minimap"] = {
+						},
+					},
 					["minimap"] = true,
 					["world"] = true,
 				},
@@ -132,9 +135,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -150,6 +153,8 @@ TomTomWaypointsM = {
 		},
 		["Wharapi - Tichondrius"] = {
 		},
+		["Stoakt - Tichondrius"] = {
+		},
 		["Ayanir - Moon Guard"] = {
 		},
 		["Mcpokesalot - Tichondrius"] = {
@@ -158,7 +163,166 @@ TomTomWaypointsM = {
 		},
 		["Andallsa - Tichondrius"] = {
 		},
-		["Brungar - Tichondrius"] = {
+		["Sparkwizz - Tichondrius"] = {
+			[390] = {
+				["390:141452000:769737000:Go to Bowmistress Li"] = {
+					390, -- [1]
+					0.141452, -- [2]
+					0.769737, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "Go to Bowmistress Li",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "Go to Bowmistress Li",
+					["from"] = "?",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+				["390:172877578.17343:754607743.74611:TomTom waypoint"] = {
+					390, -- [1]
+					0.1728775781734299, -- [2]
+					0.7546077437461052, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "TomTom waypoint",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom waypoint",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+				["390:157819214.93532:752768420.13348:TomTom waypoint"] = {
+					390, -- [1]
+					0.1578192149353201, -- [2]
+					0.752768420133485, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "TomTom waypoint",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom waypoint",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+			},
+			[582] = {
+				["582:451422096.11477:807121980.56013:TomTom waypoint"] = {
+					582, -- [1]
+					0.4514220961147667, -- [2]
+					0.8071219805601287, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "TomTom waypoint",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom waypoint",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+				["582:404333888.47477:844792683.68734:TomTom waypoint"] = {
+					582, -- [1]
+					0.4043338884747725, -- [2]
+					0.8447926836873432, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "TomTom waypoint",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom waypoint",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+			},
 		},
 		["Umbrick - Emerald Dream"] = {
 		},
@@ -166,7 +330,7 @@ TomTomWaypointsM = {
 		},
 		["Magnr - Tichondrius"] = {
 		},
-		["Byanir - Moon Guard"] = {
+		["Andalsa - Tichondrius"] = {
 		},
 		["Byanir - Emerald Dream"] = {
 		},
@@ -176,21 +340,21 @@ TomTomWaypointsM = {
 		},
 		["Harwapa - Tichondrius"] = {
 		},
-		["Grandh - Tichondrius"] = {
+		["Umbrick - Tichondrius"] = {
 		},
 		["Mininimi - Moon Guard"] = {
 		},
 		["Bjorgr - Tichondrius"] = {
 		},
-		["Umbrick - Tichondrius"] = {
+		["Grandh - Tichondrius"] = {
 		},
 		["Arndoss - Tichondrius"] = {
 		},
-		["Andalsa - Tichondrius"] = {
+		["Byanir - Moon Guard"] = {
 		},
 		["Madylad - Tichondrius"] = {
 		},
-		["Stoakt - Tichondrius"] = {
+		["Brungar - Tichondrius"] = {
 		},
 	},
 }
