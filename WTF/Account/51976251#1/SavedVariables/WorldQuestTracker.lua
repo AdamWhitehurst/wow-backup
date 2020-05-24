@@ -1,11 +1,13 @@
 
 WQTrackerDB = {
 	["profileKeys"] = {
-		["Andalsa - Tichondrius"] = "Default",
-		["Sparkwizz - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
+		["Sparkele - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
 		["Arndoss - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
 		["Madylad - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
 	},
@@ -14,9 +16,9 @@ WQTrackerDB = {
 			["TutorialTracker"] = 2,
 			["groupfinder"] = {
 				["frame"] = {
-					["y"] = 57.03729248046875,
-					["x"] = -0.667724609375,
-					["point"] = "RIGHT",
+					["y"] = 13.55558490753174,
+					["x"] = -116.8292236328125,
+					["point"] = "BOTTOMRIGHT",
 					["scale"] = 1,
 				},
 			},
@@ -125,63 +127,305 @@ WQTrackerDB = {
 				},
 			},
 			["quests_tracked"] = {
-				["Player-11-0B6E9BAE"] = {
+				["Player-162-0962A55D"] = {
 				},
 				["Player-11-0B855D6F"] = {
 				},
+				["Player-11-0BCAEF48"] = {
+				},
 				["Player-11-0BC22848"] = {
-				},
-				["Player-11-0B65575E"] = {
-				},
-				["Player-11-0B922830"] = {
 				},
 				["Player-11-0B7CAAD4"] = {
 				},
 				["Player-11-0BC4C7B7"] = {
+					{
+						["mapID"] = 863,
+						["index"] = 0,
+						["timeFraction"] = 1239689.325,
+						["questID"] = 50496,
+						["isDisabled"] = true,
+						["mapIDSynthetic"] = 0,
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
+						["expireAt"] = 1589252494,
+						["numObjectives"] = 1,
+						["LastDistance"] = 0.9894106687638852,
+						["timeAdded"] = 1589200594,
+						["rewardAmount"] = "|cff2292FF420",
+						["timeLeft"] = 865,
+						["questType"] = 4,
+					}, -- [1]
+				},
+				["Player-11-0B6E9BAE"] = {
+				},
+				["Player-11-0B65575E"] = {
+				},
+				["Player-11-0B922830"] = {
 				},
 			},
 			["quests_all_characters"] = {
 				["Player-11-0B65575E"] = {
-					[55466] = {
-						["expireAt"] = 1588086042,
-						["rewardAmount"] = 750,
-						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					[58747] = {
+						["expireAt"] = 1589209239,
+						["rewardAmount"] = "18",
+						["rewardTexture"] = 2004597,
 					},
-					[52458] = {
-						["expireAt"] = 1588086050,
-						["rewardAmount"] = 450,
-						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					[58743] = {
+						["expireAt"] = 1589209243,
+						["rewardAmount"] = "18",
+						["rewardTexture"] = 133675,
 					},
 				},
 				["Player-11-0B922830"] = {
 				},
+				["Player-162-0962A55D"] = {
+					[43943] = {
+						["expireAt"] = 1589727610,
+						["rewardAmount"] = "",
+						["rewardTexture"] = 1409002,
+					},
+					[42781] = {
+						["expireAt"] = 1589814070,
+						["rewardAmount"] = "|cffc557FF182",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Necklace_07",
+					},
+					[45977] = {
+						["expireAt"] = 1589770810,
+						["rewardAmount"] = "|cffc557FF184",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Talisman_07",
+					},
+					[46111] = {
+						["expireAt"] = 1589727670,
+						["rewardAmount"] = "15",
+						["rewardTexture"] = 413584,
+					},
+					[41914] = {
+						["expireAt"] = 1589727670,
+						["rewardAmount"] = "18",
+						["rewardTexture"] = 133675,
+					},
+					[42859] = {
+						["expireAt"] = 1589770870,
+						["rewardAmount"] = "|cffc557FF184",
+						["rewardTexture"] = "Interface\\ICONS\\inv_misc_enchantedpearlE",
+					},
+					[43827] = {
+						["expireAt"] = 1589693109,
+						["rewardAmount"] = "|cffc557FF176",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Shoulder_25",
+					},
+					[43513] = {
+						["expireAt"] = 1589900470,
+						["rewardAmount"] = "110",
+						["rewardTexture"] = 840008,
+					},
+					[44893] = {
+						["expireAt"] = 1589857269,
+						["rewardAmount"] = "|cffc557FF184",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Necklace_07",
+					},
+					[43431] = {
+						["expireAt"] = 1589770870,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 1417744,
+					},
+					[43771] = {
+						["expireAt"] = 1589727609,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 1417744,
+					},
+				},
 				["Player-11-0BC4C7B7"] = {
+					[51621] = {
+						["expireAt"] = 1589266857,
+						["rewardAmount"] = 170,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[51434] = {
+						["expireAt"] = 1589252457,
+						["rewardAmount"] = "|cff2292FF410",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Pants_08",
+					},
+					[51377] = {
+						["expireAt"] = 1589468488,
+						["rewardAmount"] = 450,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[44892] = {
+						["expireAt"] = 1589209300,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 1417744,
+					},
+					[50564] = {
+						["expireAt"] = 1589209248,
+						["rewardAmount"] = 251,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[51637] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = 187,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[51891] = {
+						["expireAt"] = 1589252457,
+						["rewardAmount"] = 176,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[55301] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = 198,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[57333] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = 330,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[55890] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = 594,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[42788] = {
+						["expireAt"] = 1589295621,
+						["rewardAmount"] = "|cffc557FF182",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
+					},
+					[52872] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = "|cff2292FF415",
+						["rewardTexture"] = 2201832,
+					},
+					[51116] = {
+						["expireAt"] = 1589252428,
+						["rewardAmount"] = 237,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[52126] = {
+						["expireAt"] = 1589252457,
+						["rewardAmount"] = "16",
+						["rewardTexture"] = 2004597,
+					},
+					[56036] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = 448,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[50496] = {
+						["expireAt"] = 1589252448,
+						["rewardAmount"] = "|cff2292FF420",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Jewelry_Ring_22",
+					},
+					[53963] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = "",
+						["rewardTexture"] = 237368,
+					},
+					[56056] = {
+						["expireAt"] = 1589295664,
+						["rewardAmount"] = 750,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[52278] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = "12",
+						["rewardTexture"] = 2004597,
+					},
+					[52803] = {
+						["expireAt"] = 1589209308,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 667492,
+					},
+					[51654] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = 177,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[52892] = {
+						["expireAt"] = 1589252488,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 667492,
+					},
+					[52452] = {
+						["expireAt"] = 1589252457,
+						["rewardAmount"] = 159,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[51629] = {
+						["expireAt"] = 1589209288,
+						["rewardAmount"] = 174,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[55893] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = 514,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[56389] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = "19",
+						["rewardTexture"] = 2004597,
+					},
+					[50847] = {
+						["expireAt"] = 1589252488,
+						["rewardAmount"] = "|cff2292FF415",
+						["rewardTexture"] = "Interface\\ICONS\\INV_Helmet_29",
+					},
+					[50975] = {
+						["expireAt"] = 1589209288,
+						["rewardAmount"] = "|cff2292FF415",
+						["rewardTexture"] = 2201832,
+					},
+					[57340] = {
+						["expireAt"] = 1589230864,
+						["rewardAmount"] = 393,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[52302] = {
+						["expireAt"] = 1589295688,
+						["rewardAmount"] = 450,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[52174] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = 157,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[51542] = {
+						["expireAt"] = 1589252457,
+						["rewardAmount"] = "|cff2292FF415",
+						["rewardTexture"] = 1727710,
+					},
+					[52301] = {
+						["expireAt"] = 1589209257,
+						["rewardAmount"] = 165,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
+					[56121] = {
+						["expireAt"] = 1589209264,
+						["rewardAmount"] = 434,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifact_power",
+					},
 				},
 			},
 			["player_names"] = {
-				["Player-11-0B6E9BAE"] = {
-					["class"] = "WARRIOR",
-					["name"] = "Umbrick",
-					["realm"] = "Tichondrius",
+				["Player-162-0962A55D"] = {
+					["class"] = "MONK",
+					["name"] = "Bramblebrow",
+					["realm"] = "Emerald Dream",
 				},
 				["Player-11-0B855D6F"] = {
 					["class"] = "DEMONHUNTER",
 					["name"] = "Madylad",
 					["realm"] = "Tichondrius",
 				},
+				["Player-11-0BCAEF48"] = {
+					["class"] = "PRIEST",
+					["name"] = "Sparkele",
+					["realm"] = "Tichondrius",
+				},
 				["Player-11-0BC22848"] = {
 					["class"] = "SHAMAN",
 					["name"] = "Arndoss",
-					["realm"] = "Tichondrius",
-				},
-				["Player-11-0B65575E"] = {
-					["class"] = "MONK",
-					["name"] = "Zandro",
-					["realm"] = "Tichondrius",
-				},
-				["Player-11-0B922830"] = {
-					["class"] = "ROGUE",
-					["name"] = "Andalsa",
 					["realm"] = "Tichondrius",
 				},
 				["Player-11-0B7CAAD4"] = {
@@ -194,30 +438,149 @@ WQTrackerDB = {
 					["name"] = "Sparkwizz",
 					["realm"] = "Tichondrius",
 				},
+				["Player-11-0B6E9BAE"] = {
+					["class"] = "WARRIOR",
+					["name"] = "Umbrick",
+					["realm"] = "Tichondrius",
+				},
+				["Player-11-0B65575E"] = {
+					["class"] = "MONK",
+					["name"] = "Zandro",
+					["realm"] = "Tichondrius",
+				},
+				["Player-11-0B922830"] = {
+					["class"] = "ROGUE",
+					["name"] = "Andalsa",
+					["realm"] = "Tichondrius",
+				},
 			},
 			["history"] = {
 				["quest"] = {
 					["global"] = {
-						[57353] = 1,
-						["total"] = 3,
+						[52877] = 1,
+						[50863] = 1,
+						[50867] = 1,
+						[51816] = 1,
+						[51064] = 1,
+						[50877] = 1,
+						[55358] = 1,
+						[51456] = 1,
+						["total"] = 36,
+						[51405] = 1,
+						[57331] = 1,
+						[51665] = 1,
+						[57219] = 1,
 						[53945] = 1,
-						[51034] = 1,
+						[52120] = 1,
+						[51429] = 1,
+						[57353] = 1,
+						[47720] = 1,
+						[56050] = 1,
+						[56180] = 1,
+						[50514] = 1,
+						[51776] = 1,
+						[41950] = 1,
+						[51530] = 1,
+						[41451] = 1,
+						[52169] = 1,
+						[52874] = 1,
+						[51034] = 2,
+						[57334] = 1,
+						[50459] = 1,
+						[51175] = 1,
+						[52891] = 1,
+						[52871] = 1,
+						[51644] = 1,
+						[53316] = 1,
+						[51616] = 1,
 					},
 					["character"] = {
 						["Player-11-0B65575E"] = {
-							[57353] = 1,
-							["total"] = 3,
+							["total"] = 4,
 							[53945] = 1,
+							[57353] = 1,
 							[51034] = 1,
+							[56050] = 1,
+						},
+						["Player-162-0962A55D"] = {
+							["total"] = 2,
+							[41451] = 1,
+							[41950] = 1,
+						},
+						["Player-11-0BC4C7B7"] = {
+							[50863] = 1,
+							[51665] = 1,
+							[52169] = 1,
+							[51816] = 1,
+							[52877] = 1,
+							[55358] = 1,
+							[57219] = 1,
+							[51175] = 1,
+							[50867] = 1,
+							[51456] = 1,
+							[57334] = 1,
+							[51644] = 1,
+							[51776] = 1,
+							[51429] = 1,
+							[51616] = 1,
+							[51405] = 1,
+							["total"] = 30,
+							[51530] = 1,
+							[52891] = 1,
+							[50877] = 1,
+							[51064] = 1,
+							[51034] = 1,
+							[52120] = 1,
+							[56180] = 1,
+							[47720] = 1,
+							[57331] = 1,
+							[52874] = 1,
+							[53316] = 1,
+							[50514] = 1,
+							[52871] = 1,
+							[50459] = 1,
 						},
 					},
 				},
 				["period"] = {
 					["global"] = {
+						["200506"] = {
+							["quest"] = 2,
+						},
+						["200511"] = {
+							["quest"] = 2,
+							["gold"] = 3435800,
+						},
+						["200509"] = {
+							["quest"] = 10,
+							["resource"] = 229,
+							["gold"] = 1375300,
+						},
+						["200508"] = {
+							["artifact"] = 236,
+							["quest"] = 8,
+							["resource"] = 596,
+						},
+						["200510"] = {
+							["artifact"] = 493,
+							["quest"] = 7,
+							["resource"] = 711,
+						},
 						["191201"] = {
 							["resource"] = 4,
 							["quest"] = 3,
 							["gold"] = 2203400,
+						},
+						["200507"] = {
+							["quest"] = 1,
+							["resource"] = 55,
+						},
+						["200516"] = {
+							["quest"] = 2,
+						},
+						["200503"] = {
+							["quest"] = 1,
+							["resource"] = 100,
 						},
 					},
 					["character"] = {
@@ -227,221 +590,78 @@ WQTrackerDB = {
 								["quest"] = 3,
 								["gold"] = 2203400,
 							},
+							["200503"] = {
+								["quest"] = 1,
+								["resource"] = 100,
+							},
+						},
+						["Player-162-0962A55D"] = {
+							["200516"] = {
+								["quest"] = 2,
+							},
+						},
+						["Player-11-0BC4C7B7"] = {
+							["200506"] = {
+								["quest"] = 2,
+							},
+							["200511"] = {
+								["quest"] = 2,
+								["gold"] = 3435800,
+							},
+							["200509"] = {
+								["quest"] = 10,
+								["resource"] = 229,
+								["gold"] = 1375300,
+							},
+							["200507"] = {
+								["quest"] = 1,
+								["resource"] = 55,
+							},
+							["200508"] = {
+								["artifact"] = 236,
+								["quest"] = 8,
+								["resource"] = 596,
+							},
+							["200510"] = {
+								["artifact"] = 493,
+								["quest"] = 7,
+								["resource"] = 711,
+							},
 						},
 					},
 				},
 				["reward"] = {
 					["global"] = {
-						["resource"] = 4,
-						["gold"] = 2203400,
+						["artifact"] = 729,
+						["resource"] = 1695,
+						["gold"] = 7014500,
 					},
 					["character"] = {
 						["Player-11-0B65575E"] = {
-							["resource"] = 4,
+							["resource"] = 104,
 							["gold"] = 2203400,
+						},
+						["Player-162-0962A55D"] = {
+						},
+						["Player-11-0BC4C7B7"] = {
+							["artifact"] = 729,
+							["resource"] = 1591,
+							["gold"] = 4811100,
 						},
 					},
 				},
 			},
 			["rarescan"] = {
-				["recently_spotted"] = {
-					[143559] = {
-						1588532771, -- [1]
-						942, -- [2]
-						0.5624992847442627, -- [3]
-						0.2602953314781189, -- [4]
-						"Creature-0-3019-1643-626-143559-0000285503", -- [5]
-						"Grand Marshal Tremblade", -- [6]
-						"Jjip", -- [7]
-						1588532770, -- [8]
-					},
-					[151933] = {
-						1588531547, -- [1]
-						1462, -- [2]
-						0.6208006739616394, -- [3]
-						0.5225047469139099, -- [4]
-						"Creature-0-0000-0000-00000-151933-0000000000", -- [5]
-						"Malfunctioning Beastbot", -- [6]
-						"Hexebus", -- [7]
-						1588531546, -- [8]
-					},
-					[127291] = {
-						1588532845, -- [1]
-						885, -- [2]
-						0.5815438032150269, -- [3]
-						0.2178208827972412, -- [4]
-						"Creature-0-0000-0000-00000-127291-0000000000", -- [5]
-						"Watcher Aival", -- [6]
-						"Griznek", -- [7]
-						1588532844, -- [8]
-					},
-					[152414] = {
-						1588532388, -- [1]
-						1355, -- [2]
-						0.7029745578765869, -- [3]
-						0.3679415583610535, -- [4]
-						"Creature-0-0000-0000-00000-152414-0000000000", -- [5]
-						"Elder Unu", -- [6]
-						"Riylah", -- [7]
-						1588532387, -- [8]
-					},
-					[153658] = {
-						1588530476, -- [1]
-						1355, -- [2]
-						0.4086604714393616, -- [3]
-						0.1655405163764954, -- [4]
-						"Creature-0-0000-0000-00000-153658-0000000000", -- [5]
-						"Shiz'narasz the Consumer", -- [6]
-						"Bunnie", -- [7]
-						1588530475, -- [8]
-					},
-					[154968] = {
-						1588530758, -- [1]
-						1462, -- [2]
-						0.5483464002609253, -- [3]
-						0.4391881823539734, -- [4]
-						"Creature-0-3886-1643-2066-154968-00002F067F", -- [5]
-						"Armored Vaultbot", -- [6]
-						"Booster", -- [7]
-						1588530757, -- [8]
-					},
-					[151934] = {
-						1588531809, -- [1]
-						1462, -- [2]
-						0.6050236225128174, -- [3]
-						0.4621840715408325, -- [4]
-						"Creature-0-0000-0000-00000-151934-0000000000", -- [5]
-						"Arachnoid Harvester", -- [6]
-						"Hexebus", -- [7]
-						1588531808, -- [8]
-					},
-					[151202] = {
-						1588531662, -- [1]
-						1462, -- [2]
-						0.5896718502044678, -- [3]
-						0.4221771359443665, -- [4]
-						"Creature-0-4221-1643-10504-151202-00002EFE5D", -- [5]
-						"Foul Manifestation", -- [6]
-						"Karid", -- [7]
-						1588531661, -- [8]
-					},
-					[122911] = {
-						1588533788, -- [1]
-						830, -- [2]
-						0.4022663235664368, -- [3]
-						0.6386499404907227, -- [4]
-						"Creature-0-0000-0000-00000-122911-0000000000", -- [5]
-						"Commander Vecaya", -- [6]
-						"Sparkwizz", -- [7]
-						1588533787, -- [8]
-					},
-					[124775] = {
-						1588533788, -- [1]
-						830, -- [2]
-						0.4022663235664368, -- [3]
-						0.6386499404907227, -- [4]
-						"Creature-0-0000-0000-00000-124775-0000000000", -- [5]
-						"Commander Endaxis", -- [6]
-						"Sparkwizz", -- [7]
-						1588533787, -- [8]
-					},
-					[152555] = {
-						1588532229, -- [1]
-						1355, -- [2]
-						0.4923942685127258, -- [3]
-						0.6793609857559204, -- [4]
-						"Creature-0-0000-0000-00000-152555-0000000000", -- [5]
-						"Primogénito Nalaada", -- [6]
-						"Leogeiros", -- [7]
-						1588532228, -- [8]
-					},
-					[126864] = {
-						1588532682, -- [1]
-						882, -- [2]
-						0.4177196025848389, -- [3]
-						0.1572056412696838, -- [4]
-						"Creature-0-3780-1669-55-126864-00002F1529", -- [5]
-						"Feasel the Muffin Thief", -- [6]
-						"Senrei", -- [7]
-						1588532681, -- [8]
-					},
-					[127300] = {
-						1588532534, -- [1]
-						885, -- [2]
-						0.621150016784668, -- [3]
-						0.2320147752761841, -- [4]
-						"Creature-0-0000-0000-00000-127300-0000000000", -- [5]
-						"Void Warden Valsuran", -- [6]
-						"Griznek", -- [7]
-						1588532533, -- [8]
-					},
-					[120393] = {
-						1588532840, -- [1]
-						830, -- [2]
-						0.5441714525222778, -- [3]
-						0.6852641105651855, -- [4]
-						"Creature-0-0000-0000-00000-120393-0000000000", -- [5]
-						"Siegemaster Voraan", -- [6]
-						"Sparkwizz", -- [7]
-						1588532839, -- [8]
-					},
-					[125820] = {
-						1588531049, -- [1]
-						896, -- [2]
-						0.5561431646347046, -- [3]
-						0.5399759411811829, -- [4]
-						"Creature-0-0000-0000-00000-125820-0000000000", -- [5]
-						"", -- [6]
-						"Tharelline", -- [7]
-						1588531048, -- [8]
-					},
-					[155836] = {
-						1588531960, -- [1]
-						1355, -- [2]
-						0.4861921668052673, -- [3]
-						0.673245906829834, -- [4]
-						"Creature-0-3024-1718-931-155836-00002F126F", -- [5]
-						"Theurgist Nitara", -- [6]
-						"Yalii", -- [7]
-						1588531959, -- [8]
-					},
-					[143560] = {
-						1588532694, -- [1]
-						942, -- [2]
-						0.5631513595581055, -- [3]
-						0.2589355707168579, -- [4]
-						"Creature-0-3019-1643-626-143560-0000285503", -- [5]
-						"Marshal Gabriel", -- [6]
-						"Jjip", -- [7]
-						1588532693, -- [8]
-					},
-					[155841] = {
-						1588531891, -- [1]
-						1355, -- [2]
-						0.734710693359375, -- [3]
-						0.3148146271705627, -- [4]
-						"Creature-0-3782-1718-1198-155841-00002F126F", -- [5]
-						"Shadowbinder Athissa", -- [6]
-						"Cerrion", -- [7]
-						1588531890, -- [8]
-					},
-					[123464] = {
-						1588531772, -- [1]
-						830, -- [2]
-						0.5235229134559631, -- [3]
-						0.3145841360092163, -- [4]
-						"Creature-0-3135-1669-40-123464-00002F11FE", -- [5]
-						"Sister Subversia", -- [6]
-						"Griznek", -- [7]
-						1588531771, -- [8]
-					},
-				},
 				["recently_killed"] = {
+					["Player-11-0B6E9BAE"] = {
+					},
+					["Player-11-0BCAEF48"] = {
+					},
 					["Player-11-0B65575E"] = {
 					},
 					["Player-11-0B922830"] = {
 					},
-					["Player-11-0B6E9BAE"] = {
+					["Player-162-0962A55D"] = {
 					},
 					["Player-11-0BC4C7B7"] = {
 					},
@@ -452,6 +672,7 @@ WQTrackerDB = {
 					["Vrax'thul"] = 126199,
 					["Shiz'narasz the Consumer"] = 153658,
 					["Imp Mother Laglath"] = 125820,
+					["Ocean Recluse"] = 134797,
 					["Ishak of the Four Winds"] = 157134,
 					["Commander Minzera"] = 155811,
 					["Burning Goliath"] = 141615,
@@ -459,13 +680,16 @@ WQTrackerDB = {
 					["Watcher Aival"] = 127291,
 					["Sabuul"] = 126898,
 					["Elderspawn Nalaada"] = 152555,
+					["指揮官敏澤菈"] = 155811,
 					["Vigilant Thanos"] = 126865,
 					["Puscilla"] = 126040,
 					["Worldsplitter Skuul"] = 127118,
 					["Crystalline Giant"] = 132879,
+					["Golias Trovejante"] = 141616,
 					["Gar'zoth"] = 122999,
 					["Overseer Y'Beda"] = 124440,
 					["Vigia Aival"] = 127291,
+					["Stone-Lord Qinsho"] = 139472,
 					["Malfunctioning Beastbot"] = 151933,
 					["指揮官泰克斯拉茲"] = 127084,
 					["Skullripper"] = 142437,
@@ -479,13 +703,17 @@ WQTrackerDB = {
 					["Jed'hin Champion Vorusk"] = 126899,
 					["Admiral Rel'var"] = 127090,
 					["Boggac Skullbash"] = 151308,
+					["Cresting Goliath"] = 141618,
+					["Ssinkrix"] = 132580,
 					["Baruut the Bloodthirsty"] = 126862,
 					["Vagath the Betrayed"] = 125388,
 					["Molok the Crusher"] = 141942,
+					["Island Ettin"] = 132913,
 					["Shadowcaster Voruun"] = 122838,
 					["Commander Endaxis"] = 124775,
 					["Guardian Tannin"] = 152736,
 					["Feasel the Muffin Thief"] = 126864,
+					["Escudo de Sangue Motega"] = 145286,
 					["Ven'orn"] = 126115,
 					["Foul Manifestation"] = 151202,
 					["Guuru the Mountain-Breaker"] = 140768,
@@ -509,6 +737,7 @@ WQTrackerDB = {
 					["아주레토스"] = 136385,
 					["Vigilant Kuro"] = 126866,
 					["Incantatrix Vazina"] = 155838,
+					["Gemshard Colossus"] = 140777,
 					["Plaguefeather"] = 142435,
 					["Príncipe Typhonus"] = 152681,
 					["Wrangler Kravos"] = 126852,
@@ -523,69 +752,78 @@ WQTrackerDB = {
 					["Thundering Goliath"] = 141616,
 					["Ivan the Mad"] = 145934,
 					["污秽具象"] = 151202,
+					["Roboarcón acorazado"] = 154968,
+					["Страж Таннин"] = 152736,
 					["Sorolis the Ill-Fated"] = 126889,
 					["Príncipe Tifonus"] = 152681,
+					["蜘蛛收割者"] = 154342,
 					["Grã-marechal Tremulâmina"] = 143559,
 					["Varga"] = 126208,
 					["Elder Unu"] = 152414,
 					["Yogursa"] = 142440,
+					["Old Longtooth"] = 140438,
 					["Turek the Lucid"] = 126868,
+					["Will of N'Zoth"] = 154495,
 					["Sobrestante Krix"] = 142423,
+					["Khazaduum"] = 125824,
 					["『背叛者』瓦卡斯"] = 125388,
+					["Scale Matriarch Zodia"] = 152542,
+					["Manifestación inmunda"] = 151202,
+					["Merger Specialist Huzzle"] = 139814,
 					["憤怒領主亞瑞茲"] = 126338,
-					["Houndmaster Kerrax"] = 127288,
+					["Venomtail Skyfin"] = 126867,
 					["Tar Spitter"] = 125479,
 					["Ragebeak"] = 142436,
-					["Khazaduum"] = 125824,
 					["泰丰努斯亲王"] = 152681,
 					[""] = 125820,
+					["Marshal Gabriel"] = 143560,
 					["Commander Vecaya"] = 122911,
 					["Obsidian Overlord"] = 138479,
 					["Shiz'narasz el consumidor"] = 153658,
 					["Mariscal Gabriel"] = 143560,
-					["Venomtail Skyfin"] = 126867,
-					["Marshal Gabriel"] = 143560,
 					["Kaara the Pale"] = 126860,
-					["Sister Subversia"] = 123464,
-					["Warlord Zalzjar"] = 155840,
 					["Grand Master Ulrich"] = 146850,
 					["엄브라진"] = 122004,
+					["Sister Subversia"] = 123464,
+					["Warlord Zalzjar"] = 155840,
 					["Matriarca de escamas Gratinax"] = 152548,
+					["Wekemara"] = 152671,
+					["燃烧巨怪"] = 141615,
 					["Mechagonian Nullifier"] = 151124,
 					["賈伯里元帥"] = 143560,
 					["Overseer Y'Morna"] = 125498,
 					["All-Seer Xanarian"] = 127096,
-					["Wekemara"] = 152671,
+					["Bestiabot descompuesta"] = 151933,
 					["Herald of Chaos"] = 126896,
 					["撒卡爾中尉"] = 126254,
-					["燃烧巨怪"] = 141615,
+					["Naroua"] = 126419,
 					["Ataxon"] = 126887,
 					["Zul'tan the Numerous"] = 126908,
 					["Rumbling Goliath"] = 141620,
-					["Soultwisted Monstrosity"] = 126815,
-					["Naroua"] = 126419,
 					["Лейтенант Закаар"] = 126254,
 					["Chief Alchemist Munculus"] = 127376,
 					["골라칸"] = 124185,
 					["Ta'kil the Resonator"] = 138842,
-					["Umbra'jin"] = 122004,
+					["Soultwisted Monstrosity"] = 126815,
 					["Inquisitor Vethroz"] = 126946,
-					["Bestiabot descompuesta"] = 151933,
-					["Arachnoid Harvester"] = 151934,
+					["Umbra'jin"] = 122004,
+					["Arachnoid Harvester"] = 154342,
 					["Golrakahn"] = 124185,
 					["崔布雷德總元帥"] = 143559,
 					["Instructor Tarahna"] = 126900,
 					["Chasm-Hunter"] = 124582,
+					["Theurgist Nitara"] = 155836,
 					["Nalaada, a Cria dos Antigos"] = 152555,
 					["Venomarus"] = 142438,
 					["Tereck the Selector"] = 124804,
-					["Comandante Minzera"] = 155811,
-					["Theurgist Nitara"] = 155836,
 					["乌布拉金"] = 122004,
+					["Comandante Minzera"] = 155811,
+					["Houndmaster Kerrax"] = 127288,
+					["Oronu"] = 152397,
 					["Bichômato Defeituoso"] = 151933,
 					["失控的机械兽"] = 151933,
-					["Oronu"] = 152397,
-					["Merger Specialist Huzzle"] = 139814,
+					["Picofuria"] = 142436,
+					["背弃者瓦加斯"] = 125388,
 				},
 			},
 			["TutorialTaxyMap"] = true,

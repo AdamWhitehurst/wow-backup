@@ -1,21 +1,26 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
-		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Sparkele - Tichondrius"] = "Sparkele - Tichondrius",
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
 		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
+		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Nullaaru - Tichondrius"] = "Nullaaru - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Nilaaru - Tichondrius"] = "Nilaaru - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Wilowisp - Tichondrius"] = "Wilowisp - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["profiles"] = {
-		["Magnr - Tichondrius"] = {
+		["Sparkele - Tichondrius"] = {
 		},
 		["Andalsam - Tichondrius"] = {
 			["enabled"] = false,
@@ -25,18 +30,28 @@ HandyNotesDB = {
 		},
 		["Umbrick - Emerald Dream"] = {
 		},
-		["Bramblebrow - Emerald Dream"] = {
-		},
-		["Stoakt - Tichondrius"] = {
-		},
-		["Andallsa - Tichondrius"] = {
-		},
 		["Andalsa - Tichondrius"] = {
 			["enabled"] = false,
 		},
 		["Mcpokesalot - Tichondrius"] = {
 		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Sparkwizz - Tichondrius"] = {
+		},
+		["Magnr - Tichondrius"] = {
+		},
+		["Nullaaru - Tichondrius"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Nilaaru - Tichondrius"] = {
+		},
 		["Brungar - Tichondrius"] = {
+		},
+		["Wilowisp - Tichondrius"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
 		},
 		["Madylad - Tichondrius"] = {
 		},
@@ -47,21 +62,26 @@ HandyNotesDB = {
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
-		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Sparkele - Tichondrius"] = "Sparkele - Tichondrius",
 		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
 		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Umbrick - Emerald Dream"] = "Umbrick - Emerald Dream",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
 		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
 		["Mcpokesalot - Tichondrius"] = "Mcpokesalot - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
+		["Magnr - Tichondrius"] = "Magnr - Tichondrius",
+		["Nullaaru - Tichondrius"] = "Nullaaru - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Nilaaru - Tichondrius"] = "Nilaaru - Tichondrius",
 		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Wilowisp - Tichondrius"] = "Wilowisp - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 	},
 	["profiles"] = {
-		["Magnr - Tichondrius"] = {
+		["Sparkele - Tichondrius"] = {
 		},
 		["Andalsam - Tichondrius"] = {
 		},
@@ -69,17 +89,27 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Umbrick - Emerald Dream"] = {
 		},
-		["Bramblebrow - Emerald Dream"] = {
-		},
-		["Stoakt - Tichondrius"] = {
-		},
-		["Andallsa - Tichondrius"] = {
-		},
 		["Andalsa - Tichondrius"] = {
 		},
 		["Mcpokesalot - Tichondrius"] = {
 		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Sparkwizz - Tichondrius"] = {
+		},
+		["Magnr - Tichondrius"] = {
+		},
+		["Nullaaru - Tichondrius"] = {
+		},
+		["Stoakt - Tichondrius"] = {
+		},
+		["Nilaaru - Tichondrius"] = {
+		},
 		["Brungar - Tichondrius"] = {
+		},
+		["Wilowisp - Tichondrius"] = {
+		},
+		["Bramblebrow - Emerald Dream"] = {
 		},
 		["Madylad - Tichondrius"] = {
 		},

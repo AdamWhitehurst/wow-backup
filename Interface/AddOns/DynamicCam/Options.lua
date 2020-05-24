@@ -1,30 +1,30 @@
 ---------------
 -- LIBRARIES --
 ---------------
-local LibCamera = LibStub("LibCamera-1.0");
+local LibCamera = LibStub("LibCamera-1.0")
 
 -------------
 -- GLOBALS --
 -------------
-assert(DynamicCam);
-DynamicCam.Options = DynamicCam:NewModule("Options", "AceEvent-3.0");
+assert(DynamicCam)
+DynamicCam.Options = DynamicCam:NewModule("Options", "AceEvent-3.0")
 
 
 ------------
 -- LOCALS --
 ------------
-local Options = DynamicCam.Options;
-local parent = DynamicCam;
-local _;
-local S, SID;
-local copiedSituationID;
-local exportName, exportAuthor;
+local Options = DynamicCam.Options
+local parent = DynamicCam
+local _
+local S, SID
+local copiedSituationID
+local exportName, exportAuthor
 
-local welcomeMessage = [[Hello and welcome to the beta of DynamicCam! I'm glad that you're here and I hope that you have fun with the addon.
+local welcomeMessage = [[Hello and welcome to DynamicCam!
 
-If you find an problem or want to make a suggestion, please, please leave a note in the Curse comments or PM me on reddit (I'm /u/mpstark).
+We're glad that you're here and we hope that you have fun with the addon.
 
-I've actually managed to stick this up on GitHub, so please, if you'd like to contribute, open a pull request there.
+If you find an problem or want to make a suggestion, please, please leave a note in the Curse comments or use the Issues on GitHub. If you'd like to contribute, also feel free to open a pull request there.
 
 Some handy slash commands:
     `/dynamiccam` or `/dc` will open this menu
@@ -38,92 +38,91 @@ Some handy slash commands:
 
         Example:
             `/zoom 5 5 InOutQuint` will zoom to 5 over 5 seconds using InOutQuint as the easing function.
-    ]];
-local knownIssues = [[- The new LibCamera zoom can sometimes zoom you all the way in, report if you find a repeatable spot
-    - Places that I think I've fixed: after loading screens/after taxi's
-- Fit nameplates is still using the old camera code
-- Boss vs. Trash combat detection can be a little wonky]];
-local changelog = {
-[[Beta 4:
-    - Now powered by LibCamera-1.0, a library that I'm developing in conjuction with DynamicCam
-        - Rotation actions can now also pitch the camera up and down
-        - Zoom, Yaw, and Pitch are done frame-by-frame using easing (smoothing) formulas
-        - Uses industry standard easing formulas -- LibEasing-1.0 is a port of a Lua implementation
-        - No manipulation of CVars needed to 'trick' WoW's camera engine
-        - Accuracy of rotation actions far improved from previous implementation
+    ]]
+-- local knownIssues =[[- ...
+-- - ...
+-- - ...]]
+-- local changelog = {
+-- [[Beta 4:
+    -- - Now powered by LibCamera-1.0, a library that I'm developing in conjuction with DynamicCam
+        -- - Rotation actions can now also pitch the camera up and down
+        -- - Zoom, Yaw, and Pitch are done frame-by-frame using easing (smoothing) formulas
+        -- - Uses industry standard easing formulas -- LibEasing-1.0 is a port of a Lua implementation
+        -- - No manipulation of CVars needed to 'trick' WoW's camera engine
+        -- - Accuracy of rotation actions far improved from previous implementation
 
-    - Settings sharing using clipboard-friendly strings
-        - Very much like WeakAura's export string option
-        - Export/Import a single situation or your entire profile
+    -- - Settings sharing using clipboard-friendly strings
+        -- - Very much like WeakAura's export string option
+        -- - Export/Import a single situation or your entire profile
 
-    - Create new custom situations (Advanced)
-        - Some (in-game) Lua scripting needed
-        - Fully sharable using the new settings sharing system
+    -- - Create new custom situations (Advanced)
+        -- - Some (in-game) Lua scripting needed
+        -- - Fully sharable using the new settings sharing system
 
-    - Fade UI replaces Hide UI
-        - UI fades out, and hides when it's done fading (hiding can be disabled)
-        - Fading can occur in combat, and looks nicer
-        - Hiding the UI is now securely done, and the UI is safely unhidden in combat
-        - Hitting escape will show the UI if it is hidden in this manner
-        - Can fade to a non-zero opacity (but obviously won't hide the UI then)
+    -- - Fade UI replaces Hide UI
+        -- - UI fades out, and hides when it's done fading (hiding can be disabled)
+        -- - Fading can occur in combat, and looks nicer
+        -- - Hiding the UI is now securely done, and the UI is safely unhidden in combat
+        -- - Hitting escape will show the UI if it is hidden in this manner
+        -- - Can fade to a non-zero opacity (but obviously won't hide the UI then)
 
-    - Minor Changes/Fixes:
-        - Easily copy/paste settings from one situation to another
-        - Changes to the default conditions and new situations will now be automatically applied to profiles
-        - Rotation actions that rotate back are far improved
-        - Some database optimizations, lowered memory overhead a bit
-        - Situations with a delay should now work better in certain circumstances (thanks Tydfall!)
-        - Don't redundantly call SetCVar a lot
-]],
-[[Beta 3:
-    - Forced database reset, there was just too much change on Blizzard's end.
-    - Update to 7.1 changes to CVars and the return of ActionCam!
-        - ActionCam features are DISABLED by default. Enable them in the options.
-    - Defaults have been updated a bit.
-    - Added "Reactive Zoom" option, which speeds up manual zooming when going quickly
-        - Keep in mind that Blizzard adjusted the default zoom speed to 20 for everyone
-        - There are several advanced options, toggle Advanced Mode to see them
-        - This option is off by default
-    - Some code cleanup
-    - Stay tuned for further updates!
-]],
-[[Beta 2:
-    - New `/zoom #` slash command that will set the zoom level to that value
-    - Adjust Nameplate feature replaced by 'Toggle Nameplates' feature in "Zoom Fit Nameplates"
-        - This should show the nameplate only when it is being used
-    - A whole slew of advanced options has been added
-        - Can now execute custom scripts on situation Enter/Exit and Initialization
-            - Some of the defaults now use these and many of them have been cleaned up for readiblity
-        - You can now change the events that trigger a check of situations
-    - Several tweaks to the options panel
-        - Set View is an advanced mode option, as it's, well, for people that know what they're doing
-        - Many advanced options are now applied when the settings are applied
-        - Many tooltips have been changed to better reflect what things do
-    - Defaults:
-        - Added a updated defaults dialog that pops up on load if the defaults have been updated
-        - Added Fishing, Arena, and Battleground default situations
-        - Add several things to the Hearth/Teleport default situation like Innkeeper's Daughter, Admiral's Compass
-        - Hearth/Teleport situation now uses the cast time of the spell as the transitionTime
-            - this is just the start of what can be done with the advanced scripts
-    - Lots of little bugs squashed]],
-[[Beta 1:
-    - FORCED DATABASE RESET!
-    - Event-based checking instead of polling -- large performance gain!
-    - Removed frame hiding functionality, but hiding entire UI still supported
-        - out-of-scope -- this is a camera addon
-        - problems regarding UI taint didn't help
-    - Changes to the current situation (right now only camera settings) will be applied instantly
-    - Changes to the camera settings will be applied instantly
-    - Nameplate fit has a new option; Entry Zoom as Min, which will basically make fit not zoom in
-    - Nameplate fit is more consistant and has a reduced delay (from 250ms instead of 500ms)
-    - Defaults:
-        - mounted situations now consolidated into a single situation
-        - Hearth/Teleport now tracks mage teleports (not portals) and Death Gate and Skyhold Jump
-    - Fixed some bugs:
-        - zoom restoration not working because of rounding issues or because of other zoom
-        - a situation's zoom wouldn't actually be applied if a zoom was already occuring
-        - nameplate settings should no longer cause taint]],
-};
+    -- - Minor Changes/Fixes:
+        -- - Easily copy/paste settings from one situation to another
+        -- - Changes to the default conditions and new situations will now be automatically applied to profiles
+        -- - Rotation actions that rotate back are far improved
+        -- - Some database optimizations, lowered memory overhead a bit
+        -- - Situations with a delay should now work better in certain circumstances (thanks Tydfall!)
+        -- - Don't redundantly call SetCVar a lot
+-- ]],
+-- [[Beta 3:
+    -- - Forced database reset, there was just too much change on Blizzard's end.
+    -- - Update to 7.1 changes to CVars and the return of ActionCam!
+        -- - ActionCam features are DISABLED by default. Enable them in the options.
+    -- - Defaults have been updated a bit.
+    -- - Added "Reactive Zoom" option, which speeds up manual zooming when going quickly
+        -- - Keep in mind that Blizzard adjusted the default zoom speed to 20 for everyone
+        -- - There are several advanced options, toggle Advanced Mode to see them
+        -- - This option is off by default
+    -- - Some code cleanup
+    -- - Stay tuned for further updates!
+-- ]],
+-- [[Beta 2:
+    -- - New `/zoom #` slash command that will set the zoom level to that value
+    -- - Adjust Nameplate feature replaced by 'Toggle Nameplates' feature in "Zoom Fit Nameplates"
+        -- - This should show the nameplate only when it is being used
+    -- - A whole slew of advanced options has been added
+        -- - Can now execute custom scripts on situation Enter/Exit and Initialization
+            -- - Some of the defaults now use these and many of them have been cleaned up for readiblity
+        -- - You can now change the events that trigger a check of situations
+    -- - Several tweaks to the options panel
+        -- - Set View is an advanced mode option, as it's, well, for people that know what they're doing
+        -- - Many advanced options are now applied when the settings are applied
+        -- - Many tooltips have been changed to better reflect what things do
+    -- - Defaults:
+        -- - Added a updated defaults dialog that pops up on load if the defaults have been updated
+        -- - Added Fishing, Arena, and Battleground default situations
+        -- - Add several things to the Hearth/Teleport default situation like Innkeeper's Daughter, Admiral's Compass
+        -- - Hearth/Teleport situation now uses the cast time of the spell as the transitionTime
+            -- - this is just the start of what can be done with the advanced scripts
+    -- - Lots of little bugs squashed]],
+-- [[Beta 1:
+    -- - FORCED DATABASE RESET!
+    -- - Event-based checking instead of polling -- large performance gain!
+    -- - Removed frame hiding functionality, but hiding entire UI still supported
+        -- - out-of-scope -- this is a camera addon
+        -- - problems regarding UI taint didn't help
+    -- - Changes to the current situation (right now only camera settings) will be applied instantly
+    -- - Changes to the camera settings will be applied instantly
+    -- - Nameplate fit has a new option; Entry Zoom as Min, which will basically make fit not zoom in
+    -- - Nameplate fit is more consistant and has a reduced delay (from 250ms instead of 500ms)
+    -- - Defaults:
+        -- - mounted situations now consolidated into a single situation
+        -- - Hearth/Teleport now tracks mage teleports (not portals) and Death Gate and Skyhold Jump
+    -- - Fixed some bugs:
+        -- - zoom restoration not working because of rounding issues or because of other zoom
+        -- - a situation's zoom wouldn't actually be applied if a zoom was already occuring
+        -- - nameplate settings should no longer cause taint]],
+-- }
 
 local easingValues = {
     Linear = "Linear",
@@ -155,7 +154,7 @@ local easingValues = {
     OutCirc = "Out Circular",
     InOutCirc = "In/Out Circular",
     OutInCirc = "Out/In Circular",
-};
+}
 
 local general = {
     name = "DynamicCam",
@@ -173,7 +172,7 @@ local general = {
                     name = "Enable",
                     desc = "If the addon is enabled.",
                     get = "IsEnabled",
-                    set = function(_, newValue) if (not newValue) then DynamicCam:Disable(); else DynamicCam:Enable(); end end,
+                    set = function(_, newValue) if not newValue then DynamicCam:Disable(); else DynamicCam:Enable(); end end,
                     order = 1,
                     width = "half",
                 },
@@ -222,38 +221,38 @@ local general = {
                 },
             }
         },
-        knownIssuesGroup = {
-            type = 'group',
-            name = "Known Issues",
-            order = 5.5,
-            inline = true,
-            args = {
-                issues = {
-                    type = 'description',
-                    name = knownIssues,
-                    fontSize = "small",
-                    width = "full",
-                    order = 1,
-                },
-            }
-        },
-        changeLogGroup = {
-            type = 'group',
-            name = "Version Info",
-            order = 6,
-            inline = true,
-            args = {
-                changelog = {
-                    type = 'description',
-                    name = function() local l="" for k,v in ipairs(changelog) do l=l..v.."\n\n" end return l end,
-                    fontSize = "small",
-                    width = "full",
-                    order = 1,
-                },
-            }
-        },
+        -- knownIssuesGroup = {
+            -- type = 'group',
+            -- name = "Known Issues",
+            -- order = 5.5,
+            -- inline = true,
+            -- args = {
+                -- issues = {
+                    -- type = 'description',
+                    -- name = knownIssues,
+                    -- fontSize = "small",
+                    -- width = "full",
+                    -- order = 1,
+                -- },
+            -- }
+        -- },
+        -- changeLogGroup = {
+            -- type = 'group',
+            -- name = "Version Info",
+            -- order = 6,
+            -- inline = true,
+            -- args = {
+                -- changelog = {
+                    -- type = 'description',
+                    -- name = function() local l="" for k,v in ipairs(changelog) do l=l..v.."\n\n" end return l end,
+                    -- fontSize = "small",
+                    -- width = "full",
+                    -- order = 1,
+                -- },
+            -- }
+        -- },
     },
-};
+}
 local settings = {
     name = "Settings",
     handler = DynamicCam,
@@ -271,13 +270,13 @@ local settings = {
                     desc = "Speed up zoom when manually zooming in quickly.",
                     get = function() return (DynamicCam.db.profile.reactiveZoom.enabled) end,
                     set = function(_, newValue)
-                        DynamicCam.db.profile.reactiveZoom.enabled = newValue;
+                        DynamicCam.db.profile.reactiveZoom.enabled = newValue
 
                         -- actually turn it on
-                        if (newValue) then
-                            DynamicCam:ReactiveZoomOn();
+                        if newValue then
+                            DynamicCam:ReactiveZoomOn()
                         else
-                            DynamicCam:ReactiveZoomOff();
+                            DynamicCam:ReactiveZoomOff()
                         end
                     end,
                     order = 1,
@@ -406,7 +405,7 @@ local settings = {
                     desc = "The camera will adjust the camera's pitch (the angle at which the camera looks at your character in the up/down direction) according to the current zoom level.\n\nAngles the camera up while farther away from the character and down coming towards your character.",
                     hidden = function() return (not DynamicCam.db.profile.actionCam) end,
                     get = function() return (DynamicCam.db.profile.defaultCvars["test_cameraDynamicPitch"] == 1) end,
-                    set = function(_, newValue) if (newValue) then DynamicCam.db.profile.defaultCvars["test_cameraDynamicPitch"] = 1; else DynamicCam.db.profile.defaultCvars["test_cameraDynamicPitch"] = 0; end Options:SendMessage("DC_BASE_CAMERA_UPDATED"); end,
+                    set = function(_, newValue) if newValue then DynamicCam.db.profile.defaultCvars["test_cameraDynamicPitch"] = 1; else DynamicCam.db.profile.defaultCvars["test_cameraDynamicPitch"] = 0; end Options:SendMessage("DC_BASE_CAMERA_UPDATED"); end,
                     order = .25,
                 },
                 cameraDistanceMaxFactor = {
@@ -473,13 +472,13 @@ local settings = {
                             get = function()
                                 return (DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyEnable"] == 1) end,
                             set = function(_, newValue)
-                                if (newValue) then
-                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyEnable"] = 1;
+                                if newValue then
+                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyEnable"] = 1
                                 else
-                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyEnable"] = 0;
+                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyEnable"] = 0
                                 end
 
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             order = 1,
                         },
@@ -500,8 +499,8 @@ local settings = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusEnemyStrengthPitch")))
                             end,
                             set = function(_, newValue)
-                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyStrengthPitch"] = newValue;
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyStrengthPitch"] = newValue
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             width = "full",
                             order = 2,
@@ -523,8 +522,8 @@ local settings = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusEnemyStrengthYaw")))
                             end,
                             set = function(_, newValue)
-                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyStrengthYaw"] = newValue;
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusEnemyStrengthYaw"] = newValue
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             width = "full",
                             order = 3,
@@ -537,13 +536,13 @@ local settings = {
                             get = function()
                                 return (DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractEnable"] == 1) end,
                             set = function(_, newValue)
-                                if (newValue) then
-                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractEnable"] = 1;
+                                if newValue then
+                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractEnable"] = 1
                                 else
-                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractEnable"] = 0;
+                                    DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractEnable"] = 0
                                 end
 
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             order = 11,
                         },
@@ -564,8 +563,8 @@ local settings = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusInteractStrengthPitch")))
                             end,
                             set = function(_, newValue)
-                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractStrengthPitch"] = newValue;
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractStrengthPitch"] = newValue
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             width = "full",
                             order = 12,
@@ -587,8 +586,8 @@ local settings = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusInteractStrengthYaw")))
                             end,
                             set = function(_, newValue)
-                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractStrengthYaw"] = newValue;
-                                Options:SendMessage("DC_BASE_CAMERA_UPDATED");
+                                DynamicCam.db.profile.defaultCvars["test_cameraTargetFocusInteractStrengthYaw"] = newValue
+                                Options:SendMessage("DC_BASE_CAMERA_UPDATED")
                             end,
                             width = "full",
                             order = 13,
@@ -638,7 +637,9 @@ local settings = {
                         smartPivotCutoffDist = {
                             type = 'range',
                             name = "Smart Pivot Cutoff Distance",
-                            desc = "No idea what this actually does",
+                            -- Thanks to Jordaldo for providing this tooltip info.
+                            -- https://github.com/Mpstark/DynamicCam/issues/14
+                            desc = "Defines the distance that the camera has to be inside of for the ground collision to either bring the camera closer to the character's feet as the camera collides with the ground, or to simply pivot on the spot of camera-to-ground collision.",
                             min = 0,
                             max = 100,
                             softMin = 0,
@@ -746,7 +747,7 @@ local settings = {
             },
         },
     },
-};
+}
 local situationOptions = {
     name = "Situation Options",
     handler = DynamicCam,
@@ -777,7 +778,7 @@ local situationOptions = {
             desc = "If this situation should be checked and activated",
             hidden = function() return (not S) end,
             get = function() return S.enabled end,
-            set = function(_, newValue) S.enabled = newValue if (newValue) then Options:SendMessage("DC_SITUATION_ENABLED") else Options:SendMessage("DC_SITUATION_DISABLED") end end,
+            set = function(_, newValue) S.enabled = newValue if newValue then Options:SendMessage("DC_SITUATION_ENABLED") else Options:SendMessage("DC_SITUATION_DISABLED") end end,
             order = 2,
         },
         copy = {
@@ -830,7 +831,7 @@ local situationOptions = {
                     name = "Zoom",
                     desc = "Set a zoom level when this situation is activated",
                     get = function() return (S.cameraActions.zoomSetting ~= "off") end,
-                    set = function(_, newValue) if (newValue) then S.cameraActions.zoomSetting = "set"; else S.cameraActions.zoomSetting = "off"; end end,
+                    set = function(_, newValue) if newValue then S.cameraActions.zoomSetting = "set"; else S.cameraActions.zoomSetting = "off"; end end,
                     order = 1,
                 },
                 rotate = {
@@ -890,17 +891,17 @@ local situationOptions = {
                         zoomSetting = {
                             type = 'select',
                             name = "Zoom Setting",
-                            desc = "How the camera should react to this situation with regards to zoom. Choose between:\n\nZoom Fit Nameplate: Zoom in/out to match the target's nameplate position (which is on top of the target's model). This will do nothing if you do not have a target or the nameplate isn't shown.\n\nZoom In To: Zoom in to selected distance for this situation, will not zoom out.\n\nZoom Out To: Zoom out to selected distance for this situation, will not zoom in.\n\nZoom Range: Zoom in if past the maximum value, zoom out if past the minimum value.\n\nZoom Set To: Set the zoom to this value.",
+                            desc = "How the camera should react to this situation with regards to zoom. Choose between:\n\nZoom In To: Zoom in to selected distance for this situation, will not zoom out.\n\nZoom Out To: Zoom out to selected distance for this situation, will not zoom in.\n\nZoom Range: Zoom in if past the maximum value, zoom out if past the minimum value.\n\nZoom Set To: Set the zoom to this value.",
                             get = function() return S.cameraActions.zoomSetting end,
                             set = function(_, newValue) S.cameraActions.zoomSetting = newValue; end,
-                            values = {["fit"] = "Zoom Fit Nameplate", ["in"] = "Zoom In To", ["out"] = "Zoom Out To", ["set"] = "Zoom Set To", ["range"] = "Zoom Range"},
+                            values = {["in"] = "Zoom In To", ["out"] = "Zoom Out To", ["set"] = "Zoom Set To", ["range"] = "Zoom Range"},
                             order = 1,
                         },
                         zoomValue = {
                             type = 'range',
                             name = "Zoom Value",
                             desc = "The zoom value to set",
-                            hidden = function() return (S.cameraActions.zoomSetting == "range" or S.cameraActions.zoomSetting == "fit") end,
+                            hidden = function() return S.cameraActions.zoomSetting == "range" end,
                             min = 0,
                             max = 39,
                             step = .5,
@@ -913,7 +914,7 @@ local situationOptions = {
                             type = 'range',
                             name = "Zoom Min",
                             desc = "The min zoom value to set",
-                            hidden = function() return not (S.cameraActions.zoomSetting == "range" or S.cameraActions.zoomSetting == "fit") end,
+                            hidden = function() return S.cameraActions.zoomSetting ~= "range" end,
                             min = 0,
                             max = 39,
                             step = .5,
@@ -925,50 +926,13 @@ local situationOptions = {
                             type = 'range',
                             name = "Zoom Max",
                             desc = "The max zoom value to set",
-                            hidden = function() return not (S.cameraActions.zoomSetting == "range" or S.cameraActions.zoomSetting == "fit") end,
+                            hidden = function() return S.cameraActions.zoomSetting ~= "range" end,
                             min = 0,
                             max = 39,
                             step = .5,
                             get = function() return S.cameraActions.zoomMax end,
                             set = function(_, newValue) S.cameraActions.zoomMax = newValue; end,
                             order = 4,
-                        },
-                        fitContinously = {
-                            type = 'toggle',
-                            name = "Continuously Adjust",
-                            desc = "Keep trying to fit after initial fit. This will prevent you from adjusting zoom.",
-                            hidden = function() return not (S.cameraActions.zoomSetting == "fit") end,
-                            get = function() return S.cameraActions.zoomFitContinous end,
-                            set = function(_, newValue) S.cameraActions.zoomFitContinous = newValue end,
-                            order = 6,
-                        },
-                        curZoomAsMin = {
-                            type = 'toggle',
-                            name = "Entry Zoom As Min",
-                            desc = "Use the current zoom (going into the situation) as the minimum value instead. Will not exceed max.",
-                            hidden = function() return not (S.cameraActions.zoomSetting == "fit") end,
-                            get = function() return S.cameraActions.zoomFitUseCurAsMin end,
-                            set = function(_, newValue) S.cameraActions.zoomFitUseCurAsMin = newValue end,
-                            order = 7,
-                        },
-                        showNameplate = {
-                            type = 'toggle',
-                            name = "Toggle Nameplates",
-                            desc = "Try to toggle nameplates on and turn them off after fit is complete",
-                            hidden = function() return not (S.cameraActions.zoomSetting == "fit") end,
-                            get = function() return S.cameraActions.zoomFitToggleNameplate end,
-                            set = function(_, newValue) S.cameraActions.zoomFitToggleNameplate = newValue end,
-                            order = 8,
-                        },
-                        fitPosition = {
-                            type = 'select',
-                            name = "Closeness (Advanced)",
-                            desc = "How close should the camera fit to",
-                            hidden = function() return not ((S.cameraActions.zoomSetting == "fit") and DynamicCam.db.profile.advanced) end,
-                            get = function() return S.cameraActions.zoomFitPosition end,
-                            set = function(_, newValue) S.cameraActions.zoomFitPosition = newValue; end,
-                            values = {[60] = "Extremely Far", [70] = "Very Far", [75] = "Far", [80] = "Normal", [84] = "Close", [90] = "Very Close"},
-                            order = 10,
                         },
                     },
                 },
@@ -1091,7 +1055,7 @@ local situationOptions = {
                     name = "Adjust Shoulder Offset",
                     desc = "If this setting should be affected",
                     get = function() return (S.cameraCVars["test_cameraOverShoulder"] ~= nil) end,
-                    set = function(_, newValue) if (newValue) then S.cameraCVars["test_cameraOverShoulder"] = 0 else S.cameraCVars["test_cameraOverShoulder"] = nil end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
+                    set = function(_, newValue) if newValue then S.cameraCVars["test_cameraOverShoulder"] = 0 else S.cameraCVars["test_cameraOverShoulder"] = nil end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
                     order = 0,
                 },
                 overShoulder = {
@@ -1114,7 +1078,7 @@ local situationOptions = {
                     name = "Adjust Head Tracking",
                     desc = "If this setting should be affected",
                     get = function() return (S.cameraCVars["test_cameraHeadMovementStrength"] ~= nil) end,
-                    set = function(_, newValue) if (newValue) then S.cameraCVars["test_cameraHeadMovementStrength"] = 0 else S.cameraCVars["test_cameraHeadMovementStrength"] = nil end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
+                    set = function(_, newValue) if newValue then S.cameraCVars["test_cameraHeadMovementStrength"] = 0 else S.cameraCVars["test_cameraHeadMovementStrength"] = nil end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
                     order = 3,
                 },
                 headTracking = {
@@ -1137,28 +1101,28 @@ local situationOptions = {
                     name = "Dynamic Pitch",
                     desc = "The camera will adjust the camera's pitch (the angle at which the camera looks at your character in the up/down direction) according to the current zoom level.\n\nAngles the camera up while farther away from the character and down coming towards your character.\n\nA gray checkbox means that the default will be used instead.",
                     get = function()
-                        if (S.cameraCVars["test_cameraDynamicPitch"] == nil) then
-                            return nil;
-                        elseif (S.cameraCVars["test_cameraDynamicPitch"] == 1) then
-                            return true;
-                        elseif (S.cameraCVars["test_cameraDynamicPitch"] == 0) then
-                            return false;
+                        if S.cameraCVars["test_cameraDynamicPitch"] == nil then
+                            return nil
+                        elseif S.cameraCVars["test_cameraDynamicPitch"] == 1 then
+                            return true
+                        elseif S.cameraCVars["test_cameraDynamicPitch"] == 0 then
+                            return false
                         end
-                        Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                        Options:SendMessage("DC_SITUATION_UPDATED", SID)
                     end,
                     set = function(_, newValue)
-                        if (newValue == nil) then
-                            S.cameraCVars["test_cameraDynamicPitch"] = nil;
-                            S.cameraCVars["test_cameraDynamicPitchBaseFovPad"] = nil;
-                            S.cameraCVars["test_cameraDynamicPitchBaseFovPadFlying"] = nil;
-                            S.cameraCVars["test_cameraDynamicPitchBaseFovPadDownScale"] = nil;
-                            S.cameraCVars["test_cameraDynamicPitchSmartPivotCutoffDist"] = nil;
-                        elseif (newValue == true) then
-                            S.cameraCVars["test_cameraDynamicPitch"] = 1;
-                        elseif (newValue == false) then
-                            S.cameraCVars["test_cameraDynamicPitch"] = 0;
+                        if newValue == nil then
+                            S.cameraCVars["test_cameraDynamicPitch"] = nil
+                            S.cameraCVars["test_cameraDynamicPitchBaseFovPad"] = nil
+                            S.cameraCVars["test_cameraDynamicPitchBaseFovPadFlying"] = nil
+                            S.cameraCVars["test_cameraDynamicPitchBaseFovPadDownScale"] = nil
+                            S.cameraCVars["test_cameraDynamicPitchSmartPivotCutoffDist"] = nil
+                        elseif newValue == true then
+                            S.cameraCVars["test_cameraDynamicPitch"] = 1
+                        elseif newValue == false then
+                            S.cameraCVars["test_cameraDynamicPitch"] = 0
                         end
-                        Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                        Options:SendMessage("DC_SITUATION_UPDATED", SID)
                     end,
                     order = 4,
                 },
@@ -1174,22 +1138,22 @@ local situationOptions = {
                             name = "Focus Enemies",
                             desc = "Lock/focus enemies. This includes both dead enemies, and targets that have gone offscreen.\n\nA gray checkbox means that the default will be used instead.",
                             get = function()
-                                if (S.cameraCVars["test_cameraTargetFocusEnemyEnable"] == nil) then
-                                    return nil;
+                                if S.cameraCVars["test_cameraTargetFocusEnemyEnable"] == nil then
+                                    return nil
                                 end
                                 return (S.cameraCVars["test_cameraTargetFocusEnemyEnable"] == 1) end,
                             set = function(_, newValue)
-                                if (newValue == nil) then
-                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = nil;
-                                    S.cameraCVars["test_cameraTargetFocusEnemyStrengthPitch"] = nil;
-                                    S.cameraCVars["test_cameraTargetFocusEnemyStrengthYaw"] = nil;
-                                elseif (newValue == true) then
-                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = 1;
-                                elseif (newValue == false) then
-                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = 0;
+                                if newValue == nil then
+                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = nil
+                                    S.cameraCVars["test_cameraTargetFocusEnemyStrengthPitch"] = nil
+                                    S.cameraCVars["test_cameraTargetFocusEnemyStrengthYaw"] = nil
+                                elseif newValue == true then
+                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = 1
+                                elseif newValue == false then
+                                    S.cameraCVars["test_cameraTargetFocusEnemyEnable"] = 0
                                 end
 
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             order = 1,
                         },
@@ -1210,8 +1174,8 @@ local situationOptions = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusEnemyStrengthPitch")))
                             end,
                             set = function(_, newValue)
-                                S.cameraCVars["test_cameraTargetFocusEnemyStrengthPitch"] = newValue;
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                S.cameraCVars["test_cameraTargetFocusEnemyStrengthPitch"] = newValue
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             width = "full",
                             order = 2,
@@ -1233,8 +1197,8 @@ local situationOptions = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusEnemyStrengthYaw")))
                             end,
                             set = function(_, newValue)
-                                S.cameraCVars["test_cameraTargetFocusEnemyStrengthYaw"] = newValue;
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                S.cameraCVars["test_cameraTargetFocusEnemyStrengthYaw"] = newValue
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             width = "full",
                             order = 3,
@@ -1245,22 +1209,22 @@ local situationOptions = {
                             name = "Focus On Interact",
                             desc = "Lock/focus NPCs in interactions\n\nA gray checkbox means that the default will be used instead.",
                             get = function()
-                                if (S.cameraCVars["test_cameraTargetFocusInteractEnable"] == nil) then
-                                    return nil;
+                                if S.cameraCVars["test_cameraTargetFocusInteractEnable"] == nil then
+                                    return nil
                                 end
                                 return (S.cameraCVars["test_cameraTargetFocusInteractEnable"] == 1) end,
                             set = function(_, newValue)
-                                if (newValue == nil) then
-                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = nil;
-                                    S.cameraCVars["test_cameraTargetFocusInteractStrengthPitch"] = nil;
-                                    S.cameraCVars["test_cameraTargetFocusInteractStrengthYaw"] = nil;
-                                elseif (newValue == true) then
-                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = 1;
-                                elseif (newValue == false) then
-                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = 0;
+                                if newValue == nil then
+                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = nil
+                                    S.cameraCVars["test_cameraTargetFocusInteractStrengthPitch"] = nil
+                                    S.cameraCVars["test_cameraTargetFocusInteractStrengthYaw"] = nil
+                                elseif newValue == true then
+                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = 1
+                                elseif newValue == false then
+                                    S.cameraCVars["test_cameraTargetFocusInteractEnable"] = 0
                                 end
 
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             order = 11,
                         },
@@ -1281,8 +1245,8 @@ local situationOptions = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusInteractStrengthPitch")))
                             end,
                             set = function(_, newValue)
-                                S.cameraCVars["test_cameraTargetFocusInteractStrengthPitch"] = newValue;
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                S.cameraCVars["test_cameraTargetFocusInteractStrengthPitch"] = newValue
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             width = "full",
                             order = 12,
@@ -1304,8 +1268,8 @@ local situationOptions = {
                                     or tonumber(GetCVarDefault("test_cameraTargetFocusInteractStrengthYaw")))
                             end,
                             set = function(_, newValue)
-                                S.cameraCVars["test_cameraTargetFocusInteractStrengthYaw"] = newValue;
-                                Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                                S.cameraCVars["test_cameraTargetFocusInteractStrengthYaw"] = newValue
+                                Options:SendMessage("DC_SITUATION_UPDATED", SID)
                             end,
                             width = "full",
                             order = 13,
@@ -1428,13 +1392,13 @@ local situationOptions = {
                     desc = "",
                     get = function() return table.concat(S.events, ", ") end,
                     set = function(_, newValue)
-                        if (newValue == "") then
-                            S.events = {};
+                        if newValue == "" then
+                            S.events = {}
                         else
-                            newValue = string.gsub(newValue, "%s+", "");
-                            S.events = {strsplit(",", newValue)};
+                            newValue = string.gsub(newValue, "%s+", "")
+                            S.events = {strsplit(",", newValue)}
                         end
-                        Options:SendMessage("DC_SITUATION_UPDATED", SID);
+                        Options:SendMessage("DC_SITUATION_UPDATED", SID)
                     end,
                     width = "double",
                     order = 1,
@@ -1444,7 +1408,7 @@ local situationOptions = {
                     name = "Priority",
                     desc = "If multiple situations are active at the same time, the one with the highest priority is chosen",
                     get = function() return ""..S.priority end,
-                    set = function(_, newValue) if (tonumber(newValue)) then S.priority = tonumber(newValue) end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
+                    set = function(_, newValue) if tonumber(newValue) then S.priority = tonumber(newValue) end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
                     width = "half",
                     order = 1,
                 },
@@ -1453,7 +1417,7 @@ local situationOptions = {
                     name = "Delay",
                     desc = "How long to delay exiting this situation",
                     get = function() return ""..S.delay end,
-                    set = function(_, newValue) if (tonumber(newValue)) then S.delay = tonumber(newValue) end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
+                    set = function(_, newValue) if tonumber(newValue) then S.delay = tonumber(newValue) end Options:SendMessage("DC_SITUATION_UPDATED", SID) end,
                     width = "half",
                     order = 2,
                 },
@@ -1500,7 +1464,7 @@ local situationOptions = {
             },
         },
     },
-};
+}
 local presets = {
     name = "Presets",
     handler = DynamicCam,
@@ -1539,7 +1503,7 @@ local presets = {
             },
         },
     },
-};
+}
 local sharing = {
     name = "Import/Export",
     handler = DynamicCam,
@@ -1590,7 +1554,7 @@ local sharing = {
             order = 20,
         },
     },
-};
+}
 
 
 ----------
@@ -1598,22 +1562,22 @@ local sharing = {
 ----------
 function Options:OnInitialize()
     -- make sure to select something for the UI
-    self:SelectSituation();
+    self:SelectSituation()
 
     -- register the gui with AceConfig and Blizz Options
-    self:RegisterMenus();
+    self:RegisterMenus()
 end
 
 function Options:OnEnable()
     -- register for dynamiccam messages
-    self:RegisterMessage("DC_SITUATION_ACTIVE", "ReselectSituation");
-    self:RegisterMessage("DC_SITUATION_INACTIVE", "ReselectSituation");
-    self:RegisterMessage("DC_SITUATION_ENTERED", "ReselectSituation");
-    self:RegisterMessage("DC_SITUATION_EXITED", "ReselectSituation");
+    self:RegisterMessage("DC_SITUATION_ACTIVE", "ReselectSituation")
+    self:RegisterMessage("DC_SITUATION_INACTIVE", "ReselectSituation")
+    self:RegisterMessage("DC_SITUATION_ENTERED", "ReselectSituation")
+    self:RegisterMessage("DC_SITUATION_EXITED", "ReselectSituation")
 end
 
 function Options:OnDisable()
-    self:UnregisterAllMessages();
+    self:UnregisterAllMessages()
 end
 
 
@@ -1621,49 +1585,49 @@ end
 -- GUI --
 ---------
 function Options:ClearSelection()
-    SID = nil;
-    S = nil;
+    SID = nil
+    S = nil
 end
 
 function Options:ReselectSituation()
-    self:SelectSituation();
+    self:SelectSituation()
 end
 
 function Options:SelectSituation(selectMe)
-    if (selectMe and parent.db.profile.situations[selectMe]) then
-        S = parent.db.profile.situations[selectMe];
-        SID = selectMe;
+    if selectMe and parent.db.profile.situations[selectMe] then
+        S = parent.db.profile.situations[selectMe]
+        SID = selectMe
     else
-        if (parent.currentSituationID) then
-            S = parent.db.profile.situations[parent.currentSituationID];
-            SID = parent.currentSituationID;
+        if parent.currentSituationID then
+            S = parent.db.profile.situations[parent.currentSituationID]
+            SID = parent.currentSituationID
         else
-            if (not SID or not S) then
-                SID, S = next(parent.db.profile.situations);
+            if not SID or not S then
+                SID, S = next(parent.db.profile.situations)
             end
         end
     end
 
-    LibStub("AceConfigRegistry-3.0"):NotifyChange("DynamicCam Situations");
+    LibStub("AceConfigRegistry-3.0"):NotifyChange("DynamicCam Situations")
 end
 
 function Options:RegisterMenus()
     -- setup menu
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam", general);
-    self.menu = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam", general)
+    self.menu = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam", "DynamicCam")
 
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Settings", settings);
-    self.settings = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Settings", "Settings", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Settings", settings)
+    self.settings = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Settings", "Settings", "DynamicCam")
 
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Situations", situationOptions);
-    self.situtations = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Situations", "Situations", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Situations", situationOptions)
+    self.situtations = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Situations", "Situations", "DynamicCam")
 
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Sharing", sharing);
-    self.sharing = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Sharing", "Import/Export", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Sharing", sharing)
+    self.sharing = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Sharing", "Import/Export", "DynamicCam")
 
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Presets", presets);
-    self.presets = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Presets", "Presets", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Presets", presets)
+    self.presets = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Presets", "Presets", "DynamicCam")
 
-    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Profiles", LibStub("AceDBOptions-3.0"):GetOptionsTable(parent.db));
-    self.profiles = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Profiles", "Profiles", "DynamicCam");
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable("DynamicCam Profiles", LibStub("AceDBOptions-3.0"):GetOptionsTable(parent.db))
+    self.profiles = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("DynamicCam Profiles", "Profiles", "DynamicCam")
 end

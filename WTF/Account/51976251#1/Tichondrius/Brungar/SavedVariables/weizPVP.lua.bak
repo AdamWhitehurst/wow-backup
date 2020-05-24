@@ -8,8 +8,8 @@ weizPVPOptions = {
 			["Options"] = {
 				["Addon"] = {
 					["Version"] = "1.81.0",
-					["VersionSplashSeen"] = true,
 					["VersionNumber"] = 1802,
+					["VersionSplashSeen"] = true,
 				},
 				["Window"] = {
 					["Pinned"] = true,

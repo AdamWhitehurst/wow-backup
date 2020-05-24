@@ -1,31 +1,43 @@
 
 HHTD_SavedVariables = {
 	["char"] = {
-		["Andalsam - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
 		["Umbrick - Tichondrius"] = {
-			["settingsMigrated"] = false,
-		},
-		["Zandro - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Andallsa - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Andalsa - Tichondrius"] = {
+		["Stoakt - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Wharapi - Tichondrius"] = {
+		["Sparkele - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Andalsam - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Arndoss - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Zandro - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Bramblebrow - Emerald Dream"] = {
 			["settingsMigrated"] = false,
 		},
-		["Stoakt - Tichondrius"] = {
+		["Nullaaru - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
-		["Arndoss - Tichondrius"] = {
+		["Wharapi - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Nilaaru - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Andalsa - Tichondrius"] = {
+			["settingsMigrated"] = false,
+		},
+		["Wilowisp - Tichondrius"] = {
 			["settingsMigrated"] = false,
 		},
 		["Brungar - Tichondrius"] = {
@@ -46,22 +58,26 @@ HHTD_SavedVariables = {
 		["NPH"] = {
 		},
 	},
-	["profileKeys"] = {
-		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
-		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
-		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
-		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
-		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
-	},
 	["global"] = {
 		["settingsMigrated"] = false,
 		["oldNameEnableState"] = 0,
+	},
+	["profileKeys"] = {
+		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Stoakt - Tichondrius"] = "Stoakt - Tichondrius",
+		["Sparkele - Tichondrius"] = "Sparkele - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
+		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Nullaaru - Tichondrius"] = "Nullaaru - Tichondrius",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Nilaaru - Tichondrius"] = "Nilaaru - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Wilowisp - Tichondrius"] = "Wilowisp - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
 	},
 }

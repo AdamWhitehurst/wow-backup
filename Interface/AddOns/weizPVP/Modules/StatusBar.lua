@@ -5,8 +5,8 @@
 --> Namespace
 local _, NS = ...
 --> Upvalue Globals
-local PixelUtil = PixelUtil
 local InCombatLockdown = InCombatLockdown
+local XEN = XEN
 
 --> CREATE STATUS BAR
 local textFadeIn
@@ -18,8 +18,8 @@ local outDuration = 0.3
 local combatMessage = ""
 function NS.CreateStatusBar()
     NS.StatusBar.Title1:ClearAllPoints()
-    PixelUtil.SetPoint(NS.StatusBar.Title1, "TOPLEFT", NS.StatusBar, "BOTTOMLEFT", 0, 0)
-    PixelUtil.SetPoint(NS.StatusBar.Title1, "TOPRIGHT", NS.StatusBar, "BOTTOMRIGHT", 0, 0)
+    NS.StatusBar.Title1:SetPoint("TOPLEFT", NS.StatusBar, "BOTTOMLEFT")
+    NS.StatusBar.Title1:SetPoint("TOPRIGHT", NS.StatusBar, "BOTTOMRIGHT")
     -- Slide In
     NS.StatusBar.Title1.animIn = NS.StatusBar.Title1:CreateAnimationGroup()
     textFadeIn = NS.StatusBar.Title1.animIn:CreateAnimation("Alpha")
@@ -30,7 +30,7 @@ function NS.CreateStatusBar()
     textFadeIn:SetOrder(1)
     textSlideIn = NS.StatusBar.Title1.animIn:CreateAnimation("Translation")
     textSlideIn:SetDuration(inDuration)
-    textSlideIn:SetOffset(0, 16)
+    textSlideIn:SetOffset(0, XEN.ScalePixelsToUi(17))
     textSlideIn:SetEndDelay(2.5) -- Set the number of seconds the animation delays after finishing.
     textSlideIn:SetOrder(1)
     NS.StatusBar.Title1.animIn:SetScript(
@@ -56,7 +56,7 @@ function NS.CreateStatusBar()
     textFadeOut:SetOrder(2)
     textSlideOut = NS.StatusBar.Title1.animIn:CreateAnimation("Translation")
     textSlideOut:SetDuration(outDuration)
-    textSlideOut:SetOffset(0, -15)
+    textSlideOut:SetOffset(0, XEN.ScalePixelsToUi(-17))
     textSlideOut:SetOrder(2)
 end
 

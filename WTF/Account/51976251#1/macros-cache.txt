@@ -8,6 +8,8 @@ END
 VER 3 0000000000000052 "Algan" "INV_MISC_QUESTIONMARK"
 /target "Lost ALgan"
 END
+VER 3 0000000000000066 "Chests" "INV_MISC_QUESTIONMARK"
+END
 VER 3 0000000000000050 "Clear Action Bar" "1100022"
 /run for i = 1,120 do PickupAction(i) ClearCursor() end
 END
@@ -76,8 +78,6 @@ VER 3 0000000000000058 "Speed" "132107"
 /script cur, run, fly, swim = GetUnitSpeed("player")
 /script ChatFrame1:AddMessage(string.format("Your current maximal speeds are: running %g%%, flying %g%%, swimming %g%%.", run/base*100, fly/base*100, swim/base*100))
 END
-VER 3 0000000000000031 "Starfish" "INV_MISC_QUESTIONMARK"
-END
 VER 3 0000000000000030 "Starfish" "INV_MISC_QUESTIONMARK"
 /way 36.27 22.81 Starfish
 /way 37.1 27.6 Starfish
@@ -90,6 +90,8 @@ VER 3 0000000000000030 "Starfish" "INV_MISC_QUESTIONMARK"
 /way 43.6 19.9 Starfish
 /way 46.51 32.74 Starfish
 /way 48 39 Star
+END
+VER 3 0000000000000031 "Starfish" "INV_MISC_QUESTIONMARK"
 END
 VER 3 000000000000000A "Steal Taunt" "132353"
 #showtooltip Provoke
@@ -107,6 +109,13 @@ END
 VER 3 0000000000000062 "TSMMacro" "Achievement_Faction_GoldenLotus"
 /click TSMAuctioningBtn
 END
+VER 3 0000000000000065 "Wave" "135785"
+/look
+/cleartarget
+/smile
+/targetlasttarget
+END
 VER 3 000000000000001C "Wave" "135823"
-/wave [@mouseover]
+/e waves.
+/tell Sparkwizz Hello, I'm %t and today i will assist you through this dungeon.
 END

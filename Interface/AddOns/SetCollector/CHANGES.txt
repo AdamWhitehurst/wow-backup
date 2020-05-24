@@ -1,0 +1,94 @@
+lightweight tag da8d94c0392605f3c261ea8afb2d77419b3c29fb v3.0.7
+Author:	Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:	Sun Dec 22 13:49:50 2019 -0800
+
+commit da8d94c0392605f3c261ea8afb2d77419b3c29fb
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 13:49:50 2019 -0800
+
+    Prep for additional sets
+
+commit 454168e6fd98b8b41e463bc876f289210b7d145c
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 13:30:25 2019 -0800
+
+    Corrects the T23 Helm selection
+
+commit 8207f1f552ca348a22e4a17cbd8cb2c6c088e1c3
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 13:27:47 2019 -0800
+
+    Ads T22-24 Plate sets
+
+commit 2ccfd7fc9a14ea49ac45278f83625a9e5cf9c781
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 10:56:53 2019 -0800
+
+    Adds T22-24 Mail sets
+
+commit 2ccfd7fc9a14ea49ac45278f83625a9e5cf9c781
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 10:56:53 2019 -0800
+
+    Adds T22-24 Mail sets
+
+commit e34d90dd5bb99c20d8810b2f03cdc524e517f194
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 10:39:00 2019 -0800
+
+    Adds T22-24 Leather sets
+
+commit a060dbf57004e527c22514100de02645cc23b76f
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 10:19:12 2019 -0800
+
+    Adds T22-24 Cloth sets
+
+commit caff7f55b533b02a284af9bca6d14dfb0e2cfebb
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 09:13:24 2019 -0800
+
+    Create CODE_OF_CONDUCT.md
+
+commit caff7f55b533b02a284af9bca6d14dfb0e2cfebb
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 09:13:24 2019 -0800
+
+    Create CODE_OF_CONDUCT.md
+
+commit 4b04b907f71f34dc481c74a3c29318f82aa12720
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 09:06:04 2019 -0800
+
+    Completed merge of fixes for Warrior sets and moving Appearances to separate file
+
+commit d81a8826eb06bc7d9d1c7eee85893ffc31c929d0
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 08:27:34 2019 -0800
+
+    Moving appearances to separate file from database methods
+
+commit d81a8826eb06bc7d9d1c7eee85893ffc31c929d0
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Sun Dec 22 08:27:34 2019 -0800
+
+    Moving appearances to separate file from database methods
+
+commit e86e25d9287c0f73af4d94e467b4546ce7f76e8f
+Author: Miki Urban <mikiurban@hotmail.com>
+Date:   Sat Dec 21 19:39:03 2019 -0800
+
+    Updated Alliance Tank Prot/Melee armor for T4-13
+
+commit e86e25d9287c0f73af4d94e467b4546ce7f76e8f
+Author: Miki Urban <mikiurban@hotmail.com>
+Date:   Sat Dec 21 19:39:03 2019 -0800
+
+    Updated Alliance Tank Prot/Melee armor for T4-13
+
+commit 3506f67536696c41258c229f21e8987858f60cb3
+Author: Scott Olson <scottolsonjr@users.noreply.github.com>
+Date:   Wed Sep 25 16:28:37 2019 -0700
+
+    Update for 8.2.5
+

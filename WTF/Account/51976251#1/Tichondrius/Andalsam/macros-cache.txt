@@ -1,6 +1,7 @@
 VER 3 0100000000000012 "Bear Taunt" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [nostance:1] Bear Form; [stance:1] Growl;
+/cast [nostance:1] Bear Form
+/cast [stance:1] Growl
 END
 VER 3 0100000000000006 "Feral Rake" "INV_MISC_QUESTIONMARK"
 #showtooltip Rake

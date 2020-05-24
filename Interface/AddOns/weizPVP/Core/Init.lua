@@ -40,8 +40,8 @@ SM:Register("BORDER", "weizPVP: Border", [[Interface\Addons\weizPVP\Media\Textur
 SM:Register("FONT", "Roboto Condensed", [[Interface\Addons\weizPVP\Media\Fonts\RobotoCondensed.ttf]])
 SM:Register("FONT", "Roboto Condensed Bold", [[Interface\Addons\weizPVP\Media\Fonts\RobotoCondensed-Bold.ttf]])
 SM:Register("FONT", "Roboto Condensed BoldItalic", [[Interface\Addons\weizPVP\Media\Fonts\RobotoCondensed-BoldItalic.ttf]])
-SM:Register("FONT", "Accidental Presidency v2", [[Interface\Addons\weizPVP\Media\Fonts\Accidental-Presidency.ttf]])
-SM:Register("FONT", "Accidental Presidency Italic", [[Interface\Addons\weizPVP\Media\Fonts\Accidental-Presidency-Italic.ttf]])
+SM:Register("FONT", "Accidental Presidency", [[Interface\Addons\weizPVP\Media\Fonts\AccidentalPresidency.ttf]])
+SM:Register("FONT", "Accidental Presidency Italic", [[Interface\Addons\weizPVP\Media\Fonts\AccidentalPresidency-Italic.ttf]])
 --> Sounds
 SM:Register("SOUND", "weizPVP: MLG Air Horn 1", [[Interface\Addons\weizPVP\Media\Sounds\airhorn-1.ogg]])
 SM:Register("SOUND", "weizPVP: Beep 1", [[Interface\Addons\weizPVP\Media\Sounds\beep-1.ogg]])
@@ -113,6 +113,7 @@ NS._DefaultOptions = {
             --> Audio Alerts
             AudioAlerts = {
                 DetectedPlayerSound = true,
+                DetectedPlayerSoundBGDisabled = false,
                 DetectedPlayerSoundFile = "weizPVP: Notice 1"
             },
             --> Bars
@@ -121,17 +122,17 @@ NS._DefaultOptions = {
                 AlphaDead = 0.8,
                 AlphaInactive = 0.6,
                 AlphaDefault = 1,
-                RowHeight = 18,
+                RowHeight = 19,
                 VerticalSpacing = 1,
                 Texture = "weizPVP: StatusBar",
                 BarTexture = "weizPVP: Bar-BG",
                 BarSolid = "weizPVP: SolidStatus",
-                NameFont = "Accidental Presidency v2",
-                NameFontSize = 16,
+                NameFont = "Accidental Presidency",
+                NameFontSize = 14,
                 LevelFont = "Accidental Presidency Italic",
-                LevelFontSize = 16,
-                GuildFont = "Accidental Presidency v2",
-                GuildFontSize = 14
+                LevelFontSize = 14,
+                GuildFont = "Accidental Presidency",
+                GuildFontSize = 13
             },
             --> Sorting
             Sorting = {
@@ -166,15 +167,15 @@ NS._DefaultOptions = {
                 },
                 --> Header Frame
                 Header = {
-                    Height = 26,
+                    Height = 20,
                     BackgroundColor = {
-                        0.01,
-                        0.01,
-                        0.01,
-                        0.7
+                        0.015,
+                        0.015,
+                        0.015,
+                        0.85
                     },
                     Font = "Roboto Condensed BoldItalic",
-                    FontSize = 18,
+                    FontSize = 17,
                     X = 383,
                     Y = 132,
                     Scale = 1,
@@ -184,9 +185,9 @@ NS._DefaultOptions = {
                 },
                 --> Footer Frame
                 Footer = {
-                    Height = 18,
-                    Font = "Accidental Presidency v2",
-                    FontSize = 15,
+                    Height = 17,
+                    Font = "Accidental Presidency",
+                    FontSize = 14,
                     FontOutline = "NONE",
                     BackgroundColor = {
                         0.01,
@@ -206,7 +207,6 @@ NS._DefaultOptions = {
             KOS = {
                 AudioAlert = true,
                 AudioAlertFile = "weizPVP: Warning 2",
-                -- NameplateIndicator = false,
                 ChatAlert = true,
                 TaskbarAlert = true
             },
@@ -241,7 +241,6 @@ local function LoadDB()
     --> LOAD CHARACTER OPTIONS
     NS.charDB = LibStub("AceDB-3.0"):New("_weizpvp_chardb", NS._DefaultOptions, true)
     NS.Options = NS.charDB.profile.Options
-    NS.Addon = NS.charDB.profile.Addon or {}
     NS.KosList = NS.charDB.profile.KosList or {}
     --> LOAD GLOBAL PLAYER DB
     NS.PlayerDB = {}
@@ -256,12 +255,12 @@ end
 
 --> BUILD UI
 local function BuildUIElements()
-    --> Create Core Frames and Bars
+    -- Create Core Frames and Bars
     NS.CreateCoreFrames()
     NS.CreateBars()
     NS.CreateStatusBar()
     NS.CreateStealthAlertFrame()
-    --> Setup Crosshair
+    -- Setup Crosshair
     if NS.Options.Crosshair.Enabled then
         NS.Crosshair.Enable()
     else
@@ -273,11 +272,11 @@ end
 
 --> ON INITIALIZE
 function weizPVP.OnInitialize()
-    --> Load Ace3 DB
+    XEN.Init()
     LoadDB()
     BuildUIElements()
     NS.ManageBarsDisplayed()
-    XEN.Init() --> INIT XEN LIB
+    NS.firstRun = true
 end
 
 --> ON ENABLE
@@ -287,11 +286,10 @@ function weizPVP:OnEnable()
     C_Timer_After(1, NS.SetWindowSettings)
     NS.SetWindowSettings()
     --> Enable Events
-    NS.Addon.Enabled = true
     NS.EnableEvents()
     --> Pulse Timer
-    weizPVP:CancelAllTimers()
-    weizPVP:ScheduleRepeatingTimer(NS.PulseEvent, 1)
+    self:CancelAllTimers()
+    self:ScheduleRepeatingTimer(NS.PulseEvent, 1)
 end
 
 --> ON DISABLE
@@ -301,11 +299,16 @@ function weizPVP:OnDisable()
     NS.CoreFrame:Hide()
     NS.StatusBar:Hide()
     --> Cancel Timers
-    weizPVP:CancelAllTimers()
+    self:CancelAllTimers()
     --> Clear current player data
     NS.ClearListData()
     --> Enable Events
     NS.DisableEvents()
-    --> Mark addon is disabled
-    NS.Addon.Enabled = nil
+end
+
+--> PRINT ADDON MESSAGE
+-----------------------------------------------------------
+function NS.PrintAddonMessage(msg)
+    --> Print message with default addon prefix
+    (SELECTED_CHAT_FRAME or DEFAULT_CHAT_FRAME):AddMessage("|TInterface\\Addons\\weizPVP\\Media\\weizpvp_chat.tga:0|t " .. msg)
 end

@@ -15,7 +15,7 @@ local plugin =
     {
         type = "data source",
         text = "0",
-        icon = "Interface\\AddOns\\weizPVP\\Media\\Icons\\weizpvp_minimap.tga"
+        icon = "Interface\\AddOns\\weizPVP\\Media\\weizpvp_minimap.tga"
     }
 )
 
@@ -26,9 +26,8 @@ function plugin.OnClick(_, button)
             InterfaceOptionsFrame:Hide()
         else
             InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
-            local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
-            InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax)
-            -- Run twice (blizz bug work around)
+            local _, max = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
+            InterfaceOptionsFrameAddOnsListScrollBar:SetValue(max)
             InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
         end
     elseif button == "LeftButton" then
@@ -43,12 +42,12 @@ hooksecurefunc(
     "UpdateNearbyCount",
     function()
         plugin.text = NS.HeaderFrame.TitleVar:GetText()
-        plugin.icon = "Interface\\AddOns\\weizPVP\\Media\\Icons\\weizpvp_minimap.tga"
+        plugin.icon = "Interface\\AddOns\\weizPVP\\Media\\weizpvp_minimap.tga"
     end
 )
 
 function plugin.OnTooltipShow(tip)
-    tip:AddDoubleLine("|cffffffffweiz|r|cffffa012PVP|r", NS.HeaderFrame.TitleVar:GetText(), nil, nil, nil, 0.2, 1, 0.2)
+    tip:AddDoubleLine(NS.addonString, NS.HeaderFrame.TitleVar:GetText(), nil, nil, nil, 0.2, 1, 0.2)
     tip:AddLine(" ")
     tip:AddDoubleLine("Right-Click", "|cff00ff05Toggle Options|r", nil, nil, nil, 0.2, 1, 0.2)
     tip:AddDoubleLine("Left-Click", "|cff00ff05Toggle Main Window|r", nil, nil, nil, 0.2, 1, 0.2)

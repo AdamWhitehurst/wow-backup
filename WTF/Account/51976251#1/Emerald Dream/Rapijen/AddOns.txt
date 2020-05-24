@@ -21,3 +21,7 @@ PetTracker_Breeds: enabled
 MaxCam: disabled
 TradeSkillMaster: enabled
 TradeSkillMaster_AppHelper: enabled
+OPie_Classic: disabled
+ElvUI_Enhanced: disabled
+ChocolateBar: disabled
+WeakAuras: disabled

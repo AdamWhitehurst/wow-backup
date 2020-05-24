@@ -1,9 +1,14 @@
+VER 3 0000000000000064 "/btwQuests" "1505932"
+/btwQuests
+END
 VER 3 0000000000000027 "AAP_MACRO" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use Dead Ringer
 END
 VER 3 0000000000000052 "Algan" "INV_MISC_QUESTIONMARK"
 /target "Lost ALgan"
+END
+VER 3 0000000000000066 "Chests" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000050 "Clear Action Bar" "1100022"
 /run for i = 1,120 do PickupAction(i) ClearCursor() end
@@ -105,5 +110,12 @@ VER 3 0000000000000062 "TSMMacro" "Achievement_Faction_GoldenLotus"
 /click TSMAuctioningBtn
 END
 VER 3 000000000000001C "Wave" "135823"
-/wave [@mouseover]
+/e waves.
+/tell Sparkwizz Hello, I'm %t and today i will assist you through this dungeon.
+END
+VER 3 0000000000000065 "Wave" "135785"
+/look
+/cleartarget
+/smile
+/targetlasttarget
 END

@@ -1,6 +1,23 @@
+VER 3 0100000000000006 "Abomb" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Army of the Dead
+END
+VER 3 0100000000000003 "D&D" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Death and Decay
+END
+VER 3 0100000000000004 "Gnaw" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Gnaw
+END
 VER 3 0100000000000001 "Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@focus] Mind Freeze
 /cast [@focus] leap
 /cast [@focus] gnaw
+END
+VER 3 0100000000000005 "Leap" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Leap
 END

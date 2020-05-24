@@ -1,9 +1,8 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-	<!-- > CROSSHAIR -->
-	<Include file="Addons/Crosshair/Crosshair.xml" />
-	<!-- > KILL ON SIGHT -->
-	<Script file="Addons/KOS/KOS.lua" />
-	<Include file="Addons/KOS/PlayerBarMenu.xml" />
-	<Include file="Addons/KOS/UnitMenu.xml" />
+  <!-- > CROSSHAIR -->
+  <Include file="Crosshair\Crosshair.xml" />
+  <!-- > KILL ON SIGHT -->
+  <Script file="KOS\KOS.lua" />
+  <Script file="KOS\UnitMenu.lua" />
 </Ui>

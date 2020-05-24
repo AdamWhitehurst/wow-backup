@@ -8,6 +8,8 @@ local ADDON_NAME, NS = ...
 local GetCVarDefault = GetCVarDefault
 local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
 local wipe = wipe
+local next = next
+local tonumber = tonumber
 --> Libs
 local SM = LibStub("LibSharedMedia-3.0")
 local sounds = SM:List("sound")
@@ -30,10 +32,7 @@ NS.SlashCommands = {
             desc = "Opens the configuration menu.",
             type = "execute",
             func = function()
-                InterfaceOptionsFrame_OpenToCategory(ADDON_NAME)
-                local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues()
-                InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax)
-                InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- run again (wow bug workaround)
+                NS.ToggleOptions()
             end,
             guiHidden = true,
             order = 2
@@ -85,19 +84,19 @@ NS.SlashCommands = {
             dialogHidden = true
         },
         ch = {
-            name = "Crosshairs",
-            desc = "Toggles the Crosshairs on or off",
+            name = "Crosshair",
+            desc = "Toggles the Crosshair on or off",
             type = "execute",
             order = 7,
             func = function()
                 if NS.Options.Crosshair.Enabled == false then
                     NS.Options.Crosshair.Enabled = true
                     NS.Crosshair.Enable()
-                    NS.PrintAddonMessage("Crosshairs are |cff37ff37ENABLED|r.")
+                    NS.PrintAddonMessage("Crosshair is |cff37ff37ENABLED|r.")
                 else
                     NS.Options.Crosshair.Enabled = false
                     NS.Crosshair.Disable()
-                    NS.PrintAddonMessage("Crosshairs are |cffff3838DISABLED|r.")
+                    NS.PrintAddonMessage("Crosshair is |cffff3838DISABLED|r.")
                 end
             end,
             dialogHidden = true
@@ -116,7 +115,6 @@ NS.SlashCommands = {
             end,
             dialogHidden = true
         },
-        --!! HIDDEN OPTIONS !!-----------------------------------------------------------------------------------------
         debug = {
             name = "DEBUG",
             desc = "Toggles DEBUG mode where ALL players of any factions are accepted as valid.",
@@ -161,7 +159,7 @@ NS.SlashCommands = {
             end
         },
         --> RESET PLAYER DB
-        resetplayers = {
+        resetPlayers = {
             cmdHidden = true,
             name = "Reset Player DB",
             desc = "Wipes the player database. Options remain untouched.",
@@ -178,45 +176,37 @@ LibStub("AceConfig-3.0"):RegisterOptionsTable(ADDON_NAME .. " Commands", NS.Slas
 
 --|> INTERFACE OPTIONS: ACE3 OPTIONS TABLE
 -------------------------------------------------------------------------------
-local tipsText =
+local interfaceTipsText =
     [[
-  |cff00ff75Toggle Options|r: |cff42dcf4Right-Click|r  the minimap icon
-  |cff00ff75Show/Hide Window|r: |cff42dcf4Left-Click|r the minimap icon
-  |cff00ff75Pin/Unpin the Window|r: |cff42dcf4Right-Click|r title/header bar of the main window
-  |cff00ff75Lock/Uplock the Window|r: |cff42dcf4Ctrl+Right-Click|r title/header bar of the main window
+  |cff00ff75Toggle Options|r -  |cff42dcf4Right-Click|r  the minimap icon
+  |cff00ff75Show/Hide Window|r -  |cff42dcf4Left-Click|r the minimap icon
+  |cff00ff75Pin/Unpin the Window|r -  |cff42dcf4Right-Click|r title/header bar of the main window
+  |cff00ff75Lock/Unlock the Window|r -  |cff42dcf4Ctrl+Right-Click|r title/header bar of the main window
   ]]
 local commandsText =
     [[
-  |cffbbbbbb(Commands can be executed with either|r |cff42dcf4/wpvp|r |cffbbbbbbor|r |cff42dcf4/weizpvp|r|cffbbbbbb)|r
+  |cffbbbbbb(Commands can be executed with either|r |cff42dcf4/wpvp|r|cffbbbbbb or|r |cff42dcf4/weizpvp|r|cffbbbbbb)|r
 
   |cff00ff75Show Window|r:  |cff42dcf4/wpvp show|r
   |cff00ff75Hide Window|r:  |cff42dcf4/wpvp hide|r
   |cff00ff75Toggle Lock Window|r:  |cff42dcf4/wpvp lock|r
   |cff00ff75Toggle Pin Window|r:  |cff42dcf4/wpvp pin|r
 
-  |cffff0000RESET ALL WEIZPVP SETTINGS AND OPTIONS|r:  |cff42dcf4/wpvp resetall|r
-  |cffbbbbbb(Only use if you're noticing a lot of issue - it may fix some things)|r
+  |cffff0000RESET COMMANDS|r |cffbbbbbb(in case you're having issues)|r
+    |cffff0000Reset all options and player data|r:  |cff42dcf4/wpvp resetall|r
+    |cffff0000Reset all saved player data|r:  |cff42dcf4/wpvp resetall|r
+    |cffff0000Reset options|r:  |cff42dcf4/wpvp resetoptions|r
   ]]
 local kosHelpText =
     [[
-  **  |cffbbbbbbFeatures are limited for now; more in development|r  **
+  |cff00ff75To add or remove a player from the main window|r:
+      |cff42dcf4Right-Click|r the player's bar
 
-  |cff42dcf4Add or Remove player from KOS List : |r
-  |cffffffffRight click the player's unit frame (traget, focus, etc)
-  The same method can be done from the weizPVP's player list.|r
+  |cff00ff75To add or remove a player from a unit frame (such as target or focus)|r:
+      |cff42dcf4Right-Click|r the unit frame |cffbbbbbb(such as target, focus, etc)|r
+
   ]]
-local kosHelpTextAbout =
-    [[
-  |cff42dcf4How to Add or Remove player from the KOS List : |r
-  |cffffffff - Right click the player's unit frame (traget, focus, etc)
-  - Right click the player from the weizPVP lost of detected players|r
-  ]]
-local knowIssuesText =
-    [[
-    - Occasional errors related to dropdown menus can occur and will be resolved.
-    - Role icons and estimation need updates and at time can flicker between 2 roles
-    - If the Crosshair is not working, make sure enemy player nameplates are enabled.
-  ]]
+local crosshairTips = "Nameplates must be enabled for Crosshair to work!"
 
 --> Validate option input
 local ValidateNumeric = function(_, val)
@@ -227,17 +217,17 @@ local ValidateNumeric = function(_, val)
 end
 
 NS.OptionsTable = {
-    name = ADDON_NAME .. " |cffffffff-|r  v" .. _G.weizPVP.Addon_Version,
+    name = NS.addonString .. " |cffbbbbbb -|r|cffcafdff " .. _G.weizPVP.Addon_Version .. "|r",
     type = "group",
     args = {
         --> General
         general = {
-            name = "|cffFFA200General|r",
+            name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\general.tga:0|t |cffffffffGeneral|r",
             type = "group",
             order = 1,
             args = {
                 introGeneral = {
-                    name = " |cffFFA200General|r",
+                    name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\general.tga:0|t |cffffffffGeneral|r",
                     type = "header",
                     order = 1,
                     width = "full"
@@ -295,12 +285,12 @@ NS.OptionsTable = {
         },
         --> Alerts - #00f7ff
         alerts = {
-            name = "|cff00f7ffAlerts|r",
+            name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\alert.tga:0|t |cffffffffAlerts|r",
             type = "group",
             order = 4,
             args = {
                 introAlerts = {
-                    name = " |cff00f7ffAlerts & Notifications|r",
+                    name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\alert.tga:0|t |cffffffffAlerts|r",
                     type = "header",
                     order = 1,
                     width = "full"
@@ -315,9 +305,8 @@ NS.OptionsTable = {
                     order = 2
                 },
                 AlertDetectedPlayer = {
-                    name = " New Player Detected - Audio Alert",
-                    desc = "Play's an alert when a new player is added to the enemy list." ..
-                        "Plays the audio until it ends; doesnt not overlap with multiple detections.",
+                    name = " New Player Detected",
+                    desc = "Play's a sound when a new player is detected.",
                     type = "toggle",
                     width = "full",
                     order = 3,
@@ -328,9 +317,9 @@ NS.OptionsTable = {
                         NS.Options.AudioAlerts.DetectedPlayerSound = value
                     end
                 },
-                AlertDetectedBGDisbled = {
-                    name = "   Disable in Battlegrounds",
-                    desc = "Disables the new player audio alert while in battlegrounds",
+                AlertDetectedBGDisabled = {
+                    name = " Disable in Battlegrounds",
+                    desc = "Disables the new player sound alert while in battlegrounds",
                     type = "toggle",
                     width = "full",
                     order = 4,
@@ -347,10 +336,10 @@ NS.OptionsTable = {
                 AlertDetectedPlayerSoundFile = {
                     type = "select",
                     name = " New Player Detected Sound",
-                    desc = "The audio file that plays on detection of a new player.",
+                    desc = "The sound to play on detection of a new player.",
                     values = sounds,
                     width = "full",
-                    order = 10,
+                    order = 5,
                     get = function()
                         for i, v in next, sounds do
                             if v == NS.Options.AudioAlerts.DetectedPlayerSoundFile then
@@ -372,14 +361,14 @@ NS.OptionsTable = {
                     type = "description",
                     fontSize = "large",
                     width = "full",
-                    order = 5
+                    order = 10
                 },
                 StealthAlertEnabled = {
                     name = " Enable Stealth Alerts",
-                    desc = "Show an alert when a unit is detected going stealth or invis.",
+                    desc = "Show an alert when a unit is detected going stealth/invisible.",
                     type = "toggle",
                     width = "full",
-                    order = 6,
+                    order = 11,
                     get = function()
                         return NS.Options.StealthAlert.Enabled
                     end,
@@ -389,10 +378,10 @@ NS.OptionsTable = {
                 },
                 StealthAlertSoundEnabled = {
                     name = " Enable Stealth Audio Alert",
-                    desc = "Plays a sound when players going stealth or invis while Stealth Alerts is enabled.",
+                    desc = "Plays a sound when enemy players go stealth/invisible.",
                     type = "toggle",
                     width = "full",
-                    order = 7,
+                    order = 12,
                     get = function()
                         return NS.Options.StealthAlert.EnableSound
                     end,
@@ -409,7 +398,7 @@ NS.OptionsTable = {
                     desc = "The sound to play on stealth detection, if enabled.",
                     values = sounds,
                     width = "full",
-                    order = 8,
+                    order = 13,
                     get = function()
                         for i, v in next, sounds do
                             if v == NS.Options.StealthAlert.SoundFile then
@@ -435,14 +424,14 @@ NS.OptionsTable = {
                     type = "description",
                     fontSize = "large",
                     width = "full",
-                    order = 9
+                    order = 20
                 },
                 PhasingChatAlertEnabled = {
                     name = " Show phasing alert in chat",
                     desc = "Puts a notice in chat when your character is phasing.",
                     type = "toggle",
                     width = "full",
-                    order = 10,
+                    order = 21,
                     get = function()
                         return NS.Options.Alerts.PhasingChat
                     end,
@@ -452,14 +441,14 @@ NS.OptionsTable = {
                 }
             }
         },
-        --> KOS - #ff2050
+        --> KOS - #ff2050 / #ffd2db
         kos = {
-            name = "|cffff2050Kill On Sight (KOS)|r",
+            name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\kos.tga:0|t |cffffffffKill On Sight (KOS)|r",
             type = "group",
             order = 5,
             args = {
                 introKOS = {
-                    name = " |cffff2050Kill On Sight (KOS)|r",
+                    name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\kos.tga::0|t |cffffffffKill On Sight (KOS)|r",
                     type = "header",
                     order = 1,
                     width = "full"
@@ -527,7 +516,7 @@ NS.OptionsTable = {
                     end
                 },
                 helpHeader = {
-                    name = " \n |cffffa012Help|r",
+                    name = " \n |TInterface\\Addons\\weizPVP\\Media\\Icons\\help.tga:0|t |cfffdffd7 Adding and Removing players:|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
@@ -541,14 +530,14 @@ NS.OptionsTable = {
                 }
             }
         },
-        --> Crosshair - #ff7c29
+        --> Crosshair - #ff9d11 / #ffeed5
         crosshair = {
-            name = "|cffff7c29Crosshair|r",
+            name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\crosshair.tga:0|t |cffffffffCrosshair|r",
             type = "group",
             order = 6,
             args = {
                 intro = {
-                    name = "|cffff7c29Crosshair|r",
+                    name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\crosshair.tga:0|t |cffffffffCrosshair|r",
                     type = "header",
                     order = 1,
                     width = "full"
@@ -636,7 +625,7 @@ NS.OptionsTable = {
                 },
                 Alpha = {
                     name = " Alpha Multiplier",
-                    desc = "Adjust Crosshair Alpha. 0 = transparent, 1.0 = max opacity/visability",
+                    desc = "Adjust Crosshair Alpha. 0 = transparent, 1.0 = max opacity/visibility",
                     type = "range",
                     min = 0,
                     max = 1,
@@ -714,11 +703,17 @@ NS.OptionsTable = {
                         return not NS.Options.Crosshair.Enabled
                     end
                 },
-                --> CVars
-                CVarHeader = {
-                    name = "\n|cffffa012Nameplate CVars:|r",
+                --> spacer
+                spacer_1 = {
+                    name = "\n\n",
                     type = "description",
-                    fontSize = "large",
+                    width = "full",
+                    order = 24
+                },
+                --> CVars header
+                CVarHeader = {
+                    name = " |cffffffffNameplate CVars|r ",
+                    type = "header",
                     width = "full",
                     order = 25
                 },
@@ -761,23 +756,30 @@ NS.OptionsTable = {
                     name = "Reset the above CVars to default values",
                     desc = "The CVars nameplateTargetRadialPosition, nameplateTargetBehindMaxDistance, and nameplateMaxDistance will be reset to default",
                     width = "full",
-                    order = 40,
+                    order = 30,
                     func = function()
                         SetCVar("nameplateTargetRadialPosition", GetCVarDefault("nameplateTargetRadialPosition"))
                         SetCVar("nameplateTargetBehindMaxDistance", GetCVarDefault("nameplateTargetBehindMaxDistance"))
                         NS.PrintAddonMessage("|cff27e817CVars reset|r :")
                     end
+                },
+                --> tips
+                tips = {
+                    name = " \n |TInterface\\Addons\\weizPVP\\Media\\Icons\\help.tga:0|t  " .. crosshairTips,
+                    type = "description",
+                    width = "full",
+                    order = 40
                 }
             }
         },
-        --> Help - #ffffff
-        about = {
-            name = "|cffffffffHelp|r",
+        --> Help - #f0ff00 / #fdffd7
+        help = {
+            name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\help.tga:0|t |cffffffffHelp|r",
             type = "group",
             order = 7,
             args = {
                 intro = {
-                    name = "|cffffffffHelp|r",
+                    name = "|TInterface\\Addons\\weizPVP\\Media\\Icons\\help.tga:0|t |cffffffffHelp|r",
                     type = "header",
                     order = 1,
                     width = "full"
@@ -797,50 +799,35 @@ NS.OptionsTable = {
                     width = "full",
                     order = 3
                 },
-                --> tips
-                tipsHeader = {
-                    name = "|cffffa012Tips|r",
+                --> interface
+                interfaceHeader = {
+                    name = "\n|cffffa012Interface|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
                     order = 4
                 },
-                tips = {
+                interfaceTips = {
                     type = "description",
                     fontSize = "medium",
-                    name = tipsText,
+                    name = interfaceTipsText,
                     width = "full",
                     order = 5
                 },
                 --> kos
-                kosheader = {
-                    name = "|cffffa012KOS|r",
+                kosHeader = {
+                    name = "\n|cffffa012Kill On Sight|r",
                     type = "description",
                     fontSize = "large",
                     width = "full",
                     order = 6
                 },
-                koshelp = {
+                kosHelp = {
                     type = "description",
                     fontSize = "medium",
-                    name = kosHelpTextAbout,
+                    name = kosHelpText,
                     width = "full",
                     order = 7
-                },
-                --> knownIssues
-                issuesHeader = {
-                    name = "\n|cffffa012Known Issues|r",
-                    type = "description",
-                    fontSize = "large",
-                    width = "full",
-                    order = 8
-                },
-                issueText = {
-                    type = "description",
-                    fontSize = "medium",
-                    name = knowIssuesText,
-                    width = "full",
-                    order = 9
                 }
             }
         }
@@ -853,17 +840,17 @@ LibStub("AceConfigDialog-3.0"):AddToBlizOptions(ADDON_NAME, ADDON_NAME)
 --|> CONFIG FUNCTIONS
 -------------------------------------------------------------------------------
 --> RESET ALL
-local Realod_UI = C_UI.Reload
+local Reload_UI = C_UI.Reload
 function NS.ResetAll()
-    StaticPopup_Show("WEIZPVP_CONFIRM_RESETALL")
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESET_ALL")
 end
 --> RESET OPTIONS
 function NS.ResetOptions()
-    StaticPopup_Show("WEIZPVP_CONFIRM_RESETOPTIONS")
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESET_OPTIONS")
 end
 --> RESET PLAYER DB
 function NS.ResetPlayerDB()
-    StaticPopup_Show("WEIZPVP_CONFIRM_RESETPLAYERDB")
+    StaticPopup_Show("WEIZPVP_CONFIRM_RESET_PLAYER_DB")
 end
 
 --> TOGGLE OPTIONS
@@ -872,19 +859,30 @@ function NS.ToggleOptions()
         InterfaceOptionsFrame:Hide()
     else
         InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- open options to ADDON_NAME
-        local _, Smax = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues() -- Get scrollbar min/max
-        InterfaceOptionsFrameAddOnsListScrollBar:SetValue(Smax) -- Set scrollbar to max (top)
+        local _, max = InterfaceOptionsFrameAddOnsListScrollBar:GetMinMaxValues() -- Get scrollbar min/max
+        InterfaceOptionsFrameAddOnsListScrollBar:SetValue(max) -- Set scrollbar to max (top)
         InterfaceOptionsFrame_OpenToCategory(ADDON_NAME) -- open options again (wow bug workaround)
     end
 end
 
 --> VERSION UPGRADE CHECK
 function NS.VersionUpgradeCheck()
-    if not _G._weizpvp_addon then -- check for major upgrade (pre-1.9.0)
-        _G._weizpvp_addon = {
-            Database_Version = weizPVP.Database_Version,
-            Addon_Version = weizPVP.Addon_Version
-        }
+    local upgrade = false
+    -- version checks
+    if not _G._weizpvp_global_info then -- check for migration (pre-1.9.1)
+        if _G._weizpvp_addon then -- check for upgrade (pre-1.9.0)
+            wipe(_G._weizpvp_addon)
+        else
+            upgrade = true
+        end
+    end
+    -- Update addon info
+    _G._weizpvp_global_info = {
+        Database_Version = weizPVP.Database_Version,
+        Addon_Version = weizPVP.Addon_Version
+    }
+    -- Upgrade / Wipe ?
+    if upgrade == true then
         NS.globalDB.global = {}
         NS.databaseReset = true
     end
@@ -893,7 +891,7 @@ end
 --|> STATIC POPUPS
 -------------------------------------------------------------------------------
 --> Reset All Popup
-StaticPopupDialogs["WEIZPVP_CONFIRM_RESETALL"] = {
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESET_ALL"] = {
     text = "Are you sure you want to reset all weizPVP settings and wipe its player data?\n|cffff0000This will reload your UI.|r",
     button1 = YES,
     button2 = NO,
@@ -903,7 +901,10 @@ StaticPopupDialogs["WEIZPVP_CONFIRM_RESETALL"] = {
         wipe(NS.Options)
         wipe(NS.PlayerDB)
         wipe(NS.KosList)
-        Realod_UI()
+        wipe(_weizpvp_chardb)
+        wipe(_weizpvp_global_info)
+        wipe(_weizpvp_globaldb)
+        Reload_UI()
     end,
     timeout = 0,
     whileDead = 1,
@@ -915,14 +916,16 @@ StaticPopupDialogs["WEIZPVP_CONFIRM_RESETALL"] = {
     end
 }
 --> Reset Options
-StaticPopupDialogs["WEIZPVP_CONFIRM_RESETOPTIONS"] = {
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESET_OPTIONS"] = {
     text = "Are you sure you want to reset the weizPVP options & settings?\n|cffff0000This will reload your UI.|r",
     button1 = YES,
     button2 = NO,
     OnAccept = function()
-        wipe(NS.charDB.Options)
+        if NS.charDB.profile and NS.charDB.profile.Options then
+            wipe(NS.charDB.profile.Options)
+        end
         wipe(NS.Options)
-        Realod_UI()
+        Reload_UI()
     end,
     timeout = 0,
     whileDead = 1,
@@ -933,14 +936,18 @@ StaticPopupDialogs["WEIZPVP_CONFIRM_RESETOPTIONS"] = {
         self:SetFrameLevel(99)
     end
 }
---> Reset Player Databsae
-StaticPopupDialogs["WEIZPVP_CONFIRM_RESETPLAYERDB"] = {
-    text = "Are you sure you want to wipe weizPVP's player database?",
+--> Reset Player Database
+StaticPopupDialogs["WEIZPVP_CONFIRM_RESET_PLAYER_DB"] = {
+    text = "Are you sure you want to wipe the player database?",
     button1 = YES,
     button2 = NO,
     OnAccept = function()
         wipe(NS.globalDB)
         wipe(NS.PlayerDB)
+        wipe(NS.PlayerActiveCache)
+        wipe(_weizpvp_globaldb)
+        NS.globalDB = LibStub("AceDB-3.0"):New("_weizpvp_globaldb", {}, false)
+        NS.PlayerDB = NS.globalDB.global
         NS.ClearListData()
     end,
     timeout = 0,
@@ -954,7 +961,7 @@ StaticPopupDialogs["WEIZPVP_CONFIRM_RESETPLAYERDB"] = {
 }
 --> Version Update - Options and DB reset
 StaticPopupDialogs["WEIZPVP_UPGRADE_DB_RESET"] = {
-    text = "|cffFFA200weizPVP's options and data have been reset!|r\n|cffaaaaaa(Details in chat)|r",
+    text = "|cffFFA200weizPVP options and data have been reset due to some major updates!|r\n|cffaaaaaa(Details in chat)|r",
     button1 = OKAY,
     button2 = nil,
     OnAccept = function()

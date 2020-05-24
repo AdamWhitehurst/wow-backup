@@ -1,56 +1,4 @@
 local frames = {
-    ["ContainerFrame1"] = {},
-    ["ContainerFrame1.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame1"
-    },
-    ["ContainerFrame2"] = {},
-    ["ContainerFrame2.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame2"
-    },
-    ["ContainerFrame3"] = {},
-    ["ContainerFrame3.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame3"
-    },
-    ["ContainerFrame4"] = {},
-    ["ContainerFrame4.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame4"
-    },
-    ["ContainerFrame5"] = {},
-    ["ContainerFrame5.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame5"
-    },
-    ["ContainerFrame6"] = {},
-    ["ContainerFrame6.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame6"
-    },
-    ["ContainerFrame7"] = {},
-    ["ContainerFrame7.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame7"
-    },
-    ["ContainerFrame8"] = {},
-    ["ContainerFrame8.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame8"
-    },
-    ["ContainerFrame9"] = {},
-    ["ContainerFrame9.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame9"
-    },
-    ["ContainerFrame10"] = {},
-    ["ContainerFrame10.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame10"
-    },
-    ["ContainerFrame11"] = {},
-    ["ContainerFrame11.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame11"
-    },
-    ["ContainerFrame12"] = {},
-    ["ContainerFrame12.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame12"
-    },
-    ["ContainerFrame13"] = {},
-    ["ContainerFrame13.ClickableTitleFrame"] = {
-        DriftDelegate = "ContainerFrame13"
-    },
     ["CharacterFrame"] = {
         DriftTabs = {
             "CharacterFrameTab1",
@@ -166,6 +114,7 @@ local frames = {
     ["ColorPickerFrame"] = {},
     ["AzeriteEmpoweredItemUI"] = {},
     ["AzeriteEssenceUI"] = {},
+    ["AzeriteRespecFrame"] = {},
     ["InspectFrame"] = {},
     ["ItemSocketingFrame"] = {},
     ["BarberShopFrame"] = {},
@@ -225,6 +174,8 @@ local function eventHandler(self, event, ...)
     elseif event == "VARIABLES_LOADED" then
         -- Setup config
         DriftHelpers:SetupConfig()
+    elseif event == "BANKFRAME_OPENED" then
+        DriftHelpers:FixBags()
     else
         DriftHelpers:BroadcastReset(frames)
     end
@@ -236,4 +187,5 @@ Drift:SetScript("OnEvent", eventHandler)
 Drift:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
 Drift:RegisterEvent("PET_SPECIALIZATION_CHANGED")
 Drift:RegisterEvent("VARIABLES_LOADED")
+Drift:RegisterEvent("BANKFRAME_OPENED")
 DriftHelpers:Wait(1, Drift.RegisterEvent, Drift, "ADDON_LOADED")

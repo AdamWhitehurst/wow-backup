@@ -2,20 +2,18 @@
 --|> Bars
 --: Manages the display of the bars and their elements representing detected players
 -------------------------------------------------------------------------------
---> Namespace
 local _, NS = ...
---> Upvalues
 local UIFrameFadeIn = UIFrameFadeIn
 local UIFrameFadeOut = UIFrameFadeOut
 local InCombatLockdown = InCombatLockdown
 local GetTime = GetTime
+local XEN = XEN
+local tostring = tostring
 
 --|> LIBS
 -------------------------------------------------------------------------------
 local SM = LibStub:GetLibrary("LibSharedMedia-3.0")
 
---|> GLOBALS
--------------------------------------------------------------------------------
 NS.Bars = {}
 NS.Buttons = {}
 NS.Icons = {}
@@ -35,16 +33,14 @@ function NS.CreateBars()
         NS.Bars[k].name = nil
         NS.Bars[k].GUID = nil
         NS.Bars[k].Target = nil
-        -- BAR ICONS
         NS.Bars[k].RoleIcon = NS.Bars[k]:CreateTexture(nil, "ARTWORK", nil, 2)
         NS.Bars[k].DEADIcon = NS.Bars[k]:CreateTexture(nil, "ARTWORK", nil, 2)
-        NS.Bars[k]:SetHeight(NS.Options.Bars.RowHeight)
-        -- If  its's the first bar, just anchor it to the top
+        NS.Bars[k]:SetHeight(XEN.ScalePixelsToUi(NS.Options.Bars.RowHeight))
+        -- index check
         if k == 1 then
             NS.Bars[k]:SetPoint("TOP", NS.ListFrame, "TOP")
-            NS.Bars[k]:SetHeight(NS.Options.Bars.RowHeight)
-        else -- Bars after 1 using an offset to space themselves out
-            NS.Bars[k]:SetPoint("TOP", NS.Bars[(k - 1)], "BOTTOM", 0, -1)
+        else
+            NS.Bars[k]:SetPoint("TOP", NS.Bars[(k - 1)], "BOTTOM", 0, (-1 * XEN.ScalePixelsToUi(NS.Options.Bars.VerticalSpacing)))
         end
         NS.Bars[k]:SetPoint("RIGHT", NS.ScrollFrame, "RIGHT")
         NS.Bars[k]:SetPoint("LEFT", NS.ScrollFrame, "LEFT")
@@ -61,19 +57,22 @@ function NS.CreateBars()
         NS.Bars[k].Highlight:SetColorTexture(1, 1, 1)
         NS.Bars[k].Highlight:SetBlendMode("ADD")
         NS.Bars[k].Highlight:SetAlpha(0)
+        -- KOS
         NS.Bars[k].KOSRibbon = NS.Bars[k]:CreateTexture(nil, "ARTWORK", nil, 1)
         NS.Bars[k].KOSRibbon:SetTexture("Interface\\Addons\\weizPVP\\Addons\\KOS\\Media\\kos_ribbon.tga")
         NS.Bars[k].KOSRibbon:SetPoint("LEFT", NS.Bars[k], "LEFT")
         NS.Bars[k].KOSRibbon:SetPoint("TOP", NS.Bars[k], "TOP")
         NS.Bars[k].KOSRibbon:SetPoint("BOTTOM", NS.Bars[k], "BOTTOM")
-        NS.Bars[k].KOSRibbon:SetWidth(NS.Options.Bars.RowHeight)
+        NS.Bars[k].KOSRibbon:SetWidth(XEN.ScalePixelsToUi(NS.Options.Bars.RowHeight))
         NS.Bars[k].KOSRibbon:SetAlpha(1)
-        NS.Bars[k].RoleIcon:SetPoint("LEFT", NS.Bars[k], "LEFT", 2, 0)
-        NS.Bars[k].RoleIcon:SetSize(16, 16)
+        -- ROLE ICON
+        NS.Bars[k].RoleIcon:SetPoint("LEFT", NS.Bars[k], "LEFT", XEN.ScalePixelsToUi(2), 0)
+        NS.Bars[k].RoleIcon:SetSize(XEN.ScalePixelsToUi(18), XEN.ScalePixelsToUi(18))
         NS.Bars[k].RoleIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga", false)
+        -- TEXTS
         NS.Bars[k].NameText:SetFont(SM:Fetch("font", NS.Options.Bars.NameFont), NS.Options.Bars.NameFontSize, "OUTLINE")
-        NS.Bars[k].NameText:SetHeight(NS.Options.Bars.NameFontSize)
-        NS.Bars[k].NameText:SetPoint("LEFT", NS.Bars[k].RoleIcon, "RIGHT", 2, 0)
+        NS.Bars[k].NameText:SetHeight(XEN.ScalePixelsToUi(NS.Options.Bars.NameFontSize))
+        NS.Bars[k].NameText:SetPoint("LEFT", NS.Bars[k].RoleIcon, "RIGHT", XEN.ScalePixelsToUi(2), 0)
         NS.Bars[k].NameText:SetDrawLayer("OVERLAY", 7)
         NS.Bars[k].NameText:SetJustifyH("LEFT")
         NS.Bars[k].NameText:SetJustifyV("MIDDLE")
@@ -81,27 +80,28 @@ function NS.CreateBars()
         NS.Bars[k].NameText:SetShadowColor(0.2, 0.2, 0.2, 0.4)
         NS.Bars[k].NameText:SetShadowOffset(1, -1)
         NS.Bars[k].LevelText:SetFont(SM:Fetch("font", NS.Options.Bars.LevelFont), NS.Options.Bars.LevelFontSize, "OUTLINE")
-        NS.Bars[k].LevelText:SetHeight(NS.Options.Bars.LevelFontSize)
-        NS.Bars[k].LevelText:SetPoint("LEFT", NS.Bars[k].NameText, "RIGHT", 2, 0)
+        NS.Bars[k].LevelText:SetHeight(XEN.ScalePixelsToUi(NS.Options.Bars.LevelFontSize))
+        NS.Bars[k].LevelText:SetPoint("LEFT", NS.Bars[k].NameText, "RIGHT", XEN.ScalePixelsToUi(2), 0)
         NS.Bars[k].LevelText:SetJustifyH("LEFT")
         NS.Bars[k].LevelText:SetTextColor(1, 1, 1, 1)
         NS.Bars[k].LevelText:SetShadowColor(0, 0, 0, 0)
         NS.Bars[k].GuildText:SetFont(SM:Fetch("font", NS.Options.Bars.GuildFont), NS.Options.Bars.GuildFontSize, "OUTLINE")
-        NS.Bars[k].GuildText:SetHeight(NS.Options.Bars.GuildFontSize)
+        NS.Bars[k].GuildText:SetHeight(XEN.ScalePixelsToUi(NS.Options.Bars.GuildFontSize))
         NS.Bars[k].GuildText:SetMaxLines(1)
-        NS.Bars[k].GuildText:SetPoint("RIGHT", NS.Bars[k], "RIGHT", -4, 0)
+        NS.Bars[k].GuildText:SetPoint("RIGHT", NS.Bars[k], "RIGHT", -1 * XEN.ScalePixelsToUi(4), 0)
         NS.Bars[k].GuildText:SetJustifyH("RIGHT")
         NS.Bars[k].GuildText:SetJustifyV("MIDDLE")
         NS.Bars[k].GuildText:SetTextColor(1, 1, 1, 1)
         NS.Bars[k].GuildText:SetShadowColor(0, 0, 0, 0)
-        NS.Bars[k].DEADIcon:SetPoint("LEFT", NS.Bars[k].LevelText, "RIGHT", 4, 0)
-        NS.Bars[k].DEADIcon:SetSize(NS.Options.Bars.RowHeight, NS.Options.Bars.RowHeight)
+        -- DEAD ICON
+        NS.Bars[k].DEADIcon:SetPoint("LEFT", NS.Bars[k].LevelText, "RIGHT", XEN.ScalePixelsToUi(4), 0)
+        NS.Bars[k].DEADIcon:SetSize(XEN.ScalePixelsToUi(NS.Options.Bars.RowHeight), XEN.ScalePixelsToUi(NS.Options.Bars.RowHeight))
         NS.Bars[k].DEADIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\dead.tga", false)
         NS.Bars[k].DEADIcon:Hide()
         NS.Buttons[k] = CreateFrame("Button", "weizPVP-SecureButton" .. k, NS.Bars[k], "InsecureActionButtonTemplate")
         NS.Buttons[k]:SetPoint("TOPLEFT", NS.Bars[k], "TOPLEFT")
         NS.Buttons[k]:SetPoint("TOPRIGHT", NS.Bars[k], "TOPRIGHT")
-        NS.Buttons[k]:SetPoint("BOTTOM", NS.Bars[k], "BOTTOM", 0, -NS.Options.Bars.VerticalSpacing)
+        NS.Buttons[k]:SetPoint("BOTTOM", NS.Bars[k], "BOTTOM", 0, -1 * XEN.ScalePixelsToUi(NS.Options.Bars.VerticalSpacing))
         NS.Buttons[k]:SetAlpha(0)
         NS.Buttons[k].id = k
         NS.Buttons[k]:SetScript(
@@ -139,11 +139,11 @@ function NS.CreateBars()
         )
     end
     NS.TargetedIcon = NS.OuterIconsFrame:CreateTexture(nil, "ARTWORK")
-    NS.TargetedIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\target.tga")
-    NS.TargetedIcon:SetPoint("RIGHT", NS.Bars[1], "LEFT", 2, 0)
+    NS.TargetedIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Textures\\target.tga")
+    NS.TargetedIcon:SetPoint("RIGHT", NS.Bars[1], "LEFT", XEN.ScalePixelsToUi(2), 0)
     NS.TargetedIcon:SetBlendMode("BLEND")
-    NS.TargetedIcon:SetWidth(16)
-    NS.TargetedIcon:SetHeight(16)
+    NS.TargetedIcon:SetWidth(XEN.ScalePixelsToUi(18))
+    NS.TargetedIcon:SetHeight(XEN.ScalePixelsToUi(18))
     NS.TargetedIcon:SetAlpha(1)
     NS.TargetedIcon:Hide()
     NS.RefreshCurrentList()
@@ -154,7 +154,15 @@ local lastRowSelected = 1
 function NS.ChangeTargetIcon()
     local GUID = UnitGUID("target")
     if NS.PlayersOnBars[GUID] then
-        NS.TargetedIcon:SetPoint("RIGHT", NS.Bars[NS.PlayersOnBars[GUID]], "LEFT", 1, 0)
+        if NS.CoreFrame:GetLeft() < 8 then
+            NS.TargetedIcon:SetRotation(3.14159)
+            NS.TargetedIcon:ClearAllPoints()
+            NS.TargetedIcon:SetPoint("LEFT", NS.Bars[NS.PlayersOnBars[GUID]], "RIGHT", -1, 0)
+        else
+            NS.TargetedIcon:SetRotation(0)
+            NS.TargetedIcon:ClearAllPoints()
+            NS.TargetedIcon:SetPoint("RIGHT", NS.Bars[NS.PlayersOnBars[GUID]], "LEFT", 1, 0)
+        end
         NS.TargetedIcon:Show()
         NS.Bars[lastRowSelected]:SetStatusBarTexture(SM:Fetch("statusbar", NS.Options.Bars.Texture))
         NS.Bars[NS.PlayersOnBars[GUID]]:SetStatusBarTexture(SM:Fetch("statusbar", NS.Options.Bars.BarSolid))
@@ -185,7 +193,7 @@ function NS.ButtonPreClick(barID, MouseButton)
                 NS.Buttons[barID].Target = displayName
             end
         elseif MouseButton == "RightButton" then
-            NS.KOS.PlayerBarMenu_OnClick(NS.Bars[barID])
+            NS.PlayerBarMenu_OnClick(NS.Bars[barID])
         end
     end
 end

@@ -197,83 +197,61 @@ function DriftHelpers:ModifyFrames(frames)
         EncounterJournalTooltip:ClearAllPoints()
     end
 
-    -- Change UpdateContainerFrameAnchors to avoid unwanted movement
-    UpdateContainerFrameAnchors = function ()
-        -- This variable does not exist in classic
-        local MINIMUM_CONTAINER_OFFSET_X = MINIMUM_CONTAINER_OFFSET_X or 10
-
-        local containerFrameOffsetX = math.max(CONTAINER_OFFSET_X, MINIMUM_CONTAINER_OFFSET_X)
-        local frame, xOffset, yOffset, screenHeight, freeScreenHeight, leftMostPoint, column
-        local screenWidth = GetScreenWidth()
-        local containerScale = 1
-        local leftLimit = 0
-        if ( BankFrame:IsShown() ) then
-            leftLimit = BankFrame:GetRight() - 25
-        end
-
-        while ( containerScale > CONTAINER_SCALE ) do
-            screenHeight = GetScreenHeight() / containerScale
-            -- Adjust the start anchor for bags depending on the multibars
-            xOffset = containerFrameOffsetX / containerScale
-            yOffset = CONTAINER_OFFSET_Y / containerScale
-            -- freeScreenHeight determines when to start a new column of bags
-            freeScreenHeight = screenHeight - yOffset
-            leftMostPoint = screenWidth - xOffset
-            column = 1
-            local frameHeight;
-            for _, frameName in ipairs(ContainerFrame1.bags) do
-                frameHeight = _G[frameName]:GetHeight()
-                if ( freeScreenHeight < frameHeight ) then
-                    -- Start a new column
-                    column = column + 1
-                    leftMostPoint = screenWidth - ( column * CONTAINER_WIDTH * containerScale) - xOffset
-                    freeScreenHeight = screenHeight - yOffset
-                end
-                freeScreenHeight = freeScreenHeight - frameHeight - VISIBLE_CONTAINER_SPACING
-            end
-            if ( leftMostPoint < leftLimit ) then
-                containerScale = containerScale - 0.01
-            else
-                break
-            end
-        end
-
-        if ( containerScale < CONTAINER_SCALE ) then
-            containerScale = CONTAINER_SCALE
-        end
-
-        screenHeight = GetScreenHeight() / containerScale
-        -- Adjust the start anchor for bags depending on the multibars
-        xOffset = containerFrameOffsetX / containerScale
-        yOffset = CONTAINER_OFFSET_Y / containerScale
-        -- freeScreenHeight determines when to start a new column of bags
-        freeScreenHeight = screenHeight - yOffset
-        column = 0
-        for index, frameName in ipairs(ContainerFrame1.bags) do
-            -- Do nothing if frame has been moved by user
-            if not DriftPoints[frameName] then
-                frame = _G[frameName]
-                frame:ClearAllPoints() -- This is needed to avoid lua errors
-                -- frame:SetScale(containerScale)
-                if ( index == 1 ) then
-                    -- First bag
-                    frame:SetPoint("BOTTOMRIGHT", frame:GetParent(), "BOTTOMRIGHT", -xOffset, yOffset)
-                elseif ( freeScreenHeight < frame:GetHeight() ) then
-                    -- Start a new column
-                    column = column + 1
-                    freeScreenHeight = screenHeight - yOffset;
-                    frame:SetPoint("BOTTOMRIGHT", frame:GetParent(), "BOTTOMRIGHT", -(column * CONTAINER_WIDTH) - xOffset, yOffset)
-                else
-                    -- Anchor to the previous bag
-                    frame:SetPoint("BOTTOMRIGHT", ContainerFrame1.bags[index - 1], "TOPRIGHT", 0, CONTAINER_SPACING)
-                end
-                freeScreenHeight = freeScreenHeight - frame:GetHeight() - VISIBLE_CONTAINER_SPACING
-            end
-        end
-    end
+    -- Fix bags
+    DriftHelpers:FixBags()
 
     -- Reset everything in case there was a delay
     DriftHelpers:BroadcastReset(frames)
+end
+
+-- Fix bag lua errors
+function DriftHelpers:FixBags()
+    -- Set UpdateContainerFrameAnchors to do nothing
+    UpdateContainerFrameAnchorsO = UpdateContainerFrameAnchors
+    UpdateContainerFrameAnchors = function () end
+
+    -- Clear all points on all Containers
+    _G['ContainerFrame1']:ClearAllPoints()
+    _G['ContainerFrame1'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame2']:ClearAllPoints()
+    _G['ContainerFrame2'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame3']:ClearAllPoints()
+    _G['ContainerFrame3'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame4']:ClearAllPoints()
+    _G['ContainerFrame4'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame5']:ClearAllPoints()
+    _G['ContainerFrame5'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame6']:ClearAllPoints()
+    _G['ContainerFrame6'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame7']:ClearAllPoints()
+    _G['ContainerFrame7'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame8']:ClearAllPoints()
+    _G['ContainerFrame8'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame9']:ClearAllPoints()
+    _G['ContainerFrame9'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame10']:ClearAllPoints()
+    _G['ContainerFrame10'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame11']:ClearAllPoints()
+    _G['ContainerFrame11'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame12']:ClearAllPoints()
+    _G['ContainerFrame12'].ClickableTitleFrame:ClearAllPoints()
+
+    _G['ContainerFrame13']:ClearAllPoints()
+    _G['ContainerFrame13'].ClickableTitleFrame:ClearAllPoints()
+
+    -- Put back the original UpdateContainerFrameAnchors
+    UpdateContainerFrameAnchors = UpdateContainerFrameAnchorsO
 end
 
 DriftHelpers.waitTable = {}
@@ -335,6 +313,18 @@ local function createCheckbox(name, point, relativeFrame, relativePoint, xOffset
     return checkbox
 end
 
+local function createButton(name, point, relativeFrame, relativePoint, xOffset, yOffset, width, height, text, tooltipText, onClickFunction)
+    local button = CreateFrame("Button", name, relativeFrame, "GameMenuButtonTemplate")
+    button:SetPoint(point, relativeFrame, relativePoint, xOffset, yOffset)
+    button:SetSize(width, height)
+    button:SetText(text)
+    button:SetNormalFontObject("GameFontNormal")
+    button:SetHighlightFontObject("GameFontHighlight")
+    button.tooltipText = tooltipText
+    button:SetScript("OnClick", onClickFunction)
+    return button
+end
+
 local function createDragKeyDropdown(name, point, relativeFrame, relativePoint, xOffset, yOffset)
     local dropdown = CreateFrame("Frame", name, relativeFrame, "UIDropDownMenuTemplate")
     dropdown:SetPoint(point, relativeFrame, relativePoint, xOffset, yOffset)
@@ -387,21 +377,43 @@ function DriftHelpers:SetupConfig()
     DriftOptionsPanel.panel.name = "Drift"
     local driftOptionsTitle = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
     driftOptionsTitle:SetFontObject("GameFontNormalLarge")
-    driftOptionsTitle:SetText("Drift " .. GetAddOnMetadata("Drift", "Version"))
+    driftOptionsTitle:SetText("Drift")
     driftOptionsTitle:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 16, -15)
-    local driftOptionsInfo = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
-    driftOptionsInfo:SetFontObject("GameFontNormal")
-    driftOptionsInfo:SetText("by Jared Wasserman")
-    driftOptionsInfo:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 16, -45)
+
+    local driftOptionsDesc = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
+    driftOptionsDesc:SetFontObject("GameFontHighlight")
+    driftOptionsDesc:SetText("Modifies default UI frames so you can click and drag to move them around")
+    driftOptionsDesc:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 16, -45)
+
+    local driftOptionsVersionLabel = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
+    driftOptionsVersionLabel:SetFontObject("GameFontNormal")
+    driftOptionsVersionLabel:SetText("Version:")
+    driftOptionsVersionLabel:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 16, -90)
+
+    local driftOptionsVersionContent = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
+    driftOptionsVersionContent:SetFontObject("GameFontHighlight")
+    driftOptionsVersionContent:SetText(GetAddOnMetadata("Drift", "Version"))
+    driftOptionsVersionContent:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 75, -90)
+
+    local driftOptionsAuthorLabel = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
+    driftOptionsAuthorLabel:SetFontObject("GameFontNormal")
+    driftOptionsAuthorLabel:SetText("Author:")
+    driftOptionsAuthorLabel:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 16, -110)
+
+    local driftOptionsAuthorContent = DriftOptionsPanel.panel:CreateFontString(nil, "BACKGROUND")
+    driftOptionsAuthorContent:SetFontObject("GameFontHighlight")
+    driftOptionsAuthorContent:SetText("Jared Wasserman")
+    driftOptionsAuthorContent:SetPoint("TOPLEFT", DriftOptionsPanel.panel, "TOPLEFT", 75, -110)
+
     InterfaceOptions_AddCategory(DriftOptionsPanel.panel)
 
     -- Make a child panel
     DriftOptionsPanel.childpanel = CreateFrame("Frame", "DriftOptionsPanelChild", DriftOptionsPanel.panel)
-    DriftOptionsPanel.childpanel.name = "Options"
+    DriftOptionsPanel.childpanel.name = "General Options"
     DriftOptionsPanel.childpanel.parent = DriftOptionsPanel.panel.name
     local driftOptionsChildTitle = DriftOptionsPanel.childpanel:CreateFontString(nil, "BACKGROUND")
     driftOptionsChildTitle:SetFontObject("GameFontNormalLarge")
-    driftOptionsChildTitle:SetText("Options")
+    driftOptionsChildTitle:SetText("General Options")
     driftOptionsChildTitle:SetPoint("TOPLEFT", DriftOptionsPanel.childpanel, "TOPLEFT", 16, -15)
     InterfaceOptions_AddCategory(DriftOptionsPanel.childpanel)
 
@@ -414,7 +426,7 @@ function DriftHelpers:SetupConfig()
         14,
         -50,
         " Lock Frames",
-        "If frames are locked, the Drag Key must be pressed while dragging frames.",
+        "While frames are locked, the Drag Key must be pressed when starting to drag a frame.",
         nil
     )
     DriftOptionsPanel.config.framesAreLockedCheckbox:SetChecked(DriftOptions.framesAreLocked)
@@ -422,7 +434,7 @@ function DriftHelpers:SetupConfig()
     local dragKeyDropdownTitle = DriftOptionsPanel.childpanel:CreateFontString(nil, "BACKGROUND")
     dragKeyDropdownTitle:SetFontObject("GameFontNormal")
     dragKeyDropdownTitle:SetText("Drag Key")
-    dragKeyDropdownTitle:SetPoint("TOPLEFT", DriftOptionsPanel.childpanel, "TOPLEFT", 20, -92)
+    dragKeyDropdownTitle:SetPoint("TOPLEFT", DriftOptionsPanel.childpanel, "TOPLEFT", 20, -82)
 
     DriftOptionsPanel.config.dragKeyDropdown = createDragKeyDropdown(
         "DragKeyDropdown",
@@ -430,9 +442,37 @@ function DriftHelpers:SetupConfig()
         DriftOptionsPanel.childpanel,
         "TOPLEFT",
         0,
-        -110
+        -100
     )
     DriftOptions.dragKeyFunc = getDragKeyFuncFromOrdinal(DriftOptions.dragKey)
+
+    StaticPopupDialogs["DRIFT_RESET_POSITIONS"] = {
+        text = "Are you sure you want to reset all frames to their original positions?",
+        button1 = "Yes",
+        button2 = "No",
+        OnAccept = function()
+            DriftPoints = {}
+        end,
+        timeout = 0,
+        whileDead = true,
+        hideOnEscape = true,
+        preferredIndex = 3, -- avoid UI taint
+    }
+    DriftOptionsPanel.config.resetButton = createButton(
+        "ResetButton",
+        "TOPLEFT",
+        DriftOptionsPanel.childpanel,
+        "TOPLEFT",
+        15,
+        -145,
+        160,
+        25,
+        "Reset Frame Positions",
+        "Reset all frames to their original positions",
+        function (self, button, down)
+            StaticPopup_Show("DRIFT_RESET_POSITIONS")
+        end
+    )
 
     -- Update logic
     DriftOptionsPanel.panel.okay = function (self)

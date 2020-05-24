@@ -1,13 +1,16 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-	<Script file="Modules/Alerts.lua" />
-	<Script file="Modules/Frames.lua" />
-	<Script file="Modules/Bars.lua" />
-	<Script file="Modules/Buttons.lua" />
-	<Script file="Modules/StatusBar.lua" />
-	<Script file="Modules/Config.lua" />
-	<Script file="Modules/Events.lua" />
-	<Script file="Modules/Lists.lua" />
-	<Script file="Modules/DataProcessing.lua" />
-	<Script file="Modules/LDB.lua" />
+  <Script file="Alerts.lua" />
+  <Script file="Frames.lua" />
+  <Script file="Bars.lua" />
+  <Script file="Buttons.lua" />
+  <Script file="StatusBar.lua" />
+  <Script file="Config.lua" />
+  <Script file="Events.lua" />
+  <Script file="CombatLog.lua" />
+  <Script file="Lists.lua" />
+  <Script file="DataProcessing.lua" />
+  <Script file="LDB.lua" />
+  <Script file="UI.lua" />
+  <Include file="PlayerBarMenu.xml" />
 </Ui>

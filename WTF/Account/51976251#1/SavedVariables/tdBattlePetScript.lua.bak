@@ -1,0 +1,39 @@
+
+TD_DB_BATTLEPETSCRIPT_GLOBAL = {
+	["global"] = {
+		["version"] = 80100.01,
+		["scripts"] = {
+			["AllInOne"] = {
+			},
+			["FirstEnemy"] = {
+			},
+			["Base"] = {
+			},
+			["Rematch"] = {
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Sparkele - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
+		["Nilaaru - Tichondrius"] = "Default",
+		["Nullaaru - Tichondrius"] = "Default",
+		["Wilowisp - Tichondrius"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["pluginOrders"] = {
+				"Rematch", -- [1]
+				"Base", -- [2]
+				"FirstEnemy", -- [3]
+				"AllInOne", -- [4]
+			},
+		},
+	},
+}

@@ -19,7 +19,7 @@ local Round = Round
 --> GET UI MULTIPLIER
 ---------------------------------------
 function XEN.GetUiMultiplier()
-    XEN._display.UiMultiplier = 1 / (select(2, GetCurrentScaledResolution()) / GetScreenHeight())
+    XEN._display.UiMultiplier = 1 / (select(2, GetPhysicalScreenSize()) / GetScreenHeight())
     return XEN._display.UiMultiplier
 end
 
@@ -54,12 +54,12 @@ end
 -------------------------------------------------------------------------------
 --|> POSITIONING FUNCTIONS
 -------------------------------------------------------------------------------
---> SNAP FRAME TO PIXEL BOUNDRY
+--> SNAP FRAME TO PIXEL BOUNDARY
 -------------------------------------------------------------------------------
 function XEN.SnapFrameToPixelBoundary(frame)
     if not frame then
         return
-    elseif frame:IsProtected() or frame:GetParent():IsProtected() then
+    elseif frame:IsProtected() then
         return
     elseif not frame:GetLeft() then
         return
@@ -100,7 +100,7 @@ local function ScaleFontSize(font)
     end
 end
 
-local function RecaleRegionSize(region)
+local function RescaleRegionSize(region)
     if not region then
         return
     end
@@ -117,53 +117,58 @@ local function RescaleRegionsInFrame(frame)
     --> Run for each region
     for i = 1, numR do
         regions[i] = select(i, frame:GetRegions())
-        --> Rescale
+        -- Rescale
         if not regions[i].rescaled then
-            --> Rescale multiple widget types
+            -- Rescale multiple widget types
             if regions[i]:GetObjectType() == "FontString" then --> Get if font
                 ScaleFontSize(regions[i])
             else
-                RecaleRegionSize(regions[i])
+                RescaleRegionSize(regions[i])
             end
-            --> Scale anchor points
             ScaleAnchorPoints(regions[i])
         end
     end
 end
 
+--> RESCALE FRAME AND CHILDREN
 function XEN.RescaleFrameAndChildren(frame)
-    --> input check
-    if (not frame) then
-        return nil
+    -- input check
+    if (not frame) or frame:IsProtected() then
+        return
     end
-
-    if not frame.rescaled then --> rescale check
-        --> Rescale frame
-        -------------------------------------------------------
-        RecaleRegionSize(frame)
+    if not frame.rescaled then -- rescale check
+        -- Rescale frame
+        RescaleRegionSize(frame)
         frame.rescaled = true
     end
-
-    --> Rescale Frame's Children
-    -------------------------------------------------------
+    -- Rescale Frame's Children
     local numC = frame:GetNumChildren()
     local children = {}
     for i = 1, numC do
         children[i] = select(i, frame:GetChildren())
-        --> Rescale
+        -- Rescale
         if not children[i].rescaled then
-            --> Set rescaled height and width
-            RecaleRegionSize(children[i])
-            --> Scale anchor points
+            -- Set rescaled height and width
+            RescaleRegionSize(children[i])
+            -- Scale anchor points
             ScaleAnchorPoints(children[i])
             children[i].rescaled = true
-            --> Check regions on child frames
+            -- Check regions on child frames
             RescaleRegionsInFrame(children[i])
         end
     end
-    --> Rescale Frame's Regions
-    -------------------------------------------------------
+    -- Rescale Frame's Regions
     RescaleRegionsInFrame(frame)
     XEN.SnapFrameToPixelBoundary(frame)
     return true
+end
+
+--> RESCALE FRAME
+function XEN.ResizeFrameToUiScale(frame)
+    -- input check
+    if (not frame) or (not frame.rescaled) then
+        return
+    end
+    RescaleRegionSize(frame)
+    return
 end

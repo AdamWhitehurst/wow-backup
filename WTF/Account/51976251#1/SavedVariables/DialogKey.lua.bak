@@ -1,14 +1,20 @@
 
 DialogKeyDB = {
 	["profileKeys"] = {
-		["Andalsa - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
-		["Andallsa - Tichondrius"] = "Default",
-		["Arndoss - Tichondrius"] = "Default",
+		["Sparkele - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Nilaaru - Tichondrius"] = "Default",
 		["Sparkwizz - Tichondrius"] = "Default",
+		["Wilowisp - Tichondrius"] = "Default",
+		["Nullaaru - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
 	},
 	["global"] = {
 		["shownBindWarning"] = true,

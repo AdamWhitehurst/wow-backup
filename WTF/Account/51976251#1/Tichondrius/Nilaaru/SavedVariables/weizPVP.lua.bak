@@ -1,0 +1,25 @@
+
+_weizpvp_chardb = {
+	["profileKeys"] = {
+		["Nilaaru - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Options"] = {
+				["Frames"] = {
+					["Point"] = "BOTTOMRIGHT",
+					["Width"] = 415.1026000976563,
+					["Y"] = 146.632568359375,
+					["X"] = 0,
+					["Header"] = {
+						["Point"] = "BOTTOMRIGHT",
+						["Width"] = 415.1026000976563,
+						["Y"] = 190.3931579589844,
+						["X"] = 0,
+					},
+					["Height"] = 43.76058197021484,
+				},
+			},
+		},
+	},
+}

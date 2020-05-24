@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 --|> XEN: Core
 -------------------------------------------------------------------------------
-local ADDON_NAME, NS = ...
+local _, NS = ...
 
 --|> Upvalue Globals
 -------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ function XEN.UpdateDisplayInfo()
     XEN._display.xFactor = (768 / XEN._display.ScreenWidth) * (XEN._display.ScreenWidth / XEN._display.ScreenHeight)
     XEN._display.yFactor = 768 / XEN._display.ScreenHeight
     XEN._display.UIScale = UIParent:GetScale()
-    XEN._display.UiMultiplier = 1 / (select(2, GetCurrentScaledResolution()) / GetScreenHeight())
+    XEN._display.UiMultiplier = XEN.GetUiMultiplier()
     XEN._display.DPIScale = GetScreenDPIScale
     XEN._display.EffectiveScale = UIParent:GetEffectiveScale()
 end

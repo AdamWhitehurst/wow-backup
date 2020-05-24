@@ -2,6 +2,7 @@
 OneRing_Config = {
 	["CharProfiles"] = {
 		["Tichondrius-Zandro-3"] = "default",
+		["Tichondrius-Andalsam-2"] = "default",
 	},
 	["_GameVersion"] = "8.3.0",
 	["_OPieVersion"] = "Walnut 6 (3.101)",
@@ -9,12 +10,14 @@ OneRing_Config = {
 		["default"] = {
 			["RingAtMouse"] = true,
 			["Bindings"] = {
+				["Misc"] = "BUTTON4",
 				["Travel"] = "BUTTON5",
+				["DruidFeral"] = false,
 			},
 			["RingOptions"] = {
-				["Travel#XTRotationPeriod"] = 1,
-				["Travel#XTScaleSpeed"] = 4,
 				["Travel#RingScale"] = 1.200000047683716,
+				["Travel#XTScaleSpeed"] = 4,
+				["Travel#XTRotationPeriod"] = 1,
 				["Travel#XTPointerSpeed"] = 4,
 				["Travel#XTZoomTime"] = 0.1000000014901161,
 				["Travel#MISpinOnHide"] = false,
@@ -23,11 +26,16 @@ OneRing_Config = {
 	},
 	["PersistentStorage"] = {
 		["RingKeeper"] = {
+			["Misc"] = {
+				["name"] = "Misc",
+				["save"] = true,
+				["hotkey"] = "BUTTON4",
+			},
 			["Travel"] = {
 				{
 					"mount", -- [1]
-					131, -- [2]
-					["sliceToken"] = "ABue4XcPmHr",
+					522, -- [2]
+					["sliceToken"] = "ABue4B7p5Mr",
 				}, -- [1]
 				{
 					"mount", -- [1]

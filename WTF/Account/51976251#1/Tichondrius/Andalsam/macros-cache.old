@@ -43,6 +43,10 @@ VER 3 0100000000000017 "Regrowth" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@player] Regrowth;
 END
+VER 3 0100000000000018 "Self RC" "INV_MISC_QUESTIONMARK"
+#showtooltip Remove Corruption
+/cast [@target,friendly][@player] Remove Corruption
+END
 VER 3 0100000000000016 "SolarWrath" "INV_MISC_QUESTIONMARK"
 #showtooltip Solar Wrath
 /cast [nostance:4] Moonkin form;[stance:4] Solar Wrath;

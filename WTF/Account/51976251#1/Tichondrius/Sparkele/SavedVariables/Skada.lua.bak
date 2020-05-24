@@ -1,0 +1,2110 @@
+
+SkadaPerCharDB = {
+	["total"] = {
+		["healingabsorbed"] = 0,
+		["alertDamage"] = 0,
+		["ccbreaks"] = 0,
+		["time"] = 423,
+		["interrupts"] = 0,
+		["ffdamagedone"] = 0,
+		["power"] = {
+		},
+		["damage"] = 2032,
+		["players"] = {
+			{
+				["healingabsorbed"] = 0,
+				["dispells"] = 0,
+				["class"] = "PRIEST",
+				["damaged"] = {
+				},
+				["auras"] = {
+					["Shadow Word: Pain"] = {
+						["name"] = "Shadow Word: Pain",
+						["active"] = 0,
+						["school"] = 32,
+						["id"] = 589,
+						["auratype"] = "DEBUFF",
+						["uptime"] = 241,
+					},
+				},
+				["role"] = "NONE",
+				["ffdamagedone"] = 0,
+				["overhealing"] = 106,
+				["interrupts"] = 0,
+				["healingspells"] = {
+					["Gift of the Naaru"] = {
+						["shielding"] = 0,
+						["id"] = 59544,
+						["healing"] = 30,
+						["min"] = 0,
+						["name"] = "Gift of the Naaru",
+						["absorbed"] = 0,
+						["critical"] = 0,
+						["max"] = 8,
+						["overhealing"] = 26,
+						["hits"] = 7,
+					},
+					["Flash Heal"] = {
+						["shielding"] = 0,
+						["id"] = 2061,
+						["healing"] = 33,
+						["min"] = 13,
+						["name"] = "Flash Heal",
+						["absorbed"] = 0,
+						["critical"] = 0,
+						["max"] = 20,
+						["overhealing"] = 80,
+						["hits"] = 2,
+					},
+				},
+				["damagetaken"] = 797,
+				["deathlog"] = {
+					{
+						["ts"] = 1589155396.338,
+						["amount"] = -9,
+						["hp"] = 223,
+						["spellid"] = 88163,
+						["srcname"] = "Skittering Crawler",
+					}, -- [1]
+					{
+						["ts"] = 1589155398.368,
+						["amount"] = -9,
+						["hp"] = 214,
+						["srcname"] = "Skittering Crawler",
+						["spellid"] = 88163,
+					}, -- [2]
+					{
+						["ts"] = 1589155400.448,
+						["amount"] = -8,
+						["hp"] = 205,
+						["spellid"] = 88163,
+						["srcname"] = "Skittering Crawler",
+					}, -- [3]
+					{
+						["ts"] = 1589155429.917,
+						["amount"] = -10,
+						["hp"] = 245,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [4]
+					{
+						["ts"] = 1589155431.907,
+						["amount"] = -10,
+						["hp"] = 235,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [5]
+					{
+						["ts"] = 1589155433.887,
+						["amount"] = -10,
+						["hp"] = 225,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [6]
+					{
+						["ts"] = 1589155435.887,
+						["amount"] = -7,
+						["hp"] = 215,
+						["spellid"] = 88163,
+						["srcname"] = "Angry Murloc",
+					}, -- [7]
+					{
+						["ts"] = 1589155437.897,
+						["amount"] = -9,
+						["hp"] = 208,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [8]
+					{
+						["ts"] = 1589155340.052,
+						["amount"] = -7,
+						["hp"] = 225,
+						["spellid"] = 88163,
+						["srcname"] = "Angry Murloc",
+					}, -- [9]
+					{
+						["ts"] = 1589155342.072,
+						["amount"] = -8,
+						["hp"] = 218,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [10]
+					{
+						["ts"] = 1589155344.122,
+						["amount"] = -8,
+						["hp"] = 210,
+						["srcname"] = "Angry Murloc",
+						["spellid"] = 88163,
+					}, -- [11]
+					{
+						["ts"] = 1589155388.275,
+						["amount"] = -9,
+						["srcname"] = "Skittering Crawler",
+						["spellid"] = 88163,
+						["hp"] = 260,
+					}, -- [12]
+					{
+						["ts"] = 1589155390.335,
+						["amount"] = -11,
+						["hp"] = 251,
+						["spellid"] = 88163,
+						["srcname"] = "Skittering Crawler",
+					}, -- [13]
+					{
+						["ts"] = 1589155392.325,
+						["amount"] = -9,
+						["hp"] = 240,
+						["spellid"] = 88163,
+						["srcname"] = "Skittering Crawler",
+					}, -- [14]
+					{
+						["ts"] = 1589155394.328,
+						["amount"] = -8,
+						["hp"] = 231,
+						["spellid"] = 88163,
+						["srcname"] = "Skittering Crawler",
+					}, -- [15]
+					["pos"] = 9,
+				},
+				["damage"] = 2032,
+				["damagespells"] = {
+					["Shadow Word: Pain"] = {
+						["hitmin"] = 2,
+						["criticalamount"] = 90,
+						["id"] = 589,
+						["hitamount"] = 668,
+						["criticalmin"] = 6,
+						["hitmax"] = 6,
+						["min"] = 2,
+						["criticalmax"] = 10,
+						["critical"] = 12,
+						["hit"] = 178,
+						["totalhits"] = 190,
+						["school"] = 32,
+						["max"] = 10,
+						["damage"] = 758,
+					},
+					["Smite"] = {
+						["hitmin"] = 8,
+						["criticalamount"] = 145,
+						["id"] = 585,
+						["hitamount"] = 1118,
+						["criticalmin"] = 16,
+						["hitmax"] = 14,
+						["min"] = 8,
+						["criticalmax"] = 23,
+						["critical"] = 7,
+						["hit"] = 105,
+						["totalhits"] = 112,
+						["school"] = 2,
+						["max"] = 23,
+						["damage"] = 1263,
+					},
+					["Attack"] = {
+						["hitmin"] = 1,
+						["criticalamount"] = 4,
+						["id"] = 6603,
+						["hitamount"] = 7,
+						["criticalmin"] = 2,
+						["hitmax"] = 1,
+						["min"] = 1,
+						["criticalmax"] = 2,
+						["critical"] = 2,
+						["hit"] = 7,
+						["totalhits"] = 9,
+						["school"] = 1,
+						["max"] = 2,
+						["damage"] = 11,
+					},
+				},
+				["ffdamagedonetargets"] = {
+				},
+				["healed"] = {
+					["Player-11-0BCAEF48"] = {
+						["role"] = "NONE",
+						["name"] = "Sparkele",
+						["amount"] = 63,
+						["class"] = "PRIEST",
+						["shielding"] = 0,
+					},
+				},
+				["shielding"] = 0,
+				["id"] = "Player-11-0BCAEF48",
+				["maxhp"] = 288,
+				["ccbreaks"] = 0,
+				["damagetakenspells"] = {
+					["Fireball"] = {
+						["crushing"] = 0,
+						["id"] = 9053,
+						["damage"] = 10,
+						["max"] = 10,
+						["name"] = "Fireball",
+						["glancing"] = 0,
+						["totalhits"] = 1,
+						["critical"] = 0,
+						["blocked"] = 0,
+						["school"] = 4,
+						["resisted"] = 0,
+						["min"] = 10,
+						["absorbed"] = 0,
+					},
+					["Attack"] = {
+						["crushing"] = 0,
+						["id"] = 6603,
+						["absorbed"] = 0,
+						["glancing"] = 0,
+						["critical"] = 0,
+						["min"] = 4,
+						["school"] = 1,
+						["name"] = "Attack",
+						["blocked"] = 0,
+						["totalhits"] = 118,
+						["resisted"] = 0,
+						["max"] = 11,
+						["damage"] = 787,
+					},
+				},
+				["healing"] = 63,
+				["power"] = {
+				},
+				["name"] = "Sparkele",
+				["alertCount"] = 0,
+				["time"] = 346,
+				["alertDamage"] = 0,
+				["alert"] = {
+				},
+				["ffdamagedonespells"] = {
+				},
+			}, -- [1]
+		},
+		["deaths"] = 0,
+		["damagetaken"] = 797,
+		["shielding"] = 0,
+		["dispells"] = 0,
+		["healing"] = 63,
+		["auras"] = {
+		},
+		["starttime"] = 1589078878,
+		["mobtaken"] = 2032,
+		["overhealing"] = 106,
+		["name"] = "Total",
+		["alertCount"] = 0,
+		["mobs"] = {
+			["Angry Murloc"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 258,
+						["done"] = 190,
+						["class"] = "PRIEST",
+						["role"] = "NONE",
+					},
+				},
+				["hdone"] = 0,
+				["hdonespell"] = {
+				},
+				["taken"] = 258,
+				["done"] = 190,
+				["htaken"] = 0,
+				["htakenspell"] = {
+				},
+			},
+			["Surveyor Candress"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 102,
+						["done"] = 47,
+						["class"] = "PRIEST",
+						["role"] = "NONE",
+					},
+				},
+				["hdone"] = 0,
+				["hdonespell"] = {
+				},
+				["taken"] = 102,
+				["done"] = 47,
+				["htaken"] = 0,
+				["htakenspell"] = {
+				},
+			},
+			["Warning-Bronzebeard"] = {
+				["players"] = {
+				},
+				["hdone"] = 10,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+					["Gift of the Naaru"] = {
+						["min"] = 5,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 10,
+						["overhealing"] = 0,
+						["hits"] = 2,
+					},
+				},
+			},
+			["Mutated Root Lasher"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 401,
+						["done"] = 119,
+						["role"] = "NONE",
+						["class"] = "PRIEST",
+					},
+				},
+				["hdone"] = 0,
+				["done"] = 119,
+				["taken"] = 401,
+				["htakenspell"] = {
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+				},
+			},
+			["Whacks-Antonidas"] = {
+				["players"] = {
+				},
+				["hdone"] = 0,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 0,
+						["healing"] = 0,
+						["overhealing"] = 18,
+						["hits"] = 4,
+					},
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 0,
+						["healing"] = 0,
+						["overhealing"] = 18,
+						["hits"] = 4,
+					},
+				},
+			},
+			["Arcad-Lightbringer"] = {
+				["players"] = {
+				},
+				["hdone"] = 5,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 11,
+						["hits"] = 2,
+					},
+				},
+				["htaken"] = 5,
+				["hdonespell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 11,
+						["hits"] = 2,
+					},
+				},
+			},
+			["Cat"] = {
+				["players"] = {
+				},
+				["hdone"] = 0,
+				["hdonespell"] = {
+				},
+				["taken"] = 0,
+				["done"] = 0,
+				["htaken"] = 5,
+				["htakenspell"] = {
+					["Mend Pet"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 15,
+						["hits"] = 2,
+					},
+				},
+			},
+			["Blood Elf Scout"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 525,
+						["done"] = 158,
+						["class"] = "PRIEST",
+						["role"] = "NONE",
+					},
+				},
+				["hdone"] = 0,
+				["hdonespell"] = {
+				},
+				["taken"] = 525,
+				["done"] = 158,
+				["htaken"] = 0,
+				["htakenspell"] = {
+				},
+			},
+			["Vale Moth"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 222,
+						["done"] = 91,
+						["role"] = "NONE",
+						["class"] = "PRIEST",
+					},
+				},
+				["hdone"] = 0,
+				["done"] = 91,
+				["taken"] = 222,
+				["htakenspell"] = {
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+				},
+			},
+			["Mutated Owlkin"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 139,
+						["done"] = 45,
+						["role"] = "NONE",
+						["class"] = "PRIEST",
+					},
+				},
+				["hdone"] = 0,
+				["done"] = 45,
+				["taken"] = 139,
+				["htakenspell"] = {
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+				},
+			},
+			["Skittering Crawler"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 92,
+						["done"] = 63,
+						["class"] = "PRIEST",
+						["role"] = "NONE",
+					},
+				},
+				["hdone"] = 0,
+				["hdonespell"] = {
+				},
+				["taken"] = 92,
+				["done"] = 63,
+				["htaken"] = 0,
+				["htakenspell"] = {
+				},
+			},
+			["Daafna-Hyjal"] = {
+				["players"] = {
+				},
+				["hdone"] = 9,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 6,
+						["healing"] = 9,
+						["overhealing"] = 18,
+						["hits"] = 4,
+					},
+				},
+				["htaken"] = 9,
+				["hdonespell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 6,
+						["healing"] = 9,
+						["overhealing"] = 18,
+						["hits"] = 4,
+					},
+				},
+			},
+			["Akhris-Shandris"] = {
+				["players"] = {
+				},
+				["hdone"] = 10,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 6,
+						["healing"] = 10,
+						["overhealing"] = 25,
+						["hits"] = 6,
+					},
+				},
+				["htaken"] = 10,
+				["hdonespell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 6,
+						["healing"] = 10,
+						["overhealing"] = 25,
+						["hits"] = 6,
+					},
+				},
+			},
+			["Euphi"] = {
+				["players"] = {
+				},
+				["hdone"] = 5,
+				["hdonespell"] = {
+					["Mend Pet"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 15,
+						["hits"] = 2,
+					},
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 0,
+						["healing"] = 0,
+						["overhealing"] = 8,
+						["hits"] = 2,
+					},
+				},
+				["taken"] = 0,
+				["done"] = 0,
+				["htaken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 0,
+						["healing"] = 0,
+						["overhealing"] = 8,
+						["hits"] = 2,
+					},
+				},
+			},
+			["Sliek-KhazModan"] = {
+				["players"] = {
+				},
+				["hdone"] = 5,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 11,
+						["hits"] = 2,
+					},
+				},
+				["htaken"] = 5,
+				["hdonespell"] = {
+					["Swift Hand of Justice"] = {
+						["min"] = 0,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 5,
+						["overhealing"] = 11,
+						["hits"] = 2,
+					},
+				},
+			},
+			["Draenei Survivor"] = {
+				["players"] = {
+				},
+				["hdone"] = 0,
+				["done"] = 0,
+				["taken"] = 0,
+				["htakenspell"] = {
+					["Gift of the Naaru"] = {
+						["min"] = 5,
+						["crits"] = 0,
+						["max"] = 5,
+						["healing"] = 10,
+						["overhealing"] = 0,
+						["hits"] = 2,
+					},
+				},
+				["htaken"] = 10,
+				["hdonespell"] = {
+				},
+			},
+			["Volatile Mutation"] = {
+				["players"] = {
+					["Sparkele"] = {
+						["taken"] = 293,
+						["done"] = 84,
+						["role"] = "NONE",
+						["class"] = "PRIEST",
+					},
+				},
+				["hdone"] = 0,
+				["done"] = 84,
+				["taken"] = 293,
+				["htakenspell"] = {
+				},
+				["htaken"] = 0,
+				["hdonespell"] = {
+				},
+			},
+		},
+		["mobhdone"] = 44,
+		["last_action"] = 1589078878,
+		["mobdone"] = 797,
+	},
+	["sets"] = {
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 46,
+			["ccbreaks"] = 0,
+			["time"] = 14,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 90,
+			["players"] = {
+				{
+					["last"] = 1589155440,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Angry Murloc"] = 90,
+					},
+					["alertDamage"] = 0,
+					["time"] = 10,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 90,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 4,
+							["id"] = 589,
+							["min"] = 4,
+							["damage"] = 25,
+							["hitmax"] = 5,
+							["hit"] = 6,
+							["school"] = 32,
+							["totalhits"] = 6,
+							["max"] = 5,
+							["hitamount"] = 25,
+						},
+						["Smite"] = {
+							["hitmin"] = 13,
+							["id"] = 585,
+							["min"] = 13,
+							["damage"] = 65,
+							["hitmax"] = 13,
+							["hit"] = 5,
+							["school"] = 2,
+							["totalhits"] = 5,
+							["max"] = 13,
+							["hitamount"] = 65,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589155430,
+					["damagetaken"] = 46,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 46,
+							["max"] = 10,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 5,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 7,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 10,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 46,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 90,
+			["starttime"] = 1589155428,
+			["name"] = "Angry Murloc (3)",
+			["mobname"] = "Angry Murloc",
+			["mobs"] = {
+				["Angry Murloc"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 90,
+							["done"] = 46,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 90,
+					["done"] = 46,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589155428,
+			["endtime"] = 1589155442,
+		}, -- [1]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 63,
+			["ccbreaks"] = 0,
+			["time"] = 16,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 92,
+			["players"] = {
+				{
+					["last"] = 1589155402,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Skittering Crawler"] = 92,
+					},
+					["alertDamage"] = 0,
+					["time"] = 13,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 92,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 4,
+							["id"] = 589,
+							["min"] = 4,
+							["damage"] = 40,
+							["hitmax"] = 6,
+							["hit"] = 9,
+							["school"] = 32,
+							["totalhits"] = 9,
+							["max"] = 6,
+							["hitamount"] = 40,
+						},
+						["Smite"] = {
+							["hitmin"] = 13,
+							["id"] = 585,
+							["min"] = 13,
+							["damage"] = 52,
+							["hitmax"] = 13,
+							["hit"] = 4,
+							["school"] = 2,
+							["totalhits"] = 4,
+							["max"] = 13,
+							["hitamount"] = 52,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589155389,
+					["damagetaken"] = 63,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 63,
+							["max"] = 11,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 7,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 8,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 63,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 92,
+			["starttime"] = 1589155387,
+			["name"] = "Skittering Crawler",
+			["mobname"] = "Skittering Crawler",
+			["mobs"] = {
+				["Skittering Crawler"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 92,
+							["done"] = 63,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 92,
+					["done"] = 63,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589155387,
+			["endtime"] = 1589155403,
+		}, -- [2]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 68,
+			["ccbreaks"] = 0,
+			["time"] = 17,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 83,
+			["players"] = {
+				{
+					["last"] = 1589155346,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Angry Murloc"] = 83,
+					},
+					["alertDamage"] = 0,
+					["time"] = 16,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 83,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 4,
+							["id"] = 589,
+							["min"] = 4,
+							["damage"] = 44,
+							["hitmax"] = 5,
+							["hit"] = 10,
+							["school"] = 32,
+							["totalhits"] = 10,
+							["max"] = 5,
+							["hitamount"] = 44,
+						},
+						["Smite"] = {
+							["hitmin"] = 13,
+							["id"] = 585,
+							["min"] = 13,
+							["damage"] = 39,
+							["hitmax"] = 13,
+							["hit"] = 3,
+							["school"] = 2,
+							["totalhits"] = 3,
+							["max"] = 13,
+							["hitamount"] = 39,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589155330,
+					["damagetaken"] = 68,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 68,
+							["max"] = 11,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 8,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 7,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 13,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 68,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 83,
+			["starttime"] = 1589155330,
+			["name"] = "Angry Murloc (2)",
+			["mobname"] = "Angry Murloc",
+			["mobs"] = {
+				["Angry Murloc"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 83,
+							["done"] = 68,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 83,
+					["done"] = 68,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589155330,
+			["endtime"] = 1589155347,
+		}, -- [3]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 76,
+			["ccbreaks"] = 0,
+			["time"] = 17,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 85,
+			["players"] = {
+				{
+					["last"] = 1589155269,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Angry Murloc"] = 85,
+					},
+					["alertDamage"] = 0,
+					["time"] = 17,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 85,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 3,
+							["id"] = 589,
+							["min"] = 3,
+							["damage"] = 33,
+							["hitmax"] = 6,
+							["hit"] = 8,
+							["school"] = 32,
+							["totalhits"] = 8,
+							["max"] = 6,
+							["hitamount"] = 33,
+						},
+						["Smite"] = {
+							["hitmin"] = 12,
+							["id"] = 585,
+							["min"] = 12,
+							["damage"] = 52,
+							["hitmax"] = 14,
+							["hit"] = 4,
+							["school"] = 2,
+							["totalhits"] = 4,
+							["max"] = 14,
+							["hitamount"] = 52,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589155252,
+					["damagetaken"] = 76,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 76,
+							["max"] = 10,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 9,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 7,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 14,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 76,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 85,
+			["starttime"] = 1589155252,
+			["name"] = "Angry Murloc",
+			["mobname"] = "Angry Murloc",
+			["mobs"] = {
+				["Angry Murloc"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 85,
+							["done"] = 76,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 85,
+					["done"] = 76,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589155252,
+			["endtime"] = 1589155269,
+		}, -- [4]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 47,
+			["ccbreaks"] = 0,
+			["time"] = 18,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 102,
+			["players"] = {
+				{
+					["last"] = 1589154796,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+						["Gift of the Naaru"] = {
+							["shielding"] = 0,
+							["id"] = 59544,
+							["healing"] = 0,
+							["min"] = 0,
+							["name"] = "Gift of the Naaru",
+							["hits"] = 2,
+							["overhealing"] = 20,
+							["max"] = 0,
+							["critical"] = 0,
+							["absorbed"] = 0,
+						},
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Surveyor Candress"] = 102,
+					},
+					["alertDamage"] = 0,
+					["time"] = 16,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 20,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 102,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 3,
+							["criticalamount"] = 18,
+							["id"] = 589,
+							["damage"] = 43,
+							["max"] = 10,
+							["school"] = 32,
+							["min"] = 3,
+							["criticalmax"] = 10,
+							["critical"] = 2,
+							["hit"] = 7,
+							["totalhits"] = 9,
+							["hitmax"] = 5,
+							["criticalmin"] = 8,
+							["hitamount"] = 25,
+						},
+						["Smite"] = {
+							["hitmin"] = 11,
+							["id"] = 585,
+							["min"] = 11,
+							["damage"] = 59,
+							["hitmax"] = 12,
+							["hit"] = 5,
+							["school"] = 2,
+							["totalhits"] = 5,
+							["max"] = 12,
+							["hitamount"] = 59,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+						["Player-11-0BCAEF48"] = {
+							["role"] = "NONE",
+							["name"] = "Sparkele",
+							["amount"] = 0,
+							["class"] = "PRIEST",
+							["shielding"] = 0,
+						},
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154780,
+					["damagetaken"] = 47,
+					["damagetakenspells"] = {
+						["Fireball"] = {
+							["crushing"] = 0,
+							["id"] = 9053,
+							["damage"] = 10,
+							["max"] = 10,
+							["name"] = "Fireball",
+							["glancing"] = 0,
+							["totalhits"] = 1,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 4,
+							["resisted"] = 0,
+							["min"] = 10,
+							["absorbed"] = 0,
+						},
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 37,
+							["max"] = 9,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 5,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 7,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 16,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 47,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 20,
+			["mobtaken"] = 102,
+			["starttime"] = 1589154780,
+			["name"] = "Surveyor Candress",
+			["mobname"] = "Surveyor Candress",
+			["mobs"] = {
+				["Surveyor Candress"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 102,
+							["done"] = 47,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 102,
+					["done"] = 47,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154780,
+			["endtime"] = 1589154798,
+		}, -- [5]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 28,
+			["ccbreaks"] = 0,
+			["time"] = 11,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 59,
+			["players"] = {
+				{
+					["last"] = 1589154767,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Blood Elf Scout"] = 59,
+					},
+					["alertDamage"] = 0,
+					["time"] = 8,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 59,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 3,
+							["criticalamount"] = 16,
+							["id"] = 589,
+							["damage"] = 35,
+							["max"] = 10,
+							["school"] = 32,
+							["min"] = 3,
+							["criticalmax"] = 10,
+							["hitmax"] = 5,
+							["hit"] = 5,
+							["totalhits"] = 7,
+							["critical"] = 2,
+							["criticalmin"] = 6,
+							["hitamount"] = 19,
+						},
+						["Smite"] = {
+							["hitmin"] = 11,
+							["id"] = 585,
+							["min"] = 11,
+							["damage"] = 24,
+							["hitmax"] = 13,
+							["hit"] = 2,
+							["school"] = 2,
+							["totalhits"] = 2,
+							["max"] = 13,
+							["hitamount"] = 24,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154759,
+					["damagetaken"] = 28,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 28,
+							["max"] = 8,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 4,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 6,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 28,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 59,
+			["starttime"] = 1589154757,
+			["name"] = "Blood Elf Scout (9)",
+			["mobname"] = "Blood Elf Scout",
+			["mobs"] = {
+				["Blood Elf Scout"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 59,
+							["done"] = 28,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 59,
+					["done"] = 28,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154757,
+			["endtime"] = 1589154768,
+		}, -- [6]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 13,
+			["ccbreaks"] = 0,
+			["time"] = 6,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 34,
+			["players"] = {
+				{
+					["last"] = 1589154565,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Blood Elf Scout"] = 34,
+					},
+					["alertDamage"] = 0,
+					["time"] = 5,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 34,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 4,
+							["id"] = 589,
+							["min"] = 4,
+							["damage"] = 12,
+							["hitmax"] = 4,
+							["hit"] = 3,
+							["school"] = 32,
+							["totalhits"] = 3,
+							["max"] = 4,
+							["hitamount"] = 12,
+						},
+						["Smite"] = {
+							["hitmin"] = 11,
+							["id"] = 585,
+							["min"] = 11,
+							["damage"] = 22,
+							["hitmax"] = 11,
+							["hit"] = 2,
+							["school"] = 2,
+							["totalhits"] = 2,
+							["max"] = 11,
+							["hitamount"] = 22,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154560,
+					["damagetaken"] = 13,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 13,
+							["max"] = 7,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 2,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 6,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 5,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 13,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 34,
+			["starttime"] = 1589154560,
+			["name"] = "Blood Elf Scout (8)",
+			["mobname"] = "Blood Elf Scout",
+			["mobs"] = {
+				["Blood Elf Scout"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 34,
+							["done"] = 13,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 34,
+					["done"] = 13,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154560,
+			["endtime"] = 1589154566,
+		}, -- [7]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 8,
+			["ccbreaks"] = 0,
+			["time"] = 10,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 54,
+			["players"] = {
+				{
+					["last"] = 1589154551,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Blood Elf Scout"] = 54,
+					},
+					["alertDamage"] = 0,
+					["time"] = 8,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 54,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 3,
+							["id"] = 589,
+							["min"] = 3,
+							["damage"] = 18,
+							["hitmax"] = 6,
+							["hit"] = 5,
+							["school"] = 32,
+							["totalhits"] = 5,
+							["max"] = 6,
+							["hitamount"] = 18,
+						},
+						["Smite"] = {
+							["hitmin"] = 12,
+							["id"] = 585,
+							["min"] = 12,
+							["damage"] = 36,
+							["hitmax"] = 12,
+							["hit"] = 3,
+							["school"] = 2,
+							["totalhits"] = 3,
+							["max"] = 12,
+							["hitamount"] = 36,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154543,
+					["damagetaken"] = 8,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 8,
+							["max"] = 8,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 1,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 8,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 8,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 8,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 54,
+			["starttime"] = 1589154542,
+			["name"] = "Blood Elf Scout (7)",
+			["mobname"] = "Blood Elf Scout",
+			["mobs"] = {
+				["Blood Elf Scout"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 54,
+							["done"] = 8,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 54,
+					["done"] = 8,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154542,
+			["endtime"] = 1589154552,
+		}, -- [8]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 21,
+			["ccbreaks"] = 0,
+			["time"] = 11,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 66,
+			["players"] = {
+				{
+					["last"] = 1589154525,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Blood Elf Scout"] = 66,
+					},
+					["alertDamage"] = 0,
+					["time"] = 8,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 66,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 3,
+							["id"] = 589,
+							["min"] = 3,
+							["damage"] = 19,
+							["hitmax"] = 5,
+							["hit"] = 5,
+							["school"] = 32,
+							["totalhits"] = 5,
+							["max"] = 5,
+							["hitamount"] = 19,
+						},
+						["Smite"] = {
+							["hitmin"] = 11,
+							["id"] = 585,
+							["min"] = 11,
+							["damage"] = 47,
+							["hitmax"] = 12,
+							["hit"] = 4,
+							["school"] = 2,
+							["totalhits"] = 4,
+							["max"] = 12,
+							["hitamount"] = 47,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154517,
+					["damagetaken"] = 21,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 21,
+							["max"] = 9,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 3,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 6,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 21,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 66,
+			["starttime"] = 1589154515,
+			["name"] = "Blood Elf Scout (6)",
+			["mobname"] = "Blood Elf Scout",
+			["mobs"] = {
+				["Blood Elf Scout"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 66,
+							["done"] = 21,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 66,
+					["done"] = 21,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154515,
+			["endtime"] = 1589154526,
+		}, -- [9]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 15,
+			["ccbreaks"] = 0,
+			["time"] = 12,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 66,
+			["players"] = {
+				{
+					["last"] = 1589154507,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Blood Elf Scout"] = 66,
+					},
+					["alertDamage"] = 0,
+					["time"] = 11,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 288,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 66,
+					["damagespells"] = {
+						["Shadow Word: Pain"] = {
+							["hitmin"] = 2,
+							["id"] = 589,
+							["min"] = 2,
+							["damage"] = 28,
+							["hitmax"] = 5,
+							["hit"] = 7,
+							["school"] = 32,
+							["totalhits"] = 7,
+							["max"] = 5,
+							["hitamount"] = 28,
+						},
+						["Smite"] = {
+							["hitmin"] = 11,
+							["id"] = 585,
+							["min"] = 11,
+							["damage"] = 37,
+							["hitmax"] = 13,
+							["hit"] = 3,
+							["school"] = 2,
+							["totalhits"] = 3,
+							["max"] = 13,
+							["hitamount"] = 37,
+						},
+						["Attack"] = {
+							["hitmin"] = 1,
+							["id"] = 6603,
+							["min"] = 1,
+							["damage"] = 1,
+							["hitmax"] = 1,
+							["hit"] = 1,
+							["school"] = 1,
+							["totalhits"] = 1,
+							["max"] = 1,
+							["hitamount"] = 1,
+						},
+					},
+					["name"] = "Sparkele",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-11-0BCAEF48",
+					["first"] = 1589154496,
+					["damagetaken"] = 15,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 15,
+							["max"] = 8,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 2,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 7,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+						["Shadow Word: Pain"] = {
+							["name"] = "Shadow Word: Pain",
+							["active"] = 0,
+							["school"] = 32,
+							["uptime"] = 11,
+							["auratype"] = "DEBUFF",
+							["id"] = 589,
+						},
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "PRIEST",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 15,
+			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 66,
+			["starttime"] = 1589154496,
+			["name"] = "Blood Elf Scout (5)",
+			["mobname"] = "Blood Elf Scout",
+			["mobs"] = {
+				["Blood Elf Scout"] = {
+					["players"] = {
+						["Sparkele"] = {
+							["taken"] = 66,
+							["done"] = 15,
+							["class"] = "PRIEST",
+							["role"] = "NONE",
+						},
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+					},
+					["taken"] = 66,
+					["done"] = 15,
+					["htaken"] = 0,
+					["htakenspell"] = {
+					},
+				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1589154496,
+			["endtime"] = 1589154508,
+		}, -- [10]
+	},
+}

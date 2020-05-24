@@ -164,7 +164,7 @@ ConsolePortUI_Menu: disabled
 ConsolePortBar: disabled
 ConsolePortKeyboard: disabled
 ConsolePortAdvanced: disabled
-ElvUI_SLE: enabled
+ElvUI_SLE: disabled
 ConsolePort: disabled
 ConsolePortHelp: disabled
 ConsolePortLoader: disabled
@@ -272,7 +272,7 @@ MogIt_WowHead: enabled
 MoveAnything: disabled
 MSBTOptions: enabled
 NameCopy: disabled
-NPCScan: enabled
+NPCScan: disabled
 OPie: enabled
 Paste: disabled
 RetroGameSounds1: disabled
@@ -323,7 +323,14 @@ BootyBayGazette: enabled
 AuctionDB: enabled
 BtWQuestsLegion: enabled
 WeakAurasArchive: enabled
-WorldQuestTracker: enabled
+WorldQuestTracker: disabled
 ElvUI_CastBarOverlay: disabled
 ElvUI_EverySecondCounts: disabled
 ElvUI_CustomTweaks: disabled
+BtWQuestsMistsOfPandaria: enabled
+Drift: enabled
+DBM-CastleNathria: enabled
+DBM-Party-Shadowlands: enabled
+Skada: enabled
+Capping_Options: disabled
+Capping: disabled

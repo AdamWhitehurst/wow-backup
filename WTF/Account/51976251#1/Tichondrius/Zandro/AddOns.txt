@@ -137,7 +137,7 @@ ConsolePortLoader: disabled
 ConsolePortUI_Loot: disabled
 ConsolePortUI_Menu: disabled
 Coordinates: enabled
-CopyPasta: disabled
+CopyPasta: enabled
 DialogKey: enabled
 DynamicCam: enabled
 ExtraQuestButton: enabled
@@ -231,7 +231,7 @@ MogIt_WowHead: enabled
 MoveAnything: disabled
 MSBTOptions: enabled
 NameCopy: disabled
-NPCScan: enabled
+NPCScan: disabled
 OPie: enabled
 PetJournalEnhanced: enabled
 PetLeash: enabled
@@ -321,7 +321,15 @@ LibToast-1.0: enabled
 totalRP3_Debug: enabled
 WeakAurasArchive: enabled
 BtWQuestsLegion: enabled
-WorldQuestTracker: enabled
+WorldQuestTracker: disabled
 ElvUI_CastBarOverlay: disabled
 ElvUI_EverySecondCounts: disabled
 ElvUI_CustomTweaks: disabled
+BtWQuestsMistsOfPandaria: enabled
+Drift: enabled
+DBM-CastleNathria: enabled
+DBM-Party-Shadowlands: enabled
+ElvUI_SLE: disabled
+Skada: enabled
+Capping_Options: disabled
+Capping: disabled

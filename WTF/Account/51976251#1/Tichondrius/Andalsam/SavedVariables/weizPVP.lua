@@ -1,39 +1,27 @@
 
-weizPVPOptions = {
+_weizpvp_chardb = {
 	["profileKeys"] = {
-		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Andalsam - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
-		["Andalsam - Tichondrius"] = {
+		["Default"] = {
 			["Options"] = {
-				["Addon"] = {
-					["Version"] = "1.81.1",
-					["VersionNumber"] = 1802.1,
-					["VersionSplashSeen"] = true,
-				},
 				["Window"] = {
 					["Pinned"] = true,
 					["Collapsed"] = true,
 				},
-				["StealthAlert"] = {
-					["SoundFile"] = "weizPVP: Beep 2",
-				},
 				["Frames"] = {
-					["Point"] = "TOPLEFT",
-					["Width"] = 399.6100463867188,
-					["Y"] = -6.7117919921875,
-					["X"] = 131.3527679443359,
+					["Point"] = "BOTTOMRIGHT",
+					["Width"] = 408.5384521484375,
+					["Y"] = 101.7776794433594,
+					["X"] = -7.875732421875,
 					["Header"] = {
-						["Point"] = "TOPLEFT",
-						["Width"] = 399.6100463867188,
-						["Y"] = 0,
-						["Height"] = 26.00003623962402,
-						["X"] = 131.3527679443359,
+						["Point"] = "BOTTOMRIGHT",
+						["Width"] = 408.5384521484375,
+						["Y"] = 189.299072265625,
+						["X"] = -7.875732421875,
 					},
-					["Height"] = 132.9999694824219,
-				},
-				["AudioAlerts"] = {
-					["DetectedPlayerSound"] = true,
+					["Height"] = 87.52136993408203,
 				},
 			},
 		},

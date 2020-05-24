@@ -1,0 +1,10 @@
+## Interface: 80300
+## Author: Pettrah (SileniaD) of Lightbringer
+## Version: 1.0
+## Title: |cff1784d1ElvUI|r Cardinal Points
+## Notes: Cardinal points for the ElvUI minimap.
+## X-Category: Interface Enhancements
+## X-License: All Rights Reserved
+## OptionalDeps: ElvUI
+
+ElvUI_CardinalPoints.lua

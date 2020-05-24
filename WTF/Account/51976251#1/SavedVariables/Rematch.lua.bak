@@ -192,6 +192,29 @@ RematchSaved = {
 		}, -- [3]
 		["teamName"] = "CK-9 Micro-Oppression Unit",
 	},
+	[79179] = {
+		{
+			"BattlePet-0-00000B74B09D", -- [1]
+			115, -- [2]
+			779, -- [3]
+			282, -- [4]
+			844, -- [5]
+		}, -- [1]
+		{
+			"BattlePet-0-00000B74AFEE", -- [1]
+			459, -- [2]
+			640, -- [3]
+			282, -- [4]
+			1387, -- [5]
+		}, -- [2]
+		{
+			0, -- [1]
+		}, -- [3]
+		["minHP"] = 250,
+		["notes"] = "Strategy added by hellyessir#1119\nADDED TD SCRIPT. Should cover most scenarios of misses as well.\n\nSolid strat for leveling a pet. I usually take my lvl 1s outside the garrison and one Icespine Hatchling encounter gets them to lvl 8, more than ready for this. Then a couple of this and they&#039;re 25 (first gets them to 20).\n\nIt might fail if you miss the Explode on Tyri (you might actually save it killing it with your Iron Starlette), or if you kill Puzzle prematurely with a Wind-Up critical.\n\nTurn 1: Thunderbolt\nTurn 2+: Breath until Deebs dies.\nTyri comes in.\nTurn 1: Breath\nTurn 2: Explode\nBring Iron Starlette.\nTurn 3: Toxic Smoke\nTurn 4: If Tyri still lives prepare Wind-Up, Toxic Smoke or pass\nPuzzle comes in\nTurn 1: Wind-Up if not prepared already. Otherwise pass\nTurn 2: Pass\nTurn 3: Wind-Up\nTurn 4: Pass\nTurn 5: Explode\n",
+		["teamName"] = "Deebs, Tyri and Puzzle",
+		["minXP"] = 1,
+	},
 	[154918] = {
 		{
 			"BattlePet-0-00000B819926", -- [1]
@@ -621,8 +644,8 @@ RematchSettings = {
 		["BattlePet-0-00000BA5C48E"] = "QQQ62GQ",
 		["BattlePet-0-00000B74B00C"] = "QQQ5HD",
 		["BattlePet-0-00000B74B097"] = "QQQ914P",
-		["BattlePet-0-00000B74AFF9"] = "QQQ31IS",
 		["BattlePet-0-00000B74B07D"] = "QQQ4149",
+		["BattlePet-0-00000B74AFF9"] = "QQQ31IS",
 		["BattlePet-0-00000B74B09A"] = "QQQ323D",
 		["BattlePet-0-00000BAC9695"] = "QQQ41IO",
 		["BattlePet-0-00000BA5D058"] = "QQQA2GU",
@@ -633,7 +656,7 @@ RematchSettings = {
 		["Order"] = 1,
 		["FavoritesFirst"] = true,
 	},
-	["JournalPanel"] = 2,
+	["JournalPanel"] = 1,
 	["BackupCount"] = 0,
 	["PetCardXPos"] = 401.000061035156,
 	["ElvUIToastDefaulted"] = true,
@@ -789,16 +812,6 @@ RematchSettings = {
 			10, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-00000B74B09C"] = {
-			1, -- [1]
-			nil, -- [2]
-			1167, -- [3]
-			19, -- [4]
-			1012, -- [5]
-			239, -- [6]
-			171, -- [7]
-			3, -- [8]
-		},
 		["BattlePet-0-00000B74B0A1"] = {
 			1, -- [1]
 			true, -- [2]
@@ -850,7 +863,7 @@ RematchSettings = {
 			4, -- [8]
 		},
 		["BattlePet-0-00000B74AFEE"] = {
-			8, -- [1]
+			9, -- [1]
 			true, -- [2]
 			1387, -- [3]
 			25, -- [4]
@@ -889,14 +902,14 @@ RematchSettings = {
 			273, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-00000B74B097"] = {
-			1, -- [1]
+		["BattlePet-0-00000B74B09D"] = {
+			6, -- [1]
 			true, -- [2]
-			1177, -- [3]
-			1, -- [4]
-			164, -- [5]
-			10, -- [6]
-			10, -- [7]
+			844, -- [3]
+			25, -- [4]
+			1400, -- [5]
+			276, -- [6]
+			309, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-00000B74B085"] = {
@@ -919,6 +932,16 @@ RematchSettings = {
 			49, -- [7]
 			4, -- [8]
 		},
+		["BattlePet-0-00000B74B097"] = {
+			1, -- [1]
+			true, -- [2]
+			1177, -- [3]
+			1, -- [4]
+			164, -- [5]
+			10, -- [6]
+			10, -- [7]
+			4, -- [8]
+		},
 		["BattlePet-0-00000B74B0A5"] = {
 			1, -- [1]
 			true, -- [2]
@@ -927,16 +950,6 @@ RematchSettings = {
 			1546, -- [5]
 			260, -- [6]
 			289, -- [7]
-			4, -- [8]
-		},
-		["BattlePet-0-00000B74B064"] = {
-			2, -- [1]
-			true, -- [2]
-			1166, -- [3]
-			25, -- [4]
-			1400, -- [5]
-			305, -- [6]
-			273, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-00000B74B09A"] = {
@@ -959,14 +972,14 @@ RematchSettings = {
 			325, -- [7]
 			4, -- [8]
 		},
-		["BattlePet-0-00000B74B086"] = {
-			1, -- [1]
-			nil, -- [2]
-			868, -- [3]
-			18, -- [4]
-			1141, -- [5]
-			187, -- [6]
-			208, -- [7]
+		["BattlePet-0-00000B74B064"] = {
+			2, -- [1]
+			true, -- [2]
+			1166, -- [3]
+			25, -- [4]
+			1400, -- [5]
+			305, -- [6]
+			273, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-00000B74AFF9"] = {
@@ -987,16 +1000,6 @@ RematchSettings = {
 			1400, -- [5]
 			341, -- [6]
 			244, -- [7]
-			4, -- [8]
-		},
-		["BattlePet-0-00000B74B09D"] = {
-			5, -- [1]
-			true, -- [2]
-			844, -- [3]
-			25, -- [4]
-			1400, -- [5]
-			276, -- [6]
-			309, -- [7]
 			4, -- [8]
 		},
 		["BattlePet-0-00000B74B019"] = {
@@ -1029,14 +1032,23 @@ RematchSettings = {
 			11, -- [7]
 			4, -- [8]
 		},
+		["BattlePet-0-00000BDE2E65"] = {
+			1, -- [1]
+			true, -- [2]
+			1167, -- [3]
+			20, -- [4]
+			1060, -- [5]
+			226, -- [6]
+			202, -- [7]
+			3, -- [8]
+		},
 	},
 	["NotifiedExperimental"] = true,
-	["DialogYPos"] = 508.9524536132813,
 	["HideNonBattlePets"] = false,
 	["BottomToolbar"] = false,
 	["YPos"] = 904.599936301893,
 	["SelectedTab"] = 1,
-	["XPos"] = 1280.72220033784,
+	["DialogYPos"] = 508.9524536132813,
 	["ScriptFilters"] = {
 		{
 			"Unnamed Pets", -- [1]
@@ -1061,17 +1073,17 @@ RematchSettings = {
 	},
 	["SpecialSlots"] = {
 	},
-	["UseDefaultJournal"] = true,
-	["UseTypeBar"] = true,
+	["XPos"] = 1280.72220033784,
+	["ShowSpeciesID"] = true,
 	["ShowAbilityNumbersLoaded"] = true,
 	["UseMiniQueue"] = false,
-	["QueueSortOrder"] = 1,
+	["UseTypeBar"] = true,
 	["MiniMinimized"] = false,
-	["FavoriteFilters"] = {
-	},
+	["QueueSortOrder"] = 1,
 	["LockWindow"] = false,
 	["DialogXPos"] = 910.2223510742188,
-	["ShowAbilityNumbers"] = true,
+	["FavoriteFilters"] = {
+	},
 	["HideRarityBorders"] = false,
 	["TeamGroups"] = {
 		{
@@ -1079,7 +1091,7 @@ RematchSettings = {
 			"Interface\\Icons\\PetJournalPortrait", -- [2]
 		}, -- [1]
 	},
-	["PetCardYPos"] = 787.540832519531,
+	["ColorPetNames"] = true,
 	["Filters"] = {
 		["Other"] = {
 		},
@@ -1091,9 +1103,9 @@ RematchSettings = {
 		},
 		["Level"] = {
 		},
-		["Similar"] = {
-		},
 		["Sources"] = {
+		},
+		["Similar"] = {
 		},
 		["Breed"] = {
 		},
@@ -1108,6 +1120,7 @@ RematchSettings = {
 		["Types"] = {
 		},
 	},
+	["PetCardYPos"] = 787.540832519531,
 	["LevelingQueue"] = {
 		"BattlePet-0-00000B74B00C", -- [1]
 		"BattlePet-0-00000B74B08C", -- [2]
@@ -1130,19 +1143,18 @@ RematchSettings = {
 		"BattlePet-0-00000B74B05B", -- [19]
 	},
 	["AllowHiddenPetsDefaulted"] = true,
-	["SlowMousewheelScroll"] = true,
 	["ShowOnLogin"] = false,
 	["CollapsedOptHeaders"] = {
 		[7] = true,
 	},
 	["SlimListButtons"] = true,
+	["SlowMousewheelScroll"] = true,
 	["PreferredMode"] = 3,
-	["loadedTeam"] = 154911,
+	["loadedTeam"] = 66635,
 	["SinglePanel"] = true,
-	["ColorPetNames"] = true,
 	["CornerPos"] = "TOPRIGHT",
+	["ShowAbilityNumbers"] = true,
 	["LowerStrata"] = false,
-	["ShowSpeciesID"] = true,
 	["PanelTabsToRight"] = true,
 	["CustomScaleValue"] = 130,
 	["PetNotes"] = {

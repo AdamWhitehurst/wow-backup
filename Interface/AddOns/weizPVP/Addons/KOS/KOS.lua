@@ -14,20 +14,32 @@ local function IsPlayerTarget()
     end
 end
 
+local select = select
+local gsub = gsub
+local GetClassColor = GetClassColor
+local WrapTextInColorCode = WrapTextInColorCode
 function NS.KOS.ChangeKosStatus(playerName)
     if not playerName then
         return
     end
     NS.KOS.menuPlayerName = XEN.Unescape(playerName)
+    local unescapedName = XEN.Unescape(playerName)
+    local printedName = WrapTextInColorCode(gsub(unescapedName, "-(.*)", ""), select(4, GetClassColor(NS.PlayerDB[unescapedName].Class)))
+    local printedRealm = gsub(unescapedName, "^(.*-)", "")
     if NS.KosList[NS.KOS.menuPlayerName] then
         NS.KOS.RemovePlayer(NS.KOS.menuPlayerName)
-        NS.PrintAddonMessage("|TInterface\\Addons\\weizPVP\\Addons\\KOS\\Media\\kos_icon.tga:0|t |cff8fdaffRemoved|r |cff666666:|r " .. playerName)
-        IsPlayerTarget()
+        NS.PrintAddonMessage(
+            "|TInterface\\Addons\\weizPVP\\Media\\Icons\\kos.tga:0|t |cff8fdaffRemoved|r |cff666666:|r " ..
+                printedName .. " |cffbbbbbb-|r " .. printedRealm
+        )
     elseif NS.KOS.menuPlayerName then
         NS.KOS.AddPlayer(NS.KOS.menuPlayerName)
-        NS.PrintAddonMessage("|TInterface\\Addons\\weizPVP\\Addons\\KOS\\Media\\kos_icon.tga:0|t |cff8fdaffAdded|r |cff666666:|r " .. playerName)
-        IsPlayerTarget()
+        NS.PrintAddonMessage(
+            "|TInterface\\Addons\\weizPVP\\Media\\Icons\\kos.tga:0|t |cff8fdaffAdded|r |cff666666:|r " ..
+                printedName .. " |cffbbbbbb-|r " .. printedRealm
+        )
     end
+    IsPlayerTarget()
     NS.RefreshCurrentList()
 end
 
@@ -58,13 +70,11 @@ NS.KOS.Events:SetScript(
 --> Enable
 function NS.KOS.Enable()
     NS.KOS.Events:RegisterEvent("PLAYER_TARGET_CHANGED")
-    NS.KOS.Events:RegisterEvent("GLOBAL_MOUSE_UP")
 end
 
 --> Disable
 function NS.KOS.Disable()
     NS.KOS.Events:UnregisterEvent("PLAYER_TARGET_CHANGED")
-    NS.KOS.Events:UnregisterEvent("GLOBAL_MOUSE_UP")
 end
 
 --> AddPlayer
@@ -72,11 +82,11 @@ function NS.KOS.AddPlayer(playerName)
     if not playerName then
         return
     end
-    --> Add player to KOS list and refresh the core player list
+    -- Add player to KOS list and refresh the core player list
     NS.KosList[playerName] = true
     NS.SortNearbyList()
     NS.RefreshCurrentList()
-    --> Refresh Crosshair is targeting the added player
+    -- Refresh Crosshair is targeting the added player
     if (NS.GetUnitName("target") == playerName) and NS.Options.Crosshair.Enabled then
         NS.Crosshair.Reset()
         NS.Crosshair.NewTarget()
@@ -85,11 +95,11 @@ end
 
 --> RemovePlayer
 function NS.KOS.RemovePlayer(playerName)
-    --> Remove from KOS list and refresh list
+    -- Remove from KOS list and refresh list
     NS.KosList[playerName] = nil
     NS.SortNearbyList()
     NS.RefreshCurrentList()
-    --> Refresh Crosshair is targeting the added player
+    -- Refresh Crosshair is targeting the added player
     if (NS.GetUnitName("target") == playerName) and NS.Options.Crosshair.Enabled then
         NS.Crosshair.Reset()
         NS.Crosshair.NewTarget()

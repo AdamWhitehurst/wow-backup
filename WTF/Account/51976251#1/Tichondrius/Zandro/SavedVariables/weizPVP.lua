@@ -10,24 +10,20 @@ _weizpvp_chardb = {
 					["Collapsed"] = true,
 				},
 				["Frames"] = {
-					["Point"] = "TOPLEFT",
+					["Point"] = "BOTTOMRIGHT",
 					["Width"] = 299.5925598144531,
-					["Y"] = -27,
-					["X"] = 3.870302677154541,
+					["Y"] = 152.7096099853516,
+					["X"] = -7.240234375,
 					["Header"] = {
-						["Point"] = "TOPLEFT",
+						["Point"] = "BOTTOMRIGHT",
 						["Width"] = 299.5925598144531,
-						["Y"] = -1,
+						["Y"] = 190.7096099853516,
 						["Height"] = 26.00003623962402,
-						["X"] = 3.870302677154541,
+						["X"] = -7.240234375,
 					},
-					["Height"] = 37.99997329711914,
+					["Height"] = 38,
 				},
 			},
 		},
 	},
-}
-_weizpvp_addon = {
-	["Database_Version"] = 3,
-	["Addon_Version"] = "1.9.0.2",
 }

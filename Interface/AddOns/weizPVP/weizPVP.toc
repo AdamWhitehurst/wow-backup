@@ -1,13 +1,13 @@
 ﻿## Interface: 80300
 ## Title: weizPVP
-## Version: 1.9.0.2
+## Version: 1.9.1.2
 #--------------------------------------------------------------------
 ## Notes: World PVP Multitool: Detect, analyze, and display enemies. Crosshairs, Stealth Alerts, Phase Detection and more!
 ## Author: weiz
 #--------------------------------------------------------------------
 ## OptionalDeps:  Ace3, LibSharedMedia-3.0, LibDDI-1.0, LibDBIcon-1.0, LibUIDropDownMenu
-## SavedVariables: _weizpvp_globaldb
-## SavedVariablesPerCharacter: _weizpvp_chardb, _weizpvp_addon
+## SavedVariables: _weizpvp_globaldb, _weizpvp_global_info
+## SavedVariablesPerCharacter: _weizpvp_chardb
 #--------------------------------------------------------------------
 ## DefaultState: enabled
 ## LoadOnDemand: 0
@@ -15,12 +15,6 @@
 ## X-Website: https://www.curseforge.com/wow/addons/weizpvp
 ## X-Curse-Project-ID: 300711
 ## X-WoWI-ID: 24779
-# Load: Dependencies
-Libs/Load.xml
-# Load: Core
-Core/Load.xml
-Data/Load.xml
-Utils/Load.xml
-Modules/Load.xml
-# Load: Addons
-Addons/Load.xml
+# Load
+Load.xml
+

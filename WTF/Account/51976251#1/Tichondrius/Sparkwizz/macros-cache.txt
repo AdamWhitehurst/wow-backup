@@ -1,14 +1,28 @@
+VER 3 0100000000000006 "Abomb" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Army of the Dead
+END
+VER 3 0100000000000003 "D&D" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Death and Decay
+END
+VER 3 0100000000000004 "Gnaw" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Gnaw
+END
+VER 3 0100000000000007 "Huddle" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Huddle
+END
 VER 3 0100000000000001 "Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@focus] Mind Freeze
 /cast [@focus] leap
 /cast [@focus] gnaw
 END
-VER 3 0100000000000002 "Stormheim" "236851"
-/way Stormheim 75.2 54.8 Dreyrgrot
-/way Stormheim 44.3 64,5 Hrydshal
-/way Stormheim 80.1 59.2 Morheim
-/way Stormheim 69.9 22.0 Watchman's Rock
-/way Stormheim 59.1 31.2 Storm's Reach
-/way Stormheim 58.0 44.4 Tideskorn Harbor
+VER 3 0100000000000005 "Leap" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petattack
+/cast Leap
 END

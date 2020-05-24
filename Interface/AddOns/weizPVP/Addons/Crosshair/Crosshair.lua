@@ -22,7 +22,6 @@ local UnitIsConnected = UnitIsConnected
 local IsFlying = IsFlying
 local IsUsableItem = IsUsableItem
 local select = select
-local strlen = strlen
 local XEN = XEN
 
 --> Targeted Player Info
@@ -31,11 +30,13 @@ local targetPlayerName
 local targetClass
 local targetClassColor
 
---> Hide Crosshair
+--> Hide
 local function HideCrosshair()
+    targetNamePlateFrame = nil
     weizPVP_CrosshairFrame:Hide()
 end
---> Show Crosshair
+
+--> Show
 local function ShowCrosshair()
     if NS.Options.Crosshair.Enabled == true then
         UIFrameFadeIn(weizPVP_CrosshairFrame, 0.1, 0, NS.Options.Crosshair.Alpha)
@@ -67,39 +68,32 @@ end
 
 -->  SET CLASS COLORS
 local function SetCrosshairColors(r, g, b)
-    if not (r and g and b) then --> Get colors for class of targeted player if none provied
+    if not (r and g and b) then -- Get colors for class of targeted player if none provided
         r, g, b = targetClassColor:GetRGB()
     end
-    --> CORE
+    -- CORE
     weizPVP_CrosshairFrame.Core:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.2))
     weizPVP_CrosshairFrame.Core_ADD:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.5))
-    --> LINES
+    -- LINES
     weizPVP_CrosshairFrame.TopLine:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.2))
     weizPVP_CrosshairFrame.BottomLine:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.2))
     weizPVP_CrosshairFrame.LeftLine:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.2))
     weizPVP_CrosshairFrame.RightLine:SetVertexColor(XEN.AdjustRGBTint(r, g, b, 0.2))
-    --> FX
     weizPVP_CrosshairFrame.TargetFX:SetVertexColor(r, g, b, 0.8)
-    --> ALPHA
     NS.Crosshair.SetAlpha()
-    --> NAME TEXT
+    -- NAME TEXT
     if NS.Options.Crosshair.NameEnabled then
         weizPVP_CrosshairFrame.NameText:SetTextColor(r, g, b)
     end
 end
 
 -->  RANGE CHECK
-local minRange, _
-local outputString, outputAlpha
-local function rangeCheck()
-    minRange, _ = RC:GetRange("target")
-    outputString, outputAlpha = "", 0
+local function getRangeInfo()
+    local minRange, _ = RC:GetRange("target")
+    local outputAlpha = 1
     if minRange then
-        outputString = minRange
-        --> Get min yards #
-        if outputString >= 40 then -- solid @ 40+ yards
-            outputAlpha = 1
-        elseif minRange < 20 then
+        -- Get min yards #
+        if minRange < 20 then
             outputAlpha = 0
         elseif minRange < 30 then
             outputAlpha = 0.5
@@ -107,10 +101,12 @@ local function rangeCheck()
             outputAlpha = 0.8
         end
     end
-    if outputString == 200 then
-        outputString = "200+"
+    if minRange == 200 then
+        minRange = "200+"
+    elseif not minRange then
+        minRange = "|cffffff00--|r"
     end
-    return outputString, outputAlpha
+    return minRange, outputAlpha
 end
 
 --> NET
@@ -138,12 +134,12 @@ local function TargetRangeCheck()
             HideNet5000()
         end
         --> Range Check
-        local rtext, ralpha = rangeCheck()
-        if weizPVP_CrosshairFrame.RangeText:GetText() ~= rtext then
-            weizPVP_CrosshairFrame.RangeText:SetText(rtext)
+        local rangeText, rangeAlpha = getRangeInfo()
+        if weizPVP_CrosshairFrame.RangeText:GetText() ~= rangeText then
+            weizPVP_CrosshairFrame.RangeText:SetText(rangeText)
         end
-        if weizPVP_CrosshairFrame.RangeText:GetAlpha() ~= ralpha then
-            weizPVP_CrosshairFrame.RangeText:SetAlpha(ralpha)
+        if weizPVP_CrosshairFrame.RangeText:GetAlpha() ~= rangeAlpha then
+            weizPVP_CrosshairFrame.RangeText:SetAlpha(rangeAlpha)
         end
         if UnitIsConnected("target") == true then
             SetCrosshairColors()
@@ -180,24 +176,23 @@ local function SetupCrosshairOnNameplate(nameplate)
     if not nameplate then
         return
     end
-    --> Set on same level as nameplate
+    -- Set on same level as nameplate
     weizPVP_CrosshairFrame.Core:SetSize(nameplate:GetWidth() + 14, nameplate:GetWidth() + 14)
     weizPVP_CrosshairFrame:ClearAllPoints()
     weizPVP_CrosshairFrame:SetParent(nameplate)
     weizPVP_CrosshairFrame:SetPoint("CENTER")
-    --> Alpha
+    -- Alpha
     if not weizPVP_CrosshairFrame:IsShown() then
-        ShowCrosshair()
         NS.Crosshair.SetAlpha()
         ShowCrosshair()
     end
-    --> Animations
+    -- Animations
     weizPVP_CrosshairFrame:StopAnimating()
     weizPVP_CrosshairFrame.TargetFX:Show()
     weizPVP_CrosshairFrame.TargetFX.Splash:Play()
-    --> KOS Check
+    -- KOS Check
     CheckKOS()
-    --> APPLY COLORS
+    -- APPLY COLORS
     if UnitIsConnected("target") == true then
         SetCrosshairColors()
     else
@@ -208,13 +203,8 @@ end
 --> Refresh Name Text
 local function RefreshNameText()
     if NS.Options.Crosshair.NameEnabled then
-        if strlen(targetPlayerName) > strlen(gsub(targetPlayerName, "-(.*)", "")) then
-            --> From another server
-            weizPVP_CrosshairFrame.NameText:SetText(targetClassColor:WrapTextInColorCode(gsub(targetPlayerName, "-(.*)", "")) .. "|cFFFF00CC*|r")
-        else
-            --> From same server
-            weizPVP_CrosshairFrame.NameText:SetText(targetClassColor:WrapTextInColorCode(gsub(targetPlayerName, "-(.*)", "")))
-        end
+        local displayName = NS.FormatPlayerNameForDisplay(targetPlayerName)
+        weizPVP_CrosshairFrame.NameText:SetText(displayName)
         weizPVP_CrosshairFrame.NameText:Show()
     else
         weizPVP_CrosshairFrame.NameText:Hide()
@@ -243,37 +233,20 @@ end
 
 --> VALID UNIT TARGETED
 local function ValidUnitTargeted()
-    if not NS.IsUnitValidForTracking("target") then
-        targetNamePlateFrame = nil
+    -- Check for nameplate
+    targetNamePlateFrame = C_NamePlate.GetNamePlateForUnit("target") and true or nil
+    if not targetNamePlateFrame then -- hide and return if not found
         HideCrosshair()
         return
     end
-    --> Check for nameplate
-    if C_NamePlate.GetNamePlateForUnit("target") then
-        targetNamePlateFrame = C_NamePlate.GetNamePlateForUnit("target"):GetDebugName() or nil
-    else
-        targetNamePlateFrame = nil
-        HideCrosshair()
-        return
-    end
-    if targetNamePlateFrame then
-        RefreshNameText()
-        RefreshGuildText()
-        targetPlayerName = NS.GetUnitName("target")
-        targetClass = select(2, UnitClass("target"))
-        targetClassColor = RAID_CLASS_COLORS[targetClass]
-        ShowCrosshair()
-        SetupCrosshairOnNameplate(C_NamePlate.GetNamePlateForUnit("target"))
-    else
-        targetNamePlateFrame = nil
-        HideCrosshair()
-        return
-    end
-end
-
---> INVALID UNIT TARGETED
-local function InvalidUnitTargeted()
-    NS.Crosshair.Reset()
+    targetPlayerName = NS.GetUnitName("target")
+    targetClass = select(2, UnitClass("target"))
+    targetClassColor = RAID_CLASS_COLORS[targetClass]
+    TargetRangeCheck()
+    RefreshNameText()
+    RefreshGuildText()
+    ShowCrosshair()
+    SetupCrosshairOnNameplate(C_NamePlate.GetNamePlateForUnit("target"))
 end
 
 --|> EVENTS
@@ -282,27 +255,17 @@ end
 function Crosshair.NameplateAdded(unit)
     if UnitIsUnit("target", unit) then -- unit == "target" ?
         if not NS.IsUnitValidForTracking("target") then
-            targetNamePlateFrame = nil
             HideCrosshair()
             return
         end
-        --> Get player info
-        targetPlayerName = NS.GetUnitName("target")
-        targetClass = select(2, UnitClass("target"))
-        targetClassColor = RAID_CLASS_COLORS[targetClass]
-        --> Refresh text widgets
-        RefreshNameText()
-        RefreshGuildText()
-        ShowCrosshair()
-        SetupCrosshairOnNameplate(C_NamePlate.GetNamePlateForUnit("target"))
-        Crosshair.NewTarget()
+        ValidUnitTargeted()
     end
 end
 
 --> NAMEPLATE REMOVED
 function Crosshair.NameplateRemoved(unit)
-    if UnitIsUnit("target", unit) then --> Confirm the target nameplate was removed
-        Crosshair.NewTarget()
+    if UnitIsUnit("target", unit) then -- Confirm the target nameplate was removed
+        HideCrosshair()
     end
 end
 
@@ -311,7 +274,7 @@ function Crosshair.NewTarget()
     if NS.IsUnitValidForTracking("target") then
         ValidUnitTargeted()
     else
-        InvalidUnitTargeted()
+        NS.Crosshair.Reset()
     end
 end
 
@@ -327,17 +290,14 @@ end
 
 --> SET LINE THICKNESS
 function NS.Crosshair.SetLineThickness()
-    if not XEN._display.UiMultiplier then
-        return
-    end
     weizPVP_CrosshairFrame.TopLine:SetIgnoreParentScale(true)
     weizPVP_CrosshairFrame.BottomLine:SetIgnoreParentScale(true)
     weizPVP_CrosshairFrame.LeftLine:SetIgnoreParentScale(true)
     weizPVP_CrosshairFrame.RightLine:SetIgnoreParentScale(true)
-    weizPVP_CrosshairFrame.TopLine:SetWidth(NS.Options.Crosshair.LineThickness * XEN._display.UiMultiplier)
-    weizPVP_CrosshairFrame.BottomLine:SetWidth(NS.Options.Crosshair.LineThickness * XEN._display.UiMultiplier)
-    weizPVP_CrosshairFrame.LeftLine:SetHeight(NS.Options.Crosshair.LineThickness * XEN._display.UiMultiplier)
-    weizPVP_CrosshairFrame.RightLine:SetHeight(NS.Options.Crosshair.LineThickness * XEN._display.UiMultiplier)
+    weizPVP_CrosshairFrame.TopLine:SetWidth(XEN.ScalePixelsToUi(NS.Options.Crosshair.LineThickness))
+    weizPVP_CrosshairFrame.BottomLine:SetWidth(XEN.ScalePixelsToUi(NS.Options.Crosshair.LineThickness))
+    weizPVP_CrosshairFrame.LeftLine:SetHeight(XEN.ScalePixelsToUi(NS.Options.Crosshair.LineThickness))
+    weizPVP_CrosshairFrame.RightLine:SetHeight(XEN.ScalePixelsToUi(NS.Options.Crosshair.LineThickness))
 end
 
 --> SET SCALE
@@ -348,50 +308,38 @@ end
 --> RESET
 function NS.Crosshair.Reset()
     HideCrosshair()
-    targetNamePlateFrame = nil
+    weizPVP_CrosshairFrame:ClearAllPoints()
     targetPlayerName = nil
     targetClassColor = nil
     targetClass = nil
 end
+
 --> ENABLE
 function NS.Crosshair.Enable()
     if not NS.Options.Crosshair.Enabled then
         return
     end
     NS.Crosshair.Reset()
-    --> Setup Core
+    -- Setup Core
     NS.Crosshair.SetLineThickness()
     NS.Crosshair.SetScale()
     NS.Crosshair.SetAlpha()
     ConfigureRange()
-    --> Net-o-Matic
+    -- Net-o-Matic
     weizPVP_CrosshairFrame.NetOMatic:Show()
-    --> Refresh crosshairs
+    -- Refresh crosshair
     Crosshair.NewTarget()
-    XEN.RescaleFrameAndChildren(weizPVP_CrosshairFrame)
+    XEN.ResizeFrameToUiScale(weizPVP_CrosshairFrame)
 end
+
 --> DISABLE
 function NS.Crosshair.Disable()
-    --> Clear nameplate and fade out
-    targetNamePlateFrame = nil
-    HideCrosshair()
-end
---> TOGGLE
-function NS.ToggleCrosshairs()
-    if NS.Options.Crosshair.Enabled == false then
-        NS.Options.Crosshair.Enabled = true
-        NS.Crosshair.Enable()
-        NS.PrintAddonMessage("Crosshairs are |cff37ff37ENABLED|r.")
-    else
-        NS.Options.Crosshair.Enabled = false
-        NS.Crosshair.Disable()
-        NS.PrintAddonMessage("Crosshairs are |cffff3838DISABLED|r.")
-    end
+    NS.Crosshair.Reset()
 end
 
 --> OnLoad
 function NS.Crosshair.OnLoad()
-    HideCrosshair()
+    NS.Crosshair.Reset()
 end
 
 --> OnShow

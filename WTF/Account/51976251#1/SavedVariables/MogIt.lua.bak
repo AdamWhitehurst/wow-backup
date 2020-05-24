@@ -4,16 +4,21 @@ MogItDB = {
 		["version"] = "3.9.0",
 	},
 	["profileKeys"] = {
-		["Andalsam - Tichondrius"] = "Default",
-		["Zandro - Tichondrius"] = "Default",
-		["Andalsa - Tichondrius"] = "Default",
-		["Wharapi - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
 		["Madylad - Tichondrius"] = "Default",
+		["Sparkele - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Andalsa - Tichondrius"] = "Default",
+		["Zandro - Tichondrius"] = "Default",
 		["Arndoss - Tichondrius"] = "Default",
 		["Bramblebrow - Emerald Dream"] = "Default",
-		["Andallsa - Tichondrius"] = "Default",
+		["Wharapi - Tichondrius"] = "Default",
+		["Nilaaru - Tichondrius"] = "Default",
 		["Sparkwizz - Tichondrius"] = "Default",
+		["Wilowisp - Tichondrius"] = "Default",
+		["Nullaaru - Tichondrius"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Brungar - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -34,7 +39,7 @@ MogItDB = {
 			},
 			["gridHeight"] = 1217.778564453125,
 			["y"] = 0,
-			["x"] = -1.447256445884705,
+			["x"] = 0,
 			["slotLabels"] = {
 				["Waist"] = "Waist",
 				["Fist"] = "Fist Weapons",
@@ -42,6 +47,7 @@ MogItDB = {
 				["Legs"] = "Legs",
 				["Back"] = "Back",
 				["2H-axe"] = "Two-Handed Axes",
+				["2H-mace"] = "Two-Handed Maces",
 				["Shirt"] = "Shirt",
 				["Dagger"] = "Daggers",
 				["Hands"] = "Hands",
@@ -55,15 +61,15 @@ MogItDB = {
 				["Holdable"] = "Held In Off-hand",
 				["1H-sword"] = "One-Handed Swords",
 				["Crossbow"] = "Crossbows",
-				["Staff"] = "Staves",
+				["Feet"] = "Feet",
 				["Chest"] = "Chest",
 				["Gun"] = "Guns",
 				["1H-axe"] = "One-Handed Axes",
 				["Bow"] = "Bows",
+				["Staff"] = "Staves",
 				["Shield"] = "Shields",
-				["Feet"] = "Feet",
 				["Shoulder"] = "Shoulder",
-				["2H-mace"] = "Two-Handed Maces",
+				["Wand"] = "Wands",
 			},
 			["dressupPreview"] = true,
 			["rows"] = 3,
@@ -77,21 +83,32 @@ MogItDB = {
 }
 MogItWishlist = {
 	["profileKeys"] = {
-		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
-		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
-		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
-		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
 		["Umbrick - Tichondrius"] = "Umbrick - Tichondrius",
 		["Madylad - Tichondrius"] = "Madylad - Tichondrius",
+		["Sparkele - Tichondrius"] = "Sparkele - Tichondrius",
+		["Andalsam - Tichondrius"] = "Andalsam - Tichondrius",
+		["Andalsa - Tichondrius"] = "Andalsa - Tichondrius",
+		["Zandro - Tichondrius"] = "Zandro - Tichondrius",
 		["Arndoss - Tichondrius"] = "Arndoss - Tichondrius",
 		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
-		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Wharapi - Tichondrius"] = "Wharapi - Tichondrius",
+		["Nilaaru - Tichondrius"] = "Nilaaru - Tichondrius",
 		["Sparkwizz - Tichondrius"] = "Sparkwizz - Tichondrius",
+		["Wilowisp - Tichondrius"] = "Wilowisp - Tichondrius",
+		["Nullaaru - Tichondrius"] = "Nullaaru - Tichondrius",
+		["Andallsa - Tichondrius"] = "Andallsa - Tichondrius",
+		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
 	},
 	["global"] = {
 		["version"] = 80300,
 	},
 	["profiles"] = {
+		["Umbrick - Tichondrius"] = {
+		},
+		["Madylad - Tichondrius"] = {
+		},
+		["Sparkele - Tichondrius"] = {
+		},
 		["Andalsam - Tichondrius"] = {
 			["items"] = {
 				"item:168879:0::::::::::4:1:3524", -- [1]
@@ -101,17 +118,19 @@ MogItWishlist = {
 					["items"] = {
 						["ChestSlot"] = "item:152124:0::::::::::0:1:3524",
 						["FeetSlot"] = "item:124249:0",
-						["WaistSlot"] = "item:50069:0",
-						["ShoulderSlot"] = "item:115544:0::::::::::0:1:3524",
 						["LegsSlot"] = "item:65313:0::::::::::0:1:3524",
-						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
 						["HeadSlot"] = "item:152681:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:50069:0",
+						["HandsSlot"] = "item:152360:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:115544:0::::::::::0:1:3524",
 					},
 					["name"] = "Bear",
 					["alternateItems"] = {
 					},
 				}, -- [1]
 			},
+		},
+		["Andalsa - Tichondrius"] = {
 		},
 		["Zandro - Tichondrius"] = {
 			["items"] = {
@@ -138,30 +157,24 @@ MogItWishlist = {
 				}, -- [1]
 			},
 		},
-		["Andalsa - Tichondrius"] = {
-		},
-		["Wharapi - Tichondrius"] = {
-		},
-		["Umbrick - Tichondrius"] = {
-		},
-		["Madylad - Tichondrius"] = {
-		},
 		["Arndoss - Tichondrius"] = {
 		},
 		["Bramblebrow - Emerald Dream"] = {
 		},
-		["Andallsa - Tichondrius"] = {
+		["Wharapi - Tichondrius"] = {
+		},
+		["Nilaaru - Tichondrius"] = {
 		},
 		["Sparkwizz - Tichondrius"] = {
 			["sets"] = {
 				{
 					["items"] = {
 						["ChestSlot"] = "item:109896:0::::::::::2:1:3524",
-						["WaistSlot"] = "item:128300:0::::::::::0:1:3524",
-						["BackSlot"] = "item:166671:0::::::::::0:1:3524",
 						["LegsSlot"] = "item:126112:0::::::::::0:1:3524",
-						["ShoulderSlot"] = "item:124917:0::::::::::0:1:3524",
 						["HeadSlot"] = "item:127320:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:128300:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:124917:0::::::::::0:1:3524",
+						["BackSlot"] = "item:166671:0::::::::::0:1:3524",
 					},
 					["name"] = "Sparkwizz",
 					["alternateItems"] = {
@@ -170,11 +183,11 @@ MogItWishlist = {
 				{
 					["items"] = {
 						["ChestSlot"] = "item:34650:0::::::::::0:1:3524",
-						["HeadSlot"] = "item:126111:0::::::::::0:1:3524",
 						["BackSlot"] = "item:166671:0::::::::::0:1:3524",
-						["WaistSlot"] = "item:146760:0::::::::::0:1:3524",
-						["ShoulderSlot"] = "item:126113:0::::::::::0:1:3524",
+						["HeadSlot"] = "item:126111:0::::::::::0:1:3524",
 						["LegsSlot"] = "item:126112:0::::::::::0:1:3524",
+						["ShoulderSlot"] = "item:126113:0::::::::::0:1:3524",
+						["WaistSlot"] = "item:146760:0::::::::::0:1:3524",
 					},
 					["name"] = "Sparkwizz2",
 					["alternateItems"] = {
@@ -194,7 +207,41 @@ MogItWishlist = {
 					["alternateItems"] = {
 					},
 				}, -- [3]
+				{
+					["items"] = {
+						["ChestSlot"] = "item:84993:0",
+						["FeetSlot"] = "item:85000:0",
+						["WaistSlot"] = "item:85102:0",
+						["HeadSlot"] = "item:85046:0",
+						["HandsSlot"] = "item:85028:0",
+						["ShoulderSlot"] = "item:85086:0",
+						["LegsSlot"] = "item:85059:0",
+					},
+					["name"] = "Malevolent Gladiator's Desecration (Recolor)",
+					["alternateItems"] = {
+					},
+				}, -- [4]
+				{
+					["items"] = {
+						["ChestSlot"] = "item:77120:0",
+						["ShoulderSlot"] = "item:45320:0",
+						["WaistSlot"] = "item:144817:0",
+						["HeadSlot"] = "item:113809:0",
+						["LegsSlot"] = "item:71984:0",
+					},
+					["name"] = "Smith",
+					["alternateItems"] = {
+					},
+				}, -- [5]
 			},
+		},
+		["Wilowisp - Tichondrius"] = {
+		},
+		["Nullaaru - Tichondrius"] = {
+		},
+		["Andallsa - Tichondrius"] = {
+		},
+		["Brungar - Tichondrius"] = {
 		},
 	},
 }

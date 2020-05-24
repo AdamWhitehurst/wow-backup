@@ -6,11 +6,12 @@ ChocolateBarDB = {
 		["Zandro - Tichondrius"] = "Default",
 		["Andalsa - Tichondrius"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
-		["Bramblebrow - Emerald Dream"] = "Default",
-		["Arndoss - Tichondrius"] = "Default",
-		["Madylad - Tichondrius"] = "Default",
-		["Andallsa - Tichondrius"] = "Default",
 		["Umbrick - Tichondrius"] = "Default",
+		["Madylad - Tichondrius"] = "Default",
+		["Arndoss - Tichondrius"] = "Default",
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Andallsa - Tichondrius"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -36,61 +37,15 @@ ChocolateBarDB = {
 			},
 			["forceColor"] = false,
 			["objSettings"] = {
-				["TRP3 — Character status (IC/OOC)"] = {
-					["barName"] = "ChocolateBar1",
-				},
-				["CopyPasta"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["MoreChocolate"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["TRP3 — NPC speeches"] = {
-					["barName"] = "ChocolateBar1",
-				},
-				["Wholly"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["BagnonLauncher"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
 				["DBM"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Leatrix_Plus"] = {
-					["showText"] = false,
+				["TRP3 — Character status (IC/OOC)"] = {
 					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["BugSack"] = {
-					["barName"] = "ChocolateBar1",
-				},
-				["Total RP 3"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["Rematch"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["Parrot"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["FarmHud"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
@@ -100,37 +55,13 @@ ChocolateBarDB = {
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["Broker_RunSpeed"] = {
-					["barName"] = "ChocolateBar1",
-				},
 				["|cffb4b4ffALL THE THINGS|r"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",
 				},
-				["NPCScan"] = {
-					["barName"] = "ChocolateBar1",
-				},
-				["PetLeash"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["TRP3 — Language"] = {
-					["barName"] = "ChocolateBar1",
-				},
 				["Details"] = {
 					["barName"] = "ChocolateBar1",
-				},
-				["TradeSkillMaster"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["Bartender4"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
 				},
 				["GatherMate2"] = {
 					["showText"] = false,
@@ -138,14 +69,6 @@ ChocolateBarDB = {
 					["align"] = "right",
 				},
 				["TRP3 — Player status (AFK/DND)"] = {
-					["barName"] = "ChocolateBar1",
-				},
-				["BtWQuests"] = {
-					["showText"] = false,
-					["barName"] = "ChocolateBar1",
-					["align"] = "right",
-				},
-				["Wholly Coordinates"] = {
 					["barName"] = "ChocolateBar1",
 				},
 				["MogIt"] = {
@@ -157,6 +80,97 @@ ChocolateBarDB = {
 					["barName"] = "ChocolateBar1",
 				},
 				["Paste"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["CopyPasta"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["BugSack"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["TRP3 — NPC speeches"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Wholly"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Rematch"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Leatrix_Plus"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Broker_RunSpeed"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["S&L Friends"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["Wholly Coordinates"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["PetLeash"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TRP3 — Language"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["BagnonLauncher"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["TradeSkillMaster"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["NPCScan"] = {
+					["barName"] = "ChocolateBar1",
+				},
+				["MoreChocolate"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["BtWQuests"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["FarmHud"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["SetCollectorMinimap"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Bartender4"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["Total RP 3"] = {
+					["showText"] = false,
+					["barName"] = "ChocolateBar1",
+					["align"] = "right",
+				},
+				["tdBattlePetScript"] = {
 					["showText"] = false,
 					["barName"] = "ChocolateBar1",
 					["align"] = "right",

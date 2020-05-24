@@ -7,27 +7,27 @@ _weizpvp_chardb = {
 		["Default"] = {
 			["Options"] = {
 				["Window"] = {
+					["Pinned"] = true,
 					["Collapsed"] = true,
 				},
 				["Frames"] = {
-					["Point"] = "TOPLEFT",
-					["Width"] = 251.0000305175781,
-					["Y"] = -28.666748046875,
-					["X"] = 2.685025453567505,
+					["Point"] = "BOTTOMRIGHT",
+					["Width"] = 411.94677734375,
+					["Y"] = 54.92333984375,
+					["X"] = -3.2822265625,
 					["Header"] = {
-						["Point"] = "TOPLEFT",
-						["Width"] = 251.0000305175781,
-						["Y"] = -2.6666259765625,
+						["Point"] = "BOTTOMRIGHT",
+						["Width"] = 411.94677734375,
+						["Y"] = 187.9233703613281,
 						["Height"] = 26.00005149841309,
-						["X"] = 2.685025453567505,
+						["X"] = -3.2822265625,
 					},
-					["Height"] = 229.0000152587891,
+					["Height"] = 133.0000305175781,
 				},
+			},
+			["KosList"] = {
+				["Resource-Mal'Ganis"] = true,
 			},
 		},
 	},
-}
-_weizpvp_addon = {
-	["Database_Version"] = 3,
-	["Addon_Version"] = "1.9.0.2",
 }

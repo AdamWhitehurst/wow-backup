@@ -1,27 +1,31 @@
 
 DynamicCamDB = {
 	["profileKeys"] = {
+		["Umbrick - Tichondrius"] = "KUI",
 		["Vedrixa - Moon Guard"] = "Default",
 		["Honabar - Emerald Dream"] = "Default",
+		["Sparkele - Tichondrius"] = "Default",
 		["Andalsam - Tichondrius"] = "KUI",
 		["Zandroh - Tichondrius"] = "Default",
 		["Mahakah - Tichondrius"] = "Default",
 		["Umbrick - Emerald Dream"] = "Default",
 		["Byanir - Moon Guard"] = "Default",
 		["Wharapi - Tichondrius"] = "Default",
+		["Stoakt - Tichondrius"] = "Default",
 		["Ayanir - Moon Guard"] = "Default",
 		["Mcpokesalot - Tichondrius"] = "Default",
 		["Iscrackl - Tichondrius"] = "Default",
 		["Andallsa - Tichondrius"] = "Default",
 		["Sparkwizz - Tichondrius"] = "Default",
-		["Stoakt - Tichondrius"] = "Default",
-		["Magnr - Tichondrius"] = "Default",
 		["Zandro - Tichondrius"] = "Default",
+		["Wilowisp - Tichondrius"] = "Default",
+		["Magnr - Tichondrius"] = "Default",
 		["Andalsa - Tichondrius"] = "Default",
+		["Nilaaru - Tichondrius"] = "Default",
 		["Tirdailough - Tichondrius"] = "Default",
 		["Curaney - Tichondrius"] = "Default",
 		["Brungar - Tichondrius"] = "New",
-		["Umbrick - Tichondrius"] = "New",
+		["Nullaaru - Tichondrius"] = "Default",
 		["Mininimi - Moon Guard"] = "Default",
 		["Bjorgr - Tichondrius"] = "Default",
 		["Grandh - Tichondrius"] = "Default",
@@ -33,7 +37,7 @@ DynamicCamDB = {
 	["profiles"] = {
 		["KUI"] = {
 			["version"] = 2,
-			["advanced"] = true,
+			["firstRun"] = false,
 			["reactiveZoom"] = {
 				["enabled"] = true,
 			},
@@ -42,15 +46,15 @@ DynamicCamDB = {
 				["033"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["023"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["006"] = {
@@ -61,12 +65,12 @@ DynamicCamDB = {
 				},
 				["302"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomSetting"] = "set",
 						["zoomFitToggleNameplate"] = true,
+						["zoomValue"] = 5,
+						["zoomMax"] = 20,
 						["yawDegrees"] = -10,
 						["rotateSetting"] = "degrees",
-						["zoomValue"] = 5,
+						["zoomSetting"] = "set",
 						["rotateBack"] = true,
 					},
 					["cameraCVars"] = {
@@ -76,34 +80,34 @@ DynamicCamDB = {
 						["test_cameraDynamicPitchBaseFovPadDownScale"] = 0.35,
 					},
 				},
-				["005"] = {
+				["060"] = {
+					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomSetting"] = "in",
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["002"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomSetting"] = "in",
 						["zoomValue"] = 8,
 						["zoomFitToggleNameplate"] = true,
-						["zoomSetting"] = "in",
+						["zoomMax"] = 20,
 					},
 				},
 				["034"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["100"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomSetting"] = "out",
 						["zoomValue"] = 35,
 						["zoomFitToggleNameplate"] = true,
-						["zoomSetting"] = "out",
+						["zoomMax"] = 20,
 					},
 					["cameraCVars"] = {
 						["test_cameraDynamicPitch"] = 0,
@@ -113,8 +117,8 @@ DynamicCamDB = {
 				},
 				["102"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
@@ -125,8 +129,8 @@ DynamicCamDB = {
 				["050"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["200"] = {
@@ -135,14 +139,14 @@ DynamicCamDB = {
 					},
 					["cameraActions"] = {
 						["zoomMax"] = 20,
-						["zoomValue"] = 4,
-						["transitionTime"] = 10,
-						["zoomSetting"] = "in",
 						["zoomFitToggleNameplate"] = true,
-						["yawDegrees"] = 360,
-						["rotateSetting"] = "degrees",
-						["rotate"] = true,
 						["timeIsMax"] = false,
+						["zoomSetting"] = "in",
+						["zoomValue"] = 4,
+						["yawDegrees"] = 360,
+						["rotate"] = true,
+						["rotateSetting"] = "degrees",
+						["transitionTime"] = 10,
 					},
 					["cameraCVars"] = {
 						["test_cameraDynamicPitch"] = 0,
@@ -153,84 +157,80 @@ DynamicCamDB = {
 				["301"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomSetting"] = "in",
 						["zoomValue"] = 4,
 						["zoomFitToggleNameplate"] = true,
-						["zoomSetting"] = "in",
+						["zoomMax"] = 20,
 					},
 				},
-				["060"] = {
-					["enabled"] = false,
+				["005"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomSetting"] = "in",
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["031"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
-				["201"] = {
+				["021"] = {
+					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
-					},
-					["cameraCVars"] = {
-						["test_cameraDynamicPitch"] = 0,
-						["test_cameraHeadMovementStrength"] = 0,
-						["test_cameraOverShoulder"] = 0,
+						["zoomMax"] = 20,
 					},
 				},
 				["061"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["001"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomMin"] = 10,
 						["zoomSetting"] = "range",
+						["zoomMin"] = 10,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["024"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["051"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["004"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomMin"] = 15,
 						["zoomSetting"] = "range",
+						["zoomMin"] = 15,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["300"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["zoomFitIncrements"] = 0.5,
-						["zoomFitToggleNameplate"] = true,
+						["zoomValue"] = 4,
 						["zoomMax"] = 30,
 						["zoomFitPosition"] = 90,
 						["zoomMin"] = 3,
 						["zoomSetting"] = "fit",
-						["zoomValue"] = 4,
+						["zoomFitToggleNameplate"] = true,
 					},
 					["cameraCVars"] = {
 						["test_cameraDynamicPitch"] = 1,
@@ -241,30 +241,34 @@ DynamicCamDB = {
 				["020"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["030"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
-				["021"] = {
-					["enabled"] = false,
+				["201"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
+					},
+					["cameraCVars"] = {
+						["test_cameraDynamicPitch"] = 0,
+						["test_cameraHeadMovementStrength"] = 0,
+						["test_cameraOverShoulder"] = 0,
 					},
 				},
 				["101"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomSetting"] = "set",
 						["zoomValue"] = 39,
 						["zoomFitToggleNameplate"] = true,
-						["zoomSetting"] = "set",
+						["zoomMax"] = 20,
 					},
 					["cameraCVars"] = {
 						["test_cameraHeadMovementStrength"] = 0,
@@ -272,7 +276,7 @@ DynamicCamDB = {
 					},
 				},
 			},
-			["firstRun"] = false,
+			["advanced"] = true,
 		},
 		["Default"] = {
 			["defaultCvars"] = {
@@ -281,20 +285,23 @@ DynamicCamDB = {
 				["cameraZoomSpeed"] = 50,
 				["test_cameraHeadMovementStandingDampRate"] = 50,
 				["test_cameraHeadMovementDeadZone"] = 0,
-				["test_cameraTargetFocusEnemyStrengthYaw"] = 0.1,
+				["test_cameraTargetFocusInteractStrengthYaw"] = 0.1,
 				["test_cameraHeadMovementRangeScale"] = 50,
 				["test_cameraHeadMovementStrength"] = 2,
+				["test_cameraDynamicPitchBaseFovPadDownScale"] = 1,
 				["test_cameraHeadMovementMovingDampRate"] = 10.01,
-				["test_cameraTargetFocusInteractStrengthYaw"] = 0.1,
-				["test_cameraHeadMovementStandingStrength"] = 0.38,
 				["test_cameraTargetFocusEnemyStrengthPitch"] = 0.1,
+				["test_cameraHeadMovementStandingStrength"] = 0.38,
+				["test_cameraDynamicPitchBaseFovPad"] = 1,
 				["test_cameraDynamicPitch"] = 1,
 				["test_cameraTargetFocusInteractStrengthPitch"] = 0.1,
+				["test_cameraTargetFocusEnemyStrengthYaw"] = 0.1,
+				["test_cameraDynamicPitchBaseFovPadFlying"] = 0.55,
 			},
 			["reactiveZoom"] = {
 				["enabled"] = true,
 				["addIncrements"] = 5,
-				["maxZoomTime"] = 0.1,
+				["maxZoomTime"] = 0.5,
 				["addIncrementsAlways"] = 0,
 				["incAddDifference"] = 2,
 			},
@@ -309,16 +316,16 @@ DynamicCamDB = {
 						["zoomMax"] = 29,
 						["zoomMin"] = 19,
 						["transitionTime"] = 0.1,
-						["zoomValue"] = 19,
-						["rotateSetting"] = "degrees",
 						["zoomSetting"] = "fit",
+						["rotateSetting"] = "degrees",
+						["zoomValue"] = 19,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["023"] = {
@@ -328,33 +335,33 @@ DynamicCamDB = {
 						["zoomMax"] = 19,
 						["zoomMin"] = 19,
 						["transitionTime"] = 0.1,
-						["zoomSetting"] = "set",
-						["rotateSetting"] = "degrees",
 						["zoomValue"] = 15,
+						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "set",
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["006"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 20,
-						["zoomValue"] = 19,
 						["transitionTime"] = 0.1,
 						["zoomSetting"] = "in",
 						["rotateSetting"] = "degrees",
+						["zoomValue"] = 19,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["302"] = {
@@ -364,9 +371,9 @@ DynamicCamDB = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = -20,
-						["zoomSetting"] = "set",
 						["zoomValue"] = 7,
 						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "set",
 					},
 					["cameraCVars"] = {
 						["test_cameraDynamicPitchBaseFovPad"] = 0.05,
@@ -376,44 +383,42 @@ DynamicCamDB = {
 						["test_cameraDynamicPitchBaseFovPadFlying"] = 0.05,
 					},
 					["view"] = {
-						["restoreView"] = true,
 						["enabled"] = true,
+						["restoreView"] = true,
 					},
 				},
 				["031"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 20,
-						["zoomValue"] = 39,
 						["transitionTime"] = 0.1,
 						["zoomSetting"] = "set",
 						["rotateSetting"] = "degrees",
+						["zoomValue"] = 39,
 					},
 				},
-				["004"] = {
+				["061"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["pitchDegrees"] = 20,
-						["zoomSetting"] = "set",
 						["transitionTime"] = 0.1,
-						["zoomValue"] = 39,
-						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "set",
+						["zoomValue"] = 30,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["102"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomValue"] = 39,
 						["transitionTime"] = 0.3,
 						["zoomSetting"] = "set",
+						["zoomValue"] = 39,
 					},
 					["view"] = {
-						["restoreView"] = true,
 						["enabled"] = true,
+						["restoreView"] = true,
 					},
 				},
 				["050"] = {
@@ -430,9 +435,9 @@ DynamicCamDB = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 20,
-						["zoomSetting"] = "in",
 						["zoomValue"] = 19,
 						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "in",
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
@@ -441,115 +446,106 @@ DynamicCamDB = {
 				["301"] = {
 					["enabled"] = false,
 				},
-				["005"] = {
+				["060"] = {
+					["enabled"] = false,
 					["cameraActions"] = {
-						["pitchDegrees"] = -20,
 						["transitionTime"] = 0.1,
-						["rotateSetting"] = "degrees",
 						["zoomSetting"] = "set",
-					},
-					["view"] = {
-						["restoreView"] = true,
-						["enabled"] = true,
-					},
-					["cameraCVars"] = {
-						["test_cameraDynamicPitchBaseFovPad"] = 0.05,
-						["test_cameraDynamicPitch"] = 1,
-						["test_cameraDynamicPitchBaseFovPadDownScale"] = 0.3,
-						["test_cameraDynamicPitchBaseFovPadFlying"] = 0.05,
-						["test_cameraDynamicPitchSmartPivotCutoffDist"] = 12,
+						["zoomValue"] = 39,
 					},
 				},
 				["101"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomSetting"] = "set",
 						["transitionTime"] = 0.3,
 						["zoomValue"] = 39,
+						["zoomSetting"] = "set",
 					},
 					["view"] = {
-						["restoreView"] = true,
 						["enabled"] = true,
+						["restoreView"] = true,
 					},
 				},
 				["021"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 15,
-						["zoomSetting"] = "set",
 						["transitionTime"] = 0.1,
 						["zoomValue"] = 39,
 						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "set",
 					},
 				},
 				["020"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 15,
-						["zoomValue"] = 14,
 						["zoomSetting"] = "set",
 						["rotateSetting"] = "degrees",
+						["zoomValue"] = 14,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["001"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 25,
-						["zoomSetting"] = "set",
 						["transitionTime"] = 0.1,
 						["zoomValue"] = 30,
 						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "set",
 					},
 				},
 				["024"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 15,
-						["zoomValue"] = 15,
 						["transitionTime"] = 0.1,
 						["zoomSetting"] = "set",
 						["rotateSetting"] = "degrees",
+						["zoomValue"] = 15,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["051"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomSetting"] = "set",
 						["transitionTime"] = 0.1,
 						["zoomValue"] = 15,
+						["zoomSetting"] = "set",
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
-				["061"] = {
+				["004"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomValue"] = 30,
+						["pitchDegrees"] = 20,
 						["transitionTime"] = 0.1,
+						["zoomValue"] = 39,
+						["rotateSetting"] = "degrees",
 						["zoomSetting"] = "set",
 					},
 					["view"] = {
-						["enabled"] = true,
 						["restoreView"] = true,
+						["enabled"] = true,
 					},
 				},
 				["300"] = {
@@ -557,17 +553,17 @@ DynamicCamDB = {
 				},
 				["200"] = {
 					["cameraActions"] = {
-						["zoomValue"] = 39,
 						["zoomSetting"] = "set",
 						["rotate"] = true,
+						["zoomValue"] = 39,
 					},
 				},
 				["100"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomValue"] = 39,
 						["transitionTime"] = 0.3,
 						["zoomSetting"] = "set",
+						["zoomValue"] = 39,
 					},
 					["view"] = {
 						["restoreView"] = true,
@@ -577,29 +573,41 @@ DynamicCamDB = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["pitchDegrees"] = 20,
-						["zoomSetting"] = "in",
 						["transitionTime"] = 0.1,
 						["zoomValue"] = 19,
 						["rotateSetting"] = "degrees",
+						["zoomSetting"] = "in",
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 					["view"] = {
+						["restoreView"] = true,
+						["enabled"] = true,
+					},
+				},
+				["005"] = {
+					["cameraActions"] = {
+						["pitchDegrees"] = -20,
+						["transitionTime"] = 0.1,
+						["zoomSetting"] = "set",
+						["rotateSetting"] = "degrees",
+					},
+					["view"] = {
 						["enabled"] = true,
 						["restoreView"] = true,
 					},
-				},
-				["060"] = {
-					["enabled"] = false,
-					["cameraActions"] = {
-						["zoomValue"] = 39,
-						["transitionTime"] = 0.1,
-						["zoomSetting"] = "set",
+					["cameraCVars"] = {
+						["test_cameraDynamicPitchBaseFovPad"] = 0.05,
+						["test_cameraDynamicPitch"] = 1,
+						["test_cameraDynamicPitchBaseFovPadDownScale"] = 0.3,
+						["test_cameraDynamicPitchBaseFovPadFlying"] = 0.05,
+						["test_cameraDynamicPitchSmartPivotCutoffDist"] = 12,
 					},
 				},
 			},
 			["firstRun"] = false,
+			["enabled"] = false,
 			["easingYaw"] = "Linear",
 		},
 		["New"] = {
@@ -612,11 +620,11 @@ DynamicCamDB = {
 				["test_cameraDynamicPitchBaseFovPad"] = 0.33,
 				["test_cameraDynamicPitch"] = 1,
 				["test_cameraHeadMovementMovingStrength"] = 0.25,
-				["test_cameraDynamicPitchBaseFovPadFlying"] = 0.2,
 				["test_cameraDynamicPitchSmartPivotCutoffDist"] = 12,
+				["test_cameraDynamicPitchBaseFovPadFlying"] = 0.2,
 			},
 			["version"] = 2,
-			["advanced"] = true,
+			["firstRun"] = false,
 			["reactiveZoom"] = {
 				["enabled"] = true,
 			},
@@ -625,15 +633,15 @@ DynamicCamDB = {
 				["033"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["023"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["006"] = {
@@ -644,12 +652,12 @@ DynamicCamDB = {
 				},
 				["302"] = {
 					["cameraActions"] = {
-						["zoomSetting"] = "set",
-						["zoomValue"] = 5,
 						["zoomFitToggleNameplate"] = true,
+						["zoomValue"] = 5,
+						["zoomMax"] = 20,
 						["yawDegrees"] = -10,
 						["rotateSetting"] = "degrees",
-						["zoomMax"] = 20,
+						["zoomSetting"] = "set",
 						["rotateBack"] = true,
 					},
 					["cameraCVars"] = {
@@ -659,40 +667,40 @@ DynamicCamDB = {
 						["test_cameraDynamicPitchBaseFovPadDownScale"] = 0.35,
 					},
 				},
-				["005"] = {
+				["060"] = {
+					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomSetting"] = "in",
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["002"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomFitToggleNameplate"] = true,
 						["zoomValue"] = 8,
+						["zoomFitToggleNameplate"] = true,
 						["zoomSetting"] = "in",
+						["zoomMax"] = 20,
 					},
 				},
 				["031"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["100"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomFitToggleNameplate"] = true,
 						["zoomValue"] = 35,
+						["zoomFitToggleNameplate"] = true,
 						["zoomSetting"] = "out",
+						["zoomMax"] = 20,
 					},
 				},
 				["102"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
@@ -702,112 +710,108 @@ DynamicCamDB = {
 				["050"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["200"] = {
+					["extras"] = {
+						["hideUI"] = true,
+					},
 					["cameraActions"] = {
 						["zoomMax"] = 20,
-						["zoomValue"] = 4,
-						["transitionTime"] = 10,
-						["zoomFitToggleNameplate"] = true,
 						["zoomSetting"] = "in",
+						["timeIsMax"] = false,
+						["rotateSetting"] = "degrees",
+						["zoomFitToggleNameplate"] = true,
 						["yawDegrees"] = 360,
 						["rotate"] = true,
-						["rotateSetting"] = "degrees",
-						["timeIsMax"] = false,
+						["zoomValue"] = 4,
+						["transitionTime"] = 10,
 					},
 					["cameraCVars"] = {
 						["test_cameraDynamicPitch"] = 0,
 						["test_cameraHeadMovementStrength"] = 0,
 						["test_cameraOverShoulder"] = 0,
-					},
-					["extras"] = {
-						["hideUI"] = true,
 					},
 				},
 				["301"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomFitToggleNameplate"] = true,
 						["zoomValue"] = 4,
+						["zoomFitToggleNameplate"] = true,
 						["zoomSetting"] = "in",
+						["zoomMax"] = 20,
 					},
 				},
-				["060"] = {
-					["enabled"] = false,
+				["005"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomSetting"] = "in",
+						["zoomMax"] = 20,
 					},
 				},
 				["101"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
-						["zoomFitToggleNameplate"] = true,
 						["zoomValue"] = 39,
+						["zoomFitToggleNameplate"] = true,
 						["zoomSetting"] = "set",
+						["zoomMax"] = 20,
 					},
 					["cameraCVars"] = {
 						["test_cameraOverShoulder"] = 0,
 					},
 				},
-				["201"] = {
+				["021"] = {
+					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
-					},
-					["cameraCVars"] = {
-						["test_cameraDynamicPitch"] = 0,
-						["test_cameraHeadMovementStrength"] = 0,
-						["test_cameraOverShoulder"] = 0,
+						["zoomMax"] = 20,
 					},
 				},
 				["061"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["001"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomFitToggleNameplate"] = true,
 						["zoomMin"] = 10,
 						["zoomSetting"] = "range",
-						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["024"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["051"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["004"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
+						["zoomFitToggleNameplate"] = true,
 						["zoomMin"] = 15,
 						["zoomSetting"] = "range",
-						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["300"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
 						["zoomFitIncrements"] = 0.5,
-						["zoomMax"] = 30,
 						["zoomSetting"] = "fit",
+						["zoomMax"] = 30,
 						["zoomFitPosition"] = 90,
 						["zoomMin"] = 3,
 						["zoomFitToggleNameplate"] = true,
@@ -822,33 +826,37 @@ DynamicCamDB = {
 				["020"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 				["030"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
-				["021"] = {
-					["enabled"] = false,
+				["201"] = {
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
+					},
+					["cameraCVars"] = {
+						["test_cameraDynamicPitch"] = 0,
+						["test_cameraHeadMovementStrength"] = 0,
+						["test_cameraOverShoulder"] = 0,
 					},
 				},
 				["034"] = {
 					["enabled"] = false,
 					["cameraActions"] = {
-						["zoomMax"] = 20,
 						["zoomFitToggleNameplate"] = true,
+						["zoomMax"] = 20,
 					},
 				},
 			},
-			["firstRun"] = false,
+			["advanced"] = true,
 		},
 	},
 }

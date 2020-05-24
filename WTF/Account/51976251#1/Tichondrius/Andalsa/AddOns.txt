@@ -174,7 +174,7 @@ MogIt_WowHead: enabled
 MoveAnything: disabled
 MSBTOptions: enabled
 NameCopy: disabled
-NPCScan: enabled
+NPCScan: disabled
 OPie: enabled
 Parrot: disabled
 Paste: disabled
@@ -312,7 +312,14 @@ LibGroupInSpecT-1.1: enabled
 LibGraph-2.0: enabled
 BtWQuestsLegion: enabled
 WeakAurasArchive: enabled
-WorldQuestTracker: enabled
+WorldQuestTracker: disabled
 ElvUI_CastBarOverlay: disabled
 ElvUI_EverySecondCounts: disabled
 ElvUI_CustomTweaks: disabled
+BtWQuestsMistsOfPandaria: enabled
+Drift: enabled
+DBM-CastleNathria: enabled
+DBM-Party-Shadowlands: enabled
+Skada: enabled
+Capping_Options: disabled
+Capping: disabled

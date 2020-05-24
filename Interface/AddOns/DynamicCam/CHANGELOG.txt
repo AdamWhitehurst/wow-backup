@@ -1,0 +1,57 @@
+### 1.0.3 (2020-05-11 20:14:55 +0200) ###
+(https://github.com/Mpstark/DynamicCam/compare/1.0.2...1.0.3)
+Added "Return to Camp" to teleport spells.
+
+### 1.0.2 (2020-05-11 13:31:26 +0200) ###
+(https://github.com/Mpstark/DynamicCam/compare/1.0.1...1.0.2)
+Fixed GUI issue with "range" zoom setting.
+
+### 1.0.1 (2020-05-09 23:11:10 +0200) ###
+(https://github.com/Mpstark/DynamicCam/compare/1.0.0...1.0.1)
+Added "Greatfather Winter's Hearthstone" to teleport spells.
+
+### 1.0.0 (2020-05-06 14:56:54 +0200) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_4...1.0.0)
+- Removed "fit to zoom nameplate" as it is no longer possible.
+- Added new teleport spells.
+- Added more presets.
+
+### Beta_4 (2018-08-05 08:53:32 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_4_RC2b...Beta_4)
+Hopefully working beta 4 for 8.0
+
+### Beta_4_RC2b (2017-06-22 06:59:43 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_4_RC2...Beta_4_RC2b)
+
+### Beta_4_RC2 (2017-05-29 18:19:21 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_4_RC1b...Beta_4_RC2)
+
+### Beta_4_RC1b (2017-05-20 05:27:09 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_4_RC1...Beta_4_RC1b)
+
+### Beta_4_RC1 (2017-05-20 04:27:44 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_3c...Beta_4_RC1)
+
+### Beta_3c (2017-04-13 12:48:21 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_3b...Beta_3c)
+
+### Beta_3b (2017-04-12 17:48:45 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_3...Beta_3b)
+
+### Beta_3 (2016-10-25 10:05:18 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_2d...Beta_3)
+
+### Beta_2d (2016-08-09 16:58:43 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_2c...Beta_2d)
+
+### Beta_2c (2016-08-02 09:49:13 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_2b...Beta_2c)
+
+### Beta_2b (2016-08-02 00:42:51 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_2...Beta_2b)
+
+### Beta_2 (2016-08-01 02:13:48 -0500) ###
+(https://github.com/Mpstark/DynamicCam/compare/Beta_1...Beta_2)
+
+### Beta_1 (2016-07-18 21:29:39 -0500) ###
+

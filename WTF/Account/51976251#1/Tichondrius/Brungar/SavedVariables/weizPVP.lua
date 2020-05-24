@@ -1,33 +1,26 @@
 
-weizPVPOptions = {
+_weizpvp_chardb = {
 	["profileKeys"] = {
-		["Brungar - Tichondrius"] = "Brungar - Tichondrius",
+		["Brungar - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
-		["Brungar - Tichondrius"] = {
+		["Default"] = {
 			["Options"] = {
-				["Addon"] = {
-					["Version"] = "1.81.0",
-					["VersionNumber"] = 1802,
-					["VersionSplashSeen"] = true,
-				},
 				["Window"] = {
-					["Pinned"] = true,
 					["Collapsed"] = true,
 				},
 				["Frames"] = {
-					["Point"] = "BOTTOMLEFT",
-					["Width"] = 500.0000305175781,
-					["Y"] = 27.77788543701172,
-					["X"] = 3.870346784591675,
+					["Point"] = "BOTTOMRIGHT",
+					["Width"] = 412.9145202636719,
+					["Y"] = 101.5554504394531,
+					["X"] = -3.499755859375,
 					["Header"] = {
-						["Point"] = "BOTTOMLEFT",
-						["Width"] = 500.0000305175781,
-						["Y"] = 255.7778930664063,
-						["Height"] = 25.99999809265137,
-						["X"] = 3.870346784591675,
+						["Point"] = "BOTTOMRIGHT",
+						["Width"] = 412.9145202636719,
+						["Y"] = 189.0768280029297,
+						["X"] = -3.499755859375,
 					},
-					["Height"] = 228,
+					["Height"] = 87.52139282226562,
 				},
 			},
 		},

@@ -24,7 +24,3 @@ _weizpvp_chardb = {
 		},
 	},
 }
-_weizpvp_addon = {
-	["Database_Version"] = 3,
-	["Addon_Version"] = "1.9.0.2",
-}

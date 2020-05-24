@@ -1,0 +1,17 @@
+
+HandyNotes_VisionsOfNZothDB = {
+	["profileKeys"] = {
+		["Bramblebrow - Emerald Dream"] = "Default",
+		["Umbrick - Tichondrius"] = "Default",
+		["Nilaaru - Tichondrius"] = "Default",
+		["Sparkele - Tichondrius"] = "Default",
+		["Wilowisp - Tichondrius"] = "Default",
+		["Andalsam - Tichondrius"] = "Default",
+		["Nullaaru - Tichondrius"] = "Default",
+		["Sparkwizz - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

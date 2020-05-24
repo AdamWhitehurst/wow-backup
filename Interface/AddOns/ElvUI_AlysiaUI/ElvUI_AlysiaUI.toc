@@ -1,0 +1,15 @@
+## Interface: 80300
+## Title: |cff1784d1ElvUI |cff00c0faAlysiaUI
+## Author: Dlarge (Dlarge on EU-Alleria)
+## Version: 1.03
+## Notes: A Clean Minimalistic ElvUI Edit by |cff00c0faDlarge.
+## RequiredDeps: ElvUI
+## OptionalDeps: SharedMedia, AddOnSkins, ProjectAzilroka
+## DefaultState: Enabled
+
+media\media.xml
+init.lua
+core\load_core.xml
+modules\modules.xml
+
+

@@ -47,7 +47,7 @@ MogIt_Ranged: enabled
 MogIt_TwoHanded: enabled
 MogIt_WowHead: enabled
 MSBTOptions: enabled
-NPCScan: enabled
+NPCScan: disabled
 OPie: enabled
 PetLeash: enabled
 TomTom: enabled
@@ -56,7 +56,7 @@ WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 WeakAurasTemplates: enabled
 weizPVP: enabled
-WorldQuestTracker: enabled
+WorldQuestTracker: disabled
 TradeSkillMaster: enabled
 TradeSkillMaster_AppHelper: enabled
 ElvUI_Enhanced: enabled
@@ -75,3 +75,12 @@ DBM-Nyalotha: enabled
 DBM-EternalPalace: enabled
 DBM-Uldir: enabled
 DBM-WorldEvents: enabled
+BtWQuestsMistsOfPandaria: enabled
+Drift: enabled
+Rematch: enabled
+DBM-CastleNathria: enabled
+DBM-Party-Shadowlands: enabled
+Skada: enabled
+CopyPasta: enabled
+Capping_Options: disabled
+Capping: disabled

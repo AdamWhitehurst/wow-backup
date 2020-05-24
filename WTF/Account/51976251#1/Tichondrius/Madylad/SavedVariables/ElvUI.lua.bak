@@ -1,14 +1,14 @@
 
 ElvCharacterDB = {
 	["ChatEditHistory"] = {
-		"/immersion", -- [1]
-		"/wa", -- [2]
-		"/a", -- [3]
-		"/m", -- [4]
-		"/masque", -- [5]
-		"/sit", -- [6]
-		"/ec", -- [7]
-		"/s unsure :(", -- [8]
+		"/m", -- [1]
+		"/s unsure :(", -- [2]
+		"/ec", -- [3]
+		"/immersion", -- [4]
+		"/sit", -- [5]
+		"/masque", -- [6]
+		"/a", -- [7]
+		"/wa", -- [8]
 	},
 	["ChatHistoryLog"] = {
 		{

@@ -1,35 +1,30 @@
 
-weizPVPOptions = {
+_weizpvp_chardb = {
 	["profileKeys"] = {
-		["Bramblebrow - Emerald Dream"] = "Bramblebrow - Emerald Dream",
+		["Bramblebrow - Emerald Dream"] = "Default",
 	},
 	["profiles"] = {
-		["Bramblebrow - Emerald Dream"] = {
+		["Default"] = {
 			["Options"] = {
-				["Addon"] = {
-					["Version"] = "1.81.0",
-					["VersionSplashSeen"] = true,
-					["VersionNumber"] = 1802,
-				},
-				["Window"] = {
-					["Pinned"] = true,
-					["Collapsed"] = true,
-				},
 				["Frames"] = {
-					["Point"] = "BOTTOMLEFT",
-					["Width"] = 500.0000305175781,
-					["Y"] = 141.60888671875,
-					["X"] = 3.870223999023438,
+					["Point"] = "BOTTOMRIGHT",
+					["Width"] = 250.9998016357422,
+					["Y"] = 26.50409698486328,
+					["X"] = 0,
 					["Header"] = {
-						["Point"] = "BOTTOMLEFT",
-						["Width"] = 500.0000305175781,
-						["Y"] = 255.60888671875,
+						["Point"] = "BOTTOMRIGHT",
+						["Width"] = 250.9998016357422,
+						["Y"] = 255.5041046142578,
 						["Height"] = 25.99999809265137,
-						["X"] = 3.870223999023438,
+						["X"] = 0,
 					},
-					["Height"] = 114,
+					["Height"] = 229.0000152587891,
 				},
 			},
 		},
 	},
+}
+_weizpvp_addon = {
+	["Database_Version"] = 3,
+	["Addon_Version"] = "1.9.0.2",
 }

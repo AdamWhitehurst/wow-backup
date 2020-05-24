@@ -9,8 +9,12 @@ local RAID_CLASS_COLORS = RAID_CLASS_COLORS
 local CopyTable = CopyTable
 local InCombatLockdown, GetTime = InCombatLockdown, GetTime
 local pairs, strlen, gsub, tinsert, sort, wipe = pairs, strlen, gsub, tinsert, sort, wipe
-local C_Timer_After = C_Timer.After
+local select = select
+local string_gsub = string.gsub
+local PixelUtil_SetStatusBarValue = PixelUtil.SetStatusBarValue
 local XEN = XEN
+
+local SM = LibStub("LibSharedMedia-3.0")
 
 --|> GLOBALS
 -------------------------------------------------------------------------------
@@ -24,18 +28,10 @@ NS.ActiveDeadList = {}
 NS.InactiveDeadList = {}
 NS.PlayersOnBars = {}
 
---|> LIBS
--------------------------------------------------------------------------------
-local SM = LibStub("LibSharedMedia-3.0")
-
---|> FUNCTIONS
--------------------------------------------------------------------------------
---> Update Neaby Count
--- GREEN, GOLD, ORANGE, PINK, RED
--- [0.4, 1, 0],[1, 0.74, 0],[1, 0.35, 0],[1, 0, 0.34],[1, 0, 0]
+--> Update Nearby Count
 local NearbyCountTopColorLimit = 100
 function NS.UpdateNearbyCount()
-    --> Upate Global
+    -- Update Global
     NS.NearbyCount = NS.NearbyListSize
     if NS.NearbyCount < 100 then
         NS.HeaderFrame.TitleVar:SetText(
@@ -48,9 +44,7 @@ function NS.UpdateNearbyCount()
     end
 end
 
--------------------------------------------------------------------------------
 --> Manage Bars Displayed
--------------------------------------------------------------------------------
 local listSize = 0
 function NS.ManageBarsDisplayed()
     listSize = NS.NearbyListSize
@@ -60,7 +54,7 @@ function NS.ManageBarsDisplayed()
             NS.Bars[i]:SetValue(100)
             NS.Bars[i].DEADIcon:Hide()
             NS.Bars[i].RoleIcon:SetTexture("Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga", false)
-            NS.Bars[i].NameText:SetText("|cFFFFFFFF--|r")
+            NS.Bars[i].NameText:SetText("")
             NS.Buttons[i].Target = ""
             NS.Bars[i].name = ""
             NS.Bars[i].displayName = ""
@@ -71,11 +65,7 @@ function NS.ManageBarsDisplayed()
     end
 end
 
--------------------------------------------------------------------------------
 --> Manage List Timeouts
---: Checks Active and Inactive lists for inactivity and move them accordingly
---: Refreshed the list if we found expirations and Updates the NearbyCount
--------------------------------------------------------------------------------
 local ActiveListCount = 0
 function NS.ManageListTimeouts()
     local expired = false
@@ -83,7 +73,7 @@ function NS.ManageListTimeouts()
     local expiredCount = 0
     local i = 0
     local timestamp = GetTime()
-    --> ACTIVE
+    -- ACTIVE
     for player in pairs(NS.ActiveList) do
         if (timestamp - NS.ActiveList[player].TimeUpdated) > NS.Options.Sorting.NearbyActiveTimeout and NS.CurrentNameplates[player] == nil then
             NS.InactiveList[player] = NS.ActiveList[player]
@@ -95,7 +85,7 @@ function NS.ManageListTimeouts()
     end
     ActiveListCount = i
     i = 0
-    --> ACTIVE DEAD
+    -- ACTIVE DEAD
     timestamp = GetTime()
     for player in pairs(NS.ActiveDeadList) do
         if (timestamp - NS.ActiveDeadList[player].TimeUpdated) > NS.Options.Sorting.NearbyActiveTimeout then
@@ -106,7 +96,7 @@ function NS.ManageListTimeouts()
             i = i + 1
         end
     end
-    --> INACTIVE
+    -- INACTIVE
     timestamp = GetTime()
     for player in pairs(NS.InactiveList) do
         if (timestamp - NS.InactiveList[player].TimeUpdated) > NS.Options.Sorting.NearbyInactiveTimeout then
@@ -119,7 +109,7 @@ function NS.ManageListTimeouts()
             removed = true
         end
     end
-    --> INACTIVE DEAD
+    -- INACTIVE DEAD
     timestamp = GetTime()
     for player in pairs(NS.InactiveDeadList) do
         if (timestamp - NS.InactiveDeadList[player].TimeUpdated) > NS.Options.Sorting.NearbyInactiveTimeout then
@@ -132,64 +122,43 @@ function NS.ManageListTimeouts()
             removed = true
         end
     end
-
     if expired or removed then
         NS.NearbyListSize = NS.NearbyListSize - expiredCount
         NS.SortNearbyList()
         NS.UpdateNearbyCount()
         NS.RefreshCurrentList()
     end
-
     if removed then
         NS.ManageBarsDisplayed()
     end
 end
 
--------------------------------------------------------------------------------
 --> Format Level String
--------------------------------------------------------------------------------
-local function FormatLevelString(Estimated, Level)
-    local LevelText = ""
-    local playerLevel = NS.Player.Level
-    if Level then
-        --> Known Level: Get colors based on difference
-        if Level == 0 then --> 0
-            LevelText = "|cFFFF00CC??|r"
-        elseif Level < playerLevel - 20 then --> 20+ below
-            LevelText = "|cFF7cffd1" .. Level .. "|r"
-        elseif Level < playerLevel - 10 then --> 10-20 below
-            LevelText = "|cFF7cd1ff" .. Level .. "|r"
-        elseif Level < playerLevel then --> 1-9 below
-            LevelText = "|cFF7cff7f" .. Level .. "|r"
-        elseif Level > playerLevel then --> Higher level
-            LevelText = "|cFFf7694a" .. Level .. "|r"
-        else
-            LevelText = "|cFFffc863" .. Level .. "|r"
-        end
+local function FormatLevelString(estimated, level)
+    if not level then
+        return
     end
-
-    if Estimated == true and Level ~= 0 then
-        LevelText = LevelText .. "|cFFFF00CC+|r"
+    local levelText = NS.Player.Level
+    if level then
+        levelText = NS.FormatRelativeLevelForDisplay(level)
     end
-
-    return LevelText
+    if estimated == true and level ~= 0 then
+        levelText = levelText .. "|cFFFF00CC+|r"
+    end
+    return levelText
 end
 
--------------------------------------------------------------------------------
 --> Update Bar
--------------------------------------------------------------------------------
 local darkenValue = -0.05
 local guildTxtLength
 local roleIcons = {
-    ["TANK"] = "Interface\\Addons\\weizPVP\\Media\\Icons\\tank.tga",
-    ["DAMAGER"] = "Interface\\Addons\\weizPVP\\Media\\Icons\\damager.tga",
-    ["HEALER"] = "Interface\\Addons\\weizPVP\\Media\\Icons\\healer.tga",
-    ["UNKNOWN"] = "Interface\\Addons\\weizPVP\\Media\\Icons\\unknown.tga"
+    ["TANK"] = "Interface\\Addons\\weizPVP\\Media\\Roles\\tank.tga",
+    ["DAMAGER"] = "Interface\\Addons\\weizPVP\\Media\\Roles\\damager.tga",
+    ["HEALER"] = "Interface\\Addons\\weizPVP\\Media\\Roles\\healer.tga",
+    ["UNKNOWN"] = "Interface\\Addons\\weizPVP\\Media\\Roles\\unknown.tga"
 }
 
---> Updates the player bar for the bar# specified
-local string_gsub = string.gsub
-local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estimated, Stealth, Dead, Role, GUID, Name)
+local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estimated, _, Dead, Role, GUID, Name)
     local Bar = NS.Bars[num]
     local Button = NS.Buttons[num]
     if Button and Bar and GUID then
@@ -211,11 +180,11 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
             Bar:SetAlpha(NS.Options.Bars.AlphaDefault)
         end
         -- NAME TEXT
-        local charname = gsub(Bar.displayName, "-(.*)", "")
-        if strlen(Bar.displayName) > strlen(charname) then
-            Bar.NameText:SetText(charname .. "|cFFFF00CC*|r")
+        local charName = gsub(Bar.displayName, "-(.*)", "")
+        if strlen(Bar.displayName) > strlen(charName) then
+            Bar.NameText:SetText(charName .. "|cFFFF00CC*|r")
         else
-            Bar.NameText:SetText(charname)
+            Bar.NameText:SetText(charName)
         end
         -- KOS CHECK
         if NS.KosList[Name] then
@@ -228,14 +197,14 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
             Bar.NameText:SetText("|TInterface\\MINIMAP\\TRACKING\\FlightMaster:0|t " .. Bar.NameText:GetText(Name))
         end
         -- Stealth
-        -- TODO-> NEEDS TO BE IMPROVED
-        if Stealth and Stealth == true then
-            if strlen(Name) > strlen(charname) then
-                Bar.NameText:SetText("|cFFffc863" .. charname .. "|r |cFFFF00CC*|r")
-            else
-                Bar.NameText:SetText("|cFFffc863" .. Name .. "|r")
-            end
-        end
+        -- TODO : NEEDS TO BE IMPROVED
+        -- if Stealth and Stealth == true then
+        --     if strlen(Name) > strlen(charName) then
+        --         Bar.NameText:SetText("|cFFffc863" .. charName .. "|r |cFFFF00CC*|r")
+        --     else
+        --         Bar.NameText:SetText("|cFFffc863" .. Name .. "|r")
+        --     end
+        -- end
         -- TODO : ADD ATTACK CHECK FOR UNFLAGGED PLAYERS
         -- LEVEL
         Bar.LevelText:SetText(FormatLevelString(Estimated, Level))
@@ -244,11 +213,12 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
             local classColor = RAID_CLASS_COLORS[Class]
             Bar:SetStatusBarColor(classColor.r - darkenValue, classColor.g - darkenValue, classColor.b - darkenValue, Alpha)
         end
-        Bar.bg:SetVertexColor(0, 0, 0, 1)
+        Bar.bg:SetVertexColor(0, 0, 0, 0.5)
         -- HEALTH (BAR VALUE)
         if Health ~= nil then
-            Bar:SetValue(Health)
-            PixelUtil.SetStatusBarValue(Bar, Health)
+            PixelUtil_SetStatusBarValue(Bar, Health)
+        else
+            PixelUtil_SetStatusBarValue(Bar, 100)
         end
         -- ROLE
         local adjustedRole
@@ -270,12 +240,10 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
             end
         end
         -- GUILD TEXT
-        -----------------------------------------------------------------
         guildTxtLength = Bar.LevelText:GetWidth() + Bar.NameText:GetWidth() + 28
         if Bar.DEADIcon:IsShown() then
             guildTxtLength = guildTxtLength + 22
         end
-
         guildTxtLength = Bar:GetWidth() - guildTxtLength
         Bar.GuildText:SetText(Guild)
         Bar.GuildText:SetWidth(guildTxtLength)
@@ -284,41 +252,7 @@ local function UpdateBar(num, player, Alpha, Health, Class, Guild, Level, Estima
     end
 end
 
---> Refresh One Bar
-local function RefreshOneBar(GUID, name)
-    --> Get Row
-    local row = NS.PlayersOnBars[GUID]
-
-    --> Alpha
-    local Alpha = NS.Options.Bars.AlphaDefault or 0.8
-    if NS.InactiveList[GUID] or NS.InactiveDeadList[GUID] then
-        Alpha = NS.Options.Bars.AlphaInactive
-    end
-    if NS.ActiveDeadList[GUID] then
-        Alpha = NS.Options.Bars.AlphaDead
-    end
-
-    --> Update Bar
-    if row then
-        UpdateBar(
-            row,
-            GUID,
-            Alpha,
-            NS.PlayerActiveCache[GUID].Health,
-            NS.PlayerDB[name].Class,
-            NS.PlayerDB[name].Guild,
-            NS.PlayerDB[name].Level,
-            NS.PlayerDB[name].Estimated,
-            NS.PlayerActiveCache[GUID].Stealth,
-            NS.PlayerActiveCache[GUID].Dead,
-            NS.PlayerDB[name].Role,
-            GUID,
-            name
-        )
-    end
-end
-
--- Update Player List
+--> Update Player List
 local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
     if not NS.Options.Bars then
         return
@@ -336,46 +270,38 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
         end
     end
     local playerOnBar = true
-
-    --------------------------------------
-    -->> NEW PLAYER <<----
-    --------------------------------------
-    if NS.NearbyList[GUID] == nil or newPlayerOnList then --> ADDING NEW PLAYER
+    -- NEW PLAYER
+    if NS.NearbyList[GUID] == nil or newPlayerOnList then -- ADDING NEW PLAYER
         playerOnBar = false
         reSortList = true
-
-        --> New Player added; play sound if on KOS list?
+        -- New Player added; play sound if on KOS list?
         if NS.KosList[NS.PlayerActiveCache[GUID].Name] then
-            --> Audio Alert
+            -- Audio Alert
             if NS.Options.KOS.AudioAlert == true then
                 NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.KOS.AudioAlertFile), true)
-            elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then --> New Player added; play sound?
+            elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then -- New Player added; play sound?
                 if not (NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled == true and NS.instanceInfo == "pvp") then
                     NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.AudioAlerts.DetectedPlayerSoundFile))
                 end
             end
-            --> Flash OS program icon (taskbar)
+            -- Flash OS program icon (taskbar)
             if NS.Options.KOS.TaskbarAlert == true then
                 FlashClientIcon()
             end
-            --> Chat Alert
+            -- Chat Alert
             if NS.Options.KOS.ChatAlert == true then
                 local classColoredName =
                     WrapTextInColorCode(NS.PlayerActiveCache[GUID].Name, select(4, GetClassColor(NS.PlayerActiveCache[GUID].Class)))
-                NS.PrintAddonMessage(
-                    "|TInterface\\Addons\\weizPVP\\Addons\\KOS\\Media\\kos_icon.tga:0|t " .. classColoredName .. " |cff8fdaffdetected!|r "
-                )
+                NS.PrintAddonMessage("|TInterface\\Addons\\weizPVP\\Media\\Icons\\kos.tga::0|t " .. classColoredName .. " |cff8fdaffdetected!|r ")
             end
-        elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then --> NON-KOS PLAYER
+        elseif NS.Options.AudioAlerts.DetectedPlayerSound == true then -- NON-KOS PLAYER
             if not (NS.Options.AudioAlerts.DetectedPlayerSoundBGDisabled == true and NS.instanceInfo == "pvp") then
                 NS.PlaySoundAlert(SM:Fetch("sound", NS.Options.AudioAlerts.DetectedPlayerSoundFile))
             end
         end
-
         NS.NearbyList[GUID] = {}
         NS.NearbyList[GUID].TimeUpdated = timeUpdate
         NS.NearbyList[GUID].TimeAdded = timeUpdate
-
         if dead == true then
             NS.ActiveDeadList[GUID] = NS.ActiveDeadList[GUID] or {}
             NS.ActiveDeadList[GUID].TimeUpdated = timeUpdate
@@ -385,7 +311,7 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
             NS.ActiveList[GUID].TimeAdded = timeUpdate
             NS.ActiveList[GUID].TimeUpdated = timeUpdate
         end
-    elseif not NS.ActiveList[GUID] and not NS.ActiveDeadList[GUID] then --> EXISTING PLAYER; WAS INACTIVE
+    elseif not NS.ActiveList[GUID] and not NS.ActiveDeadList[GUID] then -- EXISTING PLAYER; WAS INACTIVE
         reSortList = true
         if dead then
             NS.ActiveDeadList[GUID] = NS.InactiveDeadList[GUID] or {}
@@ -402,10 +328,9 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
             NS.NearbyList[GUID].TimeAdded = timeUpdate
             NS.ActiveDeadList[GUID] = nil
         end
-
         NS.InactiveList[GUID] = nil
         NS.InactiveDeadList[GUID] = nil
-    else --> EXISTING PLAYER; ACTIVE
+    else -- EXISTING PLAYER; ACTIVE
         if dead then
             NS.ActiveDeadList[GUID] = NS.ActiveDeadList[GUID] or {}
             NS.ActiveDeadList[GUID].TimeUpdated = timeUpdate
@@ -418,7 +343,7 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
             NS.ActiveDeadList[GUID] = nil
         end
     end
-
+    --> Check to see if we need to add a kos player to the bars
     if playerOnBar == false and ActiveListCount > NS.Options.Bars.MaxNumBars then
         if not NS.KosList[NS.PlayerActiveCache[GUID].Name] then
             return
@@ -427,7 +352,7 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
             newPlayerOnList = true
         end
     end
-    --> Sort only if we moved the player from one sublist to another
+    -- Sort only if we moved the player from one sub-list to another
     if reSortList == true then
         NS.SortNearbyList()
         if NS.PlayersOnBars[GUID] or newPlayerOnList then
@@ -435,7 +360,7 @@ local function UpdatePlayerLists(GUID, timeUpdate, dead, newPlayerOnList)
         end
     else
         if NS.PlayersOnBars[GUID] then
-            RefreshOneBar(GUID, NS.PlayerActiveCache[GUID].Name)
+            NS.RefreshBarByGUID(GUID)
         end
     end
 end
@@ -473,21 +398,20 @@ end
 -- Refresh Current List
 function NS.RefreshCurrentList()
     local playersOnBars = {}
-    --> Refreshing all bars due to required sorting
+    -- Refreshing all bars due to required sorting
     for k, data in pairs(NS.CurrentList) do
         if k <= NS.Options.Bars.MaxNumBars then
-            --> Update Alpha if needed
-            local alpha = NS.Options.Bars.AlphaDefault
+            -- Update Alpha if needed
+            local alpha = NS.Options.Bars.AlphaDefault or 1
             if NS.InactiveList[data.player] or NS.InactiveDeadList[data.player] then
                 alpha = NS.Options.Bars.AlphaInactive
-            end
-            if NS.ActiveDeadList[data.player] then
+            elseif NS.ActiveDeadList[data.player] then
                 alpha = NS.Options.Bars.AlphaDead
             end
             if NS.PlayerActiveCache[data.player] then
                 playersOnBars[NS.PlayerActiveCache[data.player].GUID] = k
                 local barName = NS.PlayerActiveCache[data.player].Name or nil
-                --> Update Bar
+                -- Update Bar
                 if NS.PlayerDB[barName] then
                     UpdateBar(
                         k,
@@ -519,7 +443,6 @@ end
 
 --> Sort Nearby List
 function NS.SortNearbyList()
-    -- Get player's into the right groups
     -- ActiveList
     local active = {}
     local position
@@ -561,13 +484,13 @@ function NS.SortNearbyList()
             end
         end
     end
+    -- sorts
     sort(
         active,
         function(a, b)
             return a.time < b.time
         end
     )
-
     sort(
         activeDead,
         function(a, b)
@@ -586,6 +509,7 @@ function NS.SortNearbyList()
             return a.time < b.time
         end
     )
+    -- create player list
     local list = {}
     for player in pairs(active) do
         if NS.PlayerActiveCache[active[player].player] then
@@ -610,19 +534,6 @@ function NS.SortNearbyList()
     NS.CurrentList = list
 end
 
---> Play Sound Alert
-local playSound = true
-local function EnableAlertSound()
-    playSound = true
-end
-function NS.PlaySoundAlert(url, now)
-    if playSound == true or now then
-        PlaySoundFile(url)
-        playSound = false
-        C_Timer_After(0.6, EnableAlertSound)
-    end
-end
-
 --> Clear List Data
 function NS.ClearListData()
     wipe(NS.CurrentList)
@@ -640,6 +551,43 @@ function NS.ClearListData()
     NS.ManageBarsDisplayed()
     NS.UpdateNearbyCount()
     NS.TargetedIcon:Hide()
-    --> Refresh Target
     NS:PlayerTargetEvent()
+    NS.ScrollFrame:SetVerticalScroll(0)
+end
+
+--> Refresh One Bar
+function NS.RefreshBarByGUID(GUID)
+    if not GUID then
+        return
+    end
+    -- Get Row
+    local row = NS.PlayersOnBars[GUID]
+    if not row then
+        return
+    end
+    -- Alpha
+    local Alpha = NS.Options.Bars.AlphaDefault or 1
+    if NS.InactiveList[GUID] or NS.InactiveDeadList[GUID] then
+        Alpha = NS.Options.Bars.AlphaInactive or 0.6
+    end
+    if NS.ActiveDeadList[GUID] then
+        Alpha = NS.Options.Bars.AlphaDead or 0.8
+    end
+    -- Update Bar
+    local name = NS.PlayerActiveCache[GUID].Name
+    UpdateBar(
+        row,
+        GUID,
+        Alpha,
+        NS.PlayerActiveCache[GUID].Health,
+        NS.PlayerDB[name].Class,
+        NS.PlayerDB[name].Guild,
+        NS.PlayerDB[name].Level,
+        NS.PlayerDB[name].Estimated,
+        NS.PlayerActiveCache[GUID].Stealth,
+        NS.PlayerActiveCache[GUID].Dead,
+        NS.PlayerDB[name].Role,
+        GUID,
+        name
+    )
 end
